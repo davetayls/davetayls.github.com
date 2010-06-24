@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="MasterContactsGrid.xsl" ?>
+
+<listitems xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:rs="urn:schemas-microsoft-com:rowset" xmlns:z="#RowsetSchema" xmlns="http://schemas.microsoft.com/sharepoint/soap/">
+
+	<rs:data ItemCount="4">
+		<z:row 
+			ows_Attachments="0" ows_LinkTitle="Level 1 person" ows_MetaInfo="1;#" 
+			ows__ModerationStatus="0" ows__Level="1" ows_Title="Level 1 person" ows_ID="1" 
+			ows_owshiddenversion="1" ows_UniqueId="1;#{D412378A-E4FE-48C9-86CE-B2F821B24C0F}" ows_FSObjType="1;#0" ows_Created_x0020_Date="1;#2009-05-01 09:44:52" 
+			ows_Created="2009-05-01 09:44:52" ows_FileLeafRef="1;#1_.000" ows_FileRef="1;#TestSite/Lists/Freud Master Contacts/1_.000" />
+
+		<z:row 
+			ows_Attachments="0" ows_LinkTitle="Level 2 person" ows_MetaInfo="2;#" ows__ModerationStatus="0" ows__Level="1" ows_Title="Level 2 person" 
+			ows_ID="2" ows_owshiddenversion="1" ows_UniqueId="2;#{6199F293-7C05-46E9-9E6E-0EBE746529F1}" ows_FSObjType="2;#0" ows_Created_x0020_Date="2;#2009-05-01 09:44:59" 
+			ows_Created="2009-05-01 09:44:59" ows_FileLeafRef="2;#2_.000" ows_FileRef="2;#TestSite/Lists/Freud Master Contacts/2_.000" />
+
+		<z:row 
+			ows_Attachments="0" ows_LinkTitle="Level 3 person" ows_MetaInfo="3;#" ows__ModerationStatus="0" ows__Level="1" ows_Title="Level 3 person" 
+			ows_ID="3" ows_owshiddenversion="1" ows_UniqueId="3;#{FEA0270F-95B6-44EA-A7B9-CA95EC72BBDD}" ows_FSObjType="3;#0" ows_Created_x0020_Date="3;#2009-05-01 09:45:07" 
+			ows_Created="2009-05-01 09:45:07" ows_FileLeafRef="3;#3_.000" ows_FileRef="3;#TestSite/Lists/Freud Master Contacts/3_.000" />
+
+		<z:row 
+			ows_Attachments="0" ows_LinkTitle="Level 4 person" ows_MetaInfo="4;#" ows__ModerationStatus="0" ows__Level="1" ows_Title="Level 4 person" 
+			ows_ID="4" ows_owshiddenversion="1" ows_UniqueId="4;#{65F9A12A-4F85-4A59-B878-B664C18669D5}" ows_FSObjType="4;#0" ows_Created_x0020_Date="4;#2009-05-01 09:45:16" 			ows_Created="2009-05-01 09:45:16" ows_FileLeafRef="4;#4_.000" ows_FileRef="4;#TestSite/Lists/Freud Master Contacts/4_.000" />
+	</rs:data>
+</listitems>  

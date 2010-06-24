@@ -1,0 +1,226 @@
+/*
+	button-group
+------------------------------------------------*/
+.button-group {
+	clear: both;
+}
+/*
+	clearing
+------------------------------------------------*/
+.field-group-v label 
+{ position: relative; zoom:1;}
+
+.field-group-v label:after 
+{ content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+/*
+	field-group-v
+------------------------------------------------*/
+.field-group-v {
+	clear: both;
+	position: relative;
+}
+	div.field-group-v label {
+		display:block;
+	}
+		.field-group-v label .label-text {
+			display: inline;
+		}
+		div.field-group-v label input {
+			display: inline;						
+		}
+		div.field-group-v label input[type=radio] {
+			height: 20px;
+			margin: -2px 0 0;
+			padding: 0;
+			width: 20px;
+		}
+		div.field-group-v label input[type=checkbox] {
+			margin: 1px 4px 0 2px;
+			padding: 0;			
+		}		
+		.field-group-v .label-detail {
+		}
+	
+.field-group-vTtight {}
+	div.field-group-vTtight label,
+	div.field-group-vTtight .label-detail {
+		margin-left: 0 !important;
+	}
+
+/*
+ * field-group-error
+ ------------------------------------------------*/
+.field-group-error {}
+	.field-group-error .field-group-header,
+	.field-group-error .field-group-header-inline {
+		color: #990000;
+	}
+
+
+/* 
+ * field-group-date 
+ * ------------------------------------------------------*/
+.field-group-date {
+	clear: both;
+	position: relative;
+}
+	div.field-group-date .field-group-header {
+		display: block;
+	}
+	div.field-group-date .field-group-header-inline {
+		display: inline;
+		float: none;
+	}
+	div.field-group-date label {
+		clear: none;
+		display: inline;
+		float: none;
+	}
+	div.field-group-date label .label-text {
+		position:absolute !important; 
+		display: block !important; 
+		top: auto !important; 
+		left: -10000px !important; 
+		width: 1px !important; 
+		height: 1px !important;
+	}
+	div.field-group-date label input {
+		display: inline;
+		float: none;
+		width: 25px;
+	}
+	div.field-group-date label select {
+		display: inline;
+		float: none;
+		width: 60px;
+	}
+
+/* 
+ * field-group-inline 
+ * -------------------------------------------------*/
+.field-group-inline {
+	clear: both;
+	position: relative;
+}
+	div.field-group-inline .field-group-header {
+		display: block;
+	}
+	div.field-group-inline .field-group-header-inline {
+		display: inline;
+		float: none;
+	}
+	div.field-group-inline label {
+		clear: none;
+		display: inline;
+		float: none;
+	}
+	div.field-group-inline label .label-text {
+		display: inline;
+		float: none;
+	}
+	div.field-group-inline label input {
+		display: inline;
+		float: none;
+	}
+
+/*
+ * form-margin
+ -----------------------------------------------*/
+.form-margin {}
+	.form-margin h2,
+	.form-margin h3,
+	.form-margin h4,
+	.form-margin h5,
+	.form-margin fieldset { clear: both; }
+	
+	.form-margin label {
+		clear: both;
+		display: block;
+	}
+		.form-margin label .label-text {
+			display: block;
+			float: left;
+			/*width: 100px;*/
+		}
+		.form-margin label select,
+		.form-margin label textarea,
+		.form-margin label input {
+			display: block;
+			float: left;
+		}
+
+	.form-margin .field-group-v .field-group-header {
+		display: block;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100px;
+	}
+
+	.form-margin .field-group-v {}
+		.form-margin .field-group-v label {
+			margin-left: 100px;
+		}
+		.form-margin .field-group-v .label-detail {
+			margin-left: 100px;
+		}
+
+	.form-margin .button-group {
+		padding-left: 100px;
+	}
+
+/*
+ * form-stack
+ -----------------------------------------------*/
+.form-stack {}
+	.form-stack h2,
+	.form-stack h3,
+	.form-stack h4,
+	.form-stack h5,
+	.form-stack fieldset { clear: both; }
+	
+	.form-stack label {
+		clear: both;
+		display: block;
+	}
+		.form-stack label .label-text {
+			display: block;
+		}
+		.form-stack label select,
+		.form-stack label textarea,
+		.form-stack label input {
+			display: block;
+		}
+	.form-stack .button-group {
+	}
+
+
+
+/*
+ * label
+ -----------------------------------------------*/
+label {
+	cursor: default;
+}
+	.label-detail {
+		clear:both;
+	}
+
+/*
+ * label-error
+ ------------------------------------------------*/
+.label-error {}
+	.label-error .label-text {
+		color: #990000;
+	}
+	.label-error input[type=text] {
+		border-color: #990000;
+		color: #990000;
+	}
+	.label-error select {
+		color: #990000;
+	}
+	.label-error textarea {
+		color: #990000;
+	}

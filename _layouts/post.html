@@ -1,0 +1,78 @@
+---
+layout: master
+---
+<div class="lay-mRight2 cc">
+    <div id="content" class="lay-mRight2-content cc">
+        <div class="textRegion">
+            <h1>{{ page.title }}</h1>
+            <p>{{ page.date | date:"%d %b %Y" }}
+                {% if page.author %}
+                by {{ page.author }}
+                {% endif %}</p>
+            {{ content }} 
+        </div>
+        {% if page.comments != 'hide' %}
+        <div class="mod-comments">
+            <h2>Comments</h2>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_identifier = '{{ page.id }}';
+                var disqus_developer = 0;
+                var disqus_url = 'http://juxtapo.net{{ page.url }}';
+                var disqus_title = '{{ page.title }}';
+                (function(){
+                    var dsq = document.createElement('script');
+                    dsq.type = 'text/javascript';
+                    dsq.async = true;
+                    dsq.src = 'http://juxtapofrontendtools.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>
+                Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=juxtapofrontendtools">comments powered by Disqus.</a>
+            </noscript>
+            <p class="cp-disclaimerText">
+                <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+            </p>
+        </div>
+        {% endif %}
+    </div>
+    <div class="lay-mRight2-aside">
+        <div class="mod-navSection">
+            <p>
+                <img src="/images/feed-icon-12x12-orange.gif" alt="" /><a href="http://feeds.feedburner.com/juxtapo">Subscribe here (atom)</a>
+            </p>
+            {% include sharelinks-short.html %}
+        </div>
+        <div class="mod-navSection">
+            <h2>Related Posts</h2>
+            <ul>
+                {% for post in site.related_posts %}
+                <li>
+                    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                    <p>{{ post.date | date:"%d %b %Y" }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="mod-navSection">
+            <h2>Categories</h2>
+            <ul>
+                <li>
+                    <a href="/blog/category/releases">Releases</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mod-navSection">
+            <h2>Recent Posts</h2>
+            <ul>
+                {% for post in site.posts limit: 5 %}
+                <li>
+                    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                    <p>{{ post.date | date:"%d %b %Y" }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

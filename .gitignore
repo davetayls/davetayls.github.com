@@ -1,0 +1,6 @@
+.tmp*
+Thumbs.db
+/release
+/Desktop.ini
+/_site
+/TestStation/testsite

@@ -1,0 +1,57 @@
+/*
+	modules
+-------------------------------------------------------*/
+
+
+/*
+	mod-fullArticles
+-------------------------------------------------------*/
+.mod-fullArticles {
+	background-color: white;
+	padding: 20px 15px;
+}
+	.mod-fullArticles-article {
+		border-bottom:1px dotted #ddd;
+		margin-bottom:40px;
+		overflow:hidden;
+		padding-bottom:20px;
+		width:680px;
+	}
+	.mod-fullArticles-pubDate {
+		color: #888;
+		margin: 0;
+		padding: 2px 0;
+		font-size: 0.8em;
+	}	
+/*
+	mod-projects
+-------------------------------------------------------*/
+.mod-projects {
+	
+}
+
+/*
+	mod-testimonials
+-------------------------------------------------------*/
+.mod-testimonials {
+}
+	.mod-testimonials h2 {
+		text-shadow: 0 1px 3px #003348;
+		filter: progid:DXImageTransform.Microsoft.Shadow(color=#003348,direction=180,strength=1);
+	}
+	.mod-testimonials ul {
+		list-style: none;
+		list-style-image: none;
+		margin: 0;
+		padding: 0;
+	}
+	.mod-testimonials ul li {
+		margin: 0;
+		padding: 0;
+	}
+		.mod-testimonials ul li p {
+			color: #fff;
+			line-height: 1.1em;
+			text-shadow: 0 1px 0 #333333;
+			filter: progid:DXImageTransform.Microsoft.Shadow(color=#333333,direction=180,strength=1);
+		}

@@ -1,0 +1,158 @@
+/*
+    This style sheet contains all layout for the screen, print, projection and tv media types.
+    <link href="css/screen.css" rel="stylesheet" type="text/css" media="screen, print, projection, tv" />
+*/
+
+/* Layout */
+body {
+	background: black url(../images/body-bg.png) no-repeat center top;
+	margin:0;
+	padding:0;
+}
+
+#nav-accessibility      { position: absolute; top: 0px; left: 0px; z-index: 1000; }
+#nav-accessibility p    { position:absolute; top: auto; left: -10000px; width: 1px; height: 1px; }
+#nav-accessibility ul   { list-style: none; margin:0; position:absolute; }
+#nav-accessibility li	{ position: absolute; top: 0; left: 0; }
+#nav-accessibility a    { position:absolute; display: block; top: auto; left: -10000px; width: 1px; height: 1px; }
+#nav-accessibility a:active, 
+#nav-accessibility a:focus { z-index: 1000; top: 0; left: 0px; width: 350px; height: 20px; background-color: white; border: 1px dotted #ccc; padding: 5px; }
+
+
+#logo {
+	position: absolute;
+	top: 10px;
+	left: 0;
+	z-index: 100;
+}
+	#logo img {
+		display: block;
+	}
+#wrapper {
+	margin: 0 auto;
+	padding-top:145px;
+	width:986px;
+}
+	#portfolio {
+		border-top: solid 5px #00ADEF;
+		border-bottom: solid 5px #00ADEF;
+		height: 392px;
+		margin: 0 0 10px;
+		overflow: hidden;
+		padding: 4px 4px 0;
+		width: 702px;
+	}
+	#testimonials {
+		position:absolute;
+		right:43px;
+		top:154px;
+		width:211px;		
+	}
+	#content {
+		
+	}
+#header {
+	height:145px;
+	overflow:hidden;
+	position:absolute;
+	right:0;
+	top:0;
+	width: 986px;
+}
+	#header #about {
+		display: inline;
+		float:left;
+		margin:40px 0 0 125px;
+		width:516px;
+	}
+		#header h3 {
+			color:#84D725;
+			font-family:trebuchet MS;
+			font-size:1.7em;
+			font-weight:normal;
+			letter-spacing:-0.008em;
+			line-height: 1.15em;
+			text-transform: none;
+		}
+			#header h3 img {
+				display: block;
+				float:left;
+				margin:-30px 12px 0 0;
+			}
+	#skills { 
+		color:white;
+		font-size:0.9em;
+		letter-spacing:0.005em;
+		margin-top:3px;
+	}
+	#cv {
+		left:90px;
+		position:absolute;
+		text-transform:uppercase;
+		top:-23px;
+		z-index: 100;
+	}
+		#cv a {
+			color: white;
+		}
+	#header #social {
+		float:right;
+		margin-top: 4px;
+		margin-right: 32px;
+		padding: 0;
+		width:260px;
+	}
+		#header #social li { float: right; list-style: none; margin-left: 14px; }
+	#header .nav-accessibility {
+		display: none;
+		float: right;
+		margin-top: 8px;
+		padding: 0;
+		width: 243px;
+	}
+		#header .nav-accessibility li {
+			border-right:1px solid white;
+			color:white;
+			float:left;
+			list-style-image:none;
+			list-style-position:outside;
+			list-style-type:none;
+			margin-right:5px;
+			padding-right:8px;
+		}
+			#header .nav-accessibility li.nav-last {
+				border-right: none;
+			}
+		#header .nav-accessibility a {
+			color: white;
+		}
+	#header .nav-contacts {
+		color: white;
+		float: right;
+		margin: 10px 36px 0 0;
+		padding: 0;
+	}
+		#header .nav-contacts li {
+			list-style-image:none;
+			list-style-position:outside;
+			list-style-type:none;
+		}
+
+#footer {
+	border-top: solid 1px #565656;
+	background-color: #3F3F3F;
+	color: #efefef;
+	margin:10px 0 0;
+	padding: 0px;
+}
+	#footer-inner {
+		margin: 0 auto;
+		padding: 10px;
+		width:966px;		
+	}
+		#footer p,
+		#footer address,
+		#footer li {
+			font-size: 0.8em;
+		}
+		#footer li p { font-size: 1em; }

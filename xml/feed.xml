@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/xml/rss.xsl" type="text/xsl" ?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:media="http://search.yahoo.com/mrss/"
+	>
+
+<channel>
+	<title>David Taylor</title>
+	<atom:link href="http://davidjtaylor.wordpress.com/feed/" rel="self" type="application/rss+xml" />
+	<link>http://davidjtaylor.wordpress.com</link>
+	<description>General musings...as you do - Design, Web Development, Sharepoint, Asp.Net, JavaScript</description>
+	<lastBuildDate>Sat, 12 Sep 2009 13:35:19 +0000</lastBuildDate>
+	<generator>http://wordpress.com/</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<cloud domain='davidjtaylor.wordpress.com' port='80' path='/?rsscloud=notify' registerProcedure='' protocol='http-post' />
+<image>
+		<url>http://www.gravatar.com/blavatar/824e29f8eb361cbe13c4fd029320247e?s=96&#038;d=http://s.wordpress.com/i/buttonw-com.png</url>
+		<title>David Taylor</title>
+		<link>http://davidjtaylor.wordpress.com</link>
+	</image>
+			<item>
+		<title>Tutorial with examples for making web pages more accessible.</title>
+		<link>http://davidjtaylor.wordpress.com/2009/09/07/tutorial-with-examples-for-making-web-pages-more-accessible/</link>
+		<comments>http://davidjtaylor.wordpress.com/2009/09/07/tutorial-with-examples-for-making-web-pages-more-accessible/#comments</comments>
+		<pubDate>Mon, 07 Sep 2009 12:40:16 +0000</pubDate>
+		<dc:creator>davidjtaylor</dc:creator>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[accessibility]]></category>
+		<category><![CDATA[css]]></category>
+		<category><![CDATA[html]]></category>
+
+		<guid isPermaLink="false">http://davidjtaylor.wordpress.com/2009/09/07/tutorial-with-examples-for-making-web-pages-more-accessible/</guid>
+		<description><![CDATA[Quick start accessibility
+I have been looking at web accessibility recently due to an up and
+coming project with a global client who needs their site to be AAA
+where possible.
+It has made me realise how small things can make a huge difference. Here are some quickstart ways to enhance the accessibility of your sites.
+1. Hidden accessibility navigation [...]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=davidjtaylor.wordpress.com&blog=1987444&post=77&subd=davidjtaylor&ref=&feed=1" />]]></description>
+			<content:encoded><![CDATA[<div class='snap_preview'><br /><h2>Quick start accessibility</h2>
+<p>I have been looking at web accessibility recently due to an up and<br />
+coming project with a global client who needs their site to be AAA<br />
+where possible.</p>
+<p>It has made me realise how small things can make a huge difference. Here are some quickstart ways to enhance the accessibility of your sites.</p>
+<h2>1. Hidden accessibility navigation for screen readers</h2>
+<p>You should include navigation for the sections within each page. This makes it much easier for people using screen readers or mobile devices to go directly to the content they want.</p>
+<h3>The CSS:</h3>
+<pre>#nav-acc {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 39px;
+}
+#nav-acc p    { position:absolute; top: auto; left: -10000px; width: 1px; height: 1px; }
+#nav-acc ul   { list-style: none; margin:0; padding: 0; }
+#nav-acc li    { list-style: none; list-style-image: none; }
+#nav-acc a    {
+    position:absolute;
+    display: block;
+    top: auto;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+}
+#nav-acc a:active,
+#nav-acc a:focus {
+    z-index: 1000;
+    top: 0;
+    left: 0px;
+    width: 350px;
+    height: 20px;
+    background-color: white;
+    border: 1px dotted #ccc;
+    padding: 5px;
+}</pre>
+<h3>The HTML:</h3>
+<pre>&lt;div id="nav-acc"&gt;
+ &lt;p&gt;
+     &lt;strong&gt;Accessibility links&lt;/strong&gt;
+ &lt;/p&gt;
+ &lt;ul&gt;
+     &lt;li&gt;&lt;a accesskey="c" href="#content"&gt;Jump to main content [Access key 'C']&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a accesskey="n" href="#nav-primary"&gt;Jump to primary navigation [Access key 'N']&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/div&gt;</pre>
+<h3>Acessibility Items</h3>
+<p>There will also be various elements within your markup which need to be hidden on screen but help describe items for screen readers. For this you can use the following class and markup:</p>
+<h4>CSS</h4>
+<p><code style="white-space:pre;">.acc-item { position:absolute; display: block; top: auto; left: -10000px; width: 1px; height: 1px; }</code></p>
+<h4>HTML</h4>
+<p><code style="white-space:pre;">&lt;span class="acc-item"&gt;description of something for screen readers&lt;/span&gt;</code></p>
+<h2>2. Label form information</h2>
+<p>When structuring your forms I expect you will already be using labels for input controls but if you have a series of inputs relating to a single label (ie Address) you should include labels for each of the inputs (ie Address Line 1,Address Line 2) here is some markup to show how we could achieve this. Note that we use the acc-item class to hide the individual labels.</p>
+<pre>&lt;fieldset&gt;
+ &lt;span class="labelHeader"&gt;Address&lt;/span&gt;
+   &lt;label&gt;
+     &lt;span class="acc-item"&gt;Address 1&lt;/span&gt;
+     &lt;input type="text" /&gt;
+   &lt;/label&gt;
+   &lt;label&gt;
+     &lt;span class="acc-item"&gt;Address 2&lt;/span&gt;
+     &lt;input type="text" /&gt;
+   &lt;/label&gt;
+   &lt;label&gt;
+     &lt;span class="acc-item"&gt;Address 3&lt;/span&gt;
+     &lt;input type="text" /&gt;
+   &lt;/label&gt;
+&lt;/fieldset&gt;</pre>
+<h2>3. Document strucure</h2>
+<p>Make sure that the structure of your markup is in the same order as you<br />
+would want to read it. A good check for this is to turn off all styles<br />
+within the view menu of firefox.</p>
+<h2>Conclusion</h2>
+<p>I hope this has been helpful, it is a really quick start for anybody who hasn&#8217;t got a huge amount of time to go any deeper. For further reading the reference below goes in to more detail. It&#8217;s not particularly hard to implement these practices so lets make the web a more accessible place.</p>
+<h3>References</h3>
+<p><a id="g7st" title="http://webaim.org/techniques/css/invisiblecontent/" href="http://webaim.org/techniques/css/invisiblecontent/">http://webaim.org/techniques/css/invisiblecontent/</a></p>
+<p><img style="width:648px;height:504.733px;" src="http://docs.google.com/File?id=df6422b_217g2pj9qd9_b" alt="" /></p>
+  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/davidjtaylor.wordpress.com/77/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/davidjtaylor.wordpress.com/77/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/godelicious/davidjtaylor.wordpress.com/77/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/delicious/davidjtaylor.wordpress.com/77/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gostumble/davidjtaylor.wordpress.com/77/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/stumble/davidjtaylor.wordpress.com/77/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/godigg/davidjtaylor.wordpress.com/77/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/digg/davidjtaylor.wordpress.com/77/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/goreddit/davidjtaylor.wordpress.com/77/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/reddit/davidjtaylor.wordpress.com/77/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=davidjtaylor.wordpress.com&blog=1987444&post=77&subd=davidjtaylor&ref=&feed=1" /></div>]]></content:encoded>
+			<wfw:commentRss>http://davidjtaylor.wordpress.com/2009/09/07/tutorial-with-examples-for-making-web-pages-more-accessible/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	
+		<media:content url="http://1.gravatar.com/avatar/bbf81bc82fed795624ed696fe1e5aee0?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">davidjtaylor</media:title>
+		</media:content>
+		<media:content url="http://docs.google.com/File?id=df6422b_217g2pj9qd9_b" medium="image" />
+	</item>
+		<item>
+		<title>Sitecore Certified</title>
+		<link>http://davidjtaylor.wordpress.com/2009/07/29/sitecore-certified/</link>
+		<comments>http://davidjtaylor.wordpress.com/2009/07/29/sitecore-certified/#comments</comments>
+		<pubDate>Wed, 29 Jul 2009 05:43:41 +0000</pubDate>
+		<dc:creator>davidjtaylor</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://davidjtaylor.wordpress.com/2009/07/29/sitecore-certified/</guid>
+		<description><![CDATA[
+I have just completed my sitecore 6 training and am now a sitecore certified developer.
+I have been really impressed by the way that sitecore is structured. It does a very good job of separating content from presentation, giving the developer huge flexibility whilst retaining an easy to use interface for the user.
+I also think the [...]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=davidjtaylor.wordpress.com&blog=1987444&post=73&subd=davidjtaylor&ref=&feed=1" />]]></description>
+			<content:encoded><![CDATA[<div class='snap_preview'><br /><div id="msee" style="text-align:center;"><img style="width:204px;height:150px;" src="http://docs.google.com/File?id=df6422b_2089xdkdjcd_b" alt="" /></div>
+<p>I have just completed my <a id="qj9g" title="sitecore 6" href="http://www.sitecore.net">sitecore 6</a> training and am now a sitecore certified developer.</p>
+<p>I have been really impressed by the way that sitecore is structured. It does a very good job of separating content from presentation, giving the developer huge flexibility whilst retaining an easy to use interface for the user.</p>
+<p>I also think the way they have designed the content and a lot of the core system around the same granualar concept of a content item is amazing.</p>
+<p>It&#8217;ll be interesting to start using it in a real working environment to see where the weaknesses are. I&#8217;m especially curious as to whether it can maintain XHTML Strict in a .Net world where people only seem to care about Transitional.</p>
+<p>A couple of example sitecore projects completed at <a id="p0gz" title="Aqueduct" href="http://www.aqueduct.co.uk">Aqueduct</a> include <a id="ch9d" title="Manchester City Football Club" href="http://www.mcfc.co.uk">Manchester City Football Club</a>.</p>
+<p>If you&#8217;ve used sitecore let me know your thoughts.</p>
+  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/davidjtaylor.wordpress.com/73/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/davidjtaylor.wordpress.com/73/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/godelicious/davidjtaylor.wordpress.com/73/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/delicious/davidjtaylor.wordpress.com/73/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gostumble/davidjtaylor.wordpress.com/73/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/stumble/davidjtaylor.wordpress.com/73/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/godigg/davidjtaylor.wordpress.com/73/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/digg/davidjtaylor.wordpress.com/73/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/goreddit/davidjtaylor.wordpress.com/73/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/reddit/davidjtaylor.wordpress.com/73/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=davidjtaylor.wordpress.com&blog=1987444&post=73&subd=davidjtaylor&ref=&feed=1" /></div>]]></content:encoded>
+			<wfw:commentRss>http://davidjtaylor.wordpress.com/2009/07/29/sitecore-certified/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	
+		<media:content url="http://1.gravatar.com/avatar/bbf81bc82fed795624ed696fe1e5aee0?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">davidjtaylor</media:title>
+		</media:content>
+
+		<media:content url="http://docs.google.com/File?id=df6422b_2089xdkdjcd_b" medium="image" />
+	</item>
+		<item>
+		<title>Client XSL Transformations from Asp.Net Webservice Response</title>
+		<link>http://davidjtaylor.wordpress.com/2009/07/20/client-xsl-transformations-from-asp-net-webservice-response/</link>
+		<comments>http://davidjtaylor.wordpress.com/2009/07/20/client-xsl-transformations-from-asp-net-webservice-response/#comments</comments>
+		<pubDate>Mon, 20 Jul 2009 12:09:13 +0000</pubDate>
+		<dc:creator>davidjtaylor</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://davidjtaylor.wordpress.com/2009/07/20/client-xsl-transformations-from-asp-net-webservice-response/</guid>
+		<description><![CDATA[I wrote previously about how you can use jQuery to query Asp.Net WebServices. We are now going to build on that by using xslt to transform the xml returned from your web service and insert it in to your document.
+Download the full script
+We are going to need two further functions, the first to load your [...]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=davidjtaylor.wordpress.com&blog=1987444&post=63&subd=davidjtaylor&ref=&feed=1" />]]></description>
+			<content:encoded><![CDATA[<div class='snap_preview'><br /><p>I wrote previously about <a id="ohis" title="how you can use jQuery to query Asp.Net WebServices" href="http://davidjtaylor.wordpress.com/2009/06/23/using-jquery-with-asp-net-webservices/">how you can use jQuery to query Asp.Net WebServices</a>. We are now going to build on that by using xslt to transform the xml returned from your web service and insert it in to your document.</p>
+<p><a href="http://sites.google.com/site/dtayls/files/jQueryWithWebServices.zip">Download the full script</a></p>
+<p>We are going to need two further functions, the first to load your xslt file and the second to do the transform.</p>
+<p>Remember not to crowd the root namespace so start by building upon our previous DT namespace:<br />
+<code><br />
+DT.xml = {}<br />
+</code><br />
+Then add the functions:</p>
+<p><code><br />
+DT.xml.loadXMLDoc = function(fname) {<br />
+var xmlDoc;<br />
+// code for IE<br />
+if (window.ActiveXObject) {<br />
+xmlDoc = new ActiveXObject("Microsoft.XMLDOM");<br />
+xmlDoc.async = false;<br />
+xmlDoc.load(fname);<br />
+return (xmlDoc);<br />
+}<br />
+// code for Mozilla, Firefox, Opera, etc.<br />
+else if (window.XMLHttpRequest) {<br />
+xmlDoc = new window.XMLHttpRequest();<br />
+xmlDoc.open("GET", fname, false);<br />
+xmlDoc.send("");<br />
+return xmlDoc.responseXML;<br />
+}<br />
+else {<br />
+</code><code> </code><code>alert('Your browser cannot handle this script');<br />
+}<br />
+}<br />
+</code><code><br />
+DT.xml.xslTransform = function(xml, xsl) {<br />
+// code for IE<br />
+if (window.ActiveXObject) {<br />
+ex = xml.transformNode(xsl);<br />
+return ex;<br />
+}<br />
+// code for Mozilla, Firefox, Opera, etc.<br />
+else if (document.implementation  &amp;&amp; document.implementation.createDocument) {<br />
+xsltProcessor = new XSLTProcessor();<br />
+xsltProcessor.importStylesheet(xsl);<br />
+resultDocument = xsltProcessor.transformToFragment(xml, document);<br />
+return resultDocument;<br />
+}<br />
+}<br />
+</code></p>
+<p>Now we can update the HelloWorld method to add the transformed html to the DOM. This needs to be run once the DOM has been loaded so you would either put this code within the jQuery ready event or a user inititiated event.</p>
+<p><code><br />
+DT.wsCustom.HelloWorld(function(xData,textStatus){<br />
+xsl = DT.xml.loadXMLDoc("yourxsl.xslt");<br />
+doc = DT.xml.xslTransform(xData.responseXML,xsl);<br />
+$("#HelloWorldDiv").html(doc);<br />
+});<br />
+</code><br />
+As you can see this is extremely simple but has the potential to completely revolutionise the way that you create web applications.</p>
+  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/davidjtaylor.wordpress.com/63/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/davidjtaylor.wordpress.com/63/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/godelicious/davidjtaylor.wordpress.com/63/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/delicious/davidjtaylor.wordpress.com/63/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gostumble/davidjtaylor.wordpress.com/63/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/stumble/davidjtaylor.wordpress.com/63/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/godigg/davidjtaylor.wordpress.com/63/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/digg/davidjtaylor.wordpress.com/63/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/goreddit/davidjtaylor.wordpress.com/63/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/reddit/davidjtaylor.wordpress.com/63/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=davidjtaylor.wordpress.com&blog=1987444&post=63&subd=davidjtaylor&ref=&feed=1" /></div>]]></content:encoded>
+			<wfw:commentRss>http://davidjtaylor.wordpress.com/2009/07/20/client-xsl-transformations-from-asp-net-webservice-response/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+	
+		<media:content url="http://1.gravatar.com/avatar/bbf81bc82fed795624ed696fe1e5aee0?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">davidjtaylor</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>HTML 5 examples and tutorials</title>
+		<link>http://davidjtaylor.wordpress.com/2009/07/16/html-5-examples-and-tutorials/</link>
+		<comments>http://davidjtaylor.wordpress.com/2009/07/16/html-5-examples-and-tutorials/#comments</comments>
+		<pubDate>Thu, 16 Jul 2009 13:53:55 +0000</pubDate>
+		<dc:creator>davidjtaylor</dc:creator>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[html5]]></category>
+		<category><![CDATA[web design]]></category>
+
+		<guid isPermaLink="false">http://davidjtaylor.wordpress.com/2009/07/16/html-5-examples-and-tutorials/</guid>
+		<description><![CDATA[I thought I would post a few really helpful html 5 examples and test pages.
+A good page to keep track of is http://www.w3.org/html/planet/
+Drag and Drop (works in firefox 3.5)
+http://decafbad.com/2009/07/drag-and-drop/api-demos.html
+Test Elements
+This is a layout which uses the new header, nav, aside and footer elements to build a page as well as a few other new HTML [...]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=davidjtaylor.wordpress.com&blog=1987444&post=61&subd=davidjtaylor&ref=&feed=1" />]]></description>
+			<content:encoded><![CDATA[<div class='snap_preview'><br /><p>I thought I would post a few really helpful html 5 examples and test pages.</p>
+<p>A good page to keep track of is <a id="vl2h" title="http://www.w3.org/html/planet/" href="http://www.w3.org/html/planet/">http://www.w3.org/html/planet/</a></p>
+<h3>Drag and Drop (works in firefox 3.5)</h3>
+<p><a id="m688" title="http://decafbad.com/2009/07/drag-and-drop/api-demos.html" href="http://decafbad.com/2009/07/drag-and-drop/api-demos.html">http://decafbad.com/2009/07/drag-and-drop/api-demos.html</a></p>
+<h3>Test Elements</h3>
+<p>This is a layout which uses the new header, nav, aside and footer elements to build a page as well as a few other new HTML 5 tags.<br />
+<a id="h3.:" title="http://www.brucelawson.co.uk/tests/html5-elements.html" href="http://www.brucelawson.co.uk/tests/html5-elements.html">http://www.brucelawson.co.uk/tests/html5-elements.html</a></p>
+<h3>Layouts Tutorial</h3>
+<p>Another HTML 5 layout but as a tutorial.<br />
+<a id="xabu" title="http://net.tutsplus.com/tutorials/html-css-techniques/html-5-and-css-3-the-techniques-youll-soon-be-using/" href="http://net.tutsplus.com/tutorials/html-css-techniques/html-5-and-css-3-the-techniques-youll-soon-be-using/">http://net.tutsplus.com/tutorials/html-css-techniques/html-5-and-css-3-the-techniques-youll-soon-be-using/</a></p>
+<h3>Building an XHTML5 document</h3>
+<p><a id="tb19" title="http://www.hagenburger.net/2009/03/html5-xhtml5-with-css-for-safari-firefox-opera-ie" href="http://www.hagenburger.net/2009/03/html5-xhtml5-with-css-for-safari-firefox-opera-ie">http://www.hagenburger.net/2009/03/html5-xhtml5-with-css-for-safari-firefox-opera-ie</a></p>
+<p>Enjoy checking out html 5</p>
+  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/davidjtaylor.wordpress.com/61/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/davidjtaylor.wordpress.com/61/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/godelicious/davidjtaylor.wordpress.com/61/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/delicious/davidjtaylor.wordpress.com/61/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gostumble/davidjtaylor.wordpress.com/61/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/stumble/davidjtaylor.wordpress.com/61/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/godigg/davidjtaylor.wordpress.com/61/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/digg/davidjtaylor.wordpress.com/61/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/goreddit/davidjtaylor.wordpress.com/61/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/reddit/davidjtaylor.wordpress.com/61/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=davidjtaylor.wordpress.com&blog=1987444&post=61&subd=davidjtaylor&ref=&feed=1" /></div>]]></content:encoded>
+			<wfw:commentRss>http://davidjtaylor.wordpress.com/2009/07/16/html-5-examples-and-tutorials/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	
+		<media:content url="http://1.gravatar.com/avatar/bbf81bc82fed795624ed696fe1e5aee0?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">davidjtaylor</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>Aqueduct</title>
+		<link>http://davidjtaylor.wordpress.com/2009/07/14/aqueduct/</link>
+		<comments>http://davidjtaylor.wordpress.com/2009/07/14/aqueduct/#comments</comments>
+		<pubDate>Tue, 14 Jul 2009 12:41:08 +0000</pubDate>
+		<dc:creator>davidjtaylor</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://davidjtaylor.wordpress.com/2009/07/14/aqueduct/</guid>
+		<description><![CDATA[I have just taken up a new position as Front End Web Developer at Aqueduct who are a creative agency based in Farringdon.
+This means I should be able to have more of a focus on front end technologies.
+More to come&#8230;
+       <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=davidjtaylor.wordpress.com&blog=1987444&post=59&subd=davidjtaylor&ref=&feed=1" />]]></description>
+			<content:encoded><![CDATA[<div class='snap_preview'><br /><p>I have just taken up a new position as Front End Web Developer at <a title="Aqueduct" href="http://www.aqueduct.co.uk" id="h-kc">Aqueduct</a> who are a creative agency based in Farringdon.</p>
+<p>This means I should be able to have more of a focus on front end technologies.</p>
+<p>More to come&#8230;</p>
+  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/davidjtaylor.wordpress.com/59/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/davidjtaylor.wordpress.com/59/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/godelicious/davidjtaylor.wordpress.com/59/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/delicious/davidjtaylor.wordpress.com/59/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gostumble/davidjtaylor.wordpress.com/59/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/stumble/davidjtaylor.wordpress.com/59/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/godigg/davidjtaylor.wordpress.com/59/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/digg/davidjtaylor.wordpress.com/59/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/goreddit/davidjtaylor.wordpress.com/59/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/reddit/davidjtaylor.wordpress.com/59/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=davidjtaylor.wordpress.com&blog=1987444&post=59&subd=davidjtaylor&ref=&feed=1" /></div>]]></content:encoded>
+			<wfw:commentRss>http://davidjtaylor.wordpress.com/2009/07/14/aqueduct/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	
+		<media:content url="http://1.gravatar.com/avatar/bbf81bc82fed795624ed696fe1e5aee0?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">davidjtaylor</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>Example using jQuery with ASP.Net (SOAP) WebServices</title>
+		<link>http://davidjtaylor.wordpress.com/2009/06/23/using-jquery-with-asp-net-webservices/</link>
+		<comments>http://davidjtaylor.wordpress.com/2009/06/23/using-jquery-with-asp-net-webservices/#comments</comments>
+		<pubDate>Tue, 23 Jun 2009 08:04:46 +0000</pubDate>
+		<dc:creator>davidjtaylor</dc:creator>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[asp.net]]></category>
+		<category><![CDATA[bespoke web design]]></category>
+		<category><![CDATA[jQuery]]></category>
+
+		<guid isPermaLink="false">http://davidjtaylor.wordpress.com/?p=49</guid>
+		<description><![CDATA[I don&#8217;t know about you, but I&#8217;ve had enough of slow loading aspx pages because of the huge ScriptManager JavaScript files that are needed to be downloaded. I also don&#8217;t see why I should have to register web services through it to be able to use them in my client side code.
+Once answer is to [...]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=davidjtaylor.wordpress.com&blog=1987444&post=49&subd=davidjtaylor&ref=&feed=1" />]]></description>
+			<content:encoded><![CDATA[<div class='snap_preview'><br /><p>I don&#8217;t know about you, but I&#8217;ve had enough of slow loading aspx pages because of the huge ScriptManager JavaScript files that are needed to be downloaded. I also don&#8217;t see why I should have to register web services through it to be able to use them in my client side code.</p>
+<p>Once answer is to use jQuery. We can access Asp.Net web services (SOAP) removing the need for the ScriptManager on your aspx page.</p>
+<p>Asp.Net web services either use SOAP or JSON and for this post I will show you how to access your webservice using SOAP.</p>
+<p>This is how you can do it:</p>
+<p>First of all I like to organise all my JavaScript in to namespaces so that it stays neat so I declare the DT object.</p>
+<pre>var DT = {}</pre>
+<p>Then because we will be using Soap I have created a useful Soap function called getEnvelope which saves having to add the envelope xml each time you want to build a request.</p>
+<pre>DT.Soap = {
+  getEnvelope: function(body) {
+    var soapEnv =
+    "&lt;soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'&gt; 
+        &lt;soapenv:Body&gt; 
+           " + body + " 
+        &lt;/soapenv:Body&gt; 
+     &lt;/soapenv:Envelope&gt;";
+    return soapEnv;
+  }
+}</pre>
+<p>You can use this ws object each time you define a new webservice.</p>
+<pre>DT.ws = function(wsUrl) {
+    this.wsUrl = wsUrl;
+}
+DT.ws.prototype = {
+    wsUrl: null,
+    getData: function(soapEnvelope, fnComplete, fnSuccess, fnError) {
+        $.ajax({
+            url: this.wsUrl,
+            type: "POST",
+            dataType: "xml",
+            data: soapEnvelope,
+            contentType: "text/xml; charset="utf-8"",
+            complete: fnComplete,
+            success: fnSuccess,
+            error: fnError
+        });
+    }
+}</pre>
+<p>Defining a new web service would then look something like the code below. We first create a new ws object instance and then define the HelloWorld method.</p>
+<pre>DT.wsCustom = new DT.ws("wsCustom.asmx");
+DT.wsCustom.HelloWorld = function(fnComplete, fnSuccess, fnError) {
+    var soapEnv = DT.Soap.getEnvelope("&lt;HelloWorld xmlns='http://yournamespace.com/'&gt;&lt;/HelloWorld&gt;");
+    this.getData(soapEnv, fnComplete, fnSuccess, fnError);
+}</pre>
+<p>Finally you can use your new web service with the following code.</p>
+<pre>DT.wsCustom.HelloWorld(function(xData,textStatus){
+    alert("This is the xml response: " + xData.responseXML);
+});</pre>
+<p>This is just a quick start to using jQuery to access Asp.Net web services. <a href="http://davidjtaylor.wordpress.com/2009/07/20/client-xsl-transformations-from-asp-net-webservice-response/">Here is part 2</a> to include XSL transforms and more advanced web methods.</p>
+<p>Hope this helps.</p>
+  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/davidjtaylor.wordpress.com/49/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/davidjtaylor.wordpress.com/49/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/godelicious/davidjtaylor.wordpress.com/49/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/delicious/davidjtaylor.wordpress.com/49/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gostumble/davidjtaylor.wordpress.com/49/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/stumble/davidjtaylor.wordpress.com/49/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/godigg/davidjtaylor.wordpress.com/49/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/digg/davidjtaylor.wordpress.com/49/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/goreddit/davidjtaylor.wordpress.com/49/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/reddit/davidjtaylor.wordpress.com/49/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=davidjtaylor.wordpress.com&blog=1987444&post=49&subd=davidjtaylor&ref=&feed=1" /></div>]]></content:encoded>
+			<wfw:commentRss>http://davidjtaylor.wordpress.com/2009/06/23/using-jquery-with-asp-net-webservices/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	
+		<media:content url="http://1.gravatar.com/avatar/bbf81bc82fed795624ed696fe1e5aee0?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">davidjtaylor</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>Clergy Shirts</title>
+		<link>http://davidjtaylor.wordpress.com/2009/02/09/clergy-shirts/</link>
+		<comments>http://davidjtaylor.wordpress.com/2009/02/09/clergy-shirts/#comments</comments>
+		<pubDate>Mon, 09 Feb 2009 17:13:55 +0000</pubDate>
+		<dc:creator>davidjtaylor</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://davidjtaylor.wordpress.com/?p=45</guid>
+		<description><![CDATA[Recently I have been working on a website which sells clergy shirts and clergy accessories which has been an strange experience trying to make dog collars and gowns look attractive. Not sure if I have achieved it but it has been fun.
+       <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=davidjtaylor.wordpress.com&blog=1987444&post=45&subd=davidjtaylor&ref=&feed=1" />]]></description>
+			<content:encoded><![CDATA[<div class='snap_preview'><br /><p>Recently I have been working on a website which sells <a title="Clergy Shirts" href="http://www.reliantshirts.com">clergy shirts</a> and <a title="Clergy Accessories" href="http://www.reliantshirts.com">clergy accessories</a> which has been an strange experience trying to make dog collars and gowns look attractive. Not sure if I have achieved it but it has been fun.</p>
+  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/davidjtaylor.wordpress.com/45/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/davidjtaylor.wordpress.com/45/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/godelicious/davidjtaylor.wordpress.com/45/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/delicious/davidjtaylor.wordpress.com/45/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gostumble/davidjtaylor.wordpress.com/45/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/stumble/davidjtaylor.wordpress.com/45/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/godigg/davidjtaylor.wordpress.com/45/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/digg/davidjtaylor.wordpress.com/45/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/goreddit/davidjtaylor.wordpress.com/45/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/reddit/davidjtaylor.wordpress.com/45/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=davidjtaylor.wordpress.com&blog=1987444&post=45&subd=davidjtaylor&ref=&feed=1" /></div>]]></content:encoded>
+			<wfw:commentRss>http://davidjtaylor.wordpress.com/2009/02/09/clergy-shirts/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	
+		<media:content url="http://1.gravatar.com/avatar/bbf81bc82fed795624ed696fe1e5aee0?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">davidjtaylor</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>I will say of the Lord</title>
+		<link>http://davidjtaylor.wordpress.com/2008/05/03/i-will-say-of-the-lord/</link>
+		<comments>http://davidjtaylor.wordpress.com/2008/05/03/i-will-say-of-the-lord/#comments</comments>
+		<pubDate>Sat, 03 May 2008 11:26:01 +0000</pubDate>
+		<dc:creator>davidjtaylor</dc:creator>
+				<category><![CDATA[lewin]]></category>
+		<category><![CDATA[songs]]></category>
+		<category><![CDATA[worship]]></category>
+
+		<guid isPermaLink="false">http://davidjtaylor.wordpress.com/?p=40</guid>
+		<description><![CDATA[
+Est and I have finally got this recorded, it&#8217;s a bit ropey but we had fun. God is good!!
+       <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=davidjtaylor.wordpress.com&blog=1987444&post=40&subd=davidjtaylor&ref=&feed=1" />]]></description>
+			<content:encoded><![CDATA[<div class='snap_preview'><br /><p><span style="text-align:center; display: block;"><a href="http://davidjtaylor.wordpress.com/2008/05/03/i-will-say-of-the-lord/"><img src="http://img.youtube.com/vi/R389yBUnca4/2.jpg" alt="" /></a></span></p>
+<p>Est and I have finally got this recorded, it&#8217;s a bit ropey but we had fun. God is good!!</p>
+<img alt="" border="0" src="http://feeds.wordpress.com/1.0/categories/davidjtaylor.wordpress.com/40/" /> <img alt="" border="0" src="http://feeds.wordpress.com/1.0/tags/davidjtaylor.wordpress.com/40/" /> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/davidjtaylor.wordpress.com/40/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/davidjtaylor.wordpress.com/40/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/godelicious/davidjtaylor.wordpress.com/40/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/delicious/davidjtaylor.wordpress.com/40/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gostumble/davidjtaylor.wordpress.com/40/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/stumble/davidjtaylor.wordpress.com/40/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/godigg/davidjtaylor.wordpress.com/40/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/digg/davidjtaylor.wordpress.com/40/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/goreddit/davidjtaylor.wordpress.com/40/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/reddit/davidjtaylor.wordpress.com/40/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=davidjtaylor.wordpress.com&blog=1987444&post=40&subd=davidjtaylor&ref=&feed=1" /></div>]]></content:encoded>
+			<wfw:commentRss>http://davidjtaylor.wordpress.com/2008/05/03/i-will-say-of-the-lord/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	
+		<media:content url="http://1.gravatar.com/avatar/bbf81bc82fed795624ed696fe1e5aee0?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">davidjtaylor</media:title>
+		</media:content>
+
+		<media:content url="http://img.youtube.com/vi/R389yBUnca4/2.jpg" medium="image" />
+	</item>
+		<item>
+		<title>Ruth Fazal at Lewin 16th May</title>
+		<link>http://davidjtaylor.wordpress.com/2008/05/03/ruth-fazal-at-lewin-16th-may/</link>
+		<comments>http://davidjtaylor.wordpress.com/2008/05/03/ruth-fazal-at-lewin-16th-may/#comments</comments>
+		<pubDate>Sat, 03 May 2008 11:10:27 +0000</pubDate>
+		<dc:creator>davidjtaylor</dc:creator>
+				<category><![CDATA[Print]]></category>
+		<category><![CDATA[design]]></category>
+		<category><![CDATA[lewin]]></category>
+		<category><![CDATA[music]]></category>
+		<category><![CDATA[ruth fazal]]></category>
+		<category><![CDATA[streatham baptist church]]></category>
+		<category><![CDATA[worship]]></category>
+
+		<guid isPermaLink="false">http://davidjtaylor.wordpress.com/?p=39</guid>
+		<description><![CDATA[
+Ruth Fazal is at Lewin on the 16th May. Should be a good evening!
+       <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=davidjtaylor.wordpress.com&blog=1987444&post=39&subd=davidjtaylor&ref=&feed=1" />]]></description>
+			<content:encoded><![CDATA[<div class='snap_preview'><br /><p><a href="http://davidjtaylor.files.wordpress.com/2008/05/ruth-fazal-web.jpg"><img class="alignnone size-medium wp-image-38" src="http://davidjtaylor.files.wordpress.com/2008/05/ruth-fazal-web.jpg?w=300&#038;h=211" alt="" width="300" height="211" /></a></p>
+<p>Ruth Fazal is at Lewin on the 16th May. Should be a good evening!</p>
+<img alt="" border="0" src="http://feeds.wordpress.com/1.0/categories/davidjtaylor.wordpress.com/39/" /> <img alt="" border="0" src="http://feeds.wordpress.com/1.0/tags/davidjtaylor.wordpress.com/39/" /> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/davidjtaylor.wordpress.com/39/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/davidjtaylor.wordpress.com/39/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/godelicious/davidjtaylor.wordpress.com/39/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/delicious/davidjtaylor.wordpress.com/39/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gostumble/davidjtaylor.wordpress.com/39/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/stumble/davidjtaylor.wordpress.com/39/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/godigg/davidjtaylor.wordpress.com/39/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/digg/davidjtaylor.wordpress.com/39/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/goreddit/davidjtaylor.wordpress.com/39/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/reddit/davidjtaylor.wordpress.com/39/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=davidjtaylor.wordpress.com&blog=1987444&post=39&subd=davidjtaylor&ref=&feed=1" /></div>]]></content:encoded>
+			<wfw:commentRss>http://davidjtaylor.wordpress.com/2008/05/03/ruth-fazal-at-lewin-16th-may/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	
+		<media:content url="http://1.gravatar.com/avatar/bbf81bc82fed795624ed696fe1e5aee0?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">davidjtaylor</media:title>
+		</media:content>
+
+		<media:content url="http://davidjtaylor.files.wordpress.com/2008/05/ruth-fazal-web.jpg?w=300" medium="image" />
+	</item>
+		<item>
+		<title>Fair Trade weekend at Streatham Baptist</title>
+		<link>http://davidjtaylor.wordpress.com/2008/02/16/fair-trade-weekend-at-streatham-baptist/</link>
+		<comments>http://davidjtaylor.wordpress.com/2008/02/16/fair-trade-weekend-at-streatham-baptist/#comments</comments>
+		<pubDate>Sat, 16 Feb 2008 09:23:26 +0000</pubDate>
+		<dc:creator>davidjtaylor</dc:creator>
+				<category><![CDATA[Print]]></category>
+		<category><![CDATA[design]]></category>
+		<category><![CDATA[baptist]]></category>
+		<category><![CDATA[church]]></category>
+		<category><![CDATA[fair trade]]></category>
+		<category><![CDATA[fairtrade]]></category>
+		<category><![CDATA[lewin]]></category>
+		<category><![CDATA[streatham]]></category>
+
+		<guid isPermaLink="false">http://davidjtaylor.wordpress.com/?p=32</guid>
+		<description><![CDATA[Next weekend is Fair Trade weekend at Steatham Baptist Church. Here are some leaflets I was asked to do for them. If you&#8217;re in the area come visit us. They also have a Fair trade stall on the first sunday of every month.
+
+
+       <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=davidjtaylor.wordpress.com&blog=1987444&post=32&subd=davidjtaylor&ref=&feed=1" />]]></description>
+			<content:encoded><![CDATA[<div class='snap_preview'><br /><p>Next weekend is Fair Trade weekend at Steatham Baptist Church. Here are some leaflets I was asked to do for them. If you&#8217;re in the area come visit us. They also have a Fair trade stall on the first sunday of every month.</p>
+<p><a href="http://davidjtaylor.files.wordpress.com/2008/02/front.jpg" title="Lewin Fair Trade weekend front (Streatham Baptist Church)"><img src="http://davidjtaylor.files.wordpress.com/2008/02/front.jpg?w=129&#038;h=180" alt="Lewin Fair Trade weekend front (Streatham Baptist Church)" align="left" height="180" width="129" /></a></p>
+<p><a href="http://davidjtaylor.files.wordpress.com/2008/02/back.jpg" title="Lewin Fair Trade weekend back (Streatham Baptist Church)"><img src="http://davidjtaylor.files.wordpress.com/2008/02/back.jpg?w=129&#038;h=180" alt="Lewin Fair Trade weekend back (Streatham Baptist Church)" height="180" width="129" /></a></p>
+<img alt="" border="0" src="http://feeds.wordpress.com/1.0/categories/davidjtaylor.wordpress.com/32/" /> <img alt="" border="0" src="http://feeds.wordpress.com/1.0/tags/davidjtaylor.wordpress.com/32/" /> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/davidjtaylor.wordpress.com/32/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/davidjtaylor.wordpress.com/32/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/godelicious/davidjtaylor.wordpress.com/32/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/delicious/davidjtaylor.wordpress.com/32/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gostumble/davidjtaylor.wordpress.com/32/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/stumble/davidjtaylor.wordpress.com/32/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/godigg/davidjtaylor.wordpress.com/32/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/digg/davidjtaylor.wordpress.com/32/" /></a> <a rel="nofollow" href="http://feeds.wordpress.com/1.0/goreddit/davidjtaylor.wordpress.com/32/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/reddit/davidjtaylor.wordpress.com/32/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=davidjtaylor.wordpress.com&blog=1987444&post=32&subd=davidjtaylor&ref=&feed=1" /></div>]]></content:encoded>
+			<wfw:commentRss>http://davidjtaylor.wordpress.com/2008/02/16/fair-trade-weekend-at-streatham-baptist/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	
+		<media:content url="http://1.gravatar.com/avatar/bbf81bc82fed795624ed696fe1e5aee0?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">davidjtaylor</media:title>
+		</media:content>
+
+		<media:content url="http://davidjtaylor.files.wordpress.com/2008/02/front.jpg" medium="image">
+			<media:title type="html">Lewin Fair Trade weekend front (Streatham Baptist Church)</media:title>
+		</media:content>
+
+		<media:content url="http://davidjtaylor.files.wordpress.com/2008/02/back.jpg" medium="image">
+			<media:title type="html">Lewin Fair Trade weekend back (Streatham Baptist Church)</media:title>
+		</media:content>
+	</item>
+	</channel>
+</rss>

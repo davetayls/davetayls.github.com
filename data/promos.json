@@ -1,0 +1,35 @@
+{items: [
+	{
+	    url: 'images/youtube.png',
+	    title: 'New juxtapo video',
+	    link: "none",
+	    body: 'Downloading and Installing',
+	    cta: '',
+	    promoTemplate: ''
+	},
+	{
+	    url: 'portfolio/fairtrade.png',
+	    title: 'Fairtrade Leaflet design',
+	    link: "",
+	    body: '',
+	    cta: '',
+	    promoTemplate: ''
+	},
+	{
+	    url: 'portfolio/freud.png',
+	    title: 'Freud Sharepoint',
+	    link: "",
+	    body: 'Sharepoint applications for international communications company Freud Communications. Managing daily press coverage and event organising.',
+	    cta: '',
+	    promoTemplate: ''
+	},
+	{
+	    url: 'portfolio/sonypictures.png',
+	    title: 'Sony Pictures',
+	    link: "",
+	    body: 'Bespoke facilities management',
+	    cta: '',
+	    promoTemplate: ''
+	}
+]
+};

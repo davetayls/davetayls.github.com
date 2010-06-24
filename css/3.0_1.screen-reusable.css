@@ -1,0 +1,41 @@
+/*
+	reusable content 
+-------------------------------------------------------------------------*/
+.acc-item	{ position:absolute !important; display: block !important; top: auto !important; left: -10000px !important; width: 1px !important; height: 1px !important; }
+.cc			{ position: relative; zoom:1; }
+	.cc:after	{ content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.textRegion			{
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background: #fff; 
+	background: rgba(255,255,255,0.9); 
+	font-size: 1.2em; 
+	padding: 15px; 
+	}
+.textRegion h1		{ font-size: 1.4em; }
+.textRegion h2		{ font-size: 1.3em; }
+.textRegion p		{ padding-bottom: 15px; }
+
+	
+.ico-subscribeL {
+	background: url(../images/sprites.png) no-repeat left -50px;
+	display:block;
+	height:64px;
+	text-indent: -9999px;
+	width:64px;
+}
+.ico-linkedin {
+	background: url(../images/sprites.png) no-repeat -100px -50px;
+	display:block;
+	height:64px;
+	text-indent: -9999px;
+	width:64px;
+}
+.ico-twitter {
+	background: url(../images/sprites.png) no-repeat -200px -50px;
+	display:block;
+	height:64px;
+	text-indent: -9999px;
+	width:64px;
+}
