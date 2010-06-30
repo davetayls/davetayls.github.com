@@ -14,11 +14,15 @@ layout: nil
 		<script type="text/javascript" src="/lib/jquery-1.4.2.min.js"></script>
 		<script type="text/javascript" src="/lib/jquery-ui/js/jquery-ui-1.8.custom.min.js"></script>
 		<style type="text/css">
+		  body {
+		    background: url(yotel.png) no-repeat center top;
+		    font-family: arial, _sans;
+		  }
 			.xnav {
-				display: none;
+				display: block;
 				position: absolute;
-				left: 0;
-				top: 0;
+				left: 300px;
+				top: 300px;
 			}
 				.xnav ul {
 					display: block;
@@ -28,49 +32,64 @@ layout: nil
 					.xnav ul li {
 						display: block;
 						float: left;
+            height: 70px;
 						list-style: none;
 						list-style-image: none;
 						margin:0;
+            opacity: 0.5;
 						padding:0;
 						position: relative;
+            width: 115px;
+					}
+					.xnav ul li:hover {
+					 z-index: 100;
 					}
 						.xnav ul li a {
-							border: solid 1px #ccc;
+						  background: url(menubox-silver.png) no-repeat left top;
+						  color: #6c276a;
 							display: block;
-							height: 60px;
-							line-height: 55px;
-							padding: 0px;
-							text-align: center;
-							width: 60px;
+							height: 76px;
+							left: -13px;
+							padding: 30px 0 0 25px;
+							position: relative;
+							text-transform: uppercase;
+							text-decoration: none;
+							top: -7px;
+							width: 115px;
 						}
 						.xnav ul li a:hover,
 						.xnav ul li:hover > a {
-							background: #333;
-							color: #fff;
+							background-image: url(menubox-darkpurple.png) ;
+							color: #fff;*/
 						}
 						.xnav ul li ul {
 							display: none;
 							position: absolute;
-							left: 0;
-							top: 60px;
+							padding-left: 57px;
+							top: 72px;
 						}
 						.xnav ul li:hover ul {
 							display: block;
 						}
-							.xnav ul li:hover ul li ul {
-								
-								display: none;
-								position: absolute;
-								left: 60px;
-								top: 0px;
-								width: 400px;
+							.xnav ul li ul li a {
+							 background-image: url(menubox-solidpurple.png);
+							 color: #fff;
 							}
-							.xnav ul li ul li ul li {
-							}
-							.xnav ul li:hover ul li:hover ul {
-								display: block;
-							}
-								.xnav ul li ul li ul li a {
+								.xnav ul li ul li ul {
+									position: absolute;
+									left: 116px;
+									padding-left: 0;
+									top: 0px;
+									width: 400px;
+								}
+	              .xnav ul li:hover ul li ul {
+	                display: none;
+	              }
+								.xnav > ul > li > ul > li:nth-child(even) {
+								 left: 61px;
+								}
+								.xnav ul li:hover ul li:hover ul {
+									display: block;
 								}
 
 							.xnav-anchorBottom ul li:hover ul {
@@ -84,7 +103,39 @@ layout: nil
 								.xnav-anchorRight ul li ul li ul li {
 									float: right;
 								}
-
+        .xnav-t4 > ul > li,
+        .xnav-t4 > ul > li:hover > ul > li {
+          opacity: 1;
+        }
+        .xnav-t6 > ul > li:hover,
+        .xnav-t6 > ul > li > ul > li,
+        .xnav-t6 > ul > li > ul > li:hover > ul > li {
+          opacity: 1;
+        }
+        .xnav-t8 > ul > li:hover,
+        .xnav-t8 > ul > li > ul > li:hover,
+        .xnav-t8 > ul > li > ul > li > ul > li {
+          opacity: 1;
+        }
+        
+        .xnav-t8 > ul > li {
+          width: 95px;
+        }
+        .xnav-t8 > ul > li:hover {
+          width: 120px;
+        }
+        .xnav-t8 > ul > li > a {
+          background-image: url(menubox-silversm.png);
+          font-size: 0.8em;
+          left: -25px;
+          padding-top: 40px;
+          padding-left: 30px;
+        }
+        .xnav-t8 > ul > li:hover > a {
+          font-size: 1em;
+          left: -13px;
+          opacity: 0.5;
+        }
 		</style>
 <script type="text/javascript">
 	(function(){
@@ -94,6 +145,16 @@ layout: nil
 		$.fn.xnav = function(){
 			this.each(function(){
 				var this$ = $(this);
+				var navUl$ = this$.find('>ul');
+				this$.find('li').hover(function(){
+					var tier = $(this).closest('li').parentsUntil(navUl$).length;
+					console.log(tier);
+					this$
+						.removeClass('xnav-t4')
+						.removeClass('xnav-t6')
+						.removeClass('xnav-t8');
+					this$.addClass('xnav-t'+tier);
+				});
 				$(document).click(function(e){
 					this$.removeClass('xnav-anchorRight');
 					this$.removeClass('xnav-anchorBottom');
@@ -127,7 +188,6 @@ layout: nil
 </script>
 	</head>
 	<body>
-		<h1>xnav</h1>
 		<div id="xnav" class="xnav">
 			<ul>
 				<li>
