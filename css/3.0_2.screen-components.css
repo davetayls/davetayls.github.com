@@ -232,7 +232,12 @@ ul.list-blogs {
 		clear:both;
 		padding-bottom: 5px;
 	}
-		ul.list-blogs li h4 {
+		.list-blogs-header {
+			font-size: 1em;
+			margin: 0;
+			padding:0;
+		}
+		ul.list-blogs li .list-blogs-date {
 			background: url(../images/sprites.png) no-repeat top left;
 			color: white;
 			float: left;
@@ -244,9 +249,13 @@ ul.list-blogs {
 			text-transform: uppercase;
 			width: 34px;
 		}	
-		ul.list-blogs li h4 abbr {
+		ul.list-blogs li .list-blogs-date abbr {
 			display: block;
 		}
-		ul.list-blogs li p a {
-			text-shadow: 1px 1px 0 #333;
+		ul.list-blogs li .list-blogs-header a {
+			display: block;
+		}
+		h2.list-blogs-header a {
+			font-size: 1.2em;
+			line-height: 1.1em;
 		}

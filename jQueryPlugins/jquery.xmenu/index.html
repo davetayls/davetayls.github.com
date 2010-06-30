@@ -1,0 +1,225 @@
+---
+layout: nil
+---
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB">
+	<head>
+		<title>untitled</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="Content-Language" content="en-GB" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<script type="text/javascript" src="/lib/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="/lib/jquery-ui/js/jquery-ui-1.8.custom.min.js"></script>
+		<style type="text/css">
+			.xnav {
+				display: none;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+				.xnav ul {
+					display: block;
+					margin:0;
+					padding:0;
+				}
+					.xnav ul li {
+						display: block;
+						float: left;
+						list-style: none;
+						list-style-image: none;
+						margin:0;
+						padding:0;
+						position: relative;
+					}
+						.xnav ul li a {
+							border: solid 1px #ccc;
+							display: block;
+							height: 60px;
+							line-height: 55px;
+							padding: 0px;
+							text-align: center;
+							width: 60px;
+						}
+						.xnav ul li a:hover,
+						.xnav ul li:hover > a {
+							background: #333;
+							color: #fff;
+						}
+						.xnav ul li ul {
+							display: none;
+							position: absolute;
+							left: 0;
+							top: 60px;
+						}
+						.xnav ul li:hover ul {
+							display: block;
+						}
+							.xnav ul li:hover ul li ul {
+								
+								display: none;
+								position: absolute;
+								left: 60px;
+								top: 0px;
+								width: 400px;
+							}
+							.xnav ul li ul li ul li {
+							}
+							.xnav ul li:hover ul li:hover ul {
+								display: block;
+							}
+								.xnav ul li ul li ul li a {
+								}
+
+							.xnav-anchorBottom ul li:hover ul {
+								top: auto;
+								bottom: 60px;
+							}
+							.xnav-anchorRight ul li:hover ul li ul {
+								left: auto;
+								right: 60px;
+							}
+								.xnav-anchorRight ul li ul li ul li {
+									float: right;
+								}
+
+		</style>
+<script type="text/javascript">
+	(function(){
+		var scrWidth = $(window).width();
+		var scrHeight = $(window).height();
+		
+		$.fn.xnav = function(){
+			this.each(function(){
+				var this$ = $(this);
+				$(document).click(function(e){
+					this$.removeClass('xnav-anchorRight');
+					this$.removeClass('xnav-anchorBottom');
+					
+					var cssLocation = {
+						left: e.pageX+'px',
+						top: e.pageY + 'px'						
+					};
+					if (e.pageX > (scrWidth-300)){
+						cssLocation.left = 'auto';
+						cssLocation.right = (scrWidth - e.pageX) + 'px';
+						this$.addClass('xnav-anchorRight'); 
+					}
+					if (scrHeight > 300 && e.pageY > (scrHeight - 300)){
+						this$.addClass('xnav-anchorBottom'); 
+					}
+					if (e.pageY > (scrHeight - 70)){
+						cssLocation.top = scrHeight - 70;
+					}
+					this$
+						.css(cssLocation)
+						.show();				
+				});
+				
+			});
+		};
+		$().ready(function(){
+			$('#xnav').xnav();
+		});
+	})(jQuery);
+</script>
+	</head>
+	<body>
+		<h1>xnav</h1>
+		<div id="xnav" class="xnav">
+			<ul>
+				<li>
+					<a href="none">level 1</a>
+					<ul>
+						<li>
+							<a href="none">level 2</a>
+						</li>
+						<li>
+							<a href="none">level 2</a>
+							<ul>
+								<li>
+									<a href="none">level 3</a>
+								</li>
+								<li>
+									<a href="none">level 3</a>
+								</li>
+								<li>
+									<a href="none">level 3</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="none">level 2</a>
+							<ul>
+								<li>
+									<a href="none">level 3</a>
+								</li>
+								<li>
+									<a href="none">level 3</a>
+								</li>
+								<li>
+									<a href="none">level 3</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="none">level 1</a>
+					<ul>
+						<li>
+							<a href="none">level 2</a>
+						</li>
+						<li>
+							<a href="none">level 2</a>
+						</li>
+						<li>
+							<a href="none">level 2</a>
+							<ul>
+								<li>
+									<a href="none">level 3</a>
+								</li>
+								<li>
+									<a href="none">level 3</a>
+								</li>
+								<li>
+									<a href="none">level 3</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="none">level 1</a>
+					<ul>
+						<li>
+							<a href="none">level 2</a>
+						</li>
+						<li>
+							<a href="none">level 2</a>
+						</li>
+						<li>
+							<a href="none">level 2</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="none">level 1</a>
+					<ul>
+						<li>
+							<a href="none">level 2</a>
+						</li>
+						<li>
+							<a href="none">level 2</a>
+						</li>
+						<li>
+							<a href="none">level 2</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
