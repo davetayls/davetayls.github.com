@@ -3,6 +3,7 @@
 	var scrHeight = $(window).height();
 	var wrapper$;
 	var flyout$;
+	var tray$;
 	
 	
 	$.fn.xnav = function(){
@@ -114,8 +115,20 @@
 		wrapper$ = $('#wrapper');
 		resizeWindow();
 		flyout$ = $('#flyout');
+		tray$ = $('#tray');
 		$('#xnav').xnav();
 	});
 	$(window).resize(resizeWindow);
-	
+	var trayUp = false;
+	$(window).mousemove(function(e){
+		if (typeof tray$ !== 'undefined'){
+			if (e.pageY > (scrHeight - 200) && !trayUp){
+				tray$.animate({height: 40});
+				trayUp = true;
+			}else if (e.pageY < (scrHeight - 200) && trayUp){
+				tray$.animate({height: 30});
+				trayUp = false;
+			}
+		}
+	});
 })(jQuery);

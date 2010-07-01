@@ -20,8 +20,9 @@ body {
 #tray {
 	background: rgba(255,255,255,0.7);
 	bottom: 0;
-	height: 125px;
+	height: 30px;
 	left: 0;
+	overflow: visible !important;
 	position: absolute;
 	width: 100%;
 }
@@ -61,8 +62,10 @@ body {
 	width: 100%;
 }
 #flyout {
-	background: rgba(0,0,0,0.8);
+	background: #000;
 	border-radius: 5px 0 0 5px;
+	-moz-border-radius: 5px 0 0 5px;
+	-webkit-border-radius: 5px 0 0 5px;
 	height: 500px;
 	margin: 0px;
 	padding: 10px;
