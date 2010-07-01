@@ -45,6 +45,9 @@ body {
 	      position: relative;
 	      top: 5px;
 	    }
+	    #tray-menu a img:hover {
+	     top: 0;
+	    }
 
 
 

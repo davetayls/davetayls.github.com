@@ -53,6 +53,7 @@
 				next$.show();
 				return false;
 			});
+			//$('#tray-menu a img').hover
 			this$.find('li').hover(function(){
 				var tier = $(this).closest('li').parentsUntil('#xnav > ul').length;
 				this$
