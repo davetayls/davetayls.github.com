@@ -30,9 +30,12 @@ body {
 	position: absolute;
 	top: -42px;
 	left: 50%;
-	margin-left: -388px;
-	width: 777px;
+	margin-left: -408px;
+	width: 817px;
 }
+		#tray-menu a {
+		  background: url(secnav-btm.png) no-repeat center bottom;
+		}
 		#tray-menu a,
 		#tray-menu a:active {
 			outline: none !important;
