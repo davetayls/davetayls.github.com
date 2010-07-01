@@ -14,30 +14,36 @@ layout: nil
 	</head>
 	<body>
 		<div id="wrapper">
-			 <img src="yotel.png" width="100%" style="position: absolute; top: 0; left: 0;" alt="" />
+			 <img src="yotel.png" height="100%" style="position: absolute; top: 0; left: 0;" alt="" />
+			 <img src="logo.png" style="position: absolute; top: 25px; left: 10px;" />
 			 <div id="login">
-			 	<strong>Hello Guest</strong> | <a href="#">Login</a>
 			 </div>
 		 	<div id="flyout">
 		 		<a id="flyout-close" href="#js">Close</a>
-		 		<h2>Flyout content</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut nisl mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed a euismod mauris. Praesent mattis vulputate dolor nec convallis. Cras nisl elit, pharetra at sodales et, dignissim et leo. Quisque interdum arcu at libero rutrum luctus. Ut sed eros nisi, non ornare risus. Ut varius nibh et arcu suscipit adipiscing. Cras mi odio, hendrerit ut aliquet ac, accumsan non magna. Ut purus nulla, viverra vel dictum eu, elementum a nisl. Donec pulvinar dictum dictum. Vivamus nec mauris sed leo dictum ultricies. Praesent eget sem orci. Cras nec odio mi. Nulla quis pellentesque</p>
+        <div class="flyout-content">
+          <a href="#check" id="dateandtime">
+            <img src="dateandtime.png" alt="" />
+          </a>
+          <a id="check" href="#dateandtime">
+            <img src="checking.png" alt="" />
+          </a>
+        </div>
 		 	</div>
 			<div id="tray">
 				<div id="tray-menu">
-					<ul>
-						<li>
-							<a href="none">POD</a>
-						</li>
-					</ul>
+           <a href="none">
+            <img src="secnav.png" alt="" />
+           </a>
+
 				</div>
 			</div>
-		<div id="xnav" class="xnav">
+    <img src="logos.png" alt="" style="position: absolute; bottom: 10px; left: 10px;" />
+		<div id="xnav" class="xnav xnav-showPOD">
 			<ul>
 				<li>
 					<a href="none">Date<br />&amp Time</a>
 				</li>
-				<li>
+				<li class="xnav-showPOD">
 					<a href="none">POD<br />Type</a>
 					<ul class="xnav-h">
 						<li>
@@ -49,7 +55,7 @@ layout: nil
 						<li>
 							<a href="none">POD<sup>XL</sup></a>
 						</li>
-						<li>
+						<li class="xnav-showPOD">
 							<a href="none">POD<sup>XXL</sup></a>
 							<ul class="xnav-h xnav-bk1">
 								<li>
