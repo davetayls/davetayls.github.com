@@ -28,13 +28,13 @@ body {
 #tray-menu {
 	height: 60px;
 	position: absolute;
-	top: -42px;
+	top: -47px;
 	left: 50%;
-	margin-left: -408px;
-	width: 817px;
+	margin-left: -405px;
+	width: 820px;
 }
 		#tray-menu a {
-		  background: url(secnav-btm.png) no-repeat center bottom;
+		  background: url(secnav-btm.png) no-repeat center -41px;
 		}
 		#tray-menu a,
 		#tray-menu a:active {
@@ -42,6 +42,8 @@ body {
 		}
 	    #tray-menu a img {
 	      border: none;
+	      position: relative;
+	      top: 5px;
 	    }
 
 
