@@ -3,6 +3,7 @@
 	var scrHeight = $(window).height();
 	var wrapper$;
 	var flyout$;
+	var tray$;
 	
 	
 	$.fn.xnav = function(){
@@ -17,13 +18,43 @@
 				if (b){
 					flyout$
 						.animate({
-							'right': -430
+							'right': -570
 						})					
 						.animate({
 							'right': 0
 						});					
+				}else{
+					flyout$
+					.animate({
+						'right': -570
+					});					
 				}
 			};
+			var openPodNav = function(b){
+				if (b){
+					this$.addClass('xnav-t4');
+					$('.xnav-showPOD').addClass('xnav-open');
+				}else{
+					this$.removeClass('xnav-t4');
+					$('.xnav-showPOD').removeClass('xnav-open');
+				}
+			};
+			$('#flyout-close').click(function(){showFlyout(false);return false;});
+			$('.flyout-content a').click(function(){
+				$('.flyout-content a').hide();
+				var this$ = $(this);
+				var next$ = $(this$.attr('href'));
+				/*
+				if (next$.hasClass('xnav-showPOD')){
+					openPodNav(true);
+					showFlyout(false);
+				}else{
+					next$.show();
+				}*/
+				next$.show();
+				return false;
+			});
+			//$('#tray-menu a img').hover
 			this$.find('li').hover(function(){
 				var tier = $(this).closest('li').parentsUntil('#xnav > ul').length;
 				this$
@@ -47,6 +78,8 @@
 				this$.removeClass('xnav-anchorRight');
 				this$.removeClass('xnav-anchorBottom');
 				
+				openPodNav(false);
+				
 				if (isOpen()){
 					this$.fadeOut(100);
 					return;
@@ -56,9 +89,9 @@
 					left: e.pageX+'px',
 					top: e.pageY + 'px'						
 				};
-				if (e.pageX > (scrWidth-300)){
-					cssLocation.left = 'auto';
-					cssLocation.right = (scrWidth - e.pageX) + 'px';
+				if (e.pageX > (scrWidth-700)){
+					cssLocation.left = (scrWidth-700) + 'px';
+					//cssLocation.right = (scrWidth - e.pageX) + 'px';
 					this$.addClass('xnav-anchorRight'); 
 				}
 				if (scrHeight > 300 && e.pageY > (scrHeight - 300)){
@@ -82,8 +115,20 @@
 		wrapper$ = $('#wrapper');
 		resizeWindow();
 		flyout$ = $('#flyout');
+		tray$ = $('#tray');
 		$('#xnav').xnav();
 	});
 	$(window).resize(resizeWindow);
-	
+	var trayUp = false;
+	$(window).mousemove(function(e){
+		if (typeof tray$ !== 'undefined'){
+			if (e.pageY > (scrHeight - 200) && !trayUp){
+				tray$.animate({height: 40});
+				trayUp = true;
+			}else if (e.pageY < (scrHeight - 200) && trayUp){
+				tray$.animate({height: 30});
+				trayUp = false;
+			}
+		}
+	});
 })(jQuery);

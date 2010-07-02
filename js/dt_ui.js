@@ -16,7 +16,7 @@
 					'		' + this.pubDate.substr(5,2) +
 					'	</span> ' +
 					'	<a href="' + this.link + '">' + this.title + '</a>' +
-					'</li>'
+					'</li>';
 					
 					if (i < 5){
 						tweetsLeft$.append(html);					

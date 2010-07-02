@@ -4,40 +4,51 @@ body {
 	padding: 0;
 }
 #login {
-	background: #fff;
-	border: solid 1px red;
+	background: url(loginbar.png) no-repeat right top;
 	border-top: none;
+	height: 100px;
 	position: absolute;
+	text-align: right;
 	top: 0;
-	right: 10px;
-	width: 200px;
+	right: 0px;
+	width: 100%;
+}
+#login span {
+  display: block;
+  margin-right: 10px;
 }
 #tray {
-	background: rgba(255,255,255,0.8);
+	background: rgba(255,255,255,0.7);
 	bottom: 0;
-	height: 100px;
+	height: 30px;
 	left: 0;
+	overflow: visible !important;
 	position: absolute;
 	width: 100%;
 }
 #tray-menu {
-	border: solid 1px red;
 	height: 60px;
 	position: absolute;
-	top: -30px;
+	top: -47px;
 	left: 50%;
-	margin-left: -50px;
-	width: 100px;
+	margin-left: -405px;
+	width: 850px;
 }
-	#tray-menu ul {
-		
-	}
-		#tray-menu ul li {
-			
+		#tray-menu a {
+		  background: url(secnav-btm.png) no-repeat center -41px;
 		}
-			#tray-menu ul li a {
-				
-			}
+		#tray-menu a,
+		#tray-menu a:active {
+			outline: none !important;
+		}
+	    #tray-menu a img {
+	      border: none;
+	      position: relative;
+	      top: 5px;
+	    }
+	    #tray-menu a img:hover {
+	     top: 0;
+	    }
 
 
 
@@ -51,33 +62,58 @@ body {
 	width: 100%;
 }
 #flyout {
-	background: rgba(0,0,0,0.8);
+	background: #000;
 	border-radius: 5px 0 0 5px;
-	bottom: 140px;
+	-moz-border-radius: 5px 0 0 5px;
+	-webkit-border-radius: 5px 0 0 5px;
+	height: 500px;
 	margin: 0px;
 	padding: 10px;
 	position: absolute;
-	right: -430px;
-	top: 25px;
-	width: 400px;
+	right: -570px;
+	top: 80px;
+	width: 535px;
 	z-index: 2;
 }
+.flyout-content {
+	overflow: hidden;
+	height: 446px; 
+	width: 535px;
+}
+  .flyout-content a {
+      border: none;
+      display: block;
+      margin: 0;
+      outline: none !important;
+      padding: 0;
+  }
+	  .flyout-content img {
+			border: none;
+			display: block;
+			margin: 0;
+			padding: 0;
+		}
+
 	#flyout-close {
-		background: rgba(0,0,0,0.8);
-		border-radius: 5px 5px 0 0;
-		-moz-border-radius: 5px 5px 0 0;
-		display: block;
-		padding: 3px 8px;
-		position: absolute;
-		top: -15px;
-		left: 15px;
+-moz-border-radius:5px 5px 0 0;
+background:none repeat scroll 0 0 rgba(0, 0, 0, 0.8);
+color:#888888;
+display:block;
+font-size:0.9em;
+left:15px;
+padding:3px 8px;
+position:absolute;
+text-decoration:none;
+text-transform:uppercase;
+top:-22px;
+outline: none !important;
 	}
 
 .xnav {
 	display: none;
 	position: absolute;
-	left: 300px;
-	top: 300px;
+	left: 30px;
+	top: 120px;
 	z-index: 1000;
 }
 	.xnav ul {
@@ -97,7 +133,8 @@ body {
 			position: relative;
 			width: 115px;
 		}
-		.xnav ul li:hover {
+		.xnav ul li:hover,
+		.xnav ul li.xnav-open {
 		 z-index: 100;
 		}
 			.xnav ul li a {
@@ -114,7 +151,8 @@ body {
 				width: 87px;
 			}
 			.xnav ul li a:hover,
-			.xnav ul li:hover > a {
+			.xnav ul li:hover > a,
+			.xnav ul > li.xnav-open > a {
 				background-image: url(menubox-darkpurple.png) ;
 				color: #fff;*/
 			}
@@ -127,31 +165,14 @@ body {
 				padding-left: 57px;
 				/*top: 72px;*/
 			}
-			.xnav ul li:hover > ul {
+			.xnav ul li:hover > ul,
+			.xnav ul li.xnav-open > ul {
 				display: block;
 			}
 				.xnav ul li ul li a {
 					background-image: url(menubox-solidpurple.png);
 					color: #fff;
 				}
-
-/* tier 3 
-					.xnav ul li ul li ul {
-						position: absolute;
-						left: 116px;
-						padding-left: 0;
-						top: 0px;
-						width: 400px;
-					}
-					.xnav ul li:hover ul li ul {
-						display: none;
-					}
-					.xnav > ul > li > ul > li:nth-child(even) {
-						left: 61px;
-					}
-					.xnav ul li:hover ul li:hover ul {
-						display: block;
-					}*/
 
 .xnav-h {
 	top: 72px;
@@ -161,20 +182,10 @@ body {
 	left: -57px;
 	padding: 0;
 }
+.xnav-open {
+	display: block;
+}
 
-/*
-				.xnav-anchorBottom ul li:hover ul {
-					top: auto;
-					bottom: 60px;
-				}
-				.xnav-anchorRight ul li:hover ul li ul {
-					left: auto;
-					right: 60px;
-				}
-					.xnav-anchorRight ul li ul li ul li {
-						float: right;
-					}
-					*/
 .xnav-t0 > ul > li,
 .xnav-t0 > ul > li:hover > ul > li {
 	opacity: 1;
@@ -186,8 +197,10 @@ body {
 }
 .xnav-t4 > ul > li:hover,
 .xnav-t4 > ul > li > ul > li:hover,
-.xnav-t4 > ul > li > ul > li > ul > li {
-	opacity: 1;
+.xnav-t4 > ul > li > ul > li > ul > li,
+.xnav-t4 > ul > li.xnav-open,
+.xnav-t4 > ul > li > ul > li.xnav-open {
+		opacity: 1;
 }
 
 .xnav-t4 > ul > li {
@@ -196,17 +209,18 @@ body {
 .xnav-t4 > ul > li:hover {
 /*width: 120px;*/
 }
+/*
 .xnav-t4 > ul > li > a {
 background-image: url(menubox-silversm.png);
 font-size: 0.8em;
-/*left: -25px;*/
+left: -25px;
 padding-top: 40px;
 padding-left: 30px;
-}
-.xnav-t4 > ul > li:hover > a {
-font-size: 1em;
-/*left: -13px;*/
-opacity: 0.5;
+}*/
+.xnav-t4 > ul > li > a {
+/*font-size: 1em;
+left: -13px;*/
+opacity: 0.2 !important;
 }
 
 .cp-numStep {

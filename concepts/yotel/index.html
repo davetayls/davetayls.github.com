@@ -1,43 +1,74 @@
----
-layout: nil
----
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB">
 	<head>
 		<title>yotel concept</title>
 
 		<link rel="stylesheet" href="yotel.css" type="text/css" />		
-		<script type="text/javascript" src="/lib/jquery-1.4.2.min.js"></script>
-		<script type="text/javascript" src="/lib/jquery-ui/js/jquery-ui-1.8.custom.min.js"></script>
-		<script type="text/javascript" src="/lib/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.custom.min.js"></script>
 		<script type="text/javascript" src="yotel.js"></script>
 	</head>
 	<body>
 		<div id="wrapper">
-			 <img src="yotel.png" width="100%" style="position: absolute; top: 0; left: 0;" alt="" />
+			 <img src="background_image-high.jpg" height="100%" style="position: absolute; top: 0; left: 0;" alt="" />
+			 <img src="logo.png" style="position: absolute; top: 25px; left: 10px;" />
 			 <div id="login">
-			 	<strong>Hello Guest</strong> | <a href="#">Login</a>
 			 </div>
 		 	<div id="flyout">
 		 		<a id="flyout-close" href="#js">Close</a>
-		 		<h2>Flyout content</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut nisl mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed a euismod mauris. Praesent mattis vulputate dolor nec convallis. Cras nisl elit, pharetra at sodales et, dignissim et leo. Quisque interdum arcu at libero rutrum luctus. Ut sed eros nisi, non ornare risus. Ut varius nibh et arcu suscipit adipiscing. Cras mi odio, hendrerit ut aliquet ac, accumsan non magna. Ut purus nulla, viverra vel dictum eu, elementum a nisl. Donec pulvinar dictum dictum. Vivamus nec mauris sed leo dictum ultricies. Praesent eget sem orci. Cras nec odio mi. Nulla quis pellentesque</p>
+        <div class="flyout-content">
+          <a href="#check" id="dateandtime">
+            <img src="dateandtime.png" alt="" />
+          </a>
+          <a id="check" href="#dateandtime">
+            <img src="checking.png" alt="" />
+          </a>
+        </div>
 		 	</div>
 			<div id="tray">
 				<div id="tray-menu">
-					<ul>
-						<li>
-							<a href="none">POD</a>
-						</li>
-					</ul>
+           <a href="none">
+            <img src="secnav_02.png" alt="" />
+           </a>
+           <a href="none">
+            <img src="secnav_03.png" alt="" />
+           </a>
+           <a href="none">
+            <img src="secnav_04.png" alt="" />
+           </a>
+           <a href="none">
+            <img src="secnav_05.png" alt="" />
+           </a>
+           <a href="none">
+            <img src="secnav_06.png" alt="" />
+           </a>
+           <a href="none">
+            <img src="secnav_07.png" alt="" />
+           </a>
+           <a href="none">
+            <img src="secnav_08.png" alt="" />
+           </a>
+           <a href="none">
+            <img src="secnav_09.png" alt="" />
+           </a>
+           <a href="none">
+            <img src="secnav_10.png" alt="" />
+           </a>
+           <a href="none">
+            <img src="secnav_11.png" alt="" />
+           </a>
+           <a href="none">
+            <img src="secnav_12.png" alt="" />
+           </a>
+
 				</div>
 			</div>
-		<div id="xnav" class="xnav">
+		<div id="xnav" class="xnav xnav-showPOD">
 			<ul>
 				<li>
 					<a href="none">Date<br />&amp Time</a>
 				</li>
-				<li>
+				<li class="xnav-showPOD">
 					<a href="none">POD<br />Type</a>
 					<ul class="xnav-h">
 						<li>
@@ -49,7 +80,7 @@ layout: nil
 						<li>
 							<a href="none">POD<sup>XL</sup></a>
 						</li>
-						<li>
+						<li class="xnav-showPOD">
 							<a href="none">POD<sup>XXL</sup></a>
 							<ul class="xnav-h xnav-bk1">
 								<li>
