@@ -4,16 +4,28 @@
 .acc-item	{ position:absolute !important; display: block !important; top: auto !important; left: -10000px !important; width: 1px !important; height: 1px !important; }
 .cc			{ position: relative; zoom:1; }
 	.cc:after	{ content: "."; display: block; height: 0; clear: both; visibility: hidden; }
-.textRegion			{
+.textRegion	{
 	border-radius: 3px;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
+	color: #333;
 	background: #fff; 
 	background: rgba(255,255,255,0.9); 
 	font-size: 1.2em; 
 	padding: 15px; 
 	}
-.textRegion h1		{ font-size: 1.4em; }
+.textRegion h1		{
+	background: #888;
+	border-bottom: solid 1px #fff;
+	border-radius: 3px 3px 0 0;
+	-moz-border-radius: 3px 3px 0 0;
+	-webkit-border-radius: 3px 3px 0 0;
+	color:#EEEEEE;
+	font-size:1.4em;
+	font-weight:lighter;
+	margin:-15px -15px 5px;
+	padding:15px;
+}
 .textRegion h2		{ font-size: 1.3em; }
 .textRegion p		{ padding-bottom: 15px; }
 

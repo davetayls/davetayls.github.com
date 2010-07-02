@@ -1,0 +1,507 @@
+---
+layout: post
+title: Using Sprites - block, sliding doors and inline within the flow
+categories: css
+author: davetayls
+---
+
+<h2>
+   Some new techniques for working with CSS sprites
+</h2>
+<div>
+   Many people limit themselves when it comes to css sprites. They are convinced of limitations with sprites which I have found don&#39;t
+   exist. The gates are opened with these techniques to be able to use sprites creatively in pretty much any situation. We&#39;ll look at
+   where sprites can speed your page load times, when and where to use them and I&#39;ll show you a new technique which I haven&#39;t found
+   documented before.
+</div>
+<div>
+   <br />
+</div>
+<h3>
+   Before we look at specifics, here are the benefits to using sprites
+</h3>
+<div>
+   <ol>
+      <li>Modern internet connections are pretty fast, which means that page speed bottlenecks are not often in the size of the download,
+      instead on the number of requests made to the server. Using sprite files can drastically reduce the number of requests made.
+         <br />
+         <br />
+         As a real world example, in a recent project I have reduced the number of image files by about 60 using the techniques below.
+         <br />
+         <br />
+      </li>
+      <li>You can also include all your structural images in a single sprite file and heavily cache it therefore, exponentially relieving
+      the load on the server with more page views.
+         <br />
+         <br />
+         The following table demonstrates this with a sprite image file with 30 images inside it:
+         <br />
+         <div>
+            <table cellpadding="3" border="1" cellspacing="0" id="fw9t">
+               <tbody>
+                  <tr>
+                     <td width="25%">
+                        Number of unique visitors
+                     </td>
+                     <td width="25%">
+                        Number of page views
+                     </td>
+                     <td width="25%">
+                        Number of server requests with individual files and no caching
+                     </td>
+                     <td width="25%">
+                        Number of server requests when using the cached sprite file
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="25%">
+                        2
+                     </td>
+                     <td width="25%">
+                        1
+                     </td>
+                     <td width="25%">
+                        60
+                     </td>
+                     <td width="25%">
+                        2
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="25%">
+                        2
+                     </td>
+                     <td width="25%">
+                        4
+                     </td>
+                     <td width="25%">
+                        240
+                     </td>
+                     <td width="25%">
+                        2
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="25%">
+                        2
+                     </td>
+                     <td width="25%">
+                        8
+                     </td>
+                     <td width="25%">
+                        480
+                     </td>
+                     <td width="25%">
+                        2
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="25%">
+                        4
+                     </td>
+                     <td width="25%">
+                        1
+                     </td>
+                     <td width="25%">
+                        120
+                     </td>
+                     <td width="25%">
+                        4
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="25%">
+                        4
+                     </td>
+                     <td width="25%">
+                        4
+                     </td>
+                     <td width="25%">
+                        480
+                     </td>
+                     <td width="25%">
+                        4
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="25%">
+                        4
+                     </td>
+                     <td width="25%">
+                        8
+                     </td>
+                     <td width="25%">
+                        960
+                     </td>
+                     <td width="25%">
+                        4
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <br />
+         You should be able to see the benefits, even with 4 unique visitors. Imagine the gains made when a site has several thousand
+         unique visitors every day.
+         <br />
+         <br />
+      </li>
+      <li>
+         <p>
+            Management of small images is easier. I tend to start a sprites psd to include all the images in. This means that when there is
+            a change to any of the items you don&#39;t have to sift through a large number of files. You can also apply changes across a
+            set of images for older browsers or other style sheets (eg. high visibility, black and white print)
+         </p>
+      </li>
+   </ol>
+</div>
+<h3>
+   When and Where to use sprites
+</h3>
+<div>
+   When you are faced with a website design look for images which:
+</div>
+<div>
+   <ul>
+      <li>Are found in the main structure of the page
+      </li>
+      <li>Are small icons or motifs
+      </li>
+      <li>Very rarely (if ever) change
+      </li>
+      <li>Button backgrounds
+      </li>
+      <li>Navigation backgrounds (ie tabs, arrows)
+      </li>
+   </ul>
+   <div>
+      <br />
+   </div>
+   <div>
+      When you can&#39;t/shouldn&#39;t use sprites
+   </div>
+   <div>
+      <ul>
+         <li>Regularly changing content
+         </li>
+         <li>Content managed images
+         </li>
+         <li>Repeating backgrounds (it is possible but with many limitations)
+         </li>
+      </ul>
+   </div>
+</div>
+<h3>
+   Time to sprite - 3 Techniques
+</h3>
+<div>
+   You can follow these techniques with the <a title="techniques for working with CSS sprites demo page by Dave Taylor" href=
+   "http://the-taylors.org/TestStation/csssprites/csssprites.htm" name="gja4" id="gja4">techniques for working with CSS sprites demo
+   page</a>.
+</div>
+<div>
+   <br />
+</div>
+<div>
+   As far as I can see, there are three distinct types of potential sprite usage within pages.
+</div>
+<div>
+   <br />
+</div>
+<div>
+   All of these examples make use of the following sprite image:
+</div>
+<div>
+   <div style="TEXT-ALIGN: left" id="yb-k">
+      <img src="http://davidjtaylor.files.wordpress.com/2010/04/df6422b_251hfwq58cc_b.gif?w=150&h=210" style=
+      "WIDTH: 150px; DISPLAY: inline; HEIGHT: 210px" height="210" width="150" />
+   </div>
+   <br />
+</div>
+<div>
+   <br />
+</div>
+<div>
+   <div style="TEXT-ALIGN: left">
+      <h3>
+         Block images
+      </h3>
+      <div>
+         <img src="http://davidjtaylor.files.wordpress.com/2010/04/df6422b_248dd5g6xhc_b.png?w=193&h=140" style=
+         "WIDTH: 193px; DISPLAY: inline; HEIGHT: 140px" height="140" width="193" />
+      </div>
+      <br />
+   </div>A common scenario where an image is placed within a block element with a fixed width and height, and either floated or positioned
+   absolutely within the page.
+</div>
+<div>
+   <pre>
+      <code>
+#spriteBlock {
+	background: url(sprites.gif) no-repeat -60px -52px;
+	display: block;
+	float: left;
+	height: 62px;
+	margin: 0 15px 15px 0;
+	text-align:left;
+	text-indent: -9999px;
+	width: 62px;
+}
+	  </code>
+   </pre>
+</div>
+<div>
+   <h3>
+      Sliding doors
+   </h3>The sliding doors technique uses two images to fill a component which can expand and contract. One fills the left edge and the
+   other fills the rest of an element but slides behind. I won&#39;t go into the details of this, but if you want more background
+   information, then here is a <a title="good article explaining sliding doors" href="http://www.alistapart.com/articles/slidingdoors/"
+   name="znhn" id="znhn">good article explaining sliding doors</a>. Instead, I want to focus on how I would do this differently to utilise
+   sprites better.
+</div>
+<div>
+   <br />
+</div>
+<div>
+   Unless you have sprites with semi transparent areas (there are still ways which we won&#39;t cover here) you can include both the left
+   and the right hand image in the same file. You should still find that the technique works with these minor modifications. The following
+   is an example of a faux button with styles for hover and focus.
+</div>
+<div>
+   <br />
+</div>
+<div>
+   This uses the following markup:
+</div>
+<div>
+   <pre>
+      <code>&lt;a href=&quot;link.htm&quot; class=&quot;button&quot;&gt;&lt;span&gt;button text&lt;/span&gt;&lt;/a&gt;</code>
+   </pre>
+</div>
+<div>
+   Here&#39;s the css:
+</div>
+<div>
+   <pre>
+      <code>
+a.button {
+	background: url(sprites.gif) no-repeat left -125px;
+	cursor: pointer;
+	height: 32px;
+	float: left;
+	line-height: 32px;
+	outline: none;
+	margin-right: 9px;
+	padding: 0;
+	position: relative;
+	text-decoration: none;
+}
+a.button:hover,
+a.button:focus { background-position: left -175px; }
+a.button:active { background-position: left -125px; }
+a.button span {
+	background: url(sprites.gif) no-repeat right -125px;
+	color: white;
+	cursor: pointer;
+	float: left;
+	left: 9px;
+	line-height: 32px;
+	margin: 0 !important;
+	padding: 0 10px 0 1px;
+	position: relative;
+}
+      </code>
+   </pre>
+</div>
+<div>
+   <div>
+      <div>
+         <br />
+      </div>
+   </div>
+   <h4>
+      The key differences shown in this example are:
+   </h4>
+   <div>
+      <ul>
+         <li>We specify the same sprite image for the parent and child wrappers.
+         </li>
+         <li>We use the left property instead of margins or padding to position the inner span. This exposes the right hand edge of the
+         image over the bounds of the parent image so that you don&#39;t see it underneath.
+         </li>
+         <li>We specify a right margin to make sure the width of the parent element covers the child element.
+         </li>
+      </ul>
+   </div>
+   <div>
+      <br />
+   </div>
+   <h3>
+      Within the flow of text
+   </h3>The final usage has for me been the most contentious and painstaking to find a solution to. Inserting sprites in line and within
+   the flow of text. I have come across various solutions to this, but not stumbled across any which are completely accessible and can be
+   used when CSS and JavaScript have both been turned off in the browser.
+</div>
+<div>
+   <br />
+</div>
+<div>
+   My solution works by placing an absolutely positioned span within a relatively positioned span. This seemed to be the obvious and simple
+   way forward. What I didn&#39;t bargain for was the problems I would face getting the sprite to align consistently at the appropriate
+   height across all the browsers.
+</div>
+<div>
+   <img src="http://davidjtaylor.files.wordpress.com/2010/04/df6422b_2494p5ht2c3_b.gif?w=318&h=166" style=
+   "WIDTH: 318px; DISPLAY: inline; HEIGHT: 166px" height="166" width="318" />
+</div>
+<div>
+   <div>
+      <br />
+   </div>
+   <div>
+      Lets look at some markup which would serve as the text representation of the image above:
+   </div>
+   <div>
+      <br />
+   </div>
+   <div>
+      <pre>
+         <code>
+&lt;span class=&quot;sprite&quot;&gt;&amp;nbsp;&lt;span&gt;!&lt;/span&gt;&lt;/span&gt;
+		</code>
+      </pre>
+   </div>
+   <div>
+      <br />
+   </div>
+   <div>
+      The text representation of the image is wrapped within two span tags.
+   </div>
+   <div>
+      <pre>
+         <code>
+.sprite {
+	margin: 0;
+	padding-left: 15px;
+	position: relative;
+	vertical-align: top;
+	zoom: 1;
+}
+		</code>
+      </pre>
+   </div>
+   <div>
+      <br />
+      The outer span tag is used to allow the sprite to continue where the original was placed in the flow of the text. You can&#39;t apply
+      width to an inline element, and not all the browsers support the inline-block display type, so we use left padding to give the span
+      the width it needs to cover the size of the image.
+   </div>
+   <div>
+      <br />
+   </div>
+   <div>
+      The vertical align means that the top of the parent element is positioned at the top of the line of text. This means that when we use
+      the top:50% on the child element, it is relative to the top of the line. Depending on the context this sprite is in, you may need to
+      use one of the other vertical-align options to achieve the most consistent rendering across all the browsers.
+   </div>
+   <div>
+      <br />
+   </div>
+   <div>
+      The zoom declaration tells internet explorer to mark the element with the hasLayout property allowing us to use the top percentage on
+      the child span element.
+   </div>
+   <div>
+      <br />
+   </div>
+   <div>
+      An important thing to note here is that it needs the &amp;nbsp; within the parent tag to stop the line-height collapsing.
+   </div>
+   <div>
+      <pre>
+         <code>
+.sprite span {
+	background: url(sprites.gif) no-repeat -2px -2px;
+	display: block;
+	height: 14px;
+	left: 0;
+	margin: -5px 0;
+	padding: 0;
+	position: absolute;
+	text-align: left;
+	text-indent: -9999px;
+	top: 50%;
+	width: 16px;
+	zoom: 1;
+}
+		</code>
+      </pre>
+   </div>
+   <br />
+   <div>
+      <div>
+         The inner span element styles should be pretty explanatory.
+      </div>
+      <div>
+         <br />
+      </div>
+      <div>
+         Specify the height of the image (not the height of the line). We then use a familiar technique usually used to align elements
+         horizontally. This time we use it to align vertically. Set the top style to 50% and the top margin to a negative amount (usually
+         half of the height).
+      </div>
+      <div>
+         <br />
+      </div>
+      <div>
+         <div>
+            Again the zoom declaration tells ie to mark the element with the hasLayout property allowing us to use the top percentage.
+         </div>
+         <div>
+            <br />
+         </div>
+         <div>
+            Finally the text-indent hides the original text placed within the child element.
+         </div>
+         <div>
+            <br />
+         </div>
+      </div>
+      <div>
+         <div>
+            <strong>Considerations and things to watch out for</strong>
+         </div>
+      </div>
+   </div>
+   <div>
+      <ul>
+         <li>If you are using this with an anchor tag, then you will need to override the default outline on focus. Firefox will show it
+         going off the page to the left.
+         </li>
+      </ul>
+   </div>
+   <h3>
+      Conclusion
+   </h3>
+   <div>
+      As you learn to implement these techniques you will continually find new ways of reducing the load time of your website pages. They
+      can take a little tweaking but it&#39;s worth the gains in the end.
+   </div>
+   <div>
+      <div>
+         <h2>
+            <span style="FONT-SIZE: 1em">References</span>
+         </h2>I have used a great set of icons from http://www.pinvoke.com for this example
+      </div>
+   </div>
+   <h2>
+      About the Author
+   </h2>
+   <div>
+      David Taylor is the Senior Front End Web developer at <a title="Aqueduct" href="http://www.aqueduct.co.uk" name="d_i6" id=
+      "d_i6">Aqueduct</a> based in London. He&#39;s also creator of the <a title="juxtapo front end developer tools" href=
+      "http://juxtapo.net" name="d.g1" id="d.g1">juxtapo front end developer tools</a> which are in-browser tools for design overlays and
+      template previews. David&#39;s website and blog is at <a title="http://the-taylors.org" href="http://the-taylors.org" name="tpz9" id=
+      "tpz9">http://the-taylors.org</a>.
+   </div>
+</div>

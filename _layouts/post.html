@@ -11,6 +11,9 @@ layout: master
                 {% endif %}</p>
             {{ content }} 
         </div>
+		<p>
+        {% include sharelinks-short.html %}
+		</p>
         {% if page.comments != 'hide' %}
         <div class="mod-comments">
             <h2>Comments</h2>
@@ -39,17 +42,25 @@ layout: master
     </div>
     <div class="lay-mRight2-aside">
         <div class="mod-navSection">
-            <p>
-                <img src="/images/feed-icon-12x12-orange.gif" alt="" /><a href="http://feeds.feedburner.com/juxtapo">Subscribe here (atom)</a>
-            </p>
+            <ul>
+            	<li>
+            		<a href="/">Home</a>
+            	</li>
+            	<li>
+            		<a href="/blog">Blog</a>
+            	</li>
+            	<li>
+                	<img src="/images/feed-icon-12x12-orange.gif" alt="" /> <a href="http://feeds.feedburner.com/davetayls">Subscribe here (atom)</a>
+				</li>
+            </ul>
             {% include sharelinks-short.html %}
         </div>
         <div class="mod-navSection">
             <h2>Related Posts</h2>
-            <ul>
+            <ul class="nav-v">
                 {% for post in site.related_posts %}
                 <li>
-                    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
                     <p>{{ post.date | date:"%d %b %Y" }}</p>
                 </li>
                 {% endfor %}
@@ -57,7 +68,7 @@ layout: master
         </div>
         <div class="mod-navSection">
             <h2>Categories</h2>
-            <ul>
+            <ul class="nav-v">
                 <li>
                     <a href="/blog/category/releases">Releases</a>
                 </li>
@@ -65,10 +76,10 @@ layout: master
         </div>
         <div class="mod-navSection">
             <h2>Recent Posts</h2>
-            <ul>
+            <ul class="nav-v">
                 {% for post in site.posts limit: 5 %}
                 <li>
-                    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
                     <p>{{ post.date | date:"%d %b %Y" }}</p>
                 </li>
                 {% endfor %}

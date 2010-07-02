@@ -23,6 +23,15 @@
 		padding: 2px 0;
 		font-size: 0.8em;
 	}	
+
+/*
+	mod-navSection
+-------------------------------------------------------*/
+.mod-navSection {
+	background: rgba(0,0,0,0.6);
+	padding: 15px 5px 0;
+}
+
 /*
 	mod-projects
 -------------------------------------------------------*/

@@ -230,7 +230,7 @@ ul.list-blogs {
 }
 	ul.list-blogs li {
 		clear:both;
-		padding-bottom: 5px;
+		padding: 5px 0 10px;
 	}
 		.list-blogs-header {
 			font-size: 1em;
