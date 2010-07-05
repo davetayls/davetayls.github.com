@@ -30,29 +30,6 @@
 			$('#tweets').html(tweetsLeft$);
 			$('#tweetsRight').html(tweetsRight$);
 
-			// load notice feed
-			//http://pipes.yahoo.com/pipes/pipe.run?_id=10fd37e8e6554cdde98301658f1a6272&_render=json
-			var blogs$ = $('<ul class="list-blogs" />');
-			$.getJSON('http://pipes.yahoo.com/pipes/pipe.run?_id=10fd37e8e6554cdde98301658f1a6272&_render=json&_callback=?',function(data){
-				$(data.value.items).each(function(i){
-					var html = '' + 
-					'<li class="cc">' +
-					'	<h4 class="list-blogs-date">' +
-					'		<abbr title="December">' +
-					'			' + this.pubDate.substr(8,3) +
-					'		</abbr>' +
-					'		<span>'+ this.pubDate.substr(5,2) + '</span>' + 
-					'	</h4>' +
-					'	<p><a href="' + this.link + '">' + this.title + '</a></p>' +
-					'</li>'
-					
-					blogs$.append(html);					
-				});
-			});
-			$('#notices')
-				.html('<h2>Posts</h2>')
-				.append(blogs$);
-
 		}
 	};
 })();

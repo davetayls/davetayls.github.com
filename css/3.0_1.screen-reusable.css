@@ -25,6 +25,7 @@
 	font-weight:lighter;
 	margin:-15px -15px 5px;
 	padding:15px;
+	text-shadow:1px 1px 0 #656565;
 }
 .textRegion h2		{ font-size: 1.3em; }
 .textRegion p		{ padding-bottom: 15px; }
