@@ -35,7 +35,8 @@ h2 {
 }
 h3 {
 	font-size: 1.1em;
-	font-weight: normal;
+	font-weight: bold;
+	margin-bottom: 8px;
 	text-transform: uppercase;
 }
 h5 {
@@ -51,6 +52,35 @@ pre {
 	overflow:auto;
 	padding:10px;
 }
+
+table {
+	border-bottom: solid 1px #fff;
+	border-collapse: separate;
+	clear: both;
+	font-size: 0.9em;
+	margin: 10px 0;
+	padding: 0;
+}
+	tr {}
+	th {
+		border-top:1px solid #FFFFFF;
+		font-size:0.8em;
+		font-weight:normal;
+		line-height:1.2em;
+		padding:15px 5px;
+		text-align:left;
+		text-shadow:1px 1px 0 #FFFFFF;
+	}
+	td {
+		border-top: dotted 1px #fff;
+		border-bottom: dotted 1px #ccc;
+		border-left: solid 1px #efefef;
+		padding: 3px 5px;
+		text-shadow: 1px 1px 0px #fff;
+	}
+	tr:nth-child(even) td{
+		background-color: #eee;
+	}
 
 /*
 	lists
