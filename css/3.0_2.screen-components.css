@@ -203,8 +203,40 @@
                 background-position: right -28px;
             }        
 
-
-
+/*
+  cp-postDate
+------------------------------*/
+.cp-postHeader {
+	/*
+	background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#fff));
+	background: -moz-linear-gradient(top,  #ccc,  #000);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000');
+	*/
+	position: relative;
+	min-height: 50px;
+	padding:  10px 0 10px 15px;
+}
+  .cp-postHeader h2 {
+    margin: 0;
+  }
+  .cp-postHeader-date {
+      background: url(../images/sprites.png) no-repeat top left;
+      color: white;
+      font-size: 0.7em;
+      height: 30px;
+      left: -24px;
+      line-height: 1em;
+      padding: 6px 5px 0 0;
+      position: absolute;
+      text-align: center;
+      text-transform: uppercase;
+      top: 10px;
+      width: 34px;
+  }
+  .cp-postHeader-details {
+    font-size: 0.55em;
+    text-transform: uppercase;
+  }
 /*
 	cp-twitter
 ----------------------------------------------------------------------*/
@@ -237,7 +269,7 @@ ul.list-blogs {
 			margin: 0;
 			padding:0;
 		}
-		ul.list-blogs li .list-blogs-date {
+		.list-blogs-date {
 			background: url(../images/sprites.png) no-repeat top left;
 			color: white;
 			float: left;
@@ -249,7 +281,7 @@ ul.list-blogs {
 			text-transform: uppercase;
 			width: 34px;
 		}	
-		ul.list-blogs li .list-blogs-date abbr {
+		.list-blogs-date abbr {
 			display: block;
 		}
 		ul.list-blogs li .list-blogs-header a {

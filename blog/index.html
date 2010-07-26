@@ -5,8 +5,15 @@ comments: hide
 ---
 
 {% for post in site.posts limit:5 %}
-<div>
-	<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-	<p>{{ post.date | date:"%d %b %Y" }}</p>
+<div class="mod-post">
+  <div class="cp-postHeader">
+		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+		<p class="cp-postHeader-date">{{ post.date | date:"%d<br />%b" }}</p>
+		<p class="cp-postHeader-details">Posted by: {{ post.author }}</p>
+  </div>                              
+                                
+	<div class="mod-post-content">
+  {{ post.content }}
+  </div>	
 </div>
 {% endfor %}
