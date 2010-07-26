@@ -68,6 +68,28 @@ description: A disciplined and passionate graphic designer / web developer with 
 							</div>
 							<div class="lay-c2-right">
 						<div id="projects">
+							<h2><a href="http://github.com/davetayls/sjs">sjs</a> - server side JavaScript framework</h2>
+							<p>The aim of this project is to give a very simple server side JavaScript framework which will work across various platforms (eg Mozilla Rhino and Microsoft cscript).</p>
+<pre><code>var file =
+sjs
+.file('test.txt')
+.append('end of the doc\n')
+.prepend('beginning\n')
+.append(3,'new line')
+.save()
+ 
+sjs.print(file.readText());
+
+sjs.arguments()
+.each(function(){
+  sjs.print(
+    this.key+'-'+this.values.join(',')
+  );
+});
+</code></pre>
+							<p>
+								Go to the <a href="http://github.com/davetayls/sjs">github project page</a> to download the source.
+							</p>							
                             <h2><a href="http://juxtapo.net/">Juxtapo</a> - front end tools</h2>
                             <ol>
                                 <li>
