@@ -156,3 +156,47 @@ body {
 			font-size: 0.8em;
 		}
 		#footer li p { font-size: 1em; }
+
+
+/* small screen rendering */
+@media screen and (max-width:730px) {
+	body {
+		background-image: none;
+	}
+	#logo {
+		top: 0;
+		width: 20%;
+	}
+		#logo img {
+			width: 100%;
+		}
+	#wrapper {
+		margin-top: 10px;
+	}
+	#header #about {
+		margin: 0 0 0 22%;
+		width: auto;
+	}
+	#header h3 {
+		font-size: 0.8em;
+	}
+		#header h3 img {
+			margin-top: 0;
+			width: 20%;
+		}
+	#cv {
+		left: 0;
+		margin-bottom: 5px;
+		position: relative;
+		top: 0;
+	}
+	#header #social {
+		float: none;
+		width: auto;
+	}
+	
+	#wrapper,
+	#header,
+	#footer-inner
+	{width: auto;}
+}

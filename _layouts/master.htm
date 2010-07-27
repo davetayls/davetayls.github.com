@@ -1,16 +1,17 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <title>{{ page.title }}</title>
         <meta name="description" content="{{ page.description }}" />
         <meta name="keywords" content="david,taylor,javascript,web,developer" />
         <link href="/lib/jquery-ui/css/dark-hive/jquery-ui-1.8.custom.css" rel="stylesheet" type="text/css" />
-        <link href="/css/1.reset.css" rel="stylesheet" type="text/css" />
-        <link href="/css/2.brand.css" rel="stylesheet" type="text/css" />
+        <link href="/css/1.reset.css" rel="stylesheet" type="text/css" media="screen,print" />
+        <link href="/css/2.brand.css" rel="stylesheet" type="text/css" media="screen,print" />
         <link href="/css/3.0.screen.css" rel="stylesheet" type="text/css" media="screen,print" />
         <link rel="shortcut icon" href="http://www.the-taylors.org/favicon.ico" />
         <link rel="bookmark icon" href="http://www.the-taylors.org/favicon.ico" />
         <link rel="icon" type="image/ico" href="http://www.the-taylors.org/favicon.ico" />
+
 	    <!--[if lte IE 6]>
 		    <link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css" />
 	    <![endif]-->
@@ -19,6 +20,12 @@
         <script type="text/javascript" src="/lib/jquery-ui/js/jquery-ui-1.8.custom.min.js"></script>
         <script type="text/javascript" src="/js/lib/jquery.promo.js"></script>
         <script type="text/javascript" src="/js/dt.js"></script>
+
+        <!--[if lte IE 8]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+		<meta name= "viewport" content="width=max-device-width">
 
     </head>
     <body>

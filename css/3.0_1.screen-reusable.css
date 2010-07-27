@@ -52,3 +52,22 @@
 	text-indent: -9999px;
 	width:64px;
 }
+
+@media screen and (max-width:730px) {
+	.ico-subscribeL {
+		background-position: -22px -71px;
+		height: 20px;
+		width: 20px;
+	}
+	.ico-twitter {
+		background-position: -221px -70px;
+		height: 20px;
+		width: 20px;		
+	}
+	.ico-linkedin {
+		background-position: -120px -69px;
+		height: 20px;
+		width: 23px;
+	}
+
+}

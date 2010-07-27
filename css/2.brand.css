@@ -94,3 +94,15 @@ li {
 ul li li    { list-style-image: none; list-style-type: circle; }
 ul li li li { list-style-image: none; list-style-type: disc; }
 ul li li li li { list-style-image: none; list-style-type: square; }
+
+@media screen and (max-width:730px) {
+	pre {
+		font-size: 0.9em;
+		overflow: hidden;
+	}
+}
+@media screen and (max-width:360px) {
+	pre {
+		font-size: 0.5em !important;
+	}
+}
