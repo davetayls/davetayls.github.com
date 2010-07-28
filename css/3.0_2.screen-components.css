@@ -203,6 +203,14 @@
                 background-position: right -28px;
             }        
 
+
+/* small screen */
+@media screen and (max-width:730px) {
+	#portfolio {
+		width: auto;	
+	}
+}
+
 /*
   cp-postDate
 ------------------------------*/
@@ -224,7 +232,7 @@
       color: white;
       font-size: 0.7em;
       height: 30px;
-      left: -24px;
+      left: -14px;
       line-height: 1em;
       padding: 6px 5px 0 0;
       position: absolute;

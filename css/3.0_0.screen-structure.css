@@ -172,31 +172,41 @@ body {
 		}
 	#wrapper {
 		margin-top: 10px;
+		padding-top: 0;
 	}
-	#header #about {
-		margin: 0 0 0 22%;
-		width: auto;
-	}
-	#header h3 {
-		font-size: 0.8em;
-	}
-		#header h3 img {
-			margin-top: 0;
-			width: 20%;
-		}
-	#cv {
-		left: 0;
-		margin-bottom: 5px;
+	#header {
+		height: auto;
 		position: relative;
-		top: 0;
 	}
-	#header #social {
-		float: none;
-		width: auto;
-	}
-	
+		#header #about {
+			margin: 0 0 0 22%;
+			width: auto;
+		}
+		#header h3 {
+			font-size: 0.8em;
+		}
+			#header h3 img {
+				margin-top: 0;
+				width: 20%;
+			}
+		#cv {
+			left: 0;
+			margin-bottom: 5px;
+			position: relative;
+			top: 0;
+		}
+		#header #social {
+			width: auto;
+		}
+		#header .nav-contacts {
+			float: none;
+			padding-bottom: 5px;
+		}	
+
 	#wrapper,
 	#header,
 	#footer-inner
 	{width: auto;}
+
+	#testimonials { display: none; }
 }
