@@ -65,24 +65,24 @@
 
 
 /* small screen rendering */
+@media (max-width:360px) {
+  .lay-c2 .lay-c2-left,
+  .lay-c2 .lay-c2-right,
+  .lay-c4-col,
+  .lay-c4-first,
+  .lay-c4-last 
+  {
+    display: block;
+    float: none;
+    width: auto;
+  }
+}
 @media screen and (max-width:730px) {
 	.lay-mRight2-content,
-	.lay-mRight2-aside 
+	.lay-mRight2-aside
 	{
 		display: block;
 		float: none;
 		width: auto;
 	}
 }
-@media screen and (max-width:360px) {
-	.lay-c2 .lay-c2-left,
-	.lay-c2 .lay-c2-right,
-	.lay-c4-col,
-	.lay-c4-first,
-	.lay-c4-last {
-		float: none;
-		width: auto;
-	}
-}
-
-		

@@ -7,10 +7,11 @@
 ------------------------------------------------*/
 .cp-promo,
 .cp-promo-carousel {
-	height: 385px;
 	width: 640px;
 }
-
+.cp-promo-carousel ul {
+  height: 385px;
+}
 .cp-promo {
 	/*overflow: hidden;*/
 	margin: 0 0 7px;
@@ -24,7 +25,8 @@
         z-index: 1;
     }
 		.cp-promo-carousel ul {
-			margin:0;padding:0;
+			margin:0;
+			padding:0;
 		}
         .cp-promo-carousel li {
             overflow: hidden;
@@ -207,10 +209,41 @@
 /* small screen */
 @media screen and (max-width:730px) {
 	#portfolio {
+	 height: auto;
 		width: auto;	
 	}
+	.cp-promo {
+	 width: auto;
+	}
+	.cp-promo-controller {
+	 height: auto;
+	 position: relative;
+	 width: auto;
+	}
+	.cp-promo-carousel {
+	 margin-left: 0;
+	 width: auto;
+	}
+	.cp-promo-carousel li .cp-promo-label {
+	  border-bottom: none;
+		bottom:0;
+		font-size:0.7em;
+		left:0;
+		position:relative;
+		right:auto;
+		width:auto;
+	}
+	.cp-promo-carousel li .cp-promo-bg {
+	 width: auto;
+	}
 }
-
+@media screen and (max-width:330px) {
+	.cp-promo-active .cp-promo-carousel ul {
+	 height: 320px;
+	}
+	.cp-promo-active .cp-promo-carousel li,
+	.cp-promo-carousel li img { width: 320px; }
+}
 /*
   cp-postDate
 ------------------------------*/
