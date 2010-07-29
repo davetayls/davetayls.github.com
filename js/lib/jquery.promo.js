@@ -66,7 +66,7 @@
 				}, 7000); //Timer speed in milliseconds (3 seconds)
 			};
 			
-			//rotateSwitch(); //Run function on launch
+			rotateSwitch(); //Run function on launch
 			
 			//On Hover
 			carouselWrapper.children().hover(function() {
