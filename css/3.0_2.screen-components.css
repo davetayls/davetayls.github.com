@@ -209,7 +209,8 @@
 /* small screen */
 @media screen and (max-width:730px) {
 	#portfolio {
-	 height: auto;
+		border-top: none;
+	 	height: auto;
 		width: auto;	
 	}
 	.cp-promo {
@@ -217,15 +218,26 @@
 	}
 	.cp-promo-controller {
 	 height: auto;
+	 padding-bottom: 5px;
 	 position: relative;
 	 width: auto;
 	}
+		.cp-promo-controller li {
+			background: #333;
+			border-radius: 2px;
+			-moz-border-radius: 2px;
+			-webkit-border-radius: 2px;
+			margin: 2px;
+			width: 94px !important;
+		}
 	.cp-promo-carousel {
-	 margin-left: 0;
-	 width: auto;
+		border-top: 5px solid #00ADEF;
+	 	margin-left: 0;
+		padding-top: 5px;
+	 	width: auto;
 	}
 	.cp-promo-carousel li .cp-promo-label {
-	  border-bottom: none;
+		border-bottom: none;
 		bottom:0;
 		font-size:0.7em;
 		left:0;
@@ -234,15 +246,15 @@
 		width:auto;
 	}
 	.cp-promo-carousel li .cp-promo-bg {
-	 width: auto;
+		width: auto;
 	}
 }
 @media screen and (max-width:330px) {
-	.cp-promo-active .cp-promo-carousel ul {
-	 height: 320px;
+	.cp-promo-carousel ul {
+		height: 320px;
 	}
-	.cp-promo-active .cp-promo-carousel li,
-	.cp-promo-carousel li img { width: 320px; }
+	.cp-promo-carousel li,
+	.cp-promo-carousel li img { width: 290px !important; }
 }
 /*
   cp-postDate
