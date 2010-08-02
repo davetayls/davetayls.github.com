@@ -5,6 +5,10 @@
 			// load tweets
 			var tweetsLeft$ = $('<ul class="cp-twitter" />');
 			var tweetsRight$ = $('<ul class="cp-twitter" />');
+			var tweetToHtml = function(tweet) {
+			   tweet = tweet.replace(/(^|\s)@(\w+)/g, '$1<a href="http://www.twitter.com/$2">@$2</a>');
+			   return tweet.replace(/(^|\s)#(\w+)/g, '$1<a href="http://search.twitter.com/search?q=%23$2">#$2</a>');
+			 };
 			$.getJSON('http://pipes.yahoo.com/pipes/pipe.run?_id=a0e03346d6fb907ee99c562db4e27301&_render=json&_callback=?',function(data){
 				$(data.value.items).each(function(i){
 					var html = '' + 
@@ -15,7 +19,7 @@
 					'	<span>' +
 					'		' + this.pubDate.substr(5,2) +
 					'	</span> ' +
-					'	<a href="' + this.link + '">' + this.title + '</a>' +
+					'	' + tweetToHtml(this.title) +
 					'</li>';
 					
 					if (i < 5){

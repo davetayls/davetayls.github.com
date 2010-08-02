@@ -159,7 +159,7 @@ body {
 
 
 /* small screen rendering */
-@media screen and (max-width:730px) {
+@media screen and (max-width:768px) {
 	body {
 		background-image: none;
 	}

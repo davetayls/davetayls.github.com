@@ -18,7 +18,7 @@ This is the global screen stylesheet.
 The imports below get combined and compressed in to this file on deployment.
 
 	-----------------------------------------------------------------------------------
-    3.0_0.screen-structure
+    3.screen/structure
     This style sheet contains core structural layout 
     
     This shouldn't contain reusable modules or components but would generally 
@@ -30,7 +30,7 @@ The imports below get combined and compressed in to this file on deployment.
     This file should be ordered as elements appear on the page including indentation.
     
 	-----------------------------------------------------------------------------------
-	3.0_1.screen-reusable
+	3.screen/reusable
 	This file has two sections. 
 	
 	The first is for simple 1 or 2 line styles:	
@@ -42,7 +42,7 @@ The imports below get combined and compressed in to this file on deployment.
 	- icon names should be in a rough alphabetical order
 
 	-----------------------------------------------------------------------------------
-    3.0_2.screen-components
+    3.screen/components
     
     - basic reusable items which are simple
     - components cannot contain child components or modules
@@ -80,11 +80,11 @@ The imports below get combined and compressed in to this file on deployment.
 	
 	
 	-----------------------------------------------------------------------------------
-	3.0_3.screen-forms
+	3.screen/forms
 	Use this file for form layouts and styling
 
 	-----------------------------------------------------------------------------------
-	3.0_4.screen-layouts
+	3.screen/layouts
 
 	Within the site all column layouts within main content areas should be modular
 	and defined here.
@@ -94,11 +94,11 @@ The imports below get combined and compressed in to this file on deployment.
 	A few examples/often used layouts are defined below.
 
 	-----------------------------------------------------------------------------------
-    3.0_5.screen-modules
+    3.screen/modules
     more involved sections of styles often containing modules and/or components
 	- prefix these classes with mod-
 	- order alphabetically according to containers
 
 	-----------------------------------------------------------------------------------
-    3.0_6.screen-navs
+    3.screen/navs
     - prefix: nav

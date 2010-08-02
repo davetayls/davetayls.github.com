@@ -65,7 +65,7 @@
 
 
 /* small screen rendering */
-@media (max-width:360px) {
+@media (max-width:768px) {
   .lay-c2 .lay-c2-left,
   .lay-c2 .lay-c2-right,
   .lay-c4-col,
@@ -77,7 +77,7 @@
     width: auto;
   }
 }
-@media screen and (max-width:730px) {
+@media screen and (max-width:768px) {
 	.lay-mRight2-content,
 	.lay-mRight2-aside
 	{

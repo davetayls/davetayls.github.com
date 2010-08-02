@@ -207,7 +207,7 @@
 
 
 /* small screen */
-@media screen and (max-width:730px) {
+@media screen and (max-width:768px) {
 	#portfolio {
 		border-top: none;
 	 	height: auto;
@@ -249,7 +249,7 @@
 		width: auto;
 	}
 }
-@media screen and (max-width:330px) {
+@media screen and (max-width:768px) {
 	.cp-promo-carousel ul {
 		height: 320px;
 	}

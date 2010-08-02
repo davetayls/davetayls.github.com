@@ -54,7 +54,7 @@
 	width:64px;
 }
 
-@media screen and (max-width:730px) {
+@media screen and (max-width:768px) {
 	.ico-subscribeL {
 		background-position: -22px -71px;
 		height: 20px;
