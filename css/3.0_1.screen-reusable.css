@@ -6,6 +6,7 @@
 	.cc:after	{ content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 .clear		{ clear: both; }
 .img-fl-left	{ float:left; margin: 0 1mm 1mm 0; }
+.img-fl-right	{ float:right; margin: 0 0 3mm 3mm; }
 .textRegion	{
 	border-radius: 3px;
 	-moz-border-radius: 3px;

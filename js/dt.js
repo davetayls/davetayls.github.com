@@ -26,6 +26,7 @@
 	includes.push("dt_portfolio.js");
 	includes.push("dt_ui.js");
 	includes.push("dt_data.js");
+	includes.push("dt_analytics.js");
 
 	function includeJs(){
 		for (var i=0;i< includes.length;i++){
