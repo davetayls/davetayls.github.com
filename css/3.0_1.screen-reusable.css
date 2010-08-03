@@ -5,6 +5,7 @@
 .cc			{ position: relative; zoom:1; }
 	.cc:after	{ content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 .clear		{ clear: both; }
+.img-fl-left	{ float:left; margin: 0 1mm 1mm 0; }
 .textRegion	{
 	border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -30,6 +31,7 @@
 }
 .textRegion h2		{ font-size: 1.3em; }
 .textRegion p		{ padding-bottom: 15px; }
+.textRegion img 	{ height:auto; max-width:100%;}
 
 	
 .ico-subscribeL {

@@ -2,6 +2,7 @@
 layout: post
 author: davetayls
 title: sjs, making server-side JavaScript easy
+categories: [javascript]
 ---
 
 I have been working on a new server-side JavaScript framework insired by [jQuery](http://jquery.com) called [sjs](http://github.com/davetayls/sjs). I wanted to give a developer the ability to distribute a JavaScript program which could be run on various platforms. I have initially chosen two to support: Mozilla Rhino and Microsoft CScript. This means that the scripts you have written would work cross platform on Windows, Linux, Mac.
