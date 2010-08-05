@@ -5,7 +5,7 @@
 
 /* Layout */
 body {
-	background: black url(../images/body-bg.png) no-repeat center top;
+	background: black url(../images/body-pattern.jpg) repeat center top;
 	margin:0;
 	padding:0;
 }
@@ -165,7 +165,7 @@ body {
 	}
 	#logo {
 		top: 0;
-		width: 20%;
+		width: 64px;
 	}
 		#logo img {
 			width: 100%;
