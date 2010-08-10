@@ -357,4 +357,10 @@ ul.list-blogs {
 		h2.list-blogs-header a {
 			font-size: 1.2em;
 			line-height: 1.1em;
+			margin-left: 40px;
+		}
+		.list-blogs a.list-blogs-comments {
+			color: #fff;
+			font-size: 0.9em;
+			padding-top: 4px;
 		}
