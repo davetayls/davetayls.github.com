@@ -17,7 +17,7 @@ a:focus     { }
 
 abbr        {}
 address     { }
-body        { 
+body        {
 	/* Most consistent Arial Based  					font-family: Arial, Helvetica, "Nimbus Sans L", "Free Sans", Sans-Serif; */
 	
 	/* Ref: http://articles.sitepoint.com/article/eight-definitive-font-stacks/2 */
@@ -26,6 +26,11 @@ body        {
 	/* traditional Garamond-based serif stack			font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif; */
 	/* Trebuchet-based sans serif						font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif; */
 	/* monospace										font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; */
+	
+	font-size: 62.5%; /*10px*/
+	font-size: 68.8%; /*11px*/
+	font-size: 75%; /*12px*/
+	font-size: 81.3%; /*13px*/
 }
 body.acc-med	{ font-size: 0.92em; }
 body.acc-large	{ font-size: 1.1em; }
