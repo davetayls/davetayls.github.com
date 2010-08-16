@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>streatham baptist slides</title>
+        <!--[if lte IE 8]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <style type="text/css">
+            /*
+             * 500 x 375
+             */
+            body {
+                font-family: Arial, Sans-Serif;
+                letter-spacing: -0.05em;
+                font-size: 0.8em;
+				margin: 0;
+				padding: 0;
+            }
+			a, a img {
+				border: none;
+			}
+            
+            #slidesWrapper {
+            	background: url(tile.gif) repeat left top;
+				border: solid 1px #ccc;
+				border-radius: 5px;
+				-moz-border-radius: 5px;
+				-webkit-border-radius: 5px;
+				margin: 0 0 0 2px;
+				padding: 5px;
+				width: 680px;
+            }
+            #slides {
+                height: 375px;
+                overflow: hidden;
+                width: 680px;
+            }
+            
+            .cc {
+                position: relative;
+                zoom: 1;
+            }
+            
+            .cc:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+            
+            /*
+             cp-promo
+             ------------------------------------------------*/
+            .cp-promo, .cp-promo-carousel {
+                width: 500px;
+            }
+            
+            .cp-promo-carousel ul {
+                height: 375px;
+            }
+            
+            .cp-promo {
+                margin: 0 0 7px;
+                padding: 0;
+                position: relative;
+            }
+            
+            .cp-promo-carousel {
+                margin: 0;
+                overflow: auto;
+                position: relative;
+                padding: 0;
+                z-index: 1;
+            }
+            
+            .cp-promo-carousel ul {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .cp-promo-carousel li {
+                margin: 0;
+                overflow: hidden;
+                overflow: hidden;
+                padding: 0;
+                width: 483px;
+                zoom: 1;
+            }
+            
+            .cp-promo-active .cp-promo-carousel li {
+                width: 500px;
+            }
+            
+            .cp-promo-carousel li img {
+                display: block;
+                z-index: 1;
+            }
+            
+            .cp-promo-carousel li .cp-promo-label {
+                border-bottom: solid 3px #84D725;
+                bottom: 10px;
+                color: white;
+                display: block;
+                right: 10px;
+                padding: 15px 21px;
+                position: absolute;
+                text-decoration: none;
+                width: 300px;
+                z-index: 2;
+                zoom: 1;
+            }
+            
+            .cp-promo li {
+                list-style: none;
+                list-style-image: none;
+            }
+            
+            .cp-promo-controller {
+                display: block;
+                top: 0px;
+                right: -180px;
+                list-style: none;
+                list-style-image: none;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                z-index: 2;
+            }
+            
+            .cp-promo-controller li {
+            	border-left: solid 10px transparent;
+                cursor: pointer;
+                display: block;
+                margin: 0px;
+                padding: 0;
+            }
+            
+            .cp-promo-controller li.nav-selected {
+            	border-left-color: #7A910F;
+            }
+            
+            .cp-promo-controller li a {
+                display: block;
+                font-size: 0.9em;
+                height: 126px;
+                line-height: 1.1em;
+                margin: 0;
+                overflow: hidden;
+                padding: 0;
+                width: 168px;
+            }
+            
+            .cp-promo-controller li.nav-selected a, .cp-promo-controller li:hover a, .cp-promo-controller li a:hover {
+            }
+				.cp-promo-controller li a img {
+					height: 126px;
+				}
+            
+            
+        </style>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../../lib/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../../jQueryPlugins/jquery.promo/jquery.promo.js"></script>
+        <script type="text/javascript" src="../../jQueryPlugins/jquery.promo/transitions.js"></script>
+        <script type="text/javascript">
+            $().ready(function(){
+                $('.cp-promo').promo({
+					transition: fadeTransition
+				});
+            });
+        </script>
+    </head>
+    <body>
+    	<div id="slidesWrapper">
+        <div id="slides">
+            <div class="cp-promo">
+                <ul class="cp-promo-controller cc">
+                    <li>
+                        <a href="#s1">
+                        	<img src="slide01.jpg" alt="" />
+						</a>
+                    </li>
+                    <li>
+                        <a href="#s2">
+                        	<img src="slide02.jpg" alt="" />
+						</a>
+                    </li>
+                    <li>
+                        <a href="#s3">
+                        	<img src="slide03.jpg" alt="" />
+						</a>
+                    </li>
+                    <li>
+                        <a href="#s4">
+                        	<img src="slide04.jpg" alt="" />
+						</a>
+                    </li>
+                </ul>
+                <div class="cp-promo-carousel">
+                    <ul>
+                        <li id="s1" class="cc">
+                            <a class="cc" href="http://www.lloyds.com">
+                            	<img src="slide01.jpg" alt="" width="500" />
+							</a>
+                        </li>
+                        <li id="s2" class="cc">
+                            <a class="cc" href="http://www.lloyds.com">
+                            	<img src="slide02.jpg" alt="" width="500" />
+							</a>
+                        </li>
+                        <li id="s3" class="cc">
+                            <a class="cc" href="http://www.lloyds.com">
+                            	<img src="slide03.jpg" alt="" width="500" />
+							</a>
+                        </li>
+                        <li id="s4" class="cc">
+                            <a class="cc" href="http://www.lloyds.com">
+                            	<img src="slide04.jpg" alt="" width="500" />
+							</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+		</div>
+    </body>
+</html>
