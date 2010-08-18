@@ -72,7 +72,10 @@
 			return 'imgpos'+img;	
 		};
 		$().ready(function() {
-		    $("#box").windowViewer();
+		    $("#box").windowViewer({
+				hPadding: 100,
+				vPadding: 50
+			});
 		});
         
     </script>

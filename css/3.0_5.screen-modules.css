@@ -2,7 +2,12 @@
 	modules
 -------------------------------------------------------*/
 
-
+#articles {
+	padding-left: 20px;
+}
+#articleContent {
+	padding-left: 30px;
+}
 /*
 	mod-fullArticles
 -------------------------------------------------------*/
@@ -47,20 +52,25 @@
 	.mod-testimonials h2 {
 		text-shadow: 0 1px 3px #003348;
 		filter: progid:DXImageTransform.Microsoft.Shadow(color=#003348,direction=180,strength=1);
+		line-height: 0.8em;
 	}
 	.mod-testimonials ul {
-		list-style: none;
-		list-style-image: none;
-		margin: 0;
-		padding: 0;
 	}
 	.mod-testimonials ul li {
-		margin: 0;
-		padding: 0;
 	}
+		.mod-testimonials ul li a {	
+			color: #ccc;
+			text-shadow: -1px -1px 0 #000;
+		}
 		.mod-testimonials ul li p {
 			color: #fff;
 			line-height: 1.1em;
 			text-shadow: 0 1px 0 #333333;
 			filter: progid:DXImageTransform.Microsoft.Shadow(color=#333333,direction=180,strength=1);
 		}
+		
+@media (max-width:768px) {
+	#articleContent {
+		padding-left: 15px;
+	}
+}

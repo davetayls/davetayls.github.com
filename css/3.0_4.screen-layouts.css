@@ -46,14 +46,14 @@
 .lay-mRight2 {}
 	.lay-mRight2-content {
 		float:left;
-		width:710px;
+		width:75%;
 	}
 	.lay-mRight2-aside {
 		display:inline;
 		float:right;
-		margin:0px 30px 0 0;
-		padding: 10px 0;
-		width:237px;		
+		margin:0;
+		padding: 0;
+		width:20%;		
 	}
 		.lay-mRight2-aside-content {
 			padding: 0 10px;
@@ -84,5 +84,13 @@
 		display: block;
 		float: none;
 		width: auto;
+	}
+}
+@media screen and (min-width:1199px) {
+	.lay-mRight2-content {
+		width: 60%;
+	}
+	.lay-mRight2-aside	{
+		width: 35%;
 	}
 }

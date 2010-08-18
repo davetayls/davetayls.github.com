@@ -5,7 +5,7 @@
 
 /* Layout */
 body {
-	background: black url(../images/body-pattern.jpg) repeat center top;
+	/*background: black url(../images/body-pattern.jpg) repeat center top;*/
 	margin:0;
 	padding:0;
 }
@@ -20,80 +20,73 @@ body {
 
 
 #logo {
-	position: absolute;
-	top: 10px;
-	left: 0;
+	float: left;
 	z-index: 100;
 }
 	#logo img {
 		display: block;
 	}
-#wrapper {
-	margin: 0 auto;
-	padding-top:145px;
-	width:986px;
-}
+#wrapper {}
 	#portfolio {
+		background-color: #444;
 		border-top: solid 5px #00ADEF;
 		border-bottom: solid 5px #00ADEF;
 		height: 392px;
 		margin: 0 0 10px;
 		overflow: hidden;
-		padding: 4px 4px 0;
-		width: 702px;
+		padding: 4px 10px 0;
 	}
 	#testimonials {
+		color: #eee;
 		position:absolute;
-		right:43px;
-		top:154px;
-		width:211px;		
+		top:175px;
+		left: 735px;
+		width: 255px;		
 	}
-	#content {
-		
-	}
+		#testimonials h2.handFont {
+			font-size: 3em;
+		}
+	#content {}
 #header {
 	height:145px;
 	overflow:hidden;
-	position:absolute;
-	right:0;
-	top:0;
-	width: 986px;
+	width: 919px;
 }
 	#header #about {
 		display: inline;
 		float:left;
-		margin:40px 0 0 125px;
+		margin:20px 0 0 10px;
 		width:516px;
 	}
 		#header h3 {
-			color:#84D725;
-			font-family:trebuchet MS;
-			font-size:1.7em;
+			color:#555;
+			font-size:3em;
 			font-weight:normal;
 			letter-spacing:-0.008em;
-			line-height: 1.15em;
+			line-height: 0.85em;
 			text-transform: none;
 		}
 			#header h3 img {
 				display: block;
 				float:left;
-				margin:-30px 12px 0 0;
+				margin:-10px 25px 0 0;
 			}
 	#skills { 
-		color:white;
+		/*color:white;*/
 		font-size:0.9em;
 		letter-spacing:0.005em;
-		margin-top:3px;
+		padding-top: 7px;
 	}
 	#cv {
+		font-size: 0.8em;
 		left:90px;
 		position:absolute;
 		text-transform:uppercase;
-		top:-23px;
+		top:-8px;
 		z-index: 100;
 	}
 		#cv a {
-			color: white;
+			color: #888;
 		}
 	#header #social {
 		float:right;
@@ -210,3 +203,9 @@ body {
 
 	#testimonials { display: none; }
 }
+
+/* large screen */
+@media screen and (min-width:1100px) {
+	
+}
+

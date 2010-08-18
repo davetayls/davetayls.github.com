@@ -1,42 +1,56 @@
 ﻿(function($) {
     $.fn.windowViewer = function(settings) {
-        var config = { onMove: null };
+        var config = { 
+			onMove: null,
+			hPadding: 0,
+			vPadding: 0 
+		};
         if (settings) $.extend(config, settings);
 
         this.each(function() {
-            var box;
-            box = $(this);  //$("#box");            
+            // outer window box
+			var box = $(this);  //$("#box");            
             box.mousemove(function(e) {
-                var mouseX;
-                mouseX = e.pageX;
-                var mouseY;
-                mouseY = e.pageY;
+                // get mouse position
+				var mouseX = e.pageX;
+                var mouseY = e.pageY;
 
-                var boxOffset; boxOffset = box.offset();
-                var boxSize; boxSize = {};
+				// get size of window				
+                var boxSize = {};
                 boxSize.width = box.width();
                 boxSize.height = box.height();
 
+				// get distance from left edge
+                var boxOffset = box.offset();
                 var distanceXDiff;
                 distanceXDiff = (mouseX - boxOffset.left);
+				
+				// get fractional location of mouse to box 0:left edge to 1:right edge
                 var distanceX;
-                distanceX = distanceXDiff / boxSize.width;
+                distanceX = (distanceXDiff - config.hPadding) / (boxSize.width - (config.hPadding * 2));
 
+				// get distance from top edge
                 var distanceYDiff;
                 distanceYDiff = (mouseY - boxOffset.top);
+				
+				// get fractional distance from top of box
                 var distanceY;
-                distanceY = distanceYDiff / boxSize.height;
+                distanceY = (distanceYDiff - config.vPadding) / (boxSize.height - (config.vPadding * 2));
 
-                var innerBox;
-                innerBox = box.find(":first");
-                var innerBoxOffset; innerBoxOffset = innerBox.offset();
-                var innerBoxSize; innerBoxSize = {};
-                innerBoxSize.width = innerBox.width();
-                innerBoxSize.height = innerBox.height();
+				// get inner box and it's dimensions
+                var innerBox = box.find(":first");
+                var innerBoxSize = {
+					height : innerBox.height(),
+					width : innerBox.width()
+				};
+				
+				// get location of inner box relative to window box
+                var innerBoxOffset = innerBox.offset();
 
-                var sizeDifferenceX; sizeDifferenceX = innerBoxSize.width - boxSize.width;
+				// get the difference between the larger inner box and smaller window
+                var sizeDifferenceX = innerBoxSize.width - boxSize.width;
                 var innerBoxLeft = 0 - (distanceX * sizeDifferenceX);
-                var sizeDifferenceY; sizeDifferenceY = innerBoxSize.height - boxSize.height;
+                var sizeDifferenceY = innerBoxSize.height - boxSize.height;
                 var innerBoxTop = 0 - (distanceY * sizeDifferenceY);
 
                 innerBox.css({ "position": "absolute" });

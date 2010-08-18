@@ -18,7 +18,7 @@
 
         <script type="text/javascript" src="/lib/jquery-1.4.2.min.js"></script>
         <script type="text/javascript" src="/lib/jquery-ui/js/jquery-ui-1.8.custom.min.js"></script>
-        <script type="text/javascript" src="/js/lib/jquery.promo.js"></script>
+        <script type="text/javascript" src="/jQueryPlugins/jquery.promo/jquery.promo.js"></script>
         <script type="text/javascript" src="/js/dt.js"></script>
 
         <!--[if lte IE 8]>
@@ -26,6 +26,9 @@
         <![endif]-->
 
 		<meta name= "viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+
+		<script type="text/javascript" src="http://use.typekit.com/nji4vhv.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
     </head>
     <body>
@@ -55,46 +58,17 @@
             <div id="header" class="cc">
                 <h2 class="acc-item">About David Taylor</h2>
                 <div id="about">
-                    <h3><img src="http://www.gravatar.com/avatar/bbf81bc82fed795624ed696fe1e5aee0?s=80&amp;d=identicon" alt="David Taylor avatar" />A disciplined and passionate graphic designer and web developer with bundles of experience, <a href="http://www.linkedin.com/in/davidtaylorlondon">read my testimonials...</a></h3>
+                    <h3 class="handFont">
+                    	<img src="http://www.gravatar.com/avatar/bbf81bc82fed795624ed696fe1e5aee0?s=80&amp;d=identicon" alt="David Taylor avatar" />
+						Hey, glad you dropped by.<br />Chill out and <a href="/blog">have a good read</a>
+					</h3>
                     <p id="skills">
-                        Valid XHTML, CSS, JavaScript, framework design, .Net, XML, XSLT, XPath
+                        Valid XHTML, <a href="/blog/category/css">CSS</a>, <a href="/blog/category/javascript">JavaScript</a>, framework design, <a href="/blog/category/aspnet">.Net</a>, XML, XSLT, XPath
                     </p>
                     <p id="cv">
                         <a href="pdf/David_Taylor_CV_07540817008.pdf" title="David Taylor Graphic Designer / Web Developer CV">You should get my CV here</a>
                     </p>
                 </div>
-                <ul id="social" class="cc">
-                    <li>
-                        <a class="ico-subscribeL" href="http://feed.the-taylors.org">Subscribe to my RSS feed</a>
-                    </li>
-                    <li>
-                        <a class="ico-linkedin" href="http://www.linkedin.com/in/davidtaylorlondon">View my LinkedIn profile</a>
-                    </li>
-                    <li>
-                        <a class="ico-twitter" href="http://twitter.com/davetayls">View my twitter feed</a>
-                    </li>
-                </ul>
-                <ul class="nav-accessibility">
-                    <li>
-                        <a href="#">Text Only</a>
-                    </li>
-                    <li>
-                        <a href="#">High Visibility</a>
-                    </li>
-                    <li class="nav-last">
-                        Font <a href="#">A</a>
-                        <a href="#">A</a>
-                        <a href="#">A</a>
-                    </li>
-                </ul>
-                <ul class="nav-contacts">
-                    <li>
-                        <strong>Email</strong>: <a href="mailto:dave@the-taylors.org">dave@the-taylors.org</a>
-                    </li>
-                    <li>
-                        <strong>Phone</strong>: 0754 081 7008
-                    </li>
-                </ul>
             </div>
 			{{ content }}
             </div>

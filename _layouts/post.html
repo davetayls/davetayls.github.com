@@ -3,7 +3,7 @@ layout: master
 ---
 <div class="lay-mRight2 cc">
     <div id="content" class="lay-mRight2-content cc">
-        <div class="textRegion">
+        <div id="articleContent" class="textRegion">
 					  <div>
 					    <h1>{{ page.title }}</h1>
 					    <p class="cp-postHeader-date">{{ page.date | date:"%d<br />%b" }}</p>
@@ -13,9 +13,7 @@ layout: master
                 {% endif %}
 				{% if page.categories %}
 					<span> in:</span> 
-					{% for category in page.categories %}
-						&nbsp;<a href="/blog/category/{{ category }}">{{ category }}</a>
-					{% endfor %}
+						&nbsp;{{ page.categories }}
 				{% endif %}
 					    </p>
 					  </div>                              

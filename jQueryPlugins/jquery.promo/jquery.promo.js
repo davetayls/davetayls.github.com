@@ -7,21 +7,21 @@
 (function($){
 	
 	// default transition function, sliding carousel
-	var carouselTransition = function(linkToActivate, slideIndexToActivate, settings){
-		var slidePosLeft = slideIndexToActivate * settings.imageWidth;
+	var carouselTransition = function(slideIndexToActivate){
+		var slidePosLeft = slideIndexToActivate * this.imageWidth;
 		
 		//Slider Animation
-		this.animate({ 
+		this.carouselWrapper.animate({ 
 			left: -slidePosLeft
-		}, (settings.transitionSpeed * 1000));
+		}, (this.transitionSpeed * 1000));
 	};
 	
-	$.fn.promo = function(options){
-        options = jQuery.extend({
+	$.fn.promo = function(customOpt){
+        var options = jQuery.extend({
             switchSpeed: 7,
             transitionSpeed: 0.5,
             transition: carouselTransition
-        }, options);
+        }, customOpt);
         
 		this.each(function(){
             var settings = jQuery.extend({}, options);

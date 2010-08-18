@@ -1,8 +1,10 @@
-﻿body {
-	color: #ddd;
+﻿@import url(fonts/handy/stylesheet.css);
+
+body {
+	color: #444;
     font-family: Arial, Sans-Serif;
     letter-spacing: -0.05em;
-    font-size: 0.8em;
+    font-size: 0.85em;
 }
 
 a,a:link,a:visited { color: #00ADEF; text-decoration: none; }
@@ -26,7 +28,7 @@ h1{
 }
 h2 {
 	color:#84D725;
-	font-family:trebuchet MS;
+	font-family: trebuchet MS;
 	font-size:1.7em;
 	font-weight:normal;
 	letter-spacing:-0.008em;
@@ -94,6 +96,13 @@ li {
 ul li li    { list-style-image: none; list-style-type: circle; }
 ul li li li { list-style-image: none; list-style-type: disc; }
 ul li li li li { list-style-image: none; list-style-type: square; }
+
+/*
+ * fonts
+ */
+.handFont {
+	font-family:'ChristopherhandRegular',trebuchet MS !important;
+}
 
 @media screen and (max-width:730px) {
 	pre {
