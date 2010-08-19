@@ -8,6 +8,14 @@
 #articleContent {
 	padding-left: 30px;
 }
+
+/*
+	mod-comments
+-------------------------------------------------------*/
+.mod-comments {
+	padding: 0 0 10px 30px;
+}
+
 /*
 	mod-fullArticles
 -------------------------------------------------------*/
@@ -79,5 +87,10 @@
 @media (max-width:768px) {
 	#articleContent {
 		padding-left: 15px;
+	}
+}
+@media (max-width:481px) {
+	.mod-comments {
+		padding-left: 0;
 	}
 }

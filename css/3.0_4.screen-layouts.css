@@ -46,14 +46,14 @@
 .lay-mRight2 {}
 	.lay-mRight2-content {
 		float:left;
-		width:75%;
+		width:70%;
 	}
 	.lay-mRight2-aside {
 		display:inline;
 		float:right;
 		margin:0;
 		padding: 0;
-		width:20%;		
+		width:25%;		
 	}
 		.lay-mRight2-aside-content {
 			padding: 0 10px;
