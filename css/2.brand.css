@@ -4,12 +4,19 @@ body {
 	color: #444;
     font-family: Arial, Sans-Serif;
     letter-spacing: -0.05em;
-    font-size: 0.85em;
+    font-size: 0.82em;
 }
 
 a,a:link,a:visited { color: #00ADEF; text-decoration: none; }
 a:hover { text-decoration: underline;}
 a img { border: none; }
+
+blockquote p {
+	color: #676767;
+	font-size: 2.2em;
+	line-height: 0.9em;
+	padding: 10px 20px;
+}
 
 button, 
 button span {
@@ -100,7 +107,8 @@ ul li li li li { list-style-image: none; list-style-type: square; }
 /*
  * fonts
  */
-.handFont {
+.handFont,
+blockquote p {
 	font-family:'ChristopherhandRegular',trebuchet MS !important;
 }
 

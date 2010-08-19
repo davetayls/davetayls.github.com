@@ -20,8 +20,18 @@ layout: nil
    <title>{{ post.title }}</title>
    <link href="http://the-taylors.org{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://the-taylors.org.id }}</id>
-   <content type="html">{{ post.content | xml_escape }}</content>
+   <id>http://the-taylors.org{{ post.id }}</id>
+   <content type="html">
+   		{{ post.content | xml_escape }}
+		&lt;h2&gt;Related Posts&lt;/h2&gt;
+		&lt;ul&gt;
+			{% for post in site.related_posts limit: 3 %}
+				&lt;li&gt;
+					&lt;a href="{{ post.url }}"&gt;{{ post.title | xml_escape }}&lt;/a&gt;
+				&lt;/li&gt;
+			{% endfor %}
+		&lt;/ul&gt;
+   </content>
  </entry>
  {% endif %}
  {% endfor %}

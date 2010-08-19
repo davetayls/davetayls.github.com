@@ -13,9 +13,7 @@ comments: hide
 			Posted by: {{ post.author }}
 			{% if post.categories %}
 				<span> in:</span> 
-				{% for category in post.categories %}
-					&nbsp;<a href="/blog/category/{{ category }}">{{ category }}</a>
-				{% endfor %}
+					&nbsp;{{ post.categories }}
 			{% endif %}
 		</p>
   </div>                              
