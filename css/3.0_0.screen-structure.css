@@ -50,7 +50,6 @@ body {
 #header {
 	height:145px;
 	overflow:hidden;
-	width: 919px;
 }
 	#header #about {
 		display: inline;
@@ -157,7 +156,6 @@ body {
 		background-image: none;
 	}
 	#logo {
-		top: 0;
 		width: 64px;
 	}
 		#logo img {
@@ -172,11 +170,11 @@ body {
 		position: relative;
 	}
 		#header #about {
-			margin: 0 0 0 22%;
+			margin: 0 0 0 5px;
 			width: auto;
 		}
 		#header h3 {
-			font-size: 0.8em;
+			font-size: 2em;
 		}
 			#header h3 img {
 				margin-top: 0;
