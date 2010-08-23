@@ -19,9 +19,7 @@ blockquote p {
 }
 
 button, 
-button span {
-	color: #fff;
-}
+button span {}
 p { 
 	font-size:1em;
 	letter-spacing:0.02em;

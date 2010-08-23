@@ -6,15 +6,20 @@
  * cp-blogPost-share
  * ------------------------------------------- */
 .cp-blogPost-share {
-	padding: 10px;
+	padding: 10px 10px 0 30px;
 }
-.cp-blogPost-share .cp-subscribeLink {
-	float: left;
-	margin-right: 20px;
-}
-.cp-blogPost-share .cp-shareLinks {
-	float: left;
-}
+	.cp-blogPost-share h2 {
+		color: #888;
+		font-size: 2.4em;
+		padding: 10px;
+	}
+	.cp-blogPost-share .cp-subscribeLink {
+		float: left;
+		margin-right: 20px;
+	}
+	.cp-blogPost-share .cp-shareLinks {
+		float: left;
+	}
 
 /*
     cp-promo

@@ -19,17 +19,20 @@ layout: master
 					  </div>                              
             {{ content }} 
         </div>
+
 		<div class="cp-blogPost-share cc">
+			<h2 class="handFont">ummm...might bob like to read this?</h2>
 			<a onclick="dt.analytics.trackLink(this,'subscribe','bottom');return false;" class="cp-subscribeLink" href="http://feed.the-taylors.org"><img src="/images/feed-icon-12x12-orange.gif" alt="" /> Subscribe to this blog</a> |
-        {% include sharelinks-short.html %}
+        	{% include sharelinks-short.html %}
+			{% include facebooklike.html %}
 		</div>
         {% if page.comments != 'hide' %}
         <div class="mod-comments">
-            <h2>Comments</h2>
+            <h2 class="handFont">d'ya care to comment on that?</h2>
             <div id="disqus_thread"></div>
             <script type="text/javascript">
                 var disqus_identifier = '{{ page.id }}';
-                var disqus_developer = 0;
+                //var disqus_developer = 1;
                 var disqus_url = 'http://the-taylors.org{{ page.url }}';
                 var disqus_title = '{{ page.title }}';
                 (function(){

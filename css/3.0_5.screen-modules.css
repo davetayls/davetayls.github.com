@@ -15,6 +15,10 @@
 .mod-comments {
 	padding: 0 0 10px 30px;
 }
+	.mod-comments h2 {
+		color: #888;
+		font-size: 2.4em;
+	}
 
 /*
 	mod-fullArticles
@@ -42,7 +46,8 @@
 -------------------------------------------------------*/
 .mod-navSection {
 	background: rgba(0,0,0,0.6);
-	padding: 15px 5px 0;
+	margin: 0 0 10px;
+	padding: 15px 15px 10px;
 }
 
 /*
