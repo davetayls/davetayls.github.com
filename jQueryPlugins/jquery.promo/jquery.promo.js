@@ -18,6 +18,7 @@
 	
 	$.fn.promo = function(customOpt){
         var options = jQuery.extend({
+			auto: true,
             switchSpeed: 7,
             transitionSpeed: 0.5,
             transition: carouselTransition
@@ -129,8 +130,9 @@
 				//.focus(linkAction);	
 
 			//Run function on launch
-			start();
-			
+			if (settings.auto){
+				start();
+			}
 		});
 	}
 	
