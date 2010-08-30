@@ -27,6 +27,7 @@
             }
             
             #slides {
+            	border-bottom: solid 4px #7A910F;
                 height: 380px;
                 overflow: hidden;
                 width: 680px;
@@ -216,7 +217,12 @@
                 
                 var loadPromoItems = function(gs){
                     gs.each(function(row){
-                        slidesnav$.append('<li><a href="#s' + row.id + '"><img src="' + row.imageUrl + '" alt="' + row.description + '" /></a></li>');
+                        slidesnav$.append('<li><a href="#s' + row.id + '"><img src="' + row.imageUrl + '" alt="' + row.heading + '" /></a></li>');
+						var itm$ = $('<li id="s' + row.id + '" class="cc" />');
+						itm$.append('<img src="' + row.imageUrl + '" alt="' + row.heading + '" />');
+						if (row.heading.length > 0){
+							itm$.append()
+						}
                     });
                 }
                 
