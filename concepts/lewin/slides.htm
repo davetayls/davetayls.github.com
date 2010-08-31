@@ -188,7 +188,6 @@
             }
         </style>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-        <script type="text/javascript" src="../../lib/jquery-1.4.2.min.js"></script>
         <script type="text/javascript" src="../../jQueryPlugins/jquery.promo/jquery.promo.js"></script>
         <script type="text/javascript" src="../../jQueryPlugins/jquery.promo/transitions.js"></script>
         <script type="text/javascript" src="gspreadsheet.js"></script>
@@ -214,7 +213,7 @@
                     return null;
                 };
                 
-                var spreadSheetRef = 'tqybUbPxdOZ6szGhRhulxZg'; //getQuery('sheet');
+                var spreadSheetRef = getQuery('sheet');
                 
                 var loadPromoItems = function(gs){
                     gs.each(function(row){
@@ -231,8 +230,9 @@
                     });
 	                $('.cp-promo').promo({
 	                    auto: true,
-						switchSpeed: 7,
-	                    transition: fadeTransition
+						switchSpeed: 8,
+	                    transition: fadeTransition,
+						transitionSpeed: 1
 	                });
                 };
                 
