@@ -59,10 +59,10 @@ layout: master
             		<a href="/">Home</a>
             	</li>
             	<li>
-            		<a href="/blog">Blog</a>
+            		<a onclick="dt.analytics.trackLink(this,'blog','right');return false;" href="/blog">Blog</a>
             	</li>
             	<li>
-                	<img src="/images/feed-icon-12x12-orange.gif" alt="" /> <a href="http://feed.the-taylors.org">Subscribe here (atom)</a>
+                	<img src="/images/feed-icon-12x12-orange.gif" alt="" /> <a onclick="dt.analytics.trackLink(this,'subscribe','topright');return false;" href="http://feed.the-taylors.org">Subscribe here (atom)</a>
 				</li>
             </ul>
             {% include sharelinks-short.html %}
