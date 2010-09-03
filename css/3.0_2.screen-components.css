@@ -280,34 +280,40 @@
   cp-postDate
 ------------------------------*/
 .cp-postHeader {
-	/*
-	background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#fff));
-	background: -moz-linear-gradient(top,  #ccc,  #000);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000');
-	*/
 	position: relative;
 	min-height: 50px;
 	padding:  10px 0 10px 25px;
 }
+#articleContent .cp-postHeader { padding-left: 0; }
+
+  .cp-postHeader h1,
   .cp-postHeader h2 {
-    margin: 0;
+		font-size:2em;
+		font-weight:bold;
+		padding:0;
+		text-transform:uppercase;
   }
+  	.cp-postHeader h2 {
+  		font-size: 1.2em;
+		margin: 0 0 3px;
+	}
   .cp-postHeader-date {
-      background: url(../images/sprites.png) no-repeat top left;
+      background: #444;
       color: white;
-      font-size: 0.7em;
+	  float: left;
+      font-size: 0.8em;
+	  font-weight: bold;
       height: 30px;
-      left: -14px;
       line-height: 1em;
-      padding: 6px 5px 0 0;
-      position: absolute;
+	  margin: 0 20px 0 0;
+      padding: 6px 3px 0 !important;
       text-align: center;
       text-transform: uppercase;
-      top: 10px;
       width: 34px;
   }
   .cp-postHeader-details {
-    font-size: 0.55em;
+    font-size: 0.6em;
+	letter-spacing: 0.5em;
     text-transform: uppercase;
   }
 /*

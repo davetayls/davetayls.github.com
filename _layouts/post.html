@@ -3,20 +3,20 @@ layout: master
 ---
 <div class="lay-mRight2 cc">
     <div id="content" class="lay-mRight2-content cc">
+		<div class="cp-postHeader cc">
+			    <p class="cp-postHeader-date">{{ page.date | date:"%d<br />%b" }}</p>
+			    <h1>{{ page.title }}</h1>
+			    <p class="cp-postHeader-details">
+            {% if page.author %}
+				     Posted by: {{ page.author }}
+            {% endif %}
+			{% if page.categories %}
+				<span> in:</span> 
+					&nbsp;{{ page.categories }}
+			{% endif %}
+			</p>
+		</div>                              
         <div id="articleContent" class="textRegion">
-					  <div>
-					    <h1>{{ page.title }}</h1>
-					    <p class="cp-postHeader-date">{{ page.date | date:"%d<br />%b" }}</p>
-					    <p class="cp-postHeader-details">
-                {% if page.author %}
-					     Posted by: {{ page.author }}
-                {% endif %}
-				{% if page.categories %}
-					<span> in:</span> 
-						&nbsp;{{ page.categories }}
-				{% endif %}
-					    </p>
-					  </div>                              
             {{ content }} 
         </div>
 
@@ -66,7 +66,9 @@ layout: master
 				</li>
             </ul>
             {% include sharelinks-short.html %}
-        </div>	
+        </div>
+		
+		{% if page.related != 'hide' %}	
         <div class="mod-navSection">
             <h2>Related Posts</h2>
             <ul class="list-blogs">
@@ -86,7 +88,7 @@ layout: master
                 {% endfor %}
             </ul>
         </div>
-		
+		{% endif %}
         <div class="mod-navSection">
             <h2>Categories</h2>
             <ul class="nav-v">

@@ -18,17 +18,11 @@
 	padding: 15px; 
 	}
 .textRegion h1		{
-	background: #888;
-	border-bottom: solid 1px #fff;
-	border-radius: 3px 3px 0 0;
-	-moz-border-radius: 3px 3px 0 0;
-	-webkit-border-radius: 3px 3px 0 0;
-	color:#EEEEEE;
+	border-bottom: solid 1px #ccc;
 	font-size:1.4em;
 	font-weight:lighter;
 	margin:-15px -15px 5px;
-	padding:15px 15px 15px 40px;
-	text-shadow:1px 1px 0 #656565;
+	padding:15px 15px 15px 50px;
 }
 .textRegion h2		{ font-size: 1.3em; }
 .textRegion p		{ padding-bottom: 15px; }
