@@ -192,9 +192,9 @@
             }
         </style>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-        <script type="text/javascript" src="../../jQueryPlugins/jquery.promo/jquery.promo.js"></script>
-        <script type="text/javascript" src="../../jQueryPlugins/jquery.promo/transitions.js"></script>
-        <script type="text/javascript" src="gspreadsheet.js"></script>
+        <script type="text/javascript" src="http://the-taylors.org/jQueryPlugins/jquery.promo/jquery.promo.js"></script>
+        <script type="text/javascript" src="http://the-taylors.org/jQueryPlugins/jquery.promo/transitions.js"></script>
+        <script type="text/javascript" src="http://google-ajax-examples.googlecode.com/svn/trunk/gspreadsheet/gspreadsheet.js"></script>
         <script type="text/javascript">
             $().ready(function(){
             
@@ -221,7 +221,6 @@
                 
                 var loadPromoItems = function(gs){
                     gs.each(function(row){
-						console.log(row);
                         slidesnav$.append('<li><a href="#s' + row.id + '"><img src="' + row.imageurl + '" alt="' + row.heading + '" /></a></li>');
 						var itm$ = $('<li id="s' + row.id + '" class="cc" />');
 						var itmLink$ = $('<a target="_top" class="cc" href="' + row.link + '"></a>');
