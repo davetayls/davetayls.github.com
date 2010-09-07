@@ -49,6 +49,17 @@
 	margin: 0 0 10px;
 	padding: 15px 15px 10px;
 }
+.mod-navSection	a,
+.mod-navSection a:link,
+.mod-navSection	a:visited { color: #ddd; }
+.mod-navSection	a:hover { color: #fff; }
+
+.mod-navSection h2 {
+	color: #eee;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-transform: uppercase;	
+}
 
 /*
 	mod-post
