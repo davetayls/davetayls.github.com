@@ -22,6 +22,21 @@
 	}
 
 /*
+    cp-contact
+------------------------------------------------*/
+#cp-contact {
+	background-color: #444;
+	border: solid 5px #00ADEF;
+	position: absolute;
+	top: 0;
+	right: 20px;
+	width: 300px;
+	z-index: 10;
+}
+	#cp-contact {
+		
+	}
+/*
     cp-promo
 ------------------------------------------------*/
 .cp-promo,
@@ -379,16 +394,19 @@ ul.list-blogs {
 			display: block;
 		}
 		h2.list-blogs-header a {
-			color: #ddd;
+			color: #555;
 			font-size: 1em;
 			font-weight: bold;
 			line-height: 1.1em;
 			margin-left: 40px;
 		}
 		.list-blogs a.list-blogs-comments {
-			color: #222;
+			color: #888;
 			font-size: 0.9em;
 			padding-top: 4px;
+		}
+		.mod-navSection	h2.list-blogs-header a {
+			color: #ddd;
 		}
 		.mod-navSection	.list-blogs a.list-blogs-comments {
 			color: #222;
