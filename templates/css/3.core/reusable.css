@@ -15,7 +15,7 @@
 .scrreadonly	{ position:absolute; display: block; top: auto; left: -10000px; width: 1px; height: 1px; }
 .align-left         { text-align: left !important; }
 .align-right        { text-align: right !important; }
-/*  cc - clear container (clearfix) */ .cc { zoom: 1; } .cc:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+/*  cc - clear container (clearfix) */ .cc,.clearfix { zoom: 1; } .cc:after,.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
 .float-right        { float: right !important; }
 .font-weight-normal { font-weight: normal !important; }
 .hide				{ display: none; }

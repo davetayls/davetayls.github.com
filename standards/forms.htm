@@ -37,7 +37,7 @@
 					$(".form-errorSummary").hide();
 				});
 				$("#formTypeOptions input[type=radio]").click(function(){
-					$("#mainForm").attr("class","form-"+$(this).attr("value"));
+					$("#mainForm").attr("class","formT"+$(this).attr("value"));
 				});
 			});
 
@@ -64,7 +64,7 @@
 		<p>Any more complex layouts within these form standards would be coded as individual components overriding the common form styles.</p>
 
 							<!-- form -->
-							<div id="mainForm" class="form-margin">
+							<div id="mainForm" class="formTmargin">
 								
 								<h2>Display options (required JavaScript)</h2>
 								<div class="button-group">

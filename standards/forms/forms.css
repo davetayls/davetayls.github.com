@@ -125,32 +125,32 @@
 	}
 
 /*
- * form-margin
+ * formTmargin
  -----------------------------------------------*/
-.form-margin {}
-	.form-margin h2,
-	.form-margin h3,
-	.form-margin h4,
-	.form-margin h5,
-	.form-margin fieldset { clear: both; }
+.formTmargin {}
+	.formTmargin h2,
+	.formTmargin h3,
+	.formTmargin h4,
+	.formTmargin h5,
+	.formTmargin fieldset { clear: both; }
 	
-	.form-margin label {
+	.formTmargin label {
 		clear: both;
 		display: block;
 	}
-		.form-margin label .label-text {
+		.formTmargin label .label-text {
 			display: block;
 			float: left;
 			/*width: 100px;*/
 		}
-		.form-margin label select,
-		.form-margin label textarea,
-		.form-margin label input {
+		.formTmargin label select,
+		.formTmargin label textarea,
+		.formTmargin label input {
 			display: block;
 			float: left;
 		}
 
-	.form-margin .field-group-v .field-group-header {
+	.formTmargin .field-group-v .field-group-header {
 		display: block;
 		left: 0;
 		position: absolute;
@@ -158,41 +158,41 @@
 		width: 100px;
 	}
 
-	.form-margin .field-group-v {}
-		.form-margin .field-group-v label {
+	.formTmargin .field-group-v {}
+		.formTmargin .field-group-v label {
 			margin-left: 100px;
 		}
-		.form-margin .field-group-v .label-detail {
+		.formTmargin .field-group-v .label-detail {
 			margin-left: 100px;
 		}
 
-	.form-margin .button-group {
+	.formTmargin .button-group {
 		padding-left: 100px;
 	}
 
 /*
- * form-stack
+ * formTstack
  -----------------------------------------------*/
-.form-stack {}
-	.form-stack h2,
-	.form-stack h3,
-	.form-stack h4,
-	.form-stack h5,
-	.form-stack fieldset { clear: both; }
+.formTstack {}
+	.formTstack h2,
+	.formTstack h3,
+	.formTstack h4,
+	.formTstack h5,
+	.formTstack fieldset { clear: both; }
 	
-	.form-stack label {
+	.formTstack label {
 		clear: both;
 		display: block;
 	}
-		.form-stack label .label-text {
+		.formTstack label .label-text {
 			display: block;
 		}
-		.form-stack label select,
-		.form-stack label textarea,
-		.form-stack label input {
+		.formTstack label select,
+		.formTstack label textarea,
+		.formTstack label input {
 			display: block;
 		}
-	.form-stack .button-group {
+	.formTstack .button-group {
 	}
 
 
