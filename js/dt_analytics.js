@@ -1,7 +1,10 @@
 (function ($) {
     var filetypes = /\.(zip|exe|pdf|doc*|xls*|ppt*|mp3)$/i;
     dt.analytics = {
-        init: function () {},
+        init: function () {
+			$('.cp-promo-controller a').trackEvent('SlideViews');
+			$('.cp-promo-carousel a').trackLink('SlideAction');
+		},
         trackEvent: function (eventName, action, label) {
             if (typeof _gaq !== 'undefined') {
                 _gaq = _gaq || [];
@@ -16,4 +19,18 @@
 		  }catch(err){}
 		}
     };
+	
+	$.fn.trackEvent = function(category){
+		this.click(function(){
+		    var pageTracker=_gat._getTracker("UA-4421586-2");
+		    pageTracker._trackEvent(category, this.href);			
+		});
+	};
+	$.fn.trackLink = function(category){	
+		this.click(function(){
+			dt.analytics.trackLink(this,category,this.href);
+			return false;
+		});
+	};
+	
 })(jQuery);

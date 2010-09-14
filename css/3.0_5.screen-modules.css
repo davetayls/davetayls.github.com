@@ -6,7 +6,7 @@
 	padding-left: 20px;
 }
 #articleContent {
-	padding-left: 30px;
+	padding-left: 25px;
 }
 
 /*
@@ -48,6 +48,17 @@
 	background: rgba(0,0,0,0.6);
 	margin: 0 0 10px;
 	padding: 15px 15px 10px;
+}
+.mod-navSection	a,
+.mod-navSection a:link,
+.mod-navSection	a:visited { color: #ddd; }
+.mod-navSection	a:hover { color: #fff; }
+
+.mod-navSection h2 {
+	color: #eee;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-transform: uppercase;	
 }
 
 /*

@@ -1,4 +1,18 @@
 /*
+	nav-block
+-----------------------------------------------------*/
+.nav-block a {
+	background: #888;
+	display: block;
+	margin: 3px 0;
+	padding: 3px 10px;
+}
+.nav-block a:hover {
+	background: #999;
+	text-decoration: none;
+}
+
+/*
 	nav-v
 	to be used with cc
 -----------------------------------------------------*/

@@ -6,10 +6,8 @@
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         <style type="text/css">
-            /*
-             * 500 x 375
-             */
             body {
+				background: #efefef;
                 font-family: Arial, Sans-Serif;
                 letter-spacing: -0.05em;
                 font-size: 0.8em;
@@ -20,13 +18,20 @@
             a, a img {
                 border: none;
             }
-            
+            #info {
+				color: #444;
+				position: absolute;
+				right: 20px;
+				top: 50px;
+				width: 180px;
+			}
             #slidesWrapper {
                 margin: 0;
                 padding: 0px;
             }
             
             #slides {
+            	border-bottom: solid 4px #7A910F;
                 height: 380px;
                 overflow: hidden;
                 width: 680px;
@@ -187,9 +192,9 @@
             }
         </style>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-        <script type="text/javascript" src="../../lib/jquery-1.4.2.min.js"></script>
-        <script type="text/javascript" src="../../jQueryPlugins/jquery.promo/jquery.promo.js"></script>
-        <script type="text/javascript" src="../../jQueryPlugins/jquery.promo/transitions.js"></script>
+        <script type="text/javascript" src="http://the-taylors.org/jQueryPlugins/jquery.promo/jquery.promo.js"></script>
+        <script type="text/javascript" src="http://the-taylors.org/jQueryPlugins/jquery.promo/transitions.js"></script>
+        <script type="text/javascript" src="http://google-ajax-examples.googlecode.com/svn/trunk/gspreadsheet/gspreadsheet.js"></script>
         <script type="text/javascript">
             $().ready(function(){
             
@@ -216,17 +221,26 @@
                 
                 var loadPromoItems = function(gs){
                     gs.each(function(row){
-                        slidesnav$.append('<li><a href="#s' + row.id + '"><img src="' + row.imageUrl + '" alt="' + row.description + '" /></a></li>');
+                        slidesnav$.append('<li><a href="#s' + row.id + '"><img src="' + row.imageurl + '" alt="' + row.heading + '" /></a></li>');
+						var itm$ = $('<li id="s' + row.id + '" class="cc" />');
+						var itmLink$ = $('<a target="_top" class="cc" href="' + row.link + '"></a>');
+						itmLink$.append('<img src="' + row.imageurl + '" alt="' + row.heading + '" />');
+						if (row.heading.length > 0){
+							itmLink$.append('<span class="cp-promo-label"><span class="cp-promo-h">'+ row.heading +'</span><span class="cp-promo-body">' + row.text + '</span></span>');
+						}
+						itm$.append(itmLink$);
+						slideslist$.append(itm$);
                     });
-                }
+	                $('.cp-promo').promo({
+	                    auto: true,
+						switchSpeed: 8,
+	                    transition: fadeTransition,
+						transitionSpeed: 1
+	                });
+                };
                 
-                //GSpreadsheet.load(spreadSheetRef, {index: 'designRef'}, loadPromoItems);
+                GSpreadsheet.load(spreadSheetRef, {index: 'designRef'}, loadPromoItems);
                 
-                $('.cp-promo').promo({
-                    auto: true,
-					switchSpeed: 7,
-                    transition: fadeTransition
-                });
             });
         </script>
     </head>
@@ -235,30 +249,24 @@
             <div id="slides">
                 <div class="cp-promo">
                     <ul id="slidesnav" class="cp-promo-controller cc">
-                        <li>
-                            <a href="#s1"><img src="slide01.jpg" alt="" /></a>
-                        </li>
-                        <li>
-                            <a href="#s2"><img src="slide02.jpg" alt="" /></a>
-                        </li>
                     </ul>
                     <div class="cp-promo-carousel">
                         <ul id="slideslist">
-                            <li id="s1" class="cc">
-                                <a target="_top" class="cc" href="vision-and-beliefs"><img src="slide01.jpg" alt="" /></a>
-                            </li>
-                            <li id="s2" class="cc">
-                                <a target="_top" class="cc" href="find-us"><img src="slide02.jpg" alt="" />
-									<span class="cp-promo-label">
-										<span class="cp-promo-h">Come to see us</span>
-										<span class="cp-promo-body">We'd love to see you, here are all the ways we can think of to help you get here.</span>
-									</span>
-								</a>
-                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
+		<div id="info">
+			<h2>Streatham Baptist Church</h2>
+			<p>22 Lewin Road,<br />
+			Streatham,<br />
+			London,<br />
+			SW16 6JR</p> 
+			<p>
+				Tel: 020 8769 1515<br />
+				<a href="mailto:info@streathambaptist.com">info@streathambaptist.com</a>
+			</p>
+		</div>
     </body>
 </html>

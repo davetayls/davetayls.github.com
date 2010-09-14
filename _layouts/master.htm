@@ -34,7 +34,7 @@
     <body>
         <div id="wrapper">
 	        <div id="logo">
-	            <a href="/"><img src="/images/davidtaylor.gif" alt="David Taylor" /></a>
+	            <a onclick="dt.analytics.trackLink(this,'home','logo');return false;" href="/"><img src="/images/davidtaylor.gif" alt="David Taylor" /></a>
 	        </div>
 	        <div id="nav-accessibility">
 	            <p>
@@ -107,7 +107,7 @@
                                 <a href="/blog">Blog</a>
                             </li>
                             <li>
-                                <a href="http://feed.the-taylors.org">Blog RSS Feed</a>
+                                <a onclick="dt.analytics.trackLink(this,'subscribe','footer');return false;" href="http://feed.the-taylors.org">Blog RSS Feed</a>
                             </li>
                             <li>
                                 <a href="http://twitter.com/davetayls">Twitter @davetayls</a>
