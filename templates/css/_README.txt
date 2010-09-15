@@ -3,7 +3,7 @@
 
 All of the items in any marked files get combined and compressed on deployment.
 
-2.brand.css
+brand.css
 ===========
 - These styles are used to set basic elements to fit to a brand.
 - It should be able to be added to a page no matter what the media type to set the brand.
@@ -12,13 +12,13 @@ All of the items in any marked files get combined and compressed on deployment.
 
 These elements should be in a rough alphabetical order
 
-3.0.core.css
+core.css
 ==============
 This is the global core stylesheet. 
 The imports below get combined and compressed in to this file on deployment.
 
 	-----------------------------------------------------------------------------------
-    3.core/structure
+    core/structure
     This style sheet contains core structural layout 
     
     This shouldn't contain reusable modules or components but would generally 
@@ -30,7 +30,7 @@ The imports below get combined and compressed in to this file on deployment.
     This file should be ordered as elements appear on the page including indentation.
     
 	-----------------------------------------------------------------------------------
-	3.core/reusable
+	core/reusable
 	This file has two sections. 
 	
 	The first is for simple 1 or 2 line styles:	
@@ -42,7 +42,7 @@ The imports below get combined and compressed in to this file on deployment.
 	- icon names should be in a rough alphabetical order
 
 	-----------------------------------------------------------------------------------
-    3.core/components
+    core/components
     
     - basic reusable items which are simple
     - components cannot contain child components or modules
@@ -80,7 +80,7 @@ The imports below get combined and compressed in to this file on deployment.
 	
 	
 	-----------------------------------------------------------------------------------
-	3.core/forms
+	core/forms
 	Use this file for form layouts and styling
 	
 	<div class="form-errorSummary">
@@ -91,7 +91,7 @@ The imports below get combined and compressed in to this file on deployment.
         <div class="form-section"></div>
     </div>
 	-----------------------------------------------------------------------------------
-	3.core/layouts
+	core/layouts
 
 	Within the site all column layouts within main content areas should be modular
 	and defined here.
@@ -101,13 +101,13 @@ The imports below get combined and compressed in to this file on deployment.
 	A few examples/often used layouts are defined below.
 
 	-----------------------------------------------------------------------------------
-    3.core/modules
+    core/modules
     more involved sections of styles often containing modules and/or components
 	- prefix these classes with mod-
 	- order alphabetically according to containers
 
 	-----------------------------------------------------------------------------------
-    3.core/navs
+    core/navs
     navs would use the following prefixes:
 	- nav	lists of links,tabs
 	

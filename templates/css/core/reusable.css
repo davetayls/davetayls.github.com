@@ -2,7 +2,7 @@
 	3.0_1.screen-reusable
 	This file has two sections. 
 	
-	The first is for simple 1 or 2 line styles:	
+	The first is for non-semantic helper styles:	
 	- This should contain basic reusable styles.
 	- This should not contain any component or module styles
 	- The styles should be in a rough alphabetical order
@@ -12,16 +12,40 @@
 */
 
 
-.scrreadonly	{ position:absolute; display: block; top: auto; left: -10000px; width: 1px; height: 1px; }
+/* 
+ * Non-semantic helper classes 
+ */
 .align-left         { text-align: left !important; }
 .align-right        { text-align: right !important; }
-/*  cc - clear container (clearfix) */ .cc,.clearfix { zoom: 1; } .cc:after,.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
 .float-right        { float: right !important; }
 .font-weight-normal { font-weight: normal !important; }
-.hide				{ display: none; }
 .image-float-left	{ float: left; margin: 0 10px 10px 0px; }
 .image-float-right	{ float: right; margin: 0 0 10px 10px; }
 .tight-top          { padding-top: 0 !important; }
+
+
+/* for image replacement */
+.ir { display:block; text-indent:-999em; overflow:hidden; background-repeat: no-repeat; }
+
+/* Hide for both screenreaders and browsers
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden { display:none; visibility:hidden; } 
+
+/* Hide only visually, but have it available for screenreaders 
+   www.webaim.org/techniques/css/invisiblecontent/ 
+   Solution from: j.mp/visuallyhidden - Thanks Jonathan Neal! */
+.visuallyhidden { position:absolute !important;    
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px); }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* >> The Magnificent CLEARFIX << */
+cc:after, .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+cc, .clearfix { display: inline-block; }
+* html .cc, * html .clearfix { height: 1%; } /* Hides from IE-mac \*/
+cc, .clearfix { display: block; }
 
 
 /*
