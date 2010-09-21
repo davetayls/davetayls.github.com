@@ -163,6 +163,7 @@
             width: 70px;
         }
 		.cp-promo-controller li.nav-selected {
+			-webkit-transition: width 0.5s;
 			width: 75px;
 		}
             .cp-promo-controller li a {
@@ -179,6 +180,7 @@
             .cp-promo-controller li.nav-selected a,
             .cp-promo-controller li:hover a,
             .cp-promo-controller li a:hover {
+            	-webkit-transition: background-color 1s;
             	background-color: #00ADEF;
 				color: #fff;
 				padding-left: 4px;

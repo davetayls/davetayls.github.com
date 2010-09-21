@@ -53,7 +53,7 @@ layout: master
         {% endif %}
     </div>
     <div class="lay-mRight2-aside">
-        <div class="mod-navSection">
+        <div class="mod-navSection cc">
             <ul class="nav-v nav-block">
             	<li>
             		<a href="/">Home</a>
@@ -65,11 +65,12 @@ layout: master
                 	<a onclick="dt.analytics.trackLink(this,'subscribe','topright');return false;" href="http://feed.the-taylors.org"><img src="/images/feed-icon-12x12-orange.gif" alt="" /> Subscribe here (atom)</a>
 				</li>
             </ul>
+			<div class="clear"></div>
             {% include sharelinks-short.html %}
         </div>
 		
 		{% if page.related != 'hide' %}	
-        <div class="mod-navSection">
+        <div class="mod-navSection cc">
             <h2>Related Posts</h2>
             <ul class="list-blogs">
                 {% for post in site.related_posts limit: 3 %}
@@ -89,7 +90,7 @@ layout: master
             </ul>
         </div>
 		{% endif %}
-        <div class="mod-navSection">
+        <div class="mod-navSection cc">
             <h2>Categories</h2>
             <ul class="nav-v nav-block">
                 <li>
@@ -121,7 +122,7 @@ layout: master
 		
 		{% include goodbooks.html %}
 		
-        <div class="mod-navSection">
+        <div class="mod-navSection cc">
             <h2>Recent Posts</h2>
             <ul class="list-blogs">
                 {% for post in site.posts limit: 3 %}

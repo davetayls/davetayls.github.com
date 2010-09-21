@@ -9,6 +9,6 @@ var fadeTransition = function(linkToActivate, slideIndexToActivate){
         })
         .animate({
             opacity: 1
-        },(this.transitionSpeed * 1000));
+        },(this.transitionSpeed * 1000),'swing');
     }
 };
