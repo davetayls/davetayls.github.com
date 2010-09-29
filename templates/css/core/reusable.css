@@ -23,6 +23,8 @@
 .image-float-right	{ float: right; margin: 0 0 10px 10px; }
 .tight-top          { padding-top: 0 !important; }
 
+/* inverse underlining of links, switch this if the default is inverse */
+.invunderline	{ text-decoration: none; } .invunderline:hover { text-decoration: underline; }
 
 /* for image replacement */
 .ir { display:block; text-indent:-999em; overflow:hidden; background-repeat: no-repeat; }

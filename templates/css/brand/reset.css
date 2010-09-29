@@ -60,3 +60,8 @@ table {
 
 /* additional reset styles */
 a img {border:0;}
+
+/* html 5 elements */
+article, aside, figure, footer, header, 
+hgroup, nav, section { display:block; }
+mark, m, meter, progress, small, time { display: inline; }

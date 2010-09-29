@@ -233,4 +233,13 @@ button::-moz-focus-inner {
 				background-position: right -150px;
 			}
 			
+/* button 2 */			
+	button.btn-blue span { background-position: right -39px; }
+	button.btn-blue span.btn-l { background-position: 0 -39px; }
+		button.btn-blue:hover span.btn-l,
+		button.btn-blue:focus span.btn-l { background-position: 0 -114px; }		
+			button.btn-blue:hover span,
+			button.btn-blue:focus span { background-position: right -114px; }
+		button.btn-blue:active span.btn-l { background-position: 0 -189px; }		
+			button.btn-blue:active span { background-position: right -189px; }
 			

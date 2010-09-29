@@ -1,128 +1,140 @@
-/*
-	button-group
-------------------------------------------------*/
-.button-group {
-	clear: both;
-}
-/*
-	clearing
-------------------------------------------------*/
-.field-group-v label 
-{ position: relative; zoom:1;}
-
-.field-group-v label:after 
-{ content: "."; display: block; height: 0; clear: both; visibility: hidden; }
-
-/*
-	field-group-v
-------------------------------------------------*/
-.field-group-v {
-	clear: both;
-	position: relative;
-}
-	div.field-group-v label {
-		display:block;
-	}
-		.field-group-v label .label-text {
-			display: inline;
-		}
-		div.field-group-v label input {
-			display: inline;						
-		}
-		div.field-group-v label input[type=radio] {
-			height: 20px;
-			margin: -2px 0 0;
-			padding: 0;
-			width: 20px;
-		}
-		div.field-group-v label input[type=checkbox] {
-			margin: 1px 4px 0 2px;
-			padding: 0;			
-		}		
-		.field-group-v .label-detail {
-		}
-	
-.field-group-vTtight {}
-	div.field-group-vTtight label,
-	div.field-group-vTtight .label-detail {
-		margin-left: 0 !important;
-	}
-
-/*
- * field-group-error
- ------------------------------------------------*/
-.field-group-error {}
-	.field-group-error .field-group-header,
-	.field-group-error .field-group-header-inline {
-		color: #990000;
-	}
-
-
 /* 
- * field-group-date 
+ * cp-dateField 
  * ------------------------------------------------------*/
-.field-group-date {
+.cp-dateField {
 	clear: both;
 	position: relative;
 }
-	div.field-group-date .field-group-header {
-		display: block;
-	}
-	div.field-group-date .field-group-header-inline {
-		display: inline;
-		float: none;
-	}
-	div.field-group-date label {
+	div.cp-dateField .field-item {
 		clear: none;
 		display: inline;
 		float: none;
 	}
-	div.field-group-date label .label-text {
-		position:absolute !important; 
-		display: block !important; 
-		top: auto !important; 
-		left: -10000px !important; 
-		width: 1px !important; 
-		height: 1px !important;
+	div.cp-dateField .field-item:after {
+		content: none;
+		display: none;
 	}
-	div.field-group-date label input {
-		display: inline;
-		float: none;
-		width: 25px;
+		div.cp-dateField .field-item .error-num {
+			float: none;
+		}
+		div.cp-dateField .field-item .label-text {
+			display: block !important;
+			float: none; 
+			height: 1px !important;
+			left: -10000px !important; 
+			top: auto !important; 
+			position:absolute !important; 
+			width: 1px !important; 
+		}
+		div.cp-dateField .field-item input {
+			display: inline;
+			float: none;
+			width: 25px;
+		}
+		div.cp-dateField .field-item select {
+			display: inline;
+			float: none;
+			width: 60px;
+		}
+
+
+/*************************************************************************************************/
+
+/*
+	buttons
+------------------------------------------------*/
+.button-group {
+	clear: both;
+}
+
+/*
+	clearing
+------------------------------------------------*/
+.field-group,
+.field-item 
+{ position: relative; zoom:1;}
+
+.field-group:after,
+.field-item:after 
+{ content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+/*
+	error-num
+------------------------------------------------*/
+.error-num {
+	background: #990000;
+	color:#FFFFFF;
+	float:left;
+	padding:0 5px;	
+}
+
+/*
+	field-group
+------------------------------------------------*/
+.field-group {
+	clear: both;
+	position: relative;	
+}
+	.field-group ul {
+		float: left;
+		margin: 0;
+		padding: 0;
 	}
-	div.field-group-date label select {
-		display: inline;
-		float: none;
-		width: 60px;
+		div.field-group ul .field-item {
+			display:block;
+		}
+			.field-group ul .field-item .label-text {
+				display: inline;
+			}
+			div.field-group ul .field-item input {
+				display: inline;						
+			}
+			div.field-group ul .field-item input[type=radio] {
+				height: 20px;
+				margin: -2px 0 0;
+				padding: 0;
+				width: 20px;
+			}
+			div.field-group ul .field-item input[type=checkbox] {
+				margin: 1px 4px 0 2px;
+				padding: 0;			
+			}		
+			.field-group ul .label-detail {
+			}
+
+/*
+ * field-groupTerror
+ ------------------------------------------------*/
+.field-groupTerror {}
+	.field-groupTerror .field-group-header {
+		color: #990000;
 	}
 
 /* 
  * field-group-inline 
  * -------------------------------------------------*/
-.field-group-inline {
-	clear: both;
-	position: relative;
+.field-groupTh {
 }
-	div.field-group-inline .field-group-header {
-		display: block;
-	}
-	div.field-group-inline .field-group-header-inline {
+	div.field-groupTh ul {
 		display: inline;
-		float: none;
 	}
-	div.field-group-inline label {
-		clear: none;
-		display: inline;
-		float: none;
-	}
-	div.field-group-inline label .label-text {
-		display: inline;
-		float: none;
-	}
-	div.field-group-inline label input {
-		display: inline;
-		float: none;
-	}
+		div.field-groupTh .field-item,
+		div.field-groupTh ul .field-item {
+			clear: none;
+			display: inline;
+			float: left;
+		}
+		div.field-groupTh .field-item .label-text {
+			display: inline;
+			float: none;
+			vertical-align: middle;
+			white-space: nowrap;
+		}
+		div.field-groupTh .field-item input {
+			display: inline;
+			float: none;
+			vertical-align: middle;
+		}
 
 /*
  * formTmargin
@@ -134,38 +146,27 @@
 	.formTmargin h5,
 	.formTmargin fieldset { clear: both; }
 	
-	.formTmargin label {
+	.formTmargin .field-item {
 		clear: both;
 		display: block;
 	}
-		.formTmargin label .label-text {
-			display: block;
-			float: left;
-			/*width: 100px;*/
-		}
-		.formTmargin label select,
-		.formTmargin label textarea,
-		.formTmargin label input {
+		.formTmargin .field-item .label-text {
 			display: block;
 			float: left;
 		}
-
-	.formTmargin .field-group-v .field-group-header {
+		.formTmargin .field-item select,
+		.formTmargin .field-item textarea,
+		.formTmargin .field-item input {
+			display: block;
+			float: left;
+		}
+	.formTmargin .field-group-header,
+	div.field-group .field-group-headerTmargin {
 		display: block;
-		left: 0;
-		position: absolute;
-		top: 0;
+		float: left;
+		position: relative;
 		width: 100px;
 	}
-
-	.formTmargin .field-group-v {}
-		.formTmargin .field-group-v label {
-			margin-left: 100px;
-		}
-		.formTmargin .field-group-v .label-detail {
-			margin-left: 100px;
-		}
-
 	.formTmargin .button-group {
 		padding-left: 100px;
 	}
@@ -180,16 +181,21 @@
 	.formTstack h5,
 	.formTstack fieldset { clear: both; }
 	
-	.formTstack label {
+	.formTstack .field-group-header,
+	div.field-group .field-group-headerTstack {
+		display: block;
+		float: none;
+	}
+	.formTstack .field-item {
 		clear: both;
 		display: block;
 	}
-		.formTstack label .label-text {
+		.formTstack .field-item .label-text {
 			display: block;
 		}
-		.formTstack label select,
-		.formTstack label textarea,
-		.formTstack label input {
+		.formTstack .field-item select,
+		.formTstack .field-item textarea,
+		.formTstack .field-item input {
 			display: block;
 		}
 	.formTstack .button-group {
@@ -198,9 +204,9 @@
 
 
 /*
- * label
+ * .field-item
  -----------------------------------------------*/
-label {
+.field-item {
 	cursor: default;
 }
 	.label-detail {
@@ -208,19 +214,19 @@ label {
 	}
 
 /*
- * label-error
+ * field-itemTerror
  ------------------------------------------------*/
-.label-error {}
-	.label-error .label-text {
+.field-itemTerror {}
+	.field-itemTerror .label-text {
 		color: #990000;
 	}
-	.label-error input[type=text] {
+	.field-itemTerror input[type=text] {
 		border-color: #990000;
 		color: #990000;
 	}
-	.label-error select {
+	.field-itemTerror select {
 		color: #990000;
 	}
-	.label-error textarea {
+	.field-itemTerror textarea {
 		color: #990000;
 	}

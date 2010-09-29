@@ -1,7 +1,7 @@
 /*
 	reusable content 
 -------------------------------------------------------------------------*/
-.acc-item	{ position:absolute !important; display: block !important; top: auto !important; left: -10000px !important; width: 1px !important; height: 1px !important; }
+.visuallyhidden, .acc-item	{ position:absolute !important; display: block !important; top: auto !important; left: -10000px !important; width: 1px !important; height: 1px !important; }
 .cc			{ position: relative; zoom:1; }
 	.cc:after	{ content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 .clear		{ clear: both; }
