@@ -89,15 +89,17 @@
 			div.field-group ul .field-item input {
 				display: inline;						
 			}
-			div.field-group ul .field-item input[type=radio] {
+			.field-group ul.field-radioItems .field-item input {
 				height: 20px;
-				margin: -2px 0 0;
+				margin: -2px 4px 0 2px;
 				padding: 0;
 				width: 20px;
 			}
-			div.field-group ul .field-item input[type=checkbox] {
-				margin: 1px 4px 0 2px;
+			.field-group ul.field-checkItems .field-item input {
+				height: 20px;
+				margin: -2px 4px 0 2px;
 				padding: 0;			
+				width: 20px;
 			}		
 			.field-group ul .label-detail {
 			}
@@ -111,7 +113,8 @@
 	}
 
 /* 
- * field-group-inline 
+ * 	field-groupTh
+	added to field-group makes inputs horizontal
  * -------------------------------------------------*/
 .field-groupTh {
 }
@@ -130,11 +133,26 @@
 			vertical-align: middle;
 			white-space: nowrap;
 		}
+        div.field-groupTh .field-radioItems,
+        div.field-groupTh .field-checkItems {
+            position: relative;
+            top: -2px;
+        }
 		div.field-groupTh .field-item input {
 			display: inline;
 			float: none;
 			vertical-align: middle;
 		}
+        div.field-groupTh ul.field-radioItems .field-item input,
+        div.field-groupTh ul.field-checkItems .field-item input {
+            margin: 0;
+        }
+
+/*
+ * field-radioItems
+ -----------------------------------------------*/
+.field-radioItems,
+.field-checkItems {}
 
 /*
  * formTmargin
