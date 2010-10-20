@@ -413,3 +413,19 @@ ul.list-blogs {
 		.mod-navSection	.list-blogs a.list-blogs-comments {
 			color: #222;
 		}
+/*
+ * cp-workSquare
+ */
+.cp-workSquare {
+	background: #000;
+	display: -moz-inline-stack;
+	display: inline-block;
+	height: 149px;
+	margin: 12px;
+	overflow: hidden;
+	width: 149px;
+}
+.cp-workSquare:hover {
+	border: solid 12px #000;
+	margin: 0;
+}

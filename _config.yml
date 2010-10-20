@@ -1,5 +1,5 @@
 auto: true
-lsi: true
+lsi: false
 permalink: /blog/:year/:month/:day/:title
 exclude:
 - startjekyll.bat

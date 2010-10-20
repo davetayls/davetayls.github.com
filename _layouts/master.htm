@@ -20,6 +20,7 @@
         <script type="text/javascript" src="/lib/jquery-ui/js/jquery-ui-1.8.custom.min.js"></script>
         <script type="text/javascript" src="/jQueryPlugins/jquery.promo/jquery.promo.js"></script>
 		<script type="text/javascript" src="/jQueryPlugins/jquery.promo/transitions.js"></script>
+		<script type="text/javascript" src="/jQueryPlugins/jquery.windowViewer.js"></script>
         <script type="text/javascript" src="/js/dt.js"></script>
 
         <!--[if lte IE 8]>
@@ -35,7 +36,7 @@
     <body>
         <div id="wrapper">
 	        <div id="logo">
-	            <a onclick="dt.analytics.trackLink(this,'home','logo');return false;" href="/"><img src="/images/davidtaylor.gif" alt="David Taylor" /></a>
+	            <a onclick="dt.analytics.trackLink(this,'home','logo');return false;" href="/"><img src="/images/logo.gif" alt="Dave Taylor" /></a>
 	        </div>
 	        <div id="nav-accessibility">
 	            <p>
@@ -56,21 +57,6 @@
 	                </li>
 	            </ul>
 	        </div>
-            <div id="header" class="cc">
-                <h2 class="acc-item">About David Taylor</h2>
-                <div id="about">
-                    <h3 class="handFont">
-                    	<img src="http://www.gravatar.com/avatar/bbf81bc82fed795624ed696fe1e5aee0?s=80&amp;d=identicon" alt="David Taylor avatar" />
-						Hey, glad you dropped by.<br />Chill out and <a href="/blog">have a good read</a>
-					</h3>
-                    <p id="skills">
-                        Valid XHTML, <a href="/blog/category/css">CSS</a>, <a href="/blog/category/javascript">JavaScript</a>, framework design, <a href="/blog/category/aspnet">.Net</a>, XML, XSLT, XPath
-                    </p>
-                    <p id="cv">
-                        <a href="pdf/David_Taylor_CV_07540817008.pdf" title="David Taylor Graphic Designer / Web Developer CV">You should get my CV here</a>
-                    </p>
-                </div>
-            </div>
 			{{ content }}
             </div>
             <div id="footer">

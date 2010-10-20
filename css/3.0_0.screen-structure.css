@@ -20,22 +20,17 @@ body {
 
 
 #logo {
-	float: left;
+	background: rgba(255,255,255,0.5);
+	background: #fff;
+	left: 0x;
+	position: absolute;
+	top: 5px;
 	z-index: 100;
 }
 	#logo img {
 		display: block;
 	}
 #wrapper {}
-	#portfolio {
-		background-color: #444;
-		border-top: solid 5px #00ADEF;
-		border-bottom: solid 5px #00ADEF;
-		height: 392px;
-		margin: 0 0 10px;
-		overflow: hidden;
-		padding: 4px 10px 0;
-	}
 	#testimonials {
 		color: #eee;
 		position:absolute;

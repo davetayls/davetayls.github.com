@@ -111,7 +111,7 @@
 					
 			//On Hover 
 			carouselWrapper.hover(function() {
-				stop()
+				stop();
 			}, function() {
 				if (!settings.userPaused){ start(); }
 			});
