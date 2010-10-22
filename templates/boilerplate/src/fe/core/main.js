@@ -1,4 +1,4 @@
-require(["lib/debug"], function() {
+require(["core/debug","h5f/h5f"], function() {
     //This function is called when scripts/helper/util.js is loaded.
 
     require.ready(function() {
