@@ -1,4 +1,4 @@
-require(["helper/util"], function() {
+require(["lib/debug"], function() {
     //This function is called when scripts/helper/util.js is loaded.
 
     require.ready(function() {
