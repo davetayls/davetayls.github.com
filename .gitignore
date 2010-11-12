@@ -7,3 +7,4 @@ Thumbs.db
 /.project
 /.settings
 /templates/boilerplate/src/web.config
+/templates/boilerplate/src-build
