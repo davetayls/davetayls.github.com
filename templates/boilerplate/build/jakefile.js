@@ -36,7 +36,7 @@ var dir = {
 }
 console.log(dir);
 desc('default task.');
-task('default', ['less'], function (params) {
+task('default', ['requirejs'], function (params) {
   taskHeader(this);
 });
 
