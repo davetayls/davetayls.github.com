@@ -17,11 +17,23 @@
             position: relative;
         }
             #portfolio-window-inner {
-                height: 1000px;
-                margin: 200px;
-                width: 800px;
+                /*height: 650px;*/
+                margin: 0;
+                width: 1100px;
             }
-        #porfolio-detail {
+				#portfolio-window-inner-work {
+					/*height: 500px;*/
+					float: left;
+					padding: 150px 50px 100px;
+					width: 530px;
+				}
+				#portfolio-window-inner-other {
+					/*height: 500px;*/
+					float: right;
+					padding: 150px 0 100px;
+					width: 450px;
+				}
+        #portfolio-detail {
             background: #000;
             background: rgba(0,0,0,0.8);
             display: none;
@@ -32,25 +44,42 @@
             width: 100%;
         }
             #portfolio-detail-wrapper {
+				margin: 10px 0 0 14px;
                 text-align: right;
                 width: 980px;
             }
                 #portfolio-detail-wrapper img {
                 }
+				#portfolio-detail-close {
+					background: #00ADEF;
+					color: #FFFFFF;
+					cursor: pointer;
+					display: block;
+					font-weight: bold;
+					padding: 8px 10px;
+					position: absolute;
+					right: 13px;
+					top: 10px;
+					z-index: 5;
+				}
                 #portfolio-detail-cta {
-                    background: #000;
+                    background: #000 url("/images/squarearrow.gif") no-repeat right top;
                     display: block;
+					min-height: 45px;
+					padding: 15px;
                     text-align: left;
+					text-decoration: none;
                 }
                     #portfolio-detail-cta span {
                         color: #fff;
                         display: inline;
                         float: left;
                         font-size: 1.3em;
-                        width: 338px;
+						line-height: 1.3em;
+                        width: 500px;
                     }
-                    .portfolio-detail-h {
-                        
+                    #portfolio-detail-cta span.portfolio-detail-h {
+                        width: 324px;
                     }
     #portfolio-tl,
     #portfolio-tr,
@@ -64,6 +93,7 @@
     #portfolio-b,
     #portfolio-t {
         height: 50px;
+		left: 0;
 		position: absolute;
 		width: 100%;
     }
@@ -76,16 +106,18 @@
     }
     #portfolio-r,
 	#portfolio-l {
-    	background: url(/images/windowshadow-v.png) no-repeat left top;
-		height: 50px;
+    	background: url(/images/windowshadow-v.png) repeat-y left top;
+		height: 400px;
     	position: absolute;
+		top: 50px;
 		width: 50px;
     }
     #portfolio-tl { left: 0; top: 0; }
     #portfolio-tr {right: 0; top: 0; background-position: right top; }
     #portfolio-bl { bottom: 0; left: 0; background-position: left bottom; }
     #portfolio-br { bottom: 0; right: 0; background-position: right bottom; }
-    #portfolio-t { }
-    #portfolio-r {}
-    #portfolio-b {}
-    #portfolio-l {}
+    #portfolio-t  { top: 0;	}
+    #portfolio-r  { right: 0; background-position: right top; }
+    #portfolio-b  { bottom: 0; }
+	#portfolio-b span { background-position: left bottom; }
+    #portfolio-l { left : 0; }

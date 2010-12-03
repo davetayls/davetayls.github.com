@@ -201,15 +201,28 @@ ul.list-blogs {
  * cp-workSquare
  */
 .cp-workSquare {
-    background: #000;
     display: -moz-inline-stack;
     display: inline-block;
     height: 149px;
     margin: 12px;
     overflow: hidden;
+	position: relative;
     width: 149px;
 }
-.cp-workSquare:hover {
+a.cp-workSquare {
+    background: #000;
+}
+a.cp-workSquare:hover {
     border: solid 12px #000;
     margin: 0;
 }
+	.cp-workSquare img {
+		max-height: 149px;
+	}
+	.cp-workSquare-caption {
+		background: rgba(0, 0, 0, 0.6);
+		padding: 5px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}

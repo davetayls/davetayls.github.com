@@ -1,22 +1,94 @@
-(function($) {
+(function ($) {
 
-var portfolioWindow$,
-	innerWindow$;
-	
-    dt.portfolio = {
-        init: function() {
-			portfolioWindow$ = $('#portfolio-window');
-			innerWindow$ = $('#portfolio-window-inner');
-					
-			portfolioWindow$.windowViewer();
-			innerWindow$.delegate('a.cp-workSquare', 'click', function(e){
-				
-				
-				
-			});
+    var portfolioWindow$,
+	innerWindow$,
+    portfolioDetail$,
+    portfolioDetailWrapper$,
+    detailCta$,
+    detailImage$,
+    closeDetails$,
 
+    otherThumbs$;
 
+    var showDetail = function (title, caption, imageSrc, moreUrl) {
+        detailImage$.attr('alt', title)
+            .attr('src', imageSrc);
+        detailCta$
+            .attr('href', moreUrl)
+            .html('<span class="portfolio-detail-h">' + title + '</span><span>' + caption + '</span>');
+        if ($.support.opacity) {
+            portfolioDetail$.fadeIn();
+        } else {
+            portfolioDetail$.show();
         }
     };
-	
+    var hideDetail = function () {
+        if ($.support.opacity) {
+            portfolioDetail$.fadeOut();
+        } else {
+            portfolioDetail$.hide();
+        }
+    };
+    var loadFlickr = function () {
+        var apiFeed = 'http://api.flickr.com/services/feeds/photos_public.gne?id=49288551@N04&tags=feature&format=json&jsoncallback=?';
+        $.ajaxSetup({ cache: false });
+        $.getJSON(apiFeed,
+                function (data, textStatus) {
+                    $.each(data.items, function (i, item) {
+                        var item$ = $('<a />', {
+                            href: item.link,
+                            class: 'cp-workSquare',
+                            target: '_blank'
+                        });
+                        var img$ = $('<img src="' + item.media.m + '" alt="' + item.title + '" />')
+                            .load(function () {
+                                var img$ = $(this);
+                                var height = parseInt(img$.height());
+                                var width = parseInt(img$.width());
+                                if (height > width) {
+                                    img$.attr('width', '149');
+                                } else {
+                                    img$.attr('height', '149');
+                                }
+                            })
+                            .appendTo(item$);
+                        item$.append('<span class="cp-workSquare-caption">' + item.title + '</span>')
+                            .appendTo(otherThumbs$);
+                        if (i == 6) return false;
+                    });
+                });
+    };
+
+    dt.portfolio = {
+        init: function () {
+            portfolioWindow$ = $('#portfolio-window');
+            portfolioDetail$ = $('#portfolio-detail');
+
+            // inner window
+            innerWindow$ = $('#portfolio-window-inner');
+            innerWindow$.delegate('#portfolio-window-inner-work a.cp-workSquare', 'click', function (e) {
+                var this$ = $(this);
+                showDetail(this$.find('>img').attr('alt'), this$.find('>span').html(), this$.data('largeImage'), this$.attr('href'));
+                return false;
+            });
+
+            // detail
+            portfolioDetailWrapper$ = $('<div id="portfolio-detail-wrapper" />').appendTo(portfolioDetail$);
+            detailImage$ = $('<img />').appendTo(portfolioDetailWrapper$);
+            detailCta$ = $('<a id="portfolio-detail-cta" class="cc">').appendTo(portfolioDetailWrapper$);
+            closeDetails$ = $('<span id="portfolio-detail-close">x</span>')
+                .appendTo(portfolioDetail$)
+                .click(function (e) {
+                    hideDetail();
+                });
+
+
+            portfolioWindow$.windowViewer();
+
+            // otherThumbs$
+            otherThumbs$ = $('#portfolio-window-inner-other');
+            loadFlickr();
+        }
+    };
+
 })(jQuery);
