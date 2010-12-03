@@ -1,1 +1,0 @@
-For information on developing plugins, please visit: http://juxtapo.net
