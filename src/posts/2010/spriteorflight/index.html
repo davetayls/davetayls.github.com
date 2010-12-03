@@ -1,0 +1,862 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<base target="_top">
+<style type="text/css">
+  
+
+/* default css */
+
+table {
+  font-size: 1em;
+  line-height: inherit;
+  border-collapse: collapse;
+}
+
+
+tr {
+  
+  text-align: left;
+  
+}
+
+
+div, address, ol, ul, li, option, select {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+p {
+  margin: 0px;
+}
+
+
+pre {
+  font-family: Courier New;
+  white-space: pre-wrap;
+  margin:0;
+}
+
+body {
+  margin: 6px;
+  padding: 0px;
+  font-family: Verdana, sans-serif;
+  font-size: 10pt;
+  background-color: #ffffff;
+  color: #000;
+}
+
+
+img {
+  -moz-force-broken-image-icon: 1;
+}
+
+@media screen {
+  html.pageview {
+    background-color: #f3f3f3 !important;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  
+
+  body {
+    min-height: 1100px;
+    
+    counter-reset: __goog_page__;
+  }
+  
+  * html body {
+    height: 1100px;
+  }
+  /* Prevent repaint errors when scrolling in Safari. This "Star-7" css hack
+     targets Safari 3.1, but not WebKit nightlies and presumably Safari 4.
+     That's OK because this bug is fixed in WebKit nightlies/Safari 4 :-). */
+  html*#wys_frame::before {
+    content: '\A0';
+    position: fixed;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+  }
+  
+  .pageview body {
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 2px solid #bbb;
+    border-bottom: 2px solid #bbb;
+    width: 648px !important;
+    margin: 15px auto 25px;
+    padding: 40px 50px;
+  }
+  /* IE6 */
+  * html {
+    overflow-y: scroll;
+  }
+  * html.pageview body {
+    overflow-x: auto;
+  }
+  
+
+  
+    
+    
+    .writely-callout-data {
+      display: inline-block;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      margin-left: -1px;
+    }
+    
+
+    .writely-footnote-marker {
+      background-image: url('MISSING');
+      background-color: transparent;
+      background-repeat: no-repeat;
+      width: 7px;
+      overflow: hidden;
+      height: 16px;
+      vertical-align: top;
+
+      
+      -moz-user-select: none;
+    }
+    .editor .writely-footnote-marker {
+      cursor: move;
+    }
+    .writely-footnote-marker-highlight {
+      background-position: -15px 0;
+      -moz-user-select: text;
+    }
+    .writely-footnote-hide-selection ::-moz-selection, .writely-footnote-hide-selection::-moz-selection {
+      background: transparent;
+    }
+    .writely-footnote-hide-selection ::selection, .writely-footnote-hide-selection::selection {
+      background: transparent;
+    }
+    .writely-footnote-hide-selection {
+      cursor: move;
+    }
+
+    /* Comments */
+    .writely-comment-yellow {
+      background-color: #ffffd7;
+    }
+    .writely-comment-orange {
+      background-color: #ffe3c0;
+    }
+    .writely-comment-pink {
+      background-color: #ffd7ff;
+    }
+    .writely-comment-green {
+      background-color: #d7ffd7;
+    }
+    .writely-comment-blue {
+      background-color: #d7ffff;
+    }
+    .writely-comment-purple {
+      background-color: #eed7ff;
+    }
+
+  
+
+
+  
+  .br_fix span+br:not(:-moz-last-node) {
+    
+    position:relative;
+    
+    left: -1ex
+    
+  }
+
+  
+  #cb-p-tgt {
+    font-size: 8pt;
+    padding: .4em;
+    background-color: #ddd;
+    color: #333;
+  }
+  #cb-p-tgt-can {
+    text-decoration: underline;
+    color: #36c;
+    font-weight: bold;
+    margin-left: 2em;
+  }
+  #cb-p-tgt .spin {
+    width: 16px;
+    height: 16px;
+    background: url(//ssl.gstatic.com/docs/clipboard/spin_16o.gif) no-repeat;
+  }
+}
+
+h6 { font-size: 8pt }
+h5 { font-size: 8pt }
+h4 { font-size: 10pt }
+h3 { font-size: 12pt }
+h2 { font-size: 14pt }
+h1 { font-size: 18pt }
+
+blockquote {padding: 10px; border: 1px #DDD dashed }
+
+.webkit-indent-blockquote { border: none; }
+
+a img {border: 0}
+
+.pb {
+  border-width: 0;
+  page-break-after: always;
+  /* We don't want this to be resizeable, so enforce a width and height
+     using !important */
+  height: 1px !important;
+  width: 100% !important;
+}
+
+.editor .pb {
+  border-top: 1px dashed #C0C0C0;
+  border-bottom: 1px dashed #C0C0C0;
+}
+
+div.google_header, div.google_footer {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+/* Table of contents */
+.editor div.writely-toc {
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+}
+.writely-toc > ol {
+  padding-left: 3em;
+  font-weight: bold;
+}
+ol.writely-toc-subheading {
+  padding-left: 1em;
+  font-weight: normal;
+}
+/* IE6 only */
+* html writely-toc ol {
+  list-style-position: inside;
+}
+.writely-toc-none {
+  list-style-type: none;
+}
+.writely-toc-decimal {
+  list-style-type: decimal;
+}
+.writely-toc-upper-alpha {
+  list-style-type: upper-alpha;
+}
+.writely-toc-lower-alpha {
+  list-style-type: lower-alpha;
+}
+.writely-toc-upper-roman {
+  list-style-type: upper-roman;
+}
+.writely-toc-lower-roman {
+  list-style-type: lower-roman;
+}
+.writely-toc-disc {
+  list-style-type: disc;
+}
+
+/* Ordered lists converted to numbered lists can preserve ordered types, and
+   vice versa. This is confusing, so disallow it */
+ul[type="i"], ul[type="I"], ul[type="1"], ul[type="a"], ul[type="A"] {
+  list-style-type: disc;
+}
+
+ol[type="disc"], ol[type="circle"], ol[type="square"] {
+  list-style-type: decimal;
+}
+
+/* end default css */
+
+
+  /* default print css */
+  @media print {
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    div.google_header, div.google_footer {
+      display: block;
+      min-height: 0;
+      border: none;
+    }
+
+    div.google_header {
+      flow: static(header);
+    }
+
+    /* used to insert page numbers */
+    div.google_header::before, div.google_footer::before {
+      position: absolute;
+      top: 0;
+    }
+
+    div.google_footer {
+      flow: static(footer);
+    }
+
+    /* always consider this element at the start of the doc */
+    div#google_footer {
+      flow: static(footer, start);
+    }
+
+    span.google_pagenumber {
+      content: counter(page);
+    }
+
+    span.google_pagecount {
+      content: counter(pages);
+    }
+
+    .endnotes {
+      page: endnote;
+    }
+
+    /* MLA specifies that endnotes title should be 1" margin from the top of the page. */
+    @page endnote {
+      margin-top: 1in;
+    }
+
+    callout.google_footnote {
+      
+      display: prince-footnote;
+      footnote-style-position: inside;
+      /* These styles keep the footnote from taking on the style of the text
+         surrounding the footnote marker. They can be overridden in the
+         document CSS. */
+      color: #000;
+      font-family: Courier New;
+      font-size: 10.0pt;
+      font-weight: normal;
+    }
+
+    /* Table of contents */
+    #WritelyTableOfContents a::after {
+      content: leader('.') target-counter(attr(href), page);
+    }
+
+    #WritelyTableOfContents a {
+      text-decoration: none;
+      color: black;
+    }
+
+    /* Comments */
+    .writely-comment-yellow {
+      background-color: #ffffd7;
+    }
+    .writely-comment-orange {
+      background-color: #ffe3c0;
+    }
+    .writely-comment-pink {
+      background-color: #ffd7ff;
+    }
+    .writely-comment-green {
+      background-color: #d7ffd7;
+    }
+    .writely-comment-blue {
+      background-color: #d7ffff;
+    }
+    .writely-comment-purple {
+      background-color: #eed7ff;
+    }
+  }
+
+  @page {
+    @top {
+      content: flow(header);
+    }
+    @bottom {
+      content: flow(footer);
+    }
+    @footnotes {
+      border-top: solid black thin;
+      padding-top: 8pt;
+    }
+  }
+  /* end default print css */
+
+
+/* custom css */
+
+
+/* end custom css */
+
+/* ui edited css */
+
+body {
+  font-family: Courier New;
+  
+  font-size: 10.0pt;
+  line-height: normal;
+  background-color: #ffffff;
+}
+/* end ui edited css */
+
+
+/* editor CSS */
+.editor a:visited {color: #551A8B}
+.editor table.zeroBorder {border: 1px dotted gray}
+.editor table.zeroBorder td {border: 1px dotted gray}
+.editor table.zeroBorder th {border: 1px dotted gray}
+
+
+.editor div.google_header, .editor div.google_footer {
+  border: 2px #DDDDDD dashed;
+  position: static;
+  width: 100%;
+  min-height: 2em;
+}
+
+.editor .misspell {background-color: yellow}
+
+.editor .writely-comment {
+  font-size: 9pt;
+  line-height: 1.4;
+  padding: 1px;
+  border: 1px dashed #C0C0C0
+}
+
+
+/* end editor CSS */
+
+</style>
+
+  
+  <title>Sprite or flight</title>
+
+</head>
+
+<body 
+    
+    >
+    
+    
+    
+<h2>
+  Being Creative with CSS sprites
+</h2>
+<div>
+  Many developers limit themselves when it comes to css sprites. They are convinced of limitations with sprites which I have found don't exist. The gates are opened with these techniques to be able to use sprites creatively in pretty much any situation. We'll look at where sprites can speed your page load times, when and where to use them and I'll show you a new technique which I haven't found documented before.
+</div>
+<br>
+<h3>
+  What is a CSS sprite?
+</h3>
+I CSS sprite is a single large image which contains several smaller images. A developer would then use CSS to crop the large image to show one of the smaller images.&nbsp;<br>
+<br>
+<div>
+  Here is an example:
+  <div>
+    <img src="images/df6422b_251hfwq58cc_b.gif" style=HEIGHT:210px;WIDTH:150px><br>
+    <br>
+    <h3>
+      So what are the benefits of using sprites?
+    </h3>
+    <ol>
+      <li>
+        Modern internet connections are pretty fast, which means that page speed bottlenecks are not often in the size of the download, instead on the number of requests made to the server. Using sprite files can drastically reduce the number of requests made.<br>
+        <br>
+        As a real world example, in a recent project I have reduced the number of image files by about 60 using the techniques below.<br>
+        <br>
+      </li>
+      <li>
+        You can also include all your structural images in a single sprite file and cache it (save it on the users machine). By doing this you exponentially relieve the load on the server with more page views.<br>
+        <br>
+        The following table demonstrates this with a sprite image file with 30 images inside it:<br>
+        <table border=1 bordercolor=#000000 cellpadding=3 cellspacing=0 id=fw9t>
+          <tbody>
+          <tr>
+            <td width=25%>
+              Number of unique visitors
+            </td>
+            <td width=25%>
+              Number of page views
+            </td>
+            <td width=25%>
+              Number of server requests with individual files and no caching
+            </td>
+            <td width=25%>
+              Number of server requests when using the cached sprite file
+            </td>
+          </tr>
+          <tr>
+            <td width=25%>
+              2
+            </td>
+            <td width=25%>
+              1
+            </td>
+            <td width=25%>
+              60
+            </td>
+            <td width=25%>
+              2
+            </td>
+          </tr>
+          <tr>
+            <td width=25%>
+              2
+            </td>
+            <td width=25%>
+              4
+            </td>
+            <td width=25%>
+              240
+            </td>
+            <td width=25%>
+              2
+            </td>
+          </tr>
+          <tr>
+            <td width=25%>
+              2
+            </td>
+            <td width=25%>
+              8
+            </td>
+            <td width=25%>
+              480
+            </td>
+            <td width=25%>
+              2
+            </td>
+          </tr>
+          <tr>
+            <td width=25%>
+              4
+            </td>
+            <td width=25%>
+              1
+            </td>
+            <td width=25%>
+              120
+            </td>
+            <td width=25%>
+              4
+            </td>
+          </tr>
+          <tr>
+            <td width=25%>
+              4
+            </td>
+            <td width=25%>
+              4
+            </td>
+            <td width=25%>
+              480
+            </td>
+            <td width=25%>
+              4
+            </td>
+          </tr>
+          <tr>
+            <td width=25%>
+              4
+            </td>
+            <td width=25%>
+              8
+            </td>
+            <td width=25%>
+              960
+            </td>
+            <td width=25%>
+              4
+            </td>
+          </tr>
+          </tbody>
+        </table>
+        <br>
+        You should be able to see the benefits, even with 4 unique visitors. Imagine the gains made when a site has several thousand unique visitors every day.<br>
+        <br>
+      </li>
+      <li>
+        <p>
+          Management of small images is easier. I tend to start a sprites psd to include all the images in. This means that when there is a change to any of the items you don't have to sift through a large number of files. You can also apply changes across a set of images for older browsers or other style sheets (eg. high visibility, black and white print)
+        </p>
+      </li>
+    </ol>
+    <h3>
+      When and Where to use sprites
+    </h3>
+    <div>
+      When you are faced with a website design look for images which:
+    </div>
+    <ul>
+      <li>
+        Are found in the main structure of the page
+      </li>
+      <li>
+        Are small icons or motifs
+      </li>
+      <li>
+        Very rarely (if ever) change
+      </li>
+      <li>
+        Button backgrounds
+      </li>
+      <li>
+        Navigation backgrounds (ie tabs, arrows)
+      </li>
+    </ul>
+    <br>
+    <div>
+      When you can't/shouldn't use sprites
+    </div>
+    <ul>
+      <li>
+        Regularly changing content
+      </li>
+      <li>
+        Content managed images
+      </li>
+      <li>
+        Repeating backgrounds (it is possible but with many limitations)
+      </li>
+    </ul>
+    <h3>
+      Time to sprite - 3 Techniques
+    </h3>
+    <div>
+      You can follow these techniques with the <a href=http://the-taylors.org/TestStation/csssprites/csssprites.htm id=gja4 title="techniques for working with CSS sprites demo page by Dave Taylor">techniques for working with CSS sprites demo page</a>.
+    </div>
+    <br>
+    <div>
+      As far as I can see, there are three distinct types of potential sprite usage within pages.
+    </div>
+    <br>
+    <div>
+      All of these examples make use of the following sprite image:
+    </div>
+    <div id=yb-k style=TEXT-ALIGN:left>
+      <img src="images/df6422b_251hfwq58cc_b.gif" style=HEIGHT:210px;WIDTH:150px>
+    </div>
+    <br>
+    <br>
+    <div>
+      <div style=TEXT-ALIGN:left>
+        <h3>
+          Block images
+        </h3>
+        <div>
+          <img src="images/df6422b_248dd5g6xhc_b.png" style=HEIGHT:140px;WIDTH:193px>
+        </div>
+        <br>
+      </div>
+      A common scenario where an image is placed within a block element with a fixed width and height, and either floated or positioned absolutely within the page.
+    </div>
+    <br>
+    <pre>
+      #spriteBlock {
+        background: url(sprites.gif) no-repeat -60px -52px;
+        display: block;
+        float: left;
+        height: 62px;
+        margin: 0 15px 15px 0;
+        text-align:left;
+        text-indent: -9999px;
+        width: 62px;
+      }
+    </pre>
+    <br>
+    <div>
+      <h3>
+        Sliding doors
+      </h3>
+      The sliding doors technique uses two images to fill a component which can expand and contract. One fills the left edge and the other fills the rest of an element but slides behind. I won't go into the details of this, but if you want more background information, then here is a <a href=http://www.alistapart.com/articles/slidingdoors/ id=znhn title="good article explaining sliding doors">good article explaining sliding doors</a>. Instead, I want to focus on how I would do this differently to utilise sprites better.&nbsp;
+    </div>
+    <br>
+    <div>
+      Unless you have sprites with semi transparent areas (there are still ways which we won't cover here) you can include both the left and the right hand image in the same file. You should still find that the technique works with these minor modifications. The following is an example of a faux button with styles for hover and focus.
+    </div>
+    <br>
+    <div>
+      This uses the following markup:
+    </div>
+    <div>
+      &lt;a href="link.htm" class="button"&gt;&lt;span&gt;button text&lt;/span&gt;&lt;/a&gt;
+    </div>
+    <br>
+    <div>
+      Here's the css:
+    </div>
+    <pre>
+      a.button {
+        background: url(sprites.gif) no-repeat left -125px;
+        cursor: pointer;
+        height: 32px;
+        float: left;
+        line-height: 32px;
+        outline: none;
+        margin-right: 9px;
+        padding: 0;
+        position: relative;
+        text-decoration: none;
+      }
+
+      a.button:hover,
+      a.button:focus { background-position: left -175px; }
+      a.button:active { background-position: left -125px; }
+      a.button span {
+        background: url(sprites.gif) no-repeat right -125px;
+        color: white;
+        cursor: pointer;
+        float: left;
+        left: 9px;
+        line-height: 32px;
+        margin: 0 !important;
+        padding: 0 10px 0 1px;
+        position: relative;
+      }
+    </pre>
+    <div>
+      <br>
+      <h4>
+        The key differences shown in this example are:
+      </h4>
+      <ul>
+        <li>
+          We specify the same sprite image for the parent and child wrappers.
+        </li>
+        <li>
+          We use the left property instead of margins or padding to position the inner span. This exposes the right hand edge of the image over the bounds of the parent image so that you don't see it underneath.
+        </li>
+        <li>
+          We specify a right margin to make sure the width of the parent element covers the child element.
+        </li>
+      </ul>
+      <br>
+      <h3>
+        Within the flow of text
+      </h3>
+      The final usage has for me been the most contentious and painstaking to find a solution to. Inserting sprites in line and within the flow of text. I have come across various solutions to this, but not stumbled across any which are completely accessible and can be used when CSS and JavaScript have both been turned off in the browser.
+    </div>
+    <br>
+    <div>
+      My solution works by placing an absolutely positioned span within a relatively positioned span. This seemed to be the obvious and simple way forward. What I didn't bargain for was the problems I would face getting the sprite to align consistently at the appropriate height across all the browsers.
+    </div>
+    <div>
+      <img src="images/df6422b_2494p5ht2c3_b.gif" style=HEIGHT:166px;WIDTH:318px>
+    </div>
+    <br>
+    <div>
+      Lets look at some markup which would serve as the text representation of the image above:
+    </div>
+    <br>
+    <div>
+      &lt;span class="sprite"&gt;&amp;nbsp;&lt;span&gt;!&lt;/span&gt;&lt;/span&gt;
+    </div>
+    <br>
+    <div>
+      The text representation of the image is wrapped within two span tags.&nbsp;
+    </div>
+    <div>
+      <br>
+      <pre>
+        .sprite {
+            margin: 0;
+            padding-left: 15px;
+            position: relative;
+            vertical-align: top;
+            zoom: 1;
+        }
+      </pre>
+      <br>
+      The outer span tag is used to allow the sprite to continue where the original was placed in the flow of the text. You can't apply width to an inline element, and not all the browsers support the inline-block display type, so we use left padding to give the span the width it needs to cover the size of the image.
+    </div>
+    <br>
+    <div>
+      The vertical align means that the top of the parent element is positioned at the top of the line of text. This means that when we use the top:50% on the child element, it is relative to the top of the line. Depending on the context this sprite is in, you may need to use one of the other vertical-align options to achieve the most consistent rendering across all the browsers.
+    </div>
+    <br>
+    <div>
+      The zoom declaration tells internet explorer to mark the element with the hasLayout property allowing us to use the top percentage on the child span element.
+    </div>
+    <br>
+    <div>
+      An important thing to note here is that it needs the &amp;nbsp; within the parent tag to stop the line-height collapsing.
+    </div>
+    <pre>
+      .sprite span {
+        background: url(sprites.gif) no-repeat -2px -2px;
+        display: block;
+        height: 14px;
+        left: 0;
+        margin: -5px 0;
+        padding: 0;
+        position: absolute;
+        text-align: left;
+        text-indent: -9999px;
+        top: 50%;
+        width: 16px;
+        zoom: 1;
+      }
+    </pre>
+    <br>
+    <div>
+      The inner span element styles should be pretty explanatory.
+    </div>
+    <br>
+    <div>
+      Specify the height of the image (not the height of the line). We then use a familiar technique usually used to align elements horizontally. This time we use it to align vertically. Set the top style to 50% and the top margin to a negative amount (usually half of the height).
+    </div>
+    <br>
+    <div>
+      Again the zoom declaration tells ie to mark the element with the hasLayout property allowing us to use the top percentage.
+    </div>
+    <br>
+    <div>
+      Finally the text-indent hides the original text placed within the child element.
+    </div>
+    <br>
+    <div>
+      <b>Considerations and things to watch out for</b>
+    </div>
+    <ul>
+      <li>
+        If you are using this with an anchor tag, then you will need to override the default outline on focus. Firefox will show it going off the page to the left.
+      </li>
+    </ul>
+    <h3>
+      Conclusion
+    </h3>
+    <div>
+      As you learn to implement these techniques you will continually find new ways of reducing the load time of your website pages. They can take a little tweaking but it's worth the gains in the end.
+    </div>
+    <div>
+      <h2>
+        <font size=4>References</font>
+      </h2>
+      I have used a great set of icons from <a href=http://www.pinvoke.com id=x5_p title=http://www.pinvoke.com>http://www.pinvoke.com</a> for this example
+    </div>
+    <h2>
+      About the Author
+    </h2>
+    <div>
+      David Taylor is the Senior Front-End Web developer at <a href=http://www.aqueduct.co.uk id=d_i6 title=Aqueduct>Aqueduct</a> based in London. He's also creator of the <a href=http://juxtapo.net id=d.g1 title="juxtapo front end developer tools">juxtapo front end developer tools</a> which are in-browser tools for design overlays and template previews. David's website and blog can be found at <a href=http://the-taylors.org id=tpz9 title=http://the-taylors.org>http://the-taylors.org</a>.
+    </div>
+    <br>
+    <br>
+    <br>
+  </div>
+  <br>
+</div>
+<br></body>
+</html>

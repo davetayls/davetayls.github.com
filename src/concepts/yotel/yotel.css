@@ -1,0 +1,236 @@
+body {
+	font-family: arial, _sans;
+	margin: 0;
+	padding: 0;
+}
+#login {
+	background: url(loginbar.png) no-repeat right top;
+	border-top: none;
+	height: 100px;
+	position: absolute;
+	text-align: right;
+	top: 0;
+	right: 0px;
+	width: 100%;
+}
+#login span {
+  display: block;
+  margin-right: 10px;
+}
+#tray {
+	background: rgba(255,255,255,0.7);
+	bottom: 0;
+	height: 30px;
+	left: 0;
+	overflow: visible !important;
+	position: absolute;
+	width: 100%;
+}
+#tray-menu {
+	height: 60px;
+	position: absolute;
+	top: -47px;
+	left: 50%;
+	margin-left: -405px;
+	width: 850px;
+}
+		#tray-menu a {
+		  background: url(secnav-btm.png) no-repeat center -41px;
+		}
+		#tray-menu a,
+		#tray-menu a:active {
+			outline: none !important;
+		}
+	    #tray-menu a img {
+	      border: none;
+	      position: relative;
+	      top: 5px;
+	    }
+	    #tray-menu a img:hover {
+	     top: 0;
+	    }
+
+
+
+
+#wrapper {
+	height: 400px;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+#flyout {
+	background: #000;
+	border-radius: 5px 0 0 5px;
+	-moz-border-radius: 5px 0 0 5px;
+	-webkit-border-radius: 5px 0 0 5px;
+	height: 500px;
+	margin: 0px;
+	padding: 10px;
+	position: absolute;
+	right: -570px;
+	top: 80px;
+	width: 535px;
+	z-index: 2;
+}
+.flyout-content {
+	overflow: hidden;
+	height: 446px; 
+	width: 535px;
+}
+  .flyout-content a {
+      border: none;
+      display: block;
+      margin: 0;
+      outline: none !important;
+      padding: 0;
+  }
+	  .flyout-content img {
+			border: none;
+			display: block;
+			margin: 0;
+			padding: 0;
+		}
+
+	#flyout-close {
+-moz-border-radius:5px 5px 0 0;
+background:none repeat scroll 0 0 rgba(0, 0, 0, 0.8);
+color:#888888;
+display:block;
+font-size:0.9em;
+left:15px;
+padding:3px 8px;
+position:absolute;
+text-decoration:none;
+text-transform:uppercase;
+top:-22px;
+outline: none !important;
+	}
+
+.xnav {
+	display: none;
+	position: absolute;
+	left: 30px;
+	top: 120px;
+	z-index: 1000;
+}
+	.xnav ul {
+		display: block;
+		margin:0;
+		padding:0;
+	}
+		.xnav ul li {
+			display: block;
+			float: left;
+			height: 70px;
+			list-style: none;
+			list-style-image: none;
+			margin:0;
+			opacity: 0.5;
+			padding:0;
+			position: relative;
+			width: 115px;
+		}
+		.xnav ul li:hover,
+		.xnav ul li.xnav-open {
+		 z-index: 100;
+		}
+			.xnav ul li a {
+			  background: url(menubox-silver.png) no-repeat left top;
+			  color: #6c276a;
+				display: block;
+				height: 76px;
+				left: -13px;
+				padding: 30px 28px 0 25px;
+				position: relative;
+				text-transform: uppercase;
+				text-decoration: none;
+				top: -7px;
+				width: 87px;
+			}
+			.xnav ul li a:hover,
+			.xnav ul li:hover > a,
+			.xnav ul > li.xnav-open > a {
+				background-image: url(menubox-darkpurple.png) ;
+				color: #fff;*/
+			}
+			
+
+/* tier 2 */
+			.xnav ul li ul {
+				display: none;
+				position: absolute;
+				padding-left: 57px;
+				/*top: 72px;*/
+			}
+			.xnav ul li:hover > ul,
+			.xnav ul li.xnav-open > ul {
+				display: block;
+			}
+				.xnav ul li ul li a {
+					background-image: url(menubox-solidpurple.png);
+					color: #fff;
+				}
+
+.xnav-h {
+	top: 72px;
+	width: 600px;
+}
+.xnav .xnav-bk1 {
+	left: -57px;
+	padding: 0;
+}
+.xnav-open {
+	display: block;
+}
+
+.xnav-t0 > ul > li,
+.xnav-t0 > ul > li:hover > ul > li {
+	opacity: 1;
+}
+.xnav-t2 > ul > li:hover,
+.xnav-t2 > ul > li > ul > li,
+.xnav-t2 > ul > li > ul > li:hover > ul > li {
+	opacity: 1;
+}
+.xnav-t4 > ul > li:hover,
+.xnav-t4 > ul > li > ul > li:hover,
+.xnav-t4 > ul > li > ul > li > ul > li,
+.xnav-t4 > ul > li.xnav-open,
+.xnav-t4 > ul > li > ul > li.xnav-open {
+		opacity: 1;
+}
+
+.xnav-t4 > ul > li {
+/*width: 95px;*/
+}
+.xnav-t4 > ul > li:hover {
+/*width: 120px;*/
+}
+/*
+.xnav-t4 > ul > li > a {
+background-image: url(menubox-silversm.png);
+font-size: 0.8em;
+left: -25px;
+padding-top: 40px;
+padding-left: 30px;
+}*/
+.xnav-t4 > ul > li > a {
+/*font-size: 1em;
+left: -13px;*/
+opacity: 0.2 !important;
+}
+
+.cp-numStep {
+	display: block;
+	text-align: center;
+}
+	.cp-numStep span {
+		font-size: 2.2em;
+		padding: 0 10px;
+	}
+	.cp-numStep img {
+		border: none;
+	}

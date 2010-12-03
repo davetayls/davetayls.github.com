@@ -1,0 +1,12 @@
+.metadata
+.project
+/src-build
+.tmp*
+Thumbs.db
+/release
+Desktop.ini
+_site
+/src/web.config
+/src/TestStation/testsite
+/.project
+/.settings
