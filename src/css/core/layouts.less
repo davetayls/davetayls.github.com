@@ -1,6 +1,11 @@
 /* 
     layouts
 ------------------------------------------------------------------*/
+.column(@cols:1, @pad:0) {
+    display: inline;
+    float: left;
+    width: (@cols * 161px) - @pad;
+}
 
 /* 
     lay-c2
@@ -44,15 +49,14 @@
 ------------------------------------------------------------------*/
 .lay-mRight2 {}
     .lay-mRight2-content {
-        float:left;
-        width:70%;
+        .column(5);
+        margin:0;
+        padding: 0 0 0 6px;
     }
     .lay-mRight2-aside {
-        display:inline;
-        float:right;
+        .column(1);
         margin:0;
-        padding: 0;
-        width:25%;      
+        padding: 0 0 0 6px;
     }
         .lay-mRight2-aside-content {
             padding: 0 10px;
@@ -62,34 +66,3 @@
                 color: white;
             }
 
-
-/* small screen rendering */
-@media (max-width:768px) {
-  .lay-c2 .lay-c2-left,
-  .lay-c2 .lay-c2-right,
-  .lay-c4-col,
-  .lay-c4-first,
-  .lay-c4-last 
-  {
-    display: block;
-    float: none;
-    width: auto;
-  }
-}
-@media screen and (max-width:768px) {
-    .lay-mRight2-content,
-    .lay-mRight2-aside
-    {
-        display: block;
-        float: none;
-        width: auto;
-    }
-}
-@media screen and (min-width:1199px) {
-    .lay-mRight2-content {
-        width: 60%;
-    }
-    .lay-mRight2-aside  {
-        width: 35%;
-    }
-}
