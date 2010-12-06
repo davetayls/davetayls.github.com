@@ -1,4 +1,4 @@
-(function ($) {
+define(['jquery', 'jquery/jquery.windowViewer', 'keys'], function ($, wv, KEYS) {
 
     var portfolioWindow$,
 	innerWindow$,
@@ -10,23 +10,29 @@
 
     otherThumbs$;
 
+    var hideDetail = function () {
+        if ($.support.opacity) {
+            portfolioDetail$.fadeOut();
+        } else {
+            portfolioDetail$.hide();
+        }
+    };
     var showDetail = function (title, caption, imageSrc, moreUrl) {
         detailImage$.attr('alt', title)
             .attr('src', imageSrc);
         detailCta$
             .attr('href', moreUrl)
             .html('<span class="portfolio-detail-h">' + title + '</span><span>' + caption + '</span>');
+        $(window).keydown(function (e) {
+            if (e.which === KEYS.ESC) {
+                hideDetail();
+            }
+        });
+
         if ($.support.opacity) {
             portfolioDetail$.fadeIn();
         } else {
             portfolioDetail$.show();
-        }
-    };
-    var hideDetail = function () {
-        if ($.support.opacity) {
-            portfolioDetail$.fadeOut();
-        } else {
-            portfolioDetail$.hide();
         }
     };
     var loadFlickr = function () {
@@ -59,7 +65,7 @@
                 });
     };
 
-    dt.portfolio = {
+    return {
         init: function () {
             portfolioWindow$ = $('#portfolio-window');
             portfolioDetail$ = $('#portfolio-detail');
@@ -91,4 +97,4 @@
         }
     };
 
-})(jQuery);
+});
