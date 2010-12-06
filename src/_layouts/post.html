@@ -75,7 +75,7 @@ layout: master
             <ul class="list-blogs">
                 {% for post in site.related_posts limit: 3 %}
 	                <li class="cc">
-	                    <h2 class="list-blogs-header">
+	                    <h3 class="list-blogs-header">
 	                    	<span class="list-blogs-date">
 		                    	<abbr title="December">
 									{{ post.date | date:"%b" }}				                    		
@@ -84,7 +84,7 @@ layout: master
 	                    	</span>
 							<a href="{{ post.url }}">{{ post.title }}</a>
 							<a class="list-blogs-comments" href="{{ post.url }}#disqus_thread">Comments</a>
-						</h2>
+						</h3>
 	                </li>
                 {% endfor %}
             </ul>
@@ -127,7 +127,7 @@ layout: master
             <ul class="list-blogs">
                 {% for post in site.posts limit: 3 %}
 	                <li class="cc">
-	                    <h2 class="list-blogs-header">
+	                    <h3 class="list-blogs-header">
 	                    	<span class="list-blogs-date">
 		                    	<abbr title="December">
 									{{ post.date | date:"%b" }}				                    		
@@ -136,7 +136,7 @@ layout: master
 	                    	</span>
 							<a href="{{ post.url }}">{{ post.title }}</a>
 							<a class="list-blogs-comments" href="{{ post.url }}#disqus_thread">Comments</a>
-						</h2>
+						</h3>
 	                </li>
                 {% endfor %}
             </ul>

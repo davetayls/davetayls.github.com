@@ -10,3 +10,4 @@ _site
 /src/TestStation/testsite
 /.project
 /.settings
+/templates

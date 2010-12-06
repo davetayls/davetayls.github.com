@@ -4,10 +4,10 @@ description: A disciplined and passionate graphic designer / web developer with 
 ---
             <h1 class="visuallyhidden">David Taylor - Graphic Designer / Web Developer</h1>
 			{% include portfolio-window.htm %}
-            <div class="lay-mRight2 cc">
+            <div id="contentWrapper" class="lay-mRight2 cc">
                 <div id="content" class="lay-mRight2-content cc">            
 					<div>
-						<ul class="nav-h cc">
+						<ul class="visuallyhidden">
 							<li><a href="#articles">Articles and News</a></li>
 							<li><a href="#projects">Projects</a></li>
 							<li><a href="#tests">Test Station</a></li>
@@ -19,7 +19,7 @@ description: A disciplined and passionate graphic designer / web developer with 
 							<ul class="list-blogs">
 			                {% for post in site.posts %}
 				                <li class="cc">
-				                    <h2 class="list-blogs-header">
+				                    <h3 class="list-blogs-header">
 				                    	<span class="list-blogs-date">
 					                    	<abbr title="December">
 												{{ post.date | date:"%b" }}				                    		
@@ -28,7 +28,7 @@ description: A disciplined and passionate graphic designer / web developer with 
 				                    	</span>
 										<a href="{{ post.url }}">{{ post.title }}</a>
 										<a class="list-blogs-comments" href="{{ post.url }}#disqus_thread">Comments</a>
-									</h2>
+									</h3>
 				                </li>
 			                {% endfor %}
 							</ul>
