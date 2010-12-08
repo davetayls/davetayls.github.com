@@ -1,10 +1,15 @@
 ---
 layout: master
 ---
-<div id="contentWrapper" class="lay-mRight2 cc">
-    <div id="content" class="lay-mRight2-content cc">
+<div id="contentWrapper" class="cc">
+    <div id="postContent" class="cc">
 		<div class="cp-postHeader cc">
-			    <p class="cp-postHeader-date">{{ page.date | date:"%d<br />%b" }}</p>
+			    <p class="cp-postHeader-date">
+					<abbr title="{{ page.date | date:'%B' }}">
+						{{ page.date | date:"%b" }}				                    		
+					</abbr>
+					<span>{{ page.date | date:"%d" }}</span>
+                </p>
 			    <h1>{{ page.title }}</h1>
 			    <p class="cp-postHeader-details">
             {% if page.author %}
@@ -52,7 +57,7 @@ layout: master
         </div>
         {% endif %}
     </div>
-    <div class="lay-mRight2-aside">
+    <div id="postRelated">
         <div class="mod-navSection cc">
             <ul class="nav-v nav-block">
             	<li>

@@ -3,10 +3,6 @@
 -------------------------------------------------------*/
 @import "/scripts/core/promos/portfolio-window";
 
-#articleContent {
-    padding-left: 25px;
-}
-
 /*
     mod-comments
 -------------------------------------------------------*/
@@ -98,6 +94,17 @@
             /*filter: progid:DXImageTransform.Microsoft.Shadow(color=#333333,direction=180,strength=1);*/
         }
         
+/*
+    syntaxhighlighter
+    customisations
+-----------------------------------------*/
+.syntaxhighlighter {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    padding: 15px 0;
+}
+.syntaxhighlighter td { text-shadow: none; }
+
 @media (max-width:768px) {
     #articleContent {
         padding-left: 15px;
