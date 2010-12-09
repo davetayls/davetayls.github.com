@@ -3,23 +3,20 @@ layout: master
 description: A disciplined and passionate graphic designer / web developer with bundles of experience working alongside clients across a range of technologies.
 ---
             <h1 class="visuallyhidden">David Taylor - Graphic Designer / Web Developer</h1>
-			{% include portfolio-window.htm %}
-            <div id="contentArea" class="lay-mRight2 cc">
+            <div id="contentWrapper" class="lay-mRight2 cc">
                 <div id="content" class="lay-mRight2-content cc">            
 					<div>
-						<ul class="nav-h cc">
+						<ul class="visuallyhidden">
 							<li><a href="#articles">Articles and News</a></li>
 							<li><a href="#projects">Projects</a></li>
 							<li><a href="#tests">Test Station</a></li>
 						</ul>
-						<div class="lay-c2">
-							<div class="lay-c2-left">
 						<div id="articles">
 						  <h2><a href="/blog">Blog</a></h2>
 							<ul class="list-blogs">
 			                {% for post in site.posts %}
 				                <li class="cc">
-				                    <h2 class="list-blogs-header">
+				                    <h3 class="list-blogs-header">
 				                    	<span class="list-blogs-date">
 					                    	<abbr title="December">
 												{{ post.date | date:"%b" }}				                    		
@@ -28,7 +25,7 @@ description: A disciplined and passionate graphic designer / web developer with 
 				                    	</span>
 										<a href="{{ post.url }}">{{ post.title }}</a>
 										<a class="list-blogs-comments" href="{{ post.url }}#disqus_thread">Comments</a>
-									</h2>
+									</h3>
 				                </li>
 			                {% endfor %}
 							</ul>
@@ -48,8 +45,6 @@ description: A disciplined and passionate graphic designer / web developer with 
                                 </li>
                             </ul>
 						</div>
-							</div>
-							<div class="lay-c2-right">
 						<div id="projects">
 							<h2><a href="http://github.com/davetayls/sjs">sjs</a> - server side JavaScript framework</h2>
 							<p>The aim of this project is to give a very simple server side JavaScript framework which will work across various platforms (eg Mozilla Rhino and Microsoft cscript).</p>
@@ -111,8 +106,6 @@ sjs.arguments()
                               Download the latest version and view the documentation on <a href="http://github.com/davetayls/juxtapo-combiner">github</a>
                             </p>
 
-						</div>
-							</div>
 						</div>
 					</div>
                 </div>

@@ -1,0 +1,35 @@
+#articles {
+    .column(2, 12px);
+    margin: 0;
+    padding: 0 6px;
+}
+    .wf-active #articles h2 {
+        font-size: 2.5em;
+    }
+    #articles h2,
+    #articles h2 a {
+        color: #444;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    .wf-loading #articles h2 { visibility: hidden; }
+
+/* main article page */
+#postContent {
+    .column(4, 12px);
+    margin: 0;
+    padding: 0 6px 0 12px;
+}
+    #articleContent {
+        padding: 0;
+    }
+
+#postRelated {
+    .column(2, 12px);
+    margin: 0;
+    padding: 0 6px;    
+}
+
+@import url("/scripts/core/articles/list-blogs.less");
+@import url("/scripts/core/articles/postHeader.less");
+@import url("/scripts/core/articles/blogPost.less");
