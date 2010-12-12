@@ -5,14 +5,28 @@
     padding: 10px 0;
 }
     .cp-blogPost-share h2 {
+		.leagueGothic();
         color: #888;
-        font-size: 2.4em;
-        padding: 10px;
+        padding: 10px 0;
     }
-    .cp-blogPost-share .cp-subscribeLink {
-        float: left;
-        margin-right: 20px;
-    }
+	.cp-blogPost-share .cp-subscribeLink {
+	  border: 1px solid #CCCCCC;
+	  .border-radius(3px);
+	  float: left;
+	  font-size: 11px;
+	  margin-right: 20px;
+	  padding: 1px 4px;
+	  vertical-align: top;
+		
+		&:hover {
+			background-color: #efefef;
+			text-decoration: none;
+		}
+	}
     .cp-blogPost-share .cp-shareLinks {
-        float: left;
+        display: -moz-inline-stack;
+		display: inline-block;
+		margin: 0;
+		padding: 2px 0;
+		vertical-align: top;
     }

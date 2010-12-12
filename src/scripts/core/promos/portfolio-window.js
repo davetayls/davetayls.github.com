@@ -18,6 +18,7 @@ define(['jquery', 'jquery/jquery.windowViewer', 'keys'], function ($, wv, KEYS) 
         }
     };
     var showDetail = function (title, caption, imageSrc, moreUrl) {
+        portfolio$.removeClass('portfolioTsmall');
         detailImage$.attr('alt', title)
             .attr('src', imageSrc);
         detailCta$
@@ -67,6 +68,7 @@ define(['jquery', 'jquery/jquery.windowViewer', 'keys'], function ($, wv, KEYS) 
 
     return {
         init: function () {
+            portfolio$ = $('#portfolio');
             portfolioWindow$ = $('#portfolio-window');
             portfolioDetail$ = $('#portfolio-detail');
 

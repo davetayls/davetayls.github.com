@@ -1,5 +1,6 @@
 ---
 layout: master
+portfolio: small
 ---
 <div id="contentWrapper" class="cc">
     <div id="postContent" class="cc">
@@ -26,14 +27,12 @@ layout: master
         </div>
 
 		<div class="cp-blogPost-share cc">
-			<h2 class="handFont">ummm...might bob like to read this?</h2>
-			<a onclick="dt.analytics.trackLink(this,'subscribe','bottom');return false;" class="cp-subscribeLink" href="http://feed.the-taylors.org"><img src="/images/feed-icon-12x12-orange.gif" alt="" /> Subscribe to this blog</a> |
-        	{% include sharelinks-short.html %}
+			<a onclick="dt.analytics.trackLink(this,'subscribe','bottom');return false;" class="cp-subscribeLink" href="http://feed.the-taylors.org"><img src="/images/feed-icon-12x12-orange.gif" alt="" /> Subscribe to this blog</a>
 			{% include facebooklike.html %}
+        	{% include sharelinks-short.html %}
 		</div>
         {% if page.comments != 'hide' %}
         <div class="mod-comments">
-            <h2 class="handFont">d'ya care to comment on that?</h2>
             <div id="disqus_thread"></div>
             <script type="text/javascript">
                 var disqus_identifier = '{{ page.id }}';
@@ -72,57 +71,6 @@ layout: master
             </ul>
 			<div class="clear"></div>
             {% include sharelinks-short.html %}
-        </div>
-		
-		{% if page.related != 'hide' %}	
-        <div class="mod-navSection cc">
-            <h2>Related Posts</h2>
-            <ul class="list-blogs">
-                {% for post in site.related_posts limit: 3 %}
-	                <li class="cc">
-	                    <h3 class="list-blogs-header">
-	                    	<span class="list-blogs-date">
-		                    	<abbr title="December">
-									{{ post.date | date:"%b" }}				                    		
-		                    	</abbr>
-		                    	<span>{{ post.date | date:"%d" }}</span>
-	                    	</span>
-							<a href="{{ post.url }}">{{ post.title }}</a>
-							<a class="list-blogs-comments" href="{{ post.url }}#disqus_thread">Comments</a>
-						</h3>
-	                </li>
-                {% endfor %}
-            </ul>
-        </div>
-		{% endif %}
-        <div class="mod-navSection cc">
-            <h2>Categories</h2>
-            <ul class="nav-v nav-block">
-                <li>
-                    <a href="/blog/category/aspnet">Asp.Net</a>
-                </li>
-                <li>
-                    <a href="/blog/category/css">CSS</a>
-                </li>
-                <li>
-                    <a href="/blog/category/design">Design</a>
-                </li>
-                <li>
-                    <a href="/blog/category/front-end">Front-End</a>
-                </li>
-                <li>
-                    <a href="/blog/category/javascript">JavaScript</a>
-                </li>
-                <li>
-                    <a href="/blog/category/jquery">jQuery</a>
-                </li>
-                <li>
-                    <a href="/blog/category/juxtapo">Juxtapo</a>
-                </li>
-                <li>
-                    <a href="/blog/category/releases">Releases</a>
-                </li>
-            </ul>
         </div>
         <div class="mod-navSection cc">
             <h2>Recent Posts</h2>

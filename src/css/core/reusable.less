@@ -17,6 +17,12 @@
  */
 .align-left         { text-align: left !important; }
 .align-right        { text-align: right !important; }
+.border-radius(@radius: 3px){
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	-o-border-radius: @radius;
+	border-radius: @radius;
+}
 .float-right        { float: right !important; }
 .font-weight-normal { font-weight: normal !important; }
 .image-float-left	{ float: left; margin: 0 10px 10px 0px; }
@@ -42,8 +48,8 @@
     margin:-15px -15px 5px;
     padding:15px 15px 15px 50px;
 }
-.textRegion h2      { font-size: 1.3em; }
-.textRegion p       { line-height: 1.5em; padding-bottom: 15px; text-align: justify; }
+.textRegion h2      { }
+.textRegion p       { line-height: 1.5; padding-bottom: 15px; text-align: justify; }
 .textRegion img     { height:auto; max-width:100%;}
 
 /* inverse underlining of links, switch this if the default is inverse */
