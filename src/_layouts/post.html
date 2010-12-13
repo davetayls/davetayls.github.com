@@ -57,7 +57,7 @@ portfolio: small
         {% endif %}
     </div>
     <div id="postRelated">
-        <div class="mod-navSection cc">
+        <div id="actionOptions" class="mod-navSection cc">
             <ul class="nav-v nav-block">
             	<li>
             		<a href="/">Home</a>
@@ -72,7 +72,7 @@ portfolio: small
 			<div class="clear"></div>
             {% include sharelinks-short.html %}
         </div>
-        <div class="mod-navSection cc">
+        <div id="recentPosts" class="mod-navSection cc">
             <h2>Recent Posts</h2>
             <ul class="list-blogs">
                 {% for post in site.posts limit: 3 %}

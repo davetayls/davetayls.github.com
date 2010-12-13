@@ -1,14 +1,15 @@
+/*global define */
 define(['jquery', 'jquery/jquery.windowViewer', 'keys'], function ($, wv, KEYS) {
 
-    var portfolioWindow$,
-	innerWindow$,
-    portfolioDetail$,
-    portfolioDetailWrapper$,
-    detailCta$,
-    detailImage$,
-    closeDetails$,
-
-    otherThumbs$;
+    var portfolio$,
+        portfolioWindow$,
+	    innerWindow$,
+        portfolioDetail$,
+        portfolioDetailWrapper$,
+        detailCta$,
+        detailImage$,
+        closeDetails$,
+        otherThumbs$;
 
     var hideDetail = function () {
         if ($.support.opacity) {
@@ -44,14 +45,14 @@ define(['jquery', 'jquery/jquery.windowViewer', 'keys'], function ($, wv, KEYS) 
                     $.each(data.items, function (i, item) {
                         var item$ = $('<a />', {
                             href: item.link,
-                            class: 'cp-workSquare',
+                            'class': 'cp-workSquare',
                             target: '_blank'
                         });
                         var img$ = $('<img src="' + item.media.m + '" alt="' + item.title + '" />')
                             .load(function () {
                                 var img$ = $(this);
-                                var height = parseInt(img$.height());
-                                var width = parseInt(img$.width());
+                                var height = parseInt(img$.height(), 10);
+                                var width = parseInt(img$.width(), 10);
                                 if (height > width) {
                                     img$.attr('width', '149');
                                 } else {
@@ -61,7 +62,9 @@ define(['jquery', 'jquery/jquery.windowViewer', 'keys'], function ($, wv, KEYS) 
                             .appendTo(item$);
                         item$.append('<span class="cp-workSquare-caption">' + item.title + '</span>')
                             .appendTo(otherThumbs$);
-                        if (i == 6) return false;
+                        if (i === 6) {
+                            return false;
+                        }
                     });
                 });
     };

@@ -1,3 +1,4 @@
+/*global require SyntaxHighlighter */
 require([
     'core/promos/portfolio-window',
     'core/related/tweets'

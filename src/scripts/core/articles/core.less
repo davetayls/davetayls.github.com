@@ -36,3 +36,27 @@
 @import url("/scripts/core/articles/list-blogs.less");
 @import url("/scripts/core/articles/postHeader.less");
 @import url("/scripts/core/articles/blogPost.less");
+
+/* large screen */
+@media screen and (min-width:1200px) {
+    #postContent {
+        padding: 0 6px 0 203px;
+    }
+        #actionOptions {
+            left: 12px;
+            position: absolute;
+            top: 0;
+            width: 149px;
+        }
+}
+@media screen and (min-width:1350px) {
+    #postContent {
+        padding: 0 6px 0 334px;
+    }
+        #actionOptions {
+            left: 12px;
+            position: absolute;
+            top: 0;
+            width: 280px;
+        }
+}
