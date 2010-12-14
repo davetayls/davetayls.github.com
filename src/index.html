@@ -14,7 +14,7 @@ description: A disciplined and passionate graphic designer / web developer with 
 						</ul>
 						<div id="articles">
 						  <h2><a href="/blog">Blog</a></h2>
-							<ul class="list-blogs">
+							<ul class="list-blogs cc">
 			                {% for post in site.posts %}
 				                <li class="cc">
 				                    <h3 class="list-blogs-header">
@@ -27,6 +27,11 @@ description: A disciplined and passionate graphic designer / web developer with 
 										<a href="{{ post.url }}">{{ post.title }}</a>
 										<a class="list-blogs-comments" href="{{ post.url }}#disqus_thread">Comments</a>
 									</h3>
+                                    <a class="list-blogs-postImage" href="{{ post.url }}">
+                                    {% if post.postimage != "" %}
+                                        <img src="{{ post.postimage }}" alt="{{ post.title }}" />
+                                    {% endif %}
+                                    </a>
 				                </li>
 			                {% endfor %}
 							</ul>

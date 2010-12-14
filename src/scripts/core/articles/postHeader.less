@@ -9,15 +9,21 @@
   .cp-postHeader h2 {
         font-size:2.8em;
         font-weight:bold;
+        .leagueGothic();
         line-height: 1em;
         padding:0;
         text-transform:uppercase;
   }
     .cp-postHeader h2 {
-        font-size: 1.2em;
         margin: 0 0 3px;
     }
-  .cp-postHeader-date {
+    .cp-postHeader h2 a,
+    .cp-postHeader h2 a:active,
+    .cp-postHeader h2 a:link {
+        color: #000;
+        text-decoration: underline;
+    }
+  .cp-postHeader .cp-postHeader-date {
             background: #444;
             color: white;
             float: left;
@@ -31,11 +37,11 @@
             text-transform: uppercase;
             width: 45px;
   }
-        .cp-postHeader-date abbr {
+        .cp-postHeader .cp-postHeader-date abbr {
             display: block;
             padding: 13px 0 0;
         }
-  .cp-postHeader-details {
+  .cp-postHeader .cp-postHeader-details {
     font-size: 0.6em;
     letter-spacing: 0.5em;
     text-transform: uppercase;
