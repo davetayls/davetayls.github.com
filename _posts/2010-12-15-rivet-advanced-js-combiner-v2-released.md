@@ -11,12 +11,12 @@ It's not only had a name change, we have also been adding new features and test 
 
 ## A few things we've added:
 
-	*	Relative paths to combiner's parent directories
-	*	Support for use with Rhino
-	*	Support for use with Microsoft CScript
-	*	Support for build variable replacement on combining
-		eg: will turn @VARIABLE_NAME in your javascript to something specified on 
-	*	Nested combiners. So a combiner can include another combiner which will all end up in the same file in order.
+*	Relative paths to combiner's parent directories
+*	Support for use with Rhino
+*	Support for use with Microsoft CScript
+*	Support for build variable replacement on combining
+	eg: will turn @VARIABLE_NAME in your javascript to something specified on 
+*	Nested combiners. So a combiner can include another combiner which will all end up in the same file in order.
 
 One of the great features of Rivet is that it has no external dependencies. This means that you can very quickly and easily convert an existing application and reduce requests to the server. 
 
