@@ -2,7 +2,7 @@
     appDir: "../src",
     baseUrl: "scripts/",
     dir: "../src-build",
-	optimize: 'closure',
+	optimize: '',
 	optimizeCss: 'none',
     modules: [
         {

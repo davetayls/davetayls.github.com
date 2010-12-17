@@ -1,5 +1,5 @@
 /*global define */
-define(['jquery', 'jquery/jquery.windowViewer', 'keys'], function ($, wv, KEYS) {
+define(['jquery/jquery.windowViewer', 'keys'], function (wv, KEYS) {
 
     var portfolio$,
         portfolioWindow$,
