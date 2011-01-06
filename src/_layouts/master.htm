@@ -11,10 +11,14 @@
 		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
 		<link rel="shortcut icon" href="/favicon.ico">
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-		
+		{% if site.live %}
+		<link rel="stylesheet" href="/css/core.css">
+		<link rel="stylesheet" media="handheld" href="/css/handheld.css">
+		{% else %}
 		<link rel="stylesheet/less" href="/css/core.less">
 		<link rel="stylesheet" media="handheld" href="/css/handheld.css">
 		<script src="/scripts/less.js"></script>
+		{% endif %}
 		
 		<script src="/scripts/modernizr-1.5.min.js"></script>
 		<script type="text/javascript" src="http://use.typekit.com/nji4vhv.js"></script>

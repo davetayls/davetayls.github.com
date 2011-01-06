@@ -1,2 +1,2 @@
-cd /cygdrive/d/projects/davetayls.github.com/build/
+cd /cygdrive/c/projects/davetayls.github.com/build/
 jake
