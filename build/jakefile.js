@@ -57,17 +57,25 @@ function toCSS(path, callback) {
     fs.readFile(path, 'utf-8', function (e, str) {
         if (e) { return callback(e) }
 		console.log('reading: ' + path);
-		less.render(str, { paths: [dir.release], optimization: 0 }, function (err, css) {
-            if (err) {
-                callback(err);
-            } else {
-                try {
-                    callback(null, css);
-                } catch (e) {
-                    callback(e);
-                }
-            }
-        });
+		var paths = [dir.release];
+		console.log(paths);
+		less.render(
+			str, 
+			{ paths: paths
+			, optimization: 0 
+			}, 
+			function (err, css) {
+				if (err) {
+					callback(err);
+				} else {
+					try {
+						callback(null, css);
+					} catch (e) {
+						callback(e);
+					}
+				}
+			}
+		);
     });
 }
 

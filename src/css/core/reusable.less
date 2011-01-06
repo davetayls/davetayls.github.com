@@ -78,6 +78,21 @@
 * html .cc, * html .clearfix { height: 1%; } /* Hides from IE-mac \*/
 .cc, .clearfix { display: block; }
 
+.border-radius(@radius: 5px) {
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.notice {
+    .sans();
+	border: solid 2px #ddd;
+	.border-radius;
+	font-weight: bold;
+	padding: 10px;
+	text-align: center;
+	text-transform: none;
+}
 
 /*
     Section for icons

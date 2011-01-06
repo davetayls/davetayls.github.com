@@ -1,17 +1,18 @@
 /*global require SyntaxHighlighter */
-define("core/main", function(){
-	require([
-		'core/promos/portfolio-window',
-		'core/related/tweets'
-		],
-		function (promoWindow, tweets) {
-			$(function () {
-				$('pre code').addClass('brush: js');
-				SyntaxHighlighter.config.tagName = 'code';
-				SyntaxHighlighter.all();
-				promoWindow.init();
-				tweets.init('#tweets');
-			});
-		}
-	);
+$('pre>code').each(function(){
+    var this$ = $(this);
+    this$.parent()
+        .addClass('brush: js')
+        .text(this$.text());
+});
+SyntaxHighlighter.all();
+
+require(['core/dt'], function (dt) {});
+require(['core/promos/portfolioWindow'], function (promoWindow) {
+	promoWindow.init();
+});
+require(['core/related/tweets'], function (tweets) {
+	require.ready(function () {
+	    tweets.init('#tweets');
+	});
 });

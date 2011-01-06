@@ -3,7 +3,8 @@
     margin: 0;
     padding: 0 6px;
 
-	h2 { 
+	h2 {
+		.leagueGothic();
 		padding: 15px 0 30px; 
 	}
     h2, h2 a {
@@ -37,7 +38,15 @@
 @import url("/scripts/core/articles/postHeader.less");
 @import url("/scripts/core/articles/blogPost.less");
 
-/* large screen */
+/* other screen */
+@media screen and (max-width:480px) {
+#articles {
+    display: block;
+    float: none;
+    width: auto;
+}
+}
+
 @media screen and (min-width:1200px) {
 #articles {
     .column(3, 12px);

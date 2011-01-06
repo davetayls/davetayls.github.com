@@ -52,66 +52,7 @@ description: A disciplined and passionate graphic designer / web developer with 
                             </ul>
 						</div>
 						<div id="projects">
-							<h2><a href="http://github.com/davetayls/sjs">sjs</a> - server side JavaScript framework</h2>
-							<p>The aim of this project is to give a very simple server side JavaScript framework which will work across various platforms (eg Mozilla Rhino and Microsoft cscript).</p>
-<pre><code>var file =
-sjs
-.file('test.txt')
-.append('end of the doc\n')
-.prepend('beginning\n')
-.append(3,'new line')
-.save()
- 
-sjs.print(file.readText());
-
-sjs.arguments()
-.each(function(){
-  sjs.print(
-    this.key+'-'+this.values.join(',')
-  );
-});
-</code></pre>
-							<p>
-								Go to the <a href="http://github.com/davetayls/sjs">github project page</a> to download the source.
-							</p>							
-                            <h2><a href="http://juxtapo.net/">Juxtapo</a> - front end tools</h2>
-                            <ol>
-                                <li>
-                                    <p>Browser tools using JavaScript to assist while you're turning designs in to html/css</p>
-													          <p>The core library is designed to be basic and fast to get up and running.</p>
-																		<ul>
-																		  <li>Overlays</li>
-																		  <li>Keyboard nudging</li>
-																		  <li>Page auto refresh</li>
-																		</ul>
-                                </li>
-                                <li>
-                                      A simple plugin API  which allows for any developer to extend the core functionality.
-                                </li>
-                            </ol>
-                            <p>
-                              Download the latest version and view the documentation on <a href="http://juxtapo.net">http://juxtapo.net</a>
-                            </p>
-
-                            <h2><a href="http://github.com/davetayls/juxtapo-combiner">Juxtapo Combiner</a> - Advanced Javascript Combiner</h2>
-                            <ol>
-                                <li>
-                                  Split code in to appropriate sections and save them across multiple files
-                                </li>
-                                <li>
-                                    One script reference within the html file even at dev time
-                                </li>
-                                <li>
-                                  Flexible to allow you to specify which scripts get combined on deployment
-                                </li>
-                                <li>
-                                  Extremely painless to implement
-                                </li>
-                            </ol>
-                            <p>
-                              Download the latest version and view the documentation on <a href="http://github.com/davetayls/juxtapo-combiner">github</a>
-                            </p>
-
+                         {% include projects.htm %}
 						</div>
 					</div>
                 </div>

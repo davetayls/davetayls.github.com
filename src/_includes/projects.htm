@@ -1,0 +1,75 @@
+<h2><a href="https://github.com/davetayls/rivet">Rivet Advanced Javascript Combiner</a></h2>
+<h3 class="notice">
+    <a href="/blog/2010/12/15/rivet-advanced-js-combiner-v2-released/">Find out about the latest features in Rivet Version 2</a>
+</h3>
+<h3>Reduce your script references</h3> 
+<pre><code>&lt;script src=&quot;js/jsfile1.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/folder/jsfile2.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/jsfile3.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/jsfile4.js&quot;&gt;&lt;/script&gt;</code></pre> 
+ 
+<h3>To only one reference</h3> 
+<pre><code>&lt;script src=&quot;js/app.js&quot;&gt;&lt;/script&gt;</code></pre> 
+<p class="notice">
+    <a href="/blog/2010/12/15/rivet-advanced-js-combiner-v2-released/">here&rsquo;s how &gt;</a>
+</p>
+<ol>
+    <li>Split code in to appropriate sections and save them across multiple files</li>
+    <li>One script reference within the html file even at dev time</li>
+    <li>Flexible to allow you to specify which scripts get combined on deployment</li>
+    <li>Extremely painless to implement</li>
+</ol>
+<p>
+    Download the latest version and view the documentation on <a href="https://github.com/davetayls/rivet">github</a>
+</p>
+
+
+<h2><a href="http://juxtapo.net/">Juxtapo</a> - front end tools</h2>
+<div class="img-fl-right">
+    <img src="/content/juxtapo-overlays-thumb.png" alt="overlays example" />
+</div>
+<ol>
+    <li>
+        <p>Browser tools using JavaScript to assist while you're turning designs in to html/css</p>
+		<p>The core library is designed to be basic and fast to get up and running.</p>
+		<ul>
+			<li>Overlays</li>
+			<li>Keyboard nudging</li>
+			<li>Page auto refresh</li>
+		</ul>
+    </li>
+    <li>
+            A simple plugin API  which allows for any developer to extend the core functionality.
+    </li>
+</ol>
+<p>
+    Download the latest version and view the documentation on <a href="http://juxtapo.net">http://juxtapo.net</a>
+</p>
+
+
+
+<h2>
+    <a href="http://github.com/davetayls/sjs">sjs</a> - server side JavaScript framework</h2>
+<p>
+    The aim of this project is to give a very simple server side JavaScript framework
+    which will work across various platforms (eg Mozilla Rhino and Microsoft cscript).</p>
+<pre>
+    <code>
+var file = sjs.file('test.txt')
+            .append('end of the doc\n')
+            .prepend('beginning\n')
+            .append(3,'new line')
+            .save();
+            
+sjs.print(file.readText()); 
+sjs.arguments().each(function(){
+    sjs.print( this.key+'-'+this.values.join(',') ); 
+}); 
+    </code>
+</pre>
+<p>
+    Go to the <a href="http://github.com/davetayls/sjs">github project page</a> to download
+    the source.
+</p>
+
+
