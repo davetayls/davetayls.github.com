@@ -1,0 +1,162 @@
+/*
+ * portfolio
+ */
+    #portfolio {
+        background-color: #444;
+        border-top: solid 5px #00ADEF;
+        border-bottom: solid 5px #00ADEF;
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+        #portfolio-window {
+            height: 500px;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+            #portfolio-window-inner {
+                left: -50px;
+                margin: 0;
+                position: absolute;
+                top: -100px;
+                width: 120%;
+            }
+				#portfolio-window-inner-work {
+					float: left;
+					padding: 100px 0px 100px 220px;
+					width: 48%;
+				}
+				#portfolio-window-inner-other {
+					float: right;
+					padding: 100px 2% 100px 0;
+					width: 30%;
+				}
+        #portfolio-detail {
+            background: #000;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            height: 500px;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+            #portfolio-detail-wrapper {
+				margin: 10px 0 0 14px;
+                text-align: right;
+                width: 980px;
+            }
+                #portfolio-detail-wrapper img {
+                }
+				#portfolio-detail-close {
+					background: #00ADEF;
+					color: #FFFFFF;
+					cursor: pointer;
+					display: block;
+					font-weight: bold;
+					padding: 8px 10px;
+					position: absolute;
+					right: 13px;
+					top: 10px;
+					z-index: 5;
+				}
+                #portfolio-detail-cta {
+                    background: #000 url("/images/squarearrow.gif") no-repeat right top;
+                    display: block;
+					min-height: 45px;
+					padding: 15px;
+                    text-align: left;
+					text-decoration: none;
+                }
+                    #portfolio-detail-cta span {
+                        color: #fff;
+                        display: inline;
+                        float: left;
+                        font-size: 1.3em;
+						line-height: 1.3em;
+                        width: 500px;
+                    }
+                    #portfolio-detail-cta span.portfolio-detail-h {
+                        width: 324px;
+                    }
+    #portfolio-tl,
+    #portfolio-tr,
+    #portfolio-bl,
+    #portfolio-br {
+        background: url(/images/windowshadow.png) no-repeat left top;
+        height: 50px;
+        position: absolute;
+        width: 50px;
+    }
+    #portfolio-b,
+    #portfolio-t {
+        height: 50px;
+		left: 0;
+		position: absolute;
+		width: 100%;
+    }
+    #portfolio-b span,
+    #portfolio-t span {
+        background: url(/images/windowshadow-h.png) repeat-x left top;
+		display: block;
+        height: 50px;
+		margin: 0 50px;
+    }
+    #portfolio-r,
+	#portfolio-l {
+    	background: url(/images/windowshadow-v.png) repeat-y left top;
+		height: 400px;
+    	position: absolute;
+		top: 50px;
+		width: 50px;
+    }
+    #portfolio-tl { left: 0; top: 0; }
+    #portfolio-tr {right: 0; top: 0; background-position: right top; }
+    #portfolio-bl { bottom: 0; left: 0; background-position: left bottom; }
+    #portfolio-br { bottom: 0; right: 0; background-position: right bottom; }
+    #portfolio-t  { top: 0;	}
+    #portfolio-r  { right: 0; background-position: right top; }
+    #portfolio-b  { bottom: 0; }
+	#portfolio-b span { background-position: left bottom; }
+    #portfolio-l { left : 0; }
+
+	#portfolio.portfolioTsmall {
+		
+		#portfolio-window { 
+			height: 300px;
+		}
+		#portfolio-window-inner {
+			top: -200px;
+		}
+		#portfolio-window-inner-work,
+		#portfolio-window-inner-other {
+			padding-top: 250px;
+			padding-bottom: 250px;
+		}
+		#portfolio-r, #portfolio-l {
+			height: 250px;
+		}
+
+	}
+	
+@media screen and (max-width:480px) {
+    #portfolio {
+        overflow: hidden;
+        width:100%;
+    }
+        #portfolio-window {
+        }
+            #portfolio-window-inner {
+                left: 0px;
+                top: 0;
+            }
+				#portfolio-window-inner-work {
+				    padding: 100px 60px;
+				    width: auto;
+				}
+				#portfolio-window-inner-other {
+				    display: none;
+				}
+}

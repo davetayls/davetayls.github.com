@@ -1,0 +1,109 @@
+/*
+    list-blogs
+----------------------------------------------------------------------*/
+ul.list-blogs {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0 25px 0 0;
+}
+.mod-navSection ul.list-blogs {
+    padding-right: 5px;
+}
+    ul.list-blogs li {
+        clear:both;
+        min-height: 65px;
+        position: relative;
+        padding: 0 0 10px;
+    }
+        .mod-navSection .list-blogs-header,
+        .list-blogs-header {
+            font-size: 1em;
+            margin: 0;
+            padding:0;
+            position: relative;
+            font-size: 1em;
+            text-transform: none;
+            z-index: 2;
+        }
+        .list-blogs-date {
+            background: #444;
+            color: white;
+            float: left;
+            font-size: 0.8em;
+            font-weight: bold;
+            height: 45px;
+            line-height: 1em;
+            margin: 0 10px 10px 0;
+            padding: 0 1px 0 0 !important;
+            text-align: center;
+            text-transform: uppercase;
+            width: 45px;
+        }
+        .mod-navSection .list-blogs-date {
+            background: #ddd;
+            color: #444;
+        }
+        .list-blogs-date abbr {
+            display: block;
+            padding: 13px 0 0;
+        }
+        ul.list-blogs li .list-blogs-header a {
+            display: block;
+        }
+        .list-blogs-header a {
+            color: #555;
+            font-size: 1em;
+            font-weight: bold;
+            line-height: 1.1em;
+            margin-left: 40px;
+            padding: 3px 0 0;
+        }
+        .list-blogs-postImage {
+            background: #efefef;
+            display: none;
+        }
+            .list-blogs-postImage img {
+                max-height: 100%;
+            }
+        .list-blogs a.list-blogs-comments {
+            color: #888;
+            font-size: 0.9em;
+            padding-top: 4px;
+        }
+        .mod-navSection .list-blogs-header a {
+            color: #ddd;
+        }
+        .mod-navSection .list-blogs a.list-blogs-comments {
+            color: #222;
+        }
+
+@media screen and (min-width:1200px) {
+    ul.list-blogs li {
+        clear: none;
+        display: inline;
+        float: left;
+        min-height: 149px;
+        padding-right: 5px;
+        width: 218px;
+    }
+    .list-blogs-date {
+        background: rgba(0,0,0,0.5);
+        margin: 0 42px 42px 0 !important;
+    }
+    .list-blogs-postImage {
+        display: block;
+        height: 74px;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        width: 74px;
+    }
+}
+@media screen and (min-width:1350px) {
+    ul.list-blogs li {
+        .column(2, 24px);
+        padding-right: 5px;
+    }
+}

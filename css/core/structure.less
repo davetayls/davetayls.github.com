@@ -1,0 +1,205 @@
+/* Layout */
+body {
+	margin:0;
+	padding:0;
+}
+
+#nav-accessibility      { position: absolute; top: 0px; left: 0px; z-index: 1000; }
+#nav-accessibility p    { position:absolute; top: auto; left: -10000px; width: 1px; height: 1px; }
+#nav-accessibility ul   { list-style: none; margin:0; position:absolute; }
+#nav-accessibility li	{ position: absolute; top: 0; left: 0; }
+#nav-accessibility a    { position:absolute; display: block; top: auto; left: -10000px; width: 1px; height: 1px; }
+#nav-accessibility a:active, 
+#nav-accessibility a:focus { z-index: 1000; top: 0; left: 0px; width: 350px; height: 20px; background-color: white; border: 1px dotted #ccc; padding: 5px; }
+
+
+#logo {
+	background: #fff;
+    background: rgba(255,255,255,0.8);
+	left: 0x;
+	padding: 20px;
+	position: absolute;
+	top: 5px;
+	z-index: 100;
+}
+	#logo img {
+		display: block;
+	}
+#wrapper {}
+	#testimonials {
+		color: #eee;
+		position:absolute;
+		top:175px;
+		left: 735px;
+		width: 255px;		
+	}
+		#testimonials h2.handFont {
+			font-size: 3em;
+		}
+	#contentWrapper {
+        background: url(/images/content-bg.gif) repeat-x left top;
+        padding: 25px 0;
+        position: relative;
+    }
+    #content {}
+#header {
+	height:145px;
+	overflow:hidden;
+}
+	#header #about {
+		display: inline;
+		float:left;
+		margin:20px 0 0 10px;
+		width:516px;
+	}
+		#header h3 {
+			color:#555;
+			font-size:3em;
+			font-weight:normal;
+			letter-spacing:-0.008em;
+			line-height: 0.85em;
+			text-transform: none;
+		}
+			#header h3 img {
+				display: block;
+				float:left;
+				margin:-10px 25px 0 0;
+			}
+	#skills { 
+		/*color:white;*/
+		font-size:0.9em;
+		letter-spacing:0.005em;
+		padding-top: 7px;
+	}
+	#cv {
+		font-size: 0.8em;
+		left:90px;
+		position:absolute;
+		text-transform:uppercase;
+		top:-8px;
+		z-index: 100;
+	}
+		#cv a {
+			color: #888;
+		}
+	#header #social {
+		float:right;
+		margin-top: 4px;
+		margin-right: 32px;
+		padding: 0;
+		width:260px;
+	}
+		#header #social li { float: right; list-style: none; margin-left: 14px; }
+	#header .nav-accessibility {
+		display: none;
+		float: right;
+		margin-top: 8px;
+		padding: 0;
+		width: 243px;
+	}
+		#header .nav-accessibility li {
+			border-right:1px solid white;
+			color:white;
+			float:left;
+			list-style-image:none;
+			list-style-position:outside;
+			list-style-type:none;
+			margin-right:5px;
+			padding-right:8px;
+		}
+			#header .nav-accessibility li.nav-last {
+				border-right: none;
+			}
+		#header .nav-accessibility a {
+			color: white;
+		}
+	#header .nav-contacts {
+		color: white;
+		float: right;
+		margin: 10px 36px 0 0;
+		padding: 0;
+	}
+		#header .nav-contacts li {
+			list-style-image:none;
+			list-style-position:outside;
+			list-style-type:none;
+		}
+
+#footer {
+	border-top: solid 1px #565656;
+	background-color: #3F3F3F;
+	color: #efefef;
+	margin:10px 0 0;
+	padding: 0px;
+}
+	#footer-inner {
+		margin: 0 auto;
+		padding: 10px;
+		width:966px;		
+	}
+		#footer p,
+		#footer address,
+		#footer li {
+			font-size: 0.8em;
+		}
+		#footer li p { font-size: 1em; }
+
+
+/* small screen rendering */
+@media screen and (max-width:480px) {
+    body {
+        overflow: none;
+    }
+}
+@media screen and (max-width:768px) {
+	body {
+		background-image: none;
+	}
+	#logo {
+		width: 64px;
+	}
+		#logo img {
+			width: 100%;
+		}
+	#wrapper {
+		margin-top: 10px;
+		padding-top: 0;
+	}
+	#header {
+		height: auto;
+		position: relative;
+	}
+		#header #about {
+			margin: 0 0 0 5px;
+			width: auto;
+		}
+		#header h3 {
+			font-size: 2em;
+		}
+			#header h3 img {
+				margin-top: 0;
+				width: 20%;
+			}
+		#cv {
+			left: 0;
+			margin-bottom: 5px;
+			position: relative;
+			top: 0;
+		}
+		#header #social {
+			width: auto;
+		}
+		#header .nav-contacts {
+			float: none;
+			padding-bottom: 5px;
+		}	
+
+	#wrapper,
+	#header,
+	#footer-inner
+	{width: auto;}
+
+	#testimonials { display: none; }
+}
+
+

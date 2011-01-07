@@ -1,0 +1,54 @@
+---
+layout: post
+title: Slow DNS response - Firefox on localhost and Visual Studio or Cassini
+categories: aspnet
+author: davetayls
+postimage: /content/firefoxlogo.png
+---
+
+<p>
+   Just found a huge time-saver for working with localhost sites which require you to use the build in web server on Visual Studio
+   (Cassini). If you look at the Net firebug window you will notice that the bottleneck is the DNS lookup which can be several seconds.
+   <br />
+   <br />
+   <br />
+</p>
+<div style="TEXT-ALIGN: center" id="tlvx">
+   <a href="http://docs.google.com/File?id=df6422b_280dw2fgxf4_b" target="_blank"><img src=
+   "http://docs.google.com/File?id=df6422b_280dw2fgxf4_b" style="WIDTH: 500px; HEIGHT: 64px" height="64px" width="500px" /></a>
+</div>
+<p>
+   <br />
+   This is due to the IPv6 DNS problem within firefox and can be fixed by setting the network.dns.disableIPv6 setting to true within the
+   about:config
+   <br />
+   <br />
+   <br />
+</p>
+<div style="TEXT-ALIGN: center" id="cm1c">
+   <a href="http://docs.google.com/File?id=df6422b_281gj7gbbfv_b" target="_blank"><img src=
+   "http://docs.google.com/File?id=df6422b_281gj7gbbfv_b" style="WIDTH: 500px; HEIGHT: 67px" height="67px" width="500px" /></a>
+</div>
+<p>
+   <br />
+   and the page loads up almost instantly:
+   <br />
+   <br />
+   <br />
+</p>
+<div style="TEXT-ALIGN: center" id="mwlm">
+   <a href="http://docs.google.com/File?id=df6422b_282c83225hk_b" target="_blank"><img src=
+   "http://docs.google.com/File?id=df6422b_282c83225hk_b" style="WIDTH: 496px; HEIGHT: 85px" height="85px" width="496px" /></a>
+</div>
+<p>
+   <br />
+   <br />
+</p>
+<div>
+   Thanks to Dan Wahlin for <a title="pointing this out" href=
+   "http://weblogs.asp.net/dwahlin/archive/2007/06/17/fixing-firefox-slowness-with-localhost-on-vista.aspx" name="fb58" id="fb58">pointing
+   this out</a>
+</div>
+<p>
+   <br />
+</p>

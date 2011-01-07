@@ -1,0 +1,77 @@
+#articles {
+    .column(2, 12px);
+    margin: 0;
+    padding: 0 6px;
+
+	h2 {
+		.leagueGothic();
+		padding: 15px 0 30px; 
+	}
+    h2, h2 a {
+        color: #444;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
+    .wf-active #articles h2 {
+        font-size: 2.5em;
+    }
+    .wf-loading #articles h2 { visibility: hidden; }
+
+/* main article page */
+#postContent {
+    .column(4, 12px);
+    margin: 0;
+    padding: 0 6px 0 12px;
+}
+    #articleContent {
+        padding: 0;
+    }
+
+#postRelated {
+    .column(2, 12px);
+    margin: 0;
+    padding: 0 6px;    
+}
+
+@import "list-blogs";
+@import "postHeader";
+@import "blogPost";
+
+/* other screen */
+@media screen and (max-width:480px) {
+#articles {
+    display: block;
+    float: none;
+    width: auto;
+}
+}
+
+@media screen and (min-width:1200px) {
+#articles {
+    .column(3, 12px);
+}
+    #postContent {
+        padding: 0 6px 0 203px;
+    }
+        #actionOptions {
+            left: 12px;
+            position: absolute;
+            top: 0;
+            width: 149px;
+        }
+}
+@media screen and (min-width:1350px) {
+#articles {
+    .column(4, 12px);
+}
+    #postContent {
+        padding: 0 6px 0 334px;
+    }
+        #actionOptions {
+            left: 12px;
+            position: absolute;
+            top: 0;
+            width: 280px;
+        }
+}

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>streatham baptist slides</title>
+        <!--[if lte IE 8]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <style type="text/css">
+            body {
+				background: #efefef;
+                font-family: Arial, Sans-Serif;
+                letter-spacing: -0.05em;
+                font-size: 0.8em;
+                margin: 0;
+                padding: 0;
+            }
+            
+            a, a img {
+                border: none;
+            }
+            #info {
+				color: #444;
+				position: absolute;
+				right: 20px;
+				top: 50px;
+				width: 180px;
+			}
+            #slidesWrapper {
+                margin: 0;
+                padding: 0px;
+            }
+            
+            #slides {
+            	border-bottom: solid 4px #7A910F;
+                height: 380px;
+                overflow: hidden;
+                width: 680px;
+            }
+            
+            .cc {
+                position: relative;
+                zoom: 1;
+            }
+            
+            .cc:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+            
+            /*
+             cp-promo
+             ------------------------------------------------*/
+            .cp-promo, .cp-promo-carousel {
+                width: 680px;
+            }
+            
+            .cp-promo-carousel ul {
+                height: 380px;
+            }
+            
+            .cp-promo {
+                margin: 0 0 7px;
+                padding: 0;
+                position: relative;
+            }
+            
+            .cp-promo-carousel {
+                margin: 0;
+                overflow: auto;
+                position: relative;
+                padding: 0;
+                z-index: 1;
+            }
+            
+            .cp-promo-carousel ul {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .cp-promo-carousel li {
+                margin: 0;
+                overflow: hidden;
+                overflow: hidden;
+                padding: 0;
+                width: 663px;
+                zoom: 1;
+            }
+            
+            .cp-promo-active .cp-promo-carousel li {
+                width: 680px;
+            }
+            
+            .cp-promo-carousel li a {
+            	display: block;
+            	position: relative;
+				text-decoration: none !important;
+            }
+            .cp-promo-carousel li img {
+                display: block;
+                width: 680px;
+                z-index: 1;
+            }
+            
+            .cp-promo-carousel li .cp-promo-label {
+            	background: #000;
+            	background: rgba(0,0,0,0.6);
+				border-left: solid 6px #BDE500; /*3F4C00;*/
+				color:#eee;
+				display:block;
+				font-weight:bold;
+				left:0;
+				letter-spacing:-0.05em;
+				padding:10px;
+				position:absolute;
+				text-decoration:none;
+				text-shadow: 0px 1px 0 #222;
+				top:50px;
+				width: 300px;
+				z-index:2;
+            }
+				.cp-promo-carousel li .cp-promo-h {					
+					display:block;
+					font-size:3em;
+				}
+            	.cp-promo-carousel li .cp-promo-body {
+					display:block;
+            	
+            	}
+            
+            .cp-promo li {
+                list-style: none;
+                list-style-image: none;
+            }
+            
+            .cp-promo-controller {
+                display: block;
+                bottom: 10px;
+                right: 10px;
+                list-style: none;
+                list-style-image: none;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                text-align: right;
+                z-index: 2;
+            }
+            
+            .cp-promo-controller li {
+                border-left: solid 10px transparent;
+                cursor: pointer;
+                display: inline;
+                float: left;
+                margin: 0px;
+                padding: 0;
+            }
+            
+            .cp-promo-controller li.nav-selected {
+                border-left-color: #7A910F;
+            }
+            
+            .cp-promo-controller li a {
+            	-o-box-shadow: 0 0 2px #000;
+				-webkit-box-shadow: 0 0 2px #000;
+				-moz-box-shadow: 0 0 2px #000;
+				box-shadow: 0 0 2px #000;
+                border: solid 1px #fff;
+                border-color: rgba(255, 255, 255, 0.5);
+                display: block;
+                font-size: 0.9em;
+                height: 44px;
+                line-height: 1.1em;
+                margin: 0;
+                overflow: hidden;
+                padding: 0;
+                width: 80px;
+            }
+            
+            .cp-promo-controller li a:active {
+                outline: none;
+            }
+            
+            .cp-promo-controller li.nav-selected a, .cp-promo-controller li:hover a, .cp-promo-controller li a:hover {
+                border-color: #fff;
+				-webkit-transform: border-color 1s;
+            }
+            
+            .cp-promo-controller li a img {
+                width: 100%;
+            }
+        </style>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="http://the-taylors.org/jQueryPlugins/jquery.promo/jquery.promo.js"></script>
+        <script type="text/javascript" src="http://the-taylors.org/jQueryPlugins/jquery.promo/transitions.js"></script>
+        <script type="text/javascript" src="http://google-ajax-examples.googlecode.com/svn/trunk/gspreadsheet/gspreadsheet.js"></script>
+        <script type="text/javascript">
+            $().ready(function(){
+            
+                var slidesnav$ = $('#slidesnav');
+                var slideslist$ = $('#slideslist');
+                
+                /**
+                 * Returns the value of a query string variable
+                 * @param {String} ji The query string variable name
+                 */
+                var getQuery = function(ji){
+                    var hu = window.location.search.substring(1);
+                    var gy = hu.split("&");
+                    for (var i = 0; i < gy.length; i += 1) {
+                        var ft = gy[i].split("=");
+                        if (ft[0] === ji) {
+                            return ft[1];
+                        }
+                    }
+                    return null;
+                };
+                
+                var spreadSheetRef = getQuery('sheet');
+                
+                var loadPromoItems = function(gs){
+                    gs.each(function(row){
+                        slidesnav$.append('<li><a href="#s' + row.id + '"><img src="' + row.imageurl + '" alt="' + row.heading + '" /></a></li>');
+						var itm$ = $('<li id="s' + row.id + '" class="cc" />');
+						var itmLink$ = $('<a target="_top" class="cc" href="' + row.link + '"></a>');
+						itmLink$.append('<img src="' + row.imageurl + '" alt="' + row.heading + '" />');
+						if (row.heading.length > 0){
+							itmLink$.append('<span class="cp-promo-label"><span class="cp-promo-h">'+ row.heading +'</span><span class="cp-promo-body">' + row.text + '</span></span>');
+						}
+						itm$.append(itmLink$);
+						slideslist$.append(itm$);
+                    });
+	                $('.cp-promo').promo({
+	                    auto: true,
+						switchSpeed: 8,
+	                    transition: fadeTransition,
+						transitionSpeed: 1
+	                });
+                };
+                
+                GSpreadsheet.load(spreadSheetRef, {index: 'designRef'}, loadPromoItems);
+                
+            });
+        </script>
+    </head>
+    <body>
+        <div id="slidesWrapper">
+            <div id="slides">
+                <div class="cp-promo">
+                    <ul id="slidesnav" class="cp-promo-controller cc">
+                    </ul>
+                    <div class="cp-promo-carousel">
+                        <ul id="slideslist">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div id="info">
+			<h2>Streatham Baptist Church</h2>
+			<p>22 Lewin Road,<br />
+			Streatham,<br />
+			London,<br />
+			SW16 6JR</p> 
+			<p>
+				Tel: 020 8769 1515<br />
+				<a href="mailto:info@streathambaptist.com">info@streathambaptist.com</a>
+			</p>
+		</div>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+---
+layout: master
+portfolio: small
+---
+<div id="contentWrapper" class="cc">
+    <div id="postContent" class="cc">
+		<div class="cp-postHeader cc">
+			    <p class="cp-postHeader-date">
+					<abbr title="{{ page.date | date:'%B' }}">
+						{{ page.date | date:"%b" }}				                    		
+					</abbr>
+					<span>{{ page.date | date:"%d" }}</span>
+                </p>
+			    <h1>{{ page.title }}</h1>
+			    <p class="cp-postHeader-details">
+            {% if page.author %}
+				     Posted by: {{ page.author }}
+            {% endif %}
+			{% if page.categories %}
+				<span> in:</span> 
+					&nbsp;{{ page.categories }}
+			{% endif %}
+			</p>
+		</div>                              
+        <div id="articleContent" class="textRegion">
+            {{ content }} 
+        </div>
+
+        {% if page.share != 'hide' %}
+		<div class="cp-blogPost-share cc">
+			<a onclick="dt.analytics.trackLink(this,'subscribe','bottom');return false;" class="cp-subscribeLink" href="http://feed.the-taylors.org"><img src="/images/feed-icon-12x12-orange.gif" alt="" /> Subscribe to this blog</a>
+			{% include facebooklike.html %}
+        	{% include sharelinks-short.html %}
+		</div>
+		{% endif %}
+        {% if page.comments != 'hide' %}
+        <div class="mod-comments">
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_identifier = '{{ page.id }}';
+                //var disqus_developer = 1;
+                var disqus_url = 'http://the-taylors.org{{ page.url }}';
+                var disqus_title = '{{ page.title }}';
+                (function(){
+                    var dsq = document.createElement('script');
+                    dsq.type = 'text/javascript';
+                    dsq.async = true;
+                    dsq.src = 'http://davetayls.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>
+                Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=davetayls">comments powered by Disqus.</a>
+            </noscript>
+            <p class="cp-disclaimerText">
+                <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+            </p>
+        </div>
+        {% endif %}
+    </div>
+    <div id="postRelated">
+        <div id="actionOptions" class="mod-navSection cc">
+            <ul class="nav-v nav-block">
+            	<li>
+            		<a href="/">Home</a>
+            	</li>
+            	<li>
+            		<a onclick="dt.analytics.trackLink(this,'blog','right');return false;" href="/blog">Blog</a>
+            	</li>
+            	<li>
+                	<a onclick="dt.analytics.trackLink(this,'subscribe','topright');return false;" href="http://feed.the-taylors.org"><img src="/images/feed-icon-12x12-orange.gif" alt="" /> Subscribe here (atom)</a>
+				</li>
+            </ul>
+			<div class="clear"></div>
+            {% include sharelinks-short.html %}
+        </div>
+        <div id="recentPosts" class="mod-navSection cc">
+            <h2>Recent Posts</h2>
+            <ul class="list-blogs">
+                {% for post in site.posts limit: 3 %}
+	                <li class="cc">
+	                    <h3 class="list-blogs-header">
+	                    	<span class="list-blogs-date">
+		                    	<abbr title="December">
+									{{ post.date | date:"%b" }}				                    		
+		                    	</abbr>
+		                    	<span>{{ post.date | date:"%d" }}</span>
+	                    	</span>
+							<a href="{{ post.url }}">{{ post.title }}</a>
+							<a class="list-blogs-comments" href="{{ post.url }}#disqus_thread">Comments</a>
+						</h3>
+	                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

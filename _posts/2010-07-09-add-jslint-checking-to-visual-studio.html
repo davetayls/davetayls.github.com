@@ -1,0 +1,24 @@
+---
+layout: post
+categories: javascript
+author: davetayls
+postimage: /content/jslint.gif
+---
+<p>Using the <a href="/blog/2010/05/25/including-jslint-in-your-validation-using-nant-batch-files-or-ajax/">jsLint tools I provided in my previous post</a> you can add simple checking of an active file within Visual Studio. It also allows you to double click on an issue and go to the corresponding line. Here's a step by step guide.</p>
+<p>Choose <strong>External Tools</strong> from the Tools menu</p>
+<p><img src="/content/jslint-vs-toolsmenu.jpg" alt="tools menu - external tools" width="353" height="421" /></p>
+<p>&nbsp;</p>
+<p>Click <strong>Add</strong> and enter the values given in the example below just replacing the command path to point to where you downloaded the example files from the previous post. Ticking <strong>Use Output window</strong> will make the commandline output show in the Visual Studio output window.</p>
+<p><img src="/content/jslint-vs-addexternaltool.jpg" alt="add external tool dialog" width="461" height="450" /></p>
+<p>You should now have a new command available to you from the<strong>Tools</strong> menu called <strong>jsLint current file</strong>. Open the JavaScript file you want to validate and run this command.</p>
+<p><img src="/content/jslint-vs-runtest.jpg" alt="run the test" width="353" height="422" /></p>
+<p>The results will be sent to the Output window.</p>
+<p><img src="/content/jslint-vs-output.jpg" alt="jslint output" width="423" height="499" /></p>
+<p>You can double click on any result and Visual Studio will send you to the offending line.</p>
+<p><img src="/content/jslint-vs-clickandgotoline.jpg" alt="click and go to line" width="521" height="229" /></p>
+<p>The final thing you might need to to is add a comment to your JavaScript file to specify any global or predefined variables. You can do this by adding the variables in to a comma separated list like so:</p>
+<pre>
+<code>/*global juxtapo,window,console */</code>
+</pre>
+
+<p>Hope this helps</p>

@@ -1,0 +1,39 @@
+---
+layout: post
+title: British Red Cross Website goes live
+categories: [design,frontend,releases]
+author: davetayls
+postimage: /portfolio/britishredcross.png
+---
+
+<p><img src="/content/britishredcrosswebsite.png" alt="british red cross" width="300" height="483" class="img-fl-left" />It's great when a plan comes together, and it's with a lot of excitement that we at <a href="http://blog.aqueduct.co.uk/2010/08/british-red-cross-site-goes-live_10.html">Aqueduct</a> have launched the new <a href="http://redcross.org.uk">British Red Cross</a> website, the culmination of 18 months of hard work. I've written about a few findings during the course of this project and now you can finally see them in action.</p>
+<ul>
+	<li> there's the <a href="/blog/2010/05/01/using-sprites-block-sliding-doors-inline-flow">technique for working with css sprites for in-line images and block elements</a> that can be seen in the header and the footer (in fact all over the place).Take a look at the <a href="http://www.redcross.org.uk/images/sprites.png">sprite file we use</a> to reduce page requests.</li>
+	<li>
+		the client side JavaScript and CSS development has been separated in to logical chunks and then concatenated using tools like <a href="http://juxtapo.net/combiner">Juxtapo Combiner</a>. This has made maintaining the code so much simpler.</li>
+</ul>
+<h2>Accessibility and Usibility</h2>
+<p>Good accessibility and usability has been high on the agenda, and we have come up with some 'out-of-the-box' solutions to some common problems. One example I would like to show you can be found on the maps pages. We have used <a href="http://en.wikipedia.org/wiki/Progressive_enhancement">progressive inhancement</a> to take an html page of <a href="http://en.wikipedia.org/wiki/Semantic_HTML">semantic markup</a> showing the content for the pin bubbles and then the locations arranged within the tree below. We have also included friendly links to google maps and geo tagging using <a href="http://en.wikipedia.org/wiki/Microformat">Microformats</a> (find out more on the <a href="http://microformats.org/">microformats website</a>) to enable search engines and enabled browsers to place each pin on a map.</p>
+<p><img src="/content/redcross-maps.jpg" class="img-fl-right" alt="british red cross - near you" width="200" height="227" /><img src="/content/britishredcross-mapsnoscript.jpg" class="img-fl-right" alt="maps page without javascript" width="300" height="267" /><img class="img-fl-right" src="/content/britishredcross-mapstree.jpg" alt="near you places tree without javascript" width="300" height="132" /></p>
+<h2 class="clear">Juxtapo helped <em>just</em> a little...umm</h2>
+<p><img src="/content/britishredcross-juxtapo.jpg" alt="juxtapo templates for british red cross" width="400" height="239" class="img-fl-right" />With 57 templates knocking about and constant refinement to the design one of the challenges I was faced with was making sure designs matched the current layout and that good communications were in place between the project manager's, designers and the front-end developers. <a href="http://juxtapo.net">Juxtapo</a> gave us feedback inside the browser as to the progress on templates, it also allowed the front-end developers to overlay the current design to check for any inconsistencies.</p>
+<h2>So how's it doing in the wild?</h2>
+
+<p>The site proved itself immediately as Duncan Miller talks about on the Aqueduct post:</p>
+<blockquote>
+<p> &ldquo;With the launch coinciding with the launch of Red Cross&rsquo;s disaster appeal for Pakistan it was of paramount importance that the site launch did not adversely affect donations. After one hour of being live the site took its first donation.&rdquo;<br />
+</p>
+</blockquote>
+<p>
+	Margaret O'Donnell, the British Red Cross head of digital media said:</p>
+<blockquote>
+	<p> &ldquo;We&rsquo;re delighted with this clear, informative and easy-to-use Aqueduct production. The online world is a critical platform for us to communicate with people, get them involved in our work, campaigns, raise funds and offer them opportunities to work with one of the largest voluntary movements in the world. Our new site is fast, intuitive and easy-to-navigate.&rdquo;</p></blockquote>
+<p>There&rsquo;s been a bunch of positive  press so far&hellip;<br />
+	<a href="http://econsultancy.com/blog/6403-site-review-british-red-cross-relaunch">http://econsultancy.com/blog/6403-site-review-british-red-cross-relaunch</a><br />
+	<a href="http://blogs.redcross.org.uk/fundraising-and-events/2010/08/new-website-for-an-old-organisation/">http://blogs.redcross.org.uk/fundraising-and-events/2010/08/new-website-for-an-old-organisation/</a><br />
+	<a href="http://www.marketingmagazine.co.uk/news/1021216/British-Red-Cross-revamps-website/">http://www.marketingmagazine.co.uk/news/1021216/British-Red-Cross-revamps-website/</a><br />
+	<a href="http://www.medicalnewstoday.com/articles/197264.php">http://www.medicalnewstoday.com/articles/197264.php</a></p>
+<p>Whilst this question is pretty risky, I am always looking to improve on the work that I oversee and take such pride in the coding of so: <br />
+<strong>How have you found the site?</strong></p>
+<p><br />
+</p>
