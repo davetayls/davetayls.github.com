@@ -2323,7 +2323,9 @@ function loadStyleSheet(sheet, callback, reload, remaining) {
 
     // Stylesheets in IE don't always return the full path
     if (! /^(https?|file):/.test(href)) {
-        href = url.slice(0, url.lastIndexOf('/') + 1) + href;
+        href = url.charAt(url.length-1) === '/' ? 
+			url.slice(0, url.length-1) + href : 
+			url.slice(0, url.lastIndexOf('/')) + href;
     }
 
     xhr(sheet.href, function (data, lastModified) {

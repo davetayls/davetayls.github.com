@@ -58,7 +58,6 @@ function toCSS(path, callback) {
         if (e) { return callback(e) }
 		console.log('reading: ' + path);
 		var paths = [dir.release];
-		console.log(paths);
 		less.render(
 			str, 
 			{ paths: paths
