@@ -3,6 +3,7 @@ layout: post
 author: davetayls
 title: Some worthwhile reading
 categories: [frontend,javascript,css]
+postimage: /content/alaresponsive.jpg
 ---
 
 I've come across some really good articles recently which I thought I would share.

@@ -3,6 +3,7 @@ layout: post
 author: davetayls
 title: Rivet Advanced JavaScript Combiner v2 Released
 categories: javascript
+postimage: /content/rivets.jpg
 ---
 
 I have been continuing my work with [Arnold Zokas](http://twitter.com/arnoldzokas) on building a [scaleable JavaScript solution](https://github.com/davetayls/rivet) which combines with a simple console app. It was initially created for use with Juxtapo but as it has grown I felt it needed it's own identity and so have renamed it "Rivet".

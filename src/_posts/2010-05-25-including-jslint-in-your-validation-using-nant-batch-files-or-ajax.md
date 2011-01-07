@@ -3,6 +3,7 @@ layout: post
 title: Including jsLint in your validation using nAnt, batch files or ajax
 categories: releases
 author: davetayls
+postimage: /content/jslint.gif
 ---
 
 [jsLint][1] is a fantastic tool developed by [Douglas Crockford][2], Yahoo!'s JavaScript architect which will validate JavaScript source to a strict specification which often catches hidden errors. 
