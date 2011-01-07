@@ -1,5 +1,0 @@
-auto: true
-lsi: false
-permalink: /blog/:year/:month/:day/:title
-exclude:
-- startjekyll.bat
