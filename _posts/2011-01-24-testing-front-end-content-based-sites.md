@@ -44,7 +44,6 @@ Here are a few sites on an initial search which I'm going to glean some thoughts
 *     <http://blog.medryx.org/2008/06/08/dojo-doh-unit-testing/>
 *     <http://tddjs.com/>
 *     <http://code.google.com/p/js-test-driver/>
-*     <https://github.com/jeresig/testswarm>
 *     <http://html-src.com/web-dev/88/test-driven-development-tdd-using-javascript-with-qunit/>
 *     <http://html-src.com/web-dev/88/test-driven-development-tdd-using-javascript-with-qunit/>
 *     <http://slmoloch.blogspot.com/2009/08/how-to-run-jstestdriver-with-visual_02.html>
