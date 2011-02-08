@@ -71,6 +71,12 @@ define('core/promos/portfolioWindow',['jquery/jquery.windowViewer', 'keys'], fun
 
     return {
         init: function () {
+		
+			// don't initialise if on a very small screen
+			if ($(window).width() < 481){
+				return;
+			}
+		
             portfolio$ = $('#portfolio');
             portfolioWindow$ = $('#portfolio-window');
             portfolioDetail$ = $('#portfolio-detail');
@@ -98,7 +104,8 @@ define('core/promos/portfolioWindow',['jquery/jquery.windowViewer', 'keys'], fun
 
             // otherThumbs$
             otherThumbs$ = $('#portfolio-window-inner-other');
-            loadFlickr();
+            
+			$(window).load(loadFlickr);
         }
     };
 
@@ -117,7 +124,8 @@ require(['core/promos/portfolioWindow'], function (promoWindow) {
 	promoWindow.init();
 });
 require(['core/related/tweets'], function (tweets) {
-	require.ready(function () {
+	
+	$(window).load(function () {
 	    tweets.init('#tweets');
 	});
 });
