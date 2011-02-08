@@ -30,27 +30,40 @@
     
     <script type="text/javascript" src="matchers/be_even.js"></script>
     <script type="text/javascript">
-      // Here is a sample test. Note that all tests are wrapped in
-      // "Screw.Unit(function() { ... })".
-      Screw.Unit(function() {
-        // Tests are organized into 'describes' and 'its', following the style of RSpec.
-        describe("foo", function() {
-          it("returns 2", function() {
-            // 'equal' is one among many matchers provided with the Screw.Unit distribution. It
-            // is smart enough to compare arrays, objects, and primitives.
-            expect(foo()).to(equal, 2);
-          });
+        // Here is a sample test. Note that all tests are wrapped in
+        // "Screw.Unit(function() { ... })".
+        Screw.Unit(function() {
+            before(function() {
+                document.getElementById('dom_test').innerHTML = ''; // but use your favorite JS library here.
+            });      
+            // Tests are organized into 'describes' and 'its', following the style of RSpec.
+            describe("foo", function() {
+                it("returns 2", function() {
+                    // 'equal' is one among many matchers provided with the Screw.Unit distribution. It
+                    // is smart enough to compare arrays, objects, and primitives.
+                    expect(foo()).to(equal, 2);
+                });
+            });
+
+            describe("numbers", function() {
+                // Here is a use of the custom matcher defined above.
+                it("either is or is not even", function() {
+                    expect(2).to(be_even);
+                    expect(3).to_not(be_even);
+                });
+            });
+
+            describe("something that manipulates the DOM", function() {
+              it("is effortless to test!", function() {
+                var dom_test = document.getElementById('dom_test');
+                dom_test.innerHTML = 'awesome';
+                expect(dom_test.innerHTML).to(equal, 'awesome');
+              });
+            });            
         });
-        
-        describe("numbers", function() {
-          // Here is a use of the custom matcher defined above.
-          it("either is or is not even", function() {
-            expect(2).to(be_even);
-            expect(3).to_not(be_even);
-          });
-        });
-      });
     </script>
   </head>
-  <body></body>
+  <body>
+    <div id="dom_test"></div>
+  </body>
 </html>
