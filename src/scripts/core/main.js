@@ -12,7 +12,8 @@ require(['core/promos/portfolioWindow'], function (promoWindow) {
 	promoWindow.init();
 });
 require(['core/related/tweets'], function (tweets) {
-	require.ready(function () {
+	
+	$(window).load(function () {
 	    tweets.init('#tweets');
 	});
 });

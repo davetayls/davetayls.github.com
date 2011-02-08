@@ -40,11 +40,19 @@
 
 /* other screen */
 @media screen and (max-width:480px) {
-#articles {
+#articles,
+#postContent,
+#postRelated {
     display: block;
     float: none;
     width: auto;
 }
+	#postContent {
+		padding: 0 12px;
+	}
+	#postContent #articleContent {
+		padding: 0;
+	}
 }
 
 @media screen and (min-width:1200px) {

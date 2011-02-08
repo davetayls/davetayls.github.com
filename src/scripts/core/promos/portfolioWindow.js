@@ -71,6 +71,12 @@ define(['jquery/jquery.windowViewer', 'keys'], function (wv, KEYS) {
 
     return {
         init: function () {
+		
+			// don't initialise if on a very small screen
+			if ($(window).width() < 481){
+				return;
+			}
+		
             portfolio$ = $('#portfolio');
             portfolioWindow$ = $('#portfolio-window');
             portfolioDetail$ = $('#portfolio-detail');
@@ -98,7 +104,8 @@ define(['jquery/jquery.windowViewer', 'keys'], function (wv, KEYS) {
 
             // otherThumbs$
             otherThumbs$ = $('#portfolio-window-inner-other');
-            loadFlickr();
+            
+			$(window).load(loadFlickr);
         }
     };
 
