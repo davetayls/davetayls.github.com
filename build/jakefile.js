@@ -4,7 +4,7 @@ var path = require('path'),
     sys = require('sys'),
 	jslint = require('jslint').JSLINT,
 	less = require('less');
-
+	
 var taskHeader = function(task){
 	sys.puts('');
 	sys.puts(task.description);
@@ -24,7 +24,7 @@ var dir = {
 }
 console.log(dir);
 desc('default task.');
-task('default', ['less'], function (params) {
+task('default', ['js.validate'], function (params) {
   taskHeader(this);
 });
 
@@ -82,18 +82,25 @@ function toCSS(path, callback) {
 // jslint ********************************************************
 desc('Validating js.');
 task('js.validate',[], function(){
-  sys.puts('*********** validating js ************');
-  if (!JSLINT('blh', {})) {
-    for (var i = 0; i < JSLINT.errors.length; i += 1) {
-        var e = JSLINT.errors[i];
-        if (e) {
-            // Output file and line numbers in Visual Studio syntax.
-            console.log('path' + '(' + (e.line + 1) + '): ' + e.reason);
-            // What does this RegExp do?
-            console.log((e.evidence || '').replace(/^\s*(\S*(\s+\S+)*)\s*$/, "$1"));
-        }
-    }
-    console.log(JSLINT.errors.length + ' errors!');
-  }
+	taskHeader(this);
+	var jsDir = dir.release + '/scripts/core';
+	fs.readdirSync(jsDir).forEach(function (file) {
+		if (! /\.js/.test(file)) { return }
+		var filePath = jsDir + '/' + file;
+		var str = fs.readFileSync(filePath, 'utf-8');
+		if (!jslint(str, {})) {
+			for (var i = 0; i < jslint.errors.length; i += 1) {
+				var e = jslint.errors[i];
+				if (e) {
+					// Output file and line numbers in Visual Studio syntax.
+					console.log(filePath + ' (' + (e.line + 1) + '): ' + e.reason);
+					// What does this RegExp do?
+					console.log((e.evidence || '').replace(/^\s*(\S*(\s+\S+)*)\s*$/, "$1"));
+				}
+			}
+			console.log(jslint.errors.length + ' errors!');
+		}
+
+	});
 });
 
