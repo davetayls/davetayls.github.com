@@ -1,4 +1,5 @@
-/*global require SyntaxHighlighter */
+/*jslint white:false */
+/*global $ require SyntaxHighlighter window*/
 $('pre>code').each(function(){
     var this$ = $(this);
     this$.parent()

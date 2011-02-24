@@ -24,7 +24,7 @@ var dir = {
 }
 console.log(dir);
 desc('default task.');
-task('default', ['js.validate'], function (params) {
+task('default', ['js.validate','less'], function (params) {
   taskHeader(this);
 });
 
@@ -83,10 +83,11 @@ function toCSS(path, callback) {
 desc('Validating js.');
 task('js.validate',[], function(){
 	taskHeader(this);
-	var jsDir = dir.release + '/scripts/core';
+	var jsDir = dir.project + '/scripts/core';
 	fs.readdirSync(jsDir).forEach(function (file) {
 		if (! /\.js/.test(file)) { return }
 		var filePath = jsDir + '/' + file;
+		console.log('validating file: ' + filePath);
 		var str = fs.readFileSync(filePath, 'utf-8');
 		if (!jslint(str, {})) {
 			for (var i = 0; i < jslint.errors.length; i += 1) {
@@ -100,7 +101,7 @@ task('js.validate',[], function(){
 			}
 			console.log(jslint.errors.length + ' errors!');
 		}
-
+		console.log('\n');
 	});
 });
 

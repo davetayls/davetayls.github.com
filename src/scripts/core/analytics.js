@@ -1,3 +1,5 @@
+/*jslint nomen:false */
+/*global window _gaq:true _gat setTimeout jQuery */
 (function ($, dt) {
     var filetypes = /\.(zip|exe|pdf|doc*|xls*|ppt*|mp3)$/i;
     dt.analytics = {
@@ -15,7 +17,7 @@
             try {
                 var pageTracker = _gat._getTracker("UA-4421586-2");
                 pageTracker._trackEvent(category, action);
-                setTimeout('document.location = "' + link.href + '"', 100)
+                setTimeout('document.location = "' + link.href + '"', 100);
             } catch (err) { }
         }
     };
@@ -33,5 +35,5 @@
         });
     };
 
-})(jQuery, dt = window.dt || {});
+}(jQuery, window.dt = window.dt || {}));
 
