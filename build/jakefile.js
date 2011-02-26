@@ -37,7 +37,6 @@ task('less', [], function (params) {
 	fs.readdirSync(cssDir).forEach(function (file) {
 		if (! /\.less/.test(file)) { return }
 		toCSS(cssDir + '/' + file, function (err, less) {
-			console.log('file: '+ cssDir + '/' + file );
 			var name = path.basename(file, '.less'),
 				filePath = path.join(cssDir, name) + '.css';
 			if (err){
@@ -56,7 +55,6 @@ function toCSS(path, callback) {
     var tree, css;
     fs.readFile(path, 'utf-8', function (e, str) {
         if (e) { return callback(e) }
-		console.log('reading: ' + path);
 		var paths = [dir.release];
 		less.render(
 			str, 
@@ -85,23 +83,18 @@ task('js.validate',[], function(){
 	taskHeader(this);
 	var jsDir = dir.project + '/scripts/core';
 	fs.readdirSync(jsDir).forEach(function (file) {
+		// check if this is a javascript file
 		if (! /\.js/.test(file)) { return }
-		var filePath = jsDir + '/' + file;
+		
+		// load the file
+		var filePath = jsDir + '/' + file,
+			str = fs.readFileSync(filePath, 'utf-8');
+			
+		// validate
 		console.log('validating file: ' + filePath);
-		var str = fs.readFileSync(filePath, 'utf-8');
 		if (!jslint(str, {})) {
-			for (var i = 0; i < jslint.errors.length; i += 1) {
-				var e = jslint.errors[i];
-				if (e) {
-					// Output file and line numbers in Visual Studio syntax.
-					console.log(filePath + ' (' + (e.line + 1) + '): ' + e.reason);
-					// What does this RegExp do?
-					console.log((e.evidence || '').replace(/^\s*(\S*(\s+\S+)*)\s*$/, "$1"));
-				}
-			}
-			console.log(jslint.errors.length + ' errors!');
+			throw new Error(jslint.errors);
 		}
-		console.log('\n');
 	});
 });
 
