@@ -110,7 +110,8 @@ define('core/promos/portfolioWindow',['jquery/jquery.windowViewer', 'keys'], fun
     };
 
 });
-/*global require SyntaxHighlighter */
+/*jslint white:false */
+/*global $ require SyntaxHighlighter window*/
 $('pre>code').each(function(){
     var this$ = $(this);
     this$.parent()
@@ -130,6 +131,7 @@ require(['core/related/tweets'], function (tweets) {
 	});
 });
 define("core/main", function(){});
+/*global define */
 define('core/dt',{});
 (function($) {
     $.fn.windowViewer = function(settings) {
