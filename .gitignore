@@ -7,6 +7,7 @@ Thumbs.db
 Desktop.ini
 _site
 /src/web.config
+*_site
 /src/TestStation/testsite
 /.project
 /.settings
