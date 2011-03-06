@@ -1,50 +1,38 @@
 /**
- * @license Copyright (c) 2010, The Dojo Foundation All Rights Reserved.
+ * @license Copyright (c) 2010-2011, The Dojo Foundation All Rights Reserved.
  * Available via the MIT or new BSD license.
  * see: http://github.com/jrburke/requirejs for details
  */
 
-/*
- * Java 6 is required.
- */
+/*jslint plusplus: false, strict: false */
+/*global define: false */
 
-/*jslint plusplus: false */
-/*global java: false, Packages: false, load: false */
+define(['uglifyjs/index'], function (uglify) {
+    var parser = uglify.parser,
+        processor = uglify.uglify,
+        ostring = Object.prototype.toString,
+        isArray;
 
-"use strict";
-
-var parse;
-(function () {
-    //fileContents = 'require.def("foo", ["one", \n//This is a comment\n"two",\n/*Another comment*/"three"], {});',
-    //fileContents = 'require.def("foo", {one: "two"});',
-    var jscomp = Packages.com.google.javascript.jscomp,
-        compiler = new jscomp.Compiler(),
-
-        //Values taken from com.google.javascript.rhino.Token,
-        //but duplicated here to avoid weird Java-to-JS transforms.
-        GETPROP = 33,
-        CALL = 37,
-        NAME = 38,
-        STRING = 40,
-        ARRAYLIT = 63,
-        OBJECTLIT = 64,
-        ASSIGN = 86,
-        FUNCTION = 105,
-        EXPR_RESULT = 130,
-
-        //Oh Java, you rascal.
-        JSSourceFilefromCode = java.lang.Class.forName('com.google.javascript.jscomp.JSSourceFile').getMethod('fromCode', [java.lang.String, java.lang.String]);
-
-    //Helper for closureOptimize, because of weird Java-JavaScript interactions.
-    function closurefromCode(filename, content) {
-        return JSSourceFilefromCode.invoke(null, [filename, content]);
+    if (Array.isArray) {
+        isArray = Array.isArray;
+    } else {
+        isArray = function (it) {
+            return ostring.call(it) === "[object Array]";
+        };
     }
 
     /**
-     * Calls node.getString() but makes sure a JS string is returned
+     * Determines if the AST node is an array literal
      */
-    function nodeString(node) {
-        return String(node.getString());
+    function isArrayLiteral(node) {
+        return node[0] === 'array';
+    }
+
+    /**
+     * Determines if the AST node is an object literal
+     */
+    function isObjectLiteral(node) {
+        return node[0] === 'object';
     }
 
     /**
@@ -54,19 +42,22 @@ var parse;
      * present in this AST.
      */
     function validateDeps(node) {
-        var type = node.getType(), i, dep;
+        var arrayArgs, i, dep;
 
-        if (type === OBJECTLIT || type === FUNCTION) {
+        if (isObjectLiteral(node) || node[0] === 'function') {
             return true;
         }
 
-        //Dependencies can be an object literal or an array. 
-        if (type !== ARRAYLIT) {
+        //Dependencies can be an object literal or an array.
+        if (!isArrayLiteral(node)) {
             return false;
         }
 
-        for (i = 0; (dep = node.getChildAtIndex(i)); i++) {
-            if (dep.getType() !== STRING) {
+        arrayArgs = node[1];
+
+        for (i = 0; i < arrayArgs.length; i++) {
+            dep = arrayArgs[i];
+            if (dep[0] !== 'string') {
                 return false;
             }
         }
@@ -81,11 +72,10 @@ var parse;
      * @returns {String} JS source string or null, if no require or define/require.def
      * calls are found.
      */
-    parse = function (fileName, fileContents) {
+    function parse(fileName, fileContents) {
         //Set up source input
         var matches = [], result = null,
-        jsSourceFile = closurefromCode(String(fileName), String(fileContents)),
-        astRoot = compiler.parse(jsSourceFile);
+            astRoot = parser.parse(fileContents);
 
         parse.recurse(astRoot, matches);
 
@@ -94,22 +84,32 @@ var parse;
         }
 
         return result;
-    };
+    }
+
+    //Add some private methods to object for use in derived objects.
+    parse.isArray = isArray;
+    parse.isObjectLiteral = isObjectLiteral;
+    parse.isArrayLiteral = isArrayLiteral;
 
     /**
      * Handles parsing a file recursively for require calls.
-     * @param {Packages.com.google.javascript.rhino.Node} node
+     * @param {Array} parentNode the AST node to start with.
      * @param {Array} matches where to store the string matches
      */
     parse.recurse = function (parentNode, matches) {
         var i, node, parsed;
-        for (i = 0; (node = parentNode.getChildAtIndex(i)); i++) {
-            parsed = parse.parseNode(node);
-            if (parsed) {
-                matches.push(parsed);
+        if (isArray(parentNode)) {
+            for (i = 0; i < parentNode.length; i++) {
+                node = parentNode[i];
+                if (isArray(node)) {
+                    parsed = this.parseNode(node);
+                    if (parsed) {
+                        matches.push(parsed);
+                    }
+                    this.recurse(node, matches);
+                }
             }
-            parse.recurse(node, matches);
-        }        
+        }
     };
 
     /**
@@ -119,10 +119,8 @@ var parse;
      * @returns {Boolean}
      */
     parse.definesRequire = function (fileName, fileContents) {
-        var jsSourceFile = closurefromCode(String(fileName), String(fileContents)),
-            astRoot = compiler.parse(jsSourceFile);
-
-        return parse.nodeHasRequire(astRoot);
+        var astRoot = parser.parse(fileContents);
+        return this.nodeHasRequire(astRoot);
     };
 
     /**
@@ -136,14 +134,13 @@ var parse;
      * returns an array, but could be of length zero.
      */
     parse.getAnonDeps = function (fileName, fileContents) {
-        var jsSourceFile = closurefromCode(String(fileName), String(fileContents)),
-            astRoot = compiler.parse(jsSourceFile),
+        var astRoot = parser.parse(fileContents),
             deps = [],
-            defFunc = parse.findAnonRequireDefCallback(astRoot);
-        
+            defFunc = this.findAnonRequireDefCallback(astRoot);
+
         //Now look inside the def call's function for require calls.
         if (defFunc) {
-            parse.findRequireDepNames(defFunc, deps);
+            this.findRequireDepNames(defFunc, deps);
 
             //If no deps, still add the standard CommonJS require, exports, module,
             //in that order, to the deps.
@@ -154,42 +151,34 @@ var parse;
     };
 
     /**
-     * Finds the function in require.def(function (require, exports, module){});
-     * @param {Packages.com.google.javascript.rhino.Node} node
+     * Finds the function in require.def or define(function (require, exports, module){});
+     * @param {Array} node
      * @returns {Boolean}
      */
-
     parse.findAnonRequireDefCallback = function (node) {
-        var methodName, func, callback, i, n;
+        var callback, i, n, call, args;
 
-        if (node.getType() === GETPROP &&
-            node.getFirstChild().getType() === NAME &&
-            nodeString(node.getFirstChild()) === "require") {
+        if (isArray(node)) {
+            if (node[0] === 'call') {
+                call = node[1];
+                args = node[2];
+                if ((call[0] === 'name' && call[1] === 'define') ||
+                           (call[0] === 'dot' && call[1][1] === 'require' && call[2] === 'def')) {
 
-            methodName = nodeString(node.getChildAtIndex(1));
-            if (methodName === "def") {
-                func = node.getLastSibling();
-                if (func.getType() === FUNCTION) {
-                    //Bingo.
-                    return func;
+                    //There should only be one argument and it should be a function.
+                    if (args.length === 1 && args[0][0] === 'function') {
+                        return args[0];
+                    }
+
                 }
             }
-        } else if (node.getType() === EXPR_RESULT &&
-            node.getFirstChild().getType() === CALL &&
-            node.getFirstChild().getFirstChild().getType() === NAME &&
-            nodeString(node.getFirstChild().getFirstChild()) === "define") {
 
-            func = node.getFirstChild().getFirstChild().getLastSibling();
-            if (func.getType() === FUNCTION) {
-                //Bingo.
-                return func;
-            }
-        }
-
-        //Check child nodes
-        for (i = 0; (n = node.getChildAtIndex(i)); i++) {
-            if ((callback = parse.findAnonRequireDefCallback(n))) {
-                return callback;
+            //Check child nodes
+            for (i = 0; i < node.length; i++) {
+                n = node[i];
+                if ((callback = this.findAnonRequireDefCallback(n))) {
+                    return callback;
+                }
             }
         }
 
@@ -197,39 +186,47 @@ var parse;
     };
 
     parse.findRequireDepNames = function (node, deps) {
-        var moduleName, i, n;
+        var moduleName, i, n, call, args;
 
-        if (node.getType() === CALL) {
-            if (node.getFirstChild().getType() === NAME &&
-                nodeString(node.getFirstChild()) === "require") {
+        if (isArray(node)) {
+            if (node[0] === 'call') {
+                call = node[1];
+                args = node[2];
 
-                //It is a plain require() call.
-                moduleName = node.getChildAtIndex(1);
-                if (moduleName.getType() === STRING) {
-                    deps.push(nodeString(moduleName));
+                if (call[0] === 'name' && call[1] === 'require') {
+                    moduleName = args[0];
+                    if (moduleName[0] === 'string') {
+                        deps.push(moduleName[1]);
+                    }
                 }
-            }
-        }
 
-        //Check child nodes
-        for (i = 0; (n = node.getChildAtIndex(i)); i++) {
-            parse.findRequireDepNames(n, deps);
+
+            }
+
+            //Check child nodes
+            for (i = 0; i < node.length; i++) {
+                n = node[i];
+                this.findRequireDepNames(n, deps);
+            }
         }
     };
 
     /**
      * Determines if a given node contains a require() definition.
-     * @param {Packages.com.google.javascript.rhino.Node} node
+     * @param {Array} node
      * @returns {Boolean}
      */
     parse.nodeHasRequire = function (node) {
-        if (parse.isRequireNode(node)) {
+        if (this.isRequireNode(node)) {
             return true;
         }
 
-        for (var i = 0, n; (n = node.getChildAtIndex(i)); i++) {
-            if (parse.nodeHasRequire(n)) {
-                return true;
+        if (isArray(node)) {
+            for (var i = 0, n; i < node.length; i++) {
+                n = node[i];
+                if (this.nodeHasRequire(n)) {
+                    return true;
+                }
             }
         }
 
@@ -238,127 +235,112 @@ var parse;
 
     /**
      * Is the given node the actual definition of require()
-     * @param {Packages.com.google.javascript.rhino.Node} node
+     * @param {Array} node
      * @returns {Boolean}
      */
     parse.isRequireNode = function (node) {
         //Actually look for the require.s = assignment, since
         //that is more indicative of RequireJS vs a plain require definition.
-        var prop, name, s;
-        if (node.getType() === ASSIGN) {
-            prop = node.getFirstChild();
-            if (prop.getType() === GETPROP) {
-                name = prop.getFirstChild();
-                if (name.getType() === NAME) {
-                    if (nodeString(name) === "require") {
-                        s = prop.getChildAtIndex(1);
-                        if (s && s.getType() === STRING &&
-                            nodeString(s) === "s") {
-                            return true;
-                        }
-                    }
-                }
+        var assign;
+        if (!node) {
+            return null;
+        }
+
+        if (node[0] === 'assign' && node[1] === true) {
+            assign = node[2];
+            if (assign[0] === 'dot' && assign[1][0] === 'name' &&
+                assign[1][1] === 'require' && assign[2] === 's') {
+                return true;
             }
         }
         return false;
     };
 
+    function optionalString(node) {
+        var str = null;
+        if (node) {
+            str = parse.nodeToString(node);
+        }
+        return str;
+    }
+
     /**
      * Convert a require/require.def/define call to a string if it is a valid
      * call via static analysis of dependencies.
-     * @param {Packages.com.google.javascript.rhino.Node} the call node
-     * @param {Packages.com.google.javascript.rhino.Node} the name node inside the call
-     * @param {Packages.com.google.javascript.rhino.Node} the deps node inside the call
+     * @param {String} callName the name of call (require or define)
+     * @param {Array} the config node inside the call
+     * @param {Array} the name node inside the call
+     * @param {Array} the deps node inside the call
      */
-    parse.callToString = function (call, name, deps) {
+    parse.callToString = function (callName, config, name, deps) {
         //If name is an array, it means it is an anonymous module,
         //so adjust args appropriately. An anonymous module could
         //have a FUNCTION as the name type, but just ignore those
         //since we just want to find dependencies.
-        //TODO: CHANGE THIS if/when support using a tostring
-        //on function to find CommonJS dependencies.
-        if (name.getType() === ARRAYLIT) {
+        var configString, nameString, depString;
+        if (name && isArrayLiteral(name)) {
             deps = name;
+            name = null;
         }
 
         if (deps && !validateDeps(deps)) {
             return null;
         }
 
-        return parse.nodeToString(call);
+        //Only serialize the call name, config, module name and dependencies,
+        //otherwise could get local variable names for module value.
+        configString = config && isObjectLiteral(config) && optionalString(config);
+        nameString = optionalString(name);
+        depString = optionalString(deps);
+
+        return callName + "(" +
+            (configString ? configString : "") +
+            (nameString ? (configString ? "," : "") + nameString : "") +
+            (depString ? (configString || nameString ? "," : "") + depString : "") +
+            ");";
     };
 
     /**
      * Determines if a specific node is a valid require or define/require.def call.
-     * @param {Packages.com.google.javascript.rhino.Node} node
-     * 
+     * @param {Array} node
+     *
      * @returns {String} a JS source string with the valid require/define call.
      * Otherwise null.
      */
     parse.parseNode = function (node) {
-        var call, methodName, targetName, name, deps, callChildCount;
+        var call, name, config, deps, args;
 
-        if (node.getType() === EXPR_RESULT && node.getFirstChild().getType() === CALL) {
-            call = node.getFirstChild();
-            
-            if (call.getFirstChild().getType() === NAME &&
-                nodeString(call.getFirstChild()) === "require") {
+        if (!isArray(node)) {
+            return null;
+        }
+
+        if (node[0] === 'call') {
+            call = node[1];
+            args = node[2];
+
+            if (call[0] === 'name' && call[1] === 'require') {
 
                 //It is a plain require() call.
-                deps = call.getChildAtIndex(1);
-                if (!validateDeps(deps)) {
+                config = args[0];
+                deps = args[1];
+                if (isArrayLiteral(config)) {
+                    deps = config;
+                    config = null;
+                }
+
+                if (!deps || !validateDeps(deps)) {
                     return null;
                 }
-                return parse.nodeToString(call);
 
-            } else if (call.getType() === CALL &&
-                call.getFirstChild().getType() === NAME &&
-                nodeString(call.getFirstChild()) === "define") {
+                return this.callToString("require", null, null, deps);
 
-                //A define call
-                name = call.getChildAtIndex(1);
-                deps = call.getChildAtIndex(2);
-                return parse.callToString(call, name, deps);
+            } else if ((call[0] === 'name' && call[1] === 'define') ||
+                       (call[0] === 'dot' && call[1][1] === 'require' && call[2] === 'def')) {
 
-            } else if (call.getFirstChild().getType() === GETPROP &&
-                call.getFirstChild().getFirstChild().getType() === NAME &&
-                nodeString(call.getFirstChild().getFirstChild()) === "require") {
-
-                //Possibly a require.def/require.modify call
-
-                methodName = nodeString(call.getChildAtIndex(0).getChildAtIndex(1));
-                if (methodName === "def") {
-
-                    //A require.def() call
-                    name = call.getChildAtIndex(1);
-                    deps = call.getChildAtIndex(2);
-
-                    return parse.callToString(call, name, deps);
-                } else if (methodName === "modify") {
-
-                    //A require.modify() call
-                    callChildCount = call.getChildCount();
-                    if (callChildCount > 0) {
-                        targetName = call.getChildAtIndex(1);
-                    }
-                    if (callChildCount > 1) {
-                        name = call.getChildAtIndex(2);
-                    }
-                    if (callChildCount > 2) {
-                        deps = call.getChildAtIndex(3);
-                    }
-
-                    //Validate def name as a string
-                    if (!targetName || targetName.getType() !== STRING || !name || name.getType() !== STRING) {
-                        return null;
-                    }
-                    if (!validateDeps(deps)) {
-                        return null;
-                    }
-
-                    return parse.nodeToString(call);
-
-                }
+                //A define or require.def call
+                name = args[0];
+                deps = args[1];
+                return this.callToString("define", null, name, deps);
             }
         }
 
@@ -368,12 +350,12 @@ var parse;
     /**
      * Converts an AST node into a JS source string. Does not maintain formatting
      * or even comments from original source, just returns valid JS source.
-     * @param {Packages.com.google.javascript.rhino.Node} node
+     * @param {Array} node
      * @returns {String} a JS source string.
      */
     parse.nodeToString = function (node) {
-        var codeBuilder = new jscomp.Compiler.CodeBuilder();
-        compiler.toSource(codeBuilder, 1, node);
-        return String(codeBuilder.toString());
+        return processor.gen_code(node, true);
     };
-}());
+
+    return parse;
+});

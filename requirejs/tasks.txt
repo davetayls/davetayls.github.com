@@ -1,11 +1,86 @@
-- refactor considerations:
-  - Only execute module functions that have a specific dependency set for them?
-    Does this break some pure-web cases now? Probably not?
-  - Allow for module reload by tracing dependers. But is module reloading practical?
-    Need to have a "destroy" method on a module, to unregister event handlers?
-    Or a function callback that can be called for each module unload, and that can
-    do custom app unregistering, but should start from leaves and work to the trunk,
-    in case the unregister call
+Next release
+--------------
+- update to jQuery 1.5.1 when released
+  - Consider putting in the version detection?
+- Move up plugins, or move them to their own repo?
+- build tool to rename require and define calls to other names?
+- Build the optimizer as its own project, at least enough to take out the
+  work from jquery-require-sample
+- Confirm: From Richard Backhouse: As an FYI I have been doing my own investigation of using UglifyJS for compression
+and one thing I found when trying to compress dojo 1.5 code was that I had ensure that "make_seqs"
+flag was set to false when calling ast_squeeze. If I left this flag set to true the code would not load.
+- localeList for i18n.js support, for better Dojo support.
+
+
+
+
+Bugs to work on
+------------------
+
+- Test build scripts on windows.
+
+- plugins in excludeShallow do not work, are not excluded. For example text! one.
+
+- "libs/static.lib.02", //kaaahhhhnnnn!!!
+- Build with requireplugins-jquery.js uses bad definition for require/text, probably other plugins. Use a jqueryStub.js
+  for builds that need it with plain define, and allow the build system to load
+  the plugins. A problem, since previously built layers with plugins in them
+  can cause a problem.
+
+- replacement for modify that intercepts callbacks, holds off until another module loads them?
+
+- coffeescript plugin
+- Support Node's "extensions" mechanism.
+
+- File bug for UglifyJS on dead code removal.
+
+- Update AMD page to mention require scanning means only do them at the top.
+
+- Consider patches in jetpack for:
+  - removing scanning
+  - add amd object
+  - add plugins?
+
+
+- building with packages.build.js, the alpha/replace path mapping does not work out?
+
+- build's name insertion if there is comment between define( and the [dependencies]
+
+- ending slash in paths should throw error: https://github.com/jrburke/requirejs/issues/issue/49/
+
+- Document new closure compiler options from neonstalwart
+- require.modify alternative syntax/patch.
+- has.js plugins
+- require.def patch: https://github.com/jrburke/requirejs/pull/50
+
+- Visualization of dependencies, highlighting circular dependencies: RobbertAtWork
+
+- email on jsonp removal, toUrl and package names.
+
+- Nested package config: https://github.com/jrburke/requirejs/pull/28
+
+- IE, on errors, hits script onload, but need to make sure it is treated as a failure?
+
+- https://github.com/jrburke/requirejs/issues#issue/26:
+  spider: throw with isCheckLoaded: maybe pass for refactor branch?
+
+https://github.com/jrburke/requirejs/issues/issue/9
+- Optimizer cannot include order! plugins in a build at the moment.
+
+Optimizer improvements:
+2) Investigate the issue with main.js baseUrl overriding the one in app.build.js
+4) See if the pathing can be made simpler (abde's comment).
+
+- Figure out if isCheckLoaded can be avoided. Not likely, but revisit.
+
+- Finish PS3 work, investigate test failures, document level of support.
+
+- Check out blackberry emulators at:
+https://www.blackberry.com/Downloads/entry.do?code=060AD92489947D410D897474079C1477
+
+- Building a lib that has its own lookup paths, so it can be self-contained?
+  but what if want to share code? Maybe just make it an option, you can do it,
+  but lose out on shared common.
 
 - For function(require, exports, module) form, do not pass exports if the function
   does not ask  for it, to allow the function to set the exported value by returning.
@@ -15,22 +90,6 @@
   it also means it will be slower. A priority module can include plugins but just
   use a plugin to load the priorit module.
 
-- in commonJs.js convert, if take out dependency scanning, things break in the Node adapter.
-Need to figure out why. Function.toString() seems to work.
-
-- Allow paths mapping inside modules? for things like jsdom/browser/index.js retrieved via
-  require("./jsdom/browser");
-
-- Build: do not require the user to be in the same directory as build file?
-- Build: if optimize the build profile file, Closure compiler complains. If put parens
-  around the object, then it is OK. Decide if want to go that route or pure JSON route,
-  (which still may fail?) or have build profile skip build files?
-
-- Move to using module.basePath instead of require.nameToUrl inside methods? basePath
-  would basically call nameToUrl but use no suffix. Hmm, nice thing about nameToUrl is it
-  works with any name, not just current module. require.nameToUrl(module.id, ".html")
-  but should a module reach outside of its directory?
-
 - DOH updates
   - get latest code
   - fix rendering in IE 9 standards? How to get it to render in IE9 standard mode?
@@ -39,27 +98,10 @@ Need to figure out why. Function.toString() seems to work.
 - browser test for loading css?
 
 - Best practices/architecture guide
-- Allow r.js to work on Rhino
 
 - consider removing require.isBrowser and require.s.isBrowser, check the tests, and send email to list first.
-- include i18n and text plugins in node integration. Make sure text plugin works?
-- Look at jquery ui adapter
-- jquery as a module
-
-- require.nameToUrl convertDojo.js for dojo.moduleUrl("dojo", "resources/blank.gif")
-  would be cool to pass require.nameToUrl("dojo/resources/blank.gif") and have that work. Why is .js assumed?
-- Deliver distribution of Dojo based on require
-  - manual fix for requireIf in dojo.gfx, like what is done for dojo._base
-
-- Option to remove the script tag after the script loads. Does that help memory? Does it work in all browsers?
-
-- Allow plugins to only implement methods it needs to use, but only if there is minimal/no impact on require.js
-
-- de-dupe plugins in a build, make sure they are only included once? Or does that work already now with
-  the latest changes?
 
 - Make sure text plugin works offline.
-- Make sure text plugin works in rhino env.
 - Get Blackberry simulator. Blackberry greater than 4.6, and particulary with the Blackberry 9500 simulator (with OS v4.7),
 install and launch Blackberry MDS service simulator before running simulator to get network.
 
@@ -71,23 +113,7 @@ http://groups.google.com/group/jsdoc-2/msg/b1dd2f8991156fa0
 
 - Use JSDoc to document a full module?
 
-- loading more than one locale for a page. A locales= option? Need this for full
-  Dojo conversion.
-
 - When doing docs via jsdoc, using {some/module} as return types? How does JSDoc deal with the nested objects?
   Probably needs custom work to get it recognize the module concept thing.
 
 - To validate with Caja: http://caja.appspot.com/ and paste the code inside a script tag.
-
-Considered, but not implemented
--------------------------------
-- Bryan: test if document load and document domcontentloaded. Safari 3 has trouble, can do addEventListener, but no DOMContentLoaded?
-  Tested existing code (uses window load and document domcontentloaded, and require.ready fires correctly in Safari 3.2.3 on Windows, so this is not a high priority
-  item.
-
-- Look at module function call during recurse instead of building up the ordered
-  array of modules. It was there to prevent issues with small call stacks in older Safaris,
-  but now that should not be a problem. Not a big decrease in file size to switching,
-  but just means there is fewer looping going on, so bulk perf gain? But it is just one
-  loop reduction, small to the amount of function calling going on? Complicates build
-  system too, where it overrides callModules to get the list of modules.

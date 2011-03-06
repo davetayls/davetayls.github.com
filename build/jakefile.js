@@ -28,6 +28,13 @@ task('default', ['js.validate','less'], function (params) {
   taskHeader(this);
 });
 
+// require **************************************************
+desc('requirejs optimisation');
+task('requirejs', [], function(){
+	taskHeader(this);
+	
+});
+
 
 // less ************************************************************************
 desc('less compilation');

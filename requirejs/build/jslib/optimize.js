@@ -1,46 +1,18 @@
 /**
- * @license Copyright (c) 2010, The Dojo Foundation All Rights Reserved.
+ * @license Copyright (c) 2010-2011, The Dojo Foundation All Rights Reserved.
  * Available via the MIT or new BSD license.
  * see: http://github.com/jrburke/requirejs for details
  */
 
-/*jslint plusplus: false */
-/*global require: false, java: false, Packages: false, logger: false, fileUtil: false,
-  readFile: false, lang: false */
+/*jslint plusplus: false, nomen: false, regexp: false, strict: false */
+/*global define: false */
 
-"use strict";
+define([ 'lang', 'logger', 'env!env/optimize', 'env!env/file', 'uglifyjs/index'],
+function (lang,   logger,   envOptimize,        file,           uglify) {
 
-var optimize;
-
-(function () {
-    var JSSourceFilefromCode,
-        textDepRegExp = /["'](text)\!([^"']+)["']/g,
-        relativeDefRegExp = /(require\s*\.\s*def|define)\s*\(\s*['"]([^'"]+)['"]/g,
+    var optimize,
         cssImportRegExp = /\@import\s+(url\()?\s*([^);]+)\s*(\))?([\w, ]*)(;)?/g,
         cssUrlRegExp = /\url\(\s*([^\)]+)\s*\)?/g;
-
-
-    //Bind to Closure compiler, but if it is not available, do not sweat it.
-    try {
-        JSSourceFilefromCode = java.lang.Class.forName('com.google.javascript.jscomp.JSSourceFile').getMethod('fromCode', [java.lang.String, java.lang.String]);
-    } catch (e) {}
-
-    //Helper for closure compiler, because of weird Java-JavaScript interactions.
-    function closurefromCode(filename, content) {
-        return JSSourceFilefromCode.invoke(null, [filename, content]);
-    }
-
-    //Adds escape sequences for non-visual characters, double quote and backslash
-    //and surrounds with double quotes to form a valid string literal.
-    //Assumes the string will be in a single quote string value.
-    function jsEscape(text) {
-        return text.replace(/(['\\])/g, '\\$1')
-            .replace(/[\f]/g, "\\f")
-            .replace(/[\b]/g, "\\b")
-            .replace(/[\n]/g, "\\n")
-            .replace(/[\t]/g, "\\t")
-            .replace(/[\r]/g, "\\r");
-    }
 
     /**
      * If an URL from a CSS url value contains start/end quotes, remove them.
@@ -85,9 +57,9 @@ var optimize;
             if (mediaTypes && ((mediaTypes.replace(/^\s\s*/, '').replace(/\s\s*$/, '')) !== "all")) {
                 return fullMatch;
             }
-    
+
             importFileName = cleanCssUrlQuotes(importFileName);
-            
+
             //Ignore the file import if it is part of an ignore list.
             if (cssImportIgnore && cssImportIgnore.indexOf(importFileName + ",") !== -1) {
                 return fullMatch;
@@ -95,13 +67,13 @@ var optimize;
 
             //Make sure we have a unix path for the rest of the operation.
             importFileName = importFileName.replace(lang.backSlashRegExp, "/");
-    
+
             try {
                 //if a relative path, then tack on the filePath.
                 //If it is not a relative path, then the readFile below will fail,
                 //and we will just skip that import.
                 var fullImportFileName = importFileName.charAt(0) === "/" ? importFileName : filePath + importFileName,
-                    importContents = fileUtil.readFile(fullImportFileName), i,
+                    importContents = file.readFile(fullImportFileName), i,
                     importEndIndex, importPath, fixedUrlMatch, colonIndex, parts;
 
                 //Make sure to flatten any nested imports.
@@ -118,7 +90,7 @@ var optimize;
                 importContents = importContents.replace(cssUrlRegExp, function (fullMatch, urlMatch) {
                     fixedUrlMatch = cleanCssUrlQuotes(urlMatch);
                     fixedUrlMatch = fixedUrlMatch.replace(lang.backSlashRegExp, "/");
-    
+
                     //Only do the work for relative URLs. Skip things that start with / or have
                     //a protocol.
                     colonIndex = fixedUrlMatch.indexOf(":");
@@ -141,10 +113,10 @@ var optimize;
                             }
                         }
                     }
-    
+
                     return "url(" + parts.join("/") + ")";
                 });
-    
+
                 return importContents;
             } catch (e) {
                 logger.trace(fileName + "\n  Cannot inline css import, skipping: " + importFileName);
@@ -154,103 +126,6 @@ var optimize;
     }
 
     optimize = {
-        closure: function (fileName, fileContents, keepLines) {
-            var jscomp = Packages.com.google.javascript.jscomp,
-                flags = Packages.com.google.common.flags,
-                //Fake extern
-                externSourceFile = closurefromCode("fakeextern.js", " "),
-                //Set up source input
-                jsSourceFile = closurefromCode(String(fileName), String(fileContents)),
-                options, FLAG_compilation_level, compiler,
-                Compiler = Packages.com.google.javascript.jscomp.Compiler;
-
-            logger.trace("Minifying file: " + fileName);
-
-            //Set up options
-            options = new jscomp.CompilerOptions();
-            options.prettyPrint = keepLines;
-
-            FLAG_compilation_level = flags.Flag.value(jscomp.CompilationLevel.SIMPLE_OPTIMIZATIONS);
-            FLAG_compilation_level.get().setOptionsForCompilationLevel(options);
-
-            //Trigger the compiler
-            Compiler.setLoggingLevel(Packages.java.util.logging.Level.WARNING);
-            compiler = new Compiler();
-            compiler.compile(externSourceFile, jsSourceFile, options);
-            return compiler.toSource();  
-        },
-    
-        //Inlines text! dependencies.
-        inlineText: function (fileName, fileContents) {
-            return fileContents.replace(textDepRegExp, function (match, prefix, dep, offset) {
-                var parts, modName, ext, strip, content, normalizedName, index,
-                    defSegment, defStart, defMatch, tempMatch, defName;
-
-                parts = dep.split("!");
-                modName = parts[0];
-                ext = "";
-                strip = parts[1];
-                content = parts[2];
-
-                //Extension is part of modName
-                index = modName.lastIndexOf(".");
-                if (index !== -1) {
-                    ext = modName.substring(index + 1, modName.length);
-                    modName = modName.substring(0, index);
-                }
-
-                //Adjust the text path to be a full name, not a relative
-                //one, if needed.
-                normalizedName = modName;
-                if (modName.charAt(0) === ".") {
-                    //Need to backtrack an arbitrary amount in the file
-                    //to find the require.def call
-                    //that includes this relative name, to find what path to use
-                    //for the relative part.
-                    defStart = offset - 1000;
-                    if (defStart < 0) {
-                        defStart = 0;
-                    }
-                    defSegment = fileContents.substring(defStart, offset);
-
-                    //Take the last match, the one closest to current text! string.
-                    relativeDefRegExp.lastIndex = 0;
-                    while ((tempMatch = relativeDefRegExp.exec(defSegment)) !== null) {
-                        defMatch = tempMatch;
-                    }
-
-                    if (!defMatch) {
-                        throw new Error("Cannot resolve relative dependency: " + dep + " in file: " + fileName);
-                    }
-
-                    //Take the last match, the one closest to current text! string.
-                    defName = defMatch[2];
-
-                    normalizedName = require.normalizeName(modName, defName, require.s.contexts._);
-                }
-
-                if (strip !== "strip") {
-                    content = strip;
-                    strip = null;
-                }
-
-                if (content) {
-                    //Already an inlined resource, return.
-                    return match;
-                } else {
-                    content = readFile(require.nameToUrl(normalizedName, "." + ext, require.s.ctxName));
-                    if (strip) {
-                        content = require.textStrip(content);
-                    }
-                    return "'" + prefix  +
-                           "!" + modName +
-                           (ext ? "." + ext : "") +
-                           (strip ? "!strip" : "") +
-                           "!" + jsEscape(content) + "'";
-                }
-            });
-        },
-
         /**
          * Optimizes a file that contains JavaScript content. It will inline
          * text plugin files and run it through Google Closure Compiler
@@ -262,30 +137,26 @@ var optimize;
          * @param {Object} config the build config object.
          */
         jsFile: function (fileName, outFileName, config) {
-            var doClosure = (config.optimize + "").indexOf("closure") === 0,
-                fileContents;
+            var parts = (config.optimize + "").split('.'),
+                optimizerName = parts[0],
+                keepLines = parts[1] === 'keepLines',
+                fileContents, optFunc;
 
-            if (config.inlineText && !optimize.textLoaded) {
-                //Make sure text extension is loaded.
-                require(["require/text"]);
-                optimize.textLoaded = true;
-            }
-
-            fileContents = fileUtil.readFile(fileName);
-
-            //Inline text files.
-            if (config.inlineText) {
-                fileContents = optimize.inlineText(fileName, fileContents);
-            }
+            fileContents = file.readFile(fileName);
 
             //Optimize the JS files if asked.
-            if (doClosure) {
-                fileContents = optimize.closure(fileName,
-                                               fileContents,
-                                               (config.optimize.indexOf(".keepLines") !== -1));
+            if (optimizerName && optimizerName !== 'none') {
+                optFunc = envOptimize[optimizerName] || optimize.optimizers[optimizerName];
+                if (!optFunc) {
+                    throw new Error('optimizer with name of "' +
+                                    optimizerName +
+                                    '" not found for this environment');
+                }
+                fileContents = optFunc(fileName, fileContents, keepLines,
+                                        config[optimizerName]);
             }
 
-            fileUtil.saveUtf8File(outFileName, fileContents);
+            file.saveUtf8File(outFileName, fileContents);
         },
 
         /**
@@ -298,7 +169,7 @@ var optimize;
          */
         cssFile: function (fileName, outFileName, config) {
             //Read in the file. Make sure we have a JS string.
-            var originalFileContents = fileUtil.readFile(fileName),
+            var originalFileContents = file.readFile(fileName),
                 fileContents = flattenCss(fileName, originalFileContents, config.cssImportIgnore),
                 startIndex, endIndex;
 
@@ -329,7 +200,7 @@ var optimize;
                 logger.error("Could not optimized CSS file: " + fileName + ", error: " + e);
             }
 
-            fileUtil.saveUtf8File(outFileName, fileContents);
+            file.saveUtf8File(outFileName, fileContents);
         },
 
         /**
@@ -341,8 +212,8 @@ var optimize;
          */
         css: function (startDir, config) {
             if (config.optimizeCss.indexOf("standard") !== -1) {
-                var i, fileName, startIndex, endIndex, originalFileContents, fileContents,
-                    fileList = fileUtil.getFilteredFileList(startDir, /\.css$/, true);
+                var i, fileName,
+                    fileList = file.getFilteredFileList(startDir, /\.css$/, true);
                 if (fileList) {
                     for (i = 0; i < fileList.length; i++) {
                         fileName = fileList[i];
@@ -351,6 +222,32 @@ var optimize;
                     }
                 }
             }
+        },
+
+        optimizers: {
+            uglify: function (fileName, fileContents, keepLines, config) {
+                var parser = uglify.parser,
+                    processor = uglify.uglify,
+                    ast, genCodeConfig;
+
+                config = config || {};
+                genCodeConfig = config.gen_codeOptions || keepLines;
+
+                logger.trace("Uglifying file: " + fileName);
+
+                try {
+                    ast = parser.parse(fileContents, config.strict_semicolons);
+                    ast = processor.ast_mangle(ast, config.do_toplevel);
+                    ast = processor.ast_squeeze(ast, config.ast_squeezeOptions);
+
+                    fileContents = processor.gen_code(ast, genCodeConfig);
+                } catch (e) {
+                    logger.error('Cannot uglify file: ' + fileName + '. Skipping it. Error is:\n' + e.toString());
+                }
+                return fileContents;
+            }
         }
     };
-}());
+
+    return optimize;
+});

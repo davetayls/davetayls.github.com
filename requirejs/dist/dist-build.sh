@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#@license RequireJS Copyright (c) 2010, The Dojo Foundation All Rights Reserved.
+#@license RequireJS Copyright (c) 2010-2011, The Dojo Foundation All Rights Reserved.
 #Available via the MIT or new BSD license.
 #see: http://github.com/jrburke/requirejs for details
 
@@ -11,7 +11,9 @@ if [ -z $version ]; then
     exit 1
 fi
 
-jqueryName=jquery-1.4.3.js
+myDir=`cd \`dirname "$0"\`; pwd`
+
+jqueryName=jquery-1.4.4.js
 
 # Setup a build directory
 rm -rf ../../requirejs-build
@@ -32,14 +34,19 @@ mv requirejs-$version.zip $version
 cd requirejs-$version/build/require
 ./build.sh
 cd build
+sed -i '' 's/\/\*jslint/\/\*jslint white\: false\,/' require.js
+sed -i '' 's/\/\*jslint/\/\*jslint white\: false\,/' allplugins-require.js
 cp require.js ../../../../$version/comments/require.js
 cp allplugins-require.js ../../../../$version/comments/allplugins-require.js
+
 
 # Build jquery options
 cd ../../jquery
 ../build.sh require-jquery.build.js
 ../build.sh requireplugins-jquery.build.js
 
+sed -i '' 's/\/\*jslint/\/\*jslint white\: false\,/' dist/require-jquery.js
+sed -i '' 's/\/\*jslint/\/\*jslint white\: false\,/' dist/requireplugins-jquery.js
 mv dist/require-jquery.js ../../../$version/comments/require-$jqueryName
 mv dist/requireplugins-jquery.js ../../../$version/comments/requireplugins-$jqueryName
 
@@ -51,12 +58,12 @@ cp dist/jquery-require-sample.zip ../../../$version
 
 # Create node integration layer
 cd ../../
-cd build/convert/node
-java -jar ../../lib/rhino/js.jar dist.js
-mkdir ../../../../$version/node
-cp r.js ../../../../$version/node
-cp index.js ../../../../$version/node
-cd ../../../
+cd adapt
+node dist.js
+mkdir ../../$version/node
+cp r.js ../../$version/
+cp tests/node/index.js ../../$version/node
+cd ../
 
 # Minify any of the browser-based JS files
 cd ../$version/comments

@@ -1,14 +1,18 @@
 require({
-        baseUrl: require.isBrowser ? "./" : "./anon/"
+        baseUrl: require.isBrowser ? "./" : "./anon/",
+        paths: {
+            require: "../../require"
+        }
     },
     ["require", "magenta", "red", "blue", "green", "yellow", "a", "c"],
     function(require, magenta, red, blue, green, yellow, a, c) {
+
         doh.register(
-            "anonSimple", 
+            "anonSimple",
             [
                 function colors(t){
                     t.is("redblue", magenta.name);
-                    t.is((require.isBrowser ? "./foo.html" : "./anon/foo.html"), magenta.path);
+                    t.is((require.isBrowser ? "foo.html" : "anon/foo.html"), magenta.path);
                     t.is("red", red.name);
                     t.is("blue", blue.name);
                     t.is("green", green.name);
@@ -20,6 +24,7 @@ require({
                 }
             ]
         );
+        doh.run();
 
         //Also try a require call after initial page
         //load that uses already loaded modules,
@@ -33,6 +38,7 @@ require({
                             t.is("red", red.name);
                             t.is("blue", blue.name);
                             t.is("redblue", magenta.name);
+                            t.is("hello world", magenta.message);
                        }
                     ]
                 );
