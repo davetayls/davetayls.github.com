@@ -3,6 +3,7 @@ layout: post
 author: davetayls
 title: Agile Software Development with Scrum
 categories: agile
+postimage: /content/agilesoftwaredevwithscrum.jpg
 ---
 
 I've started reading [Agile Software Development with Scrum](http://www.amazon.co.uk/gp/product/0132074893). This is just the first few sections of the book, but I've tried to pull out key thoughts and instructions that can be skimmed over and later used as a benchmark.
