@@ -8,6 +8,10 @@ postimage: /content/agilesoftwaredevwithscrum.jpg
 
 I've started reading [Agile Software Development with Scrum](http://www.amazon.co.uk/gp/product/0132074893). This is just the first few sections of the book, but I've tried to pull out key thoughts and instructions that can be skimmed over and later used as a benchmark.
 
+Take a look at the other posts:
+
+*	[Daily Scrum Meetings](http://the-taylors.org/blog/2011/03/15/daily-scrum-meetings/)
+
 I've seen a good deal of gains whilst working in a Scrum environment at the [digital, creative agency](http://www.aqueduct.co.uk) I work at. Much of them are talked about below but to highlight what has got me excited about Scrum...when we get this RIGHT projects are so much more productive, less stressful and issues are cleared quicker.
 
 I'm enjoying this discovery process and I'd thouroughly recommend anyone to give it a go.  
