@@ -1,10 +1,6 @@
 
 scripts/core/main.js
 ----------------
-scripts/core/promos/portfolioWindow.js
-scripts/core/main.js
-scripts/core/dt.js
-scripts/jquery/jquery.windowViewer.js
-scripts/keys.js
-scripts/core/related/tweets.js
 scripts/jquery/jquery.tweet.js
+scripts/core/related/tweets.js
+scripts/core/main.js

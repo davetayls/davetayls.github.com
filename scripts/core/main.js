@@ -1,233 +1,3 @@
-/*global define */
-define('core/promos/portfolioWindow',['jquery/jquery.windowViewer', 'keys'], function (wv, KEYS) {
-
-    var portfolio$,
-        portfolioWindow$,
-	    innerWindow$,
-        portfolioDetail$,
-        portfolioDetailWrapper$,
-        detailCta$,
-        detailImage$,
-        closeDetails$,
-        otherThumbs$;
-
-    var hideDetail = function () {
-        if ($.support.opacity) {
-            portfolioDetail$.fadeOut();
-        } else {
-            portfolioDetail$.hide();
-        }
-    };
-    var showDetail = function (title, caption, imageSrc, moreUrl) {
-        portfolio$.removeClass('portfolioTsmall');
-        detailImage$.attr('alt', title)
-            .attr('src', imageSrc);
-        detailCta$
-            .attr('href', moreUrl)
-            .html('<span class="portfolio-detail-h">' + title + '</span><span>' + caption + '</span>');
-        $(window).keydown(function (e) {
-            if (e.which === KEYS.ESC) {
-                hideDetail();
-            }
-        });
-
-        if ($.support.opacity) {
-            portfolioDetail$.fadeIn();
-        } else {
-            portfolioDetail$.show();
-        }
-    };
-    var loadFlickr = function () {
-        var apiFeed = 'http://api.flickr.com/services/feeds/photos_public.gne?id=49288551@N04&tags=feature&format=json&jsoncallback=?';
-        $.ajaxSetup({ cache: false });
-        $.getJSON(apiFeed,
-                function (data, textStatus) {
-                    $.each(data.items, function (i, item) {
-                        var item$ = $('<a />', {
-                            href: item.link,
-                            'class': 'cp-workSquare',
-                            target: '_blank'
-                        });
-                        var img$ = $('<img src="' + item.media.m + '" alt="' + item.title + '" />')
-                            .load(function () {
-                                var img$ = $(this);
-                                var height = parseInt(img$.height(), 10);
-                                var width = parseInt(img$.width(), 10);
-                                if (height > width) {
-                                    img$.attr('width', '149');
-                                } else {
-                                    img$.attr('height', '149');
-                                }
-                            })
-                            .appendTo(item$);
-                        item$.append('<span class="cp-workSquare-caption">' + item.title + '</span>')
-                            .appendTo(otherThumbs$);
-                        if (i === 6) {
-                            return false;
-                        }
-                    });
-                });
-    };
-
-    return {
-        init: function () {
-		
-			// don't initialise if on a very small screen
-			if ($(window).width() < 481){
-				return;
-			}
-		
-            portfolio$ = $('#portfolio');
-            portfolioWindow$ = $('#portfolio-window');
-            portfolioDetail$ = $('#portfolio-detail');
-
-            // inner window
-            innerWindow$ = $('#portfolio-window-inner');
-            innerWindow$.delegate('#portfolio-window-inner-work a.cp-workSquare', 'click', function (e) {
-                var this$ = $(this);
-                showDetail(this$.find('>img').attr('alt'), this$.find('>span').html(), this$.data('largeImage'), this$.attr('href'));
-                return false;
-            });
-
-            // detail
-            portfolioDetailWrapper$ = $('<div id="portfolio-detail-wrapper" />').appendTo(portfolioDetail$);
-            detailImage$ = $('<img />').appendTo(portfolioDetailWrapper$);
-            detailCta$ = $('<a id="portfolio-detail-cta" class="cc">').appendTo(portfolioDetailWrapper$);
-            closeDetails$ = $('<span id="portfolio-detail-close">x</span>')
-                .appendTo(portfolioDetail$)
-                .click(function (e) {
-                    hideDetail();
-                });
-
-
-            portfolioWindow$.windowViewer();
-
-            // otherThumbs$
-            otherThumbs$ = $('#portfolio-window-inner-other');
-            
-			$(window).load(loadFlickr);
-        }
-    };
-
-});
-/*jslint white:false */
-/*global $ require SyntaxHighlighter window*/
-$('pre>code').each(function(){
-    var this$ = $(this);
-    this$.parent()
-        .addClass('brush: js')
-        .text(this$.text());
-});
-SyntaxHighlighter.all();
-
-require(['core/dt'], function (dt) {});
-require(['core/promos/portfolioWindow'], function (promoWindow) {
-	promoWindow.init();
-});
-require(['core/related/tweets'], function (tweets) {
-	
-	$(window).load(function () {
-	    tweets.init('#tweets');
-	});
-});
-define("core/main", function(){});
-/*global define */
-define('core/dt',{});
-(function($) {
-    $.fn.windowViewer = function(settings) {
-        var config = { 
-			onMove: null,
-			hPadding: 0,
-			vPadding: 0 
-		};
-        if (settings) $.extend(config, settings);
-
-        this.each(function() {
-            // outer window box
-			var box = $(this);  //$("#box");            
-            box.mousemove(function(e) {
-                // get mouse position
-				var mouseX = e.pageX;
-                var mouseY = e.pageY;
-
-				// get size of window				
-                var boxSize = {};
-                boxSize.width = box.width();
-                boxSize.height = box.height();
-
-				// get distance from left edge
-                var boxOffset = box.offset();
-                var distanceXDiff;
-                distanceXDiff = (mouseX - boxOffset.left);
-				
-				// get fractional location of mouse to box 0:left edge to 1:right edge
-                var distanceX;
-                distanceX = (distanceXDiff - config.hPadding) / (boxSize.width - (config.hPadding * 2));
-
-				// get distance from top edge
-                var distanceYDiff;
-                distanceYDiff = (mouseY - boxOffset.top);
-				
-				// get fractional distance from top of box
-                var distanceY;
-                distanceY = (distanceYDiff - config.vPadding) / (boxSize.height - (config.vPadding * 2));
-
-				// get inner box and it's dimensions
-                var innerBox = box.find(":first");
-                var innerBoxSize = {
-					height : innerBox.height(),
-					width : innerBox.width()
-				};
-				
-				// get location of inner box relative to window box
-                var innerBoxOffset = innerBox.offset();
-
-				// get the difference between the larger inner box and smaller window
-                var sizeDifferenceX = innerBoxSize.width - boxSize.width;
-                var innerBoxLeft = 0 - (distanceX * sizeDifferenceX);
-                var sizeDifferenceY = innerBoxSize.height - boxSize.height;
-                var innerBoxTop = 0 - (distanceY * sizeDifferenceY);
-
-                innerBox.css({ "position": "absolute" });
-                if (distanceX >= 0 && distanceX <= 1) innerBox.css("left", innerBoxLeft + "px");
-                if (distanceY >= 0 && distanceY <= 1) innerBox.css("top", innerBoxTop + "px");
-				
-				if (config.onMove){
-					config.onMove.call(this,e,{
-						'boxSize' : 		boxSize,
-						'boxOffset' : 		boxOffset,
-						'distance' : 		{x:distanceX,y:distanceY},
-						'innerBoxOffset': 	innerBoxOffset,
-						'innerBoxPos' : 	{left:innerBoxLeft},
-						'innerBoxSize': 	innerBoxSize
-					});
-				}
-
-            });
-            return this;
-        });
-
-
-
-    };
-})(jQuery);
-define("jquery/jquery.windowViewer", function(){});
-// key codes
-/*global define */
-define('keys',{
-    ENTER:  13,
-    ESC:    27,
-    TAB:    9
-});
-define('core/related/tweets',['jquery/jquery.tweet'], {
-
-    init: function (selector) {
-        $(selector).tweet({
-            username: 'davetayls'
-        });
-    }
-
-});
 (function($) {
  
   $.fn.tweet = function(o){
@@ -403,3 +173,28 @@ define('core/related/tweets',['jquery/jquery.tweet'], {
   };
 })(jQuery);
 define("jquery/jquery.tweet", function(){});
+define('core/related/tweets',['jquery/jquery.tweet'], {
+
+    init: function (selector) {
+        $(selector).tweet({
+            username: 'davetayls',
+			avatar_size: 16
+        });
+    }
+
+});/*jslint white:false */
+/*global $ require SyntaxHighlighter window*/
+$('pre>code').each(function(){
+    var this$ = $(this);
+    this$.parent()
+        .addClass('brush: js')
+        .text(this$.text());
+});
+SyntaxHighlighter.all();
+
+require(['core/related/tweets'], function (tweets) {	
+	$(window).load(function () {
+	    tweets.init('#tweets');
+	});
+});
+define("core/main", function(){});

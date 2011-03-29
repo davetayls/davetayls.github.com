@@ -2,7 +2,8 @@ define(['jquery/jquery.tweet'], {
 
     init: function (selector) {
         $(selector).tweet({
-            username: 'davetayls'
+            username: 'davetayls',
+			avatar_size: 16
         });
     }
 

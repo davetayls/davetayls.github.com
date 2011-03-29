@@ -1,4 +1,4 @@
-(function($) {
+﻿(function($) {
     $.fn.windowViewer = function(settings) {
         var config = { 
 			onMove: null,
@@ -40,8 +40,8 @@
 				// get inner box and it's dimensions
                 var innerBox = box.find(":first");
                 var innerBoxSize = {
-					height : innerBox.height(),
-					width : innerBox.width()
+					height : innerBox.outerHeight(),
+					width : innerBox.outerWidth()
 				};
 				
 				// get location of inner box relative to window box

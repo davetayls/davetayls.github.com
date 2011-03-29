@@ -1,4 +1,4 @@
-// Declarations
+﻿// Declarations
 var dt = {};
 dt.getQuery = function(ji) {
     hu = window.location.search.substring(1);
