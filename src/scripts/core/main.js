@@ -8,12 +8,7 @@ $('pre>code').each(function(){
 });
 SyntaxHighlighter.all();
 
-require(['core/dt'], function (dt) {});
-require(['core/promos/portfolioWindow'], function (promoWindow) {
-	promoWindow.init();
-});
-require(['core/related/tweets'], function (tweets) {
-	
+require(['core/related/tweets'], function (tweets) {	
 	$(window).load(function () {
 	    tweets.init('#tweets');
 	});
