@@ -1,0 +1,23 @@
+{% for post in site.posts limit:3 %}
+<div class="mod-post">
+  <div class="cp-postHeader">
+		<p class="cp-postHeader-date">
+			<abbr title="{{ page.date | date:'%B' }}">
+				{{ post.date | date:"%b" }}				                    		
+			</abbr>
+			<span>{{ post.date | date:"%d" }}</span>
+        </p>
+		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+		<p class="cp-postHeader-details">
+			Posted by: {{ post.author }}
+			{% if post.categories %}
+				<span> in:</span> 
+					&nbsp;{{ post.categories }}
+			{% endif %}
+		</p>
+  </div>                                                              
+	<div class="mod-post-content">
+	{{ post.content }}
+	 </div>	
+</div>
+{% endfor %}
