@@ -1,7 +1,7 @@
 {
     appDir: "../src",
     baseUrl: "scripts/",
-    dir: "../src-build",
+    dir: "../../davetayls.github.com-master",
 	optimize: '',
 	optimizeCss: 'none',
     modules: [

@@ -15,7 +15,7 @@ var taskHeader = function(task){
 var dir = {
 	current: 	process.cwd(),
 	project: 	path.join(process.cwd(), '../src'),
-	release: 	path.join(process.cwd(), '../src-build'),
+	release: 	path.join(process.cwd(), '../../davetayls.github.com-master'),
 	requirejs:	path.join(process.cwd(), '../requirejs/build'),
 	rhino: 		path.join(process.cwd(), '../requirejs/build/lib/rhino/js.jar'),
 	closure:	path.join(process.cwd(), '../requirejs/build/lib/closure/compiler.jar'),
