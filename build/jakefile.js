@@ -22,7 +22,6 @@ var dir = {
 	test: '',
 	tools:''
 }
-console.log(dir);
 desc('default task.');
 task('default', ['js.validate','less'], function (params) {
   taskHeader(this);
