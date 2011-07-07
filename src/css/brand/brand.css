@@ -1,5 +1,5 @@
 /*
-    2.brand.css
+    brand.css
     - These styles are used to set basic elements to fit to a brand.
     - It should be able to be added to a page no matter what the media type to set the brand.
     - It must not contain layout styles [ie margins,position,padding,display]. It would be used for: colors, text, fonts
@@ -8,7 +8,7 @@
     These elements should be in a rough alphabetical order
 */
 
-@import "reset";
+@import url("reset.css");
 
 /*
     fonts
@@ -34,8 +34,9 @@ body, select, input, textarea {
 	font-family: Georgia, Tahoma, Arial, Helvetica, "Nimbus Sans L", "Free Sans", Sans-Serif;
 }	
 body        {
-	font-size: 75%; /*12px*/
-	line-height: 1.3em;	
+    color: #444;
+	font-size: 87.5%; /*12px*/
+	line-height: 1.286;	
 }
 body.acc-med	{ font-size: 0.92em; }
 body.acc-large	{ font-size: 1.1em; }
@@ -112,13 +113,21 @@ pre, code, kbd, samp { font-family: monospace, sans-serif; }
 ----------------------------------------------------*/
 /* www.aestheticallyloyal.com/public/optimize-legibility/ */ 
 h1,h2,h3,h4,h5,h6 { font-weight: bold; text-rendering: optimizeLegibility; }
-h1          { padding: 0 0 10px; }
+h1     { 
+	color:#777;
+	font-size: 2em; /* 28px */
+    font-weight: normal;
+	letter-spacing: 0.003em;
+    line-height: 1.286; /* 36px */
+	margin: 0;	
+    padding: 0 0 10px; 
+}
 h2     {
 	color:#777;
-	font-size:1.7em;
+	font-size:1.429em; /* 20px */
 	font-weight:normal;
 	letter-spacing:-0.008em;
-	line-height: 1.15em;	
+    line-height: 1.35;
 	margin: 0;	
 	padding: 15px 0 5px;
 }
@@ -204,14 +213,12 @@ table {
 		line-height:1.2em;
 		padding:15px 5px;
 		text-align:left;
-		text-shadow:1px 1px 0 #FFFFFF;
 	}
 	td {
 		border-top: dotted 1px #fff;
 		border-bottom: dotted 1px #ccc;
 		border-left: solid 1px #efefef;
 		padding: 3px 5px;
-		text-shadow: 1px 1px 0px #fff;
 	}
 	tr:nth-child(even) td{
 		background-color: #eee;
