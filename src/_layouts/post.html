@@ -20,17 +20,17 @@ portfolio: small
 					&nbsp;{{ page.categories }}
 			{% endif %}
 			</p>
+            {% if page.share != 'hide' %}
+            <div>
+                {% include twitter-tweet.html %}
+                {% include facebooklike.html %}
+            </div>
+            {% endif %}
 		</div>                              
         <div id="articleContent">
             {{ content }} 
         </div>
 
-        {% if page.share != 'hide' %}
-		<div>
-			{% include twitter-tweet.html %}
-			{% include facebooklike.html %}
-		</div>
-		{% endif %}
         {% if page.comments != 'hide' %}
         <div>
             <div id="disqus_thread"></div>
