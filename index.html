@@ -1,71 +1,39 @@
 ---
 title: 3M0H
 layout: master
-description: A disciplined and passionate graphic designer / web developer with bundles of experience working alongside clients across a range of technologies.
+description: maker of stuff, often webby related, daddy and blessed to have a wife that makes lots of cakes mmmm
 ---
-            <h1 class="visuallyhidden">David Taylor - Graphic Designer / Web Developer</h1>
-            <div id="contentWrapper" class="lay-mRight2 cc">
-                <div id="content" class="lay-mRight2-content cc">            
-					<div>
-						<ul class="visuallyhidden">
-							<li><a href="#articles">Articles and News</a></li>
-							<li><a href="#projects">Projects</a></li>
-						</ul>
-						<div id="articles">
-							{% include blog-posts.html %}
-						</div>
-						<div id="projects">
-                         {% include projects.htm %}
-						</div>
-					</div>
-                </div>
-                <div class="lay-mRight2-aside">
-                <h2 class="visuallyhidden">Other</h2>
-            <div id="related">
-              <div>
-				<h3>About me</h3>
-                <div>
-                    <ul class="nav-v nav-block cc">
-                        <li>
-                            <a href="pdf/David_Taylor_CV_07540817008.doc">Download my <abbr title="Curriculum Vitae">CV</abbr>[<abbr title="word document">doc]</abbr></a>
-                        </li>
-                        <li>
-                            <a href="pdf/David_Taylor_CV_07540817008.pdf">Download my <abbr title="Curriculum Vitae">CV</abbr>[PDF]</a>
-                        </li>
-                        <li>
-                            <a href="http://feed.the-taylors.org">Blog RSS Feed</a>
-                        </li>
-                        <li>
-                            <a href="http://twitter.com/davetayls">Twitter @davetayls</a>
-                        </li>
-                        <li>
-                            <a href="http://www.linkedin.com/in/davidtaylorlondon">LinkedIn</a>
-                        </li>
-                    </ul>                   
-                </div>
-				<h3>Reference</h3>
-                <div>
-                    <ul class="nav-v nav-block cc">
-                        <li>
-                            <a href="http://the-taylors.org/front-end-standards/">Front-End Standards</a>
-                        </li>
-                        <li>
-                            <a href="TestStation/csssprites/csssprites.htm">CSS Sprites</a>
-                        </li>
-                    </ul>                   
-                </div>
-                <h3>jQuery Plugins</h3>
-                <ul class="nav-v nav-block cc">
-                    <li>
-                        <a href="jQueryPlugins/jquery.windowViewer.htm">jquery.windowViewer</a>
-                    </li>
-                    <li>
-                        <a href="http://github.com/davetayls/jquery.liScroll/">liScroll additions</a>
-                    </li>
-                </ul>
-                
-              </div>
-            </div>
-
-                </div>
-            </div>
+<div id="contentWrapper">
+    <h1>David Taylor - Front-End Interface Web Developer</h1>
+    <section id="content" class="mod-blogPosts">            
+        {% include blog-posts.html %}
+    </section>
+    <aside id="related">
+        <h1>Other Info</h1>
+        <h2>About me</h2>
+        <ul>
+            <li> <a href="pdf/David_Taylor_CV_07540817008.doc">Download my <abbr title="Curriculum Vitae">CV</abbr>[<abbr title="word document">doc]</abbr></a> </li>
+            <li> <a href="pdf/David_Taylor_CV_07540817008.pdf">Download my <abbr title="Curriculum Vitae">CV</abbr>[PDF]</a> </li>
+            <li> <a href="http://feed.the-taylors.org">Blog RSS Feed</a> </li>
+            <li> <a href="http://twitter.com/davetayls">Twitter @davetayls</a> </li>
+            <li> <a href="http://www.linkedin.com/in/davidtaylorlondon">LinkedIn</a> </li>
+        </ul>                   
+        <h2>Reference</h2>
+        <ul>
+            <li> <a href="http://the-taylors.org/front-end-standards/">Front-End Standards</a> </li>
+            <li> <a href="TestStation/csssprites/csssprites.htm">CSS Sprites</a> </li>
+        </ul>                   
+        <h2>jQuery Plugins</h2>
+        <ul>
+            <li>
+            <a href="jQueryPlugins/jquery.windowViewer.htm">jquery.windowViewer</a>
+            </li>
+            <li>
+            <a href="http://github.com/davetayls/jquery.liScroll/">liScroll additions</a>
+            </li>
+        </ul>
+        <h2>Twitter</h2>
+        <div id="tweets"></div>
+        <p><a href="http://twitter.com/davetayls">more tweets</a></p>
+    </aside>
+</div>

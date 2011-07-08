@@ -2,17 +2,16 @@
 layout: master
 portfolio: small
 ---
-<div id="contentWrapper" class="cc">
-    <div id="postContent" class="cc">
-		<div class="cp-postHeader cc">
-			    <p class="cp-postHeader-date">
-					<abbr title="{{ page.date | date:'%B' }}">
-						{{ page.date | date:"%b" }}				                    		
-					</abbr>
-					<span>{{ page.date | date:"%d" }}</span>
-                </p>
-			    <h1>{{ page.title }}</h1>
-			    <p class="cp-postHeader-details">
+<div id="contentWrapper">
+    <div id="content">
+		<div>
+            <h1>
+                <time datetime="{{ page.date | date_to_xmlschema }}">
+                    {{ page.date | date:"%b %d %Y" }}
+                </time>
+                <a href="{{ page.url }}">{{ page.title }}</a>
+            </h1>
+			    <p>
             {% if page.author %}
 				     Posted by: {{ page.author }}
             {% endif %}
@@ -21,19 +20,19 @@ portfolio: small
 					&nbsp;{{ page.categories }}
 			{% endif %}
 			</p>
+            {% if page.share != 'hide' %}
+            <div>
+                {% include twitter-tweet.html %}
+                {% include facebooklike.html %}
+            </div>
+            {% endif %}
 		</div>                              
-        <div id="articleContent" class="textRegion">
+        <div id="articleContent">
             {{ content }} 
         </div>
 
-        {% if page.share != 'hide' %}
-		<div class="cp-blogPost-share cc">
-			{% include twitter-tweet.html %}
-			{% include facebooklike.html %}
-		</div>
-		{% endif %}
         {% if page.comments != 'hide' %}
-        <div class="mod-comments">
+        <div>
             <div id="disqus_thread"></div>
             <script type="text/javascript">
                 var disqus_identifier = '{{ page.id }}';
@@ -51,32 +50,18 @@ portfolio: small
             <noscript>
                 Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=davetayls">comments powered by Disqus.</a>
             </noscript>
-            <p class="cp-disclaimerText">
+            <p>
                 <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
             </p>
         </div>
         {% endif %}
     </div>
-    <div id="postRelated">
-        <div id="actionOptions" class="mod-navSection cc">
-            <ul class="nav-v nav-block">
-            	<li>
-            		<a href="/">Home</a>
-            	</li>
-            	<li>
-            		<a onclick="dt.analytics.trackLink(this,'blog','right');return false;" href="/blog">Blog</a>
-            	</li>
-            	<li>
-                	<a onclick="dt.analytics.trackLink(this,'subscribe','topright');return false;" href="http://feed.the-taylors.org"><img src="/images/feed-icon-12x12-orange.gif" alt="" /> Subscribe here (atom)</a>
-				</li>
-            </ul>
-			<div class="clear"></div>
-            {% include sharelinks-short.html %}
-        </div>
+    <aside id="related">
+        {% include sharelinks-short.html %}
         <div id="recentPosts" class="mod-navSection cc">
-            <h2>Recent Posts</h2>
+            <h2>Posts</h2>
             <ul class="list-blogs">
-                {% for post in site.posts limit: 3 %}
+                {% for post in site.posts %}
 	                <li class="cc">
 	                    <h3 class="list-blogs-header">
 	                    	<span class="list-blogs-date">
@@ -92,5 +77,5 @@ portfolio: small
                 {% endfor %}
             </ul>
         </div>
-    </div>
+    </aside>
 </div>
