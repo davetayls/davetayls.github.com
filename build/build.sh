@@ -1,15 +1,21 @@
 #!/usr/bin/env bash
 
-#rmdir -p ../src-build
+# remove master package
 cd ../../
 rm -r -f davetayls.github.com-master
+
+# clone master from current repo but clear files
 git clone -b master davetayls.github.com/.git davetayls.github.com-master
+rm -r -f davetayls.github.com-master/*
+
+# run requirejs copy and build
 cd davetayls.github.com/build/
 bash ../requirejs/build/build.sh app.build.js
 
-#del ..\src-build /q
-#call ../requirejs/build/buildj.bat app.build.js
-#del ..\src-build\_config.yml
-#rename ..\src-build\_config.live.yml _config.yml
-
+# run jake tasks
 jake
+
+# switch files for live env
+rm -f ../../davetayls.github.com-master/_config.yml 
+mv ../../davetayls.github.com-master/_config.live.yml ../../davetayls.github.com-master/_config.yml
+
