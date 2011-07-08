@@ -1,0 +1,17 @@
+---
+layout: post
+author: davetayls
+title: jQuery.kinetic plugin gives you drag scrolling with mouse and touch
+categories: releases
+---
+
+I have released another jQuery plugin which gives you drag and throw functionality inside an scrollable container just like you expect on touch devices. This has the added bonus of allowing this sort of interactivity within an overflow whithin safari on iPad and iPhone.
+
+Demo
+----
+I have added a demo and a list of options on <http://the-taylors.org/jquery.kinetic/>.
+
+This is still a work in progress, It only scrolls horizontally at the moment. Please let me know of any issues you might find. You can log them on [github](https://github.com/davetayls/jquery.kinetic/issues)
+
+
+
