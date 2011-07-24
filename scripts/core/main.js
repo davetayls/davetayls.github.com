@@ -173,16 +173,19 @@
   };
 })(jQuery);
 define("jquery/jquery.tweet", function(){});
+/*jslint browser: true, vars: true, white: true, forin: true, plusplus: true, indent: 4 */
+/*global define,require */
 define('core/related/tweets',['jquery/jquery.tweet'], {
 
     init: function (selector) {
         $(selector).tweet({
             username: 'davetayls',
-			avatar_size: 16
+			avatar_size: 32
         });
     }
 
-});/*jslint white:false */
+});
+/*jslint white:false */
 /*global $ require SyntaxHighlighter window*/
 $('pre>code').each(function(){
     var this$ = $(this);
