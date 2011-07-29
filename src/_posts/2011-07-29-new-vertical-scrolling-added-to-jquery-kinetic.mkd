@@ -1,0 +1,14 @@
+--- 
+layout: post 
+author: davetayls 
+title: Vertical Scrolling now included with the jQuery.kinetic plugin
+categories: releases 
+---
+I have done some more work on the [jquery.kinetic](http://the-taylors.org/jquery.kinetic/) plugin to add vertical scrolling.
+
+It probably still needs some options to be able to lock to a particular axis which I'll take a look at some time.
+
+[Grab the source on github](http://github.com/davetayls/jquery.kinetic) or you can [take a look at the demo](http://the-taylors.org/jquery.kinetic/).
+
+ 
+
