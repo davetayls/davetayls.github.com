@@ -6,6 +6,14 @@
 #pageHeader {
     padding: 16px;
 }
+    #homeHeader {
+        position:absolute;
+        display: block; 
+        top: auto; 
+        left: -10000px; 
+        width: 1px; 
+        height: 1px; 
+    }
 #contentWrapper {
     background: url(../images/content-bg.gif) repeat-x 0 0;
     padding: 16px;
@@ -13,7 +21,6 @@
 #contentWrapper:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 #pageFooter {
     margin: 0 auto;
-    width: 980px;
 }
 .list-blogs .list-blogs-comments {
     display: block;
@@ -45,6 +52,53 @@
     to   { -webkit-transform: rotateY(-360deg); }
 }
 
+@media screen and (max-width: 500px) {
+    #nav-primary ul {
+        border: solid 1px #ddd;
+        border-bottom: none;
+        list-style: none outside none;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -o-border-radius: 8px;
+        border-radius: 8px;
+    }
+        #nav-primary ul li {
+            border-bottom: solid 1px #ddd;
+            padding: 0px;
+        }
+            #nav-primary ul li a {
+                display: block;
+                padding: 6px;
+            }
+            #nav-primary ul li a:hover,
+            #nav-primary ul li a:focus,
+            #nav-primary ul li a:active {
+                background: #00ADEF;
+                color: #fff;
+                text-decoration: none;
+                background-image: -webkit-gradient(
+                    linear,
+                    left bottom,
+                    left top,
+                    color-stop(0, rgb(0,139,194)),
+                    color-stop(1, rgb(0,171,239))
+                );
+                background-image: -moz-linear-gradient(
+                    center bottom,
+                    rgb(0,139,194) 0%,
+                    rgb(0,171,239) 100%
+                );
+                background-image: linear-gradient(
+                    center bottom,
+                    rgb(0,139,194) 0%,
+                    rgb(0,171,239) 100%
+                );
+                
+            }
+}
 /* larger screens */
 @media screen and (min-width:1000px) {
 
@@ -82,6 +136,7 @@
         }
         #pageFooter {
             clear: both;
+            width: 980px;
         }
 
 }
