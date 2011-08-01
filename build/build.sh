@@ -19,3 +19,8 @@ jake
 rm -f ../../davetayls.github.com-master/_config.yml 
 mv ../../davetayls.github.com-master/_config.live.yml ../../davetayls.github.com-master/_config.yml
 
+cd ../../davetayls.github.com-master
+git commit -am "release"
+git push
+
+cd ../davetayls.github.com
