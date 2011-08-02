@@ -1,8 +1,18 @@
 /* lib files */
 @import url("/scripts/syntaxhighlighter/styles/shCoreMidnight.css");
-
 @import url("brand/brand.css");
 
+/**
+    => animations
+--------------------------------------------------*/
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotateY(0); }
+    to   { -webkit-transform: rotateY(-360deg); }
+}
+
+/**
+    => structure
+--------------------------------------------------*/
 #pageHeader {
     padding: 16px;
 }
@@ -14,22 +24,36 @@
         width: 1px; 
         height: 1px; 
     }
+
 #contentWrapper {
     background: url(../images/content-bg.gif) repeat-x 0 0;
     padding: 16px;
 }
 #contentWrapper:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
 #pageFooter {
     margin: 0 auto;
 }
+
+/**
+    => list-blogs
+--------------------------------------------------*/
 .list-blogs .list-blogs-comments {
     display: block;
     color: #aaa;
     font-size: 0.8em;
 }
+
+/**
+    => mod-blogPosts
+--------------------------------------------------*/
 .mod-blogPosts article {
     padding-bottom: 32px;
 }
+
+/**
+    => tweet_list
+--------------------------------------------------*/
 .tweet_list {
     list-style: none outside none;
     margin: 0;
@@ -47,12 +71,14 @@
             color: #aaa;
         }
 
-@-webkit-keyframes spin {
-    from { -webkit-transform: rotateY(0); }
-    to   { -webkit-transform: rotateY(-360deg); }
-}
-
+/**
+    => max-width 500px screens
+--------------------------------------------------*/
 @media screen and (max-width: 500px) {
+
+    /**
+        => nav-primary
+    --------------------------------------------------*/
     #nav-primary ul {
         border: solid 1px #ddd;
         border-bottom: none;
@@ -99,9 +125,14 @@
                 
             }
 }
-/* larger screens */
+/**
+    => min-width 1000px screens
+--------------------------------------------------*/
 @media screen and (min-width:1000px) {
 
+    /**
+        => structure
+    --------------------------------------------------*/
     #pageHeader {
         margin: 0 auto;
         width: 980px;
@@ -118,9 +149,6 @@
                 -webkit-animation: spin 0.7s 1 ease-in;
                 -webkit-animation-delay: 1s;
             }
-        #nav-primary {
-            float: right;
-        }
     #contentWrapper {
         width: 948px;
         margin: 0 auto;
@@ -138,6 +166,13 @@
             clear: both;
             width: 980px;
         }
+
+    /**
+        => nav-primary
+    --------------------------------------------------*/
+    #nav-primary {
+        float: right;
+    }
 
 }
 
