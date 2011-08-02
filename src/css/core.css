@@ -1,4 +1,22 @@
-/* lib files */
+/*
+    core.css
+    =================================
+    - lib files
+    - animations
+    - structure
+    - list-blogs
+    - mod-blogPosts
+    - tweet_list
+    - max-width 500px screens
+        - nav-primary
+    - min-width 1000px screens
+        - structure
+        - nav-primary
+
+*/
+/**
+    => lib files
+--------------------------------------------------*/
 @import url("/scripts/syntaxhighlighter/styles/shCoreMidnight.css");
 @import url("brand/brand.css");
 
