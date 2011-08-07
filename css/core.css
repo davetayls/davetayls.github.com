@@ -189,8 +189,30 @@
         => nav-primary
     --------------------------------------------------*/
     #nav-primary {
-        float: right;
+        float: left;
+        margin-left: 1px;
     }
+        #nav-primary ul {
+            list-style: none outside none;
+            margin: 0;
+            padding: 0;
+        }
+            #nav-primary ul li { 
+                display: block;
+                list-style: none outside none;
+                margin: 0 0 1px;
+                padding: 0;
+            }
+                #nav-primary ul li a {
+                    display: inline-block;
+                    background: #009cc7;
+                    color: #fff;
+                    padding: 3px 5px;
+                }
+                #nav-primary ul li a:hover {
+                    background: #333;
+                    text-decoration: none;
+                }
 
 }
 
