@@ -56,6 +56,9 @@ a { outline: none; }
 a:focus { outline: thin dotted; }
 a:active, a:hover { outline: none; }
 
+a {
+    -webkit-transition: all .15s ease-in;
+}
 a, a:visited, a:link      { color: #00ADEF; text-decoration: none; }
 a:hover, a:active     { text-decoration: underline; }
 a:focus     { text-decoration: underline; }
