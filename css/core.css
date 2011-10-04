@@ -17,7 +17,6 @@
 /**
     => lib files
 --------------------------------------------------*/
-@import url("/scripts/syntaxhighlighter/styles/shCoreMidnight.css");
 @import url("brand/brand.css");
 
 /**
@@ -43,8 +42,10 @@
         height: 1px; 
     }
 
+#wrapper {
+    background: url(../images/content-bg.gif) repeat-x 0 -3px;
+}
 #contentWrapper {
-    background: url(../images/content-bg.gif) repeat-x 0 0;
     padding: 16px;
 }
 #contentWrapper:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }

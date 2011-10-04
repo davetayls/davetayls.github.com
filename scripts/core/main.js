@@ -185,15 +185,11 @@ define('core/related/tweets',['jquery/jquery.tweet'], {
     }
 
 });
+
 /*jslint white:false */
 /*global $ require SyntaxHighlighter window*/
-$('pre>code').each(function(){
-    var this$ = $(this);
-    this$.parent()
-        .addClass('brush: js')
-        .text(this$.text());
-});
-SyntaxHighlighter.all();
+$('pre>code').parent().addClass('prettyprint');
+prettyPrint();
 
 require(['core/related/tweets'], function (tweets) {	
 	$(window).load(function () {
