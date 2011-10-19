@@ -66,6 +66,7 @@
     color: #aaa;
     font-size: 0.8em;
 }
+
 /**
     => menu
 --------------------------------------------------*/
@@ -73,6 +74,17 @@
     list-style: none outside none;
     margin: 0;
     padding: 0;
+}
+
+/**
+    => cp-comments
+--------------------------------------------------*/
+.cp-comments:link,
+.cp-comments:visited,
+.cp-comments {
+    display: block;
+    color: #555;
+    font-size: 0.8em;
 }
 
 /**
