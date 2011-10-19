@@ -171,7 +171,7 @@
       }).trigger("load");
     });
   };
-})(jQuery);
+})(window.jQuery||window.Zepto);
 define("jquery/jquery.tweet", function(){});
 /*jslint browser: true, vars: true, white: true, forin: true, plusplus: true, indent: 4 */
 /*global define,require */

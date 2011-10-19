@@ -57,10 +57,22 @@
 /**
     => list-blogs
 --------------------------------------------------*/
+.list-blogs h3 {
+    margin: 0;
+    padding: 8px;
+}
 .list-blogs .list-blogs-comments {
     display: block;
     color: #aaa;
     font-size: 0.8em;
+}
+/**
+    => menu
+--------------------------------------------------*/
+.menu ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
 }
 
 /**
@@ -98,22 +110,45 @@
     /**
         => nav-primary
     --------------------------------------------------*/
+    
+    .menu ul,
     #nav-primary ul {
-        border: solid 1px #ddd;
-        border-bottom: none;
         list-style: none outside none;
-        margin: 0;
-        overflow: hidden;
+        margin: 10px 0 0;
         padding: 0;
-        -moz-border-radius: 8px;
+
         -webkit-border-radius: 8px;
-        -o-border-radius: 8px;
-        border-radius: 8px;
+            -moz-border-radius: 8px;
+                -o-border-radius: 8px;
+                border-radius: 8px;
+        -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+           -moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+             -o-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+                box-shadow: 0 0 5px rgba(0,0,0,0.3);
     }
+        .menu ul li,
         #nav-primary ul li {
-            border-bottom: solid 1px #ddd;
+            border: solid 1px #ddd;
+            border-bottom: none;
             padding: 0px;
+            overflow: hidden;
         }
+        .menu ul li:first-child,
+        #nav-primary ul li:first-child {
+            -webkit-border-radius: 8px 8px 0 0;
+               -moz-border-radius: 8px 8px 0 0;
+                 -o-border-radius: 8px 8px 0 0;
+                    border-radius: 8px 8px 0 0;
+        }
+        .menu ul li:last-child,
+        #nav-primary ul li:last-child {
+            border-bottom: solid 1px #ddd;
+            -webkit-border-radius: 0 0 8px 8px;
+               -moz-border-radius: 0 0 8px 8px;
+                 -o-border-radius: 0 0 8px 8px;
+                    border-radius: 0 0 8px 8px;
+        }
+            .menu ul li a,
             #nav-primary ul li a {
                 display: block;
                 padding: 6px;
