@@ -1,0 +1,20 @@
+--- 
+layout: post 
+author: davetayls 
+title: Simplify, Modularise, Simplify
+categories: thoughts 
+---
+Bandwagons come and go, when looking back there are so many which fall in to the category "forget/can't believe I jumped on" but with the rise of [require js](http://requirejs.org) and other module loaders using the [commonjs](http://commonjs.org) [Asynchronous Module Definition](http://wiki.commonjs.org/wiki/Modules/AsynchronousDefinition) I think this is one bandwagon everyone should be considering seriously.
+
+In my position at the [digital agency](http://www.aqueduct.co.uk) I work for, I've been considering the ever widening landscape of client expectations from new forms of UX on devices, locations and interactions within social circles. More and more is being requested and without modularising these features in to well tested silos the time needed to satisfy clients hunger could potentially sky rocket.
+
+One of the things I love most about being a front-end developer is the way our community collaborates. I'm a big fan of open-source contributions and I try to release anything I think could be useful. We are in exciting times with services like [GitHub](http://github.com/davetayls) and [BitBucket](https://bitbucket.org/davetayls) providing the platform to share and enhance others code. What we are often lacking is the skill and experience to build modular code which can be easily plugged in to each others projects.
+
+Practice with Kata
+-----
+One way of improving your modular programming skills is by doing [Katas](http://en.wikipedia.org/wiki/Kata_(programming)) which is exercise based on the Japanese concept of [Kata](http://en.wikipedia.org/wiki/Kata_(martial_arts)) solving small problems with repetition to hone your skill. Here are a few [katas to get you going](http://codekata.pragprog.com/codekata/).
+
+With Power Comes Responsibility
+-----
+One of my pet hates is seeing bad use of a great plugin. Whether the developer/designer has spent no energy considering the UX or whether code has just been pasted in to a page with no thought for who will be maintaining the badly architected spaghetti mess. I despair when I open a web page in an older browser and the javascript is flogging it as if it were the latest Chrome. With all these great new opportunities lets not lose sight of the what makes the internet great, the ease of accessing great content.
+
