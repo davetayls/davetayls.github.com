@@ -5,6 +5,8 @@
     - animations
     - structure
     - list-blogs
+    - menu
+    - cp-comments
     - mod-blogPosts
     - tweet_list
     - max-width 500px screens
@@ -31,7 +33,7 @@
     => structure
 --------------------------------------------------*/
 #pageHeader {
-    padding: 16px;
+    padding: 0 16px 16px;
 }
     #homeHeader {
         position:absolute;
@@ -118,6 +120,13 @@
     => max-width 500px screens
 --------------------------------------------------*/
 @media screen and (max-width: 500px) {
+
+    /**
+        => structure
+    --------------------------------------------------*/
+    #logo {
+        width: 25%;
+    }
 
     /**
         => nav-primary
@@ -239,6 +248,7 @@
     #nav-primary {
         float: left;
         margin-left: 1px;
+        padding-top: 10px;
     }
         #nav-primary ul {
             list-style: none outside none;
