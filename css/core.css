@@ -48,7 +48,7 @@
     background: url(../images/content-bg.gif) repeat-x 0 -3px;
 }
 #contentWrapper {
-    padding: 16px;
+    padding: 16px 8px;
 }
 #contentWrapper:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
@@ -203,52 +203,29 @@
 /**
     => min-width 1000px screens
 --------------------------------------------------*/
-@media screen and (min-width:1000px) {
-
-    /**
-        => structure
-    --------------------------------------------------*/
+@media screen and (min-width:500px) {
     #pageHeader {
-        margin: 0 auto;
-        width: 980px;
+        position: relative;
+        zoom: 1;
     }
     #pageHeader:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
-        #logo {
-            float: left;
+    #logo {
+        float: left;
 
-            -webkit-perspective: 800;
-            -webkit-perspective-origin: 50% 90px;
-            -webkit-transform-style: preserve-3d;
-        }
-            #logo img {
-                -webkit-animation: spin 0.7s 1 ease-in;
-                -webkit-animation-delay: 1s;
-            }
-    #contentWrapper {
-        width: 948px;
-        margin: 0 auto;
+        -webkit-perspective: 800;
+        -webkit-perspective-origin: 50% 90px;
+        -webkit-transform-style: preserve-3d;
     }
-        #content {
-            float: left;
-            width: 568px;
+        #logo img {
+            -webkit-animation: spin 0.7s 1 ease-in;
+            -webkit-animation-delay: 1s;
         }
-        #related {
-            float: right;
-            padding: 0 0 0 16px;
-            width: 363px;
-        }
-        #pageFooter {
-            clear: both;
-            width: 980px;
-        }
-
     /**
         => nav-primary
     --------------------------------------------------*/
     #nav-primary {
         float: left;
         margin-left: 1px;
-        padding-top: 10px;
     }
         #nav-primary ul {
             list-style: none outside none;
@@ -265,12 +242,45 @@
                     display: inline-block;
                     background: #009cc7;
                     color: #fff;
+                    font-size: 0.875em;
                     padding: 3px 5px;
                 }
                 #nav-primary ul li a:hover {
                     background: #333;
                     text-decoration: none;
                 }
+}
+/**
+    => min-width 1000px screens
+--------------------------------------------------*/
+@media screen and (min-width:1000px) {
+
+    /**
+        => structure
+    --------------------------------------------------*/
+    #pageHeader {
+        margin: 0 auto;
+        width: 980px;
+    }
+    #contentWrapper {
+        width: 948px;
+        margin: 0 auto;
+        padding: 16px;
+    }
+        #content {
+            float: left;
+            width: 568px;
+        }
+        #related {
+            float: right;
+            padding: 0 0 0 16px;
+            width: 363px;
+        }
+        #pageFooter {
+            clear: both;
+            width: 980px;
+        }
+
 
 }
 
