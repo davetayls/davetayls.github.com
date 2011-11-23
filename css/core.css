@@ -43,6 +43,14 @@
         width: 1px; 
         height: 1px; 
     }
+    #logo a:link,
+    #logo a:visited,
+    #logo a:active,
+    #logo a:hover,
+    #logo a {
+        background: none;
+        outline: none;
+    }
 
 #wrapper {
     background: url(../images/content-bg.gif) repeat-x 0 -3px;
@@ -54,6 +62,12 @@
 
 #pageFooter {
     margin: 0 auto;
+}
+
+h1 time {
+    color: #888;
+    text-transform: uppercase;
+    font-size: 0.75em;
 }
 
 /**

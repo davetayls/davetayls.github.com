@@ -6,10 +6,10 @@ portfolio: small
     <div id="content">
 		<div>
             <h1>
+                <a href="{{ page.url }}">{{ page.title }}</a>
                 <time datetime="{{ page.date | date_to_xmlschema }}">
                     {{ page.date | date:"%b %d %Y" }}
                 </time>
-                <a href="{{ page.url }}">{{ page.title }}</a>
             </h1>
 			    <p>
             {% if page.author %}
