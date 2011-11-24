@@ -79,6 +79,8 @@ blockquote p {
 /* bicubic resizing for non-native sized IMG: 
    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
 img { -ms-interpolation-mode: bicubic; }
+object,
+embed,
 img { max-width: 100%; }
 
 
