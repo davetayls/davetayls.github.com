@@ -1,7 +1,7 @@
 --- 
 layout: post 
 author: davetayls 
-title: JavaScript headaches with responsive layouts
+title: FA Just Play wins it's category in Sitecore site of the year
 categories:
     - thoughts
     - awards
