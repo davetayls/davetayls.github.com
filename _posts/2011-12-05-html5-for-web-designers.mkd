@@ -1,0 +1,60 @@
+--- 
+layout: post 
+author: davetayls 
+title: Html5 for Web Designers
+postimage: https://lh3.googleusercontent.com/-JaBD7Z9CiWE/TtzLg2AvleI/AAAAAAAAjzs/8GBJEETMD1Y/s512/42.png
+categories:
+    - thoughts
+---
+![html5 for web designers](https://lh3.googleusercontent.com/-JaBD7Z9CiWE/TtzLg2AvleI/AAAAAAAAjzs/8GBJEETMD1Y/s512/42.png)
+
+I've just finished reading [Html5 for web designers](http://www.abookapart.com/products/html5-for-web-designers) by [Jeremy Keith](http://adactio.com/) and would really recommend it. It's not too big, I managed to finish it in 4 train journeys and I'm a slug when it comes to reading speed.
+
+If you subscribe to [Jeremy's journal](http://adactio.com/journal/) you'll be familiar with his very laid back and personal writing style, injecting a welcome amount of wit to break up the reading.
+
+I wasn't quite aware of the relationship between the [W3C](http://w3.org) and the [WHATWG](http://www.whatwg.org/). It's very interesting to see how the HTML5 spec is being put together. And now I actually understand what they are talking about when they refer to "paving the cowpaths". It essentially is the mindset that if something already exists and it's use is widespread then make it part of the spec (event if there is a better solution) and outline exactly how we should be using it consistently. The more I think over this the more I like it, "If it ain't broke, don't fix it" as Jeremy puts it.
+
+## A few highlights have got to be:
+
+### Web Forms 2.0
+
+There are several new features which Jeremy goes in to, I've been looking at a few of these previously but it's great seeing them side by side.
+
+#### New input types
+
+These all fall back to text inputs for older browsers.
+
+    <label for="email">Email address</label> <input id="email" name="email" type="email"> 
+    <label for="website">Website</label><input id="website" name="website" type="url">
+    <label for="phone">Telephone</label><input id="phone" name="phone" type="tel">
+
+#### Validation and Error Handling
+
+There is built in support for validating form input client side. For example:
+
+    <label for="pass">Your password</label>
+    <input id="pass" name="pass" type="password" required>
+
+
+### Structure
+
+Being able to write more modular markup with each structural `element` having it's own heading scope like so:
+
+    <h1>My Website</h1>
+    <section>
+        <h1>My section title</h1>
+        <p>My section content</p>
+    </section>
+
+My current struggle with this one is the trade off between cross-browser support, performance and accessibility. These tags are great but they aren't supported properly in older IE's without Javascript. We can get around this by adding div tags inside them but then on large pages the performance with be hit because of the number of DOM nodes. However they are really great for accessibility and semantics.
+
+## The best thing is this:
+
+You can just swap your current doctype without a worry and start using this stuff!
+    
+    <!DOCTYPE html>
+
+## Go read
+
+You can find out more on the [Book apart website](http://www.abookapart.com/)
+
