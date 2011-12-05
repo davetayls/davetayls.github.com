@@ -1,0 +1,35 @@
+--- 
+layout: post 
+author: davetayls 
+title: Blue Beeeeeeanie Day
+postimage: https://lh6.googleusercontent.com/-OxcAR6iiIf4/Ttapie7adtI/AAAAAAAAjys/SKixWJyweF8/s512/photo.jpg
+categories:
+    - thoughts
+    - standards
+---
+
+Today was the [Fifth International Blue Beanie Day](http://www.zeldman.com/bbd/) and so in my support of web standards I sported the blue beanie courtesy of [Francis Gilbert](http://twitter.com/frangilbert).
+
+![my and my blue beanie](https://lh6.googleusercontent.com/-OxcAR6iiIf4/Ttapie7adtI/AAAAAAAAjys/SKixWJyweF8/s512/photo.jpg)
+
+174 people  have put their pic up on the [Flickr group](http://www.flickr.com/groups/bluebeanieday2011/) and changed their social avatar all to show we ♥ web standards and we're actively adhering to best practices for standardised, accessible, universal web design.
+
+![tweet](https://lh5.googleusercontent.com/-48kzRb3j0xs/TtarVg9MUaI/AAAAAAAAjy0/Repglwi_E_g/s512/Screen%252520shot%2525202011-11-30%252520at%25252022.16.22.png)
+
+I'm all for making the web available for all. There is still far to go, especially as the landscape is ever changing. I was reading the other day how fast the mobile web is expanding due to the take-up of devices being used in asia and africa. Often people will have a web-enabled mobile device before a computer. I've seen some criticism of the mobile first approach,  how it isn't cost effective for companies. I'm in the middle of a couple of projects at the moment where for a small increase in the budget of the project they are making their site so much quicker and more accessible for the mobile web. I have to admit it is a steep learning curve, especially when it comes to interactive features being turned on and off at different sizes but this definitely feels like the way forward, and we'll gradually get the tools and build the code we need to make the process smoother.
+
+## edit: 1st Dec
+
+I've just read this again and I went off on a bit of a tangent at the end
+there! What I meant to do was show the stooges I work with.
+
+### [Francis the wrestler](http://twitter.com/frangilbert)
+![francis gilbert wearing a Beanie](https://lh3.googleusercontent.com/-wsOSdooLM0Q/TtYNhHtAA-I/AAAAAAAAjx8/0ljeJUiuy1Q/s512/photo%2525205.jpg)
+
+### [Steve](http://twitter.com/stevezol)
+![stephen zsolnai](https://lh6.googleusercontent.com/-OATh_nePF98/TtYNhcRingI/AAAAAAAAjyA/TqQ8bTJewWM/s512/photo%2525203.jpg)
+
+### [Ian Jones](http://twitter.com/darkhorseian)
+![ian jones](https://lh3.googleusercontent.com/-JelCCDP6RQc/TtYNhkBGIGI/AAAAAAAAjyM/FQg0bnsbVuM/s512/photo1.jpg)
+
+haha, fun times!
