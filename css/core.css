@@ -10,10 +10,12 @@
     - mod-blogPosts
     - tweet_list
     - max-width 500px screens
+        - structure
+        - nav-primary
+    - min-width 1000px screens
         - nav-primary
     - min-width 1000px screens
         - structure
-        - nav-primary
 
 */
 /**
@@ -67,6 +69,16 @@
 h1 time {
     color: #888;
     text-transform: uppercase;
+    font-size: 0.75em;
+}
+/**
+    => prettyprint
+--------------------------------------------------*/
+pre.prettyprint {
+    border: solid 1px #888;
+    background: #eee;
+    margin: 0 0 16px;
+    padding: 5px;
     font-size: 0.75em;
 }
 

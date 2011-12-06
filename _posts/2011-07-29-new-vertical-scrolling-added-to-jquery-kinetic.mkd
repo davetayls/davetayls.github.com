@@ -2,7 +2,9 @@
 layout: post 
 author: davetayls 
 title: Vertical Scrolling now included with the jQuery.kinetic plugin
-categories: releases 
+categories: 
+    - releases 
+    - jquery
 ---
 I have done some more work on the [jquery.kinetic](http://the-taylors.org/jquery.kinetic/) plugin to add vertical scrolling.
 

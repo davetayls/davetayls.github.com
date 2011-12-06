@@ -2,7 +2,10 @@
 layout: post 
 author: davetayls 
 title: Simplify, Modularise, Simplify
-categories: thoughts 
+categories: 
+    - thoughts 
+    - commonjs
+    - javascript
 ---
 Bandwagons come and go, when looking back there are so many which fall in to the category "forget/can't believe I jumped on" but with the rise of [require js](http://requirejs.org) and other module loaders using the [commonjs](http://commonjs.org) [Asynchronous Module Definition](http://wiki.commonjs.org/wiki/Modules/AsynchronousDefinition) I think this is one bandwagon everyone should be considering seriously.
 

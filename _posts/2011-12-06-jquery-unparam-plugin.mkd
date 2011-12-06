@@ -3,7 +3,7 @@ layout: post
 author: davetayls 
 title: jQuery.unparam plugin
 categories:
-    - jQuery
+    - jquery
     - code
     - release
 ---
