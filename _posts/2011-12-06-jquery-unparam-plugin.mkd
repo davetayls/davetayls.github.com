@@ -1,0 +1,30 @@
+--- 
+layout: post 
+author: davetayls 
+title: jQuery.unparam plugin
+categories:
+    - jQuery
+    - code
+    - release
+---
+I have just created a simple jQuery plugin to add the opposite functionality to the jQuery.param function. It will turn a set of url parameters back in to an object. Here's the usage at the moment.
+
+
+    it("should get basic query string vars from full url", function() {
+        expect(jQuery.unparam('http://the-taylors.org/?foo=one&bar=two'))
+        .toEqual({
+            foo: "one",
+            bar: "two"
+        });
+    });
+    it("should get basic query string vars from just query params", function() {
+        expect(jQuery.unparam('foo=one&bar=two'))
+        .toEqual({
+            foo: "one",
+            bar: "two"
+        });
+    });
+
+
+You can get hold of it on the [Github repo](https://github.com/davetayls/jquery.unparam)
+
