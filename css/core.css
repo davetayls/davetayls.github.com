@@ -63,8 +63,26 @@
 #contentWrapper:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
 #pageFooter {
-    margin: 0 auto;
+    background: #ddd;
+    padding: 16px 8px;
 }
+    #pageFooter-inner {
+        margin: 0 auto;
+    }
+    #pageFooter-inner ul {
+        list-style: none outside none;
+        margin: 0;
+        padding: 0;
+    }
+        #pageFooter-inner ul li {
+            display: -moz-inline-stack;
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            list-style: none outside none;
+            margin: 0;
+            padding: 0 16px 0 0;
+        }
 
 h1 time {
     color: #888;
@@ -81,6 +99,26 @@ pre.prettyprint {
     padding: 5px;
     font-size: 0.75em;
 }
+/**
+    => cp-avatar
+--------------------------------------------------*/
+.cp-avatar {
+    float: left;
+    border: solid 3px #eee;
+    margin: 7px 8px 5px 5px;
+    padding: 0;
+    -webkit-transform: rotate(-3deg);
+       -moz-transform: rotate(-3deg);
+         -o-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+    -webkit-box-shadow: 0 0 6px #000;
+       -moz-box-shadow: 0 0 6px #000;
+         -o-box-shadow: 0 0 6px #000;
+            box-shadow: 0 0 6px #000;
+}
+    .cp-avatar img {
+        display: block;
+    }
 
 /**
     => list-blogs
@@ -299,13 +337,15 @@ pre.prettyprint {
         }
         #related {
             float: right;
-            padding: 0 0 0 16px;
-            width: 363px;
+            padding: 0 0 0 32px;
+            width: 347px;
         }
         #pageFooter {
             clear: both;
-            width: 980px;
         }
+            #pageFooter-inner {
+                width: 980px;
+            }
 
 
 }
