@@ -1,0 +1,70 @@
+--- 
+layout: post 
+author: davetayls 
+title: 2011 at a glance
+categories:
+    - theyear
+    - thoughts
+---
+
+I've been taking a look over all that has happened this year as it seems to have disappeared in a bit of a haze and there have been a few great things that I would like to remember if for.
+
+
+Projects and Work
+--
+
+At the beginning of the year I was running the front-end work on my own at Aqueduct. It was great to get Steve on board on the 17th of Jan (one of the best decisions of the year).
+
+We've enjoyed successes, mainly in our own little sphere but sometimes peeking out with [The FA's Just Play website winning it's category](http://the-taylors.org/blog/2011/11/24/fa-just-play-wins-category-sitecore-site-of-year/) in the Sitecore site of the year. 
+
+The FA treated us to tickets to see England V Sweeden, it was great seeing the bill boards advertising the Just Play website. This was pretty significant for me as it was my first experience of a football match, and a good experience it was, especially because of not being in this queue.
+
+![people leaving the match](https://lh6.googleusercontent.com/-8M21uEEVMW4/TwDU3ogrUnI/AAAAAAAAj7k/oPgg9oNwU4s/s512/photo%2525203.jpg)
+
+### A few highlights for me
+ - August and September brought the Rugby world cup and the [RFU](http://www.rfu.com) We Are campaign.
+ - [jQuery Kinetic](http://the-taylors.org/jquery.kinetic) a simple plugin which adds smooth drag scrolling with gradual deceleration to containers
+ - I converted to using VIM for my IDE, a massive initial learning curve but I'm now enjoying the benefits
+ - [RequireJs](http://requirejs.org) has revolutionised the way I build JavaScript
+ - [Appia](https://github.com/aqueduct/Appia) has changed the way we deliver front-end builds
+ - Progressive Design and Responsive layouts gain the attention they deserve
+ - This was the year mindsets have been shifted away from print based ideas to progressive enhancements across browsers.
+ - I've been privileged to work with some great clients and projects this year including [The FA](http://www.thefa.com), [The RFU](http://www.rfu.com), [ManCity FC](http://www.mcfc.co.uk), [Lloyd's of London](http://www.lloyds.com) 
+ - I was gutted not to be at the inaugural Aqueduct Awards at the end of the year but was well chuffed that Tristan and I received the award for best collaboration.
+
+
+Family (extended)
+--
+
+My family have been growing up quickly as my kids celebrated both their birthdays with an amazing cake baked by the brilliant [Esther's Bakery](https://www.facebook.com/esthersbakery).
+
+![the ark](https://lh6.googleusercontent.com/-KxFfpH-Exkw/TwC-D19yPRI/AAAAAAAAj6s/OTxV71bUKBM/s512/2011%25252017%25253A40%25253A40.jpg)
+
+Esther and I enjoyed a great discovery, a [tea house in a tree house](http://fannysfarmshop.co.uk/id1.html). We were privileged to become God parents for the third time.
+
+![tea in a treehouse](https://lh6.googleusercontent.com/-GdLEemTML1E/TwDLk5emnFI/AAAAAAAAj68/zmSsdSfNJKs/s512/treehouse.jpg)
+
+On the same day Aqueduct moved to their new office we moved house and I'm now with the in-laws in Streatham. I got to visit a fire station much to the delight of the bunch of kids that came with us (the children enjoyed it too).
+
+It was a great to see such an amazing response to Andy's marathon run as we built a mini-site to show his progress and raise money for [Support Sasha](http://www.supportsasha.com/).
+
+
+### Travel
+
+In June we were really humbled to be given someone's flat for a couple of weeks when we visited Becca and her in-laws in the beautiful city of Montreal, Canada.
+
+![beautiful chinese garden in Montreal](https://lh4.googleusercontent.com/-_mbLXjG0bjk/TwDQVC87z6I/AAAAAAAAj7c/WCQoen25N14/s512/2011-07-02%25252018.39.37.jpg)
+
+and then we went back to one of our favourite spots, [an amazing farm house on the site of a ruined abbey](http://www.llanthonycourt.co.uk/) in wales.
+
+![jumping in the stream](https://lh3.googleusercontent.com/-fFD04Sn-fQ0/TwFdNlIXlrI/AAAAAAAAj7w/UkDNLcGIwTI/s512/302370_10150974541725093_719430092_21869170_1573076616_n.jpeg)
+
+2012
+---
+
+2011 has been a really great year, 2012 is the start of new chapters and adventures both personally and professionally and I'm looking forward to being stretched and growing in character.
+
+I want to continue to discover new avenues for being creative both technically, and maybe even through speaking and engaging with people I'm yet to meet. One of the hopes close to my heart is to find some way of investing this back in to a community who haven't had quite the same opportunities.
+
+Here's to the new year to my family and all I've worked alongside this year.
+
