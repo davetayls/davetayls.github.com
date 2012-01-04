@@ -1,0 +1,23 @@
+--- 
+layout: post 
+author: davetayls 
+title: Set Custom Environment Variables in Apache for PHP sites
+categories:
+    - apache
+    - php
+---
+
+Aaarg! I found this before and didn't make a note. That'll teach me. If you want to set custom environment variables for a particular php site running on apache then you can add them in using `SetEnv` where you specify the VirtualHost details. I use the http-vhosts.conf file on my macbook.
+
+Here's an example:
+
+    <VirtualHost *:80>
+        ServerAdmin webmaster@dummy-host2.example.com
+        DocumentRoot "/path/httpd"
+        ServerName mysite.local
+        ServerAlias mysite.local
+        SetEnv VARNAME myvariable
+    </VirtualHost>
+
+now I shouldn't forget it again
+
