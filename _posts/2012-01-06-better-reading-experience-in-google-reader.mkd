@@ -1,0 +1,16 @@
+--- 
+layout: post 
+author: davetayls 
+title: Getting a better reading experience in Google Reader with larger serif fonts
+categories:
+    - thoughts
+---
+
+I have been getting frustrated with the readability of the article body text within Google Reader. It's just a bit too small and I find it much easier to read serif fonts for large sections of text. I also adjusted the line-height to improve legibility. 
+
+So I have created a user stylesheet with <http://userstyles.org> which changes the body text to something a bit better.
+
+![google reader styles](https://lh6.googleusercontent.com/-5uqoRnkuJPg/TwbGQtP12AI/AAAAAAAAj8I/fffpdHvSeWQ/s512/googlereaderstyles.PNG)
+
+Install [Stylish extension for Chrome](https://chrome.google.com/webstore/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe) to be able to use this and then head over to <http://userstyles.org/styles/58926/google-reader-serif-article-body> and you can enable this style on your google reader.
+
