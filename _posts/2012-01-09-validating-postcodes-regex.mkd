@@ -1,0 +1,26 @@
+--- 
+layout: post 
+author: davetayls 
+title: Validating Postcodes with a Regular Expression
+categories:
+    - javascript
+---
+
+I have just had an issue where form validation will pass for the following postcode:
+
+```ec1r 5ar <script>alert("hi")</script>```
+
+The only reason being the fact that there is a valid post code at the beginning. I was using a very slightly adapted regular expression found on the [Wikipedia Postcodes article](http://en.wikipedia.org/wiki/Postcodes_in_the_United_Kingdom#Validation) which was:
+
+```(GIR 0AA|[A-PR-UWYZ]([0-9][0-9A-HJKPS-UW]?|[A-HK-Y][0-9][0-9ABEHMNPRV-Y]?)[ ]?[0-9][ABD-HJLNP-UW-Z]{2})```
+
+So getting my regex hat on. I had the issue that it cannot allow anything after the validated postcode, but also I expect that it would similarly allow junk before the valid postcode. The whole thing is wrapped in matching brackets so all I needed to do was add the _begins with_ (`^`) and _ends with_ (`$`) simbols to fix the test with the following regex:
+
+
+```
+var rege = /^(GIR 0AA|[A-PR-UWYZ]([0-9][0-9A-HJKPS-UW]?|[A-HK-Y][0-9][0-9ABEHMNPRV-Y]?)[ ]?[0-9][ABD-HJLNP-UW-Z]{2})$/i;```
+
+```console.log(rege.test('ec1r 5ar <script>alert("hi")</script>'))```
+
+And this test fails, whoop!
+
