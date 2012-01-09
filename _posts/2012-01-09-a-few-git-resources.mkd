@@ -1,0 +1,22 @@
+--- 
+layout: post 
+author: davetayls 
+title: A Few Git Resources
+categories:
+    - thoughts
+    - git
+---
+
+I did a lunchtime session on some Git basics last week. It is clearly a different mindset which takes a bit of time to adapt to. But it's worth the effort, the popularity of Github, now sitting at over a million users should be a good indication that there's a few treasures awaiting.
+
+Here are a couple of books which will hopefully be useful to grow your git knowledge.
+
+Pro Git Book
+---
+The [Pro Git book](http://progit.org/book/) can be read online or downloaded for free on various eReader formats. You can also get the paper copy from Amazon.
+
+The Git Community Book
+---
+[The community book](http://book.git-scm.com/) is another downloadable book maintained on github.
+
+
