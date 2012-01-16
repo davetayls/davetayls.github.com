@@ -1,0 +1,41 @@
+---
+layout: post
+title: A little bit about me
+comments: hide
+---
+
+My name is Dave Taylor, I was born and grew up in the Philippines although both
+my parents are English. I now live in London where my love for the web and
+geekery has been growing steadily for several years. I'm ever curious,
+I love the creativity you can have with front-end technology. This is the time
+to be working with HTML, CSS and JavaScript, and I'm living on the razors edge
+of these 3 fantastic technologies. Needless to say, it's a lot of fun :o)
+
+## This is what excites me
+
+ - Teams
+ - Doing great work (YEAH! The I made that feeling)
+ - I love the web
+ - Community
+ - My family
+
+## Who I've worked with:
+
+I've been involved with a variety of clients ranging from individuals to
+government organisations.
+
+You can take a look at my [showreels](/blog/category/showreel/) or the [projects category](/blog/category/projects/) to see some examples.
+
+ - [The FA](http://www.thefa.com) _The English Football Association_
+ - [The RFU](http://www.rfu.com) _The English Rugby Football Union_
+ - [Manchester City Football Club](http://www.mcfc.co.uk) 
+ - [Lloyd's of London](http://www.lloyds.com)
+ - [Argus Media](http://www.argusmedia.com)
+ - [Network Rail](http://www.networkrail.co.uk) _National Rail Infrastructure Provider_
+
+
+## Experience
+The best way to get to know my skill level and coding style is to browse my
+[github projects](http://github.com/davetayls).
+
+

@@ -5,6 +5,7 @@ title: FA Just Play wins it's category in Sitecore site of the year
 categories:
     - thoughts
     - awards
+    - project
 ---
 
 ![just play website](https://lh5.googleusercontent.com/-5XZmZiq85yc/Ts4WqMzCqQI/AAAAAAAAjw0/DT6lFI32nSE/s1007/justplay.png)

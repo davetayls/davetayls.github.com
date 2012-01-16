@@ -2,7 +2,9 @@
 layout: post
 author: davetayls
 title: FA Skills Now Live
-categories: releases
+categories: 
+    - releases
+    - project
 postimage: http://farm6.static.flickr.com/5126/5355708038_cd7cdfc07e.jpg
 ---
 

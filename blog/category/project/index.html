@@ -1,0 +1,12 @@
+---
+layout: post
+title: Projects
+comments: hide
+---
+
+{% for post in site.categories.project %}
+<div>
+	<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+	<p>{{ post.date | date:"%d %b %Y" }}</p>
+</div>
+{% endfor %}

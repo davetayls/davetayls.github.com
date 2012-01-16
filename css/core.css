@@ -53,6 +53,9 @@
         background: none;
         outline: none;
     }
+    #nav-primary ul li:first-child {
+        /* visually hidden */ position:absolute; display: block; top: -10000px; left: -10000px; width: 1px; height: 1px; overflow: hidden; 
+    }
 
 #wrapper {
     background: url(../images/content-bg.gif) repeat-x 0 -3px;
@@ -136,6 +139,7 @@ pre.prettyprint {
 /**
     => menu
 --------------------------------------------------*/
+.menu,
 .menu ul {
     list-style: none outside none;
     margin: 0;
@@ -151,6 +155,14 @@ pre.prettyprint {
     display: block;
     color: #555;
     font-size: 0.8em;
+}
+
+/**
+    => cp-sharelinks
+--------------------------------------------------*/
+.cp-sharelinks {
+    height: 28px;
+    padding: 0 0 16px;
 }
 
 /**
@@ -338,7 +350,7 @@ pre.prettyprint {
         #related {
             float: right;
             padding: 0 0 0 32px;
-            width: 347px;
+            width: 250px;
         }
         #pageFooter {
             clear: both;

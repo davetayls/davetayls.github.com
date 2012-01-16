@@ -15,15 +15,9 @@ portfolio: small
             {% if page.author %}
 				     Posted by: {{ page.author }}
             {% endif %}
-			{% if page.categories %}
-				<span> in:</span> 
-					&nbsp;{{ page.categories }}
-			{% endif %}
 			</p>
             {% if page.share != 'hide' %}
-            <div>
-                {% include sharelinks-short.html %}
-            </div>
+            {% include sharelinks-short.html %}
             {% endif %}
 		</div>                              
         <div id="articleContent">
