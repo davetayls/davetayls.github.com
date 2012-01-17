@@ -131,7 +131,7 @@ pre.prettyprint {
 .cp-avatar {
     float: left;
     border: solid 3px #eee;
-    margin: 7px 8px 5px 5px;
+    margin: 7px 8px 8px 5px;
     padding: 0;
     -webkit-transform: rotate(-3deg);
        -moz-transform: rotate(-3deg);
@@ -154,8 +154,8 @@ pre.prettyprint {
     border-bottom: solid 1px #ddd;
     font-weight: normal;
     font-size: 1em;
-    margin: 0 0 4px;
-    padding: 0px 0 4px;
+    margin: 0;
+    padding: 2px 4px;
 }
     .list-blogs-date {
         font-size: 0.625em;
@@ -281,6 +281,10 @@ pre.prettyprint {
                 background: #00ADEF;
                 color: #fff;
                 text-decoration: none;
+                -webkit-text-shadow: none;
+                   -moz-text-shadow: none;
+                     -o-text-shadow: none;
+                        text-shadow: none;
                 background-image: -webkit-gradient(
                     linear,
                     left bottom,
@@ -302,7 +306,7 @@ pre.prettyprint {
             }
 }
 /**
-    => min-width 1000px screens
+    => min-width 500px screens
 --------------------------------------------------*/
 @media screen and (min-width:500px) {
     #pageHeader {
@@ -347,7 +351,7 @@ pre.prettyprint {
                     padding: 3px 5px;
                 }
                 #nav-primary ul li a:hover {
-                    background: #333;
+                    color: #000;
                     text-decoration: none;
                 }
 }
@@ -375,8 +379,11 @@ pre.prettyprint {
         #related {
             float: right;
             padding: 0 0 0 32px;
-            width: 250px;
+            width: 260px;
         }
+            #related p {
+                font-size: 0.75em;
+            }
         #pageFooter {
             clear: both;
         }
