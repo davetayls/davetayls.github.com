@@ -1,0 +1,52 @@
+--- 
+layout: post 
+author: davetayls 
+title: A time to rejoice and a time to grovel
+categories:
+    - git
+    - fail
+---
+
+Time to grovel, my gift to dan this morning was to erase all his hard work!! CRAP!!!!
+
+Let me explain, Dan wanted to do a git commit but was confused when the files
+weren't appearing in the repository on Github. The reason for this was that he
+thought that 
+
+    $ git commit –am “message”
+
+would also add any files that weren't already in the index and it doesn't. All
+it does is add currently tracked files in to the staging area and commit them so
+you don't have to run 2 commands.
+
+For any new files you have to run:
+
+    $ git add <files>
+    $ git commit –am “message”
+
+WHAT WENT WRONG
+--- 
+
+So we did a
+
+    $ git add .
+
+Which adds all the untracked files in to the staging area ready to be committed
+to the repository. Then we realised that there were files in there that we
+didn't want to commit.
+
+So in an attempt to move the files out of the staging area I rather stupidly (I
+blame it on um…kids sleep?? Cogh cogh)
+
+    $ git reset --hard 
+
+instead of doing:
+
+    $ git reset HEAD *
+
+The rather unwelcome outcome being that all those uncommitted changes were lost!
+
+Needless to say you will find me under my desk grieving the loss I have caused.
+
+SORRY DAN. Beer on me.
+
