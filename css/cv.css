@@ -1,0 +1,13 @@
+body {
+    background: #ccc;
+}
+#wrapper {
+    background: #fff;
+    margin: 1.5625em auto;
+    padding: 8.333333em;
+    width: 43.75em;
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+       -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+         -o-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}

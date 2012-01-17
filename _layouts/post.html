@@ -51,27 +51,21 @@ portfolio: small
     </div>
     <aside id="related">
         {% include aboutme.html %}
-        {% include categories.html %}
         <div id="recentPosts" class="menu">
             <h2>Posts</h2>
             <ul class="list-blogs">
                 {% for post in site.posts %}
 	                <li class="cc">
-	                    <h3 class="list-blogs-header">
-                            <a href="{{ post.url }}">
-                                <span class="list-blogs-date">
-                                    <abbr title="December">
-                                        {{ post.date | date:"%b" }}				                    		
-                                    </abbr>
-                                    <span>{{ post.date | date:"%d" }}</span>
-                                </span>:
-                                {{ post.title }}
-                            </a>
-							<a class="list-blogs-comments" href="{{ post.url }}#disqus_thread">Comments</a>
-						</h3>
+                        <a href="{{ post.url }}">
+                            {{ post.title }}:
+                            <span class="list-blogs-date">
+                                {{ post.date | date:"%d %m %Y" }}
+                            </span>
+                        </a>
 	                </li>
                 {% endfor %}
             </ul>
         </div>
+        {% include categories.html %}
     </aside>
 </div>

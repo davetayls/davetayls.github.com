@@ -1,6 +1,0 @@
-
-scripts/core/main.js
-----------------
-scripts/jquery/jquery.tweet.js
-scripts/core/related/tweets.js
-scripts/core/main.js

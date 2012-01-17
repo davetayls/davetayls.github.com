@@ -1,0 +1,96 @@
+---
+title: Dave Taylor, Curriculum Vitae
+layout: cv
+---
+
+Dave Taylor, Curriculum Vitae
+===========
+
+ - t: 0754 081 7008     		
+ - address: 87 Lewin Road, London, SW16 6JX 
+ - w: http://the-taylors.org 		
+ - linkedIn: http://uk.linkedin.com/in/davidtaylorlondon 
+ - t: http://twitter.com/davetayls		
+ - github: http://github.com/davetayls
+
+I am a disciplined and passionate front-end web developer with over nine years
+experience.  I listen, make good judgements on the approach and get things done
+on time. I make use of the latest technologies to produce user-centric,
+cross-browser, HTML (4/5) / CSS (2/3) websites progressively enhanced using
+JavaScript.  
+
+I get a real buzz working at the forefront of my field researching
+new developments as they emerge and contributing to the developer community.  I
+have extensive experience working with JavaScript from architecture to hand
+coding and working with open source  library jQuery.
+
+Experience
+----------
+### Aqueduct
+July 2009 to Present
+Senior Front-End Developer
+
+
+(Creative Agency Specialising in Brand, Advertising, Digital and Design) 
+
+Clerkenwell, London
+
+I was employed by Aqueduct to build a Front-End development team where previously freelancers where used. Tasked with setting standards, overseeing code quality and putting these in to practice. With my background in design and back-end experience, I am the linchpin between the back end team, design team and front-end team. Understanding the relationships between each, I enable them work more effectively together. I now lead a team consisting of one in-house mid-weight developer and external contractors. Here are some key achievements from this role:
+Lloyd's of London website at www.lloyds.com. This project spanned the corporate website and the migration of five in house web applications.
+British Red Cross corporate (www.redcross.org.uk) and Red Cross Training sites.
+Architecture and coding standards for Aqueduct's  web projects.
+The FA Just Play website (justplay.thefa.com).
+Feedback from my team: David is a team player and always thrives to improve himself and the team’s output as a whole, he influences people without being pedant and is always full of new ideas; he is pragmatic, skilful and has great attention to detail, he has the same goal as the rest of the team which is to deliver work we are proud of.
+
+### Qdos Computer Consultants
+
+Feb 2005 to July 2009
+Web Designer / Developer
+ 
+Croydon, Surrey 
+
+Head of design and front-end. I worked within a team to accomplish web based application projects, corporate websites, e-commerce solutions, branding services, print design for charities and SMEs.
+Produced AJAX driven SharePoint applications for international communications company Freud Communications (www.freud.com).
+Head of design and front-end on ClearBUILD© considered by a panel of industry specialists at the InterBuild 2007 building show to be the second most innovative product of 2007. 
+Usability and interface design on training needs web-application for petro-chemicals company (Petro Canada) .
+
+### Mime Graphics
+July 2002 to Feb 2005
+(Owner/Partner)
+
+Croydon, Surrey
+
+I began working as a designer in a partnership after college with the view to building a strong portfolio of work.
+Account management and client relationship building from SME.
+Time management
+Experience in pre-press and dealing with printers both lithographic and digital.
+
+Industry Recognition
+--- 
+ - Sitecore, Site of the Year Award for The FA, Just Play
+ - jQuery Kinetic plugin featured in on-line magazines
+
+Technical Skills
+---
+
+I have a good level of experience across the main web technologies. I also am
+experienced in testing and continuous integration setup and practices.
+
+ - Hand coded JavaScript (jsLinted), jQuery, jQuery Plugins, unit testing with Jasmine/QUnit, AMD, RequireJs
+ - XHTML 4.0 Strict, (X)HTML 5, written by hand using well thought out semantics, written to be integrated within CMS systems
+ - CSS 2/3, Written by hand, built for responsive layouts, mobile devices, screen and print
+ - Selenium, XML
+ - Methodologies: Agile: Scrum, Kanban
+ - Source Control: Subversion, Git, Visual Source Safe
+ - Continuous Integration: nAnt, CruiseControl.net, Jenkins
+
+Qualifications
+---
+
+ - Master CIW Designer (2006): CIW Certified Internet Web Professional Program. www.ciwcertified.com 
+ - BTEC Diploma, Foundation Studies in Art and Design (2001):
+ - London College of Printing (School of Graphic Design)
+ - A Levels in Computing (A), Electronics (A), Art (C) (2000): John Ruskin Sixth Form College
+
+
+
