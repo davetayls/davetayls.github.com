@@ -1,0 +1,110 @@
+--- 
+layout: post 
+author: davetayls 
+title: jQuery.lazyLoader, Semantic, organic responsive images?
+categories:
+    - jquery
+    - thoughts
+    - releases
+---
+
+## Respons-ish-ness
+
+I'm often a bit of a purist, but as I age, I'm realising more and more the [history of the web](http://1997.webhistory.org/www.lists/www-talk.1993q1/index.html), much like most other histories is a pretty messy pit of layers laid on top of layers. After reading [this revolutionary email from the birth of the img tag](http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html), I'm reminded we're just working on the next layer so it's probably going to be messy ;).
+
+I have been reading this evening over people's thoughts about how we tackle [responsible responsive images](http://adactio.com/journal/4997/) and there seems to be no perfect method. In fact many of the [methods currently being seen](http://www.cloudfour.com/responsive-imgs-part-2/) have major gotchas. It just feels like we are far from getting a stable way of providing responsive images using the `img` tag. 
+
+There have been a few [interesting discussions about how this could play out in the future](http://www.cloudfour.com/responsive-imgs-part-3-future-of-the-img-tag/) but like a lot of people I want to have a go at doing something NOW! So taking the pragmatic view that [done is better than perfect](http://lifehacker.com/5864004/the-done-manifesto-lays-out-13-ground-rules-for-getting-to-done) I have developed a simple tool to add to many other options out there which fitted well for what I was trying to achieve.
+
+## The essense of the idea
+
+The essence of this idea is that if the image being used is an essential part of the content then it needs to be discoverable BUT does it really need to be represented by an `img` tag? Instead could it be linked to like most other content? That would then eleviate the need for all this hackery and achieve the following:
+
+ - A discoverable bit of content
+ - The ability to reference find and crawl the source organically
+ - The ability to enhance this piece of content depending on many device factors
+ - No loading a small and a large image in desktop environments
+ - The potential to not serve an image at all in environments which are completely text based
+
+But I have found these areas to be tricky:
+
+ - When needing the piece of content to be a link itself (you can't nest links)
+
+## What does it look like?
+
+
+Usage
+--- 
+
+With the following markup
+
+    <div id="#lazy">
+        <a href="myimage.jpg">my image</a>
+    </div>
+
+You run the plugin on the links
+
+    $('#lazy a').lazyLoader();
+
+Examples
+--- 
+
+    <a href="myimage.jpg">my image</a>
+
+converts to
+
+    <img src="myimage.jpg" alt="my image" />
+
+and with data attribute:
+
+    <a href="mypage.html" data-img="myimage.jpg">my image</a>
+
+converts to
+
+    <img src="myimage.jpg" alt="my image" />
+
+
+Responsive images
+--- 
+
+If you want to dynamically load images dependent on the screen dimensions then
+you can use the following.
+
+    <a href="myimage.jpg" 
+       data-img768="myimage-768.jpg" 
+       data-img990="myimage-990.jpg" 
+    >my image</a>
+
+js:
+
+    $('a').lazyLoader({
+        steps: [768,990] // this must be sorted correctly
+    });
+
+Or it also supports dynamic urls so you don't need all those data attributes.
+
+    <a href="myimage.jpg">my image</a>
+
+js:
+
+    $('a').lazyLoader({
+        img: function(url, windowWidth) {
+            if (windowWidth >= 768){
+                return url.replace(/.(jpg|gif|png)$/i, '-mega.$1'); 
+            } else {
+                return url;
+            }
+        }
+    });
+
+This function appends "-mega" on to the end of the url if the windowWidth is
+greater than or equal to 768.
+
+    <img src="myimage-mega.jpg" alt="my image" />
+
+## To Conclude
+
+Now I'm very sure that there are people who are far more intelectual than me that will pick this to pieces. Well.. I'm interested in how this sits with them. It's certainly going to be field tested and I wonder how my view on it will evolve as I put it to the test. I just thought this might a) be the right tool for a niche b) spark some thoughts outside the common paths which are being followed.
+
+[View a demo](http://the-taylors.org/jquery.lazyLoader/), [View the source](https://github.com/davetayls/jquery.lazyLoader)
+
