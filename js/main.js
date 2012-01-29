@@ -9,7 +9,6 @@
 * <script data-main="/js/main" src="/lib/require.js"></script>
 * for more information see <http://requirejs.org>
 */
-/*jslint browser: true, vars: true, white: true, forin: true */
 /*global define,require */
 require(
 { 
@@ -24,7 +23,7 @@ require(
     'lib/jquery.tweet',
     'lib/jquery.pager'
 ], 
-function($) {
+function ($) {
     'use strict';
     
     $('pre>code').parent().addClass('prettyprint');

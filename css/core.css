@@ -194,7 +194,9 @@ pre.prettyprint {
     => mod-blogPosts
 --------------------------------------------------*/
 .mod-blogPosts article {
+    border-bottom: dotted 1px #ddd;
     padding-bottom: 32px;
+    margin-bottom: 32px;
 }
 
 /**
