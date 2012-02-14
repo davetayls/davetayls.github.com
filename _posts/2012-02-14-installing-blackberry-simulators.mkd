@@ -23,14 +23,14 @@ Installing Blackberry Simulators is a bit of a nightmare. Here are some findings
  - Create a JAVA_HOME environment variable.
     - Open System Properties -> Advanced -> Environment Variables
     - Create a new system variable
-    - Variable name: JAVA_HOME
-    - Example value: C:\Program Files (x86)\Java\jdk1.6.0_21
-    - Add %JAVA_HOME%\bin directory to the PATH system variable
+    - Variable name: `JAVA_HOME`
+    - Example value: `C:\Program Files (x86)\Java\jdk1.6.0_21`
+    - Add `%JAVA_HOME%\bin` directory to the PATH system variable
 
  - Add Java bin to PATH
     - Open System Properties -> Advanced -> Environment Variables 
-    - Under system variables, select PATH and append ;%JAVA_HOME%\bin 
-    - ''e.g. %SystemRoot%\system32;%SystemRoot%;%JAVA_HOME%\bin''
+    - Under system variables, select PATH and append `;%JAVA_HOME%\bin`
+    - e.g. `%SystemRoot%\system32;%SystemRoot%;%JAVA_HOME%\bin`
 
 
 ## Verify that Java is installed.
@@ -46,7 +46,7 @@ Installing Blackberry Simulators is a bit of a nightmare. Here are some findings
 
 ## Install Blackberry Email and MDS Services
 
- - Go to: https://swdownloads.blackberry.com/Downloads/entry.do?code=060AD92489947D410D897474079C1477
+ - Go to: <https://swdownloads.blackberry.com/Downloads/entry.do?code=060AD92489947D410D897474079C1477>
  - Choose Blackberry Email and MDS Services from the dropdown
  - Click "Next"
  - Download the latest bundle
