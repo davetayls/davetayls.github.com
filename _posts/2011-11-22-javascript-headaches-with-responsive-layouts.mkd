@@ -2,7 +2,10 @@
 layout: post 
 author: davetayls 
 title: JavaScript headaches with responsive layouts
-categories: thoughts
+categories:
+    - jquery
+    - thoughts
+    - responsive
 ---
 
 It's always nice to start another responsive project, each a little more daring than the last. I'm still in the infant stages with these projects as I find that I'm lacking some good tools to make the process easier. I've created a a simple [responsive device browser](http://the-taylors.org/devicebrowser) which simply gives an at a glance impression of how a responsive site will look at the various screen widths.

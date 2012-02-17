@@ -1,23 +1,8 @@
 /*
     core.css
     =================================
-    - lib files
-    - animations
-    - structure
-    - list-blogs
-    - menu
-    - cp-comments
-    - mod-blogPosts
-    - tweet_list
-    - max-width 500px screens
-        - structure
-        - nav-primary
-    - min-width 1000px screens
-        - nav-primary
-    - min-width 1000px screens
-        - structure
-
 */
+
 /**
     => lib files
 --------------------------------------------------*/
@@ -392,7 +377,41 @@ pre.prettyprint {
             #pageFooter-inner {
                 width: 980px;
             }
-
+    /**
+        => mod-imageGrid
+    --------------------------------------------------*/
+    .mod-imageGrid {
+        list-style: none outside none;
+        margin: 0;
+        padding: 0;
+        text-align: justify;
+    }
+        .mod-imageGrid li {
+            border: solid 3px #eee;
+            display: -moz-inline-stack;
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            margin: 10px 0;
+            position: relative;
+            width: 250px;
+            height: 250px;
+            overflow: hidden;
+            vertical-align: top;
+            -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.6);
+               -moz-box-shadow: 0 0 8px rgba(0,0,0,0.6);
+                 -o-box-shadow: 0 0 8px rgba(0,0,0,0.6);
+                    box-shadow: 0 0 8px rgba(0,0,0,0.6);
+        }
+            .mod-imageGrid li h2 {
+                display: none;
+            }
+            .mod-imageGrid li img {
+                display: block;
+                width: auto;
+                max-width: none;
+                height: 100%;
+            }
 
 }
 
