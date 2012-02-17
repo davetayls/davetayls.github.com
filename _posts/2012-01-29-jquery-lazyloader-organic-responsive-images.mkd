@@ -95,7 +95,8 @@ js:
             } else {
                 return url;
             }
-        }
+        },
+        steps: [768,990]
     });
 
 This function appends "-mega" on to the end of the url if the windowWidth is

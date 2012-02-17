@@ -1,0 +1,95 @@
+---
+layout: post
+author: davetayls
+title: Installing Blackberry Simulators
+categories:
+    - blackberry
+    - howto
+    - dev
+---
+
+![Blackberry Simulators](https://lh6.googleusercontent.com/-SGzig07yJsI/TzkEOTBXHTI/AAAAAAAAkWw/dWYGEvPlDSo/s400/blackberry-simulators.PNG)
+
+Installing Blackberry Simulators is a bit of a nightmare. Here are some findings to make the process a little smoother.
+
+## Install Java JDK IMPORTANT
+
+ - IMPORTANT: Use the Sun JDK, not any other distribution.  
+ - IMPORTANT: Install JDK 1.6 or higher, 
+ - IMPORTANT: Install the 32-bit version even if you are running a 64bit Machine.
+
+## Set up JAVA environment
+
+ - Create a JAVA_HOME environment variable.
+    - Open System Properties -> Advanced -> Environment Variables
+    - Create a new system variable
+    - Variable name: `JAVA_HOME`
+    - Example value: `C:\Program Files (x86)\Java\jdk1.6.0_21`
+    - Add `%JAVA_HOME%\bin` directory to the PATH system variable
+
+ - Add Java bin to PATH
+    - Open System Properties -> Advanced -> Environment Variables 
+    - Under system variables, select PATH and append `;%JAVA_HOME%\bin`
+    - e.g. `%SystemRoot%\system32;%SystemRoot%;%JAVA_HOME%\bin`
+
+
+## Verify that Java is installed.
+
+ - Open a new command window:
+ - Start > Run, type in "cmd", and click OK.
+ - Check Java Version
+
+        C:\>java -version
+        java version "1.6.0_21"
+        Java(TM) SE Runtime Environment (build 1.6.0_21-b07)
+        Java HotSpot(TM) Client VM (build 17.0-b17, mixed mode, sharing)
+
+## Install Blackberry Email and MDS Services
+
+ - Go to: <https://swdownloads.blackberry.com/Downloads/entry.do?code=060AD92489947D410D897474079C1477>
+ - Choose Blackberry Email and MDS Services from the dropdown
+ - Click "Next"
+ - Download the latest bundle
+ - Install by running the executable
+
+## Install Blackberry OS Device Simulators
+
+ - Go to: <https://swdownloads.blackberry.com/Downloads/entry.do?code=060AD92489947D410D897474079C1477>
+ - Choose a Device Simulator for the version of the OS you want to test
+ - Click "Next"
+ - Download the latest bundle
+ - Install by running the executable
+
+## Start the MDS and Simulator
+
+ - Open the Start Menu and run
+   All Programs > Research In Motion > Blackberry Email and MDS Services > MDS
+
+ - Open the Start Menu at
+
+    All Programs > Research In Motion
+
+ - You should have a simulators folder for the device you installed previously
+
+ - Run it
+
+## Disable Graphics Acceleration
+
+ - As the simulator is starting I have found it smoother to disable graphics acceleration
+ - View > Graphics Acceleration > Off
+
+## Connect to WIFI
+
+ - Use "Manage Connections" to turn off the Mobile Network
+ - You might be prompted to run a connection wizard when you start up the phone
+ - Use it to connect to the Default WIFI network
+ - If you don't then click the Blackberry button and open "Manage Connections" and run "Set up Wi-Fi Network"
+
+## Browse the Internet
+
+ - You should finally be able to open the browser and use the internet
+
+
+## References
+<http://wiki.phonegap.com/w/page/31930982/Getting%20Started%20with%20PhoneGap%20BlackBerry%20WebWorks>
+
