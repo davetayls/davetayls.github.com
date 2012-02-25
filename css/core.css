@@ -151,6 +151,7 @@ pre.prettyprint {
 --------------------------------------------------*/
 .menu,
 .menu ul {
+    clear: both;
     list-style: none outside none;
     margin: 0;
     padding: 0;

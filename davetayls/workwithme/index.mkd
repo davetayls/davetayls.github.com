@@ -1,0 +1,33 @@
+---
+layout: post
+title: Work with me
+comments: hide
+---
+
+Hey, thanks for being interested in working with me. I've worked with a wide
+range of clients from individuals to government organisations. I have a very
+open and honest work ethic much in line with the [Agile
+Principles](http://agilemanifesto.org/principles.html)
+
+## Estimates
+
+Drop me [an email](mailto:dave@the-taylors.org) and I can give estimates for work.
+
+## Appointment slots
+
+There have been lots of studies showing that over multitasking drastically
+reduces productivity.  So in an effort to keep productive I prefer to work in
+alocated slots of time for each client instead of purely a project by project
+basis. You can then be aware when I am focusing on your project and know when
+is best to contact and work through any questions.
+
+I find this streamlines and reduces the amount of admin so that costs go down
+and I can spend more time producing the work.
+
+I use Google Calendar to organise slots, you should see available appointments
+below, or you can go [directly to the appointment page](https://www.google.com
+/calendar/b/0/selfsched?sstoken=UUd2UGxUclZPQWVlfGRlZmF1bHR8MDQ4NGZhMzJhZTg4Nz
+AzOWE4N2YxMGUxNGVlOTk2OWE)
+
+<iframe src="https://www.google.com/calendar/b/0/selfsched?sstoken=UUd2UGxUclZPQWVlfGRlZmF1bHR8MDQ4NGZhMzJhZTg4NzAzOWE4N2YxMGUxNGVlOTk2OWE" frameborder="0" width="100%" height="500" style="border: solid 1px #ccc;"><!-- --></iframe>
+
