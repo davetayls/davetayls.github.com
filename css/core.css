@@ -387,7 +387,7 @@ pre.prettyprint {
         text-align: justify;
     }
         .mod-imageGrid li {
-            border: solid 3px #eee;
+            border: solid 10px #eee;
             display: -moz-inline-stack;
             display: inline-block;
             *display: inline;
@@ -395,17 +395,42 @@ pre.prettyprint {
             margin: 10px 0;
             position: relative;
             width: 250px;
-            height: 250px;
+            height: 140px;
             overflow: hidden;
             vertical-align: top;
-            -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.6);
-               -moz-box-shadow: 0 0 8px rgba(0,0,0,0.6);
-                 -o-box-shadow: 0 0 8px rgba(0,0,0,0.6);
-                    box-shadow: 0 0 8px rgba(0,0,0,0.6);
+            -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+               -moz-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+                 -o-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+                    box-shadow: 0 0 10px rgba(0,0,0,0.6);
         }
             .mod-imageGrid li h2 {
-                display: none;
+                font-size: 1em;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: auto;
+                margin: 0;
+                padding: 0;
             }
+                .mod-imageGrid li h2 a {
+                    display: block;
+                    background: #000;
+                    background: rgba(0,0,0,0.6);
+                    padding: 3%;
+                    height: 94%;
+                    color: #fff;
+                }
+                .mod-imageGrid li h2 a:active,
+                .mod-imageGrid li h2 a:hover {
+                    outline: none;
+                    -webkit-text-shadow: none;
+                       -moz-text-shadow: none;
+                         -o-text-shadow: none;
+                            text-shadow: none;
+                }
+                .mod-imageGrid li:hover h2 a {
+                }
             .mod-imageGrid li img {
                 display: block;
                 width: auto;
