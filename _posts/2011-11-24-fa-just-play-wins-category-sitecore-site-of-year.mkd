@@ -2,7 +2,7 @@
 layout: post 
 author: davetayls 
 title: FA Just Play wins it's category in Sitecore site of the year
-postimage: https://lh5.googleusercontent.com/-5XZmZiq85yc/Ts4WqMzCqQI/AAAAAAAAjw0/DT6lFI32nSE/s1007/justplay.png
+postimage: https://lh3.googleusercontent.com/-0fmaC5PZ7O0/T0kfmb8gH5I/AAAAAAAAkrM/wsQRS_FYCus/s800/justplay.jpg
 categories:
     - thoughts
     - awards
