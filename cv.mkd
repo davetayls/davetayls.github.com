@@ -9,7 +9,7 @@ Dave Taylor, Curriculum Vitae
  - t: 0754 081 7008     		
  - address: 87 Lewin Road, London, SW16 6JX 
  - w: http://the-taylors.org 		
- - linkedIn: http://uk.linkedin.com/in/davidtaylorlondon 
+ - linkedIn: http://uk.linkedin.com/in/davetayls 
  - t: http://twitter.com/davetayls		
  - github: http://github.com/davetayls
 
