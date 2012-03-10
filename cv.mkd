@@ -6,12 +6,23 @@ layout: cv
 Dave Taylor, Curriculum Vitae
 ===========
 
- - t: 0754 081 7008     		
- - address: 87 Lewin Road, London, SW16 6JX 
- - w: http://the-taylors.org 		
- - linkedIn: http://uk.linkedin.com/in/davetayls 
- - t: http://twitter.com/davetayls		
- - github: http://github.com/davetayls
+t
+: 0754 081 7008     		
+
+address
+: 87 Lewin Road, London, SW16 6JX 
+
+w
+: <http://the-taylors.org>
+
+linkedIn
+: <http://uk.linkedin.com/in/davetayls>
+
+t
+: <http://twitter.com/davetayls>
+
+github
+: <http://github.com/davetayls>
 
 I am a disciplined and passionate front-end web developer with over nine years
 experience.  I listen, make good judgements on the approach and get things done
@@ -26,71 +37,82 @@ coding and working with open source  library jQuery.
 
 Experience
 ----------
-### Aqueduct
-July 2009 to Present
-Senior Front-End Developer
+### Aqueduct (<http://www.aqueduct.co.uk>)
 
+#### Senior Front-End Developer - July 2009 to March 2012 (2 years, 8 months)
 
-(Creative Agency Specialising in Brand, Advertising, Digital and Design) 
+I was employed by Aqueduct to build a Front-End development team where previously freelancers where used. Tasked with setting standards, overseeing code quality and putting these in to practice. With my background in design and back-end experience, I am the linchpin between the back end team, design team and front-end team. Understanding the relationships between each, I enable them work more effectively together. 
 
-Clerkenwell, London
+I ended up leading a team consisting of one in-house mid-weight developer and external contractors. Here are some key achievements from this role:
 
-I was employed by Aqueduct to build a Front-End development team where previously freelancers where used. Tasked with setting standards, overseeing code quality and putting these in to practice. With my background in design and back-end experience, I am the linchpin between the back end team, design team and front-end team. Understanding the relationships between each, I enable them work more effectively together. I now lead a team consisting of one in-house mid-weight developer and external contractors. Here are some key achievements from this role:
-Lloyd's of London website at www.lloyds.com. This project spanned the corporate website and the migration of five in house web applications.
-British Red Cross corporate (www.redcross.org.uk) and Red Cross Training sites.
-Architecture and coding standards for Aqueduct's  web projects.
-The FA Just Play website (justplay.thefa.com).
-Feedback from my team: David is a team player and always thrives to improve himself and the team’s output as a whole, he influences people without being pedant and is always full of new ideas; he is pragmatic, skilful and has great attention to detail, he has the same goal as the rest of the team which is to deliver work we are proud of.
+ - Lloyd's of London website at www.lloyds.com. This project spanned the corporate website and the migration of five in house web applications. 
+ - British Red Cross corporate (www.redcross.org.uk) and Red Cross Training sites. 
+ - Architecture and coding standards for Aqueduct's web
+projects. 
+ - The FA Just Play website (justplay.thefa.com) won Sitecore Site of the Year for it's category.
+ - Feedback from my team: David is a team player and always thrives to improve himself and the team’s output as a whole, he influences people without being pedant and is always full of new ideas; he is pragmatic, skilful and has great attention to detail, he has the same goal as the rest of the team which is to deliver work we are proud of.
 
-### Qdos Computer Consultants
+### Qdos Computer Consultants (<http://www.qdoscc.com>)
 
-Feb 2005 to July 2009
-Web Designer / Developer
+#### Web Designer / Developer - Feb 2005 to July 2009 (4 years, 5 months)
  
-Croydon, Surrey 
+Head of design and front-end. I worked within a team to accomplish web based application projects, corporate websites, e-commerce solutions, branding services, print design for charities and SMEs. 
 
-Head of design and front-end. I worked within a team to accomplish web based application projects, corporate websites, e-commerce solutions, branding services, print design for charities and SMEs.
-Produced AJAX driven SharePoint applications for international communications company Freud Communications (www.freud.com).
-Head of design and front-end on ClearBUILD© considered by a panel of industry specialists at the InterBuild 2007 building show to be the second most innovative product of 2007. 
-Usability and interface design on training needs web-application for petro-chemicals company (Petro Canada) .
+ - I produced AJAX driven SharePoint applications for international communications company Freud Communications (www.freud.com). 
+ - Head of design and front-end on ClearBUILD© considered by a panel of industry specialists at the InterBuild 2007 building show to be the second most innovative product of 2007.
+ - Usability and interface design on training needs web-application for petro-chemicals company (Petro Canada) .
 
 ### Mime Graphics
-July 2002 to Feb 2005
-(Owner/Partner)
 
-Croydon, Surrey
+#### Owner/Partner - July 2002 to Feb 2005 (2 years, 8 months)
 
-I began working as a designer in a partnership after college with the view to building a strong portfolio of work.
-Account management and client relationship building from SME.
-Time management
-Experience in pre-press and dealing with printers both lithographic and digital.
+I began working as a designer in a partnership after college with the view to building a strong portfolio of work. I cut my teeth dealing with SME Account management and client relationship building, managing my time and gaining real world experience in print and website design.
 
 Industry Recognition
 --- 
+
  - Sitecore, Site of the Year Award for The FA, Just Play
- - jQuery Kinetic plugin featured in on-line magazines
+ - My work has been featured and used in on-line magazines
+ 	- Daily Js ()
+ 	- Codrops ()
 
 Technical Skills
 ---
 
-I have a good level of experience across the main web technologies. I also am
-experienced in testing and continuous integration setup and practices.
+I have gained a large body of experience across many web technologies both client and server side. I also am experienced in testing and continuous integration setup and practices.
 
- - Hand coded JavaScript (jsLinted), jQuery, jQuery Plugins, unit testing with Jasmine/QUnit, AMD, RequireJs
- - XHTML 4.0 Strict, (X)HTML 5, written by hand using well thought out semantics, written to be integrated within CMS systems
+ - Hand coded JavaScript (Linted), jQuery, jQuery Plugins, unit testing with Jasmine/QUnit
+ - Common Js and AMD modules using RequireJs
+ - XHTML 4.0 Strict, (X)HTML 5, written by hand using well thought out semantics
  - CSS 2/3, Written by hand, built for responsive layouts, mobile devices, screen and print
- - Selenium, XML
+ - Selenium
  - Methodologies: Agile: Scrum, Kanban
- - Source Control: Subversion, Git, Visual Source Safe
- - Continuous Integration: nAnt, CruiseControl.net, Jenkins
+ - Source Control: Subversion, Git
+ - Continuous Integration: Jenkins, nAnt, CruiseControl.net
+
+Clients I have produced work for
+---
+
+ - The FA (<http://www.thefa.com>), _The English Football Association_
+ - The RFU (<http://www.rfu.com>), _The English Rugby Football Union_
+ - Manchester City Football Club (<http://www.mcfc.co.uk>) 
+ - Lloyd's of London (<http://www.lloyds.com>)
+ - Argus Media (<http://www.argusmedia.com>)
+ - Network Rail (<http://www.networkrail.co.uk>), _National Rail Infrastructure Provider_
+ - Freud Communications (<http://www.freud.com>), _International Communications Company_
+
 
 Qualifications
 ---
 
- - Master CIW Designer (2006): CIW Certified Internet Web Professional Program. www.ciwcertified.com 
- - BTEC Diploma, Foundation Studies in Art and Design (2001):
- - London College of Printing (School of Graphic Design)
- - A Levels in Computing (A), Electronics (A), Art (C) (2000): John Ruskin Sixth Form College
+Master CIW Designer (2006)
+: CIW Certified Internet Web Professional Program. www.ciwcertified.com 
+
+BTEC Diploma, Foundation Studies in Art and Design (2001)
+: London College of Printing (School of Graphic Design)
+
+A Levels in Computing (A), Electronics (A), Art (C) (2000)
+: John Ruskin College
 
 
 

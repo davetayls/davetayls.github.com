@@ -165,9 +165,11 @@ h3 strong   { }
 /* 
 	lists 
 ----------------------------------------------------*/
-dl          {}
-dt          { font-weight: bold; }
-dd          { }
+dl          { padding: 0 0 24px 0; zoom: 1; }
+dl:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+dt, dd 	    { float: left; }
+dt          { font-weight: bold; padding-right: 12px; }
+dd          { padding-right: 24px; }
 
 li			{ line-height: 1.5; }
 ol          { padding: 10px 0 10px 23px; }
