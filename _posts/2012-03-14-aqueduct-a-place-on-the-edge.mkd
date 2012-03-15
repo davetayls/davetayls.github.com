@@ -1,0 +1,52 @@
+---
+layout: post
+author: davetayls
+title: Aqueduct, a place on the edge
+postimage: https://lh5.googleusercontent.com/-6ozb2VIRilA/T2EwZ3eEiSI/AAAAAAAAlmc/8nDAQ3cWq5M/s640/aqueduct.png
+categories:
+    - thoughts
+---
+
+![Aqueduct](https://lh5.googleusercontent.com/-6ozb2VIRilA/T2EwZ3eEiSI/AAAAAAAAlmc/8nDAQ3cWq5M/s640/aqueduct.png)
+
+I have just finished my time at [Aqueduct](http://www.aqueduct.co.uk) after two and a half years leading the front-end work there. 
+
+I leave very satisfied, after feeling like we've come a long way in that time and the path ahead for those guys is looking pretty exciting.
+
+This small agency I joined has grown (and grown up) quite significantly over my time there. This has been credit to a number of people. For the dev team ask any of the developers that have gone through the agency over the last few years and they will all tell of how inspirational [Guillaume](http://twitter.com/theg) is as a person and how he has built a dev team which is now fueling itself to do great work. He's a good one for quotes and this was a gem recently:
+
+> We go all out for success knowing that we will sometime fail.
+> But what we don't want is to sit in the middle
+
+I've often taken as one of my own mottos "You've got to fail to succeed", in fact in my view if you're not failing then you're not taking enough risks and aren't pushing boundaries. [Aqueduct](http://www.aqueduct.co.uk) gave me the freedom to take risks and in the [Agile](http://en.wikipedia.org/wiki/Agile_software_development) way tought me how to fail fast so that you can rectify and learn from your mistakes.
+
+Highlights
+--
+
+![Lloyd's of London](https://lh6.googleusercontent.com/-gsGQV_JjXsw/T2Dcw0iWgdI/AAAAAAAAlmM/Wnyfo6Jiakg/s640/lloyds.jpg)
+
+I was thrown in at the deep-end with not one but 2 projects each of which were larger than I had done before. I learnt so much during the [Lloyd's of London](http://www.lloyds.com) and [British Red Cross](http://www.redcross.org.uk) projects, partly from late night researching, tweaking and fine tuning but also learning from the brilliant teams around me especially from [Martin](http://twitter.com/marto83), [Arnold](http://twitter.com/arnoldzokas) and [Simon](http://www.linkedin.com/in/nimblelotus) at the time.
+
+![FA Just Play](https://lh3.googleusercontent.com/-0fmaC5PZ7O0/T0kfmb8gH5I/AAAAAAAAkrM/wsQRS_FYCus/s800/justplay.jpg)
+
+Recently I have also had the privilege to work closely with [Tristan](http://twitter.com/tristanpeters) on a [campaign site](http://justplay.thefa.com) for [The FA](http://www.thefa.com) which picked up the [first award](/blog/2011/11/24/fa-just-play-wins-category-sitecore-site-of-year/) attributed to one of my projects. This was a great close collaboration on many fronts and I have a lot of respect for designers who are creative with technology and are open to be inspired by us techie people. He was able to mould it in to a great site we are all proud of.
+
+![RFU Six Nations](https://lh3.googleusercontent.com/-d_NqQPxdurY/T0khHtVrLdI/AAAAAAAAkrw/WnoTxwz88ok/s640/Screen%2520shot%25202012-02-25%2520at%252017.55.50.png)
+
+Finally we have recently been involved in some really great work for the [RFU](http://www.rfu.com). We inherited their current site and have been gradually cleaning up and optimising the site along with doing some fun front-end heavy stuff for the World Cup and currently the Six Nations.
+
+Team
+--
+
+The best thing about working at [Aqueduct](http://www.aqueduct.co.uk) was the team, I was really fortunate to be able to work closely with both the developers and designers.
+
+![Steve](https://lh4.googleusercontent.com/-1Mw9ryTBWSE/T2EveTPdyhI/AAAAAAAAlmU/RWafKSKnscE/s400/2012%252019%253A54%253A21.jpg)
+
+It was also great to be directly involved in recruiting and building the front-end team. [Steve](http://twitter.com/stevezol) joined me on a permanent basis in January 2011 and together we have been able to see the fruits of sticking to standards and continuously pushing our capabilities.
+
+It is a real strength that people from all corners of the agency are empowered to bring value to the agency. And this is encouraged from the very top.
+
+## Byez
+
+And so as I take my family on a short adventure over the next five months, I'm sad to leave all that is bubbling in this great agency but look forward to continuing a relationship with them and recommend anyone who want's to "make cool things" to check them out.
+
