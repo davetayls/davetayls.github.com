@@ -20,7 +20,7 @@
     => structure
 --------------------------------------------------*/
 #pageHeader {
-    padding: 0 16px 16px;
+    padding: 0 8px 16px;
 }
     #homeHeader {
         position:absolute;
@@ -134,9 +134,11 @@ pre.prettyprint {
 /**
     => list-blogs
 --------------------------------------------------*/
+.list-blogs li {
+    border-bottom: solid 1px #ddd;
+}
 .list-blogs li a {
     display: block;
-    border-bottom: solid 1px #ddd;
     font-weight: normal;
     font-size: 1em;
     margin: 0;
@@ -156,6 +158,19 @@ pre.prettyprint {
     margin: 0;
     padding: 0;
 }
+
+/**
+    => pager-nav
+--------------------------------------------------*/
+.pager-active ul.pager-nav {
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+         -o-box-shadow: none;
+            box-shadow: none;
+}
+    .pager-active ul.pager-nav li {
+        border: none;
+    }
 
 /**
     => cp-comments
@@ -184,6 +199,19 @@ pre.prettyprint {
     padding-bottom: 32px;
     margin-bottom: 32px;
 }
+/**
+    => mod-imageGrid
+--------------------------------------------------*/
+.mod-imageGrid {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    zoom: 1;
+}
+.mod-imageGrid:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+    .mod-imageGrid li {
+    }
 
 /**
     => tweet_list
@@ -227,10 +255,6 @@ pre.prettyprint {
         margin: 10px 0 0;
         padding: 0;
 
-        -webkit-border-radius: 8px;
-            -moz-border-radius: 8px;
-                -o-border-radius: 8px;
-                border-radius: 8px;
         -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
            -moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);
              -o-box-shadow: 0 0 5px rgba(0,0,0,0.3);
@@ -245,18 +269,10 @@ pre.prettyprint {
         }
         .menu ul li:first-child,
         #nav-primary ul li:first-child {
-            -webkit-border-radius: 8px 8px 0 0;
-               -moz-border-radius: 8px 8px 0 0;
-                 -o-border-radius: 8px 8px 0 0;
-                    border-radius: 8px 8px 0 0;
         }
         .menu ul li:last-child,
         #nav-primary ul li:last-child {
             border-bottom: solid 1px #ddd;
-            -webkit-border-radius: 0 0 8px 8px;
-               -moz-border-radius: 0 0 8px 8px;
-                 -o-border-radius: 0 0 8px 8px;
-                    border-radius: 0 0 8px 8px;
         }
             .menu ul li a,
             #nav-primary ul li a {
@@ -298,6 +314,7 @@ pre.prettyprint {
 --------------------------------------------------*/
 @media screen and (min-width:500px) {
     #pageHeader {
+        padding: 0 16px 16px;
         position: relative;
         zoom: 1;
     }
@@ -342,58 +359,15 @@ pre.prettyprint {
                     color: #000;
                     text-decoration: none;
                 }
-}
-/**
-    => min-width 1000px screens
---------------------------------------------------*/
-@media screen and (min-width:1000px) {
 
-    /**
-        => structure
-    --------------------------------------------------*/
-    #pageHeader {
-        margin: 0 auto;
-        width: 980px;
-    }
-    #contentWrapper {
-        width: 948px;
-        margin: 0 auto;
-        padding: 16px;
-    }
-        #content {
-            float: left;
-            width: 568px;
-        }
-        #related {
-            float: right;
-            padding: 0 0 0 32px;
-            width: 260px;
-        }
-            #related p {
-                font-size: 0.75em;
-            }
-        #pageFooter {
-            clear: both;
-        }
-            #pageFooter-inner {
-                width: 980px;
-            }
     /**
         => mod-imageGrid
     --------------------------------------------------*/
-    .mod-imageGrid {
-        list-style: none outside none;
-        margin: 0;
-        padding: 0;
-        text-align: justify;
-    }
+    .mod-imageGrid {}
         .mod-imageGrid li {
             border: solid 10px #eee;
-            display: -moz-inline-stack;
-            display: inline-block;
-            *display: inline;
-            *zoom: 1;
-            margin: 10px 0;
+            float: left;
+            margin: 10px 10px 10px 0;
             position: relative;
             width: 250px;
             height: 140px;
@@ -439,6 +413,42 @@ pre.prettyprint {
                 height: 100%;
             }
 
+}
+/**
+    => min-width 1000px screens
+--------------------------------------------------*/
+@media screen and (min-width:1000px) {
+
+    /**
+        => structure
+    --------------------------------------------------*/
+    #pageHeader {
+        margin: 0 auto;
+        width: 980px;
+    }
+    #contentWrapper {
+        width: 948px;
+        margin: 0 auto;
+        padding: 16px;
+    }
+        #content {
+            float: left;
+            width: 568px;
+        }
+        #related {
+            float: right;
+            padding: 0 0 0 32px;
+            width: 260px;
+        }
+            #related p {
+                font-size: 0.75em;
+            }
+        #pageFooter {
+            clear: both;
+        }
+            #pageFooter-inner {
+                width: 980px;
+            }
 }
 
 

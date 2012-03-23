@@ -1,0 +1,94 @@
+---
+layout: post
+author: davetayls
+title: Cross Domain or Protocol iFrame Communication
+categories:
+    - javascript
+---
+
+We had this elephant in the closet issue while working on a project about a year ago. We were serving the website using a regular http connection but switching to a secure https connection. The login and registration process worked beautifully as we began the build supporting the organic non-javascript journey.
+
+## dem dialogs
+
+We hit the issue as we began to build the dialogs. We quickly realised that the user would need to log in using a secure page on a dialog from within a non-secure parent page. These two pages would also need to communicate to make the user experience smooth and clear. We researched various ways of talking cross domains but found the browsers we needed to support weren't consistent enough.
+
+Fortunately as the majority of the site was to be secure anyway we opted to serve the site completely from https but I hated being beaten.
+
+## victory
+
+Being a stubborn perfectionist I was determined to find a way to get this to work and I got the opportunity last month.
+
+## iFrame Messaging
+
+The key behind this technique is that pages on the same domain and protocol can communicate with each other as long as they have access to each others window. There are various ways this could work but this is how I suggest you start.
+
+### 1. Parent page
+
+Your parent page should expose a public function which will provide the functionality you want to use.
+
+    window.myPublicFunction = function(message){
+        console.log(message);
+    };
+
+Remember if you're writing any values in to the page you need to escape the value to protect against any potential cross-site scripting vulnerabilities.
+
+### 2. Script Interface
+
+On the same domain as your parent page you will need a page which simply includes a single script reference.
+
+> Watch out for potential cross-site scripting vulnerabilities.
+
+This page will be called for every message you want transmitted across domains/protocols to the top window. You would call it passing it a `key` and a `value` query string value.
+
+For example, say you wanted to pass log messages you could call the page like: `http://mysite.com/xinterface.html?key=LOG&value=message`.
+
+#### xinterface.html
+
+This is what the html page would look like.
+
+    <script src="xinterface.js"></script>
+
+#### xinterface.js
+
+The script would use a secure regular expression to pull out the values you want from the url. And then call an appropriate function in the top window.
+
+    // use a strict regular expression for security
+    var query = /key=([A-Z]*)(&value=([a-z|A-Z]*))?/.exec(location.search),
+        key   = query[1],
+        value = escape(query[3]);
+
+    // check if the url is valid
+    if (query && key) {
+
+        // call the public function
+        if (key === 'LOG') {
+            window.top.myPublicFunction(value);
+        }
+    }
+
+### 3. The Dialog Page
+
+The final piece of the puzzle is the secure page itself. You will have an iframe positioned so that it is used for the dialog content and it will be showing the secure page (eg: https://mysecuresite.com/dialog.html).
+
+Now whenever you want to communicate you just inject an invisible iframe within the page with the appropriate url.
+
+You could wrap it in a function:
+
+    var body = document.getElementsByTagName('body')[0],
+        xinterfaceUrl = 'http://mysite.com/xinterface.html';
+
+    function communicate(key, value){
+        var src = xinterfaceUrl +'?key='+ key +'&value=' + value,
+            iframe = document.createElement('iframe');
+        iframe.src = src;
+        iframe.style.display = 'none';
+        body.appendChild(iframe);
+    }
+
+## Feedback
+
+As always, one of the reasons I blog about these things is to validate the thinking so If there is something I'm missing let me know. Hope this is useful.
+
+### NB. The Future of Cross Domain or Protocol Communication
+
+As the older browsers die out there are new ways of [giving permission for specific domains to communicate between each other](http://www.caniuse.com/#search=domain) but that is for another post.

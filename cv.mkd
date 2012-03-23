@@ -24,11 +24,10 @@ t
 github
 : <http://github.com/davetayls>
 
-I am a disciplined and passionate front-end web developer with over nine years
-experience.  I listen, make good judgements on the approach and get things done
-on time. I make use of the latest technologies to produce user-centric,
-cross-browser, HTML (4/5) / CSS (2/3) websites progressively enhanced using
-JavaScript.  
+I am a disciplined and passionate front-end web developer with **over nine years**
+experience.  I listen, make good judgements on the approach and get things
+done on time. I specialise in user-centric, cross-browser, HTML (4/5) / CSS
+(2/3) websites progressively enhanced using JavaScript.
 
 I get a real buzz working at the forefront of my field researching
 new developments as they emerge and contributing to the developer community.  I
@@ -37,9 +36,9 @@ coding and working with open source  library jQuery.
 
 Experience
 ----------
-### Aqueduct (<http://www.aqueduct.co.uk>)
 
-#### Senior Front-End Developer - July 2009 to March 2012 (2 years, 8 months)
+### Senior Front-End Developer - _Aqueduct_ <http://www.aqueduct.co.uk>
+#### July 2009 to March 2012 (2 years, 8 months)
 
 I was employed by Aqueduct to build a Front-End development team where previously freelancers where used. Tasked with setting standards, overseeing code quality and putting these in to practice. With my background in design and back-end experience, I am the linchpin between the back end team, design team and front-end team. Understanding the relationships between each, I enable them work more effectively together. 
 
@@ -52,9 +51,8 @@ projects.
  - The FA Just Play website (justplay.thefa.com) won Sitecore Site of the Year for it's category.
  - Feedback from my team: David is a team player and always thrives to improve himself and the team’s output as a whole, he influences people without being pedant and is always full of new ideas; he is pragmatic, skilful and has great attention to detail, he has the same goal as the rest of the team which is to deliver work we are proud of.
 
-### Qdos Computer Consultants (<http://www.qdoscc.com>)
-
-#### Web Designer / Developer - Feb 2005 to July 2009 (4 years, 5 months)
+### Web Designer / Developer - _Qdos Computer Consultants_ <http://www.qdoscc.com>
+#### Feb 2005 to July 2009 (4 years, 5 months)
  
 Head of design and front-end. I worked within a team to accomplish web based application projects, corporate websites, e-commerce solutions, branding services, print design for charities and SMEs. 
 
@@ -62,9 +60,8 @@ Head of design and front-end. I worked within a team to accomplish web based app
  - Head of design and front-end on ClearBUILD© considered by a panel of industry specialists at the InterBuild 2007 building show to be the second most innovative product of 2007.
  - Usability and interface design on training needs web-application for petro-chemicals company (Petro Canada) .
 
-### Mime Graphics
-
-#### Owner/Partner - July 2002 to Feb 2005 (2 years, 8 months)
+### Owner/Partner - _Mime Graphics_
+#### July 2002 to Feb 2005 (2 years, 8 months)
 
 I began working as a designer in a partnership after college with the view to building a strong portfolio of work. I cut my teeth dealing with SME Account management and client relationship building, managing my time and gaining real world experience in print and website design.
 
