@@ -1,0 +1,36 @@
+body {
+	padding: 8px;
+}
+
+/*
+	=> cp-description
+--------------------------------------------------*/
+.cp-description {
+	font-style: italic;
+	font-size: 1.25em;
+	line-height: 1.2;
+	max-width: 500px;
+}
+
+
+
+@media all and (min-width: 768px) {
+
+	body {
+		padding: 50px;
+	}
+
+
+
+}
+@media all and (min-width: 990px) {
+
+	body {
+		padding: 50px 0;
+	}
+
+	.mod-constrained {
+		width: 980px;
+		margin: 0 auto;
+	}
+}
