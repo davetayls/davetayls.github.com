@@ -29,7 +29,20 @@ github
 If I am with passionate risk taking people then I'm at home.</p>
 </div>
 
-[My Skillset](#technical_skills)
+Technical Skills
+---
+
+I have gained a large body of experience across many web technologies both client and server side. I also am experienced in testing and continuous integration setup and practices.
+
+ - Hand coded JavaScript (Linted), jQuery, jQuery Plugins, unit testing with Jasmine/QUnit
+ - Common Js and AMD modules using RequireJs
+ - XHTML 4.0 Strict, (X)HTML 5, written by hand using well thought out semantics
+ - CSS 2/3, Written by hand, built for responsive layouts, mobile devices, screen and print
+ - Selenium
+ - Methodologies: Agile: Scrum, Kanban
+ - Source Control: Subversion, Git
+ - Continuous Integration: Jenkins, nAnt, CruiseControl.net
+
 
 Experience
 ----------
@@ -68,20 +81,6 @@ Industry Recognition
 ), 
 Codrops ([jQuery.kinetic](http://tympanus.net/codrops/2011/10/07/draggable-image-boxes-grid/))
 
-Technical Skills
----
-
-I have gained a large body of experience across many web technologies both client and server side. I also am experienced in testing and continuous integration setup and practices.
-
- - Hand coded JavaScript (Linted), jQuery, jQuery Plugins, unit testing with Jasmine/QUnit
- - Common Js and AMD modules using RequireJs
- - XHTML 4.0 Strict, (X)HTML 5, written by hand using well thought out semantics
- - CSS 2/3, Written by hand, built for responsive layouts, mobile devices, screen and print
- - Selenium
- - Methodologies: Agile: Scrum, Kanban
- - Source Control: Subversion, Git
- - Continuous Integration: Jenkins, nAnt, CruiseControl.net
-
 Clients I have produced work for
 ---
 
@@ -97,14 +96,9 @@ Clients I have produced work for
 Qualifications
 ---
 
-Master CIW Designer (2006)
-: CIW Certified Internet Web Professional Program. www.ciwcertified.com 
-
-BTEC Diploma, Foundation Studies in Art and Design (2001)
-: London College of Printing (School of Graphic Design)
-
-A Levels in Computing (A), Electronics (A), Art (C) (2000)
-: John Ruskin College
+ - Master CIW Designer (2006). CIW Certified Internet Web Professional Program. www.ciwcertified.com 
+ - BTEC Diploma, Foundation Studies in Art and Design (2001). London College of Printing (School of Graphic Design)
+ - A Levels in Computing (A), Electronics (A), Art (C) (2000). John Ruskin College
 
 
 
