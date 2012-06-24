@@ -6,33 +6,30 @@ layout: cv
 Dave Taylor, Curriculum Vitae
 ===========
 
-t
+tel
 : 0754 081 7008     		
 
 address
 : 87 Lewin Road, London, SW16 6JX 
 
-w
+web
 : <http://the-taylors.org>
 
 linkedIn
 : <http://uk.linkedin.com/in/davetayls>
 
-t
+twitter
 : <http://twitter.com/davetayls>
 
 github
 : <http://github.com/davetayls>
 
-I am a disciplined and passionate front-end web developer with **over nine years**
-experience.  I listen, make good judgements on the approach and get things
-done on time. I specialise in user-centric, cross-browser, HTML (4/5) / CSS
-(2/3) websites progressively enhanced using JavaScript.
+<div id="intro">
+<p>I've been developing for over nine years, and I'm pushing my creative JavaScript, HTML and CSS skills as much as ever.
+If I am with passionate risk taking people then I'm at home.</p>
+</div>
 
-I get a real buzz working at the forefront of my field researching
-new developments as they emerge and contributing to the developer community.  I
-have extensive experience working with JavaScript from architecture to hand
-coding and working with open source  library jQuery.
+[My Skillset](#technical_skills)
 
 Experience
 ----------
@@ -40,7 +37,7 @@ Experience
 ### Senior Front-End Developer - _Aqueduct_ <http://www.aqueduct.co.uk>
 #### July 2009 to March 2012 (2 years, 8 months)
 
-I was employed by Aqueduct to build a Front-End development team where previously freelancers where used. Tasked with setting standards, overseeing code quality and putting these in to practice. With my background in design and back-end experience, I am the linchpin between the back end team, design team and front-end team. Understanding the relationships between each, I enable them work more effectively together. 
+I was employed by Aqueduct to build a Front-End development team where previously freelancers where used. Tasked with setting standards, overseeing code quality and putting these in to practice. With my background in design and back-end experience, I was the linchpin between the back end team, design team and front-end team. Understanding the relationships between each, I enable them work more effectively together. 
 
 I ended up leading a team consisting of one in-house mid-weight developer and external contractors. Here are some key achievements from this role:
 

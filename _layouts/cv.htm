@@ -23,6 +23,10 @@
                 -o-box-shadow: 0 0 10px rgba(0,0,0,0.5);
                 box-shadow: 0 0 10px rgba(0,0,0,0.5);
             }
+            #intro p {
+                color: #000;
+                margin: 0;
+            }
 
             a,
             a:visited,
@@ -34,15 +38,20 @@
                 font-size: 2.0em;
                 font-style: italic;
             }
-            h2 {color: #000; font-style: italic; }
-            h3 { color: #555; font-weight: normal; margin: 0; } 
+            h2 {color: #444; font-style: italic; }
+            h3 { color: #000; font-weight: normal; margin: 0; } 
             h3 a { font-family: sans-serif; font-size: 0.666666666667em; }
             h4 { color: #999; font-size: 1em; font-weight: normal; font-family: sans-serif; }
+            p  { margin-left: 20px; }
+
+            dl { font-size: 11px; width: 535px; margin: 0 auto; position: relative; left: 17px; }
+                dl dt { width: 50px; }
+                dl dd { width: 180px; text-align: right; }
             dt:nth-child(4n+1) {
                 clear: left;
             }
 
-            ul { overflow: hidden; }
+            ul { overflow: hidden; padding-left: 40px; }
             ul li {
                 font-family: sans-serif;
                 font-size: 0.6875em;
@@ -51,7 +60,7 @@
             @media print {
                 #wrapper {
                     margin: 0;
-                    padding: 0;
+                    padding: 1cm 0;
                     -webkit-box-shadow: none;
                        -moz-box-shadow: none;
                          -o-box-shadow: none;
