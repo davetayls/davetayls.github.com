@@ -25,9 +25,7 @@ I find this streamlines and reduces the amount of admin so that costs go down
 and I can spend more time producing the work.
 
 I use Google Calendar to organise slots, you should see available appointments
-below, or you can go [directly to the appointment page](https://www.google.com
-/calendar/b/0/selfsched?sstoken=UUd2UGxUclZPQWVlfGRlZmF1bHR8MDQ4NGZhMzJhZTg4Nz
-AzOWE4N2YxMGUxNGVlOTk2OWE)
+below, or you can go [directly to the appointment page](https://www.google.com/calendar/selfsched?sstoken=UUhZUzZsZ3RhWG9rfGRlZmF1bHR8ZGViNzhiNTgyMGM2MDU2YjRiZGVkNzIzZWNlN2ZmNWQ)
 
-<iframe src="https://www.google.com/calendar/b/0/selfsched?sstoken=UUd2UGxUclZPQWVlfGRlZmF1bHR8MDQ4NGZhMzJhZTg4NzAzOWE4N2YxMGUxNGVlOTk2OWE" frameborder="0" width="100%" height="500" style="border: solid 1px #ccc;"><!-- --></iframe>
+<iframe src="https://www.google.com/calendar/selfsched?sstoken=UUhZUzZsZ3RhWG9rfGRlZmF1bHR8ZGViNzhiNTgyMGM2MDU2YjRiZGVkNzIzZWNlN2ZmNWQ" frameborder="0" width="100%" height="500" style="border: solid 1px #ccc;"><!-- --></iframe>
 
