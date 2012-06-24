@@ -56,10 +56,6 @@ projects.
  
 Head of design and front-end. I worked within a team to accomplish web based application projects, corporate websites, e-commerce solutions, branding services, print design for charities and SMEs. 
 
- - I produced AJAX driven SharePoint applications for international communications company Freud Communications (www.freud.com). 
- - Head of design and front-end on ClearBUILD© considered by a panel of industry specialists at the InterBuild 2007 building show to be the second most innovative product of 2007.
- - Usability and interface design on training needs web-application for petro-chemicals company (Petro Canada) .
-
 ### Owner/Partner - _Mime Graphics_
 #### July 2002 to Feb 2005 (2 years, 8 months)
 
@@ -69,9 +65,11 @@ Industry Recognition
 --- 
 
  - Sitecore, Site of the Year Award for The FA, Just Play
- - My work has been featured and used in on-line magazines
- 	- Daily Js ()
- 	- Codrops ()
+ - My work has been featured and used in on-line magazines: Daily Js (
+[jQuery.kinetic](http://dailyjs.com/2011/08/09/jquery-roundup/),
+[jQuery.lazyLoader](http://dailyjs.com/2012/01/31/jquery-roundup/)
+), 
+Codrops ([jQuery.kinetic](http://tympanus.net/codrops/2011/10/07/draggable-image-boxes-grid/))
 
 Technical Skills
 ---
