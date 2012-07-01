@@ -4,8 +4,12 @@ title: A little bit about me
 comments: hide
 ---
 
-My name is Dave Taylor, I was born and grew up in the Philippines although both
-my parents are English. I now live in London where my love for the web and
+My name is Dave Taylor, I was born and grew up in the Philippines although
+both my parents are English. We lived on the edge of an active volcano
+called Mayon (which means beautiful). It was a flippin amazing place to be apart from when it errupted.
+let's just say that.
+
+I now live in London where my love for the web and
 geekery has been growing steadily for several years. I'm ever curious,
 I love the creativity you can have with front-end technology. This is the time
 to be working with HTML, CSS and JavaScript, and I'm living on the razors edge
