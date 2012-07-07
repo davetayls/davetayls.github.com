@@ -414,6 +414,29 @@ pre.prettyprint {
             }
 
 }
+
+/*
+    => min
+--------------------------------------------------*/
+@media screen and (min-width:768px) and (max-width:1000px) {
+    #contentWrapper {
+        padding: 16px 0 16px 32px;
+    }
+        #content {
+            float: left;
+            width: 568px;
+        }
+        #related {
+            float: right;
+            padding: 0 16px 0 0;
+            width: 116px;
+            font-size: 0.75em;
+        }
+            #related h2 {
+                /*font-size: 1.125em;*/
+            }
+}
+
 /**
     => min-width 1000px screens
 --------------------------------------------------*/
