@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A little bit about me
+title: A little bit about me - Dave Taylor UI Dev
 comments: hide
 ---
 
