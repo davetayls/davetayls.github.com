@@ -74,12 +74,8 @@ I began working as a designer in a partnership after college with the view to bu
 Industry Recognition
 --- 
 
- - Sitecore, Site of the Year Award for The FA, Just Play
- - My work has been featured and used in on-line magazines: Daily Js (
-[jQuery.kinetic](http://dailyjs.com/2011/08/09/jquery-roundup/),
-[jQuery.lazyLoader](http://dailyjs.com/2012/01/31/jquery-roundup/)
-), 
-Codrops ([jQuery.kinetic](http://tympanus.net/codrops/2011/10/07/draggable-image-boxes-grid/))
+ - Sitecore, Site of the Year Award for The FA, Just Play. ([Blog post](http://the-taylors.org/blog/2011/11/24/fa-just-play-wins-category-sitecore-site-of-year/))
+ - My work has been featured and used in on-line magazines: Daily Js ([jQuery.kinetic](http://dailyjs.com/2011/08/09/jquery-roundup/), [jQuery.lazyLoader](http://dailyjs.com/2012/01/31/jquery-roundup/)), Codrops ([jQuery.kinetic](http://tympanus.net/codrops/2011/10/07/draggable-image-boxes-grid/))
 
 Clients I have produced work for
 ---
