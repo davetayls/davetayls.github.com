@@ -1,0 +1,55 @@
+---
+layout: post
+title: Work with me (Dave Taylor)
+comments: hide
+---
+
+Hey, thanks for being interested in working with me. I love working with
+people and teams who are passionate about producing great work.
+
+I have a very open and honest work ethic much in line with the
+[Agile Principles](http://agilemanifesto.org/principles.html)
+
+Drop me [an email](mailto:dave.taylor@pogokid.com). You can quicky check my availability using the calendar below.
+
+## Availability
+[View the calendar directly](https://www.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=43997nha4g9al5mmd24ok3qdcg%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=Europe%2FLondon)
+
+<iframe src="https://www.google.com/calendar/embed?mode=MONTH&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=43997nha4g9al5mmd24ok3qdcg%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=Europe%2FLondon" frameborder="0" width="100%" height="500" style="border: solid 1px #ccc;"><!-- --></iframe>
+
+## What others are saying
+
+Here are some key [recommendations](http://www.linkedin.com/profile/view?id=41712048#recommendations) I have received through [LinkedIn](http://www.linkedin.com/in/davetayls). Their not here because I want to pat myself on the back, but so that I don't have to come up with a bunch of long words to make me feel like I know what I'm talking about.
+
+Hopefully they will also demonstrate that I would bring value to your project.
+
+### [Rob Oubridge](http://www.linkedin.com/pub/rob-oubridge/1/167/845), Founder, Aqueduct
+
+“Dave is an extremely talented front-end developer - without exception the most knowledgable and advanced in his area that we have ever worked with. In addition, Dave is a cohesive team member, widely popular with his colleagues and always inspiring quality, exploration and innovation. One of the true 'greats' we've had the pleasure to work with - I cannot recommend Dave highly enough either as a professional or an individual.” 
+
+February 27, 2012
+
+### [Guillaume Buat-Ménard](http://www.linkedin.com/in/buatmenard), Technical Director, Aqueduct
+
+“David is an outstanding developer combining great coding skills, broad knowledge, agency mindset for delivery and wisdom. Dave is passionate about his craft and constantly improving frameworks, standards and is very active in the open source community, he is one of the very best developers I have worked with over the last 15 years.” 
+
+February 24, 2012
+
+### [John Bown](http://www.linkedin.com/in/johnbown), Digital Operations Director, Aqueduct
+
+“What can I say about Dave? He was a true star in the agency - no front-end site was too big or too complex for him to build. He was responsible for introducing new ways of working and for raising the bar in terms of HTML5 websites, web apps and responsive design. 
+
+Hopefully we work together again soon!” 
+
+March 11, 2012
+
+### Connect with me
+
+I am davetayls in most social places. Here are a few.
+
+[LinkedIn](http://www.linkedin.com/in/davetayls), 
+[Twitter](http://twitter.com/davetayls), 
+[Github](http://github.com/davetayls), 
+[Google+](https://plus.google.com/103477668197991622209),
+[Vimeo](https://vimeo.com/davetayls)
+
