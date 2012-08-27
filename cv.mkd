@@ -37,12 +37,30 @@ I have gained a large body of experience across many web technologies both clien
  - Hand coded JavaScript (Linted), jQuery, jQuery Plugins, unit testing with Jasmine/QUnit
  - Common Js and AMD modules using RequireJs
  - XHTML 4.0 Strict, (X)HTML 5, written by hand using well thought out semantics
- - CSS 2/3, Written by hand, built for responsive layouts, mobile devices, screen and print
- - Selenium
+ - CSS2; CSS3; Less CSS. Written by hand, built for responsive layouts, mobile devices, screen and print
+ - IDE of choice: Sublime Text 2. Others: VIM, Notepad++, Visual Studio
  - Methodologies: Agile: Scrum, Kanban
- - Source Control: Subversion, Git
+ - Source Control: Git, Subversion
  - Continuous Integration: Jenkins, nAnt, CruiseControl.net
+ - Selenium
 
+
+Recommendations
+---------------
+
+### Rob Oubridge: _Founder, Aqueduct_
+
+“Dave is an extremely talented front-end developer - without exception the most knowledgable and advanced in his area that we have ever worked with. In addition, Dave is a cohesive team member, widely popular with his colleagues and always inspiring quality, exploration and innovation. One of the true 'greats' we've had the pleasure to work with - I cannot recommend Dave highly enough either as a professional or an individual.” 
+
+February 27, 2012
+
+### Guillaume Buat-Ménard: _Technical Director, Aqueduct_
+
+“David is an outstanding developer combining great coding skills, broad knowledge, agency mindset for delivery and wisdom. Dave is passionate about his craft and constantly improving frameworks, standards and is very active in the open source community, he is one of the very best developers I have worked with over the last 15 years.” 
+
+February 24, 2012
+
+View more on [LinkedIn](http://www.linkedin.com/in/davetayls).
 
 Experience
 ----------
@@ -54,12 +72,10 @@ I was employed by Aqueduct to build a Front-End development team where previousl
 
 I ended up leading a team consisting of one in-house mid-weight developer and external contractors. Here are some key achievements from this role:
 
- - Lloyd's of London website at www.lloyds.com. This project spanned the corporate website and the migration of five in house web applications. 
- - British Red Cross corporate (www.redcross.org.uk) and Red Cross Training sites. 
- - Architecture and coding standards for Aqueduct's web
-projects. 
- - The FA Just Play website (justplay.thefa.com) won Sitecore Site of the Year for it's category.
- - Feedback from my team: David is a team player and always thrives to improve himself and the team’s output as a whole, he influences people without being pedant and is always full of new ideas; he is pragmatic, skilful and has great attention to detail, he has the same goal as the rest of the team which is to deliver work we are proud of.
+ - **Big builds** and High traffic sites (The RFU, Lloyd's of London, British Red Cross, Manchester City FC)
+ - **Campains, Social Integration and Cutting edge techniques** (The Football Association, The RFU, Marks & Spencer)
+ - **Responsive Design and Web Apps** (The Football League, Sitecore, Aqueduct & numerous R&D projects)
+ - **Presentations, workshops and evangelising** for new industry techniques and practices
 
 ### Web Designer / Developer - _Qdos Computer Consultants_ <http://www.qdoscc.com>
 #### Feb 2005 to July 2009 (4 years, 5 months)
