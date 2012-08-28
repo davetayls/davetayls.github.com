@@ -15,9 +15,8 @@
             }
             #wrapper {
                 background: #fff;
-                margin: 1.5625em auto;
-                padding: 8.333333em;
-                width: 43.75em;
+                margin: 1.5625em 0.5em;
+                padding: 2.875em 0.5em;
                 -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
                 -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
                 -o-box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -38,13 +37,16 @@
                 font-size: 2.0em;
                 font-style: italic;
             }
+                h1 em {
+                    display: block;
+                }
             h2 {color: #444; font-style: italic; }
             h3 { color: #000; font-weight: normal; margin: 0; } 
             h3 a { font-family: sans-serif; font-size: 0.666666666667em; }
             h4 { color: #777; font-size: 0.875em; font-weight: normal; font-style: italic; }
             p  { margin-left: 20px; widows: 3; }
 
-            dl { font-size: 11px; width: 535px; margin: 0 auto; position: relative; left: 17px; }
+            dl { font-size: 11px; width: 290px; margin: 0 auto; position: relative; left: 17px; }
                 dl dt { width: 50px; }
                 dl dd { width: 180px; text-align: right; }
             dt:nth-child(4n+1) {
@@ -65,6 +67,25 @@
                        -moz-box-shadow: none;
                          -o-box-shadow: none;
                             box-shadow: none;
+                }
+            }
+            @media all and (min-width:768px){
+                #wrapper {
+                    margin: 1.5625em auto;
+                    padding: 8.333333em;
+                    width: 600px;
+                }
+                h1 em {
+                    display: inline;
+                }
+                dl {
+                    width: 535px;
+                }
+            }
+            @media all and (min-width:990px){
+                #wrapper {
+                    padding: 8.333333em;
+                    width: 43.75em;
                 }
             }
             
