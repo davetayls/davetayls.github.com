@@ -1,0 +1,94 @@
+---
+layout: post
+author: davetayls
+title: Responsive styles respecting old IE 6/7/8
+categories:
+---
+
+![IE Isn't behind you yet](https://lh3.googleusercontent.com/-ow4CMkdEayY/UEOB4ix10hI/AAAAAAAArZQ/Qo4FAzJOf0E/s800/Untitled-1.png)
+
+I attended the second [#anoraks](https://twitter.com/#!/search/%23anoraks) talk last Thursday at AKQA in London. It was great to hear [@denodell](http://twitter.com/denodell) speak on responsive design. He did a really great job looking back at the past and some creative ideas for the future.
+
+One thing which caught my attention was how he covered the topics of supporting older versions of IE. We're in an intermediate stage with media queries where there are still a significant number of users out there who are on browsers which don&rsquo;t support them.
+
+Dennis covered a couple of valid options and I want to highlight a third which has worked really well for the responsive projects I have been involved with over the last 8 months.
+
+With all these options you need to approach the build mobile first and not want to use jerky JavaScript polyfills.
+
+## Mobile version for IE 6/7/8
+
+    <link rel="stylesheet" href="core.css" />
+
+The first option is to just serve the mobile site to any browser that doesn't support media queries.
+
+### When this could be an option:
+
+ - Analytics show a very small amount of users on those browsers
+ - Client is completely aware and happy because of the time savings you may gain from this approach.
+ - If the responsive nature of the site is so complex that the other two options aren't feasible
+
+### Issues
+
+ - You could be excluding a good number users from seeing important relevant content.
+ - It may be very hard to persuade a client who currently uses IE8
+
+## Mobile version with IE specific stylesheet
+
+    <link rel="stylesheet" href="core.css" />
+
+    <!-- load all progressive styles for ie7/8 but not ie mobile:
+         http://adactio.com/journal/4494/ -->
+    <!--[if (IE 6|IE 7|IE 8)&(!IEMobile)]>
+    <link rel="stylesheet" href="ie-old.css" />
+    <![endif]-->
+
+This is when you serve the mobile first designs alongside a single style sheet loaded by IE using special comments. This takes the mobile site and makes small tweaks to use more of the width of a desktop screen.
+
+### When to consider this
+
+ - If you are pretty happy with serving the mobile version but just want to make a few minor changes so that IE 6/7/8 fit the desktop a little btter
+
+
+### Issues
+
+ - You'll have more maintenance for the IE specific style sheet which has bit me in the past. So you don't want a lot in this stylesheet.
+ - You could be duplicating work and code.
+
+
+## Apply media queries incrementally
+
+    <link rel="stylesheet" href="core.css" />
+
+    <link rel="stylesheet" href="minw768.css" media="print, screen and (min-width:768px)" />
+    <link rel="stylesheet" href="minw990.css" media="print, screen and (min-width:990px)" />
+
+    <!-- load all progressive styles for ie7/8 but not ie mobile:
+         http://adactio.com/journal/4494/ -->
+    <!--[if (IE 6|IE 7|IE 8)&(!IEMobile)]>
+    <link rel="stylesheet" href="minw768.css" />
+    <link rel="stylesheet" href="minw990.css" />
+    <![endif]-->
+
+I code the css mobile first and then apply css for incrementing sizes according to a minimum width. We put those styles in separate style sheets with the appropriate media queries attached to the link tag.
+
+Because IE 6/7/8 don't understand media queries we reference them inside a special comment without the media queries.
+
+Because the styles are incremental, when we have them all in the page for IE 6/7/8 you always get the desktop version of the site.
+
+### Considerations
+
+ - When you need to support and serve a full desktop site to older versions of IE
+ - You can have quite complicated media queries being used as long as they work incrementally.
+ - You can also add media queries inside the files which you don't want to affect desktop sizes. e.g. `max-width:480px` etc
+
+### Issues
+
+ - You've got to remember to use styles incrementally
+ - You often need to be overriding styles already set
+
+## Conclusion
+
+I hope this gives a few ideas for implementing responsive designs. I am really enjoying building sites that work across devices. As always any questions or comments are welcome of course.
+
+
+
