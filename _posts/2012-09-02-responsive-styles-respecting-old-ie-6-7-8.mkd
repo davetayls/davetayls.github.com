@@ -3,6 +3,8 @@ layout: post
 author: davetayls
 title: Responsive styles respecting old IE 6/7/8
 categories:
+    - css
+    - responsive
 ---
 
 ![IE Isn't behind you yet](https://lh3.googleusercontent.com/-ow4CMkdEayY/UEOB4ix10hI/AAAAAAAArZQ/Qo4FAzJOf0E/s800/Untitled-1.png)
