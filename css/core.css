@@ -24,11 +24,11 @@
 }
     #homeHeader {
         position:absolute;
-        display: block; 
-        top: auto; 
-        left: -10000px; 
-        width: 1px; 
-        height: 1px; 
+        display: block;
+        top: auto;
+        left: -10000px;
+        width: 1px;
+        height: 1px;
     }
     #logo a:link,
     #logo a:visited,
@@ -39,7 +39,7 @@
         outline: none;
     }
     #nav-primary ul li:first-child {
-        /* visually hidden */ position:absolute; display: block; top: -10000px; left: -10000px; width: 1px; height: 1px; overflow: hidden; 
+        /* visually hidden */ position:absolute; display: block; top: -10000px; left: -10000px; width: 1px; height: 1px; overflow: hidden;
     }
 
 #wrapper {
@@ -82,11 +82,28 @@ h1 time {
     => prettyprint
 --------------------------------------------------*/
 pre.prettyprint {
-    border: solid 1px #888;
+    border: solid 1px #fff;
     background: #eee;
     margin: 0 0 16px;
     padding: 5px;
     font-size: 0.75em;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+         -o-border-radius: 5px;
+            border-radius: 5px;
+}
+@media (min-width: 768px){
+    pre.prettyprint {
+        font-size: 1em;
+        padding: 10px;
+        margin: 16px 0;
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.3);
+           -moz-box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            -ms-box-shadow: 0 0 10px rgba(0,0,0,0.3);
+             -o-box-shadow: 0 0 10px rgba(0,0,0,0.3);
+                box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
 }
 
 /**
@@ -248,7 +265,7 @@ pre.prettyprint {
     /**
         => nav-primary
     --------------------------------------------------*/
-    
+
     .menu ul,
     #nav-primary ul {
         list-style: none outside none;
@@ -306,7 +323,7 @@ pre.prettyprint {
                     rgb(0,139,194) 0%,
                     rgb(0,171,239) 100%
                 );
-                
+
             }
 }
 /**
@@ -342,7 +359,7 @@ pre.prettyprint {
             margin: 0;
             padding: 0;
         }
-            #nav-primary ul li { 
+            #nav-primary ul li {
                 display: block;
                 list-style: none outside none;
                 margin: 0 0 1px;
@@ -358,6 +375,7 @@ pre.prettyprint {
                 #nav-primary ul li a:hover {
                     color: #000;
                     text-decoration: none;
+                    border: none;
                 }
 
     /**
