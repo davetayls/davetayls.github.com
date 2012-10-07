@@ -15,12 +15,16 @@ One of them is enabling you to log in using [Github](http://github.com) and save
 Create a Github Application
 --
 
+![Github Application Settings](https://lh6.googleusercontent.com/-3QP5zBkGjWw/UHH2vcZLW6I/AAAAAAAArao/Vgd7q7Dbgbk/s800/Screen%2520Shot%25202012-10-07%2520at%252022.08.31.png)
+
 You can set up a Github application by clicking on the Register new application button on your [applications settings](https://github.com/settings/applications) page.
 
 EveryAuth and Express
 --
 
 I researched several options for implementing OAuth and eventually settled on using [EveryAuth](http://everyauth.com/#other-modules/github-oauth) because it integrates well in to [ExpressJs](http://expressjs.com) which is what I am using as a platform to run this application.
+
+![Github Application Page](https://lh5.googleusercontent.com/-MRR8bYu_20Q/UHH2vbka-RI/AAAAAAAAras/HHZQqmBNj78/s800/Screen%2520Shot%25202012-10-07%2520at%252022.11.56.png)
 
 There has been a lot to understand as I haven't looked at OAuth before, but I found [Github's developer guide](http://developer.github.com/v3/oauth/) a good place to start. I'm not going to go in to the specifics now but here is the key ingredients to integrating with express.
 
@@ -44,19 +48,21 @@ There has been a lot to understand as I haven't looked at OAuth before, but I fo
 
 ### Include the middleware
 
-	// Configuration
-	app.configure(function(){
+  // Configuration
+  app.configure(function(){
             ...
 
             app.use(express.session({ secret: 'your secret here' }));
             app.use(everyauth.middleware());
 
             ...
-	});
+  });
 
 
 Local Development on OSX Mountain Lion
 --
+
+![Enable Application](https://lh6.googleusercontent.com/-9Qpv28Q_fPQ/UHH2vfVPbXI/AAAAAAAArak/OWmE3BUVvVo/s800/Screen%2520Shot%25202012-10-07%2520at%252021.06.15.png)
 
 I hit a wall when I had authorised the app on Github and it sent the code back to the callback url specified on the Applications page. You can specify [`redirect_uri` parameter](http://developer.github.com/v3/oauth/#redirect-urls) but as the spec points out, you are limited to redirecting to urls on the same domain (or https/http unlike the usual same domain policy).
 
