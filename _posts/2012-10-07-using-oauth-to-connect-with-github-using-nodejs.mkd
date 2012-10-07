@@ -26,7 +26,7 @@ I researched several options for implementing OAuth and eventually settled on us
 
 ![Github Application Page](https://lh5.googleusercontent.com/-MRR8bYu_20Q/UHH2vbka-RI/AAAAAAAAras/HHZQqmBNj78/s800/Screen%2520Shot%25202012-10-07%2520at%252022.11.56.png)
 
-There has been a lot to understand as I haven't looked at OAuth before, but I found [Github's developer guide](http://developer.github.com/v3/oauth/) a good place to start. I'm not going to go in to the specifics now but here is the key ingredients to integrating with express.
+There has been a lot to understand as I haven't looked at OAuth before, but I found [Github's developer guide](http://developer.github.com/v3/oauth/) a good place to start. I'm not going to go in to the specifics now but here are the key ingredients to integrating with express.
 
 ### Require and Set up everyauth
 
@@ -48,15 +48,15 @@ There has been a lot to understand as I haven't looked at OAuth before, but I fo
 
 ### Include the middleware
 
-  // Configuration
-  app.configure(function(){
-            ...
+    // Configuration
+    app.configure(function(){
+        ...
 
-            app.use(express.session({ secret: 'your secret here' }));
-            app.use(everyauth.middleware());
+        app.use(express.session({ secret: 'your secret here' }));
+        app.use(everyauth.middleware());
 
-            ...
-  });
+        ...
+    });
 
 
 Local Development on OSX Mountain Lion
