@@ -1,0 +1,128 @@
+---
+layout: post
+author: davetayls
+title: Using OAuth to connect with Github using Node.js
+categories:
+    - javascript
+    - nodejs
+    - oauth
+---
+
+I am working on a rewrite of [markdown writer](http://markdown-writer.herokuapp.com), my playground for working with [backbone.js](http://documentcloud.github.com/backbone/) and HTML5 offline capabilities. There are a few new features which I am building in to what is currently a very basic app.
+
+One of them is enabling you to log in using [Github](http://github.com) and save your offline articles to a [Gist](http://gist.github.com). To do this I have had to connect with Github using [OAuth2](http://oauth.net/).
+
+Create a Github Application
+--
+
+You can set up a Github application by clicking on the Register new application button on your [applications settings](https://github.com/settings/applications) page.
+
+EveryAuth and Express
+--
+
+I researched several options for implementing OAuth and eventually settled on using [EveryAuth](http://everyauth.com/#other-modules/github-oauth) because it integrates well in to [ExpressJs](http://expressjs.com) which is what I am using as a platform to run this application.
+
+There has been a lot to understand as I haven't looked at OAuth before, but I found [Github's developer guide](http://developer.github.com/v3/oauth/) a good place to start. I'm not going to go in to the specifics now but here is the key ingredients to integrating with express.
+
+### Require and Set up everyauth
+
+
+    var everyauth = require('everyauth')
+    ;
+
+    everyauth.debug = true;
+    everyauth.github
+      .appId("APP_ID")
+      .appSecret("APP_SECRET")
+      .entryPath('/auth/github')
+      .callbackPath('/auth/github/callback')
+      .scope('gist')
+      .findOrCreateUser( function (sess, accessToken, accessTokenExtra, ghUser) {
+          // user functionality
+      })
+      .redirectPath('/');
+
+### Include the middleware
+
+	// Configuration
+	app.configure(function(){
+            ...
+
+            app.use(express.session({ secret: 'your secret here' }));
+            app.use(everyauth.middleware());
+
+            ...
+	});
+
+
+Local Development on OSX Mountain Lion
+--
+
+I hit a wall when I had authorised the app on Github and it sent the code back to the callback url specified on the Applications page. You can specify [`redirect_uri` parameter](http://developer.github.com/v3/oauth/#redirect-urls) but as the spec points out, you are limited to redirecting to urls on the same domain (or https/http unlike the usual same domain policy).
+
+    CALLBACK: http://foo.com
+
+    GOOD: https://foo.com
+    GOOD: http://foo.com/bar
+    BAD:  http://foo.com:8080
+    BAD:  http://oauth.foo.com:8080
+    BAD:  http://bar.com
+
+If you try the error you get looks something like this: `http://markdown-writer.herokuapp.com/auth/github/callback?error=redirect_uri_mismatch`.
+
+I updated the callback url within the application on Github to use `localhost:3001` (also using the port I am running my node process on). This seems to do the trick for now but once this goes live this setting will need to stay pointing at the live site I expect.
+
+### Reverse Proxy
+The solution on my machine was to set up a reverse proxy through Apache. I can temporarily map the live url to my local machine and point it at my local running node.js application.
+
+#### NB Enable Virtual Hosts for recent Mountain Lion updated macs
+If you have recently updated to Mountain Lion you might need to re-enable the vhosts Include on line #477 of your `/private/etc/apache2/httpd.conf`
+
+    # Virtual hosts
+    Include /private/etc/apache2/extra/httpd-vhosts.conf
+
+#### Add a new VirtualHost config
+As pointed out in [this useful article](http://thatextramile.be/blog/2012/01/hosting-a-node-js-site-through-apache) your apache needs to to have the [`mod_proxy`](http://httpd.apache.org/docs/2.2/mod/mod_proxy.html), and [`mod_proxy_http`](http://httpd.apache.org/docs/2.2/mod/mod_proxy_http.html) modules loaded. If you are using Mountain Lion these are loaded ☺ and you should be able to just continue.
+
+Add a similar VirtualHost config to your `httpd-vhosts.conf` file
+
+    <VirtualHost *:80>
+        ServerAdmin dave@the-taylors.org
+        ServerName markdown-writer.herokuapp.com
+        ServerAlias markdown-writer.herokuapp.com
+
+        ProxyRequests off
+
+        <Proxy *>
+            Order deny,allow
+            Allow from all
+        </Proxy>
+
+        <Location />
+            ProxyPass http://localhost:3000/
+            ProxyPassReverse http://localhost:3000/
+        </Location>
+    </VirtualHost>
+
+#### Restart Apache
+Do a restart of your local Apache server (requires to be run as root)
+
+    $ sudo apachectl restart
+
+#### Update Hosts file
+Edit your `/etc/hosts` file and point your live url to your local machine.
+
+    127.0.0.1       markdown-writer.herokuapp.com
+
+
+#### Test Application
+And then as long as your local node app is running you should be able to visit the url specified in the VirtualHost config.
+
+
+Still a Work in Progress
+--
+
+I'm still working on this so I'll try and post further steps once I have sussed out the full journey. It's exciting how accessible it is to be able to achieve something like this.
+
+Please, please, please let me know if there is an easier way of doing this!
+
