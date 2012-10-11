@@ -1,0 +1,53 @@
+---
+layout: post
+author: davetayls
+title: It's a (RegExp) Catastrophe
+categories:
+    - javascript
+    - regexp
+---
+
+Have you ever come across the term "Catastrophic Backtracking" in relation to regular expressions? Well I came face-to-face with it's fury the other day while researching a bug in an old CMS module which I was trying my best to fix.
+
+It started out with an *outrageous* claim from a QA tester that he could crash Chrome by typing in a large number of characters in to a text box. I tested it out and to my surprise the problem was worse than he realised and it all stemmed from a particular regular expression being used to validate an email address. It looked like this:
+
+    ^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$
+
+Looks pretty harmless?? But combine it with a test like so:
+
+    /^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$/.test('dddddddddddddddddddddddddddddddddddddddd');
+
+Whoooop browser bye bye. In fact you could simplify it to the following test as we found on the [stackoverflow thread](http://stackoverflow.com/questions/12803859/regexp-and-string-combination-crashes-chrome):
+
+    /(d+)*A/.test('dddddddddddddddddddddddddddddddddddddddd');
+
+So what's going on here? Well for the full explanation provided by [Tim](http://stackoverflow.com/users/20670/tim-pietzcker) take a look at [the answer](http://stackoverflow.com/a/12809054/138733), but to give you a quick summary. `(d+)*` in essence can be fulfilled by the following matches (each group separated by spaces):
+
+    ddddd
+    dddd d
+    ddd dd
+    dd ddd
+    d dddd
+    ddd d d
+    dd d dd
+    d d ddd
+    dd dd d
+    d dd dd
+    d ddd d
+    d d d dd
+    d d dd d
+    d dd d d
+    dd d d d
+    d d d d d
+
+This essentially means that there are an exponential number of possibilities dependant on the length of the string, and at a character length of only 40 you have a possible 549,755,813,888 combinations which takes time to go through and causes the browser to hang.
+
+So keep an eye out for the following combinations in your regular expressions where d can be a single character or (more likely) the result of another block:
+
+    (d+)*
+    (d*)*
+    (d+)+
+
+Read more [information on Catastrophic Backtracking](http://www.regular-expressions.info/catastrophic.html).
+
+*Sidenote*: As a lot of people made quite clear in the discussion on Stack Overflow, it isn't recommended to use a regular expression to test the full email. It is much safer and efficient to break it up in to it's sections and validate each individually.
