@@ -1,7 +1,7 @@
 ---
 layout: post
 author: davetayls
-title: It's a (RegExp) Catastrophe
+title: A (RegExp) Catastrophe
 categories:
     - javascript
     - regexp
