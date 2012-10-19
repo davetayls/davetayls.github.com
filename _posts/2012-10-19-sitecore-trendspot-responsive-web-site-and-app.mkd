@@ -23,7 +23,9 @@ Showcase
 
 Here is a short showcase video to give you an idea of how the app looked and responded to it's surroundings.
 
-<iframe src="http://player.vimeo.com/video/51468900" width="500" height="281" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true"></iframe> <p><a href="http://vimeo.com/51468900">Sitecore Trendspot</a> from <a href="http://vimeo.com/davetayls">Dave Taylor</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+<iframe src="http://player.vimeo.com/video/51468900" width="500" height="281" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true">
+Vimeo
+</iframe> <p><a href="http://vimeo.com/51468900">Sitecore Trendspot</a> from <a href="http://vimeo.com/davetayls">Dave Taylor</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
 
 Geo Location: Take me to the venue
 --
