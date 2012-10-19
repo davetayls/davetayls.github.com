@@ -25,7 +25,7 @@ Here is a short showcase video to give you an idea of how the app looked and res
 
 <iframe src="http://player.vimeo.com/video/51468900" width="500" height="281" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true">vimeo</iframe>
 
-[Watch on Vimeo](http://vimeo.com/51468900)
+You can [Watch it on Vimeo](http://vimeo.com/51468900)
 
 Geo Location: Take me to the venue
 --

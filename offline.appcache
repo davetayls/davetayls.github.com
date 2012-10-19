@@ -2,7 +2,7 @@
 layout: nil
 ---
 CACHE MANIFEST
-#{{ site.time }}
+# {{ site.time }}
 
 CACHE:
 /lib/modernizr-1.5.min.js
@@ -15,6 +15,4 @@ CACHE:
 /images/logo.gif
 
 NETWORK:
-/
-http://the-taylors.org/
 *
