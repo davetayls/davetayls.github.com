@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#3
+#{{ site.time }}
 
 CACHE:
 /lib/modernizr-1.5.min.js
