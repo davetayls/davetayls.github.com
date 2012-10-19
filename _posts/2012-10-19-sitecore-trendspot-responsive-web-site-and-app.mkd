@@ -48,4 +48,4 @@ Other improvements I would have liked to build in would have been to allow most 
 
 I am excited as the browsers in mobile and tablet devices become faster but as for now I personally notice the performance boost by using a native app. Having said that I was quite surprised at how responsive this app was. For something not very complex an HTML5 web app seems to be pretty viable.
 
-I'd love to hear your thoughts, I'm always looking to improve. Leave a message below or I'm [@davetayls on twitter](https://twitter.com/intent/tweet?url=http://the-taylors.org&via=davetayls)
+I'd love to hear your thoughts, I'm always looking to improve. Leave a message below or I'm [@davetayls on twitter](https://twitter.com/intent/tweet?url=http://the-taylors.org/blog/2012/10/19/sitecore-trendspot-responsive-web-site-and-app/&via=davetayls)
