@@ -4,15 +4,5 @@ layout: nil
 CACHE MANIFEST
 # {{ site.time }}
 
-CACHE:
-/lib/modernizr-1.5.min.js
-/lib/google-code-prettify/prettify.js
-/lib/require.js
-/css/brand/reset.css
-/lib/google-code-prettify/prettify.css
-/images/content-bg.gif
-/images/feed-icon-12x12-orange.gif
-/images/logo.gif
-
 NETWORK:
 *
