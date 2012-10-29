@@ -391,45 +391,61 @@ pre.prettyprint {
             height: 140px;
             overflow: hidden;
             vertical-align: top;
+            -webkit-perspective: 800px;
+               -moz-perspective: 800px;
+                -ms-perspective: 800px;
+                 -o-perspective: 800px;
+                    perspective: 800px;
             -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
                -moz-box-shadow: 0 0 10px rgba(0,0,0,0.6);
                  -o-box-shadow: 0 0 10px rgba(0,0,0,0.6);
                     box-shadow: 0 0 10px rgba(0,0,0,0.6);
         }
-            .mod-imageGrid li h2 {
-                font-size: 1em;
+            .mod-imageGrid li a {
+                display: block;
                 position: absolute;
-                bottom: 0;
+                top: 0;
                 left: 0;
                 width: 100%;
-                height: auto;
-                margin: 0;
-                padding: 0;
-            }
-                .mod-imageGrid li h2 a {
-                    display: block;
-                    background: #000;
-                    background: rgba(0,0,0,0.6);
-                    padding: 3%;
-                    height: 94%;
-                    color: #fff;
-                }
-                .mod-imageGrid li h2 a:active,
-                .mod-imageGrid li h2 a:hover {
-                    outline: none;
-                    -webkit-text-shadow: none;
-                       -moz-text-shadow: none;
-                         -o-text-shadow: none;
-                            text-shadow: none;
-                }
-                .mod-imageGrid li:hover h2 a {
-                }
-            .mod-imageGrid li img {
-                display: block;
-                width: auto;
-                max-width: none;
                 height: 100%;
+                -webkit-transform-style: preserve-3d;
+                   -moz-transform-style: preserve-3d;
+                    -ms-transform-style: preserve-3d;
+                     -o-transform-style: preserve-3d;
+                        transform-style: preserve-3d;
             }
+                .mod-imageGrid li h2 {
+                    font-size: 1em;
+                    color: #fff;
+                    text-align: left;
+                    text-shadow: 1px 1px 0 #000;
+
+                    background: #000;
+                    background: rgba(0,0,0,0.8);
+
+                    position: absolute;
+                    top: 10%;
+                    left: 0;
+                    width: 60%;
+                    height: auto;
+                    margin: 0;
+                    padding: 0;
+                    z-index: 2;
+                }
+                    .mod-imageGrid li h2 span {
+                        display: block;
+                        padding: 5%;
+                    }
+                .mod-imageGrid li img {
+                    display: block;
+                    width: auto;
+                    max-width: none;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                }
 
 }
 
