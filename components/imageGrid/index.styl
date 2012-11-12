@@ -1,0 +1,63 @@
+.mod-imageGrid
+	@extends .clearfix;
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+	text-align: justify;
+
+	li
+		display: block;
+		position: relative;
+
+		border-box();
+		border: solid 10px #eee;
+		width: 90%;
+		margin: 0 auto 16px;
+		list-style: none outside none;
+		padding: 0;
+
+		overflow: hidden;
+		vertical-align: top;
+		box-shadow: 0 0 10px rgba(0,0,0,0.6);
+
+		a
+			display: block;
+			margin: 0;
+			padding: 0;
+
+			&:hover,
+			&:focus
+				border: none;
+
+		h2
+			font-size: 1em;
+			color: #fff;
+			text-align: left;
+			text-shadow: 1px 1px 0 #000;
+			background: #000;
+			background: rgba(0,0,0,0.8);
+			absolute: top 10% left;
+			width: 60%;
+			height: auto;
+			margin: 0;
+			padding: 0;
+			z-index: 2;
+
+			span
+				display: block;
+				padding: 5%;
+
+		img
+			display: block;
+			margin: 0;
+			padding: 0;
+
+			width: 100%;
+			height: auto;
+			z-index: 1;
+
+	@media all and (min-width:600px)
+		li
+			float: left;
+			width: 46%;
+			margin: 0 2% 16px;

@@ -1,4 +1,4 @@
-/*jslint nomen:false */
+/*jshint nomen:false */
 /*global window _gaq:true _gat setTimeout jQuery */
 (function ($, dt) {
     var filetypes = /\.(zip|exe|pdf|doc*|xls*|ppt*|mp3)$/i;

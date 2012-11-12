@@ -8,3 +8,4 @@ Thumbs.db
 /.project
 /.settings
 /src-build
+node_modules

@@ -8,21 +8,9 @@
     These elements should be in a rough alphabetical order
 */
 
-@import url("reset.css");
-@import url(http://fonts.googleapis.com/css?family=Pontano+Sans);
 
 /*
-    fonts
------------------------------------------------------*/
-.sans() {
-    font-family: Tahoma, Arial, Helvetica, "Nimbus Sans L", "Free Sans", Sans-Serif; /* Most consistent Arial Based */
-}
-.leagueGothic() {
-    font-family: "league-gothic-1", "league-gothic-2", Tahoma, Arial, Helvetica, "Nimbus Sans L", "Free Sans", Sans-Serif;
-}
-
-/*
-	Document Elements
+    Document Elements
 ----------------------------------------------------*/
 
 /* maxvoltar.com/archive/-webkit-font-smoothing */
@@ -32,15 +20,15 @@ html { overflow-y: scroll; }
 
 /* set global font family */
 body, select, input, textarea {
-	font-family: "Pontano Sans", Georgia, Tahoma, Arial, Helvetica, "Nimbus Sans L", "Free Sans", Sans-Serif;
+    font-family: "Pontano Sans", Georgia, Tahoma, Arial, Helvetica, "Nimbus Sans L", "Free Sans", Sans-Serif;
 }
 body        {
     color: #444;
-	font-size: 100%; /*16px*/
-	line-height: 1.5;
+    font-size: 100%; /*16px*/
+    line-height: 1.5;
 }
-body.acc-med	{ font-size: 0.92em; }
-body.acc-large	{ font-size: 1.1em; }
+body.acc-med    { font-size: 0.92em; }
+body.acc-large  { font-size: 1.1em; }
 
 
 /* hand cursor on clickable input elements */
@@ -74,27 +62,27 @@ a img { border: none; }
 /*  j.mp/webkit-tap-highlight-color */
 a:link { -webkit-tap-highlight-color: #FF5E99; }
 
-abbr        {}
-address     { }
+// abbr        {}
+// address     { }
 blockquote {
-	position: relative;
+    position: relative;
 }
 blockquote p {
-	color: #000;
-	font-size: 1.7em;
-	line-height: 1;
-	padding: 0 20px 15px;
-	font-style: italic;
-	letter-spacing: -0.04em;
+    color: #000;
+    font-size: 1.7em;
+    line-height: 1;
+    padding: 0 20px 15px;
+    font-style: italic;
+    letter-spacing: -0.04em;
 }
 blockquote:before {
-	content: '“';
-	font-style: italic;
-	font-size: 4em;
-	position: absolute;
-	top: -16px;
-	left: -12px;
-	width: 1em;
+    content: '“';
+    font-style: italic;
+    font-size: 4em;
+    position: absolute;
+    top: -16px;
+    left: -12px;
+    width: 1em;
 }
 
 /* bicubic resizing for non-native sized IMG:
@@ -109,11 +97,11 @@ p           { margin: 0; padding: 0 0 15px; }
 article p   { text-align: justify; }
 
 pre {
-	white-space: pre; /* CSS2 */
-	white-space: pre-wrap; /* CSS 2.1 */
-	word-wrap: break-word; /* IE */
+    white-space: pre; /* CSS2 */
+    white-space: pre-wrap; /* CSS 2.1 */
+    word-wrap: break-word; /* IE */
 }
-strong      {}
+// strong      {}
 small { font-size:85%; }
 
 /* normalize monospace sizing
@@ -123,17 +111,17 @@ pre, code, kbd, samp { font-family: monospace, sans-serif; }
 
 
 /*
-	headers
+    headers
 ----------------------------------------------------*/
 /* www.aestheticallyloyal.com/public/optimize-legibility/ */
 h1,h2,h3,h4,h5,h6 { font-weight: bold; text-rendering: optimizeLegibility; }
 h1     {
-	color:#000;
-	font-size: 1.5em; /* 24px */
+    color:#000;
+    font-size: 1.5em; /* 24px */
     font-weight: normal;
-	letter-spacing: 0.003em;
+    letter-spacing: 0.003em;
     line-height: 1; /* 36px */
-	margin: 0;
+    margin: 0;
     padding: 0 0 10px;
 }
 h1 a,
@@ -142,40 +130,40 @@ h1 a:link {
     color: #000;
 }
 h2     {
-	color:#777;
-	font-size:1.429em; /* 20px */
-	font-weight:normal;
-	font-style: normal;
-	letter-spacing:-0.008em;
+    color:#777;
+    font-size:1.429em; /* 20px */
+    font-weight:normal;
+    font-style: normal;
+    letter-spacing:-0.008em;
     line-height: 1.35;
-	margin: 0;
-	padding: 15px 0 5px;
+    margin: 0;
+    padding: 15px 0 5px;
 }
 h3     {
-	font-size: 1.1em;
-	font-weight: bold;
-	margin-bottom: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
-h4     { }
+// h4     { }
 h5          {
-	margin: 0 0 5px;
+    margin: 0 0 5px;
 }
-h6          { }
+// h6          { }
 
-h2 strong,
-h3 strong   { }
+// h2 strong,
+// h3 strong   { }
 
 
 /*
-	lists
+    lists
 ----------------------------------------------------*/
 dl          { padding: 0 0 24px 0; zoom: 1; }
 dl:after    { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
-dt, dd 	    { float: left; }
+dt, dd      { float: left; }
 dt          { font-weight: bold; padding-right: 12px; }
 dd          { padding-right: 24px; }
 
-li			{ line-height: 1.5; }
+li          { line-height: 1.5; }
 ol          { padding: 10px 0 10px 23px; }
 ul          { padding: 10px 0 10px 20px; }
 ul li       { }
@@ -185,18 +173,15 @@ ul li li li li { list-style-image: none; list-style-type: square; }
 
 p+ol, p+ul,
 h2+ol, h2+ul,
-h3+ol, h3+ul	{ padding-top: 0; }
+h3+ol, h3+ul    { padding-top: 0; }
 
 /*
-	tables
+    tables
 ----------------------------------------------------*/
 table { font-size:inherit; font:100%; }
-tr {}
-th {}
-td {}
 
 /*
-	forms
+    forms
 ----------------------------------------------------*/
 button,select, input, textarea { font-size:99%; font-family: inherit; }
 
@@ -204,45 +189,52 @@ button,select, input, textarea { font-size:99%; font-family: inherit; }
    www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
 button {  width: auto; overflow: visible; }
 
-fieldset    {}
+// fieldset    {}
 input { vertical-align: middle; }
-label       { }
-select      { }
-textarea	{ vertical-align: 1px; }
+// label       { }
+// select      { }
+textarea    { vertical-align: 1px; }
 
 /* align checkboxes, radios, text inputs with their label
    by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
-input[type="radio"] { vertical-align: text-bottom; }
-input[type="checkbox"] { vertical-align: bottom; *vertical-align: baseline; }
-.ie6 input { vertical-align: text-bottom; }
+input[type="radio"] {
+    vertical-align: text-bottom;
+}
+input[type="checkbox"] {
+    vertical-align: bottom;
+    *vertical-align: baseline;
+}
+
+.ie6 input {
+    vertical-align: text-bottom;
+}
 
 /*
-	tables
+    tables
 ----------------------------------------------------*/
 table {
-	border-bottom: solid 1px #fff;
-	border-collapse: separate;
-		clear: both;
-	font-size: 0.9em;
-	margin: 10px 0;
-	padding: 0;
+    border-bottom: solid 1px #fff;
+    border-collapse: separate;
+    clear: both;
+    font-size: 0.9em;
+    margin: 10px 0;
+    padding: 0;
 }
-	tr {}
-	th {
-		border-top:1px solid #FFFFFF;
-		font-size:0.8em;
-		font-weight:normal;
-		line-height:1.2em;
-		padding:15px 5px;
-		text-align:left;
-	}
-	td {
-		border-top: dotted 1px #fff;
-		border-bottom: dotted 1px #ccc;
-		border-left: solid 1px #efefef;
-		padding: 3px 5px;
-	}
-	tr:nth-child(even) td{
-		background-color: #eee;
-	}
+th {
+    border-top:1px solid #FFFFFF;
+    font-size:0.8em;
+    font-weight:normal;
+    line-height:1.2em;
+    padding:15px 5px;
+    text-align:left;
+}
+td {
+    border-top: dotted 1px #fff;
+    border-bottom: dotted 1px #ccc;
+    border-left: solid 1px #efefef;
+    padding: 3px 5px;
+}
+tr:nth-child(even) td{
+    background-color: #eee;
+}
 

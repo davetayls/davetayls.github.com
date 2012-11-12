@@ -1,0 +1,20 @@
+{
+  "name": "the-taylors.org",
+  "version": "0.0.0",
+  "local": "true",
+  "description": "davetayls personal blog",
+  "main": "grunt.js",
+  "devDependencies": {
+    "grunt-contrib-stylus": "0.3.x",
+    "nib": "0.8.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/davetayls/davetayls.github.com.git"
+  },
+  "author": "Dave Taylor (dave@the-taylors.org)",
+  "license": "MIT"
+}

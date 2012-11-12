@@ -4,3 +4,6 @@ live: true
 permalink: /blog/:year/:month/:day/:title
 exclude:
 - startjekyll.bat
+- node_modules
+- package.json
+- grunt.js
