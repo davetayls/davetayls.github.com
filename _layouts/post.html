@@ -21,6 +21,11 @@ portfolio: small
             {% endif %}
 		</div>
         <div id="articleContent">
+            {% if page.postimage %}
+            <p>
+                <img src="{{ page.postimage }}" alt="page.title" />
+            </p>
+            {% endif %}
             {{ content }}
             <p>
                 I'd love to hear your thoughts, I'm always looking to improve.

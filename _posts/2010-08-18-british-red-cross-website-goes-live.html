@@ -3,19 +3,22 @@ layout: post
 title: British Red Cross Website goes live
 author: davetayls
 postimage: /portfolio/britishredcross.png
-categories: 
+categories:
     - design
     - frontend
     - releases
     - project
 ---
 
-<p><img src="/content/britishredcrosswebsite.png" alt="british red cross" width="300" height="483" class="img-fl-left" />It's great when a plan comes together, and it's with a lot of excitement that we at <a href="http://blog.aqueduct.co.uk/2010/08/british-red-cross-site-goes-live_10.html">Aqueduct</a> have launched the new <a href="http://redcross.org.uk">British Red Cross</a> website, the culmination of 18 months of hard work. I've written about a few findings during the course of this project and now you can finally see them in action.</p>
+<p>It's great when a plan comes together, and it's with a lot of excitement that we at <a href="http://blog.aqueduct.co.uk/2010/08/british-red-cross-site-goes-live_10.html">Aqueduct</a> have launched the new <a href="http://redcross.org.uk">British Red Cross</a> website, the culmination of 18 months of hard work. I've written about a few findings during the course of this project and now you can finally see them in action.</p>
 <ul>
 	<li> there's the <a href="/blog/2010/05/01/using-sprites-block-sliding-doors-inline-flow">technique for working with css sprites for in-line images and block elements</a> that can be seen in the header and the footer (in fact all over the place).Take a look at the <a href="http://www.redcross.org.uk/images/sprites.png">sprite file we use</a> to reduce page requests.</li>
 	<li>
 		the client side JavaScript and CSS development has been separated in to logical chunks and then concatenated using tools like <a href="http://juxtapo.net/combiner">Juxtapo Combiner</a>. This has made maintaining the code so much simpler.</li>
 </ul>
+<p>
+	<img src="/content/britishredcrosswebsite.png" alt="british red cross" width="300" height="483" />
+</p>
 <h2>Accessibility and Usibility</h2>
 <p>Good accessibility and usability has been high on the agenda, and we have come up with some 'out-of-the-box' solutions to some common problems. One example I would like to show you can be found on the maps pages. We have used <a href="http://en.wikipedia.org/wiki/Progressive_enhancement">progressive inhancement</a> to take an html page of <a href="http://en.wikipedia.org/wiki/Semantic_HTML">semantic markup</a> showing the content for the pin bubbles and then the locations arranged within the tree below. We have also included friendly links to google maps and geo tagging using <a href="http://en.wikipedia.org/wiki/Microformat">Microformats</a> (find out more on the <a href="http://microformats.org/">microformats website</a>) to enable search engines and enabled browsers to place each pin on a map.</p>
 <p><img src="/content/redcross-maps.jpg" class="img-fl-right" alt="british red cross - near you" width="200" height="227" /><img src="/content/britishredcross-mapsnoscript.jpg" class="img-fl-right" alt="maps page without javascript" width="300" height="267" /><img class="img-fl-right" src="/content/britishredcross-mapstree.jpg" alt="near you places tree without javascript" width="300" height="132" /></p>

@@ -2,13 +2,12 @@
 layout: post
 author: davetayls
 title: FA Skills Now Live
-categories: 
+postimage: https://lh4.googleusercontent.com/-4zQ9dGfGfBo/T0ketYS52UI/AAAAAAAAkq0/zMBJjiBF7H8/s800/faskills.jpg
+categories:
     - releases
     - project
-postimage: https://lh4.googleusercontent.com/-4zQ9dGfGfBo/T0ketYS52UI/AAAAAAAAkq0/zMBJjiBF7H8/s800/faskills.jpg
 ---
 
-[![FA Tesco Skills Banner](/content/FATescoSkills.png)](http://thefa.com/tescoskills)
 
 I had a great visit to the FA yesterday at Wembley to meet Mindaugas Vaiciulis and Tomasz Libich to take them through the new FA Skills codebase and architecture. The site went live a few weeks ago and is a site offering ways for parents and kids to take part in football coaching for 5 to 11 year olds.
 

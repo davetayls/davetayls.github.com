@@ -2,7 +2,7 @@
 layout: post
 author: davetayls
 title: Google Maps in iOS 5 content dissapearing bug
-postimage: https://lh6.googleusercontent.com/-CmjEookI6Q8/UH-yUx3L-dI/AAAAAAAArr8/4ugKk_xTurM/s800/sitecoretrendspot.png
+postimage: https://lh4.googleusercontent.com/-G8deT9XR1Pg/UKVQBguks0I/AAAAAAAAsqU/fXZMZvSmXvo/s800/ios-google-maps-hidden-element-bug.png
 categories:
     - responsive
     - css
@@ -16,6 +16,8 @@ Replicating the bug
 --
 
 This bug appears in iOS 5.1 where the size of a negative text-indent value is greater than -9999px
+
+You can [view the bug live](http://the-taylors.org/teststation/bugs/ios5/google-maps-text-indent.html).
 
 In this example it causes the header content to disappear. I have stripped away CSS till this basic example
 is left to replecate the bug.

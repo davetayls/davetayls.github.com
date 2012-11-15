@@ -6,6 +6,11 @@
             {{ post.date | date:"%b %d %Y" }}
         </time>
     </h1>
+    {% if post.postimage %}
+    <p>
+        <img src="{{ post.postimage }}" alt="post.title" />
+    </p>
+    {% endif %}
 	{{ post.content }}
 </div></article>
 {% endfor %}

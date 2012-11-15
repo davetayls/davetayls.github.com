@@ -10,8 +10,6 @@ categories:
     - project
 ---
 
-![Sitecore Trendspot](https://lh6.googleusercontent.com/-CmjEookI6Q8/UH-yUx3L-dI/AAAAAAAArr8/4ugKk_xTurM/s800/sitecoretrendspot.png)
-
 <a href="http://www.w3.org/html/logo/">
 <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-device-semantics.png" width="197" height="64" alt="HTML5 Powered with CSS3 / Styling, Device Access, and Semantics" title="HTML5 Powered with CSS3 / Styling, Device Access, and Semantics">
 </a>
