@@ -777,8 +777,9 @@ pre.prettyprint {
   font-size: 1em;
   margin: 0;
   padding: 2px 4px;
+  border: none;
 }
-.list-blogs-date {
+.list-blogs .list-blogs-date {
   font-size: 0.625em;
 }
 /**
@@ -826,11 +827,25 @@ pre.prettyprint {
 }
 .tweet_list li {
   clear: both;
+  margin: 0;
   padding: 0 0 21px;
+  list-style: none outside none;
+}
+.tweet_list li:hover .tweet_avatar {
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 10px #00adef;
+  box-shadow: 0 0 10px #00adef;
 }
 .tweet_list .tweet_avatar {
   float: left;
-  margin: 2px 5px 5px 0;
+  margin: 5px 10px 5px 0;
+  overflow: hidden;
+}
+.tweet_list .tweet_avatar img {
+  display: block;
+  width: 37px;
+  height: auto;
 }
 .tweet_list .tweet_time a {
   color: #aaa;

@@ -2,6 +2,8 @@
 @import "nib"
 @import "mixins"
 
+$color--core = #00ADEF;
+
 /**
 	=> lib files
 	--------------------------------------------------*/
@@ -53,18 +55,25 @@ h1 time {
 /**
 => list-blogs
 --------------------------------------------------*/
-.list-blogs li {
-	border-bottom: solid 1px #ddd;
-}
-.list-blogs li a {
-	display: block;
-	font-weight: normal;
-	font-size: 1em;
-	margin: 0;
-	padding: 2px 4px;
-}
-.list-blogs-date {
-	font-size: 0.625em;
+.list-blogs {
+
+	li {
+		border-bottom: solid 1px #ddd;
+
+		a {
+			display: block;
+			font-weight: normal;
+			font-size: 1em;
+			margin: 0;
+			padding: 2px 4px;
+
+			border: none;
+		}
+	}
+	.list-blogs-date {
+		font-size: 0.625em;
+	}
+
 }
 
 

@@ -5,11 +5,25 @@
 
 	li {
 		clear: both;
+		margin: 0;
 		padding: 0 0 21px;
+		list-style: none outside none;
+
+		&:hover .tweet_avatar {
+			border-radius: 50%;
+			box-shadow: 0 0 10px $color--core;
+		}
 	}
 	.tweet_avatar {
 		float: left;
-		margin: 2px 5px 5px 0;
+		margin: 5px 10px 5px 0;
+		overflow: hidden;
+
+		img {
+			display: block;
+			width: 37px;
+			height: auto;
+		}
 	}
 	.tweet_time a {
 		color: #aaa;
