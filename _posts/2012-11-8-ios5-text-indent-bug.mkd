@@ -1,0 +1,74 @@
+---
+layout: post
+author: davetayls
+title: Google Maps in iOS 5 content dissapearing bug
+postimage: https://lh6.googleusercontent.com/-CmjEookI6Q8/UH-yUx3L-dI/AAAAAAAArr8/4ugKk_xTurM/s800/sitecoretrendspot.png
+categories:
+    - responsive
+    - css
+    - bug
+---
+
+
+I stumbled on this frustrating iOS5 bug where adding Google maps to a page made elements disappear.
+
+Replicating the bug
+--
+
+This bug appears in iOS 5.1 where the size of a negative text-indent value is greater than -9999px
+
+In this example it causes the header content to disappear. I have stripped away CSS till this basic example
+is left to replecate the bug.
+
+    .container {
+        position: relative;
+        z-index: 100;
+    }
+        .indent {
+            display: block;
+            text-indent:-999999px;
+        }
+        .map {
+            background-color:Gray;
+            height:213px;
+            width:220px;
+        }
+
+
+Here's the markup
+
+    <div class="container">
+        <h1>This will disappear when we load the map in iOS 5.1</h1>
+        <a class="indent" href="/search">Search</a>
+    </div>
+    <div id="map_canvas" class="map"></div>
+
+Now as soon as you initialise the map the whole `.container` element will dissappear!
+
+Fix
+--
+
+There are a few other reasons not to use the negative text-indent for image replacement
+in CSS so the best solution is to change the method you are using to the one in [HTML5
+boilerplate](https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css).
+
+    .ir {
+        background-color: transparent;
+        border: 0;
+        overflow: hidden;
+        /* IE 6/7 fallback */
+        *text-indent: -9999px;
+    }
+
+    .ir:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 100%;
+    }
+
+
+If you definitely want to use the negative text-indent then you just need to make sure
+the value doesn't exceed -9999 (eg -99999px). So lob off one of the 9s and you should
+see the hidden elements again.
+
