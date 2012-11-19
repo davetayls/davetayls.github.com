@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Making a simple html5 racing game
-categories: 
+status: draft
+categories:
     - html5
     - gamedev
     - javascript
@@ -54,7 +55,7 @@ Movement
 
 I didn't want my car to accelerate and turn in a linear fasion so I altered the acceleration code to use multiplication instead of simple addition and subtraction.
 
-My `Car` object held all the properties needed to determine the state of how the car is moving. 
+My `Car` object held all the properties needed to determine the state of how the car is moving.
 
 	Car.prototype = {
 		x: 0,              // position
