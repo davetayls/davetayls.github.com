@@ -10,6 +10,15 @@
 
 
 /*
+    => fonts
+--------------------------------------------------*/
+custom-font('icons', '/lib/icons/font/icons')
+.font-family--sans
+    font-family: "Pontano Sans", Tahoma, Arial, Helvetica, "Nimbus Sans L", "Free Sans", Sans-Serif;
+.font-family--serif
+    font-family: Georgia, Serif;
+
+/*
     Document Elements
 ----------------------------------------------------*/
 
@@ -20,7 +29,7 @@ html { overflow-y: scroll; }
 
 /* set global font family */
 body, select, input, textarea {
-    font-family: "Pontano Sans", Georgia, Tahoma, Arial, Helvetica, "Nimbus Sans L", "Free Sans", Sans-Serif;
+    @extend .font-family--sans;
 }
 body        {
     color: #444;
@@ -65,24 +74,26 @@ a:link { -webkit-tap-highlight-color: #FF5E99; }
 // abbr        {}
 // address     { }
 blockquote {
+    @extend .font-family--serif
+
     position: relative;
-}
-blockquote p {
-    color: #000;
-    font-size: 1.7em;
-    line-height: 1;
-    padding: 0 20px 15px;
-    font-style: italic;
-    letter-spacing: -0.04em;
-}
-blockquote:before {
-    content: '“';
-    font-style: italic;
-    font-size: 4em;
-    position: absolute;
-    top: -16px;
-    left: -12px;
-    width: 1em;
+    p {
+        color: #000;
+        font-size: 1.7em;
+        line-height: 1;
+        padding: 0 20px 15px;
+        font-style: italic;
+        letter-spacing: -0.04em;
+    }
+    &:before {
+        content: '“';
+        font-style: italic;
+        font-size: 4em;
+        position: absolute;
+        top: -16px;
+        left: -12px;
+        width: 1em;
+    }
 }
 
 /* bicubic resizing for non-native sized IMG:
@@ -116,19 +127,26 @@ pre, code, kbd, samp { font-family: monospace, sans-serif; }
 /* www.aestheticallyloyal.com/public/optimize-legibility/ */
 h1,h2,h3,h4,h5,h6 { font-weight: bold; text-rendering: optimizeLegibility; }
 h1     {
-    color:#000;
-    font-size: 1.5em; /* 24px */
+    color:#666;
+    font-size: 2.375em; /* 24px */
     font-weight: normal;
     letter-spacing: 0.003em;
     line-height: 1; /* 36px */
     margin: 0;
     padding: 0 0 10px;
+
+    time {
+        color: #888;
+        text-transform: uppercase;
+        font-size: 0.473684210526em;
+    }
 }
 h1 a,
 h1 a:visited,
 h1 a:link {
-    color: #000;
+    color: #666;
 }
+
 h2     {
     color:#777;
     font-size:1.429em; /* 20px */
@@ -176,11 +194,6 @@ h2+ol, h2+ul,
 h3+ol, h3+ul    { padding-top: 0; }
 
 /*
-    tables
-----------------------------------------------------*/
-table { font-size:inherit; font:100%; }
-
-/*
     forms
 ----------------------------------------------------*/
 button,select, input, textarea { font-size:99%; font-family: inherit; }
@@ -212,6 +225,7 @@ input[type="checkbox"] {
 /*
     tables
 ----------------------------------------------------*/
+table { font-size:inherit; font:100%; }
 table {
     border-bottom: solid 1px #fff;
     border-collapse: separate;
@@ -237,4 +251,5 @@ td {
 tr:nth-child(even) td{
     background-color: #eee;
 }
+
 

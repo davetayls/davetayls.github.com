@@ -1,0 +1,87 @@
+---
+layout: post
+title: Making a simple html5 racing game
+categories: 
+    - html5
+    - gamedev
+    - javascript
+author: davetayls
+---
+
+I've been wanting to try my hand at doing some game development for a while and I finally managed to make a start last week.
+
+I decided to make a simple driving game using HTML5. I began doing a bit of a search for tutorials which build a simple top view racing game but didn't stumble upon any for HTML5. I did find [a flash tutorial](http://www.emanueleferonato.com/2007/05/15/create-a-flash-racing-game-tutorial/) which I have used as a starting point.
+
+You can see the latest version on github (<https://github.com/davetayls/html5racer>).
+
+I grabbed a top view sprite of a car and started to build the code.
+
+![html5 top view racer](https://lh4.googleusercontent.com/-gN4Z6GZyw0I/UBh0dE3XkYI/AAAAAAAArOQ/sLmurCojpWg/s800/Screen%2520Shot%25202012-07-22%2520at%252013.51.57.png)
+
+The basic files
+--
+
+I have kept this really simple, so there is just one HTML file and CSS file and then I am adding links to individual JavaScript files manually.
+
+NB. I'm not going to cover the basics of clearing the canvas and triggering another animation timeout as that would make this article unnecessarily long and there is plenty of information out there. You can also take a look through the code on github as it's pretty simple.
+
+The HTML file looks like this:
+
+    <!doctype html>
+    <html>
+      <head>
+        <title>Simple Racer</title>
+        <link href="racer.css" rel="stylesheet">
+        <style type="text/css">
+          canvas { border: solid 1px #ccc; }
+        </style>
+      </head>
+      <body>
+        <canvas id="canvas" width="500" height="500"></canvas>
+        <div>
+          Player: x <span id="px">0</span> y <span id="py"></span>
+        </div>
+        <script src="jquery.js"></script>
+        <script src="helpers.js"></script>
+        <script src="car.js"></script>
+        <script src="racer.js"></script>
+      </body>
+    </html>
+
+
+Movement
+--
+
+I didn't want my car to accelerate and turn in a linear fasion so I altered the acceleration code to use multiplication instead of simple addition and subtraction.
+
+My `Car` object held all the properties needed to determine the state of how the car is moving. 
+
+	Car.prototype = {
+		x: 0,              // position
+		y: 0,
+		code: 'player',    // allow players in future
+		acceleration: 1.2,
+		rotationStep: 5,   // how fast to turn
+		rotation: 115,     // current angle facing
+		speed: 0,
+		speedDecay: 0.97,
+		maxSpeed: 7,
+		backSpeed: 1.1
+	}
+
+
+
+I also separated out the instructions for accelerating, decelerating and turning from the keyboard even listeners so that I can hook it up to other devices later.
+
+Keyboard driving
+--
+
+
+Where Next
+--
+
+I'm now looking in to how to do collision detection, which is proving to be a bit of a brain freeze.
+
+
+
+

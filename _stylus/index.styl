@@ -1,8 +1,7 @@
 
 @import "nib"
+@import "variables"
 @import "mixins"
-
-$color--core = #00ADEF;
 
 /**
 	=> lib files
@@ -10,6 +9,7 @@ $color--core = #00ADEF;
 @import "google-code-prettify/prettify.styl"
 @import "brand/reset"
 @import "brand/brand"
+@import "icons"
 @import "menu"
 @import "structure"
 
@@ -21,60 +21,12 @@ $color--core = #00ADEF;
 	to   { -webkit-transform: rotateY(-360deg); }
 }
 
-h1 time {
-	color: #888;
-	text-transform: uppercase;
-	font-size: 0.75em;
-}
-
-@import "prettyprint";
-@import "imageGrid";
-@import "pager-nav";
-
-/**
-=> cp-avatar
---------------------------------------------------*/
-.cp-avatar {
-	float: left;
-	border: solid 3px #eee;
-	margin: 7px 8px 8px 5px;
-	padding: 0;
-	-webkit-transform: rotate(-3deg);
-	-moz-transform: rotate(-3deg);
-	-o-transform: rotate(-3deg);
-	transform: rotate(-3deg);
-	-webkit-box-shadow: 0 0 6px #000;
-	-moz-box-shadow: 0 0 6px #000;
-	-o-box-shadow: 0 0 6px #000;
-	box-shadow: 0 0 6px #000;
-}
-.cp-avatar img {
-	display: block;
-}
-
-/**
-=> list-blogs
---------------------------------------------------*/
-.list-blogs {
-
-	li {
-		border-bottom: solid 1px #ddd;
-
-		a {
-			display: block;
-			font-weight: normal;
-			font-size: 1em;
-			margin: 0;
-			padding: 2px 4px;
-
-			border: none;
-		}
-	}
-	.list-blogs-date {
-		font-size: 0.625em;
-	}
-
-}
+@import "prettyprint"
+@import "imageGrid"
+@import "pager-nav"
+@import "connectWithMe"
+@import "avatar"
+@import "list-blogs"
 
 
 /**
@@ -165,13 +117,12 @@ h1 time {
 	#nav-primary ul li a:hover,
 	#nav-primary ul li a:focus,
 	#nav-primary ul li a:active {
-		background: #00ADEF;
 		color: #fff;
 		text-decoration: none;
-		-webkit-text-shadow: none;
-		-moz-text-shadow: none;
-		-o-text-shadow: none;
 		text-shadow: none;
+
+		border-bottom: none;
+		background: #00ADEF;
 		background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(0,139,194)), color-stop(1, rgb(0,171,239)) );
 		background-image: -moz-linear-gradient(center bottom, rgb(0,139,194) 0%, rgb(0,171,239) 100% );
 		background-image: linear-gradient(center bottom, rgb(0,139,194) 0%, rgb(0,171,239) 100% );

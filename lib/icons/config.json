@@ -1,0 +1,77 @@
+{
+  "name": "icons",
+  "glyphs": [
+    {
+      "uid": "8663320a860b00f26e94d3d15c9ba99a",
+      "orig_css": "clock",
+      "orig_code": 128340,
+      "css": "clock",
+      "code": 128340,
+      "src": "entypo"
+    },
+    {
+      "uid": "4c01f5d3ba5fbf029bca8630cce41e6a",
+      "orig_css": "twitter-bird",
+      "orig_code": 62211,
+      "css": "twitter-bird",
+      "code": 62211,
+      "src": "brandico"
+    },
+    {
+      "uid": "626fb97a7c0c0db53a1853fb9e96e223",
+      "orig_css": "googleplus-rect",
+      "orig_code": 62217,
+      "css": "googleplus-rect",
+      "code": 62217,
+      "src": "brandico"
+    },
+    {
+      "uid": "4a0bb1ac004980bb3837560d4c9e8cee",
+      "orig_css": "github",
+      "orig_code": 62216,
+      "css": "github",
+      "code": 62216,
+      "src": "brandico"
+    },
+    {
+      "uid": "e9e96618b0f44170930f9b179237c76e",
+      "orig_css": "linkedin-rect",
+      "orig_code": 62235,
+      "css": "linkedin-rect",
+      "code": 62235,
+      "src": "brandico"
+    },
+    {
+      "uid": "457c8e2b305e7af74c1be4f07a01ca92",
+      "orig_css": "vcard",
+      "orig_code": 59170,
+      "css": "vcard",
+      "code": 59170,
+      "src": "entypo"
+    },
+    {
+      "uid": "7645346d5ab8b17f69a9c765c180aca3",
+      "orig_css": "rss-alt",
+      "orig_code": 59195,
+      "css": "rss-alt",
+      "code": 59195,
+      "src": "websymbols"
+    },
+    {
+      "uid": "ef74ff62feda486fd414410e782b598a",
+      "orig_css": "graduation-cap",
+      "orig_code": 127891,
+      "css": "graduation-cap",
+      "code": 127891,
+      "src": "entypo"
+    },
+    {
+      "uid": "dplw5xo88mzzr7b45nvjcamyyhni6drs",
+      "orig_css": "book",
+      "orig_code": 128213,
+      "css": "book",
+      "code": 128213,
+      "src": "modernpics"
+    }
+  ]
+}

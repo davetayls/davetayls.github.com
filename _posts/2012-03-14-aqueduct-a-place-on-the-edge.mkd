@@ -7,9 +7,7 @@ categories:
     - thoughts
 ---
 
-![Aqueduct](https://lh5.googleusercontent.com/-6ozb2VIRilA/T2EwZ3eEiSI/AAAAAAAAlmc/8nDAQ3cWq5M/s640/aqueduct.png)
-
-I have just finished my time at [Aqueduct](http://www.aqueduct.co.uk) after two and a half years leading the front-end work there. 
+I have just finished my time at [Aqueduct](http://www.aqueduct.co.uk) after two and a half years leading the front-end work there.
 
 I leave very satisfied, after feeling like we've come a long way in that time and the path ahead for those guys is looking pretty exciting.
 

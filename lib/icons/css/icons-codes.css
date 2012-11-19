@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+
+.icon-vcard:before { content: '\e722'; } /* '' */
+.icon-rss-alt:before { content: '\e73b'; } /* '' */
+.icon-twitter-bird:before { content: '\f303'; } /* '' */
+.icon-github:before { content: '\f308'; } /* '' */
+.icon-googleplus-rect:before { content: '\f309'; } /* '' */
+.icon-linkedin-rect:before { content: '\f31b'; } /* '' */
+.icon-graduation-cap:before { content: '🎓'; } /* '\1f393' */
+.icon-book:before { content: '📕'; } /* '\1f4d5' */
+.icon-clock:before { content: '🕔'; } /* '\1f554' */

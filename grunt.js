@@ -15,6 +15,7 @@ module.exports = function(grunt) {
       dist: {
         options: {
           compress: false,
+          linenos: true,
           paths: [
             '_stylus',
             'components',
