@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Making a simple html5 racing game
-status: draft
 categories:
     - html5
     - gamedev
@@ -9,7 +8,7 @@ categories:
 author: davetayls
 ---
 
-I've been wanting to try my hand at doing some game development for a while and I finally managed to make a start last week.
+I've been wanting to try my hand at doing some game development for a while and I finally managed to make a start.
 
 I decided to make a simple driving game using HTML5. I began doing a bit of a search for tutorials which build a simple top view racing game but didn't stumble upon any for HTML5. I did find [a flash tutorial](http://www.emanueleferonato.com/2007/05/15/create-a-flash-racing-game-tutorial/) which I have used as a starting point.
 
@@ -26,7 +25,7 @@ I have kept this really simple, so there is just one HTML file and CSS file and 
 
 NB. I'm not going to cover the basics of clearing the canvas and triggering another animation timeout as that would make this article unnecessarily long and there is plenty of information out there. You can also take a look through the code on github as it's pretty simple.
 
-The HTML file looks like this:
+### The HTML file looks like this:
 
     <!doctype html>
     <html>
@@ -48,6 +47,37 @@ The HTML file looks like this:
         <script src="racer.js"></script>
       </body>
     </html>
+
+
+### helpers.js
+
+The helpers file includes some useful helper methods for working with canvas. One of the really helpful functions which I have picked up from a [Creative Js article](http://creativejs.com/2012/01/day-10-drawing-rotated-images-into-canvas/) is the `drawRotatedImage` function.
+
+    var TO_RADIANS = Math.PI/180;
+    function drawRotatedImage(image, x, y, angle) {
+
+        // save the current co-ordinate system
+        // before we screw with it
+        context.save();
+
+        // move to the middle of where
+        // we want to draw our image
+        context.translate(x, y);
+
+        // rotate around that point, converting our
+        // angle from degrees to radians
+        context.rotate(angle * TO_RADIANS);
+
+        // draw it up and to the left by half the width
+        // and height of the image
+        context.drawImage(image, -(image.width/2), -(image.height/2));
+
+        // and restore the co-ords to
+        // how they were when we began
+        context.restore();
+    }
+
+This function is used to draw the car image on to the canvas at a particular angle.
 
 
 Movement
@@ -72,16 +102,14 @@ My `Car` object held all the properties needed to determine the state of how the
 
 
 
-I also separated out the instructions for accelerating, decelerating and turning from the keyboard even listeners so that I can hook it up to other devices later.
-
-Keyboard driving
---
-
+I also separated out the instructions for accelerating, decelerating and turning from the keyboard event listeners so that I can hook it up to other devices later.
 
 Where Next
 --
 
 I'm now looking in to how to do collision detection, which is proving to be a bit of a brain freeze.
+
+I'll also add an online playable version at some point.
 
 
 

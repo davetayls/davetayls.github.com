@@ -27,30 +27,7 @@
     </head>
     <body>
         <div id="wrapper">
-            <header><div id="pageHeader">
-                <div id="logo">
-                    <a href="/"><img src="/images/logo.gif" alt="Dave Taylor" /></a>
-                </div>
-                <div id="nav-primary">
-                    <ul>
-                        <li>
-                            <a accesskey="c" href="#content">Jump to main content [Access key 'C']</a>
-                        </li>
-                        <li>
-                            <a accesskey="0" href="/">Home</a>
-                        </li>
-                        <li>
-                            <a href="/davetayls/">About me</a>
-                        </li>
-                        <li>
-                            <a href="/workwithme/">Work with me</a>
-                        </li>
-                        <li>
-                            <a href="http://feed.the-taylors.org"><img src="/images/feed-icon-12x12-orange.gif" alt="" />&nbsp;Subscribe here</a>
-                        </li>
-                    </ul>
-                </div>
-            </div></header> <!-- #pageHeader -->
+            {% include pageHeader.html %}
 			{{ content }}
         </div>
         <footer><div id="pageFooter">

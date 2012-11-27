@@ -79,6 +79,7 @@ module.exports = function(grunt) {
 
   // npm tasks
   grunt.loadNpmTasks('grunt-contrib-stylus');
+
   // Default task.
   grunt.registerTask('default', 'lint qunit concat min');
 
