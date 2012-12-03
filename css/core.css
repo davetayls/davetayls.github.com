@@ -56,22 +56,26 @@
 
 /* line 16 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/mixins.styl */
 .clearfix,
-.mod-imageGrid {
+.mod-imageGrid,
+.cp-sharelinks {
   zoom: 1;
 }
 
 /* line 23 : /Users/davetayls/Sites/davetayls/davetayls.github.com/node_modules/nib/lib/nib/clearfix.styl */
 .clearfix:before,
 .mod-imageGrid:before,
+.cp-sharelinks:before,
 .clearfix:after,
-.mod-imageGrid:after {
+.mod-imageGrid:after,
+.cp-sharelinks:after {
   content: "";
   display: table;
 }
 
 /* line 27 : /Users/davetayls/Sites/davetayls/davetayls.github.com/node_modules/nib/lib/nib/clearfix.styl */
 .clearfix:after,
-.mod-imageGrid:after {
+.mod-imageGrid:after,
+.cp-sharelinks:after {
   clear: both;
 }
 
@@ -1262,7 +1266,6 @@ pre.prettyprint {
 
 /* line 57 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/index.styl */
 .cp-sharelinks {
-  height: 28px;
   padding: 0 0 16px;
 }
 
