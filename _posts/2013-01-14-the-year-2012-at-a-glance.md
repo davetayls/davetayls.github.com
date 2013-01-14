@@ -4,8 +4,8 @@ author: davetayls
 title: 2012 at a Glance
 postimage: https://lh3.googleusercontent.com/-adUb5aZ6w_c/UPPJreHeFRI/AAAAAAAAujo/Xo3focCJwB0/s800/2012.jpg
 categories:
-  - theyear
-  - thoughts
+- theyear
+- thoughts
 ---
 
 Another year is starting to blur in my memory and so it is befitting to reminisce and get down all the crazy fun things which have happened this year.
