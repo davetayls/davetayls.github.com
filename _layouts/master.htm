@@ -21,7 +21,7 @@
         <meta property="og:title" content="{{ page.title }}" />
         <meta property="og:type" content="author" />
         <meta property="og:url" content="http://the-taylors.org{{ page.url }}" />
-        <meta property="og:image" content="http://the-taylors.org/images/logo.gif" />
+        <meta property="og:image" content="{% if page.postimage %}{{ page.postimage }}{% else %}http://the-taylors.org/images/logo.gif{% endif %}" />
         <meta property="fb:app_id" content="139170039487294" />
 
     </head>
