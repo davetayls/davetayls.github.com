@@ -2,7 +2,10 @@
 layout: post
 author: davetayls
 title: Some worthwhile reading
-categories: [frontend,javascript,css]
+categories:
+- frontend
+- javascript
+- css
 postimage: /content/alaresponsive.jpg
 ---
 

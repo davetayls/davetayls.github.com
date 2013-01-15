@@ -1,15 +1,12 @@
---- 
-
-layout: post 
-author: davetayls 
+---
+layout: post
+author: davetayls
 title: 2011 Showreel
 categories:
     - aqueduct
-    - webdev 
-    - 2011
+    - webdev
     - showreel
     - thoughts
-
 ---
 
 I have put together some highlights from the year's work. Mainly for my

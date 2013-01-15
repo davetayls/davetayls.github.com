@@ -2,7 +2,8 @@
 layout: post
 author: davetayls
 title: sjs, making server-side JavaScript easy
-categories: [javascript]
+categories:
+- javascript
 ---
 
 I have been working on a new server-side JavaScript framework insired by [jQuery](http://jquery.com) called [sjs](http://github.com/davetayls/sjs). I wanted to give a developer the ability to distribute a JavaScript program which could be run on various platforms. I have initially chosen two to support: Mozilla Rhino and Microsoft CScript. This means that the scripts you have written would work cross platform on Windows, Linux, Mac.
@@ -24,7 +25,7 @@ This comes built in to many Windows and Microsoft Server distributions and so ca
 Simple File Operations
 --------------------------
 
-	var file = 
+	var file =
 	sjs
 	  .file('test.txt')             // open text file
 	  .append('end of the doc\n')   // append string to end
@@ -36,7 +37,7 @@ Simple File Operations
 	  .save()
 	  .clear()
 	  .text('clear and set content of text file');
-	
+
 	sjs.print(file.readText());     // return cached file contents
 	sjs.print(file.readText(true)); // read in saved file contents and return
 
