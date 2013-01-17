@@ -24,7 +24,8 @@ module.exports = function(grunt) {
           ]
         },
         files: {
-          'css/core.css': '_stylus/index.styl'
+          'css/core.css': '_stylus/index.styl',
+          'css/brand.css': '_stylus/brand.styl'
         }
       }
     },

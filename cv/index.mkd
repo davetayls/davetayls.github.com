@@ -37,10 +37,10 @@ I have gained a large body of experience across many web technologies both clien
  - Hand coded JavaScript (Linted), jQuery, jQuery Plugins, unit testing with Jasmine/QUnit
  - Common Js and AMD modules using RequireJs
  - XHTML 4.0 Strict, (X)HTML 5, written by hand using well thought out semantics
- - CSS2; CSS3; Less CSS. Written by hand, built for responsive layouts, mobile devices, screen and print
+ - CSS2; CSS3; Less, Stylus. Written by hand, built for responsive layouts, mobile devices, screen and print
  - IDE of choice: Sublime Text 2. Others: VIM, Notepad++, Visual Studio
  - Methodologies: Agile: Scrum, Kanban
- - Source Control: Git, Subversion
+ - Source Control: Git, Subversion, Mercurial
  - Continuous Integration: Jenkins, nAnt, CruiseControl.net
  - Selenium
 
@@ -60,10 +60,31 @@ February 27, 2012
 
 February 24, 2012
 
+### Sarah Evison, Managing Partner, United Studios
+
+“Having read the other recommendations on here I don't think there is a superlative left to describe Dave. I concur with them all. Dave is an exceptionally skilled front end developer, passionate about his work, calm in delivery and genuinely a lovely person to have on your team.
+
+When I have a project worthy of his talent, he's first on my list!”
+
+October 4, 2012
+
 View more on [LinkedIn](http://www.linkedin.com/in/davetayls).
 
 Experience
 ----------
+
+### Senior Interface Developer (Contract) - _VML London_ <http://www.vml.com>
+#### January 2012 to Present
+
+ - **Working within a Java Project**, working on front-end technologies within an Adobe CQ CMS build
+ - **Adobe CQ CMS**
+
+### Senior Front-End Developer (Contract) - _Finance Client_
+#### December 2012 (1 months)
+
+ - **Front-End Performance**, performance analysis and recommendations
+ - **Front-End Architecture Recommendations**, working closely with the team to enable this to integrate smoothly.
+ - **LESS, .Net MVC, SparkView Engine**
 
 ### Senior Front-End Developer/Architect (Contract) - _ClearPeople_ <http://www.clearpeople.com>
 #### September 2012 to November 2012 (2 months)
@@ -116,12 +137,17 @@ Clients I have produced work for
  - Argus Media (<http://www.argusmedia.com>)
  - Network Rail (<http://www.networkrail.co.uk>), _National Rail Infrastructure Provider_
  - Freud Communications (<http://www.freud.com>), _International Communications Company_
+ - Premier Inn (<http://www.premierinn.com/>)
+ - The Football League (<http://www.football-league.co.uk/>)
 
 Where am I pushing my skills
 ---
 
 I am very keen at pushing my skills outside of my day-to-day work. Researching new technologies and trends
-as they appear. Instead of having an exhuastive list these are the areas which I am focussing on.
+as they appear. I am currently giving much of my free time to work on <http://easybacklog.com> a Backbone.js
+app built on top of Ruby on Rails.
+
+Instead of having an exhuastive list these are the areas which I am focussing on.
 
  - Backbone.js
  - Node.js with Express.js, Grunt.js, Stylus
