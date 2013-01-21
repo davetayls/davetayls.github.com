@@ -31,16 +31,16 @@ portfolio: small
             {{ content }}
             {% if page.comments != 'hide' %}
             <p class="connectWithMe">
-                I'd love to hear your thoughts, I'm always looking to improve.
-                Leave a message below or I'm
-                <a href="https://twitter.com/intent/tweet?url=http://the-taylors.org{{ page.url }}&via=davetayls">
+                I'd love to hear your thoughts, send me a message I'm
+                <a target="_blank" href="https://twitter.com/intent/tweet?url=http://the-taylors.org{{ page.url }}&via=davetayls">
                     @davetayls on twitter
-                </a>
+                </a>.
+                Take a look at <a target="_blank" href="https://twitter.com/search/realtime?q=the-taylors.org">tweets and conversations</a>
             </p>
             {% endif %}
         </div>
 
-        {% if page.comments != 'hide' %}
+        {% if page.comments == 'show' %}
         <div>
             <div id="disqus_thread"></div>
             <script type="text/javascript">
