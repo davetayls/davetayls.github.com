@@ -74,7 +74,7 @@ Experience
 ----------
 
 ### Senior Interface Developer (Contract) - _VML London_ <http://www.vml.com>
-#### January 2012 to Present
+#### January 2013 to Present
 
  - **Working within a Java Project**, working on front-end technologies within an Adobe CQ CMS build
  - **Adobe CQ CMS**
