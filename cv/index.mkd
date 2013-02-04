@@ -77,7 +77,9 @@ Experience
 #### January 2013 to Present
 
  - **Working within a Java Project**, working on front-end technologies within an Adobe CQ CMS build
+ - **Knockout JS**, http://knockoutjs.com
  - **Adobe CQ CMS**
+ - **Multi Variant Testing**
 
 ### Senior Front-End Developer (Contract) - _Finance Client_
 #### December 2012 (1 months)
