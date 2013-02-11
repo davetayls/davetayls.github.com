@@ -1,0 +1,101 @@
+---
+layout: post
+author: davetayls
+title: Drawing Sprites with Canvas
+categories:
+- javascript
+- canvas
+- sprites
+---
+
+One of the first articles I wrote on this blog back in May 2010 was about [how useful sprites are and how to use them with CSS](/blog/2010/05/01/using-sprites-block-sliding-doors-inline-flow/). It's can be an absolute headache to implement simple spriting with CSS. Thankfully drawing sprites is implemented natively within the canvas api.
+
+## Getting ready
+Before I go in to specifics of drawing on a canvas all of these examples expect a 2D context to be available. I won't repeat this for each example so here is a quick example of how to get it.
+
+### A bit of HTML
+    <canvas id="canvas" width="500" height="500"></canvas>
+
+### Create the 2d Canvas Context
+    var canvas = document.getElementById('canvas'),
+        context = canvas.getContext('2d')
+    ;
+
+## Drawing an image
+
+We'll use an image sprite sheet I have been using to build a [simple Space Invaders game](http://the-taylors.org/space-invaders/).
+
+    var img = new Image();
+    img.src = 'http://the-taylors.org/space-invaders/sprites.png';
+
+Next we can use the 2d context's `drawImage` function to pick out and draw the sprite. You can condense this but I'll separate it out so that it's easier to follow.
+
+So first we are going to need dimensions and positions:
+
+    var spriteWidth  = 350,
+        spriteHeight = 170,
+        pixelsLeft   = 170,
+        pixelsTop    = 10,
+
+        // Where are we going to draw
+        // the sprite on the canvas
+        canvasPosX   = 20,
+        canvasPosY   = 20
+    ;
+
+    context.drawImage(img,
+        pixelsLeft,
+        pixelsTop,
+        spriteWidth,
+        spriteHeight,
+        canvasPosX,
+        canvasPosY,
+        spriteWidth,
+        spriteHeight
+    );
+
+See the [result here](http://jsbin.com/iqijex/1/edit).
+
+## Create Reusable Sprite Objects
+
+As I found recently, you will start to write the same code over and over again with sprites so you'll want to wrap the common code in to a reusable object.
+
+Here's a Sprite class which will allow you to specify several sprite positions and then draw a particular one just giving the location on the canvas.
+
+    function Sprite(img, width, height, positions){
+      this.img = img;
+      this.width = width;
+      this.height = height;
+      this.positions = positions;
+    }
+    Sprite.prototype = {
+      draw: function(position, x, y){
+          var pos = this.positions[position];
+          context.drawImage(
+            this.img,
+            pos[0],
+            pos[1],
+            this.width,
+            this.height,
+            x, y
+            this.width,
+            this.height
+          );
+        }
+    };
+
+This is how you would use it:
+
+    var sprite = new Sprite(img, 32, 16, [
+        // specify a few sprite locations
+        [10, 523],  // green
+        [131, 523], // pink
+        [191, 523]  // hit
+    ]);
+    sprite.draw(0, 10, 200);
+    sprite.draw(1, 50, 200);
+    sprite.draw(2, 90, 200);
+
+And [here is the finished example](http://jsbin.com/iqijex/2/edit)
+
+I hope this has demystified the common sprite technique within canvas.
