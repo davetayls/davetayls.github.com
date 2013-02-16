@@ -19,10 +19,11 @@ of these 3 fantastic technologies. Needless to say, it's a lot of fun :o)
 
  - Front-End technologies
  - Teams and open source communities
+ - My family
  - Doing great work (YEAH! The _"I made that"_ feeling)
  - I love the web
  - Community
- - My family
+ - New stuff
 
 ## Who I've worked with
 
@@ -33,14 +34,14 @@ You can take a look at my [showreels](/blog/category/showreel/) or the [projects
 
  - [The FA](http://www.thefa.com) _The English Football Association_
  - [The RFU](http://www.rfu.com) _The English Rugby Football Union_
- - [Manchester City Football Club](http://www.mcfc.co.uk) 
+ - [Manchester City Football Club](http://www.mcfc.co.uk)
  - [Lloyd's of London](http://www.lloyds.com)
  - [Argus Media](http://www.argusmedia.com)
  - [Network Rail](http://www.networkrail.co.uk) _National Rail Infrastructure Provider_
+ - [Premier Inn](http://www.premierinn.com) _National Hotel Chain_
 
 
 ## Experience
 The best way to get to know my skill level and coding style is to browse my
 [github projects](http://github.com/davetayls).
-
 
