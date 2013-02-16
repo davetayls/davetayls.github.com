@@ -1,16 +1,21 @@
-{% for post in site.posts limit:3 %}
-<article><div>
-    <h1>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        <time datetime="{{ post.date | date_to_xmlschema }}">
-            {{ post.date | date:"%b %d %Y" }}
-        </time>
-    </h1>
-    {% if post.postimage %}
-    <p>
-        <img src="{{ post.postimage }}" alt="post.title" />
-    </p>
-    {% endif %}
-	{{ post.content }}
-</div></article>
+<ul class="mod-imageGrid">
+{% for post in site.posts limit:14 %}
+    <li>
+        <a href="{{ post.url }}">
+            <h2>
+                <span>
+                    {{ post.title }}
+                    <time datetime="{{ post.date | date_to_xmlschema }}">
+                        {{ post.date | date:"%b %d %Y" }}
+                    </time>
+                </span>
+            </h2>
+            {% if post.postimage %}
+            <img src="{{ post.postimage }}" alt="{{ post.title }}">
+            {% else %}
+            <img class="__twitter-banner" src="https://si0.twimg.com/profile_banners/58500480/1348782994/web" alt="{{post.title}}" />
+            {% endif %}
+        </a>
+    </li>
 {% endfor %}
+</ul>

@@ -1075,11 +1075,12 @@ pre.prettyprint {
   padding: 0;
   overflow: hidden;
   vertical-align: top;
+  background: #000;
   -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
   box-shadow: 0 0 10px rgba(0,0,0,0.6);
 }
 
-/* line 23 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
+/* line 24 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
 .mod-imageGrid li:after {
   display: block;
   content: "";
@@ -1087,7 +1088,7 @@ pre.prettyprint {
   height: 0;
 }
 
-/* line 30 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
+/* line 31 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
 .mod-imageGrid li a {
   display: block;
   margin: 0;
@@ -1095,15 +1096,16 @@ pre.prettyprint {
   position: absolute;
   0: 0;
   ((null)): 0;
+  max-width: 100%;
 }
 
-/* line 36 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
+/* line 38 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
 .mod-imageGrid li a:hover,
 .mod-imageGrid li a:focus {
   border: none;
 }
 
-/* line 39 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
+/* line 41 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
 .mod-imageGrid li h2 {
   font-size: 1em;
   color: #fff;
@@ -1114,20 +1116,28 @@ pre.prettyprint {
   position: absolute;
   top: 10%;
   left: 0;
-  width: 60%;
+  width: 65%;
   height: auto;
   margin: 0;
   padding: 0;
   z-index: 2;
 }
 
-/* line 53 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
+/* line 55 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
 .mod-imageGrid li h2 span {
   display: block;
   padding: 5%;
 }
 
-/* line 57 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
+/* line 58 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
+.mod-imageGrid li h2 time {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  line-height: 1.75;
+}
+
+/* line 64 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
 .mod-imageGrid li img {
   display: block;
   margin: 0;
@@ -1136,9 +1146,17 @@ pre.prettyprint {
   height: auto;
   z-index: 1;
 }
+
+/* line 73 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
+.mod-imageGrid li .__twitter-banner {
+  width: auto;
+  max-width: none;
+  height: auto;
+  max-height: none;
+}
 @media all and (min-width:600px) {
 
-/* line 67 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
+/* line 80 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
   .mod-imageGrid li {
     float: left;
     width: 46%;
@@ -1146,7 +1164,7 @@ pre.prettyprint {
   }
 }
 
-/* line 71 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/pager-nav.styl */
+/* line 84 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/pager-nav.styl */
 
 /* line 1 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/pager-nav.styl */
 .pager-nav {
