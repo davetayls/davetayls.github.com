@@ -2,6 +2,7 @@
 layout: post
 author: davetayls
 title: Drawing Sprites with Canvas
+postimage: https://lh5.googleusercontent.com/-L7XZyn0ojmY/UR_zzxmC4uI/AAAAAAAAuuY/Q6oPrwMXri8/s800/drawingsprites.png
 categories:
 - javascript
 - canvas

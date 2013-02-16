@@ -2,6 +2,7 @@
 layout: post
 author: davetayls
 title: Using OAuth to connect with Github using Node.js
+postimage: https://lh4.googleusercontent.com/-IT254D_lG4o/UR_08XdDo6I/AAAAAAAAuug/yLjwsuJO6f0/s800/oathgithub.png
 categories:
     - javascript
     - nodejs

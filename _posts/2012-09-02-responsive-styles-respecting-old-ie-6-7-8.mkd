@@ -2,12 +2,11 @@
 layout: post
 author: davetayls
 title: Responsive styles respecting old IE 6/7/8
+postimage: https://lh3.googleusercontent.com/-ow4CMkdEayY/UEOB4ix10hI/AAAAAAAArZQ/Qo4FAzJOf0E/s800/Untitled-1.png
 categories:
     - css
     - responsive
 ---
-
-![IE Isn't behind you yet](https://lh3.googleusercontent.com/-ow4CMkdEayY/UEOB4ix10hI/AAAAAAAArZQ/Qo4FAzJOf0E/s800/Untitled-1.png)
 
 I attended the second [#anoraks](https://twitter.com/#!/search/%23anoraks) talk last Thursday at AKQA in London. It was great to hear [@denodell](http://twitter.com/denodell) speak on responsive design. He did a really great job looking back at the past and some creative ideas for the future.
 
