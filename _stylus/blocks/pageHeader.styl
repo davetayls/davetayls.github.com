@@ -1,0 +1,111 @@
+
+#pageHeader
+    background: #333;
+    background: rgba(30,30,30,0.9);
+    padding: $baseline--px;
+    border-bottom: solid 2px $color--core;
+    height: 40px + ($baseline--px*2);
+    transition: height .2s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    z-index: 100;
+
+    .pageHeader__inner
+        height: 100%;
+
+        @media all and (min-width: 990px)
+            &
+                width: 980px;
+                margin: 0 auto;
+
+    #logo
+        height: 100%;
+        display: -moz-inline-stack;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        vertical-align: middle;
+
+        a
+            display: block;
+            position: relative;
+            transition: top .15s ease-out;
+
+            img
+                display: block;
+                height: 40px;
+                width: auto;
+
+    #nav-primary
+        display: -moz-inline-stack;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        vertical-align: middle;
+
+        ul
+            list-style: none outside none;
+            margin: 0;
+            padding: 0;
+            display: -moz-inline-stack;
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+
+        li
+            display: -moz-inline-stack;
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            padding: 0 $baseline--px;
+            opacity: 1;
+            position: relative;
+            left: 0;
+            animation: fadeInLeft .4s ease-in;
+
+            &:nth-child(1)
+                animation-delay: .2s;
+            &:nth-child(2)
+                animation-delay: .4s;
+            &:nth-child(3)
+                animation-delay: .6s;
+            &:nth-child(4)
+                animation-delay: .8s;
+            &:nth-child(5)
+                animation-delay: 1s;
+
+            a:focus
+            a:hover
+                color: #fff;
+
+        @media all and (max-width: 480px)
+            &
+                position: relative;
+                width: 100%;
+                height: auto;
+
+                ul
+                    display: block;
+
+                li
+                    display: block;
+                    padding: $baseline--px;
+                    text-align: center;
+
+    @media all and (max-width: 480px)
+        &
+            height: auto;
+            position: relative;
+
+    @media all and (min-width: 481px)
+        &:hover
+            height: 60px + ($baseline--px*2);
+
+            #logo a
+                top: 10px;
+
+

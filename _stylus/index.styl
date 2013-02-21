@@ -2,6 +2,7 @@
 @import "nib"
 @import "variables"
 @import "mixins"
+@import "animations"
 
 /**
 	=> lib files
@@ -13,14 +14,6 @@
 @import "menu"
 @import "structure"
 
-/**
-	=> animations
---------------------------------------------------*/
-@keyframes spin {
-	from { -webkit-transform: rotateY(0); }
-	to   { -webkit-transform: rotateY(-360deg); }
-}
-
 /*
 	=> blocks
 --------------------------------------------------*/
@@ -31,7 +24,11 @@
 @import "avatar"
 @import "list-blogs"
 @import 'blocks/spinner'
+@import 'blocks/pageHeader'
 
+/*
+	=> structure
+--------------------------------------------------*/
 
 /**
 => pager-nav
@@ -80,106 +77,31 @@
 /**
 	=> structure
 	--------------------------------------------------*/
-	#logo {
-		width: 25%;
-	}
 
-/**
-	=> nav-primary
-	--------------------------------------------------*/
-
-	.menu ul,
-	#nav-primary ul {
+	.menu ul {
 		list-style: none outside none;
 		margin: 10px 0 0;
 		padding: 0;
 		box-shadow: 0 0 5px rgba(0,0,0,0.3);
 	}
-	.menu ul li,
-	#nav-primary ul li {
+	.menu ul li {
 		border: solid 1px #ddd;
 		border-bottom: none;
 		padding: 0px;
 		overflow: hidden;
 	}
-	.menu ul li:last-child,
-	#nav-primary ul li:last-child {
+	.menu ul li:last-child {
 		border-bottom: solid 1px #ddd;
 	}
-	.menu ul li a,
-	#nav-primary ul li a {
+	.menu ul li a {
 		display: block;
 		padding: 6px;
 	}
-	#nav-primary ul li a:hover,
-	#nav-primary ul li a:focus,
-	#nav-primary ul li a:active {
-		color: #fff;
-		text-decoration: none;
-		text-shadow: none;
 
-		border-bottom: none;
-		background: #00ADEF;
-		background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(0,139,194)), color-stop(1, rgb(0,171,239)) );
-		background-image: -moz-linear-gradient(center bottom, rgb(0,139,194) 0%, rgb(0,171,239) 100% );
-		background-image: linear-gradient(center bottom, rgb(0,139,194) 0%, rgb(0,171,239) 100% );
-	}
-}
-/**
-=> min-width 500px screens
---------------------------------------------------*/
-@media screen and (min-width:500px) {
-	#pageHeader {
-		padding: 0 16px 16px;
-		position: relative;
-		zoom: 1;
-	}
-	#pageHeader:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
-	#logo {
-		float: left;
-
-		perspective: 800;
-		perspective-origin: 50% 90px;
-		transform-style: preserve-3d;
-	}
-	#logo img {
-		-webkit-animation: spin 0.7s 1 ease-in;
-		-webkit-animation-delay: 1s;
-	}
-/**
-	=> nav-primary
-	--------------------------------------------------*/
-	#nav-primary {
-		float: left;
-		margin-left: 1px;
-	}
-	#nav-primary ul {
-		list-style: none outside none;
-		margin: 0;
-		padding: 0;
-	}
-	#nav-primary ul li {
-		display: block;
-		list-style: none outside none;
-		margin: 0 0 1px;
-		padding: 0;
-	}
-	#nav-primary ul li a {
-		display: inline-block;
-		background: #009cc7;
-		color: #fff;
-		font-size: 0.875em;
-		padding: 3px 5px;
-	}
-	#nav-primary ul li a:hover {
-		color: #000;
-		text-decoration: none;
-		border: none;
-	}
 }
 
 /*
-=> min
+	=> min
 --------------------------------------------------*/
 @media screen and (min-width:768px) and (max-width:1000px) {
 	#contentWrapper {
@@ -208,10 +130,6 @@
 	/**
 	=> structure
 	--------------------------------------------------*/
-	#pageHeader {
-		margin: 0 auto;
-		width: 980px;
-	}
 	#contentWrapper {
 		width: 980px;
 		margin: 0 auto;

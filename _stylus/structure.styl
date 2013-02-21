@@ -1,6 +1,3 @@
-#pageHeader {
-    padding: 0 8px 16px;
-}
 #homeHeader {
     position:absolute;
     display: block;
@@ -23,7 +20,15 @@
 
 #wrapper {
     background: url(../images/content-bg.gif) repeat-x 0 -3px;
+    padding-top: 60px;
+
+    @media all and (max-width: 480px){
+        & {
+            padding-top: 0;
+        }
+    }
 }
+
 #contentWrapper {
     padding: 16px 8px;
 }

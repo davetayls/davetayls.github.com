@@ -336,7 +336,7 @@ a:hover {
 
 /* line 56 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 a {
-  -webkit-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.1s ease-in-out;
 }
 
 /* line 59 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
@@ -352,29 +352,24 @@ a:focus,
 a:hover,
 a:active {
   color: #333;
-  border-bottom: dotted 1px #000;
-  -webkit-text-shadow: 0 1px 1px #eee;
-  -moz-text-shadow: 0 1px 1px #eee;
-  -o-text-shadow: 0 1px 1px #eee;
-  text-shadow: 0 1px 1px #eee;
 }
 
-/* line 68 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 63 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 a img {
   border: none;
 }
 
-/* line 71 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 66 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 a:link {
   -webkit-tap-highlight-color: #ff5e99;
 }
 
-/* line 75 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 70 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 blockquote {
   position: relative;
 }
 
-/* line 79 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 74 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 blockquote p {
   color: #000;
   font-size: 1.7em;
@@ -384,7 +379,7 @@ blockquote p {
   letter-spacing: -0.04em;
 }
 
-/* line 87 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 82 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 blockquote:before {
   content: '“';
   font-style: italic;
@@ -395,30 +390,30 @@ blockquote:before {
   width: 1em;
 }
 
-/* line 100 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 95 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 img {
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 101 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 96 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 object,
 embed,
 img {
   max-width: 100%;
 }
 
-/* line 104 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 99 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 p {
   margin: 0;
   padding: 0 0 15px;
 }
 
-/* line 105 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 100 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 article p {
   text-align: justify;
 }
 
-/* line 107 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 102 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 pre {
   white-space: pre;
 /* CSS2 */
@@ -428,12 +423,12 @@ pre {
 /* IE */
 }
 
-/* line 113 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 108 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 small {
   font-size: 85%;
 }
 
-/* line 118 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 113 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 pre,
 code,
 kbd,
@@ -441,7 +436,7 @@ samp {
   font-family: monospace, sans-serif;
 }
 
-/* line 125 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 120 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 h1,
 h2,
 h3,
@@ -452,7 +447,7 @@ h6 {
   text-rendering: optimizeLegibility;
 }
 
-/* line 126 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 121 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 h1 {
   color: #666;
   font-size: 2.375em;
@@ -465,21 +460,21 @@ h1 {
   padding: 0 0 10px;
 }
 
-/* line 135 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 130 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 h1 time {
   color: #888;
   text-transform: uppercase;
   font-size: 0.473684210526em;
 }
 
-/* line 141 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 136 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 h1 a,
 h1 a:visited,
 h1 a:link {
   color: #666;
 }
 
-/* line 145 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 140 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 h2 {
   color: #777;
   font-size: 1.429em;
@@ -492,25 +487,25 @@ h2 {
   padding: 15px 0 5px;
 }
 
-/* line 155 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 150 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 h3 {
   font-size: 1.1em;
   font-weight: bold;
   margin-bottom: 8px;
 }
 
-/* line 161 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 156 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 h5 {
   margin: 0 0 5px;
 }
 
-/* line 172 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 167 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 dl {
   padding: 0 0 24px 0;
   zoom: 1;
 }
 
-/* line 173 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 168 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 dl:after {
   content: ".";
   display: block;
@@ -519,58 +514,58 @@ dl:after {
   visibility: hidden;
 }
 
-/* line 174 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 169 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 dt,
 dd {
   float: left;
 }
 
-/* line 175 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 170 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 dt {
   font-weight: bold;
   padding-right: 12px;
 }
 
-/* line 176 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 171 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 dd {
   padding-right: 24px;
 }
 
-/* line 178 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 173 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 li {
   line-height: 1.5;
 }
 
-/* line 179 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 174 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 ol {
   padding: 10px 0 10px 23px;
 }
 
-/* line 180 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 175 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 ul {
   padding: 10px 0 10px 20px;
 }
 
-/* line 181 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 176 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 ul li,
 ul li li {
   list-style-image: none;
   list-style-type: circle;
 }
 
-/* line 183 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 178 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 ul li li li {
   list-style-image: none;
   list-style-type: disc;
 }
 
-/* line 184 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 179 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 ul li li li li {
   list-style-image: none;
   list-style-type: square;
 }
 
-/* line 186 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 181 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 p+ol,
 p+ul,
 h2+ol,
@@ -580,7 +575,7 @@ h3+ul {
   padding-top: 0;
 }
 
-/* line 191 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 186 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 button,
 select,
 input,
@@ -589,45 +584,45 @@ textarea {
   font-family: inherit;
 }
 
-/* line 195 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 190 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 button {
   width: auto;
   overflow: visible;
 }
 
-/* line 198 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 193 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 input {
   vertical-align: middle;
 }
 
-/* line 201 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 196 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 textarea {
   vertical-align: 1px;
 }
 
-/* line 205 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 200 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 input[type="radio"] {
   vertical-align: text-bottom;
 }
 
-/* line 208 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 203 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 input[type="checkbox"] {
   vertical-align: bottom;
   *vertical-align: baseline;
 }
 
-/* line 213 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 208 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 .ie6 input {
   vertical-align: text-bottom;
 }
 
-/* line 220 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 215 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 table {
   font-size: inherit;
   font: 100%;
 }
 
-/* line 221 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 216 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 table {
   border-bottom: solid 1px #fff;
   border-collapse: separate;
@@ -637,7 +632,7 @@ table {
   padding: 0;
 }
 
-/* line 229 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 224 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 th {
   border-top: 1px solid #fff;
   font-size: 0.8em;
@@ -647,7 +642,7 @@ th {
   text-align: left;
 }
 
-/* line 237 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 232 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 td {
   border-top: dotted 1px #fff;
   border-bottom: dotted 1px #ccc;
@@ -655,7 +650,7 @@ td {
   padding: 3px 5px;
 }
 
-/* line 243 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 238 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 tr:nth-child(even) td {
   background-color: #eee;
 }
