@@ -38,10 +38,9 @@ I have gained a large body of experience across many web technologies both clien
  - Common Js and AMD modules using RequireJs
  - XHTML 4.0 Strict, (X)HTML 5, written by hand using well thought out semantics
  - CSS2; CSS3; Less, Stylus. Written by hand, built for responsive layouts, mobile devices, screen and print
- - IDE of choice: Sublime Text 2. Others: VIM, Notepad++, Visual Studio
+ - Node.js, Grunt, Express
  - Methodologies: Agile: Scrum, Kanban
  - Source Control: Git, Subversion, Mercurial
- - Continuous Integration: Jenkins, nAnt, CruiseControl.net
  - Selenium
 
 
@@ -141,6 +140,8 @@ Clients I have produced work for
  - Freud Communications (<http://www.freud.com>), _International Communications Company_
  - Premier Inn (<http://www.premierinn.com/>)
  - The Football League (<http://www.football-league.co.uk/>)
+ - [Premier Inn](http://www.premierinn.com) _National Hotel Chain_
+ - [Colgate](http://www.colgate.co.uk)
 
 Where am I pushing my skills
 ---
@@ -152,7 +153,7 @@ app built on top of Ruby on Rails.
 Instead of having an exhuastive list these are the areas which I am focussing on.
 
  - Backbone.js
- - Node.js with Express.js, Grunt.js, Stylus
+ - CSS 3D and creative JavaScript
  - Enhancing the quality and consistency of my creative output inspired by The Accidental Creative.
 
 Qualifications

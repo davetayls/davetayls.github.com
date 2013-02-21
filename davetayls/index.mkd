@@ -32,13 +32,17 @@ government organisations.
 
 You can take a look at my [showreels](/blog/category/showreel/) or the [projects category](/blog/category/project/) to see some examples.
 
- - [The FA](http://www.thefa.com) _The English Football Association_
- - [The RFU](http://www.rfu.com) _The English Rugby Football Union_
- - [Manchester City Football Club](http://www.mcfc.co.uk)
- - [Lloyd's of London](http://www.lloyds.com)
- - [Argus Media](http://www.argusmedia.com)
- - [Network Rail](http://www.networkrail.co.uk) _National Rail Infrastructure Provider_
+ - The FA (<http://www.thefa.com>), _The English Football Association_
+ - The RFU (<http://www.rfu.com>), _The English Rugby Football Union_
+ - Manchester City Football Club (<http://www.mcfc.co.uk>)
+ - Lloyd's of London (<http://www.lloyds.com>)
+ - Argus Media (<http://www.argusmedia.com>)
+ - Network Rail (<http://www.networkrail.co.uk>), _National Rail Infrastructure Provider_
+ - Freud Communications (<http://www.freud.com>), _International Communications Company_
+ - Premier Inn (<http://www.premierinn.com/>)
+ - The Football League (<http://www.football-league.co.uk/>)
  - [Premier Inn](http://www.premierinn.com) _National Hotel Chain_
+ - [Colgate](http://www.colgate.co.uk)
 
 
 ## Experience
