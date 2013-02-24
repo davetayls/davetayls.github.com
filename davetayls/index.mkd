@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A little bit about me - Dave Taylor UI Dev
+postimage: https://lh3.googleusercontent.com/-2wx5SiKcZTM/USoBlbJbHnI/AAAAAAAAuyc/Z5qBLzox3N4/s800/mayon.png.jpg
 comments: hide
 ---
 
@@ -41,8 +42,8 @@ You can take a look at my [showreels](/blog/category/showreel/) or the [projects
  - Freud Communications (<http://www.freud.com>), _International Communications Company_
  - Premier Inn (<http://www.premierinn.com/>)
  - The Football League (<http://www.football-league.co.uk/>)
- - [Premier Inn](http://www.premierinn.com) _National Hotel Chain_
- - [Colgate](http://www.colgate.co.uk)
+ - Premier Inn (<http://www.premierinn.com>) _National Hotel Chain_
+ - Colgate (<http://www.colgate.co.uk>)
 
 
 ## Experience

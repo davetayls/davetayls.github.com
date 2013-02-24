@@ -1213,7 +1213,7 @@ tr:nth-child(even) td {
 /* line 17 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/structure.styl */
 #wrapper {
   background: url("../images/content-bg.gif") repeat-x 0 -3px;
-  padding-top: 60px;
+  padding-top: 80px;
 }
 @media all and (max-width: 480px) {
 
