@@ -12,6 +12,11 @@ I've been wanting to try my hand at doing some game development for a while and 
 
 I decided to make a simple driving game using HTML5. I began doing a bit of a search for tutorials which build a simple top view racing game but didn't stumble upon any for HTML5. I did find [a flash tutorial](http://www.emanueleferonato.com/2007/05/15/create-a-flash-racing-game-tutorial/) which I have used as a starting point.
 
+In this series:
+
+ - [simple HTML5 racer game][/blog/2012/11/27/making-a-simple-html5-racing-game/]
+ - [Adding a track and colliding with it][/blog/2013/02/19/adding-a-track-and-colliding-with-it/]
+
 You can see the latest version on github (<https://github.com/davetayls/html5racer>).
 
 I grabbed a top view sprite of a car and started to build the code.
