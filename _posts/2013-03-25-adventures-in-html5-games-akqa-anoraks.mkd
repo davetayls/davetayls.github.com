@@ -10,6 +10,12 @@ categories:
 - presentation
 ---
 
+In this series:
+
+ - [Making a simple HTML5 racer game](/blog/2012/11/27/making-a-simple-html5-racing-game/)
+ - [Adding a track and colliding with it](/blog/2013/02/19/adding-a-track-and-colliding-with-it/)
+ - [Adventures in HTML5 Games](/blog/2013/03/25/adventures-in-html5-games-akqa-anoraks)
+
 I had the pleasure of presenting at [AKQA](http://www.akqa.com/) Anoraks in London on thursday. It was a great packed evening. I gave a talk on my adventure over the last few months of building my simple [Space Invaders game](http://the-taylors.org/space-invaders). Even though it's a pretty simple game I have learnt enough to talk about it or half an hour.
 
 ![anoraks people](https://lh4.googleusercontent.com/-41LCbfiIjmU/UVDIvVBkddI/AAAAAAAAvlM/AxRwbv7X2Ds/s640/adventures-html5-dev-anoraks.png)
@@ -40,7 +46,7 @@ It might look similar to this:
 
     function drawFrame(){
       // kick ass circles and squares
- 
+
       window.requestAnimationFrame(drawFrame);
     }
 
@@ -146,14 +152,14 @@ Use the 2d context for this style of game
     ;
 
 Then with that context you can do some drawing
-    
+
     context.clearRect(0, 0, w, h);
     context.fillStyle = '#000';
     context.fillRect(0,0,w,h);
 
 2d games love sprites and I've written a post [looking closer at sprites on canvas](http://the-taylors.org/blog/2013/02/11/drawing-sprites-with-canvas).
-    
-    
+
+
 ## Slides
 
 You can take a look at [the slides](http://the-taylors.org/presentations/adventure-game-dev-html5-canvas).
@@ -163,3 +169,10 @@ You can take a look at [the slides](http://the-taylors.org/presentations/adventu
 ## Your challenge
 
 This is very much a work in progress but I hope it inspires you to give it a go. Give me a shout if you want chat things through or need to tell me (graciously) that I've got something horribly wrong.
+
+In this series:
+
+ - [Making a simple HTML5 racer game](/blog/2012/11/27/making-a-simple-html5-racing-game/)
+ - [Adding a track and colliding with it](/blog/2013/02/19/adding-a-track-and-colliding-with-it/)
+ - [Adventures in HTML5 Games](/blog/2013/03/25/adventures-in-html5-games-akqa-anoraks)
+

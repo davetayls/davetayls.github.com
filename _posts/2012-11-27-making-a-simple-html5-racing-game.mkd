@@ -14,8 +14,9 @@ I decided to make a simple driving game using HTML5. I began doing a bit of a se
 
 In this series:
 
- - [simple HTML5 racer game](/blog/2012/11/27/making-a-simple-html5-racing-game/)
+ - [Making a simple HTML5 racer game](/blog/2012/11/27/making-a-simple-html5-racing-game/)
  - [Adding a track and colliding with it](/blog/2013/02/19/adding-a-track-and-colliding-with-it/)
+ - [Adventures in HTML5 Games](/blog/2013/03/25/adventures-in-html5-games-akqa-anoraks)
 
 You can see the latest version on github (<https://github.com/davetayls/html5racer>).
 
