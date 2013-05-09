@@ -78,7 +78,7 @@ Experience
 
  - **Knockout JS**, http://knockoutjs.com
  - **Front-End development lead**, leading 2 other front-end developers
-   on enterprise build for Premier Inn
+   on green-field enterprise build for Premier Inn
  - **Team front-end technical mentoring**, workshops and mentoring for
    a front-end team of 5 developers
  - **Adobe CQ CMS**
