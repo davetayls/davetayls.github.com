@@ -10,7 +10,7 @@ tel
 : 0754 081 7008
 
 address
-: 87 Lewin Road, London, SW16 6JX
+: 53 Budbury Tynings, Bradford-on-Avon, Wiltshire, BA15 1QE
 
 web
 : <http://the-taylors.org>
@@ -39,6 +39,7 @@ I have gained a large body of experience across many web technologies both clien
  - XHTML 4.0 Strict, (X)HTML 5, written by hand using well thought out semantics
  - CSS2; CSS3; Less, Stylus. Written by hand, built for responsive layouts, mobile devices, screen and print
  - Node.js, Grunt, Express
+ - Backbone.js, Knockout.js MV* frameworks
  - Methodologies: Agile: Scrum, Kanban
  - Source Control: Git, Subversion, Mercurial
  - Selenium
@@ -72,12 +73,16 @@ View more on [LinkedIn](http://www.linkedin.com/in/davetayls).
 Experience
 ----------
 
-### Senior Interface Developer (Contract) - _VML London_ <http://www.vml.com>
-#### January 2013 to Present
+### Lead Interface Developer (Contract) - _VML London_ <http://www.vml.com>
+#### January 2013 to April 2013 (4 months)
 
- - **Working within a Java Project**, working on front-end technologies within an Adobe CQ CMS build
  - **Knockout JS**, http://knockoutjs.com
+ - **Front-End development lead**, leading 2 other front-end developers
+   on enterprise build for Premier Inn
+ - **Team front-end technical mentoring**, workshops and mentoring for
+   a front-end team of 5 developers
  - **Adobe CQ CMS**
+ - **Working within a Java Project**, working on front-end technologies within an Adobe CQ CMS build
  - **Multi Variant Testing**
 
 ### Senior Front-End Developer (Contract) - _Finance Client_
@@ -143,16 +148,16 @@ Clients I have produced work for
  - [Premier Inn](http://www.premierinn.com) _National Hotel Chain_
  - [Colgate](http://www.colgate.co.uk)
 
-Where am I pushing my skills
+Where I'm pushing my skills
 ---
 
 I am very keen at pushing my skills outside of my day-to-day work. Researching new technologies and trends
 as they appear. I am currently giving much of my free time to work on <http://easybacklog.com> a Backbone.js
 app built on top of Ruby on Rails.
 
-Instead of having an exhuastive list these are the areas which I am focussing on.
+Instead of having an exhaustive list these are the areas which I am focussing on.
 
- - Backbone.js
+ - WebGL, Three.js and multi device interactivity
  - CSS 3D and creative JavaScript
  - Enhancing the quality and consistency of my creative output inspired by The Accidental Creative.
 
