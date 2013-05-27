@@ -13,11 +13,6 @@ portfolio: small
                 </time>
                 {% endif %}
             </h1>
-			    <p>
-            {% if page.author %}
-				     Posted by: {{ page.author }}
-            {% endif %}
-			</p>
             {% if page.share != 'hide' %}
             {% include sharelinks-short.html %}
             {% endif %}
