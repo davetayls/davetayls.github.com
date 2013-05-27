@@ -1,6 +1,6 @@
 {
   "name": "the-taylors.org",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "local": "true",
   "description": "davetayls personal blog",
   "main": "grunt.js",
