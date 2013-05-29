@@ -43,6 +43,11 @@
 --------------------------------------------------*/
 @media screen and (max-width: 500px) {
 
+	body {
+		overflow: hidden;
+		position: relative;
+	}
+
 /**
 	=> structure
 	--------------------------------------------------*/
@@ -85,11 +90,11 @@
 	}
 	.csstransitions.csstransforms3d {
 		#wrapper {
-			transition: transform 1s ease;
+			transition: transform 0.8s ease;
 		}
 		#related {
 			transform: rotateY(45deg) translate3d(-20px, 0, 0);
-			transition: transform 1s ease;
+			transition: transform 0.8s ease;
 		}
 		.js-nav {
 			#wrapper {
@@ -112,6 +117,7 @@
 
 		&:before {
 			content: '≣';
+			color: $color--core;
 			display: block;
 			width: 40px;
 			height: 40px;
