@@ -25,43 +25,8 @@
 @import "list-blogs"
 @import 'blocks/spinner'
 @import 'blocks/pageHeader'
-
-/*
-	=> structure
---------------------------------------------------*/
-
-/**
-=> pager-nav
---------------------------------------------------*/
-.pager-active ul.pager-nav {
-	box-shadow: none;
-}
-.pager-active ul.pager-nav li {
-	padding: 0 3px;
-	border: none;
-}
-.pager-currentPage {
-	background: #ccc;
-}
-
-/**
-=> cp-comments
---------------------------------------------------*/
-.cp-comments:link,
-.cp-comments:visited,
-.cp-comments {
-	display: block;
-	color: #555;
-	font-size: 0.8em;
-}
-
-/**
-=> cp-sharelinks
---------------------------------------------------*/
-.cp-sharelinks {
-	@extend .clearfix;
-	padding: 0 0 16px;
-}
+@import 'cp-comments'
+@import 'cp-sharelinks'
 
 /**
 => mod-blogPosts
@@ -86,7 +51,6 @@
 		list-style: none outside none;
 		margin: 10px 0 0;
 		padding: 0;
-		box-shadow: 0 0 5px rgba(0,0,0,0.3);
 	}
 	.menu ul li {
 		border: solid 1px #ddd;
@@ -100,6 +64,61 @@
 	.menu ul li a {
 		display: block;
 		padding: 6px;
+	}
+
+	#related h1 {
+		/* visually hidden */ position:absolute; display: block; top: -10000px; left: -10000px; width: 1px; height: 1px; overflow: hidden;
+	}
+	#related {
+		position: absolute;
+		top: 0;
+		left: 104%;
+		width: 62%;
+		padding-top: $baseline--px;
+	}
+
+	.js-nav {
+		#wrapper {
+			right: 70%
+			position: relative
+		}
+	}
+	.csstransitions.csstransforms3d {
+		#wrapper {
+			transition: transform 1s ease;
+		}
+		#related {
+			transform: rotateY(45deg) translate3d(-20px, 0, 0);
+			transition: transform 1s ease;
+		}
+		.js-nav {
+			#wrapper {
+				right: auto;
+				transform: translate3d(-70%, 0, 0);
+			}
+			#related {
+				transform: rotateY(0);
+			}
+		}
+	}
+	.show-related {
+		position: absolute;
+		top: $baseline--px;
+		right: $baseline--px;
+		height: 40px;
+		width: 40px;
+		overflow: hidden;
+		display: block;
+
+		&:before {
+			content: '≣';
+			display: block;
+			width: 40px;
+			height: 40px;
+			font-size: 42px;
+			line-height: 1;
+			text-align: center;
+		}
 	}
 
 }

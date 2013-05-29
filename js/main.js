@@ -11,21 +11,21 @@
 */
 /*global define,require */
 require(
-{ 
-    paths: { 
+{
+    paths: {
         jquery: '../lib/jquery.min',
-        lib: '../lib', 
-        'jquery-plugin': '../lib/jquery-plugins' 
-    } 
-}, 
-[ 
+        lib: '../lib',
+        'jquery-plugin': '../lib/jquery-plugins'
+    }
+},
+[
     'jquery',
     'lib/jquery.tweet',
     'lib/jquery.pager'
-], 
+],
 function ($) {
     'use strict';
-    
+
     $('pre>code').parent().addClass('prettyprint');
     window.prettyPrint();
 
@@ -37,6 +37,11 @@ function ($) {
     $('.list-blogs').pager({
         pageSize: 5,
         pagerLocation: "before"
+    });
+
+    $(document).on('click', '.show-related', function(e){
+        $('body').toggleClass('js-nav');
+        e.preventDefault();
     });
 
 });
