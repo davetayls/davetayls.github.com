@@ -182,14 +182,22 @@
     opacity: 0;
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     filter: alpha(opacity=0);
-    left: 10px;
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
   }
 
   100% {
     opacity: 1;
     -ms-filter: none;
     filter: none;
-    left: 0;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
@@ -199,14 +207,22 @@
     opacity: 0;
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     filter: alpha(opacity=0);
-    left: 10px;
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
   }
 
   100% {
     opacity: 1;
     -ms-filter: none;
     filter: none;
-    left: 0;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
@@ -216,14 +232,22 @@
     opacity: 0;
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     filter: alpha(opacity=0);
-    left: 10px;
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
   }
 
   100% {
     opacity: 1;
     -ms-filter: none;
     filter: none;
-    left: 0;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
@@ -233,14 +257,22 @@
     opacity: 0;
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     filter: alpha(opacity=0);
-    left: 10px;
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
   }
 
   100% {
     opacity: 1;
     -ms-filter: none;
     filter: none;
-    left: 0;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
@@ -250,14 +282,22 @@
     opacity: 0;
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     filter: alpha(opacity=0);
-    left: 10px;
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
   }
 
   100% {
     opacity: 1;
     -ms-filter: none;
     filter: none;
-    left: 0;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
@@ -267,14 +307,22 @@
     opacity: 0;
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     filter: alpha(opacity=0);
-    top: 10px;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
   }
 
   100% {
     opacity: 1;
     -ms-filter: none;
     filter: none;
-    top: 0;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -284,14 +332,22 @@
     opacity: 0;
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     filter: alpha(opacity=0);
-    top: 10px;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
   }
 
   100% {
     opacity: 1;
     -ms-filter: none;
     filter: none;
-    top: 0;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -301,14 +357,22 @@
     opacity: 0;
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     filter: alpha(opacity=0);
-    top: 10px;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
   }
 
   100% {
     opacity: 1;
     -ms-filter: none;
     filter: none;
-    top: 0;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -318,14 +382,22 @@
     opacity: 0;
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     filter: alpha(opacity=0);
-    top: 10px;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
   }
 
   100% {
     opacity: 1;
     -ms-filter: none;
     filter: none;
-    top: 0;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -335,14 +407,22 @@
     opacity: 0;
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     filter: alpha(opacity=0);
-    top: 10px;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
   }
 
   100% {
     opacity: 1;
     -ms-filter: none;
     filter: none;
-    top: 0;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -1708,11 +1788,17 @@ pre.prettyprint {
     display: block;
     padding: 8px;
     text-align: center;
+    border-top: dotted 1px #444;
+    -webkit-animation: fadeInTop 0.9s ease;
+    -moz-animation: fadeInTop 0.9s ease;
+    -o-animation: fadeInTop 0.9s ease;
+    -ms-animation: fadeInTop 0.9s ease;
+    animation: fadeInTop 0.9s ease;
   }
 }
 @media all and (max-width: 500px) {
 
-/* line 100 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/blocks/pageHeader.styl */
+/* line 102 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/blocks/pageHeader.styl */
   #pageHeader #nav-primary .nav-primary-subscribe {
 /* visually hidden */
     position: absolute;
@@ -1726,7 +1812,7 @@ pre.prettyprint {
 }
 @media all and (max-width: 480px) {
 
-/* line 105 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/blocks/pageHeader.styl */
+/* line 107 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/blocks/pageHeader.styl */
   #pageHeader {
     height: auto;
     position: relative;
@@ -1734,18 +1820,18 @@ pre.prettyprint {
 }
 @media all and (min-width: 481px) {
 
-/* line 110 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/blocks/pageHeader.styl */
+/* line 112 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/blocks/pageHeader.styl */
   #pageHeader:hover {
     height: 76px;
   }
 
-/* line 113 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/blocks/pageHeader.styl */
+/* line 115 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/blocks/pageHeader.styl */
   #pageHeader:hover #logo a {
     top: 10px;
   }
 }
 
-/* line 115 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/cp-comments.styl */
+/* line 117 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/cp-comments.styl */
 
 /* line 4 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/cp-comments.styl */
 .cp-comments:link,
@@ -1771,17 +1857,17 @@ pre.prettyprint {
 }
 @media screen and (max-width: 500px) {
 
-/* line 6 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
-
 /* line 7 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
+
+/* line 8 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
   .js-nav #wrapper {
     right: 70%;
     position: relative;
   }
 
-/* line 11 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
-
 /* line 12 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
+
+/* line 13 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
   .csstransitions.csstransforms3d #wrapper {
     -webkit-transition: -webkit-transform 0.8s ease;
     -moz-transition: -moz-transform 0.8s ease;
@@ -1790,7 +1876,7 @@ pre.prettyprint {
     transition: transform 0.8s ease;
   }
 
-/* line 15 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
+/* line 16 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
   .csstransitions.csstransforms3d #related {
     -webkit-transform: rotateY(45deg) translate3d(-20px, 0, 0);
     -moz-transform: rotateY(45deg) translate3d(-20px, 0, 0);
@@ -1804,9 +1890,9 @@ pre.prettyprint {
     transition: transform 0.8s ease;
   }
 
-/* line 19 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
-
 /* line 20 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
+
+/* line 21 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
   .csstransitions.csstransforms3d .js-nav #wrapper {
     right: auto;
     -webkit-transform: translate3d(-70%, 0, 0);
@@ -1816,7 +1902,7 @@ pre.prettyprint {
     transform: translate3d(-70%, 0, 0);
   }
 
-/* line 24 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
+/* line 25 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
   .csstransitions.csstransforms3d .js-nav #related {
     -webkit-transform: rotateY(0);
     -moz-transform: rotateY(0);
@@ -1825,7 +1911,7 @@ pre.prettyprint {
     transform: rotateY(0);
   }
 
-/* line 27 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
+/* line 28 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
   .show-related {
     position: absolute;
     top: 8px;
@@ -1836,7 +1922,7 @@ pre.prettyprint {
     display: block;
   }
 
-/* line 36 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
+/* line 37 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
   .show-related:before {
     content: '≣';
     color: #00adef;
@@ -1861,7 +1947,7 @@ pre.prettyprint {
   margin-bottom: 32px;
 }
 
-/* line 45 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/tweet_list.styl */
+/* line 46 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/tweet_list.styl */
 
 /* line 1 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/tweet_list.styl */
 .tweet_list {
