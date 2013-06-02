@@ -5,16 +5,25 @@ postimage: https://lh3.googleusercontent.com/-2wx5SiKcZTM/USoBlbJbHnI/AAAAAAAAuy
 comments: hide
 ---
 
-My name is Dave Taylor, I was born and grew up in the Philippines although
-both my parents are English. We lived on the edge of an active volcano
-called Mayon (which means beautiful). It was a flippin amazing place to be apart from when it errupted.
-let's just say that.
+My name is Dave Taylor, I was born and grew up in the Philippines
+although both my parents are English. We lived on the edge of an
+active volcano called Mayon (which means beautiful). It was a flippin
+amazing place to be apart from when it errupted. let’s just say that.
 
-I now live in London where my love for the web and
-geekery has been growing steadily for several years. I'm ever curious,
-I love the creativity you can have with front-end technology. This is the time
-to be working with HTML, CSS and JavaScript, and I'm living on the razors edge
-of these 3 fantastic technologies. Needless to say, it's a lot of fun :o)
+I spent the first 10 years of my career in London where my love for
+the web and geekery grew steadily. I had the opportunity to work on
+some cutting edge projects with forward thinking creative agencies and
+clients from the likes of The FA and the RFU to The British Red Cross
+and Premier Inn.
+
+I started [Pogo Kid](http://pogokid.com) in the summer of 2012 and I
+now work from my office in Bath.
+
+I’m ever curious, I love the creativity you can have with front-end
+technology. This is the time to be working with HTML, CSS and
+JavaScript, and I’m living on the razors edge of these 3 fantastic
+technologies. Needless to say, it’s a lot of fun :o)
+
 
 ## This is what excites me
 
