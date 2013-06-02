@@ -20,7 +20,7 @@ a little more about my background on my [about me](/davetayls) page.
 ## Availability
 [View the calendar directly](https://www.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=43997nha4g9al5mmd24ok3qdcg%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=Europe%2FLondon)
 
-<iframe src="https://www.google.com/calendar/embed?mode=MONTH&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=43997nha4g9al5mmd24ok3qdcg%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=Europe%2FLondon" frameborder="0" width="100%" height="500" style="border: solid 1px #ccc;"><!-- --></iframe>
+<iframe src="https://www.google.com/calendar/embed?mode=MONTH&amp;height=400&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=43997nha4g9al5mmd24ok3qdcg%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=Europe%2FLondon" frameborder="0" width="100%" height="400" style="border: solid 1px #ccc;"><!-- --></iframe>
 
 
 ## Recommendations
