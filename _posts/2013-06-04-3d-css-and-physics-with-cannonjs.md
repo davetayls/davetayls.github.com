@@ -17,7 +17,7 @@ So I've been playing around with using CSS 3D transforms to see what
 you can achieve. Here's an example of a simple scene showing boxes being
 dropped on to a plane **(Click the window to drop them)**.
 
-<iframe src="http://http://the-taylors.org/teststation/css3/boxes/physics.html" width="100%" height="500">
+<iframe src="http://the-taylors.org/teststation/css3/boxes/physics.html" width="100%" height="500">
     <a href="http://the-taylors.org/teststation/css3/boxes/physics.html">View it</a>
 </iframe>
 
