@@ -1,0 +1,10 @@
+<ul class="mod-imageGrid">
+{% for post in gridposts %}
+    <li>
+        <a href="{{ post.url }}">
+            <h2><span>{{ post.title }}</span></h2>
+            <img src="{{ post.postimage }}" alt="{{ post.title }}">
+        </a>
+    </li>
+{% endfor %}
+</ul>

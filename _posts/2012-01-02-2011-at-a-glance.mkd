@@ -1,7 +1,8 @@
---- 
-layout: post 
-author: davetayls 
+---
+layout: post
+author: davetayls
 title: 2011 at a glance
+related: theyear
 categories:
     - theyear
     - thoughts
@@ -15,7 +16,7 @@ Projects and Work
 
 At the beginning of the year I was running the front-end work on my own at Aqueduct. It was great to get [Steve](http://twitter.com/stevezol) on board on the 17th of Jan (one of the best decisions of the year).
 
-We've enjoyed successes, mainly in our own little sphere but sometimes peeking out with [The FA's Just Play website winning it's category](http://the-taylors.org/blog/2011/11/24/fa-just-play-wins-category-sitecore-site-of-year/) in the Sitecore site of the year. 
+We've enjoyed successes, mainly in our own little sphere but sometimes peeking out with [The FA's Just Play website winning it's category](http://the-taylors.org/blog/2011/11/24/fa-just-play-wins-category-sitecore-site-of-year/) in the Sitecore site of the year.
 
 The FA treated us to tickets to see England V Sweeden, it was great seeing the bill boards advertising the Just Play website. This was pretty significant for me as it was my first experience of a football match, and a good experience it was, especially because we watched this queue from the FA bar whilst sipping free beer.
 
@@ -29,7 +30,7 @@ The FA treated us to tickets to see England V Sweeden, it was great seeing the b
  - [Appia](https://github.com/aqueduct/Appia) has changed the way we deliver front-end builds
  - Progressive Design and Responsive layouts gain the attention they deserve
  - This was the year mindsets have been shifted away from print based ideas to progressive enhancements across browsers.
- - I've been privileged to work with some great clients and projects this year including [The FA](http://www.thefa.com), [The RFU](http://www.rfu.com), [ManCity FC](http://www.mcfc.co.uk), [Lloyd's of London](http://www.lloyds.com) 
+ - I've been privileged to work with some great clients and projects this year including [The FA](http://www.thefa.com), [The RFU](http://www.rfu.com), [ManCity FC](http://www.mcfc.co.uk), [Lloyd's of London](http://www.lloyds.com)
  - I was gutted not to be at the inaugural Aqueduct Awards at the end of the year but was well chuffed that [Tristan](http://twitter.com/tristanpeters) and I received the award for best collaboration.
 
 
@@ -40,12 +41,12 @@ My family has been growing up quickly and my kids celebrated both their birthday
 
 ![the ark](https://lh6.googleusercontent.com/-KxFfpH-Exkw/TwC-D19yPRI/AAAAAAAAj6s/OTxV71bUKBM/s512/2011%25252017%25253A40%25253A40.jpg)
 
-Esther and I enjoyed a great discovery, a [tea house in a tree house](http://fannysfarmshop.co.uk/id1.html). 
+Esther and I enjoyed a great discovery, a [tea house in a tree house](http://fannysfarmshop.co.uk/id1.html).
 ![tea in a treehouse](https://lh6.googleusercontent.com/-GdLEemTML1E/TwDLk5emnFI/AAAAAAAAj68/zmSsdSfNJKs/s512/treehouse.jpg)
 
 We were privileged to become God parents for the third time.
 
-On the same day that Aqueduct moved to their new office, we moved house. I am now living with the in-laws in Streatham. 
+On the same day that Aqueduct moved to their new office, we moved house. I am now living with the in-laws in Streatham.
 
 I got to visit a fire station much to the delight of the bunch of kids that came with us (the children enjoyed it too).
 

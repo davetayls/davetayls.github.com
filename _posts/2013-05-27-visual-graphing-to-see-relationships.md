@@ -3,11 +3,12 @@ layout: post
 author: davetayls
 title: Visual Graphing to See Relationships
 postimage: /content/2013-05-27-graphing.png
+related: creativejs
 categories:
+- creativejs
 - thoughts
 - maths
 - javascript
-- creativejs
 ---
 
 

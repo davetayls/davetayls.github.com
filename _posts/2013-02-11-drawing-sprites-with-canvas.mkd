@@ -3,10 +3,12 @@ layout: post
 author: davetayls
 title: Drawing Sprites with Canvas
 postimage: https://lh5.googleusercontent.com/-L7XZyn0ojmY/UR_zzxmC4uI/AAAAAAAAuuY/Q6oPrwMXri8/s800/drawingsprites.png
+related: creativejs
 categories:
 - javascript
 - canvas
 - sprites
+- creativejs
 ---
 
 One of the first articles I wrote on this blog back in May 2010 was about [how useful sprites are and how to use them with CSS](/blog/2010/05/01/using-sprites-block-sliding-doors-inline-flow/). It's can be an absolute headache to implement simple spriting with CSS. Thankfully drawing sprites is implemented natively within the canvas api.

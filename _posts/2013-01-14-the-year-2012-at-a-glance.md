@@ -3,6 +3,7 @@ layout: post
 author: davetayls
 title: 2012 at a Glance
 postimage: https://lh3.googleusercontent.com/-adUb5aZ6w_c/UPPJreHeFRI/AAAAAAAAujo/Xo3focCJwB0/s800/2012.jpg
+related: theyear
 categories:
 - theyear
 - thoughts

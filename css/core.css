@@ -958,7 +958,7 @@ h6 {
 
 /* line 121 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 h1 {
-  color: #666;
+  color: #000;
   font-size: 2.375em;
 /* 24px */
   font-weight: normal;
@@ -980,7 +980,7 @@ h1 time {
 h1 a,
 h1 a:visited,
 h1 a:link {
-  color: #666;
+  color: #000;
 }
 
 /* line 140 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
@@ -1563,21 +1563,13 @@ pre.prettyprint {
 /* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/avatar.styl */
 .cp-avatar {
   float: left;
-  border: solid 3px #eee;
-  margin: 7px 8px 8px 5px;
+  border: solid 3px #000;
+  margin: 4px 8px 8px 0;
   padding: 0;
-  -webkit-transform: rotate(-3deg);
-  -moz-transform: rotate(-3deg);
-  -o-transform: rotate(-3deg);
-  -ms-transform: rotate(-3deg);
-  transform: rotate(-3deg);
-  -webkit-box-shadow: 0 0 6px #000;
-  box-shadow: 0 0 6px #000;
   position: relative;
-  left: -8px;
 }
 
-/* line 12 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/avatar.styl */
+/* line 9 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/avatar.styl */
 .cp-avatar img {
   display: block;
 }

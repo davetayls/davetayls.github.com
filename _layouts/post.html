@@ -33,6 +33,7 @@ portfolio: small
                 Take a look at <a target="_blank" href="https://twitter.com/search/realtime?q=the-taylors.org">tweets and conversations</a>
             </p>
             {% endif %}
+            {% include relatedposts.html %}
         </div>
 
         {% if page.comments == 'show' %}
@@ -62,6 +63,7 @@ portfolio: small
     </div>
     <aside id="related">
         {% include aboutme.html %}
+        {% include relatedposts.html %}
         {% include recentposts.html %}
         {% include categories.html %}
     </aside>

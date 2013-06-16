@@ -449,7 +449,7 @@ h6 {
 
 /* line 121 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 h1 {
-  color: #666;
+  color: #000;
   font-size: 2.375em;
 /* 24px */
   font-weight: normal;
@@ -471,7 +471,7 @@ h1 time {
 h1 a,
 h1 a:visited,
 h1 a:link {
-  color: #666;
+  color: #000;
 }
 
 /* line 140 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */

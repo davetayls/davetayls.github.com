@@ -3,6 +3,7 @@ layout: post
 author: davetayls
 title: Presenting Adventures in HTML5 Games, AKQA Anoraks
 postimage: https://lh3.googleusercontent.com/-OtZmjp2PZJg/UVC8txeR6mI/AAAAAAAAvkY/JBgsyEDt3VY/s640/adventures-html5-dev.png
+related: gamedev
 categories:
 - html5
 - javascript

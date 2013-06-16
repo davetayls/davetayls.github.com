@@ -6,7 +6,7 @@ postimage: https://lh6.googleusercontent.com/-_70EeZzLMa4/USN9NI-6WXI/AAAAAAAAuv
 categories:
 - html5
 - javascript
-- gamesdev
+- gamedev
 ---
 
 I began building a very [simple HTML5 racer game][2] back in November. It was my first exploration in to doing simple games with HTML5 and canvas.
