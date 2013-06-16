@@ -3,6 +3,7 @@ layout: post
 author: davetayls
 title: HTML5 Racer - Adding a Track and Colliding with it
 postimage: https://lh6.googleusercontent.com/-_70EeZzLMa4/USN9NI-6WXI/AAAAAAAAuvQ/C2MVqRuWjq8/s800/racer-part02.png
+related: gamedev
 categories:
 - html5
 - javascript

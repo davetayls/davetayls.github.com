@@ -2,7 +2,7 @@
 layout: post
 author: davetayls
 title: Submitting a form to a new window
-postimage:
+related: javascript
 categories:
     - javascript
     - html
