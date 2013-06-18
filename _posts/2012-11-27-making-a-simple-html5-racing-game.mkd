@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Making a simple html5 racing game
+related: gamedev
 categories:
     - html5
     - gamedev

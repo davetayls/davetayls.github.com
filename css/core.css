@@ -1319,23 +1319,32 @@ tr:nth-child(even) td {
 
 /* line 33 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/structure.styl */
 #pageFooter {
-  background: #ddd;
+  background: #000;
+  color: #ddd;
   padding: 16px 8px;
 }
 
-/* line 37 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/structure.styl */
+/* line 38 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/structure.styl */
+#pageFooter p,
+#pageFooter address,
+#pageFooter-inner ul li {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+/* line 42 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/structure.styl */
 #pageFooter-inner {
   margin: 0 auto;
 }
 
-/* line 40 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/structure.styl */
+/* line 45 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/structure.styl */
 #pageFooter-inner ul {
   list-style: none outside none;
   margin: 0;
   padding: 0;
 }
 
-/* line 45 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/structure.styl */
+/* line 50 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/structure.styl */
 #pageFooter-inner ul li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1351,7 +1360,7 @@ tr:nth-child(even) td {
 	=> blocks
 --------------------------------------------------*/
 
-/* line 54 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/prettyprint.styl */
+/* line 59 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/prettyprint.styl */
 
 /* line 1 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/prettyprint.styl */
 pre.prettyprint {
