@@ -39,10 +39,7 @@
 }
 @import "tweet_list";
 
-/**
-=> max-width 500px screens
---------------------------------------------------*/
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
 
 	body {
 		overflow: hidden;
@@ -94,8 +91,12 @@
 		padding: 16px 0 16px 32px;
 	}
 	#content {
+		position: relative;
+		left: 50%;
 		float: left;
 		width: 568px;
+		margin-left: -375px;
+		transition: left .3s ease, margin-left .3s ease;
 	}
 	#related {
 		float: right;
