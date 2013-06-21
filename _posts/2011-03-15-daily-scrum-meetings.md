@@ -2,6 +2,7 @@
 layout: post
 author: davetayls
 title: Daily Scrum Meetings
+related: agile
 categories: agile
 postimage: /content/agilesoftwaredevwithscrum.jpg
 ---
@@ -51,4 +52,4 @@ Decisions
 ------------
 The team have full authority to make all of the decisions necessary to turn Product Backlog in to a Product Increment to meet the Sprint Goal.
 
-Completed work has momentum and usually will be "good enough" or at the very least, it will be far better than nothing.  
+Completed work has momentum and usually will be "good enough" or at the very least, it will be far better than nothing.

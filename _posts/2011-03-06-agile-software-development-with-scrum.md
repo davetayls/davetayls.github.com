@@ -2,6 +2,7 @@
 layout: post
 author: davetayls
 title: Agile Software Development with Scrum
+related: agile
 categories: agile
 postimage: /content/agilesoftwaredevwithscrum.jpg
 ---
@@ -14,7 +15,7 @@ Take a look at the other posts:
 
 I've seen a good deal of gains whilst working in a Scrum environment at the [digital, creative agency](http://www.aqueduct.co.uk) I work at. Much of them are talked about below but to highlight what has got me excited about Scrum...when we get this RIGHT projects are so much more productive, less stressful and issues are cleared quicker.
 
-I'm enjoying this discovery process and I'd thouroughly recommend anyone to give it a go.  
+I'm enjoying this discovery process and I'd thouroughly recommend anyone to give it a go.
 
 Agile Software Development with Scrum
 ------------------------------------------
@@ -68,7 +69,7 @@ Team members are in charge of their working hours although need to work when the
 
 So a reminder of what makes Scrum different.
 ----------------------------------------------
-It's an empirical process, it promotes self-organisation and encourages action through personal ownership of what is being produced.  
+It's an empirical process, it promotes self-organisation and encourages action through personal ownership of what is being produced.
 
  [1]: http://en.wikipedia.org/wiki/Empirical_process_(process_control_model) "Empirical Model"
-	
+

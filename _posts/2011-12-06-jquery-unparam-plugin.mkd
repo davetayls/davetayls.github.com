@@ -1,7 +1,8 @@
---- 
-layout: post 
-author: davetayls 
+---
+layout: post
+author: davetayls
 title: jQuery.unparam plugin
+related: jquery
 categories:
     - jquery
     - code

@@ -3,6 +3,7 @@ layout: post
 author: davetayls
 title: Testing jQuery.kinetic with Grunt and qUnit
 postimage: https://lh4.googleusercontent.com/-lYFjCOQedIY/ULxtSqTlpVI/AAAAAAAAtvY/9t4VtZviMAY/s800/qunit-grunt-travis-sauce.png
+related: jquery
 categories:
         - testing
         - javascript

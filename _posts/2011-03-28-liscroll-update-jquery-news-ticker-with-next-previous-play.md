@@ -1,7 +1,8 @@
 ---
 layout: post
 title: liScroll Update (jQuery news ticker with next/previous/play)
-categories: 
+related: jquery
+categories:
     - jquery
     - frontend
     - javascript

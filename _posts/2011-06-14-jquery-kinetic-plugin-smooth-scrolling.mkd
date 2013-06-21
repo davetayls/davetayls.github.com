@@ -2,7 +2,8 @@
 layout: post
 author: davetayls
 title: jQuery.kinetic plugin gives you drag scrolling with mouse and touch
-categories: 
+related: jquery
+categories:
     - releases
     - jquery
 ---

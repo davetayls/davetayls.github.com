@@ -1,7 +1,8 @@
---- 
-layout: post 
-author: davetayls 
+---
+layout: post
+author: davetayls
 title: jQuery.lazyLoader, Semantic, organic responsive images?
+related: jquery
 categories:
     - jquery
     - thoughts
@@ -13,7 +14,7 @@ categories:
 
 I'm often a bit of a purist, but as I age, I'm realising more and more the [history of the web](http://1997.webhistory.org/www.lists/www-talk.1993q1/index.html), much like most other histories is a pretty messy pit of layers laid on top of layers. After reading [this revolutionary email from the birth of the img tag](http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html), I'm reminded we're just working on the next layer so it's probably going to be messy ;).
 
-I have been reading this evening over people's thoughts about how we tackle [responsible responsive images](http://adactio.com/journal/4997/) and there seems to be no perfect method. In fact many of the [methods currently being seen](http://www.cloudfour.com/responsive-imgs-part-2/) have major gotchas. It just feels like we are far from getting a stable way of providing responsive images using the `img` tag. 
+I have been reading this evening over people's thoughts about how we tackle [responsible responsive images](http://adactio.com/journal/4997/) and there seems to be no perfect method. In fact many of the [methods currently being seen](http://www.cloudfour.com/responsive-imgs-part-2/) have major gotchas. It just feels like we are far from getting a stable way of providing responsive images using the `img` tag.
 
 There have been a few [interesting discussions about how this could play out in the future](http://www.cloudfour.com/responsive-imgs-part-3-future-of-the-img-tag/) but like a lot of people I want to have a go at doing something NOW! So taking the pragmatic view that [done is better than perfect](http://lifehacker.com/5864004/the-done-manifesto-lays-out-13-ground-rules-for-getting-to-done) I have developed a simple tool to add to many other options out there which fitted well for what I was trying to achieve.
 
@@ -35,7 +36,7 @@ But I have found these areas to be tricky:
 
 
 Usage
---- 
+---
 
 With the following markup
 
@@ -48,7 +49,7 @@ You run the plugin on the links
     $('#lazy a').lazyLoader();
 
 Examples
---- 
+---
 
     <a href="myimage.jpg">my image</a>
 
@@ -66,14 +67,14 @@ converts to
 
 
 Responsive images
---- 
+---
 
 If you want to dynamically load images dependent on the screen dimensions then
 you can use the following.
 
-    <a href="myimage.jpg" 
-       data-img768="myimage-768.jpg" 
-       data-img990="myimage-990.jpg" 
+    <a href="myimage.jpg"
+       data-img768="myimage-768.jpg"
+       data-img990="myimage-990.jpg"
     >my image</a>
 
 js:
@@ -91,7 +92,7 @@ js:
     $('a').lazyLoader({
         img: function(url, windowWidth) {
             if (windowWidth >= 768){
-                return url.replace(/.(jpg|gif|png)$/i, '-mega.$1'); 
+                return url.replace(/.(jpg|gif|png)$/i, '-mega.$1');
             } else {
                 return url;
             }
