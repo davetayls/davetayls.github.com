@@ -1,0 +1,8 @@
+<nav class="related-posts">
+    {% if page.related %}
+    <h2>Related Posts</h2>
+    <p>Showing posts tagged as <strong>{{ page.related }}</strong></p>
+        {% assign gridposts = site.categories[page.related] %}
+        {% include imagegrid.html %}
+    {% endif %}
+</nav>
