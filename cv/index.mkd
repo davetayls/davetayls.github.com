@@ -73,6 +73,19 @@ View more on [LinkedIn](http://www.linkedin.com/in/davetayls).
 Experience
 ----------
 
+### Creative Interface Developer (Contract) - _Play Nicely_ <http://playnicely.co.uk>
+#### June 2013
+
+ - **PhoneGap / Cordova iPad app** development
+
+### Creative Technologist (Contract) - _United Studios Live_ <http://unitedstudioslive.com>
+#### May 2013 (1 month)
+
+ - **Three.js** 3D Music Visualiser
+ - **HTML5 Audio API** analyzing mp3 audio
+ - **HTML5 File API** drag and drop
+ - **Node.js Server** implementation
+
 ### Lead Interface Developer (Contract) - _VML London_ <http://www.vml.com>
 #### January 2013 to April 2013 (4 months)
 
@@ -84,6 +97,7 @@ Experience
  - **Adobe CQ CMS**
  - **Working within a Java Project**, working on front-end technologies within an Adobe CQ CMS build
  - **Multi Variant Testing**
+ - **Colgate, Premier Inn**
 
 ### Senior Front-End Developer (Contract) - _Finance Client_
 #### December 2012 (1 months)
