@@ -100,7 +100,7 @@ Experience
  - **Colgate, Premier Inn**
 
 ### Senior Front-End Developer (Contract) - _Finance Client_
-#### December 2012 (1 months)
+#### December 2012 (1 month)
 
  - **Front-End Performance**, performance analysis and recommendations
  - **Front-End Architecture Recommendations**, working closely with the team to enable this to integrate smoothly.
