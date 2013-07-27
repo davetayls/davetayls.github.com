@@ -11,7 +11,7 @@ I've started reading [Agile Software Development with Scrum](http://www.amazon.c
 
 Take a look at the other posts:
 
-*	[Agile Software Development with Scrum](http://the-taylors.org/blog/2011/03/06/agile-software-development-with-scrum/)
+*	[Agile Software Development with Scrum](/blog/2011/03/06/agile-software-development-with-scrum/)
 
 Background
 ---------------

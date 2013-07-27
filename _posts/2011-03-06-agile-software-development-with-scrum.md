@@ -11,7 +11,7 @@ I've started reading [Agile Software Development with Scrum](http://www.amazon.c
 
 Take a look at the other posts:
 
-*	[Daily Scrum Meetings](http://the-taylors.org/blog/2011/03/15/daily-scrum-meetings/)
+*	[Daily Scrum Meetings](/blog/2011/03/15/daily-scrum-meetings/)
 
 I've seen a good deal of gains whilst working in a Scrum environment at the [digital, creative agency](http://www.aqueduct.co.uk) I work at. Much of them are talked about below but to highlight what has got me excited about Scrum...when we get this RIGHT projects are so much more productive, less stressful and issues are cleared quicker.
 

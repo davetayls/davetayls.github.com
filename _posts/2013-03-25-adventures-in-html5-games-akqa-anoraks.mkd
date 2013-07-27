@@ -18,7 +18,7 @@ In this series:
  - [Adding a track and colliding with it](/blog/2013/02/19/adding-a-track-and-colliding-with-it/)
  - [Adventures in HTML5 Games](/blog/2013/03/25/adventures-in-html5-games-akqa-anoraks)
 
-I had the pleasure of presenting at [AKQA](http://www.akqa.com/) Anoraks in London on thursday. It was a great packed evening. I gave a talk on my adventure over the last few months of building my simple [Space Invaders game](http://the-taylors.org/space-invaders). Even though it's a pretty simple game I have learnt enough to talk about it or half an hour.
+I had the pleasure of presenting at [AKQA](http://www.akqa.com/) Anoraks in London on thursday. It was a great packed evening. I gave a talk on my adventure over the last few months of building my simple [Space Invaders game](http://davetayls.me/space-invaders). Even though it's a pretty simple game I have learnt enough to talk about it or half an hour.
 
 ![anoraks people](https://lh4.googleusercontent.com/-41LCbfiIjmU/UVDIvVBkddI/AAAAAAAAvlM/AxRwbv7X2Ds/s640/adventures-html5-dev-anoraks.png)
 
@@ -130,7 +130,7 @@ Another option is to split your stage up in to a grid and only allow a single ob
 
 ![html5 racer hit map](https://lh5.googleusercontent.com/-Dn1NqmUcy7k/USKXMsE08jI/AAAAAAAAuvA/VlfdV8B2No0/s800/racer-hit-detect.png)
 
-I've already written about [using a hit map with canvas](http://the-taylors.org/blog/2013/02/19/adding-a-track-and-colliding-with-it/) in my recent [article on a simple HTML5 Racer](http://the-taylors.org/blog/2013/02/19/adding-a-track-and-colliding-with-it/) so take a look for more info on this.
+I've already written about [using a hit map with canvas](/blog/2013/02/19/adding-a-track-and-colliding-with-it/) in my recent [article on a simple HTML5 Racer](/blog/2013/02/19/adding-a-track-and-colliding-with-it/) so take a look for more info on this.
 
 There are obviously more options to you, this subject is pretty massive but hopefully this provides a good starting point to thinking about collisions.
 
@@ -159,14 +159,14 @@ Then with that context you can do some drawing
     context.fillStyle = '#000';
     context.fillRect(0,0,w,h);
 
-2d games love sprites and I've written a post [looking closer at sprites on canvas](http://the-taylors.org/blog/2013/02/11/drawing-sprites-with-canvas).
+2d games love sprites and I've written a post [looking closer at sprites on canvas](/blog/2013/02/11/drawing-sprites-with-canvas).
 
 
 ## Slides
 
-You can take a look at [the slides](http://the-taylors.org/presentations/adventure-game-dev-html5-canvas).
+You can take a look at [the slides](http://davetayls.me/presentations/adventure-game-dev-html5-canvas).
 
-<iframe src="http://the-taylors.org/presentations/adventure-game-dev-html5-canvas" width="600" height="500">&nbsp;</iframe>
+<iframe src="http://davetayls.me/presentations/adventure-game-dev-html5-canvas" width="600" height="500">&nbsp;</iframe>
 
 ## Your challenge
 

@@ -136,7 +136,7 @@ The car can be set up with a few collision points at key places (front, back, le
 
 ## Test it out
 
-The latest version can be found on <http://the-taylors.org/html5racer/> and you can take a look at the code on the [Part02 tag][1]
+The latest version can be found on <http://davetayls.me/html5racer/> and you can take a look at the code on the [Part02 tag][1]
 
 
 [0]: https://developer.mozilla.org/en-US/docs/HTML/Canvas/Pixel_manipulation_with_canvas#Getting_the_pixel_data_for_a_context

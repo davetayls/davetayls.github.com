@@ -2,10 +2,10 @@
 layout: nil
 ---
 {
- 
+
     "title": "Dave Taylor (@davetayls)",
-    "atom": "http://the-taylors.org/atom.xml",
-    "site": "http://the-taylors.org/",
+    "atom": "http://davetayls.me/atom.xml",
+    "site": "http://davetayls.me/",
     "author": {
         "name": "David Taylor"
         "email": "dave@the-taylors.org"
@@ -16,9 +16,9 @@ layout: nil
  {% if post.status != 'draft' %}
     ,   {
             "title": "{{ post.title }}",
-            "link": "http://the-taylors.org{{ post.url }}",
+            "link": "http://davetayls.me{{ post.url }}",
             "updated": "{{ post.date | date_to_xmlschema }}",
-            "id": "http://the-taylors.org{{ post.id }}",
+            "id": "http://davetayls.me{{ post.id }}",
             "categories": "{{ post.categories }}"
         },
  {% endif %}

@@ -16,7 +16,7 @@ Projects and Work
 
 At the beginning of the year I was running the front-end work on my own at Aqueduct. It was great to get [Steve](http://twitter.com/stevezol) on board on the 17th of Jan (one of the best decisions of the year).
 
-We've enjoyed successes, mainly in our own little sphere but sometimes peeking out with [The FA's Just Play website winning it's category](http://the-taylors.org/blog/2011/11/24/fa-just-play-wins-category-sitecore-site-of-year/) in the Sitecore site of the year.
+We've enjoyed successes, mainly in our own little sphere but sometimes peeking out with [The FA's Just Play website winning it's category](/blog/2011/11/24/fa-just-play-wins-category-sitecore-site-of-year/) in the Sitecore site of the year.
 
 The FA treated us to tickets to see England V Sweeden, it was great seeing the bill boards advertising the Just Play website. This was pretty significant for me as it was my first experience of a football match, and a good experience it was, especially because we watched this queue from the FA bar whilst sipping free beer.
 
@@ -24,7 +24,7 @@ The FA treated us to tickets to see England V Sweeden, it was great seeing the b
 
 ### A few highlights for me
  - August and September brought the Rugby world cup and the [RFU](http://www.rfu.com) We Are campaign.
- - [jQuery Kinetic](http://the-taylors.org/jquery.kinetic) a simple plugin which adds smooth drag scrolling with gradual deceleration to containers
+ - [jQuery Kinetic](http://davetayls.me/jquery.kinetic) a simple plugin which adds smooth drag scrolling with gradual deceleration to containers
  - I converted to using VIM for my IDE, a massive initial learning curve but I'm now enjoying the benefits
  - [RequireJs](http://requirejs.org) has revolutionised the way I build JavaScript
  - [Appia](https://github.com/aqueduct/Appia) has changed the way we deliver front-end builds

@@ -13,8 +13,8 @@ categories:
 
 <iframe src="http://player.vimeo.com/video/38253029?title=0&amp;byline=0&amp;portrait=0" width="100%" height="330" frameborder="0" webkitAllowFullScreen="yes" mozallowfullscreen="yes" allowFullScreen="yes">vimeo</iframe>
 
-I have just finished a project for [Adam Ball](http://www.adamballonline.com) who is an artist based in London. This has been a real challenge and has made me push boundaries in to new territory. 
+I have just finished a project for [Adam Ball](http://www.adamballonline.com) who is an artist based in London. This has been a real challenge and has made me push boundaries in to new territory.
 
 ## Responsive Design, Responsive Images
-The main area has been with serving appropriate image sizes according to the device. I have previously talked about my [responsive images jQuery plugin](http://the-taylors.org/blog/2012/01/29/jquery-lazyloader-organic-responsive-images/) which is a good stop gap for getting this to work across the current browser landscape. I have liked working with responsive images in this way because it is a much more organic solution than the ones I have seen elsewhere. It'll be great when we've got something natively to handle this sort of thing.
+The main area has been with serving appropriate image sizes according to the device. I have previously talked about my [responsive images jQuery plugin](/blog/2012/01/29/jquery-lazyloader-organic-responsive-images/) which is a good stop gap for getting this to work across the current browser landscape. I have liked working with responsive images in this way because it is a much more organic solution than the ones I have seen elsewhere. It'll be great when we've got something natively to handle this sort of thing.
 

@@ -24,8 +24,8 @@ each other. You can see below the difference between the `sin`, `cos`
 and `tan` functions alongside the `ImprovedNoise` generator built in
 to Three.js.
 
-<iframe width="100%" height="500" src="http://the-taylors.org/teststation/creative-js/grapher/2d.html">
-    <a href="http://the-taylors.org/teststation/creative-js/grapher/2d.html">View it</a>
+<iframe width="100%" height="500" src="http://davetayls.me/teststation/creative-js/grapher/2d.html">
+    <a href="http://davetayls.me/teststation/creative-js/grapher/2d.html">View it</a>
 </iframe>
 
 Go ahead and play with the code to the right. **Hit Ctrl+Enter to

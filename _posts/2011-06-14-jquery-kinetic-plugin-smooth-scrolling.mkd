@@ -12,7 +12,7 @@ I have released another jQuery plugin which gives you drag and throw functionali
 
 Demo
 ----
-I have added a demo and a list of options on <http://the-taylors.org/jquery.kinetic/>.
+I have added a demo and a list of options on <http://davetayls.me/jquery.kinetic/>.
 
 This is still a work in progress, It only scrolls horizontally at the moment. Please let me know of any issues you might find. You can log them on [github](https://github.com/davetayls/jquery.kinetic/issues)
 

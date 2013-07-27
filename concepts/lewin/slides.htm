@@ -14,7 +14,7 @@
                 margin: 0;
                 padding: 0;
             }
-            
+
             a, a img {
                 border: none;
             }
@@ -29,19 +29,19 @@
                 margin: 0;
                 padding: 0px;
             }
-            
+
             #slides {
             	border-bottom: solid 4px #7A910F;
                 height: 380px;
                 overflow: hidden;
                 width: 680px;
             }
-            
+
             .cc {
                 position: relative;
                 zoom: 1;
             }
-            
+
             .cc:after {
                 content: ".";
                 display: block;
@@ -49,24 +49,24 @@
                 clear: both;
                 visibility: hidden;
             }
-            
+
             /*
              cp-promo
              ------------------------------------------------*/
             .cp-promo, .cp-promo-carousel {
                 width: 680px;
             }
-            
+
             .cp-promo-carousel ul {
                 height: 380px;
             }
-            
+
             .cp-promo {
                 margin: 0 0 7px;
                 padding: 0;
                 position: relative;
             }
-            
+
             .cp-promo-carousel {
                 margin: 0;
                 overflow: auto;
@@ -74,12 +74,12 @@
                 padding: 0;
                 z-index: 1;
             }
-            
+
             .cp-promo-carousel ul {
                 margin: 0;
                 padding: 0;
             }
-            
+
             .cp-promo-carousel li {
                 margin: 0;
                 overflow: hidden;
@@ -88,11 +88,11 @@
                 width: 663px;
                 zoom: 1;
             }
-            
+
             .cp-promo-active .cp-promo-carousel li {
                 width: 680px;
             }
-            
+
             .cp-promo-carousel li a {
             	display: block;
             	position: relative;
@@ -103,7 +103,7 @@
                 width: 680px;
                 z-index: 1;
             }
-            
+
             .cp-promo-carousel li .cp-promo-label {
             	background: #000;
             	background: rgba(0,0,0,0.6);
@@ -121,20 +121,20 @@
 				width: 300px;
 				z-index:2;
             }
-				.cp-promo-carousel li .cp-promo-h {					
+				.cp-promo-carousel li .cp-promo-h {
 					display:block;
 					font-size:3em;
 				}
             	.cp-promo-carousel li .cp-promo-body {
 					display:block;
-            	
+
             	}
-            
+
             .cp-promo li {
                 list-style: none;
                 list-style-image: none;
             }
-            
+
             .cp-promo-controller {
                 display: block;
                 bottom: 10px;
@@ -147,7 +147,7 @@
                 text-align: right;
                 z-index: 2;
             }
-            
+
             .cp-promo-controller li {
                 border-left: solid 10px transparent;
                 cursor: pointer;
@@ -156,11 +156,11 @@
                 margin: 0px;
                 padding: 0;
             }
-            
+
             .cp-promo-controller li.nav-selected {
                 border-left-color: #7A910F;
             }
-            
+
             .cp-promo-controller li a {
             	-o-box-shadow: 0 0 2px #000;
 				-webkit-box-shadow: 0 0 2px #000;
@@ -177,30 +177,30 @@
                 padding: 0;
                 width: 80px;
             }
-            
+
             .cp-promo-controller li a:active {
                 outline: none;
             }
-            
+
             .cp-promo-controller li.nav-selected a, .cp-promo-controller li:hover a, .cp-promo-controller li a:hover {
                 border-color: #fff;
 				-webkit-transform: border-color 1s;
             }
-            
+
             .cp-promo-controller li a img {
                 width: 100%;
             }
         </style>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-        <script type="text/javascript" src="http://the-taylors.org/jQueryPlugins/jquery.promo/jquery.promo.js"></script>
-        <script type="text/javascript" src="http://the-taylors.org/jQueryPlugins/jquery.promo/transitions.js"></script>
+        <script type="text/javascript" src="http://davetayls.me/jQueryPlugins/jquery.promo/jquery.promo.js"></script>
+        <script type="text/javascript" src="http://davetayls.me/jQueryPlugins/jquery.promo/transitions.js"></script>
         <script type="text/javascript" src="http://google-ajax-examples.googlecode.com/svn/trunk/gspreadsheet/gspreadsheet.js"></script>
         <script type="text/javascript">
             $().ready(function(){
-            
+
                 var slidesnav$ = $('#slidesnav');
                 var slideslist$ = $('#slideslist');
-                
+
                 /**
                  * Returns the value of a query string variable
                  * @param {String} ji The query string variable name
@@ -216,9 +216,9 @@
                     }
                     return null;
                 };
-                
+
                 var spreadSheetRef = getQuery('sheet');
-                
+
                 var loadPromoItems = function(gs){
                     gs.each(function(row){
                         slidesnav$.append('<li><a href="#s' + row.id + '"><img src="' + row.imageurl + '" alt="' + row.heading + '" /></a></li>');
@@ -238,9 +238,9 @@
 						transitionSpeed: 1
 	                });
                 };
-                
+
                 GSpreadsheet.load(spreadSheetRef, {index: 'designRef'}, loadPromoItems);
-                
+
             });
         </script>
     </head>
@@ -262,7 +262,7 @@
 			<p>22 Lewin Road,<br />
 			Streatham,<br />
 			London,<br />
-			SW16 6JR</p> 
+			SW16 6JR</p>
 			<p>
 				Tel: 020 8769 1515<br />
 				<a href="mailto:info@streathambaptist.com">info@streathambaptist.com</a>

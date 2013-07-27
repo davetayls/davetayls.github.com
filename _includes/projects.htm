@@ -2,14 +2,14 @@
 <h3 class="notice">
     <a href="/blog/2010/12/15/rivet-advanced-js-combiner-v2-released/">Find out about the latest features in Rivet Version 2</a>
 </h3>
-<h3>Reduce your script references</h3> 
+<h3>Reduce your script references</h3>
 <pre><code>&lt;script src=&quot;js/jsfile1.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;js/folder/jsfile2.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;js/jsfile3.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;js/jsfile4.js&quot;&gt;&lt;/script&gt;</code></pre> 
- 
-<h3>To only one reference</h3> 
-<pre><code>&lt;script src=&quot;js/app.js&quot;&gt;&lt;/script&gt;</code></pre> 
+&lt;script src=&quot;js/jsfile4.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+<h3>To only one reference</h3>
+<pre><code>&lt;script src=&quot;js/app.js&quot;&gt;&lt;/script&gt;</code></pre>
 <p class="notice">
     <a href="/blog/2010/12/15/rivet-advanced-js-combiner-v2-released/">here&rsquo;s how &gt;</a>
 </p>
@@ -24,7 +24,7 @@
 </p>
 
 
-<h2><a href="http://the-taylors.org/juxtapo">Juxtapo</a> - front end tools</h2>
+<h2><a href="/juxtapo">Juxtapo</a> - front end tools</h2>
 <div class="img-fl-right">
     <img src="/content/juxtapo-overlays-thumb.png" alt="overlays example" />
 </div>
@@ -43,7 +43,7 @@
     </li>
 </ol>
 <p>
-    Download the latest version and view the documentation on <a href="http://the-taylors.org/juxtapo">http://the-taylors.org/juxtapo</a>
+    Download the latest version and view the documentation on <a href="http://davetayls.me/juxtapo">http://davetayls.me/juxtapo</a>
 </p>
 
 
@@ -60,11 +60,11 @@ var file = sjs.file('test.txt')
             .prepend('beginning\n')
             .append(3,'new line')
             .save();
-            
-sjs.print(file.readText()); 
+
+sjs.print(file.readText());
 sjs.arguments().each(function(){
-    sjs.print( this.key+'-'+this.values.join(',') ); 
-}); 
+    sjs.print( this.key+'-'+this.values.join(',') );
+});
     </code>
 </pre>
 <p>

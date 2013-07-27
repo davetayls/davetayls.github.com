@@ -24,12 +24,12 @@ JavaScript
 
 Here's our solution for splitting out JavaScript in to separate files for development work. [Rivet](https://github.com/davetayls/rivet) includes a console app which will combine them for use in a live environment.
 
-<http://the-taylors.org/blog/2010/12/15/rivet-advanced-js-combiner-v2-released/>
+</blog/2010/12/15/rivet-advanced-js-combiner-v2-released/>
 
 We run all our JavaScript through a validation process using jsLint. Go to <http://www.jslint.com> for more details on the validator itself. Here are a couple of useful articles on getting it integrated with Visual Studio and build scripts.
 
-*   <http://the-taylors.org/blog/2010/05/25/including-jslint-in-your-validation-using-nant-batch-files-or-ajax/>
-*   <http://the-taylors.org/blog/2010/07/09/add-jslint-checking-to-visual-studio/>
+*   </blog/2010/05/25/including-jslint-in-your-validation-using-nant-batch-files-or-ajax/>
+*   </blog/2010/07/09/add-jslint-checking-to-visual-studio/>
 
 We use Google Closure compiler in our build scripts to minify the JavaScript:
 
@@ -55,7 +55,7 @@ We use YUI Compressor in our build scripts to minify the CSS:
 
 *   <http://developer.yahoo.com/yui/compressor/>
 
-### IE hasLayout: 
+### IE hasLayout:
 
 *   <http://msdn.microsoft.com/en-us/library/bb250481(VS.85).aspx>
 *   <http://www.satzansatz.de/cssd/onhavinglayout.html>

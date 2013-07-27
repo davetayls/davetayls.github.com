@@ -14,7 +14,7 @@ categories:
 I needed to add automated tests to jQuery.kinetic
 --
 
-I released [jQuery.kinetic](http://the-taylors.org/jquery.kinetic), a while ago. It's a simple jQuery plugin which adds smooth scrolling and decelleration to containers.
+I released [jQuery.kinetic](http://davetayls.me/jquery.kinetic), a while ago. It's a simple jQuery plugin which adds smooth scrolling and decelleration to containers.
 
 I built a series of manual test pages to make sure that subsequent releases didn't break the functionality but with recent requests for updates I decided to investigate writing some automated tests to catch potential issues quicker.
 

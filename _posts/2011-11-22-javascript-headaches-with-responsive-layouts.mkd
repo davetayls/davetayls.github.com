@@ -1,6 +1,6 @@
---- 
-layout: post 
-author: davetayls 
+---
+layout: post
+author: davetayls
 title: JavaScript headaches with responsive layouts
 categories:
     - jquery
@@ -8,11 +8,11 @@ categories:
     - responsive
 ---
 
-It's always nice to start another responsive project, each a little more daring than the last. I'm still in the infant stages with these projects as I find that I'm lacking some good tools to make the process easier. I've created a a simple [responsive device browser](http://the-taylors.org/devicebrowser) which simply gives an at a glance impression of how a responsive site will look at the various screen widths.
+It's always nice to start another responsive project, each a little more daring than the last. I'm still in the infant stages with these projects as I find that I'm lacking some good tools to make the process easier. I've created a a simple [responsive device browser](http://davetayls.me/devicebrowser) which simply gives an at a glance impression of how a responsive site will look at the various screen widths.
 
 I'm finding one of the biggest challenges is catering for the user to be able to resize the browser window once it has been loaded. One may think that this isn't likely to happen very often. Especially not to the extent where it starts off less than 480 and increases to above 768. This is exactly what happened on my last project where someone's browser settings opened certain links in a new window which happened to be tiny. They then realised they wanted it larger and maximised the window to find that most of the functionality hadn't been initialised because the JavaScript turned on only the small touch device functionality on load.
 
 A good plugin to help with this has been written by [XOXCO](http://xoxco.com) and can be [found on github](https://github.com/xoxco/breakpoints), it even throttles the rate at which events fire for screen resize although, I personally would have still hooked in to the resize event to save checking in an interval.
 
- 
+
 

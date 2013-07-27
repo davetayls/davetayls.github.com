@@ -12,7 +12,7 @@ I have just created a simple jQuery plugin to add the opposite functionality to 
 
 
     it("should get basic query string vars from full url", function() {
-        expect(jQuery.unparam('http://the-taylors.org/?foo=one&bar=two'))
+        expect(jQuery.unparam('http://davetayls.me/?foo=one&bar=two'))
         .toEqual({
             foo: "one",
             bar: "two"

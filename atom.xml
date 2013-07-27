@@ -3,12 +3,12 @@ layout: nil
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- 
+
  <title>Dave Taylor (@davetayls)</title>
- <link href="http://the-taylors.org/atom.xml" rel="self"/>
- <link href="http://the-taylors.org/"/>
+ <link href="http://davetayls.me/atom.xml" rel="self"/>
+ <link href="http://davetayls.me/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://the-taylors.org/</id>
+ <id>http://davetayls.me/</id>
  <author>
    <name>David Taylor</name>
    <email>dave@the-taylors.org</email>
@@ -18,14 +18,14 @@ layout: nil
  {% if post.status != 'draft' %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://the-taylors.org{{ post.url }}"/>
+   <link href="http://davetayls.me{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://the-taylors.org{{ post.id }}</id>
+   <id>http://davetayls.me{{ post.id }}</id>
    <content type="html">
    		{{ post.content | xml_escape }}
    </content>
  </entry>
  {% endif %}
  {% endfor %}
- 
+
 </feed>

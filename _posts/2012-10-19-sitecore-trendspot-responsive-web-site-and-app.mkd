@@ -14,7 +14,7 @@ categories:
 <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-device-semantics.png" width="197" height="64" alt="HTML5 Powered with CSS3 / Styling, Device Access, and Semantics" title="HTML5 Powered with CSS3 / Styling, Device Access, and Semantics">
 </a>
 
-One of the last projects I completed before going away to [Toronto](http://www.toronto.ca) in March 2012 I was a [responsive web site and app](http://the-taylors.org/blog/category/responsivedesign/) for an annual [Sitecore](http://www.sitecore.net) event called [Digital Trendspot](http://www.sitecore.net/events/TrendspotUK/). This was a great project to be involved with as it used some features like *Geo Location* and *CSS Media Queries* to create a web site which could also be used as an app for the event's attendees on the day.
+One of the last projects I completed before going away to [Toronto](http://www.toronto.ca) in March 2012 I was a [responsive web site and app](/blog/category/responsivedesign/) for an annual [Sitecore](http://www.sitecore.net) event called [Digital Trendspot](http://www.sitecore.net/events/TrendspotUK/). This was a great project to be involved with as it used some features like *Geo Location* and *CSS Media Queries* to create a web site which could also be used as an app for the event's attendees on the day.
 
 Showcase
 --
@@ -46,4 +46,4 @@ Other improvements I would have liked to build in would have been to allow most 
 
 I am excited as the browsers in mobile and tablet devices become faster but as for now I personally notice the performance boost by using a native app. Having said that I was quite surprised at how responsive this app was. For something not very complex an HTML5 web app seems to be pretty viable.
 
-I'd love to hear your thoughts, I'm always looking to improve. Leave a message below or I'm [@davetayls on twitter](https://twitter.com/intent/tweet?url=http://the-taylors.org/blog/2012/10/19/sitecore-trendspot-responsive-web-site-and-app/&via=davetayls)
+I'd love to hear your thoughts, I'm always looking to improve. Leave a message below or I'm [@davetayls on twitter](https://twitter.com/intent/tweet?url=/blog/2012/10/19/sitecore-trendspot-responsive-web-site-and-app/&via=davetayls)

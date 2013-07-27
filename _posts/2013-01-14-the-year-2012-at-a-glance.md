@@ -13,7 +13,7 @@ Another year is starting to blur in my memory and so it is befitting to reminisc
 
 ## All Change
 
-Esther and I had decided to do a [leadership, character and identity](http://som.catchthefire.com/) course over in Toronto, Canada and so the year began with winding down at [Aqueduct](http://www.aqueduct.co.uk). It was [sad to leave the team](http://the-taylors.org/blog/2012/03/14/aqueduct-a-place-on-the-edge) there who have become close friends.
+Esther and I had decided to do a [leadership, character and identity](http://som.catchthefire.com/) course over in Toronto, Canada and so the year began with winding down at [Aqueduct](http://www.aqueduct.co.uk). It was [sad to leave the team](/blog/2012/03/14/aqueduct-a-place-on-the-edge) there who have become close friends.
 
 It was a close call because 2 weeks before our flight, after a long search and two false starts we hadn't found someone to live with us in Toronto and watch the kids while we were in lessons. Of course we only wanted the best, our amazing kiddies are very much our priority and if we couldn't find someone who would love them as well as look after them then it would be better to call the whole thing off. But we trusted that this was the right thing to do and sure enough in a few days we were introduced to the lovely Brittney who had been hoping for an opportunity like this. It was amazing how it all worked out.
 
@@ -24,7 +24,7 @@ We spent 4 months in Toronto (next to the airport) in a pretty full-on environme
 > Don't let your gift take you where your character can't keep you!
 > [James Levesque](http://twitter.com/james_lavesque)
 
-Even if the teaching hadn't taught about character, shared living certainly helped us grow. We made some great friends and have some great experiences to look back on. I was able to do some speaking and writing on some of the big areas which I am passionate about like [passion](http://the-taylors.org/blog/2012/07/01/find-me-a-passionate-team/) and honour.
+Even if the teaching hadn't taught about character, shared living certainly helped us grow. We made some great friends and have some great experiences to look back on. I was able to do some speaking and writing on some of the big areas which I am passionate about like [passion](/blog/2012/07/01/find-me-a-passionate-team/) and honour.
 
 We were fortunate to listen to some amazing people, with amazing life experiences.
 
@@ -42,7 +42,7 @@ Loads of people have asked me why I decided to start my own company and I've boi
 
 It has only been a few months and so I am still on a steep learning curve for running the business side. I have already met some amazing people and worked with teams all over the world.
 
-Take a look at my [work with me](http://the-taylors.org/workwithme) page if you think I would fit well with an up-and coming project. I love working with [passionate teams](http://the-taylors.org/blog/2012/07/01/find-me-a-passionate-team/).
+Take a look at my [work with me](http://davetayls.me/workwithme) page if you think I would fit well with an up-and coming project. I love working with [passionate teams](/blog/2012/07/01/find-me-a-passionate-team/).
 
 ## New Technologies and Learning
 Even with a five month gap I have been able to be involved in some fun projects this year. I have worked with
