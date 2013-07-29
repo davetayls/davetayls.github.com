@@ -1,0 +1,51 @@
+
+.show-related
+  display: none
+
+@media screen and (max-width: 550px)
+
+  .js-nav
+    #wrapper
+      right: 70%
+      position: relative
+
+  .csstransitions.csstransforms3d
+    #wrapper
+      transition: transform 0.8s ease;
+      backface-visibility: hidden;
+
+    #related
+      transform: rotateY(45deg) translate3d(-20px, 0, 0);
+      transition: transform 0.8s ease;
+      backface-visibility: hidden;
+
+    .js-nav
+      #wrapper
+        right: auto;
+        transform: translate3d(-70%, 0, 0);
+
+      #related
+        transform: rotateY(0);
+
+  .show-related
+    position: absolute;
+    top: $baseline--px;
+    right: $baseline--px;
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    display: block;
+
+    &:before
+      content: '≣';
+      color: $color--core;
+      display: block;
+      width: 40px;
+      height: 40px;
+      font-size: 42px;
+      line-height: 1;
+      text-align: center;
+
+    &:active:before
+      background-color: $color--core;
+      color: #fff;
