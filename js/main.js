@@ -26,6 +26,9 @@ require(
 function ($) {
     'use strict';
 
+    // allow active state in ios
+    document.addEventListener("touchstart", function(){}, true);
+
     $('pre>code').parent().addClass('prettyprint');
     window.prettyPrint();
 

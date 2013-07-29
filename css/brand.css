@@ -361,7 +361,7 @@ a img {
 
 /* line 66 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 a:link {
-  -webkit-tap-highlight-color: #ff5e99;
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
 }
 
 /* line 70 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
@@ -655,9 +655,9 @@ tr:nth-child(even) td {
   background-color: #eee;
 }
 
-/* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/icons.styl */
+/* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/icons.styl */
 
-/* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/icons.styl */
+/* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/icons.styl */
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   font-family: 'icons';
@@ -673,47 +673,47 @@ tr:nth-child(even) td {
 /* fix buttons height */
 }
 
-/* line 14 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/icons.styl */
+/* line 14 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/icons.styl */
 .icon-vcard:before {
   content: '\e722';
 }
 
-/* line 15 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/icons.styl */
+/* line 15 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/icons.styl */
 .icon-rss-alt:before {
   content: '\e73b';
 }
 
-/* line 16 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/icons.styl */
+/* line 16 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/icons.styl */
 .icon-twitter-bird:before {
   content: '\f303';
 }
 
-/* line 17 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/icons.styl */
+/* line 17 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/icons.styl */
 .icon-github:before {
   content: '\f308';
 }
 
-/* line 18 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/icons.styl */
+/* line 18 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/icons.styl */
 .icon-googleplus-rect:before {
   content: '\f309';
 }
 
-/* line 19 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/icons.styl */
+/* line 19 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/icons.styl */
 .icon-linkedin-rect:before {
   content: '\f31b';
 }
 
-/* line 20 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/icons.styl */
+/* line 20 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/icons.styl */
 .icon-graduation-cap:before {
   content: '';
 }
 
-/* line 21 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/icons.styl */
+/* line 21 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/icons.styl */
 .icon-book:before {
   content: '';
 }
 
-/* line 22 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/icons.styl */
+/* line 22 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/icons.styl */
 .icon-clock:before {
   content: '';
 }

@@ -870,7 +870,7 @@ a img {
 
 /* line 66 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 a:link {
-  -webkit-tap-highlight-color: #ff5e99;
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
 }
 
 /* line 70 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
@@ -1164,9 +1164,9 @@ tr:nth-child(even) td {
   background-color: #eee;
 }
 
-/* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/icons.styl */
+/* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/icons.styl */
 
-/* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/icons.styl */
+/* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/icons.styl */
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   font-family: 'icons';
@@ -1182,47 +1182,47 @@ tr:nth-child(even) td {
 /* fix buttons height */
 }
 
-/* line 14 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/icons.styl */
+/* line 14 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/icons.styl */
 .icon-vcard:before {
   content: '\e722';
 }
 
-/* line 15 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/icons.styl */
+/* line 15 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/icons.styl */
 .icon-rss-alt:before {
   content: '\e73b';
 }
 
-/* line 16 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/icons.styl */
+/* line 16 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/icons.styl */
 .icon-twitter-bird:before {
   content: '\f303';
 }
 
-/* line 17 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/icons.styl */
+/* line 17 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/icons.styl */
 .icon-github:before {
   content: '\f308';
 }
 
-/* line 18 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/icons.styl */
+/* line 18 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/icons.styl */
 .icon-googleplus-rect:before {
   content: '\f309';
 }
 
-/* line 19 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/icons.styl */
+/* line 19 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/icons.styl */
 .icon-linkedin-rect:before {
   content: '\f31b';
 }
 
-/* line 20 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/icons.styl */
+/* line 20 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/icons.styl */
 .icon-graduation-cap:before {
   content: '';
 }
 
-/* line 21 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/icons.styl */
+/* line 21 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/icons.styl */
 .icon-book:before {
   content: '';
 }
 
-/* line 22 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/icons.styl */
+/* line 22 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/icons.styl */
 .icon-clock:before {
   content: '';
 }
@@ -1392,9 +1392,9 @@ pre.prettyprint {
   }
 }
 
-/* line 26 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
+/* line 26 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/imageGrid/index.styl */
 
-/* line 1 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
+/* line 1 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/imageGrid/index.styl */
 .mod-imageGrid {
   list-style: none outside none;
   margin: 0;
@@ -1402,7 +1402,7 @@ pre.prettyprint {
   text-align: justify;
 }
 
-/* line 8 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
+/* line 8 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/imageGrid/index.styl */
 .mod-imageGrid li {
   display: block;
   position: relative;
@@ -1421,7 +1421,7 @@ pre.prettyprint {
   background: #000;
 }
 
-/* line 23 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
+/* line 23 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/imageGrid/index.styl */
 .mod-imageGrid li:after {
   display: block;
   content: "";
@@ -1429,7 +1429,7 @@ pre.prettyprint {
   height: 0;
 }
 
-/* line 30 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
+/* line 30 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/imageGrid/index.styl */
 .mod-imageGrid li a {
   display: block;
   margin: 0;
@@ -1440,13 +1440,13 @@ pre.prettyprint {
   max-width: 100%;
 }
 
-/* line 37 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
+/* line 37 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/imageGrid/index.styl */
 .mod-imageGrid li a:hover,
 .mod-imageGrid li a:focus {
   border: none;
 }
 
-/* line 40 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
+/* line 40 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/imageGrid/index.styl */
 .mod-imageGrid li h2 {
   font-size: 1em;
   color: #fff;
@@ -1464,13 +1464,13 @@ pre.prettyprint {
   z-index: 2;
 }
 
-/* line 54 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
+/* line 54 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/imageGrid/index.styl */
 .mod-imageGrid li h2 span {
   display: block;
   padding: 5%;
 }
 
-/* line 57 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
+/* line 57 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/imageGrid/index.styl */
 .mod-imageGrid li h2 time {
   display: block;
   text-transform: uppercase;
@@ -1478,7 +1478,7 @@ pre.prettyprint {
   line-height: 1.75;
 }
 
-/* line 63 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
+/* line 63 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/imageGrid/index.styl */
 .mod-imageGrid li img {
   display: block;
   margin: 0;
@@ -1488,7 +1488,7 @@ pre.prettyprint {
   z-index: 1;
 }
 
-/* line 72 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
+/* line 72 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/imageGrid/index.styl */
 .mod-imageGrid li .__twitter-banner {
   width: auto;
   max-width: none;
@@ -1497,7 +1497,7 @@ pre.prettyprint {
 }
 @media all and (min-width:600px) {
 
-/* line 79 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/imageGrid/index.styl */
+/* line 79 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/imageGrid/index.styl */
   .mod-imageGrid li {
     float: left;
     width: 48%;
@@ -1505,19 +1505,19 @@ pre.prettyprint {
   }
 }
 
-/* line 83 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/pager-nav.styl */
+/* line 83 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
 
-/* line 1 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/pager-nav.styl */
+/* line 1 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
 .pager-nav {
   padding: 0 0 16px;
 }
 
-/* line 4 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/pager-nav.styl */
+/* line 4 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
 .pager-nav:before {
   content: "page: ";
 }
 
-/* line 7 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/pager-nav.styl */
+/* line 7 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
 .pager-nav li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1525,40 +1525,40 @@ pre.prettyprint {
   *zoom: 1;
 }
 
-/* line 13 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/pager-nav.styl */
+/* line 13 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
 .pager-nav li a {
   display: -moz-inline-stack;
   display: inline-block;
   padding: 2px 3px;
 }
 
-/* line 18 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/pager-nav.styl */
+/* line 18 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
 .pager-nav li a:hover {
   border: none;
 }
 
-/* line 22 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/pager-nav.styl */
+/* line 22 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
 
-/* line 23 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/pager-nav.styl */
+/* line 23 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
 .pager-active ul.pager-nav {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
-/* line 26 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/pager-nav.styl */
+/* line 26 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
 .pager-active ul.pager-nav li {
   padding: 0 3px;
   border: none;
 }
 
-/* line 30 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/pager-nav.styl */
+/* line 30 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
 .pager-currentPage {
   background: #ccc;
 }
 
-/* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/connectWithMe.styl */
+/* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/connectWithMe.styl */
 
-/* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/connectWithMe.styl */
+/* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/connectWithMe.styl */
 .connectWithMe {
   font-style: italic;
   text-shadow: 0 1px 0 #fff;
@@ -1567,9 +1567,9 @@ pre.prettyprint {
   background: #ddd;
 }
 
-/* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/avatar.styl */
+/* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/avatar.styl */
 
-/* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/avatar.styl */
+/* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/avatar.styl */
 .cp-avatar {
   float: left;
   border: solid 3px #000;
@@ -1578,21 +1578,21 @@ pre.prettyprint {
   position: relative;
 }
 
-/* line 9 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/avatar.styl */
+/* line 9 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/avatar.styl */
 .cp-avatar img {
   display: block;
 }
 
-/* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/list-blogs.styl */
+/* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/list-blogs.styl */
 
-/* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/list-blogs.styl */
+/* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/list-blogs.styl */
 
-/* line 4 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/list-blogs.styl */
+/* line 4 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/list-blogs.styl */
 .list-blogs li {
   border-bottom: solid 1px #ddd;
 }
 
-/* line 7 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/list-blogs.styl */
+/* line 7 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/list-blogs.styl */
 .list-blogs li a {
   display: block;
   font-weight: normal;
@@ -1602,7 +1602,7 @@ pre.prettyprint {
   border: none;
 }
 
-/* line 17 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/list-blogs.styl */
+/* line 17 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/list-blogs.styl */
 .list-blogs .list-blogs-date {
   font-size: 0.625em;
 }
@@ -1766,28 +1766,30 @@ pre.prettyprint {
 }
 
 /* line 81 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/blocks/pageHeader.styl */
+#pageHeader #nav-primary li a:active,
 #pageHeader #nav-primary li a:focus,
 #pageHeader #nav-primary li a:hover {
   color: #fff;
+  background-color: #00adef;
 }
 @media all and (max-width: 500px) {
 
-/* line 86 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/blocks/pageHeader.styl */
+/* line 88 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/blocks/pageHeader.styl */
   #pageHeader #nav-primary {
     position: relative;
     width: 100%;
     height: auto;
   }
 
-/* line 91 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/blocks/pageHeader.styl */
+/* line 93 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/blocks/pageHeader.styl */
   #pageHeader #nav-primary ul {
     display: block;
   }
 
-/* line 94 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/blocks/pageHeader.styl */
+/* line 96 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/blocks/pageHeader.styl */
   #pageHeader #nav-primary li {
     display: block;
-    padding: 8px;
+    padding: 0;
     text-align: center;
     border-top: dotted 1px #444;
     -webkit-animation: fadeInTop 0.9s ease;
@@ -1796,10 +1798,16 @@ pre.prettyprint {
     -ms-animation: fadeInTop 0.9s ease;
     animation: fadeInTop 0.9s ease;
   }
+
+/* line 103 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/blocks/pageHeader.styl */
+  #pageHeader #nav-primary li a {
+    display: block;
+    padding: 8px;
+  }
 }
 @media all and (max-width: 600px) {
 
-/* line 102 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/blocks/pageHeader.styl */
+/* line 108 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/blocks/pageHeader.styl */
   #pageHeader #nav-primary .nav-primary-subscribe {
 /* visually hidden */
     position: absolute;
@@ -1813,7 +1821,7 @@ pre.prettyprint {
 }
 @media all and (max-width: 500px) {
 
-/* line 107 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/blocks/pageHeader.styl */
+/* line 113 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/blocks/pageHeader.styl */
   #pageHeader {
     height: auto;
     position: relative;
@@ -1821,20 +1829,20 @@ pre.prettyprint {
 }
 @media all and (min-width: 501px) {
 
-/* line 112 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/blocks/pageHeader.styl */
+/* line 118 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/blocks/pageHeader.styl */
   #pageHeader:hover {
     height: 76px;
   }
 
-/* line 115 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/blocks/pageHeader.styl */
+/* line 121 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/blocks/pageHeader.styl */
   #pageHeader:hover #logo a {
     top: 10px;
   }
 }
 
-/* line 117 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/cp-comments.styl */
+/* line 123 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/cp-comments.styl */
 
-/* line 4 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/cp-comments.styl */
+/* line 4 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/cp-comments.styl */
 .cp-comments:link,
 .cp-comments:visited,
 .cp-comments {
@@ -1843,41 +1851,45 @@ pre.prettyprint {
   font-size: 0.8em;
 }
 
-/* line 9 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/cp-sharelinks.styl */
+/* line 9 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/cp-sharelinks.styl */
 
-/* line 4 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/cp-sharelinks.styl */
+/* line 4 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/cp-sharelinks.styl */
 .cp-sharelinks {
   padding: 0 0 16px;
 }
 
-/* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
+/* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/js-nav.styl */
 
-/* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
+/* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/js-nav.styl */
 .show-related {
   display: none;
 }
 @media screen and (max-width: 550px) {
 
-/* line 7 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
+/* line 7 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/js-nav.styl */
 
-/* line 8 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
+/* line 8 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/js-nav.styl */
   .js-nav #wrapper {
     right: 70%;
     position: relative;
   }
 
-/* line 12 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
+/* line 12 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/js-nav.styl */
 
-/* line 13 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
+/* line 13 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/js-nav.styl */
   .csstransitions.csstransforms3d #wrapper {
     -webkit-transition: -webkit-transform 0.8s ease;
     -moz-transition: -moz-transform 0.8s ease;
     -o-transition: -o-transform 0.8s ease;
     -ms-transition: -ms-transform 0.8s ease;
     transition: transform 0.8s ease;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
 
-/* line 16 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
+/* line 17 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/js-nav.styl */
   .csstransitions.csstransforms3d #related {
     -webkit-transform: rotateY(45deg) translate3d(-20px, 0, 0);
     -moz-transform: rotateY(45deg) translate3d(-20px, 0, 0);
@@ -1889,11 +1901,15 @@ pre.prettyprint {
     -o-transition: -o-transform 0.8s ease;
     -ms-transition: -ms-transform 0.8s ease;
     transition: transform 0.8s ease;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
 
-/* line 20 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
+/* line 22 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/js-nav.styl */
 
-/* line 21 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
+/* line 23 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/js-nav.styl */
   .csstransitions.csstransforms3d .js-nav #wrapper {
     right: auto;
     -webkit-transform: translate3d(-70%, 0, 0);
@@ -1903,7 +1919,7 @@ pre.prettyprint {
     transform: translate3d(-70%, 0, 0);
   }
 
-/* line 25 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
+/* line 27 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/js-nav.styl */
   .csstransitions.csstransforms3d .js-nav #related {
     -webkit-transform: rotateY(0);
     -moz-transform: rotateY(0);
@@ -1912,7 +1928,7 @@ pre.prettyprint {
     transform: rotateY(0);
   }
 
-/* line 28 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
+/* line 30 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/js-nav.styl */
   .show-related {
     position: absolute;
     top: 8px;
@@ -1923,7 +1939,7 @@ pre.prettyprint {
     display: block;
   }
 
-/* line 37 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/js-nav.styl */
+/* line 39 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/js-nav.styl */
   .show-related:before {
     content: '≣';
     color: #00adef;
@@ -1933,6 +1949,12 @@ pre.prettyprint {
     font-size: 42px;
     line-height: 1;
     text-align: center;
+  }
+
+/* line 49 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/js-nav.styl */
+  .show-related:active:before {
+    background-color: #00adef;
+    color: #fff;
   }
 }
 
@@ -1948,16 +1970,16 @@ pre.prettyprint {
   margin-bottom: 32px;
 }
 
-/* line 46 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/tweet_list.styl */
+/* line 52 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/tweet_list.styl */
 
-/* line 1 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/tweet_list.styl */
+/* line 1 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/tweet_list.styl */
 .tweet_list {
   list-style: none outside none;
   margin: 0;
   padding: 0;
 }
 
-/* line 6 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/tweet_list.styl */
+/* line 6 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/tweet_list.styl */
 .tweet_list li {
   clear: both;
   margin: 0;
@@ -1965,7 +1987,7 @@ pre.prettyprint {
   list-style: none outside none;
 }
 
-/* line 12 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/tweet_list.styl */
+/* line 12 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/tweet_list.styl */
 .tweet_list li:hover .tweet_avatar {
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -1973,21 +1995,21 @@ pre.prettyprint {
   box-shadow: 0 0 10px #00adef;
 }
 
-/* line 17 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/tweet_list.styl */
+/* line 17 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/tweet_list.styl */
 .tweet_list .tweet_avatar {
   float: left;
   margin: 5px 10px 5px 0;
   overflow: hidden;
 }
 
-/* line 22 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/tweet_list.styl */
+/* line 22 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/tweet_list.styl */
 .tweet_list .tweet_avatar img {
   display: block;
   width: 37px;
   height: auto;
 }
 
-/* line 28 : /Users/davetayls/Sites/davetayls/davetayls.github.com/components/tweet_list.styl */
+/* line 28 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/tweet_list.styl */
 .tweet_list .tweet_time a {
   color: #aaa;
 }
