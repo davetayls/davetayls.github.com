@@ -19,6 +19,7 @@ module.exports = function(grunt) {
           paths: [
             '_stylus',
             '_stylus/components',
+            '_stylus/blocks',
             'lib',
             'node_modules/nib/lib'
           ]
