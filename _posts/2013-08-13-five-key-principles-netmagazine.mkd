@@ -1,0 +1,30 @@
+---
+layout: post
+author: davetayls
+title: Five key principles for better web development - .net Magazine
+postimage: /content/2013-08-five-key-principles.png
+related: thoughts
+categories:
+- thoughts
+- magazine
+- principles
+---
+
+I've had the privilege of having my latest article published in [.net
+magazine](http://www.netmagazine.com/). In [Five principles for better web
+development](http://www.netmagazine.com/opinions/5-principles-better-
+development) I look at five principles that have transformed the way
+I work.
+
+1. Everything has a lifecycle
+2. Some things are broken, and some things are complicated
+3. Stop repeating yourself (*a lot*)
+4. Explain yourself
+5. Keep things simple
+
+It's taken me a few months to compile and improve and I'm
+really pleased that it has been received well.
+
+![five key principles response](/content/2013-08-five-key-principles-response.png)
+
+Now to put them in to practice!

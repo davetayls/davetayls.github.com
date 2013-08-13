@@ -22,6 +22,15 @@ layout: nil
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>http://davetayls.me{{ post.id }}</id>
    <content type="html">
+        {% if post.postimage %}
+        &lt;p&gt;
+            {% if post.postimage contains 'http' %}
+            &lt;img src='{{ post.postimage }}' /&gt;
+            {% else %}
+            &lt;img src='http://davetayls.me{{ post.postimage }}' /&gt;
+            {% endif %}
+        &lt;/p&gt;
+        {% endif %}
    		{{ post.content | xml_escape }}
    </content>
  </entry>

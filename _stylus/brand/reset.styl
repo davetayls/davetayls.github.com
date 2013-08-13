@@ -1,4 +1,4 @@
-/* 
+/*
  * adapted from:
  * http://meyerweb.com/eric/tools/css/reset/ */
 /* v1.0 | 20080212 */
@@ -62,6 +62,22 @@ table {
 a img {border:0;}
 
 /* html 5 elements */
-article, aside, figure, footer, header, 
+article, aside, figure, footer, header,
 hgroup, nav, section { display:block; }
 mark, m, meter, progress, small, time { display: inline; }
+
+/* turn off backface-visibility on all relevant elements */
+body, div, span,
+article, aside,
+details, figcaption,
+figure, footer,
+header, hgroup,
+main, nav,
+section,
+summary {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
