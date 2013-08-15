@@ -155,3 +155,7 @@ So give this a go and send me some links of what you've done. Here are some link
 - <http://www.html5rocks.com/en/tutorials/webaudio/intro/>
 - <http://www.html5rocks.com/en/tutorials/getusermedia/intro/>
 
+## Slides
+
+
+<iframe src="http://davetayls.me/presentations/2013/flightoftheaudiovisualator/" width="600" height="500">&nbsp;</iframe>
