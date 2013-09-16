@@ -2,7 +2,16 @@
 {% for post in gridposts %}
     <li>
         <a href="{{ post.url }}">
-            <h2><span>{{ post.title }}</span></h2>
+            <h2>
+                <span>
+                    {{ post.title }}
+                    {% if post.date %}
+                    <time datetime="{{ post.date | date_to_xmlschema }}">
+                        {{ post.date | date:"%b %d %Y" }}
+                    </time>
+                    {% endif %}
+                </span>
+            </h2>
             {% if post.postimage %}
             <img src="{{ post.postimage }}" alt="{{ post.title }}">
             {% else %}

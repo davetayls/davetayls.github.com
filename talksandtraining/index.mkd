@@ -16,8 +16,9 @@ this blog then please [get in touch](/workwithme).
 
 ## Up and coming
 
- - 7th August - Bristol: Speaking at [Bristol Skillswap](http://bristolskillswap.org/) on HTML5 Audio API and THREE.js
- - 7th September - Bristol: [JS Workshop Weekend](http://www.meetup.com/SouthvilleJS/events/130960852/)
+I'm about to move house so I am now available from January.
+
+## Past
 
 {% assign gridposts = site.categories.talks %}
 {% include imagegrid.html %}
