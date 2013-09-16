@@ -158,4 +158,6 @@ So give this a go and send me some links of what you've done. Here are some link
 ## Slides
 
 
-<iframe src="http://davetayls.me/presentations/2013/flightoftheaudiovisualator/" width="600" height="500">&nbsp;</iframe>
+<iframe src="http://davetayls.me/presentations/2013/flightoftheaudiovisualator/" width="100%" height="500">
+  <a href="http://davetayls.me/presentations/2013/flightoftheaudiovisualator/">View online</a>
+</iframe>
