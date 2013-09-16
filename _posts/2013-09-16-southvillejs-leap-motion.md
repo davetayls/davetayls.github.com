@@ -161,7 +161,7 @@ I have set up a simple space invaders game which includes a multiplayer version 
 
 ## Enjoy!
 
-
+ps. thanks [Katja Durrani](http://blog.kdurrani.co.uk/2013/09/11/SouthvilleJS-JavaScript-workshop/) for letting me use the space invaders pic
 
 
 
