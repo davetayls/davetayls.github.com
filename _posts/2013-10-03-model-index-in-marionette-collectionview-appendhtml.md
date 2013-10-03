@@ -10,11 +10,11 @@ categories:
 
 I've been working a lot with [Backbone Marionette](http://marionettejs.com/) recently. It's a really powerful framework for [Backbone.js](http://backbonejs.org).
 
-Today I have been working on displaying a table of model values with the ability to add new items to the collection they are in. It made sense to use [Marionette's CollectionView](https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.collectionview.md) to manage the individual views for each model. It also convenient will watch the collection for any add events and append a new view in to the DOM.
+Today I have been working on displaying a table of model values with the ability to add new items to the collection they are in. It made sense to use [Marionette's CollectionView](https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.collectionview.md) to manage the individual views for each model. It also conveniently will watch the collection for any add events and append a new view in to the DOM.
 
-This is all good but it took me a while checking my sorting of the collection to realise that whilst Backbone was inserting the new model at the correct point in the collection CollectionView's `appendHtml` method on ever appended to the end of the parent dom element.
+This is all good but it took me a while checking the sorting of the collection to realise: whilst Backbone was inserting the new model at the *correct* point in the collection; CollectionView's `appendHtml` method only ever appended to the end of the parent DOM element.
 
-So after a bit of a think and a search I have come up with the following code to implement the full functionality:
+After a bit of a think and a search I have come up with the following code to implement the full functionality:
 
     Marionette.CollectionView.extend({
         appendHtml: function(collectionView, itemView, index) {
