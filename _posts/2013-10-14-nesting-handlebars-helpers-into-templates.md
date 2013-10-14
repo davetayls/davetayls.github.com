@@ -55,19 +55,7 @@ Let's build a simple `label` helper:
 
 Now after this simple helper and maybe a similar one for the input we can change the template to:
 
-    <form role="form">
-      <fieldset>
-        <div class="form-group">
-          {{{input_label 'Name' id='name'}}}
-          {{{input_text my_var id='name'}}}
-        </div>
-        <div class="form-group form-group--email">
-          {{{input_label 'Email' id='email'}}}
-          {{{input_email my_date id='email'}}}
-        </div>
-        <input type="submit" />
-      </fieldset>
-    </form>
+<pre><code>&lt;form role=&quot;form&quot;&gt;<br/>  &lt;fieldset&gt;<br/>    &lt;div class=&quot;form-group&quot;&gt;<br/>      &#123;&#123;{input_label 'Name' id='name'}}}<br/>      &#123;&#123;{input_text my_var id='name'}}}<br/>    &lt;/div&gt;<br/>    &lt;div class=&quot;form-group form-group--email&quot;&gt;<br/>      &#123;&#123;{input_label 'Email' id='email'}}}<br/>      &#123;&#123;{input_email my_date id='email'}}}<br/>    &lt;/div&gt;<br/>    &lt;input type=&quot;submit&quot; /&gt;<br/>  &lt;/fieldset&gt;<br/>&lt;/form&gt;<br/></code></pre>
 
 Already it's looking better and we've saved ourselves a lot of refactoring should we need to change class names or add another attribute to the `input` element across all email inputs.
 
@@ -104,20 +92,11 @@ Now we could take this one step further by encapsulating both label and input in
 
 Then within our `group_text.hbs` file we can not only place the surrounding markup but we can also use the helpers we've created previously.
 
-    <div class="form-group">
-      {{{input_label hash.label id=hash.id}}}
-      {{{input_text value id=hash.id}}}
-    </div>
+<pre><code>&lt;div class=&quot;form-group&quot;&gt;<br/>  &#123;&#123;{input_label hash.label id=hash.id}}}<br/>  &#123;&#123;{input_text value id=hash.id}}}<br/>&lt;/div&gt;</code></pre>
 
 And let's look at our resulting form template.
 
-    <form role="form">
-      <fieldset>
-        {{{group_text my_var label='Name' id='name'}}}
-        {{{group_email my_date label='Email' id='email}}}
-        <input type="submit" />
-      </fieldset>
-    </form>
+<pre><code>&lt;form role=&quot;form&quot;&gt;<br/>  &lt;fieldset&gt;<br/>    &#123;&#123;{group_text my_var label='Name' id='name'}}}<br/>    &#123;&#123;{group_email my_date label='Email' id='email}}}<br/>    &lt;input type=&quot;submit&quot; /&gt;<br/>  &lt;/fieldset&gt;<br/>&lt;/form&gt;<br/></code></pre>
 
 Soooo much neater!! Much easier to maintain across all the forms within your app.
 
