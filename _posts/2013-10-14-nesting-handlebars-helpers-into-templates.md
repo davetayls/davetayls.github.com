@@ -2,7 +2,6 @@
 layout: post
 author: davetayls
 title: Nesting Handlebars helpers into templates.
-appendHtml
 categories:
 - javascript
 - backbone
