@@ -13,9 +13,6 @@ portfolio: small
                 </time>
                 {% endif %}
             </h1>
-            {% if page.share != 'hide' %}
-            {% include sharelinks-short.html %}
-            {% endif %}
 		</div>
         <div id="articleContent">
             {% if page.postimage %}
@@ -25,13 +22,12 @@ portfolio: small
             {% endif %}
             {{ content }}
             {% if page.comments != 'hide' %}
-            <p class="connectWithMe">
-                I'd love to hear your thoughts, send me a message I'm
-                <a target="_blank" href="https://twitter.com/intent/tweet?url=http://davetayls.me{{ page.url }}&via=davetayls">
-                    @davetayls on twitter
-                </a>.
-                Take a look at <a target="_blank" href="https://twitter.com/search/realtime?q=davetayls.me">tweets and conversations</a>
-            </p>
+            <div class="connectWithMe">
+                Did you find this helpful? I'd love to hear from you.
+                {% if page.share != 'hide' %}
+                {% include sharelinks-short.html %}
+                {% endif %}
+            </div>
             {% endif %}
             {% include relatedgrid.html %}
         </div>

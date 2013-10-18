@@ -764,7 +764,33 @@ time {
   display: inline;
 }
 
-/* line 57 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 60 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/reset.styl */
+body,
+div,
+span,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* line 66 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/brand/brand.styl */
 @font-face {
   font-family: 'icons';
   src: url("/lib/icons/font/icons.eot");
@@ -1856,7 +1882,7 @@ pre.prettyprint {
 
 /* line 4 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/cp-sharelinks.styl */
 .cp-sharelinks {
-  padding: 0 0 16px;
+  padding: 16px 0;
 }
 
 /* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/js-nav.styl */
