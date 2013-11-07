@@ -1,32 +1,40 @@
 .pager-nav
-    padding: 0 0 16px;
+  text-align: center
+  border-bottom: dotted 1px #ddd
 
-    &:before
-        content: "page: ";
+  li
+    padding: 0
+    margin: 0 1px
+    border: solid 1px #ddd
+    display: -moz-inline-stack
+    display: inline-block
+    *display: inline
+    *zoom: 1
 
-    li
-        display: -moz-inline-stack;
-        display: inline-block;
-        *display: inline;
-        *zoom: 1;
+    a
+      display: -moz-inline-stack;
+      display: inline-block;
+      padding: 2px 3px;
+      min-width: 16px
+      text-align: center
 
-        a
-            display: -moz-inline-stack;
-            display: inline-block;
-            padding: 2px 3px;
-
-            &:hover
-                border: none
+      &:hover
+        border: none
 
 
 .pager-active
     ul.pager-nav
-        box-shadow: none;
+      box-shadow: none;
+      padding: 8px 0
+      margin-bottom: 8px
 
-        li
-            padding: 0 3px;
-            border: none;
+      li
+        padding: 0 3px;
 
-.pager-currentPage
-    background: #ccc;
+        &.pager-currentPage
+          border: solid 1px $color--core
+        &.pager-firstPage
+          float: left
+        &.pager-lastPage
+          float: right
 

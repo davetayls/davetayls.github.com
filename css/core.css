@@ -1530,51 +1530,63 @@ pre.prettyprint {
 
 /* line 1 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
 .pager-nav {
-  padding: 0 0 16px;
+  text-align: center;
+  border-bottom: dotted 1px #ddd;
 }
 
-/* line 4 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
-.pager-nav:before {
-  content: "page: ";
-}
-
-/* line 7 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
+/* line 5 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
 .pager-nav li {
+  padding: 0;
+  margin: 0 1px;
+  border: solid 1px #ddd;
   display: -moz-inline-stack;
   display: inline-block;
   *display: inline;
   *zoom: 1;
 }
 
-/* line 13 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
+/* line 14 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
 .pager-nav li a {
   display: -moz-inline-stack;
   display: inline-block;
   padding: 2px 3px;
+  min-width: 16px;
+  text-align: center;
 }
 
-/* line 18 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
+/* line 21 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
 .pager-nav li a:hover {
   border: none;
 }
 
-/* line 22 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
+/* line 25 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
 
-/* line 23 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
+/* line 26 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
 .pager-active ul.pager-nav {
   -webkit-box-shadow: none;
   box-shadow: none;
+  padding: 8px 0;
+  margin-bottom: 8px;
 }
 
-/* line 26 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
+/* line 31 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
 .pager-active ul.pager-nav li {
   padding: 0 3px;
-  border: none;
 }
 
-/* line 30 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
-.pager-currentPage {
-  background: #ccc;
+/* line 34 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
+.pager-active ul.pager-nav li.pager-currentPage {
+  border: solid 1px #00adef;
+}
+
+/* line 36 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
+.pager-active ul.pager-nav li.pager-firstPage {
+  float: left;
+}
+
+/* line 38 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/pager-nav.styl */
+.pager-active ul.pager-nav li.pager-lastPage {
+  float: right;
 }
 
 /* line 2 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/connectWithMe.styl */

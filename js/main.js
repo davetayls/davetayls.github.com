@@ -20,6 +20,7 @@ function ($) {
 
     $('.list-blogs').pager({
         pageSize: 5,
+        maxPageNavItems: 6,
         pagerLocation: "before"
     });
 
