@@ -1,6 +1,13 @@
 /**
     => animations
 --------------------------------------------------*/
+.animated
+  animation-duration: 1s;
+  animation-fill-mode: both;
+
+.animated.hinge
+  animation-duration: 2s
+
 @keyframes spin {
     from { transform: rotateY(0); }
     to   { transform: rotateY(-360deg); }
@@ -21,3 +28,19 @@
         opacity: 1
         transform: translateY(0)
 
+@keyframes flipInX
+  0%
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  40%
+    transform: perspective(400px) rotateX(-10deg);
+  70%
+    transform: perspective(400px) rotateX(10deg);
+  100%
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+
+.flipInX {
+  backface-visibility: visible !important;
+  animation-name: flipInX;
+}
