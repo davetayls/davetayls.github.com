@@ -10,7 +10,7 @@ tel
 : 0754 081 7008
 
 address
-: 53 Budbury Tynings, Bradford-on-Avon, Wiltshire, BA15 1QE
+: 63 Downs View, Bradford-on-Avon, Wiltshire, BA15 1PW
 
 web
 : <http://davetayls.me>
@@ -35,15 +35,15 @@ Technical Skills
 I have gained a large body of experience across many web technologies both client and server side. I also am experienced in testing and continuous integration setup and practices.
 
  - Hand coded JavaScript (Linted), jQuery, jQuery Plugins, unit testing with Jasmine/QUnit
- - Common Js and AMD modules using RequireJs
+ - Common Js and AMD modules - RequireJs/Node.js
  - XHTML 4.0 Strict, (X)HTML 5, written by hand using well thought out semantics
- - CSS2; CSS3; Less, Stylus. Written by hand, built for responsive layouts, mobile devices, screen and print
- - Node.js, Grunt, Express
+ - CSS2; CSS3; Stylus, Sass, Less. Written by hand, built for responsive layouts, mobile devices, screen and print
+ - Node.js cloud applications and APIs (Heroku/AppFog/Azure)
+ - Grunt, Express
  - Backbone.js, Knockout.js MV* frameworks
  - Methodologies: Agile: Scrum, Kanban
  - Source Control: Git, Subversion, Mercurial
  - Selenium
-
 
 Recommendations
 ---------------
@@ -160,6 +160,7 @@ Clients I have produced work for
  - Premier Inn (<http://www.premierinn.com>) _National Hotel Chain_
  - The Football League (<http://www.football-league.co.uk/>)
  - Colgate (<http://www.colgate.co.uk>)
+ - National Theatre (<http://www.nationaltheatre.org.uk/>)
 
 Where I'm pushing my skills
 ---
@@ -169,8 +170,9 @@ as they appear.
 
 Instead of having an exhaustive list these are the areas which I am focussing on.
 
- - WebGL, Three.js and multi device interactivity
  - CSS 3D and creative JavaScript
+ - Cross platform Apps using HTML5 stack (Cordova and Phonegap)
+ - Cloud Node.js applications built to scale
  - Enhancing the quality and consistency of my creative output inspired by The Accidental Creative.
 
 Qualifications
