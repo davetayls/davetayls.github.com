@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: workwithme
 title: Work with me (Dave Taylor)
 comments: hide
 share: hide
