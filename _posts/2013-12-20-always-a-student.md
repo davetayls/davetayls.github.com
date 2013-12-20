@@ -1,7 +1,7 @@
 ---
 layout: post
 author: davetayls
-postimage: content/2013-12-boffnoff.png
+postimage: /content/2013-12-boffnoff.png
 categories: 
   - thoughts
   - students
