@@ -1,5 +1,9 @@
 ---
-published: false
+layout: post
+author: davetayls
+categories:
+ - thoughts
+ - students
 ---
 
 It was great to be have [Robin Stanley](http://boffnoff.me) join me at the end of October. He joined us in our little office for a weeks work experience. I have never had a student work with me before so it was a bit of a leap in to unknown territory but I had a few thoughts as to how I could help him.
