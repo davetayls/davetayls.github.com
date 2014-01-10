@@ -73,10 +73,17 @@ View more on [LinkedIn](http://www.linkedin.com/in/davetayls).
 Experience
 ----------
 
+### Backbone App Developer (Contract) - _ESZ_ <http://eszconsulting.com>
+#### October 2013
+
+ - **Desktop/Web Backbone app** development
+
 ### Creative Interface Developer (Contract) - _Play Nicely_ <http://playnicely.co.uk>
 #### June 2013
 
  - **PhoneGap / Cordova iPad app** development
+ - **Backbone.js**
+ - **Grunt.js** build pipeline
 
 ### Creative Technologist (Contract) - _United Studios Live_ <http://unitedstudioslive.com>
 #### May 2013 (1 month)
