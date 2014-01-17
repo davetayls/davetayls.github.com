@@ -1569,9 +1569,9 @@ tr:nth-child(even) td {
   content: '';
 }
 
-/* line 22 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/icons.styl */
+/* line 23 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/components/icons.styl */
 
-/* line 22 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/menu.styl */
+/* line 23 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/menu.styl */
 
 /* line 1 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/menu.styl */
 
@@ -1590,19 +1590,24 @@ tr:nth-child(even) td {
 }
 
 /* line 10 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/menu.styl */
+.menu li iframe {
+  vertical-align: middle;
+}
+
+/* line 13 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/menu.styl */
 .menu a:hover {
   border-bottom: none;
 }
 
-/* line 13 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/menu.styl */
+/* line 16 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/menu.styl */
 .menu a[class^="icon-"]:before {
   color: #777;
   margin-right: 8px;
 }
 
-/* line 16 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/menu.styl */
+/* line 19 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/menu.styl */
 
-/* line 16 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/structure.styl */
+/* line 19 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/structure.styl */
 
 /* line 1 : /Users/davetayls/Sites/davetayls/davetayls.github.com/_stylus/structure.styl */
 #homeHeader {
