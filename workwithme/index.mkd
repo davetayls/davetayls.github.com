@@ -30,8 +30,28 @@ infrequent but timely.
 ### Calendar
 [View the calendar directly](https://www.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=43997nha4g9al5mmd24ok3qdcg%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=Europe%2FLondon)
 
-<iframe src="https://www.google.com/calendar/embed?mode=MONTH&amp;height=400&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=43997nha4g9al5mmd24ok3qdcg%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=Europe%2FLondon" frameborder="0" width="100%" height="400" style="border: solid 1px #ccc;"><!-- --></iframe>
+<iframe src="https://www.google.com/calendar/embed?mode=MONTH&amp;height=300&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=43997nha4g9al5mmd24ok3qdcg%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=Europe%2FLondon" frameborder="0" width="100%" height="300" style="border: solid 1px #ccc;"><!-- --></iframe>
 
+## Who I've worked with
+
+I've been involved with a variety of clients ranging from individuals to
+government organisations.
+
+You can take a look at my [showreels](/blog/category/showreel/) or the [projects category](/blog/category/project/) to see some examples.
+
+ - The FA (<http://www.thefa.com>), _The English Football Association_
+ - The RFU (<http://www.rfu.com>), _The English Rugby Football Union_
+ - Manchester City Football Club (<http://www.mcfc.co.uk>)
+ - Lloyd's of London (<http://www.lloyds.com>)
+ - Network Rail (<http://www.networkrail.co.uk>), _National Rail Infrastructure Provider_
+ - The Football League (<http://www.football-league.co.uk/>)
+ - National Theatre (<http://www.nationaltheatre.org.uk>)
+ - Premier Inn (<http://www.premierinn.com>) _National Hotel Chain_
+ - Colgate (<http://www.colgate.co.uk>)
+ - Jaguar (<https://www.jaguar.com>)
+ - Land Rover (<https://www.landrover.com>)
+ - Argus Media (<http://www.argusmedia.com>)
+ - Freud Communications (<http://www.freud.com>), _International Communications Company_
 
 ## Recommendations
 

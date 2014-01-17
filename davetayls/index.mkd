@@ -16,6 +16,8 @@ some cutting edge projects with forward thinking creative agencies and
 clients from the likes of The FA and the RFU to The British Red Cross
 and Premier Inn.
 
+![Pogo Kid](https://lh5.googleusercontent.com/-D1X9vUSprTM/UPPJrdmEA1I/AAAAAAAAujs/G_uIHgVvKZY/s800/pogokid.jpg)
+
 I started [Pogo Kid](http://pogokid.com) in the summer of 2012 and I
 now work from my office in Bath.
 
@@ -41,25 +43,6 @@ more information.
  - I love the web
  - Community
  - New stuff
-
-## Who I've worked with
-
-I've been involved with a variety of clients ranging from individuals to
-government organisations.
-
-You can take a look at my [showreels](/blog/category/showreel/) or the [projects category](/blog/category/project/) to see some examples.
-
- - The FA (<http://www.thefa.com>), _The English Football Association_
- - The RFU (<http://www.rfu.com>), _The English Rugby Football Union_
- - Manchester City Football Club (<http://www.mcfc.co.uk>)
- - Lloyd's of London (<http://www.lloyds.com>)
- - Argus Media (<http://www.argusmedia.com>)
- - Network Rail (<http://www.networkrail.co.uk>), _National Rail Infrastructure Provider_
- - Freud Communications (<http://www.freud.com>), _International Communications Company_
- - The Football League (<http://www.football-league.co.uk/>)
- - Premier Inn (<http://www.premierinn.com>) _National Hotel Chain_
- - Colgate (<http://www.colgate.co.uk>)
-
 
 ## Experience
 The best way to get to know my skill level and coding style is to browse my
