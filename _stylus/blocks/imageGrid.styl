@@ -1,0 +1,102 @@
+.mod-imageGrid
+  @extends .clearfix;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+
+  li
+    display: block;
+    position: relative;
+
+    border-box();
+    width: auto;
+    margin: 0 auto 16px;
+    list-style: none outside none;
+    padding: 0;
+
+    overflow: hidden;
+    vertical-align: top;
+    background: #000;
+
+    &:after
+      display: block;
+      content: "";
+      padding: 56% 0 0;
+      height: 0;
+
+    a
+      display: block;
+      margin: 0;
+      padding: 0;
+      absolute: 0 0;
+      max-width: 100%;
+
+      &:hover,
+      &:focus
+        border: none;
+
+    h2
+      font-size: 1em;
+      color: #fff;
+      text-align: left;
+      text-shadow: 1px 1px 0 #000;
+      background: #000;
+      background: rgba(0, 0, 0, 0.8);
+      absolute: top 10% left;
+      width: 65%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      z-index: 2;
+
+      span
+        display: block;
+        padding: 5%;
+      time
+        display: block;
+        text-transform: uppercase;
+        font-size: 0.75em;
+        line-height: 1.75;
+
+    img
+      display: block;
+      margin: 0;
+      padding: 0;
+
+      width: 100%;
+      height: auto;
+      z-index: 1;
+
+    .__twitter-banner
+      width: auto;
+      max-width: none;
+      height: auto;
+      max-height: none;
+
+    &:nth-child(-n+10)
+      @extend .animated
+      @extend .flipInX
+
+    for num in (1..10)
+      &:nth-child({num})
+        animation-delay: .2s * num
+
+  @media all and (min-width: 600px)
+    li
+      float: left;
+      width: 48%;
+      margin: 0 1% 16px;
+
+      &:first-child
+        float: none
+        width: 98%
+
+        h2
+          font-size: 2em
+        a
+        img
+          width: 100%
+
+
+
