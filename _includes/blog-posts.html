@@ -13,7 +13,7 @@
             {% if post.postimage %}
             <img src="{{ post.postimage }}" alt="{{ post.title }}">
             {% else %}
-            <img class="__twitter-banner" src="https://si0.twimg.com/profile_banners/58500480/1348782994/web" alt="{{post.title}}" />
+            <img src="{{site.postimage_default}}" alt="{{post.title}}" />
             {% endif %}
         </a>
     </li>

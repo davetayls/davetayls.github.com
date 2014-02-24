@@ -1,6 +1,7 @@
 lsi: false
 live: true
 permalink: /blog/:year/:month/:day/:title
+postimage_default: /content/placeholder.jpg
 exclude:
 - startjekyll.bat
 - node_modules
