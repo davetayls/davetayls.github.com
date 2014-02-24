@@ -12,11 +12,13 @@ portfolio: small
             </time>
             {% endif %}
         </h1>
-        {% if page.postimage %}
         <p class="postimage">
-            <img src="{{ page.postimage }}" alt="page.title" />
+            {% if page.postimage %}
+            <img src="{{ page.postimage }}" alt="{{post.title}}" />
+            {% else %}
+            <img src="{{site.postimage_default}}" alt="{{post.title}}" />
+            {% endif %}
         </p>
-        {% endif %}
     </div>
     <div id="content">
         <div id="articleContent">
