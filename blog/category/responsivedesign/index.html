@@ -11,9 +11,5 @@ web apps.
 <p>Here are the posts which cover some of my thougths and findings.
 </p>
 
-{% for post in site.categories.responsive %}
-<div>
-	<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-	<p>{{ post.date | date:"%d %b %Y" }}</p>
-</div>
-{% endfor %}
+{% assign gridposts = site.categories.responsive %}
+{% include imagegrid.html %}

@@ -4,13 +4,5 @@ title: Projects
 comments: hide
 ---
 
-<ul class="mod-imageGrid">
-{% for post in site.categories.project %}
-	<li>
-		<a href="{{ post.url }}">
-			<h2><span>{{ post.title }}</span></h2>
-			<img src="{{ post.postimage }}" alt="{{ post.title }}">
-		</a>
-	</li>
-{% endfor %}
-</ul>
+{% assign gridposts = site.categories.project %}
+{% include imagegrid.html %}
