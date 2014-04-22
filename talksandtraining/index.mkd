@@ -14,11 +14,5 @@ If you'd like me to speak at your event on
 front-end technologies, automation or anything slightly related to
 this blog then please [get in touch](/workwithme).
 
-## Up and coming
-
- - 2nd January 2013 - [bristech](http://briste.ch)
-
-## Past
-
 {% assign gridposts = site.categories.talks %}
 {% include imagegrid.html %}
