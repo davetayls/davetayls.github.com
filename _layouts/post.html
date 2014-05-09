@@ -24,6 +24,18 @@ portfolio: small
         <div id="articleContent" class="article-content">
             {{ content }}
             {% if page.comments != 'hide' %}
+            <ul class="paging">
+                {% if page.previous.url %}
+                <li class="paging__previous">
+                    <a href="{{page.previous.url}}">&lt; {{page.previous.title}}</a>
+                </li>
+                {% endif %}
+                {% if page.next.url %}
+                <li class="paging__next">
+                    <a href="{{page.next.url}}">{{page.next.title}} &gt; </a>
+                </li>
+                {% endif %}
+            </ul>
             <div class="connectWithMe">
                 Did you find this helpful? I'd love to hear from you.
                 {% if page.share != 'hide' %}

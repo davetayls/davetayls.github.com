@@ -8,6 +8,7 @@ categories:
   - gigstamp
   - nodejs
   - html5
+  - apps
   
 ---
 
