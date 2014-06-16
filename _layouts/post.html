@@ -19,6 +19,9 @@ portfolio: small
             <img src="{{site.postimage_default}}" alt="{{post.title}}" />
             {% endif %}
         </p>
+        <p class="postheader__comment">
+            <a href="#disqus_thread" data-disqus-identifier="{{ page.id }}">Comment</a>
+        </p>
     </div>
     <div id="content">
         <div id="articleContent" class="article-content">
@@ -41,12 +44,15 @@ portfolio: small
                 {% if page.share != 'hide' %}
                 {% include sharelinks-short.html %}
                 {% endif %}
+                <p>
+                    <a href="#disqus_thread" data-disqus-identifier="{{ page.id }}">Comments</a> add yours.
+                </p>
             </div>
             {% endif %}
             {% include relatedgrid.html %}
         </div>
 
-        {% if page.comments == 'show' %}
+        {% if page.comments != 'hide' %}
         <div>
             <div id="disqus_thread"></div>
             <script type="text/javascript">
