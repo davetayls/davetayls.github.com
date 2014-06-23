@@ -7,6 +7,8 @@ related: nodejs
 categories: 
   - mongodb
   - nodejs
+  - javascript
+  - gigstamp
   
 ---
 
