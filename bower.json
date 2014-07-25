@@ -1,0 +1,20 @@
+{
+  "name": "davetayls.github.com",
+  "version": "0.1.0",
+  "homepage": "https://github.com/davetayls/davetayls.github.com",
+  "authors": [
+    "davetayls <dave@the-taylors.org>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery.kinetic": "davetayls/jquery.kinetic#master"
+  }
+}

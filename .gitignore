@@ -10,3 +10,8 @@ Thumbs.db
 /src-build
 node_modules
 .idea
+
+bower_components/**/.bower.json
+bower_components/**/bower.json
+bower_components/jquery/src
+bower_components/jquery.kinetic/lib/jquery-ui

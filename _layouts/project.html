@@ -1,0 +1,128 @@
+---
+layout: master
+portfolio: small
+---
+<div id="contentWrapper">
+  <div class="postheader">
+    <h1>
+      <a href="{{ page.url }}">{{ page.title }}</a>
+      {% if page.date %}
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date:"%b %d %Y" }}
+      </time>
+      {% endif %}
+    </h1>
+    <p class="postimage">
+      {% if page.postimage %}
+      <img src="{{ page.postimage }}" alt="{{post.title}}"/>
+      {% else %}
+      <img src="{{site.postimage_default}}" alt="{{post.title}}"/>
+      {% endif %}
+    </p>
+
+    <p class="postheader__comment">
+      <a href="#disqus_thread" data-disqus-identifier="{{ page.id }}">Comment</a>
+    </p>
+  </div>
+  <div id="content">
+    {% if page.description %}
+    <h2>{{ page.description }}</h2>
+    {% endif %}
+
+    <div class="addthis_toolbox addthis_default_style ">
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+      <a tw:via="davetayls" class="addthis_button_tweet"></a>
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+      <a class="addthis_button_twitter_follow_native" tf:screen_name="davetayls"></a>
+      {% if page.github %}
+      <iframe src="http://ghbtns.com/github-btn.html?user=davetayls&repo={{ page.github }}&type=watch&count=true"
+              allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+      {% endif %}
+    </div>
+
+    {% if page.github %}
+      <a href="http://github.com/davetayls/{{ page.github }}"><img style="z-index: 200; position: fixed; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+      <div class="download">
+        <a href="http://github.com/davetayls/{{ page.github }}/zipball/master">
+          <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
+        <a href="http://github.com/davetayls/{{ page.github }}/tarball/master">
+          <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+      </div>
+    {% endif %}
+
+
+    <div id="articleContent" class="article-content">
+      {{ content }}
+      {% if page.comments != 'hide' %}
+      <ul class="paging">
+        {% if page.previous.url %}
+        <li class="paging__previous">
+          <a href="{{page.previous.url}}">&lt; {{page.previous.title}}</a>
+        </li>
+        {% endif %}
+        {% if page.next.url %}
+        <li class="paging__next">
+          <a href="{{page.next.url}}">{{page.next.title}} &gt; </a>
+        </li>
+        {% endif %}
+      </ul>
+      <div class="connectWithMe">
+        Did you find this helpful? I'd love to hear from you.
+        {% if page.share != 'hide' %}
+        {% include sharelinks-short.html %}
+        {% endif %}
+        <p>
+          <a href="#disqus_thread" data-disqus-identifier="{{ page.id }}">Comments</a> add yours.
+        </p>
+      </div>
+      {% endif %}
+      {% include relatedgrid.html %}
+    </div>
+
+    {% if page.comments != 'hide' %}
+    <div>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_identifier = '{{ page.id }}';
+        //var disqus_developer = 1;
+        var disqus_url = 'http://davetayls.me{{ page.url }}';
+        var disqus_title = '{{ page.title }}';
+        (function (){
+          var dsq = document.createElement('script');
+          dsq.type = 'text/javascript';
+          dsq.async = true;
+          dsq.src = 'http://davetayls.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>
+        Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=davetayls">comments powered by
+        Disqus.</a>
+      </noscript>
+      <p>
+        <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+      </p>
+    </div>
+    {% endif %}
+  </div>
+  <aside id="related">
+    {% include aboutme.html %}
+    {% include relatedposts.html %}
+    {% include advert__medium-rectangle.html %}
+    {% include recentposts.html %}
+    {% include categories.html %}
+  </aside>
+</div>
+
+<!-- sharing -->
+<script type="text/javascript">
+  var addthis_config = {
+    username : "davetayls"
+    ,   ui_click: true                    // only show extra sharing links on click
+    ,   data_track_clickback: false       // stop addthis appending tracking to your sharelink
+    ,   data_track_addressbar: false      // stop addthis appending tracking to your addressbar
+  };
+</script>
+<script type="text/javascript" src="http://platform.linkedin.com/in.js"></script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=davetayls"></script>
+
