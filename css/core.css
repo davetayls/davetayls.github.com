@@ -1,5 +1,5 @@
 
-/* line 148 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 149 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
 
 /* line 1 : /Users/davetayls1/projects/davetayls.github.com/node_modules/grunt-contrib-stylus/node_modules/stylus/lib/functions/index.styl */
 
@@ -1714,6 +1714,15 @@ tr:nth-child(even) td {
 
 /* line 65 : /Users/davetayls1/projects/davetayls.github.com/_stylus/structure.styl */
 
+/* line 2 : /Users/davetayls1/projects/davetayls.github.com/_stylus/blocks/advert.styl */
+
+/* line 2 : /Users/davetayls1/projects/davetayls.github.com/_stylus/blocks/advert.styl */
+.advert {
+  margin: 16px 0;
+}
+
+/* line 4 : /Users/davetayls1/projects/davetayls.github.com/_stylus/blocks/advert.styl */
+
 /* line 2 : /Users/davetayls1/projects/davetayls.github.com/_stylus/blocks/article-content.styl */
 
 /* line 2 : /Users/davetayls1/projects/davetayls.github.com/_stylus/blocks/article-content.styl */
@@ -2571,12 +2580,12 @@ pre.prettyprint {
   color: #fff;
 }
 
-/* line 36 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 37 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
 /**
 => mod-blogPosts
 --------------------------------------------------*/
 
-/* line 39 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 40 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
 .mod-blogPosts article {
   border-bottom: dotted 1px #ddd;
   padding-bottom: 32px;
@@ -2629,23 +2638,23 @@ pre.prettyprint {
   color: #aaa;
 }
 
-/* line 46 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 47 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
 @media screen and (max-width: 550px) {
 
-/* line 48 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 49 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
   body {
     overflow: hidden;
     position: relative;
   }
 
-/* line 57 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 58 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
   .menu ul {
     list-style: none outside none;
     margin: 10px 0 0;
     padding: 0;
   }
 
-/* line 62 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 63 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
   .menu ul li {
     border: solid 1px #ddd;
     border-bottom: none;
@@ -2653,18 +2662,18 @@ pre.prettyprint {
     overflow: hidden;
   }
 
-/* line 68 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 69 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
   .menu ul li:last-child {
     border-bottom: solid 1px #ddd;
   }
 
-/* line 71 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 72 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
   .menu ul li a {
     display: block;
     padding: 6px;
   }
 
-/* line 76 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 77 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
   #related h1 {
 /* visually hidden */
     position: absolute;
@@ -2676,7 +2685,7 @@ pre.prettyprint {
     overflow: hidden;
   }
 
-/* line 79 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 80 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
   #related {
     position: absolute;
     top: 0;
@@ -2686,20 +2695,20 @@ pre.prettyprint {
   }
 }
 
-/* line 90 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 91 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
 /*
 	=> min
 --------------------------------------------------*/
 
-/* line 93 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 94 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
 @media screen and (min-width:768px) and (max-width:1000px) {
 
-/* line 94 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 95 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
   #contentWrapper {
     padding: 16px 0 16px 32px;
   }
 
-/* line 97 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 98 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
   #content {
     position: relative;
     left: 50%;
@@ -2713,7 +2722,7 @@ pre.prettyprint {
     transition: left 0.3s ease, margin-left 0.3s ease;
   }
 
-/* line 105 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 106 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
   #related {
     float: right;
     padding: 0 16px 0 0;
@@ -2721,48 +2730,48 @@ pre.prettyprint {
     font-size: 0.75em;
   }
 
-/* line 111 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 112 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
 }
 
-/* line 116 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 117 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
 /**
 => min-width 1000px screens
 --------------------------------------------------*/
 
-/* line 119 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 120 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
 @media screen and (min-width:1000px) {
 
-/* line 124 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 125 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
   #contentWrapper {
     width: 980px;
     margin: 0 auto;
     padding: 0 0 16px;
   }
 
-/* line 129 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 130 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
   #content {
     float: left;
     width: 640px;
   }
 
-/* line 133 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 134 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
   #related {
     float: right;
     padding: 0;
     width: 260px;
   }
 
-/* line 138 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 139 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
   #related p {
     font-size: 0.75em;
   }
 
-/* line 141 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 142 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
   #pageFooter {
     clear: both;
   }
 
-/* line 144 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
+/* line 145 : /Users/davetayls1/projects/davetayls.github.com/_stylus/index.styl */
   #pageFooter-inner {
     width: 980px;
   }
