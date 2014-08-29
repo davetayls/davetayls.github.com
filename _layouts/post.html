@@ -3,85 +3,85 @@ layout: master
 portfolio: small
 ---
 <div id="contentWrapper">
-    <div class="postheader">
-        <h1>
-            <a href="{{ page.url }}">{{ page.title }}</a>
-            {% if page.date %}
-            <time datetime="{{ page.date | date_to_xmlschema }}">
-                {{ page.date | date:"%b %d %Y" }}
-            </time>
-            {% endif %}
-        </h1>
-        <p class="postimage">
-            {% if page.postimage %}
-            <img src="{{ page.postimage }}" alt="{{post.title}}" />
-            {% else %}
-            <img src="{{site.postimage_default}}" alt="{{post.title}}" />
-            {% endif %}
-        </p>
-        <p class="postheader__comment">
-            <a href="#disqus_thread" data-disqus-identifier="{{ page.id }}">Comment</a>
-        </p>
-    </div>
-    <div id="content">
-        <div id="articleContent" class="article-content">
-            {{ content }}
-            {% if page.comments != 'hide' %}
-            <ul class="paging">
-                {% if page.previous.url %}
-                <li class="paging__previous">
-                    <a href="{{page.previous.url}}">&lt; {{page.previous.title}}</a>
-                </li>
-                {% endif %}
-                {% if page.next.url %}
-                <li class="paging__next">
-                    <a href="{{page.next.url}}">{{page.next.title}} &gt; </a>
-                </li>
-                {% endif %}
-            </ul>
-            <div class="connectWithMe">
-                Did you find this helpful? I'd love to hear from you.
-                {% if page.share != 'hide' %}
-                {% include sharelinks-short.html %}
-                {% endif %}
-                <p>
-                    <a href="#disqus_thread" data-disqus-identifier="{{ page.id }}">Comments</a> add yours.
-                </p>
-            </div>
-            {% endif %}
-            {% include relatedgrid.html %}
-        </div>
+  <div class="postheader">
+    <h1>
+      <a href="{{ page.url }}">{{ page.title }}</a>
+      {% if page.date %}
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date:"%b %d %Y" }}
+      </time>
+      {% endif %}
+    </h1>
+    {% if page.postimage %}
+      <div class="postimage" style="background-image: url({{ page.postimage }});"></div>
+    {% else %}
+      <div class="postimage" style="background-image: url({{ site.postimage_default }});"></div>
+    {% endif %}
 
-        {% if page.comments != 'hide' %}
-        <div>
-            <div id="disqus_thread"></div>
-            <script type="text/javascript">
-                var disqus_identifier = '{{ page.id }}';
-                //var disqus_developer = 1;
-                var disqus_url = 'http://davetayls.me{{ page.url }}';
-                var disqus_title = '{{ page.title }}';
-                (function(){
-                    var dsq = document.createElement('script');
-                    dsq.type = 'text/javascript';
-                    dsq.async = true;
-                    dsq.src = 'http://davetayls.disqus.com/embed.js';
-                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                })();
-            </script>
-            <noscript>
-                Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=davetayls">comments powered by Disqus.</a>
-            </noscript>
-            <p>
-                <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-            </p>
-        </div>
+    <p class="postheader__comment">
+      <a href="#disqus_thread" data-disqus-identifier="{{ page.id }}">Comment</a>
+    </p>
+  </div>
+  <div id="content">
+    <div id="articleContent" class="article-content">
+      {{ content }}
+      {% if page.comments != 'hide' %}
+      <ul class="paging">
+        {% if page.previous.url %}
+        <li class="paging__previous">
+          <a href="{{page.previous.url}}">&lt; {{page.previous.title}}</a>
+        </li>
         {% endif %}
+        {% if page.next.url %}
+        <li class="paging__next">
+          <a href="{{page.next.url}}">{{page.next.title}} &gt; </a>
+        </li>
+        {% endif %}
+      </ul>
+      <div class="connectWithMe">
+        Did you find this helpful? I'd love to hear from you.
+        {% if page.share != 'hide' %}
+        {% include sharelinks-short.html %}
+        {% endif %}
+        <p>
+          <a href="#disqus_thread" data-disqus-identifier="{{ page.id }}">Comments</a> add yours.
+        </p>
+      </div>
+      {% endif %}
+      {% include relatedgrid.html %}
     </div>
-    <aside id="related">
-        {% include aboutme.html %}
-        {% include relatedposts.html %}
-        {% include advert__medium-rectangle.html %}
-        {% include recentposts.html %}
-        {% include categories.html %}
-    </aside>
+
+    {% if page.comments != 'hide' %}
+    <div>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_identifier = '{{ page.id }}';
+        //var disqus_developer = 1;
+        var disqus_url = 'http://davetayls.me{{ page.url }}';
+        var disqus_title = '{{ page.title }}';
+        (function (){
+          var dsq = document.createElement('script');
+          dsq.type = 'text/javascript';
+          dsq.async = true;
+          dsq.src = 'http://davetayls.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>
+        Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=davetayls">comments powered by
+        Disqus.</a>
+      </noscript>
+      <p>
+        <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+      </p>
+    </div>
+    {% endif %}
+  </div>
+  <aside id="related">
+    {% include aboutme.html %}
+    {% include relatedposts.html %}
+    {% include advert__medium-rectangle.html %}
+    {% include recentposts.html %}
+    {% include categories.html %}
+  </aside>
 </div>

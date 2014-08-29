@@ -1,11 +1,13 @@
 
 .postimage
-    margin: 0 0 $baseline--px;
-    padding: 0;
+  aspect-ratio(56.25%)
+  background-size contain
+  margin: 0 0 $baseline--px;
+  padding: 0;
 
-    img
-      display: block;
-      min-width: 100%
+  img
+    display: block;
+    min-width: 100%
 
-    @media all and (max-width: 500px)
-      margin: 0 (0 - $baseline--px) $baseline--px;
+  @media all and (max-width: 500px)
+    margin: 0(0 - $baseline--px) $baseline--px;

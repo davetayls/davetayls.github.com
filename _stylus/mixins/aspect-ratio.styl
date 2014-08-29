@@ -1,0 +1,29 @@
+
+aspect-ratio($ratio)
+  position: relative;
+  overflow hidden
+
+  &:before
+    content: ''
+    display: block
+    padding-top: $ratio
+
+  > div
+    position absolute
+    top 0
+    left 0
+    bottom 0
+    right 0
+
+aspect-ratio-calc($height, $width)
+  $ratio = (100 / $width) * $height
+  aspect-ratio(unit($ratio, '%'))
+
+aspect-ratio-off()
+  padding-top 0
+
+  &:before
+    display none
+
+  > div
+    position: relative;
