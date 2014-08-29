@@ -34,7 +34,8 @@ Technical Skills
 
 I have gained a large body of experience across many web technologies both client and server side. I also am experienced in testing and continuous integration setup and practices.
 
- - Hand coded JavaScript (Linted), jQuery, jQuery Plugins, unit testing with Jasmine/QUnit
+ - Hand coded JavaScript (Linted), jQuery, jQuery Plugins, unit tested (Jasmine, QUnit, Mocha), Object Oriented and Functional
+ - Coffee Script
  - Common Js and AMD modules - RequireJs/Node.js
  - XHTML 4.0 Strict, (X)HTML 5, written by hand using well thought out semantics
  - CSS2; CSS3; Stylus, Sass, Less. Written by hand, built for responsive layouts, mobile devices, screen and print
@@ -73,12 +74,32 @@ View more on [LinkedIn](http://www.linkedin.com/in/davetayls).
 Experience
 ----------
 
-### Backbone App Developer (Contract) - _ESZ_ <http://eszconsulting.com>
-#### October 2013
+### Node.js and Backbone Developer (Contract) - _ESZ_ <http://eszconsulting.com>
 
- - **Desktop/Web Backbone app** development
+#### June 2014
+
+Desktop app for new startup using Backbone, Marionette, Node.js, CoffeeScript, Grunt, Express
+
+### Senior Web Developer (Contract) - _Econsultancy_ <http://eszconsulting.com>
+
+#### April 2014
+
+Building front-end UI components using HTML5, CSS, JavaScript (Angular) for Rails stack website
+
+### Creative Interface Developer (Contract) - _ESZ_ <http://eszconsulting.com>
+
+#### September 2013
+
+Web apps for Jaguar, Land Rover and a new startup. Backbone, Marionette, Node.js, CoffeeScript, Grunt etc
+
+### Creative Technologist (Contract) - _Aqueduct_ <http://aqueduct.co.uk>
+
+#### August 2013
+
+3D Interactive HTML5 Audio Visualiser built with Three.js, HTML5 Audio API
 
 ### Creative Interface Developer (Contract) - _Play Nicely_ <http://playnicely.co.uk>
+
 #### June 2013
 
  - **PhoneGap / Cordova iPad app** development
@@ -86,6 +107,7 @@ Experience
  - **Grunt.js** build pipeline
 
 ### Creative Technologist (Contract) - _United Studios Live_ <http://unitedstudioslive.com>
+
 #### May 2013 (1 month)
 
  - **Three.js** 3D Music Visualiser
@@ -94,6 +116,7 @@ Experience
  - **Node.js Server** implementation
 
 ### Lead Interface Developer (Contract) - _VML London_ <http://www.vml.com>
+
 #### January 2013 to April 2013 (4 months)
 
  - **Knockout JS**, http://knockoutjs.com
@@ -107,6 +130,7 @@ Experience
  - **Colgate, Premier Inn**
 
 ### Senior Front-End Developer (Contract) - _Finance Client_
+
 #### December 2012 (1 month)
 
  - **Front-End Performance**, performance analysis and recommendations
@@ -114,18 +138,21 @@ Experience
  - **LESS, .Net MVC, SparkView Engine**
 
 ### Senior Front-End Developer/Architect (Contract) - _ClearPeople_ <http://www.clearpeople.com>
+
 #### September 2012 to November 2012 (2 months)
 
  - **Responsive Build**
  - **Front-End Architecture**, working closely with the team to enable this to integrate smoothly in to new processes.
 
 ### Senior Front-End Developer (Contract) - _Aqueduct_ <http://www.aqueduct.co.uk>
+
 #### August 2012 to September 2012 (3 weeks)
 
  - **TDD** - Mocha with Node.js to test application and integrate in to CI environment.
  - **Front-End Build** for website application - prototyped using Express.js
 
 ### Senior/Lead Front-End Developer - _Aqueduct_ <http://www.aqueduct.co.uk>
+
 #### July 2009 to March 2012 (2 years, 8 months)
 
 I was employed by Aqueduct to build a Front-End development team where previously freelancers where used.
@@ -139,11 +166,13 @@ design team and front-end team.
  - **Presentations, workshops and evangelising** for new industry techniques and practices
 
 ### Web Designer / Developer - _Qdos Computer Consultants_ <http://www.qdoscc.com>
+
 #### Feb 2005 to July 2009 (4 years, 5 months)
 
 Head of design and front-end. I worked within a team to accomplish web based application projects, corporate websites, e-commerce solutions, branding services, print design for charities and SMEs.
 
 ### Owner/Partner - _Mime Graphics_
+
 #### July 2002 to Feb 2005 (2 years, 8 months)
 
 I began working as a designer in a partnership after college with the view to building a strong portfolio of work.
@@ -161,13 +190,15 @@ Clients I have produced work for
  - The RFU (<http://www.rfu.com>), _The English Rugby Football Union_
  - Manchester City Football Club (<http://www.mcfc.co.uk>)
  - Lloyd's of London (<http://www.lloyds.com>)
- - Argus Media (<http://www.argusmedia.com>)
  - Network Rail (<http://www.networkrail.co.uk>), _National Rail Infrastructure Provider_
- - Freud Communications (<http://www.freud.com>), _International Communications Company_
- - Premier Inn (<http://www.premierinn.com>) _National Hotel Chain_
  - The Football League (<http://www.football-league.co.uk/>)
+ - National Theatre (<http://www.nationaltheatre.org.uk>)
+ - Premier Inn (<http://www.premierinn.com>) _National Hotel Chain_
  - Colgate (<http://www.colgate.co.uk>)
- - National Theatre (<http://www.nationaltheatre.org.uk/>)
+ - Jaguar (<https://www.jaguar.com>)
+ - Land Rover (<https://www.landrover.com>)
+ - Argus Media (<http://www.argusmedia.com>)
+ - Freud Communications (<http://www.freud.com>), _International Communications Company_
 
 Where I'm pushing my skills
 ---
@@ -177,7 +208,6 @@ as they appear.
 
 Instead of having an exhaustive list these are the areas which I am focussing on.
 
- - CSS 3D and creative JavaScript
  - Cross platform Apps using HTML5 stack (Cordova and Phonegap)
  - Cloud Node.js applications built to scale
  - Enhancing the quality and consistency of my creative output inspired by The Accidental Creative.
