@@ -17,22 +17,23 @@
 /*
 	=> blocks
 --------------------------------------------------*/
-@import 'advert'
 @import "article-content"
-@import "prettyprint"
-@import "imageGrid"
-@import "pager-nav"
-@import "connectWithMe"
 @import "avatar"
+@import 'aboutme'
+@import "connectWithMe"
+@import "imageGrid"
 @import "list-blogs"
-@import 'paging'
-@import 'spinner'
-@import 'blocks/pageHeader'
+@import "pager-nav"
+@import "prettyprint"
+@import 'advert'
 @import 'cp-comments'
 @import 'cp-sharelinks'
 @import 'js-nav'
-@import 'postimage'
+@import 'pageHeader'
+@import 'paging'
 @import 'postheader'
+@import 'postimage'
+@import 'spinner'
 
 /**
 => mod-blogPosts
@@ -43,6 +44,17 @@
 	margin-bottom: 32px;
 }
 @import "tweet_list";
+
+.related h1 {
+  /* visually hidden */
+  position: absolute;
+  display: block;
+  top: -10000px;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 
 @media screen and (max-width: 550px) {
 
@@ -74,9 +86,6 @@
 		padding: 6px;
 	}
 
-	#related h1 {
-		/* visually hidden */ position:absolute; display: block; top: -10000px; left: -10000px; width: 1px; height: 1px; overflow: hidden;
-	}
 	#related {
 		position: absolute;
 		top: 0;
