@@ -1,6 +1,9 @@
 ---
 layout: post
 postimage: /content/2014-10-nested-components.jpg
+related: css
+categories:
+  - css
 ---
 
 As we are building modular components there will inevitably come a time when
