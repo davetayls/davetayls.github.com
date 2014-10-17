@@ -13,7 +13,7 @@ It is such a small subtle change but I've been amazed at how it has released mor
 creativity and free thinking. Why is that?
 
 I've been discussing this with [Stuart Harris](https://twitter.com/stuarte) who
-works from my office as a health wellness and performance coach. A interesting guy
+works from my office as a health, wellness and performance coach. An interesting guy
 to have these kinds of discussions with.
 
 He suggested that our attention capability is activated by a change. The brain
