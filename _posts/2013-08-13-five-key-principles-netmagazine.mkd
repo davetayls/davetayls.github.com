@@ -6,6 +6,7 @@ postimage: /content/2013-08-five-key-principles.png
 related: thoughts
 categories:
 - thoughts
+- creativity
 - magazine
 - principles
 ---

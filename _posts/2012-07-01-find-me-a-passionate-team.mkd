@@ -1,9 +1,10 @@
 ---
 layout: post
 title: Find Me a Passionate Team
-categories: 
-    - team
-    - thoughts
+categories:
+  - team
+  - thoughts
+  - creativity
 author: davetayls
 ---
 
@@ -15,15 +16,15 @@ Invest
 ---
 Unfortunately in today's culture you're often fighting an uphill battle. The constant change in what is considered a "necessity" people are approaching life and it's values within a culture of impermanence. This impermanence is killing people's passion. Fewer and fewer things are seen as worth investing in.
 
-I say, buck the common trend. Make decisions about what you want to stick to and _develop_. 
+I say, buck the common trend. Make decisions about what you want to stick to and _develop_.
 
-> When you invest, you value. 
+> When you invest, you value.
 
 When you value, you engage yourself. When you engage, you become passionate. Ask yourself: what am I investing in?
 
 Success
 ---
-We are fed a lot of confusing messages. Things should be done for us and yet our apparent worth to society is based on our _success_ or _acheivements_. 
+We are fed a lot of confusing messages. Things should be done for us and yet our apparent worth to society is based on our _success_ or _acheivements_.
 
 Whether it's the cleaning at the office or the "app for that" mindset. It's so frustrating that people can be so afraid of responsibility and risk in the small things and on the flip side we punish ourselves when we fail at being perfectly successful.
 
@@ -37,15 +38,15 @@ Only 10% of happiness is based on our external circumstances. 90% is internal an
 
 Learn something new. Don't just stick to things which are similar to your current interests but be bold and learn about something you know little or nothing about.
 
-Aim for a healthy thought life as it will effect the rest of your life. 
+Aim for a healthy thought life as it will effect the rest of your life.
 
-> Your level of passion correlates to 
-> your willingness to embrace 
+> Your level of passion correlates to
+> your willingness to embrace
 > risk, challenge and newness.
 
 Momentum
 ---
-In order to have impact you have to have momentum. Momentum is the product of both velocity and mass. 
+In order to have impact you have to have momentum. Momentum is the product of both velocity and mass.
 
 This means that you can expend a lot of energy but see little impact because you are not digesting and applying what you are investing in. Alternatively you could be going for such a massive goal that you lose the willingness to achieve it and have no velocity.
 
@@ -58,11 +59,11 @@ Obstacles to having passion
 
 ![obstacles](https://lh3.googleusercontent.com/-MPGAlY_PAP4/T_CoT6TTDwI/AAAAAAAAqw4/2MWTiBxDz2s/s800/skitched-20120623-212611.jpg)
 
-There are two main obstacles. 
+There are two main obstacles.
 
-**Face your fear of the unknown**. In fact overcoming fear can be a major passion inducing victory. 
+**Face your fear of the unknown**. In fact overcoming fear can be a major passion inducing victory.
 
-The other thing you need to watch out for is **the desire to be too comfortable**. Don't get me wrong: there is nothing wrong with being comfortable and even slowing right down when you need to rejuvenate. 
+The other thing you need to watch out for is **the desire to be too comfortable**. Don't get me wrong: there is nothing wrong with being comfortable and even slowing right down when you need to rejuvenate.
 
 Keep in mind what I've said previously. If you're not advancing then you will be retreating so you could find yourself in a bit of a rut if you sit for too long. You'll know when you've got the rest you need, think of it like breathing.
 
@@ -78,9 +79,3 @@ Here is what I feel it boils down to. I'm looking for these three things in my l
 - Rest and Play (like breathing)
 
 I'm now getting ready to be back at full time work doing web development (or something of the sort) and I'm looking to find a passionate team to get involved with. It's going to be great.
-
-
-
-
-
-
