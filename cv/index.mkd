@@ -34,14 +34,29 @@ Technical Skills
 
 I have gained a large body of experience across many web technologies both client and server side. I also am experienced in testing and continuous integration setup and practices.
 
- - Hand coded JavaScript (Linted), jQuery, jQuery Plugins, unit tested (Jasmine, QUnit, Mocha), Object Oriented and Functional
- - Coffee Script
+### JavaScript Client-side
+ - Hand coded and linted
+ - Unit tested (Jasmine, QUnit, Mocha)
+ - Object Oriented
+ - Functional
+ - Backbone.js, Marionette, Angular and React frameworks
  - Common Js and AMD modules - RequireJs/Node.js
- - XHTML 4.0 Strict, (X)HTML 5, written by hand using well thought out semantics
- - CSS2; CSS3; Stylus, Sass, Less. Written by hand, built for responsive layouts, mobile devices, screen and print
- - Node.js cloud applications and APIs (Heroku/AppFog/Azure)
- - Grunt, Express
- - Backbone.js, Knockout.js MV* frameworks
+ - jQuery and jQuery Plugins
+ - Coffee Script
+
+### JavaScript and Server-side
+ - **Node.js** cloud applications and APIs (Heroku/AppFog/Azure)
+ - Grunt, ExpressJS, MongoDb
+
+### HTML
+ - HTML5, written by hand using well thought out semantics
+
+### CSS
+ - Written by hand, built for responsive layouts, mobile devices, screen and print
+ - Stylus, Sass, Less, Rework
+ - Also familiar with Twitter Bootstrap toolkit
+
+### Other
  - Methodologies: Agile: Scrum, Kanban
  - Source Control: Git, Subversion, Mercurial
  - Selenium
@@ -76,9 +91,21 @@ Experience
 
 ### Node.js and Backbone Developer (Contract) - _ESZ_ <http://eszconsulting.com>
 
+#### November 2014
+
+Desktop app for new startup using Backbone, Marionette, Node.js, CoffeeScript, Grunt, Express, Mocha, Karma Runner
+
+### Lead UI architect and developer (Contract) - _Sainsbury's Digital Experience Lab_ <http://www.sainsburys.co.uk>
+
+#### September 2014
+
+Researching and working on a tech-stack for the Sainsbury's interface team.
+
+### Node.js and Backbone Developer (Contract) - _ESZ_ <http://eszconsulting.com>
+
 #### June 2014
 
-Desktop app for new startup using Backbone, Marionette, Node.js, CoffeeScript, Grunt, Express
+Desktop app for new startup using Backbone, Marionette, Node.js, CoffeeScript, Grunt, Express, Mocha, Karma Runner
 
 ### Senior Web Developer (Contract) - _Econsultancy_ <http://eszconsulting.com>
 
@@ -180,6 +207,8 @@ I began working as a designer in a partnership after college with the view to bu
 Industry Recognition
 ---
 
+ - .net Online Magazine "Five key principles for better web development" (<http://davetayls.me/blog/2013/08/13/five-key-principles-netmagazine/>)
+ - National Theatre iPad App wins Educational Multimedia Award (<http://davetayls.me/blog/2014/05/09/national-theatre-app-wins-educational-multimedia-award/>)
  - Sitecore, Site of the Year Award for The FA, Just Play. ([Blog post](/blog/2011/11/24/fa-just-play-wins-category-sitecore-site-of-year/))
  - My work has been featured and used in on-line magazines: Daily Js ([jQuery.kinetic](http://dailyjs.com/2011/08/09/jquery-roundup/), [jQuery.lazyLoader](http://dailyjs.com/2012/01/31/jquery-roundup/)), Codrops ([jQuery.kinetic](http://tympanus.net/codrops/2011/10/07/draggable-image-boxes-grid/))
 
@@ -191,26 +220,15 @@ Clients I have produced work for
  - Manchester City Football Club (<http://www.mcfc.co.uk>)
  - Lloyd's of London (<http://www.lloyds.com>)
  - Network Rail (<http://www.networkrail.co.uk>), _National Rail Infrastructure Provider_
- - The Football League (<http://www.football-league.co.uk/>)
+ - Sainsbury's (<http://www.sainsburys.co.uk>)
  - National Theatre (<http://www.nationaltheatre.org.uk>)
  - Premier Inn (<http://www.premierinn.com>) _National Hotel Chain_
+ - The Football League (<http://www.football-league.co.uk/>)
  - Colgate (<http://www.colgate.co.uk>)
  - Jaguar (<https://www.jaguar.com>)
  - Land Rover (<https://www.landrover.com>)
  - Argus Media (<http://www.argusmedia.com>)
  - Freud Communications (<http://www.freud.com>), _International Communications Company_
-
-Where I'm pushing my skills
----
-
-I am very keen at pushing my skills outside of my day-to-day work. Researching new technologies and trends
-as they appear.
-
-Instead of having an exhaustive list these are the areas which I am focussing on.
-
- - Cross platform Apps using HTML5 stack (Cordova and Phonegap)
- - Cloud Node.js applications built to scale
- - Enhancing the quality and consistency of my creative output inspired by The Accidental Creative.
 
 Qualifications
 ---
