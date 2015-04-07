@@ -40,6 +40,7 @@ I have gained a large body of experience across many web technologies both clien
  - Object Oriented
  - Functional
  - Backbone.js, Marionette, Angular and React frameworks
+ - Cordova and PhoneGap hybrid apps
  - Common Js and AMD modules - RequireJs/Node.js
  - jQuery and jQuery Plugins
  - Coffee Script
@@ -64,6 +65,12 @@ I have gained a large body of experience across many web technologies both clien
 Recommendations
 ---------------
 
+### Tim Ellert: _Founder, ESZ Consulting Ltd_
+
+“Having worked with Dave on various projects for both small and multinational clients I / we can highly recommend him. Dave has excellent technical / development skills and is very much at the cutting edge of new languages and methodologies. During his time working with ESZ Consulting he has successfully completed highly technical projects spanning from a few months to a few years! He is a valuable front end developer and an asset to any development team. Look forward to working with him again soon on the next project!”
+
+February 24, 2015
+
 ### Rob Oubridge: _Founder, Aqueduct_
 
 “Dave is an extremely talented front-end developer - without exception the most knowledgable and advanced in his area that we have ever worked with. In addition, Dave is a cohesive team member, widely popular with his colleagues and always inspiring quality, exploration and innovation. One of the true 'greats' we've had the pleasure to work with - I cannot recommend Dave highly enough either as a professional or an individual.”
@@ -76,18 +83,16 @@ February 27, 2012
 
 February 24, 2012
 
-### Sarah Evison, Managing Partner, United Studios
-
-“Having read the other recommendations on here I don't think there is a superlative left to describe Dave. I concur with them all. Dave is an exceptionally skilled front end developer, passionate about his work, calm in delivery and genuinely a lovely person to have on your team.
-
-When I have a project worthy of his talent, he's first on my list!”
-
-October 4, 2012
-
 View more on [LinkedIn](http://www.linkedin.com/in/davetayls).
 
 Experience
 ----------
+
+### Cordova Hybrid App Developer (Contract) - _ESZ_ <http://eszconsulting.com>
+
+#### March 2015
+
+Cordova hybrid phone app using Backbone, Marionette, Flux Architecture, Loopback Node.js API
 
 ### Node.js and Backbone Developer (Contract) - _ESZ_ <http://eszconsulting.com>
 
