@@ -76,18 +76,22 @@ blockquote {
     position: relative;
     p {
         color: #000;
-        font-size: 1.7em;
+        font-size: 1.2em;
         line-height: 1;
-        padding: 0 20px 15px;
+        padding: 10px 50px 25px 40px;
         font-style: italic;
-        letter-spacing: -0.04em;
+        letter-spacing: -0.02em;
     }
+
     &:before {
-        content: '“';
+        //DOUBLE HIGH-REVERSED-9 QUOTATION MARK
+        //Unicode: U+201F, UTF-8: E2 80 9F';
+        content: "\201F";
+        color: $color--core;
         font-style: italic;
         font-size: 4em;
         position: absolute;
-        top: -16px;
+        top: -12px;
         left: -12px;
         width: 1em;
     }

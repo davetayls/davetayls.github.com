@@ -460,48 +460,49 @@ blockquote {
 /* line 86 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 blockquote p {
   color: #000;
-  font-size: 1.7em;
+  font-size: 1.2em;
   line-height: 1;
-  padding: 0 20px 15px;
+  padding: 10px 50px 25px 40px;
   font-style: italic;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
 }
 
-/* line 94 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 95 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 blockquote:before {
-  content: '“';
+  content: "\201F";
+  color: #00adef;
   font-style: italic;
   font-size: 4em;
   position: absolute;
-  top: -16px;
+  top: -12px;
   left: -12px;
   width: 1em;
 }
 
-/* line 107 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 111 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 img {
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 108 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 112 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 object,
 embed,
 img {
   max-width: 100%;
 }
 
-/* line 111 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 115 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 p {
   margin: 0;
   padding: 0 0 15px;
 }
 
-/* line 112 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 116 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 article p {
   text-align: justify;
 }
 
-/* line 114 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 118 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 pre {
   white-space: pre;
 /* CSS2 */
@@ -511,12 +512,12 @@ pre {
 /* IE */
 }
 
-/* line 120 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 124 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 small {
   font-size: 85%;
 }
 
-/* line 125 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 129 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 pre,
 code,
 kbd,
@@ -524,7 +525,7 @@ samp {
   font-family: monospace, sans-serif;
 }
 
-/* line 132 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 136 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 h1,
 h2,
 h3,
@@ -535,7 +536,7 @@ h6 {
   text-rendering: optimizeLegibility;
 }
 
-/* line 133 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 137 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 h1 {
   color: #000;
   font-size: 2.375em;
@@ -548,21 +549,21 @@ h1 {
   padding: 0 0 10px;
 }
 
-/* line 142 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 146 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 h1 time {
   color: #888;
   text-transform: uppercase;
   font-size: 0.473684210526em;
 }
 
-/* line 148 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 152 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 h1 a,
 h1 a:visited,
 h1 a:link {
   color: #000;
 }
 
-/* line 152 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 156 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 h2 {
   color: #777;
   font-size: 1.429em;
@@ -575,25 +576,25 @@ h2 {
   padding: 15px 0 5px;
 }
 
-/* line 162 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 166 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 h3 {
   font-size: 1.1em;
   font-weight: bold;
   margin-bottom: 8px;
 }
 
-/* line 168 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 172 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 h5 {
   margin: 0 0 5px;
 }
 
-/* line 180 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 184 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 dl {
   padding: 0 0 24px 0;
   zoom: 1;
 }
 
-/* line 181 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 185 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 dl:after {
   content: ".";
   display: block;
@@ -602,59 +603,59 @@ dl:after {
   visibility: hidden;
 }
 
-/* line 182 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 186 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 dt,
 dd {
   float: left;
 }
 
-/* line 183 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 187 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 dt {
   font-weight: bold;
   padding-right: 12px;
 }
 
-/* line 184 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 188 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 dd {
   padding-right: 24px;
 }
 
-/* line 186 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 190 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 li {
   line-height: 1.5;
 }
 
-/* line 187 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 191 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 ol {
   padding: 10px 0 10px 23px;
 }
 
-/* line 188 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 192 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 ul {
   padding: 10px 0 10px 20px;
 }
 
-/* line 189 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 193 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 
-/* line 190 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 194 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 ul li li {
   list-style-image: none;
   list-style-type: circle;
 }
 
-/* line 191 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 195 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 ul li li li {
   list-style-image: none;
   list-style-type: disc;
 }
 
-/* line 192 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 196 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 ul li li li li {
   list-style-image: none;
   list-style-type: square;
 }
 
-/* line 194 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 198 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 p+ol,
 p+ul,
 h2+ol,
@@ -664,7 +665,7 @@ h3+ul {
   padding-top: 0;
 }
 
-/* line 199 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 203 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 button,
 select,
 input,
@@ -673,45 +674,45 @@ textarea {
   font-family: inherit;
 }
 
-/* line 203 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 207 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 button {
   width: auto;
   overflow: visible;
 }
 
-/* line 206 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 210 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 input {
   vertical-align: middle;
 }
 
-/* line 209 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 213 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 textarea {
   vertical-align: 1px;
 }
 
-/* line 213 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 217 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 input[type="radio"] {
   vertical-align: text-bottom;
 }
 
-/* line 216 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 220 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 input[type="checkbox"] {
   vertical-align: bottom;
   *vertical-align: baseline;
 }
 
-/* line 221 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 225 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 .ie6 input {
   vertical-align: text-bottom;
 }
 
-/* line 228 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 232 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 table {
   font-size: inherit;
   font: 100%;
 }
 
-/* line 229 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 233 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 table {
   border-bottom: solid 1px #fff;
   border-collapse: separate;
@@ -721,7 +722,7 @@ table {
   padding: 0;
 }
 
-/* line 237 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 241 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 th {
   border-top: 1px solid #fff;
   font-size: 0.8em;
@@ -731,7 +732,7 @@ th {
   text-align: left;
 }
 
-/* line 245 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 249 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 td {
   border-top: dotted 1px #fff;
   border-bottom: dotted 1px #ccc;
@@ -739,12 +740,12 @@ td {
   padding: 3px 5px;
 }
 
-/* line 251 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 255 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 tr:nth-child(even) td {
   background-color: #eee;
 }
 
-/* line 254 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
+/* line 258 : /Users/davetayls/projects/davetayls.github.com/_stylus/brand/brand.styl */
 
 /* line 3 : /Users/davetayls/projects/davetayls.github.com/_stylus/components/icons.styl */
 
