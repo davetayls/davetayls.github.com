@@ -44,6 +44,7 @@ You can take a look at my [showreels](/blog/category/showreel/) or the [projects
  - Manchester City Football Club (<http://www.mcfc.co.uk>)
  - Lloyd's of London (<http://www.lloyds.com>)
  - Network Rail (<http://www.networkrail.co.uk>), _National Rail Infrastructure Provider_
+ - Arrow Electronics (<https://www.arrow.com>), _Global provider to industrial and commercial users of electronic components and enterprise computing solutions, with 2014 sales of $22.8 billion_
  - The Football League (<http://www.football-league.co.uk/>)
  - National Theatre (<http://www.nationaltheatre.org.uk>)
  - Premier Inn (<http://www.premierinn.com>) _National Hotel Chain_
