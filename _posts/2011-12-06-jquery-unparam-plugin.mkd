@@ -6,7 +6,7 @@ related: jquery
 categories:
     - jquery
     - code
-    - release
+    - releases
 ---
 I have just created a simple jQuery plugin to add the opposite functionality to the jQuery.param function. It will turn a set of url parameters back in to an object. Here's the usage at the moment.
 

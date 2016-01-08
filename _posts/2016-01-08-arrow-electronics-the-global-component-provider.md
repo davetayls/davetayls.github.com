@@ -1,9 +1,10 @@
 ---
 layout: post
 postimage: /content/2016-01-arrow.jpg
-related: release
+related: project
 categories:
-  - release
+  - releases
+  - project
   - responsivedesign
 ---
 
