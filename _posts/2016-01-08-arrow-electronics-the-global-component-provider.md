@@ -10,7 +10,7 @@ categories:
 
 Last year I had the pleasure to work as a UI Lead for [The BIO Agency](http://www.thebioagency.com/) and
 [Arrow Electronics](https://www.arrow.com). I joined the project a few months in to help the existing 8 Frontend developers
-and fair few other team members across their disciplines with over all FE code architecture and in turn support Arrow's growing team in Denver, Colorado.
+and fair few other team members across their disciplines with FE code architecture and in turn support Arrow's growing team in Denver, Colorado.
 
 We had a great relationship with the team at Arrow. I had never heard of them before, so it was interesting to hear that
 many of the electronic products we use day to day have probably had parts supplied by them.
