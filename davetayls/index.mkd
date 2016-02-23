@@ -39,11 +39,9 @@ more information.
  - Front-End technologies
  - Teams and open source communities
  - My family
- - Doing great work (YEAH! The _"I made that"_ feeling)
+ - Doing great work
  - I love the web
- - Community
- - New stuff
 
 ## Experience
-The best way to get to know my skill level and coding style is to browse my
-[github projects](http://github.com/davetayls).
+
+You can take a look at my [showreels](/blog/category/showreel/) or the [projects category](/blog/category/project/) to see some examples.

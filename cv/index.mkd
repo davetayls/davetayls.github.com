@@ -130,6 +130,8 @@ Industry Recognition
 Clients I have produced work for
 ---
 
+You can take a look at my [showreels](/blog/category/showreel/) or the [projects category](/blog/category/project/) to see some examples.
+
  - The FA (<http://www.thefa.com>), _The English Football Association_
  - The RFU (<http://www.rfu.com>), _The English Rugby Football Union_
  - Manchester City Football Club (<http://www.mcfc.co.uk>)

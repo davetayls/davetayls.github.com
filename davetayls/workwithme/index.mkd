@@ -1,7 +1,0 @@
----
-layout: post
-title: Work with me (Dave Taylor)
-comments: hide
----
-
-This page has been moved to [http://davetayls.me/workwithme](/workwithme).

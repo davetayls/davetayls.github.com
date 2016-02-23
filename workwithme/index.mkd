@@ -14,18 +14,11 @@ a little more about my background on my [about me](/davetayls) page.
 
 ## You can
  - Drop me [an email](mailto:dave.taylor@pogokid.com)
+ - Give me a call on 0754 0817008
  - View [my CV](/cv)
- - [Get availability updates through email](#subscribe)
  - Quickly check my availability using the calendar below.
 
 ## Availability
-
-### Email updates
-Due to so many people asking me to email them when my availability
-changes you can now [subscribe to work and availability emails](#subscribe).
-
-Don't worry, I hate spam and I woudn't do that to you. These will be pretty
-infrequent but timely.
 
 ### Calendar
 [View the calendar directly](https://www.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=43997nha4g9al5mmd24ok3qdcg%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=Europe%2FLondon)
@@ -44,15 +37,16 @@ You can take a look at my [showreels](/blog/category/showreel/) or the [projects
  - Manchester City Football Club (<http://www.mcfc.co.uk>)
  - Lloyd's of London (<http://www.lloyds.com>)
  - Network Rail (<http://www.networkrail.co.uk>), _National Rail Infrastructure Provider_
- - Arrow Electronics (<https://www.arrow.com>), _Global provider to industrial and commercial users of electronic components and enterprise computing solutions, with 2014 sales of $22.8 billion_
- - The Football League (<http://www.football-league.co.uk/>)
+ - Sainsbury's (<http://www.sainsburys.co.uk>)
  - National Theatre (<http://www.nationaltheatre.org.uk>)
  - Premier Inn (<http://www.premierinn.com>) _National Hotel Chain_
+ - The Football League (<http://www.football-league.co.uk/>)
  - Colgate (<http://www.colgate.co.uk>)
  - Jaguar (<https://www.jaguar.com>)
  - Land Rover (<https://www.landrover.com>)
- - Argus Media (<http://www.argusmedia.com>)
+ - Arrow Electronics (<https://www.arrow.com>) _[Blog post](/blog/2016/01/08/arrow-electronics-the-global-component-provider/)_
  - Freud Communications (<http://www.freud.com>), _International Communications Company_
+ - Argus Media (<http://www.argusmedia.com>)
 
 ## Recommendations
 
@@ -62,6 +56,12 @@ Hopefully they will also demonstrate that I would bring value to your project.
 
 
 ## What Employers are saying
+
+### [Tim Ellert](https://www.linkedin.com/in/timellert), Founder, [ESZ Consulting Ltd](http://eszconsulting.com)
+
+“Having worked with Dave on various projects for both small and multinational clients I / we can highly recommend him. Dave has excellent technical / development skills and is very much at the cutting edge of new languages and methodologies. During his time working with ESZ Consulting he has successfully completed highly technical projects spanning from a few months to a few years! He is a valuable front end developer and an asset to any development team. Look forward to working with him again soon on the next project!”
+
+February 24, 2015
 
 ### [Sarah Evison](http://uk.linkedin.com/pub/sarah-evison/1/9a2/7a0), Managing Partner, [United Studios](http://unitedstudios.com)
 
@@ -94,6 +94,12 @@ March, 2012
 
 ## What team-mates are saying
 
+### [Ian Vaughan](https://www.linkedin.com/in/ianvaughan), Software Developer, [Econsultancy](https://econsultancy.com)
+
+Dave came in and very quickly picked up tasks helping us during a large front end redesign. I think I can say anything that needed to be done, he could handle it, and it landed in our app working first time, looking good
+
+February 2015
+
 ### [Daniel Govan](http://uk.linkedin.com/pub/daniel-govan/1/751/922/), Senior Interactive Web Developer, [VML London](http://london.vml.com)
 
 I've only worked with a couple of Ninja-class developers and Dave is one of them. In addition to his mastery of the modern front-end stack he's also great at teaching and passing on the knowledge, and his his time at VML has made a lasting impression on the department. Only wish he could have stayed longer!
@@ -124,6 +130,4 @@ I am davetayls in most social places. Here are a few.
 [LinkedIn](http://www.linkedin.com/in/davetayls),
 [Twitter](http://twitter.com/davetayls),
 [Github](http://github.com/davetayls),
-[Google+](https://plus.google.com/103477668197991622209),
-[Vimeo](https://vimeo.com/davetayls)
 
