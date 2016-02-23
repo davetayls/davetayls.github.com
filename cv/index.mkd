@@ -117,6 +117,48 @@ Desktop app for new startup using Backbone, Marionette, Node.js, CoffeeScript, G
 
 Researching and working on a tech-stack for the Sainsbury's interface team.
 
+### [> More of my work history below](#appendix)
+
+Industry Recognition
+---
+
+ - .net Online Magazine "Five key principles for better web development" (<http://davetayls.me/blog/2013/08/13/five-key-principles-netmagazine/>)
+ - National Theatre iPad App wins Educational Multimedia Award (<http://davetayls.me/blog/2014/05/09/national-theatre-app-wins-educational-multimedia-award/>)
+ - Sitecore, Site of the Year Award for The FA, Just Play. ([Blog post](/blog/2011/11/24/fa-just-play-wins-category-sitecore-site-of-year/))
+ - My work has been featured and used in on-line magazines: Daily Js ([jQuery.kinetic](http://dailyjs.com/2011/08/09/jquery-roundup/), [jQuery.lazyLoader](http://dailyjs.com/2012/01/31/jquery-roundup/)), Codrops ([jQuery.kinetic](http://tympanus.net/codrops/2011/10/07/draggable-image-boxes-grid/))
+
+Clients I have produced work for
+---
+
+ - The FA (<http://www.thefa.com>), _The English Football Association_
+ - The RFU (<http://www.rfu.com>), _The English Rugby Football Union_
+ - Manchester City Football Club (<http://www.mcfc.co.uk>)
+ - Lloyd's of London (<http://www.lloyds.com>)
+ - Network Rail (<http://www.networkrail.co.uk>), _National Rail Infrastructure Provider_
+ - Sainsbury's (<http://www.sainsburys.co.uk>)
+ - National Theatre (<http://www.nationaltheatre.org.uk>)
+ - Premier Inn (<http://www.premierinn.com>) _National Hotel Chain_
+ - The Football League (<http://www.football-league.co.uk/>)
+ - Colgate (<http://www.colgate.co.uk>)
+ - Jaguar (<https://www.jaguar.com>)
+ - Land Rover (<https://www.landrover.com>)
+ - Arrow Electronics (<https://www.arrow.com>) _[Blog post](/blog/2016/01/08/arrow-electronics-the-global-component-provider/)_
+ - Freud Communications (<http://www.freud.com>), _International Communications Company_
+ - Argus Media (<http://www.argusmedia.com>)
+
+Qualifications
+---
+
+ - Master CIW Designer (2006). CIW Certified Internet Web Professional Program. www.ciwcertified.com
+ - BTEC Diploma, Foundation Studies in Art and Design (2001). London College of Printing (School of Graphic Design)
+ - A Levels in Computing (A), Electronics (A), Art (C) (2000). John Ruskin College
+
+
+<span id="appendix" style="page-break-after: always"></span>
+
+Appendix
+---
+
 ### Node.js and Backbone Developer (Contract) - _ESZ_ <http://eszconsulting.com>
 
 #### June 2014
@@ -219,39 +261,4 @@ Head of design and front-end. I worked within a team to accomplish web based app
 #### July 2002 to Feb 2005 (2 years, 8 months)
 
 I began working as a designer in a partnership after college with the view to building a strong portfolio of work.
-
-Industry Recognition
----
-
- - .net Online Magazine "Five key principles for better web development" (<http://davetayls.me/blog/2013/08/13/five-key-principles-netmagazine/>)
- - National Theatre iPad App wins Educational Multimedia Award (<http://davetayls.me/blog/2014/05/09/national-theatre-app-wins-educational-multimedia-award/>)
- - Sitecore, Site of the Year Award for The FA, Just Play. ([Blog post](/blog/2011/11/24/fa-just-play-wins-category-sitecore-site-of-year/))
- - My work has been featured and used in on-line magazines: Daily Js ([jQuery.kinetic](http://dailyjs.com/2011/08/09/jquery-roundup/), [jQuery.lazyLoader](http://dailyjs.com/2012/01/31/jquery-roundup/)), Codrops ([jQuery.kinetic](http://tympanus.net/codrops/2011/10/07/draggable-image-boxes-grid/))
-
-Clients I have produced work for
----
-
- - The FA (<http://www.thefa.com>), _The English Football Association_
- - The RFU (<http://www.rfu.com>), _The English Rugby Football Union_
- - Manchester City Football Club (<http://www.mcfc.co.uk>)
- - Lloyd's of London (<http://www.lloyds.com>)
- - Network Rail (<http://www.networkrail.co.uk>), _National Rail Infrastructure Provider_
- - Sainsbury's (<http://www.sainsburys.co.uk>)
- - National Theatre (<http://www.nationaltheatre.org.uk>)
- - Premier Inn (<http://www.premierinn.com>) _National Hotel Chain_
- - The Football League (<http://www.football-league.co.uk/>)
- - Colgate (<http://www.colgate.co.uk>)
- - Jaguar (<https://www.jaguar.com>)
- - Land Rover (<https://www.landrover.com>)
- - Argus Media (<http://www.argusmedia.com>)
- - Freud Communications (<http://www.freud.com>), _International Communications Company_
-
-Qualifications
----
-
- - Master CIW Designer (2006). CIW Certified Internet Web Professional Program. www.ciwcertified.com
- - BTEC Diploma, Foundation Studies in Art and Design (2001). London College of Printing (School of Graphic Design)
- - A Levels in Computing (A), Electronics (A), Art (C) (2000). John Ruskin College
-
-
 
