@@ -24,10 +24,13 @@ twitter
 github
 : <http://github.com/davetayls>
 
-<div id="intro">
-<p>I've been developing for over ten years, and I'm pushing my creative JavaScript, HTML and CSS skills as much as ever.
-If I am with passionate risk taking people then I'm at home.</p>
-</div>
+<div id="intro"><p>
+
+After 14 years my passion for our industry has not stopped growing.
+I thrive in teams who are pushing the boundaries of HTML5 and Node.js in their many forms.
+Taking my leadership skills as far as I can, when I lead I look to inspire my team to do the same.
+
+</p></div>
 
 Technical Skills
 ---
@@ -38,16 +41,14 @@ I have gained a large body of experience across many web technologies both clien
  - Hand coded and linted
  - Unit tested (Jasmine, QUnit, Mocha)
  - Object Oriented
- - Functional
- - Backbone.js, Marionette, Angular and React frameworks
+ - Backbone.js, Marionette, React and Angular frameworks
  - Cordova and PhoneGap hybrid apps
- - Common Js and AMD modules - RequireJs/Node.js
- - jQuery and jQuery Plugins
- - Coffee Script
+ - CommonJs and AMD modules - RequireJs/Node.js
 
 ### JavaScript and Server-side
  - **Node.js** cloud applications and APIs (Heroku/AppFog/Azure)
  - Grunt, ExpressJS, MongoDb
+ - TypeScript, CoffeeScript
 
 ### HTML
  - HTML5, written by hand using well thought out semantics
@@ -55,12 +56,10 @@ I have gained a large body of experience across many web technologies both clien
 ### CSS
  - Written by hand, built for responsive layouts, mobile devices, screen and print
  - Stylus, Sass, Less, Rework
- - Also familiar with Twitter Bootstrap toolkit
 
 ### Other
  - Methodologies: Agile: Scrum, Kanban
  - Source Control: Git, Subversion, Mercurial
- - Selenium
 
 Recommendations
 ---------------
@@ -87,6 +86,18 @@ View more on [LinkedIn](http://www.linkedin.com/in/davetayls).
 
 Experience
 ----------
+
+### Cordova Hybrid App Developer (Contract) - _ESZ_ <http://eszconsulting.com>
+
+#### January 2016
+
+Cordova hybrid phone app using Backbone, Flux Architecture
+
+### Lead Frontend Developer (Contract) - _The BIO Agency_ <http://thebioagency.com>
+
+#### July 2015 ([read blog post](/blog/2016/01/08/arrow-electronics-the-global-component-provider/))
+
+Interface Lead for a team of 8 Frontend developers on a multinational eCommerce build for the client based in Denver US (arrow.com). Consolidating numerous sites in to a single point for the user built on Sitecore CMS which connected to multiple external APIs.
 
 ### Cordova Hybrid App Developer (Contract) - _ESZ_ <http://eszconsulting.com>
 
