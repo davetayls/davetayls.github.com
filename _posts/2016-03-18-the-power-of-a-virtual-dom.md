@@ -3,6 +3,7 @@ layout: post
 related: thoughts
 categories:
   - javascript
+  - react
   - thoughts
 ---
 
