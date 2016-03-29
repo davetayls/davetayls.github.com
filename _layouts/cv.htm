@@ -49,6 +49,7 @@
             dl { font-size: 11px; width: 290px; margin: 0 auto; position: relative; left: 17px; }
                 dl dt { width: 50px; }
                 dl dd { width: 180px; text-align: right; }
+
             dt:nth-child(4n+1) {
                 clear: left;
             }
@@ -57,17 +58,6 @@
             ul li {
                 font-family: sans-serif;
                 font-size: 0.6875em;
-            }
-
-            @media print {
-                #wrapper {
-                    margin: 0;
-                    padding: 1cm 0;
-                    -webkit-box-shadow: none;
-                       -moz-box-shadow: none;
-                         -o-box-shadow: none;
-                            box-shadow: none;
-                }
             }
             @media all and (min-width:768px){
                 #wrapper {
@@ -87,6 +77,24 @@
                 #wrapper {
                     padding: 8.333333em;
                 }
+            }
+
+            @media print {
+                body {
+                    font-size: 100%;
+                }
+                #wrapper {
+                    float: none;
+                    margin: 0;
+                    padding: 1cm 0;
+                    -webkit-box-shadow: none;
+                    -moz-box-shadow: none;
+                    -o-box-shadow: none;
+                    box-shadow: none;
+                }
+                dl { width: auto; left: 0; }
+                dl dt { width: 8%; padding-right: 2%; }
+                dl dd { width: 36%; padding-right: 4%; }
             }
 
         </style>

@@ -156,7 +156,7 @@ Qualifications
  - A Levels in Computing (A), Electronics (A), Art (C) (2000). John Ruskin College
 
 
-<span id="appendix" style="page-break-after: always"></span>
+<span id="appendix" style="page-break-before: always"></span>
 
 Appendix
 ---
