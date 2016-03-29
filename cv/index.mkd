@@ -87,11 +87,11 @@ View more on [LinkedIn](http://www.linkedin.com/in/davetayls).
 Experience
 ----------
 
-### Cordova Hybrid App Developer (Contract) - _ESZ_ <http://eszconsulting.com>
+### Senior Cordova Hybrid App Developer (Contract) - _ESZ_ <http://eszconsulting.com>
 
 #### January 2016
 
-Cordova hybrid phone app using Backbone, Flux Architecture
+Cordova hybrid phone app build as part of a team for Jaguar / Land Rover using Backbone, Flux Architecture
 
 ### Lead Frontend Developer (Contract) - _The BIO Agency_ <http://thebioagency.com>
 
@@ -99,7 +99,7 @@ Cordova hybrid phone app using Backbone, Flux Architecture
 
 Interface Lead for a team of 8 Frontend developers on a multinational eCommerce build for the client based in Denver US (arrow.com). Consolidating numerous sites in to a single point for the user built on Sitecore CMS which connected to multiple external APIs.
 
-### Cordova Hybrid App Developer (Contract) - _ESZ_ <http://eszconsulting.com>
+### Senior Cordova Hybrid App Developer (Contract) - _ESZ_ <http://eszconsulting.com>
 
 #### March 2015
 
