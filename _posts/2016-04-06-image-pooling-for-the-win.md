@@ -3,6 +3,7 @@ title: Image Pooling for the Win
 layout: post
 related: creativejs
 categories:
+  - creativejs
   - javascript
   - html5
   - apps
