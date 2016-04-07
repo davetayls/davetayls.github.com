@@ -1,6 +1,6 @@
 ---
 layout: workwithme
-title: Work with me (Dave Taylor)
+title: Work with Dave Taylor
 comments: hide
 share: hide
 ---
