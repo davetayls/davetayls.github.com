@@ -6,9 +6,8 @@ share: hide
 ---
 
 Hey, thanks for being interested in working with me. I love working with
-people and teams who are passionate about producing great work.
-
-I have a very open and honest work ethic much in line with the
+people and teams who are passionate about producing great work. I have a 
+very open and honest work ethic much in line with the
 [Agile Principles](http://agilemanifesto.org/principles.html). There's
 a little more about my background on my [about me](/davetayls) page.
 
@@ -16,34 +15,34 @@ a little more about my background on my [about me](/davetayls) page.
  - Drop me [an email](mailto:dave.taylor@pogokid.com)
  - Give me a call on 0754 0817008
  - View [my CV](/cv)
- - Quickly check my availability using the calendar below.
 
 ## Availability
 
-### Calendar
-[View the calendar directly](https://www.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=43997nha4g9al5mmd24ok3qdcg%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=Europe%2FLondon)
-
-<iframe src="https://www.google.com/calendar/embed?mode=MONTH&amp;height=300&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=43997nha4g9al5mmd24ok3qdcg%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=Europe%2FLondon" frameborder="0" width="100%" height="300" style="border: solid 1px #ccc;"><!-- --></iframe>
+I generally get booked up a **month or two in advance** so please get in touch sooner rather than
+later so that we can discuss your project and timescales.
 
 ## Who I've worked with
 
 I've been involved with a variety of clients ranging from individuals to
 government organisations.
 
-You can take a look at my [showreels](/blog/category/showreel/) or the [projects category](/blog/category/project/) to see some examples.
+You can take a look at my [showreels](/blog/category/showreel/) 
+or the [projects category](/blog/category/project/) to see a few 
+examples of the work I have the ability to show.
 
+ - Jaguar (<https://www.jaguar.com>)
+ - Land Rover (<https://www.landrover.com>)
+ - Ford (<https://www.ford.co.uk>)
  - The FA (<http://www.thefa.com>), _The English Football Association_
  - The RFU (<http://www.rfu.com>), _The English Rugby Football Union_
  - Manchester City Football Club (<http://www.mcfc.co.uk>)
+ - National Theatre (<http://www.nationaltheatre.org.uk>)
  - Lloyd's of London (<http://www.lloyds.com>)
  - Network Rail (<http://www.networkrail.co.uk>), _National Rail Infrastructure Provider_
  - Sainsbury's (<http://www.sainsburys.co.uk>)
- - National Theatre (<http://www.nationaltheatre.org.uk>)
  - Premier Inn (<http://www.premierinn.com>) _National Hotel Chain_
  - The Football League (<http://www.football-league.co.uk/>)
  - Colgate (<http://www.colgate.co.uk>)
- - Jaguar (<https://www.jaguar.com>)
- - Land Rover (<https://www.landrover.com>)
  - Arrow Electronics (<https://www.arrow.com>) _[Blog post](/blog/2016/01/08/arrow-electronics-the-global-component-provider/)_
  - Freud Communications (<http://www.freud.com>), _International Communications Company_
  - Argus Media (<http://www.argusmedia.com>)
