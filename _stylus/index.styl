@@ -132,21 +132,48 @@
 	=> structure
 	--------------------------------------------------*/
 	#contentWrapper {
+		position relative
 		width: 980px;
 		margin: 0 auto;
 		padding: 0 0 16px;
 	}
 	#content {
 		float: left;
-		width: 640px;
+		width: 800px;
 	}
 	#related {
-		float: right;
+		position absolute
+		top 0
+		right 0
 		padding: 0;
-		width: 260px;
+		width: 90px;
+		background-color rgba(#fff, 0.95)
+		transition: all .3s ease
 	}
-	#related p {
-		font-size: 0.75em;
+	#related .related-posts,
+	.categories,
+	#recentPosts {
+		opacity: 0;
+	}
+	#related p,
+	#related li,
+	#related a {
+		font-size: 13px;
+		color: #888;
+	}
+	#related:hover {
+		width: 260px;
+		padding: 0 20px 55px 100px;
+	}
+	#related:hover .related-posts,
+	#related:hover .categories,
+	#related:hover #recentPosts {
+		opacity: 1;
+	}
+	#related:hover p,
+	#related:hover li,
+	#related:hover a {
+		color: #000;
 	}
 	#pageFooter {
 		clear: both;

@@ -1,5 +1,5 @@
 <ul class="mod-imageGrid">
-{% for post in site.posts limit:14 %}
+{% for post in site.posts limit:14 offset:1 %}
     <li>
         <a href="{{ post.url }}">
             <h2>
