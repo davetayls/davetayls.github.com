@@ -1,5 +1,5 @@
 ---
-title: A thought on Collectives, gigging groups
+title: A thought on GigStamp Collectives, gigging groups
 layout: post
 postimage: https://cdn-images-1.medium.com/max/2000/1*hqLc4JkL315GcN1pVx2HzA.jpeg
 related: gigstamp
