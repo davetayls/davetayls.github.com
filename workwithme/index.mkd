@@ -33,8 +33,7 @@ Get in touch and let's have a chat.
 I've been involved with a variety of clients ranging from individuals to
 government organisations.
 
-You can take a look at my [projects category](/blog/category/project/) to see a few 
-examples of the work I have the ability to show.
+![client logos](/content/clientlogos.gif)
 
  - Jaguar (<https://www.jaguar.com>)
  - Land Rover (<https://www.landrover.com>)
@@ -52,6 +51,9 @@ examples of the work I have the ability to show.
  - Arrow Electronics (<https://www.arrow.com>) _[Blog post](/blog/2016/01/08/arrow-electronics-the-global-component-provider/)_
  - Freud Communications (<http://www.freud.com>), _International Communications Company_
  - Argus Media (<http://www.argusmedia.com>)
+
+You can take a look at my [projects category](/blog/category/project/) to see a few 
+examples of the work I have the ability to show.
 
 ## Recommendations
 

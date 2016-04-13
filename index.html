@@ -4,6 +4,7 @@ layout: master
 description: maker of stuff, often webby related, daddy and blessed to have a wife that makes lots of cakes mmmm
 ---
 {% for post in site.posts limit:1 %}
+<h1 id="homeHeader">Dave Taylor - Lead/Senior HTML5 and NodeJs Developer</h1>
 <div class="postheader">
     <h1>
         <a href="{{ post.url }}">{{ post.title }}</a>
@@ -22,7 +23,6 @@ description: maker of stuff, often webby related, daddy and blessed to have a wi
 </div>
 {% endfor %}
 <div id="contentWrapper">
-    <h1 id="homeHeader">Dave Taylor - Lead/Senior HTML5 and NodeJs Developer</h1>
     <section id="content" class="mod-blogPosts">
         {% include blog-posts.html %}
     </section>
