@@ -33,8 +33,7 @@ Get in touch and let's have a chat.
 I've been involved with a variety of clients ranging from individuals to
 government organisations.
 
-You can take a look at my [showreels](/blog/category/showreel/) 
-or the [projects category](/blog/category/project/) to see a few 
+You can take a look at my [projects category](/blog/category/project/) to see a few 
 examples of the work I have the ability to show.
 
  - Jaguar (<https://www.jaguar.com>)
@@ -67,7 +66,6 @@ Hopefully they will also demonstrate that I would bring value to your project.
 
 “Having worked with Dave on various projects for both small and multinational clients I / we can highly recommend him. Dave has excellent technical / development skills and is very much at the cutting edge of new languages and methodologies. During his time working with ESZ Consulting he has successfully completed highly technical projects spanning from a few months to a few years! He is a valuable front end developer and an asset to any development team. Look forward to working with him again soon on the next project!”
 
-February 24, 2015
 
 ### [Sarah Evison](http://uk.linkedin.com/pub/sarah-evison/1/9a2/7a0), Managing Partner, [United Studios](http://unitedstudios.com)
 
@@ -75,19 +73,16 @@ February 24, 2015
 
 When I have a project worthy of his talent, he's first on my list!”
 
-October, 2012
 
 ### [Rob Oubridge](http://www.linkedin.com/pub/rob-oubridge/1/167/845), Founder, Aqueduct
 
 “Dave is an extremely talented front-end developer - without exception the most knowledgable and advanced in his area that we have ever worked with. In addition, Dave is a cohesive team member, widely popular with his colleagues and always inspiring quality, exploration and innovation. One of the true 'greats' we've had the pleasure to work with - I cannot recommend Dave highly enough either as a professional or an individual.”
 
-February, 2012
 
 ### [Guillaume Buat-Ménard](http://www.linkedin.com/in/buatmenard), Technical Director, [TMW London](http://www.tmw.co.uk)
 
 “David is an outstanding developer combining great coding skills, broad knowledge, agency mindset for delivery and wisdom. Dave is passionate about his craft and constantly improving frameworks, standards and is very active in the open source community, he is one of the very best developers I have worked with over the last 15 years.”
 
-February, 2012
 
 ### [John Bown](http://www.linkedin.com/in/johnbown), Digital Operations Director, Aqueduct
 
@@ -95,7 +90,6 @@ February, 2012
 
 Hopefully we work together again soon!”
 
-March, 2012
 
 
 ## What team-mates are saying
@@ -104,19 +98,16 @@ March, 2012
 
 Dave came in and very quickly picked up tasks helping us during a large front end redesign. I think I can say anything that needed to be done, he could handle it, and it landed in our app working first time, looking good
 
-February 2015
 
 ### [Daniel Govan](http://uk.linkedin.com/pub/daniel-govan/1/751/922/), Senior Interactive Web Developer, [VML London](http://london.vml.com)
 
 I've only worked with a couple of Ninja-class developers and Dave is one of them. In addition to his mastery of the modern front-end stack he's also great at teaching and passing on the knowledge, and his his time at VML has made a lasting impression on the department. Only wish he could have stayed longer!
 
-May 2013
 
 ### [Katya Menshikova](http://uk.linkedin.com/in/katyamenshikova/), Producer at [VML London](http://london.vml.com)
 
 Dave is an outstanding developer - proactive, fast, and adhering to best practice. Nothing fazes him; he'll take on almost any front-end development challenge and he'll do it with a smile on his face. Dave is continuously expanding his knowledge and what's more, shares it with his colleagues, which is an inspiration to see. He made a contribution to our front-end dev department that was beyond his job description and contractor role - much appreciated and admired by the rest of the team. Dave was an absolute joy to work with and I'd work with him again any day.
 
-May 2013
 
 
 ## What Clients are saying
@@ -125,7 +116,6 @@ May 2013
 
 I had the pleasure of meeting Dave when he was assigned to one of my large scale development projects. During this time he successfully completed a multitude of development tasks. Dave communicates well and is not afraid to question the logic behind business requests. I would welcome the opportunity to work with Dave in the future, he is an asset to any team or organisation.
 
-May 2013
 
 
 
