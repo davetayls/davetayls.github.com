@@ -1796,11 +1796,12 @@ tr:nth-child(even) td {
 .client-logos img {
   display: block;
   max-width: 980px;
+  width: 100%;
   height: auto;
   margin: 0 auto;
 }
 
-/* line 31 : /Users/davetayls/projects/davetayls.github.com/_stylus/components/client-logos.styl */
+/* line 32 : /Users/davetayls/projects/davetayls.github.com/_stylus/components/client-logos.styl */
 
 /* line 2 : /Users/davetayls/projects/davetayls.github.com/_stylus/components/connectWithMe.styl */
 

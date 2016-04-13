@@ -2,28 +2,22 @@
 layout: master
 portfolio: small
 ---
+<div class="postheader">
+  <h1>
+    <a href="{{ page.url }}">{{ page.title }}</a>
+    {% if page.date %}
+    <time datetime="{{ page.date | date_to_xmlschema }}">
+      {{ page.date | date:"%b %d %Y" }}
+    </time>
+    {% endif %}
+  </h1>
+  {% if page.postimage %}
+  <div class="postimage" style="background-image: url({{ page.postimage }});"></div>
+  {% else %}
+  <div class="postimage" style="background-image: url({{ site.postimage_default }});"></div>
+  {% endif %}
+</div>
 <div id="contentWrapper">
-  <div class="postheader">
-    <h1>
-      <a href="{{ page.url }}">{{ page.title }}</a>
-      {% if page.date %}
-      <time datetime="{{ page.date | date_to_xmlschema }}">
-        {{ page.date | date:"%b %d %Y" }}
-      </time>
-      {% endif %}
-    </h1>
-    <p class="postimage">
-      {% if page.postimage %}
-      <img src="{{ page.postimage }}" alt="{{post.title}}"/>
-      {% else %}
-      <img src="{{site.postimage_default}}" alt="{{post.title}}"/>
-      {% endif %}
-    </p>
-
-    <p class="postheader__comment">
-      <a href="#disqus_thread" data-disqus-identifier="{{ page.id }}">Comment</a>
-    </p>
-  </div>
   <div id="content">
     {% if page.description %}
     <h2>{{ page.description }}</h2>
