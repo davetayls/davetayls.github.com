@@ -45,11 +45,68 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
+	var debounce = __webpack_require__(8);
 	var $ = __webpack_require__(1);
+	window.jQuery = $;
+	__webpack_require__(6);
+	__webpack_require__(7);
 	var css = __webpack_require__(2);
+	var Waypoint = window.Waypoint;
+	var $pageHeader = $('.PageHeader');
+	var PAGE_HEADER_COLLAPSED_CLASS = 'PageHeader--collapsed';
+	var $aboutMeAside = $('.AboutMeAside');
+	var ABOUT_ME_ASIDE_STICKY = 'AboutMeAside--sticky';
+	var ABOUT_ME_ASIDE_BOTTOM_CLASS = 'AboutMeAside--bottom';
+	var $workWithMeFooter = $('.WorkWithMeFooter');
 	$('pre>code').parent().addClass('prettyprint');
 	window.prettyPrint();
-	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJpbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0EsSUFBTyxDQUFDLFdBQVcsUUFBUSxDQUFDLENBQUM7QUFDN0IsSUFBSSxHQUFHLEdBQUcsT0FBTyxDQUFDLGFBQWEsQ0FBQyxDQUFDO0FBR2pDLENBQUMsQ0FBQyxVQUFVLENBQUMsQ0FBQyxNQUFNLEVBQUUsQ0FBQyxRQUFRLENBQUMsYUFBYSxDQUFDLENBQUM7QUFFekMsTUFBTyxDQUFDLFdBQVcsRUFBRSxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiXG5pbXBvcnQgJCA9IHJlcXVpcmUoJ2pxdWVyeScpO1xudmFyIGNzcyA9IHJlcXVpcmUoJy4vaW5kZXguY3NzJyk7XG5cblxuJCgncHJlPmNvZGUnKS5wYXJlbnQoKS5hZGRDbGFzcygncHJldHR5cHJpbnQnKTtcblxuKDxhbnk+d2luZG93KS5wcmV0dHlQcmludCgpO1xuIl19
+	$(window).resize(debounce(function () {
+	    console.log('resize');
+	    Waypoint.refreshAll();
+	}, 40));
+	var contentWaypoint = new Waypoint({
+	    element: document.getElementById('content'),
+	    offset: 90,
+	    handler: function (direction) {
+	        switch (direction) {
+	            case 'up':
+	                $pageHeader.removeClass(PAGE_HEADER_COLLAPSED_CLASS);
+	                break;
+	            case 'down':
+	                $pageHeader.addClass(PAGE_HEADER_COLLAPSED_CLASS);
+	                break;
+	        }
+	    }
+	});
+	var aboutSticky = new Waypoint({
+	    element: $aboutMeAside[0],
+	    offset: 110,
+	    handler: function (direction) {
+	        switch (direction) {
+	            case 'up':
+	                $aboutMeAside.removeClass(ABOUT_ME_ASIDE_STICKY);
+	                break;
+	            case 'down':
+	                $aboutMeAside.addClass(ABOUT_ME_ASIDE_STICKY);
+	                break;
+	        }
+	    }
+	});
+	var workWithMeFooter = new Waypoint({
+	    element: $workWithMeFooter[0],
+	    offset: '100%',
+	    handler: function (direction) {
+	        switch (direction) {
+	            case 'up':
+	                $aboutMeAside.removeClass(ABOUT_ME_ASIDE_BOTTOM_CLASS);
+	                break;
+	            case 'down':
+	                $aboutMeAside.addClass(ABOUT_ME_ASIDE_BOTTOM_CLASS);
+	                break;
+	        }
+	    }
+	});
+	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJpbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0EsSUFBTyxRQUFRLFdBQVcsaUJBQWlCLENBQUMsQ0FBQztBQUM3QyxJQUFPLENBQUMsV0FBVyxRQUFRLENBQUMsQ0FBQztBQUN2QixNQUFPLENBQUMsTUFBTSxHQUFHLENBQUMsQ0FBQztBQUV6QixPQUFPLENBQUMscUNBQXFDLENBQUMsQ0FBQztBQUMvQyxPQUFPLENBQUMsZ0NBQWdDLENBQUMsQ0FBQztBQUUxQyxJQUFJLEdBQUcsR0FBRyxPQUFPLENBQUMsYUFBYSxDQUFDLENBQUM7QUFFakMsSUFBTSxRQUFRLEdBQVMsTUFBTyxDQUFDLFFBQVEsQ0FBQztBQUV4QyxJQUFNLFdBQVcsR0FBRyxDQUFDLENBQUMsYUFBYSxDQUFDLENBQUM7QUFDckMsSUFBTSwyQkFBMkIsR0FBRyx1QkFBdUIsQ0FBQztBQUU1RCxJQUFNLGFBQWEsR0FBRyxDQUFDLENBQUMsZUFBZSxDQUFDLENBQUM7QUFDekMsSUFBTSxxQkFBcUIsR0FBRyxzQkFBc0IsQ0FBQztBQUNyRCxJQUFNLDJCQUEyQixHQUFHLHNCQUFzQixDQUFDO0FBRTNELElBQU0saUJBQWlCLEdBQUcsQ0FBQyxDQUFDLG1CQUFtQixDQUFDLENBQUM7QUFFakQsQ0FBQyxDQUFDLFVBQVUsQ0FBQyxDQUFDLE1BQU0sRUFBRSxDQUFDLFFBQVEsQ0FBQyxhQUFhLENBQUMsQ0FBQztBQUV6QyxNQUFPLENBQUMsV0FBVyxFQUFFLENBQUM7QUFFNUIsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxDQUFDLE1BQU0sQ0FBQyxRQUFRLENBQUM7SUFDeEIsT0FBTyxDQUFDLEdBQUcsQ0FBQyxRQUFRLENBQUMsQ0FBQztJQUN0QixRQUFRLENBQUMsVUFBVSxFQUFFLENBQUM7QUFDeEIsQ0FBQyxFQUFFLEVBQUUsQ0FBQyxDQUFDLENBQUM7QUFHUixJQUFNLGVBQWUsR0FBRyxJQUFJLFFBQVEsQ0FBQztJQUNuQyxPQUFPLEVBQUUsUUFBUSxDQUFDLGNBQWMsQ0FBQyxTQUFTLENBQUM7SUFDM0MsTUFBTSxFQUFFLEVBQUU7SUFDVixPQUFPLEVBQUUsVUFBUyxTQUFhO1FBQzdCLE1BQU0sQ0FBQyxDQUFDLFNBQVMsQ0FBQyxDQUFDLENBQUM7WUFDbEIsS0FBSyxJQUFJO2dCQUNQLFdBQVcsQ0FBQyxXQUFXLENBQUMsMkJBQTJCLENBQUMsQ0FBQztnQkFDckQsS0FBSyxDQUFDO1lBQ1IsS0FBSyxNQUFNO2dCQUNULFdBQVcsQ0FBQyxRQUFRLENBQUMsMkJBQTJCLENBQUMsQ0FBQztnQkFDbEQsS0FBSyxDQUFDO1FBQ1YsQ0FBQztJQUNILENBQUM7Q0FDRixDQUFDLENBQUM7QUFFSCxJQUFNLFdBQVcsR0FBRyxJQUFJLFFBQVEsQ0FBQztJQUMvQixPQUFPLEVBQUUsYUFBYSxDQUFDLENBQUMsQ0FBQztJQUN6QixNQUFNLEVBQUUsR0FBRztJQUNYLE9BQU8sRUFBRSxVQUFTLFNBQWE7UUFDN0IsTUFBTSxDQUFDLENBQUMsU0FBUyxDQUFDLENBQUMsQ0FBQztZQUNsQixLQUFLLElBQUk7Z0JBQ1AsYUFBYSxDQUFDLFdBQVcsQ0FBQyxxQkFBcUIsQ0FBQyxDQUFDO2dCQUNqRCxLQUFLLENBQUM7WUFDUixLQUFLLE1BQU07Z0JBQ1QsYUFBYSxDQUFDLFFBQVEsQ0FBQyxxQkFBcUIsQ0FBQyxDQUFDO2dCQUM5QyxLQUFLLENBQUM7UUFDVixDQUFDO0lBQ0gsQ0FBQztDQUNGLENBQUMsQ0FBQztBQUVILElBQU0sZ0JBQWdCLEdBQUcsSUFBSSxRQUFRLENBQUM7SUFDcEMsT0FBTyxFQUFFLGlCQUFpQixDQUFDLENBQUMsQ0FBQztJQUM3QixNQUFNLEVBQUUsTUFBTTtJQUNkLE9BQU8sRUFBRSxVQUFTLFNBQWE7UUFDN0IsTUFBTSxDQUFDLENBQUMsU0FBUyxDQUFDLENBQUMsQ0FBQztZQUNsQixLQUFLLElBQUk7Z0JBQ1AsYUFBYSxDQUFDLFdBQVcsQ0FBQywyQkFBMkIsQ0FBQyxDQUFDO2dCQUN2RCxLQUFLLENBQUM7WUFDUixLQUFLLE1BQU07Z0JBQ1QsYUFBYSxDQUFDLFFBQVEsQ0FBQywyQkFBMkIsQ0FBQyxDQUFDO2dCQUNwRCxLQUFLLENBQUM7UUFDVixDQUFDO0lBQ0gsQ0FBQztDQUNGLENBQUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIlxuaW1wb3J0IGRlYm91bmNlID0gcmVxdWlyZSgnbG9kYXNoLmRlYm91bmNlJyk7XG5pbXBvcnQgJCA9IHJlcXVpcmUoJ2pxdWVyeScpO1xuKDxhbnk+d2luZG93KS5qUXVlcnkgPSAkO1xuXG5yZXF1aXJlKCd3YXlwb2ludHMvbGliL25vZnJhbWV3b3JrLndheXBvaW50cycpO1xucmVxdWlyZSgnd2F5cG9pbnRzL2xpYi9zaG9ydGN1dHMvc3RpY2t5Jyk7XG5cbnZhciBjc3MgPSByZXF1aXJlKCcuL2luZGV4LmNzcycpO1xuXG5jb25zdCBXYXlwb2ludCA9ICg8YW55PndpbmRvdykuV2F5cG9pbnQ7XG5cbmNvbnN0ICRwYWdlSGVhZGVyID0gJCgnLlBhZ2VIZWFkZXInKTtcbmNvbnN0IFBBR0VfSEVBREVSX0NPTExBUFNFRF9DTEFTUyA9ICdQYWdlSGVhZGVyLS1jb2xsYXBzZWQnO1xuXG5jb25zdCAkYWJvdXRNZUFzaWRlID0gJCgnLkFib3V0TWVBc2lkZScpO1xuY29uc3QgQUJPVVRfTUVfQVNJREVfU1RJQ0tZID0gJ0Fib3V0TWVBc2lkZS0tc3RpY2t5JztcbmNvbnN0IEFCT1VUX01FX0FTSURFX0JPVFRPTV9DTEFTUyA9ICdBYm91dE1lQXNpZGUtLWJvdHRvbSc7XG5cbmNvbnN0ICR3b3JrV2l0aE1lRm9vdGVyID0gJCgnLldvcmtXaXRoTWVGb290ZXInKTtcblxuJCgncHJlPmNvZGUnKS5wYXJlbnQoKS5hZGRDbGFzcygncHJldHR5cHJpbnQnKTtcblxuKDxhbnk+d2luZG93KS5wcmV0dHlQcmludCgpO1xuXG4kKHdpbmRvdykucmVzaXplKGRlYm91bmNlKGZ1bmN0aW9uKCkge1xuICBjb25zb2xlLmxvZygncmVzaXplJyk7XG4gIFdheXBvaW50LnJlZnJlc2hBbGwoKTtcbn0sIDQwKSk7XG5cblxuY29uc3QgY29udGVudFdheXBvaW50ID0gbmV3IFdheXBvaW50KHtcbiAgZWxlbWVudDogZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2NvbnRlbnQnKSxcbiAgb2Zmc2V0OiA5MCxcbiAgaGFuZGxlcjogZnVuY3Rpb24oZGlyZWN0aW9uOmFueSkge1xuICAgIHN3aXRjaCAoZGlyZWN0aW9uKSB7XG4gICAgICBjYXNlICd1cCc6XG4gICAgICAgICRwYWdlSGVhZGVyLnJlbW92ZUNsYXNzKFBBR0VfSEVBREVSX0NPTExBUFNFRF9DTEFTUyk7XG4gICAgICAgIGJyZWFrO1xuICAgICAgY2FzZSAnZG93bic6XG4gICAgICAgICRwYWdlSGVhZGVyLmFkZENsYXNzKFBBR0VfSEVBREVSX0NPTExBUFNFRF9DTEFTUyk7XG4gICAgICAgIGJyZWFrO1xuICAgIH1cbiAgfVxufSk7XG5cbmNvbnN0IGFib3V0U3RpY2t5ID0gbmV3IFdheXBvaW50KHtcbiAgZWxlbWVudDogJGFib3V0TWVBc2lkZVswXSxcbiAgb2Zmc2V0OiAxMTAsXG4gIGhhbmRsZXI6IGZ1bmN0aW9uKGRpcmVjdGlvbjphbnkpIHtcbiAgICBzd2l0Y2ggKGRpcmVjdGlvbikge1xuICAgICAgY2FzZSAndXAnOlxuICAgICAgICAkYWJvdXRNZUFzaWRlLnJlbW92ZUNsYXNzKEFCT1VUX01FX0FTSURFX1NUSUNLWSk7XG4gICAgICAgIGJyZWFrO1xuICAgICAgY2FzZSAnZG93bic6XG4gICAgICAgICRhYm91dE1lQXNpZGUuYWRkQ2xhc3MoQUJPVVRfTUVfQVNJREVfU1RJQ0tZKTtcbiAgICAgICAgYnJlYWs7XG4gICAgfVxuICB9XG59KTtcblxuY29uc3Qgd29ya1dpdGhNZUZvb3RlciA9IG5ldyBXYXlwb2ludCh7XG4gIGVsZW1lbnQ6ICR3b3JrV2l0aE1lRm9vdGVyWzBdLFxuICBvZmZzZXQ6ICcxMDAlJyxcbiAgaGFuZGxlcjogZnVuY3Rpb24oZGlyZWN0aW9uOmFueSkge1xuICAgIHN3aXRjaCAoZGlyZWN0aW9uKSB7XG4gICAgICBjYXNlICd1cCc6XG4gICAgICAgICRhYm91dE1lQXNpZGUucmVtb3ZlQ2xhc3MoQUJPVVRfTUVfQVNJREVfQk9UVE9NX0NMQVNTKTtcbiAgICAgICAgYnJlYWs7XG4gICAgICBjYXNlICdkb3duJzpcbiAgICAgICAgJGFib3V0TWVBc2lkZS5hZGRDbGFzcyhBQk9VVF9NRV9BU0lERV9CT1RUT01fQ0xBU1MpO1xuICAgICAgICBicmVhaztcbiAgICB9XG4gIH1cbn0pO1xuIl19
 
 /***/ },
 /* 1 */
@@ -9904,6 +9961,1234 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */
+/***/ function(module, exports) {
+
+	/*!
+	Waypoints - 4.0.0
+	Copyright © 2011-2015 Caleb Troughton
+	Licensed under the MIT license.
+	https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
+	*/
+	(function() {
+	  'use strict'
+
+	  var keyCounter = 0
+	  var allWaypoints = {}
+
+	  /* http://imakewebthings.com/waypoints/api/waypoint */
+	  function Waypoint(options) {
+	    if (!options) {
+	      throw new Error('No options passed to Waypoint constructor')
+	    }
+	    if (!options.element) {
+	      throw new Error('No element option passed to Waypoint constructor')
+	    }
+	    if (!options.handler) {
+	      throw new Error('No handler option passed to Waypoint constructor')
+	    }
+
+	    this.key = 'waypoint-' + keyCounter
+	    this.options = Waypoint.Adapter.extend({}, Waypoint.defaults, options)
+	    this.element = this.options.element
+	    this.adapter = new Waypoint.Adapter(this.element)
+	    this.callback = options.handler
+	    this.axis = this.options.horizontal ? 'horizontal' : 'vertical'
+	    this.enabled = this.options.enabled
+	    this.triggerPoint = null
+	    this.group = Waypoint.Group.findOrCreate({
+	      name: this.options.group,
+	      axis: this.axis
+	    })
+	    this.context = Waypoint.Context.findOrCreateByElement(this.options.context)
+
+	    if (Waypoint.offsetAliases[this.options.offset]) {
+	      this.options.offset = Waypoint.offsetAliases[this.options.offset]
+	    }
+	    this.group.add(this)
+	    this.context.add(this)
+	    allWaypoints[this.key] = this
+	    keyCounter += 1
+	  }
+
+	  /* Private */
+	  Waypoint.prototype.queueTrigger = function(direction) {
+	    this.group.queueTrigger(this, direction)
+	  }
+
+	  /* Private */
+	  Waypoint.prototype.trigger = function(args) {
+	    if (!this.enabled) {
+	      return
+	    }
+	    if (this.callback) {
+	      this.callback.apply(this, args)
+	    }
+	  }
+
+	  /* Public */
+	  /* http://imakewebthings.com/waypoints/api/destroy */
+	  Waypoint.prototype.destroy = function() {
+	    this.context.remove(this)
+	    this.group.remove(this)
+	    delete allWaypoints[this.key]
+	  }
+
+	  /* Public */
+	  /* http://imakewebthings.com/waypoints/api/disable */
+	  Waypoint.prototype.disable = function() {
+	    this.enabled = false
+	    return this
+	  }
+
+	  /* Public */
+	  /* http://imakewebthings.com/waypoints/api/enable */
+	  Waypoint.prototype.enable = function() {
+	    this.context.refresh()
+	    this.enabled = true
+	    return this
+	  }
+
+	  /* Public */
+	  /* http://imakewebthings.com/waypoints/api/next */
+	  Waypoint.prototype.next = function() {
+	    return this.group.next(this)
+	  }
+
+	  /* Public */
+	  /* http://imakewebthings.com/waypoints/api/previous */
+	  Waypoint.prototype.previous = function() {
+	    return this.group.previous(this)
+	  }
+
+	  /* Private */
+	  Waypoint.invokeAll = function(method) {
+	    var allWaypointsArray = []
+	    for (var waypointKey in allWaypoints) {
+	      allWaypointsArray.push(allWaypoints[waypointKey])
+	    }
+	    for (var i = 0, end = allWaypointsArray.length; i < end; i++) {
+	      allWaypointsArray[i][method]()
+	    }
+	  }
+
+	  /* Public */
+	  /* http://imakewebthings.com/waypoints/api/destroy-all */
+	  Waypoint.destroyAll = function() {
+	    Waypoint.invokeAll('destroy')
+	  }
+
+	  /* Public */
+	  /* http://imakewebthings.com/waypoints/api/disable-all */
+	  Waypoint.disableAll = function() {
+	    Waypoint.invokeAll('disable')
+	  }
+
+	  /* Public */
+	  /* http://imakewebthings.com/waypoints/api/enable-all */
+	  Waypoint.enableAll = function() {
+	    Waypoint.invokeAll('enable')
+	  }
+
+	  /* Public */
+	  /* http://imakewebthings.com/waypoints/api/refresh-all */
+	  Waypoint.refreshAll = function() {
+	    Waypoint.Context.refreshAll()
+	  }
+
+	  /* Public */
+	  /* http://imakewebthings.com/waypoints/api/viewport-height */
+	  Waypoint.viewportHeight = function() {
+	    return window.innerHeight || document.documentElement.clientHeight
+	  }
+
+	  /* Public */
+	  /* http://imakewebthings.com/waypoints/api/viewport-width */
+	  Waypoint.viewportWidth = function() {
+	    return document.documentElement.clientWidth
+	  }
+
+	  Waypoint.adapters = []
+
+	  Waypoint.defaults = {
+	    context: window,
+	    continuous: true,
+	    enabled: true,
+	    group: 'default',
+	    horizontal: false,
+	    offset: 0
+	  }
+
+	  Waypoint.offsetAliases = {
+	    'bottom-in-view': function() {
+	      return this.context.innerHeight() - this.adapter.outerHeight()
+	    },
+	    'right-in-view': function() {
+	      return this.context.innerWidth() - this.adapter.outerWidth()
+	    }
+	  }
+
+	  window.Waypoint = Waypoint
+	}())
+	;(function() {
+	  'use strict'
+
+	  function requestAnimationFrameShim(callback) {
+	    window.setTimeout(callback, 1000 / 60)
+	  }
+
+	  var keyCounter = 0
+	  var contexts = {}
+	  var Waypoint = window.Waypoint
+	  var oldWindowLoad = window.onload
+
+	  /* http://imakewebthings.com/waypoints/api/context */
+	  function Context(element) {
+	    this.element = element
+	    this.Adapter = Waypoint.Adapter
+	    this.adapter = new this.Adapter(element)
+	    this.key = 'waypoint-context-' + keyCounter
+	    this.didScroll = false
+	    this.didResize = false
+	    this.oldScroll = {
+	      x: this.adapter.scrollLeft(),
+	      y: this.adapter.scrollTop()
+	    }
+	    this.waypoints = {
+	      vertical: {},
+	      horizontal: {}
+	    }
+
+	    element.waypointContextKey = this.key
+	    contexts[element.waypointContextKey] = this
+	    keyCounter += 1
+
+	    this.createThrottledScrollHandler()
+	    this.createThrottledResizeHandler()
+	  }
+
+	  /* Private */
+	  Context.prototype.add = function(waypoint) {
+	    var axis = waypoint.options.horizontal ? 'horizontal' : 'vertical'
+	    this.waypoints[axis][waypoint.key] = waypoint
+	    this.refresh()
+	  }
+
+	  /* Private */
+	  Context.prototype.checkEmpty = function() {
+	    var horizontalEmpty = this.Adapter.isEmptyObject(this.waypoints.horizontal)
+	    var verticalEmpty = this.Adapter.isEmptyObject(this.waypoints.vertical)
+	    if (horizontalEmpty && verticalEmpty) {
+	      this.adapter.off('.waypoints')
+	      delete contexts[this.key]
+	    }
+	  }
+
+	  /* Private */
+	  Context.prototype.createThrottledResizeHandler = function() {
+	    var self = this
+
+	    function resizeHandler() {
+	      self.handleResize()
+	      self.didResize = false
+	    }
+
+	    this.adapter.on('resize.waypoints', function() {
+	      if (!self.didResize) {
+	        self.didResize = true
+	        Waypoint.requestAnimationFrame(resizeHandler)
+	      }
+	    })
+	  }
+
+	  /* Private */
+	  Context.prototype.createThrottledScrollHandler = function() {
+	    var self = this
+	    function scrollHandler() {
+	      self.handleScroll()
+	      self.didScroll = false
+	    }
+
+	    this.adapter.on('scroll.waypoints', function() {
+	      if (!self.didScroll || Waypoint.isTouch) {
+	        self.didScroll = true
+	        Waypoint.requestAnimationFrame(scrollHandler)
+	      }
+	    })
+	  }
+
+	  /* Private */
+	  Context.prototype.handleResize = function() {
+	    Waypoint.Context.refreshAll()
+	  }
+
+	  /* Private */
+	  Context.prototype.handleScroll = function() {
+	    var triggeredGroups = {}
+	    var axes = {
+	      horizontal: {
+	        newScroll: this.adapter.scrollLeft(),
+	        oldScroll: this.oldScroll.x,
+	        forward: 'right',
+	        backward: 'left'
+	      },
+	      vertical: {
+	        newScroll: this.adapter.scrollTop(),
+	        oldScroll: this.oldScroll.y,
+	        forward: 'down',
+	        backward: 'up'
+	      }
+	    }
+
+	    for (var axisKey in axes) {
+	      var axis = axes[axisKey]
+	      var isForward = axis.newScroll > axis.oldScroll
+	      var direction = isForward ? axis.forward : axis.backward
+
+	      for (var waypointKey in this.waypoints[axisKey]) {
+	        var waypoint = this.waypoints[axisKey][waypointKey]
+	        var wasBeforeTriggerPoint = axis.oldScroll < waypoint.triggerPoint
+	        var nowAfterTriggerPoint = axis.newScroll >= waypoint.triggerPoint
+	        var crossedForward = wasBeforeTriggerPoint && nowAfterTriggerPoint
+	        var crossedBackward = !wasBeforeTriggerPoint && !nowAfterTriggerPoint
+	        if (crossedForward || crossedBackward) {
+	          waypoint.queueTrigger(direction)
+	          triggeredGroups[waypoint.group.id] = waypoint.group
+	        }
+	      }
+	    }
+
+	    for (var groupKey in triggeredGroups) {
+	      triggeredGroups[groupKey].flushTriggers()
+	    }
+
+	    this.oldScroll = {
+	      x: axes.horizontal.newScroll,
+	      y: axes.vertical.newScroll
+	    }
+	  }
+
+	  /* Private */
+	  Context.prototype.innerHeight = function() {
+	    /*eslint-disable eqeqeq */
+	    if (this.element == this.element.window) {
+	      return Waypoint.viewportHeight()
+	    }
+	    /*eslint-enable eqeqeq */
+	    return this.adapter.innerHeight()
+	  }
+
+	  /* Private */
+	  Context.prototype.remove = function(waypoint) {
+	    delete this.waypoints[waypoint.axis][waypoint.key]
+	    this.checkEmpty()
+	  }
+
+	  /* Private */
+	  Context.prototype.innerWidth = function() {
+	    /*eslint-disable eqeqeq */
+	    if (this.element == this.element.window) {
+	      return Waypoint.viewportWidth()
+	    }
+	    /*eslint-enable eqeqeq */
+	    return this.adapter.innerWidth()
+	  }
+
+	  /* Public */
+	  /* http://imakewebthings.com/waypoints/api/context-destroy */
+	  Context.prototype.destroy = function() {
+	    var allWaypoints = []
+	    for (var axis in this.waypoints) {
+	      for (var waypointKey in this.waypoints[axis]) {
+	        allWaypoints.push(this.waypoints[axis][waypointKey])
+	      }
+	    }
+	    for (var i = 0, end = allWaypoints.length; i < end; i++) {
+	      allWaypoints[i].destroy()
+	    }
+	  }
+
+	  /* Public */
+	  /* http://imakewebthings.com/waypoints/api/context-refresh */
+	  Context.prototype.refresh = function() {
+	    /*eslint-disable eqeqeq */
+	    var isWindow = this.element == this.element.window
+	    /*eslint-enable eqeqeq */
+	    var contextOffset = isWindow ? undefined : this.adapter.offset()
+	    var triggeredGroups = {}
+	    var axes
+
+	    this.handleScroll()
+	    axes = {
+	      horizontal: {
+	        contextOffset: isWindow ? 0 : contextOffset.left,
+	        contextScroll: isWindow ? 0 : this.oldScroll.x,
+	        contextDimension: this.innerWidth(),
+	        oldScroll: this.oldScroll.x,
+	        forward: 'right',
+	        backward: 'left',
+	        offsetProp: 'left'
+	      },
+	      vertical: {
+	        contextOffset: isWindow ? 0 : contextOffset.top,
+	        contextScroll: isWindow ? 0 : this.oldScroll.y,
+	        contextDimension: this.innerHeight(),
+	        oldScroll: this.oldScroll.y,
+	        forward: 'down',
+	        backward: 'up',
+	        offsetProp: 'top'
+	      }
+	    }
+
+	    for (var axisKey in axes) {
+	      var axis = axes[axisKey]
+	      for (var waypointKey in this.waypoints[axisKey]) {
+	        var waypoint = this.waypoints[axisKey][waypointKey]
+	        var adjustment = waypoint.options.offset
+	        var oldTriggerPoint = waypoint.triggerPoint
+	        var elementOffset = 0
+	        var freshWaypoint = oldTriggerPoint == null
+	        var contextModifier, wasBeforeScroll, nowAfterScroll
+	        var triggeredBackward, triggeredForward
+
+	        if (waypoint.element !== waypoint.element.window) {
+	          elementOffset = waypoint.adapter.offset()[axis.offsetProp]
+	        }
+
+	        if (typeof adjustment === 'function') {
+	          adjustment = adjustment.apply(waypoint)
+	        }
+	        else if (typeof adjustment === 'string') {
+	          adjustment = parseFloat(adjustment)
+	          if (waypoint.options.offset.indexOf('%') > - 1) {
+	            adjustment = Math.ceil(axis.contextDimension * adjustment / 100)
+	          }
+	        }
+
+	        contextModifier = axis.contextScroll - axis.contextOffset
+	        waypoint.triggerPoint = elementOffset + contextModifier - adjustment
+	        wasBeforeScroll = oldTriggerPoint < axis.oldScroll
+	        nowAfterScroll = waypoint.triggerPoint >= axis.oldScroll
+	        triggeredBackward = wasBeforeScroll && nowAfterScroll
+	        triggeredForward = !wasBeforeScroll && !nowAfterScroll
+
+	        if (!freshWaypoint && triggeredBackward) {
+	          waypoint.queueTrigger(axis.backward)
+	          triggeredGroups[waypoint.group.id] = waypoint.group
+	        }
+	        else if (!freshWaypoint && triggeredForward) {
+	          waypoint.queueTrigger(axis.forward)
+	          triggeredGroups[waypoint.group.id] = waypoint.group
+	        }
+	        else if (freshWaypoint && axis.oldScroll >= waypoint.triggerPoint) {
+	          waypoint.queueTrigger(axis.forward)
+	          triggeredGroups[waypoint.group.id] = waypoint.group
+	        }
+	      }
+	    }
+
+	    Waypoint.requestAnimationFrame(function() {
+	      for (var groupKey in triggeredGroups) {
+	        triggeredGroups[groupKey].flushTriggers()
+	      }
+	    })
+
+	    return this
+	  }
+
+	  /* Private */
+	  Context.findOrCreateByElement = function(element) {
+	    return Context.findByElement(element) || new Context(element)
+	  }
+
+	  /* Private */
+	  Context.refreshAll = function() {
+	    for (var contextId in contexts) {
+	      contexts[contextId].refresh()
+	    }
+	  }
+
+	  /* Public */
+	  /* http://imakewebthings.com/waypoints/api/context-find-by-element */
+	  Context.findByElement = function(element) {
+	    return contexts[element.waypointContextKey]
+	  }
+
+	  window.onload = function() {
+	    if (oldWindowLoad) {
+	      oldWindowLoad()
+	    }
+	    Context.refreshAll()
+	  }
+
+	  Waypoint.requestAnimationFrame = function(callback) {
+	    var requestFn = window.requestAnimationFrame ||
+	      window.mozRequestAnimationFrame ||
+	      window.webkitRequestAnimationFrame ||
+	      requestAnimationFrameShim
+	    requestFn.call(window, callback)
+	  }
+	  Waypoint.Context = Context
+	}())
+	;(function() {
+	  'use strict'
+
+	  function byTriggerPoint(a, b) {
+	    return a.triggerPoint - b.triggerPoint
+	  }
+
+	  function byReverseTriggerPoint(a, b) {
+	    return b.triggerPoint - a.triggerPoint
+	  }
+
+	  var groups = {
+	    vertical: {},
+	    horizontal: {}
+	  }
+	  var Waypoint = window.Waypoint
+
+	  /* http://imakewebthings.com/waypoints/api/group */
+	  function Group(options) {
+	    this.name = options.name
+	    this.axis = options.axis
+	    this.id = this.name + '-' + this.axis
+	    this.waypoints = []
+	    this.clearTriggerQueues()
+	    groups[this.axis][this.name] = this
+	  }
+
+	  /* Private */
+	  Group.prototype.add = function(waypoint) {
+	    this.waypoints.push(waypoint)
+	  }
+
+	  /* Private */
+	  Group.prototype.clearTriggerQueues = function() {
+	    this.triggerQueues = {
+	      up: [],
+	      down: [],
+	      left: [],
+	      right: []
+	    }
+	  }
+
+	  /* Private */
+	  Group.prototype.flushTriggers = function() {
+	    for (var direction in this.triggerQueues) {
+	      var waypoints = this.triggerQueues[direction]
+	      var reverse = direction === 'up' || direction === 'left'
+	      waypoints.sort(reverse ? byReverseTriggerPoint : byTriggerPoint)
+	      for (var i = 0, end = waypoints.length; i < end; i += 1) {
+	        var waypoint = waypoints[i]
+	        if (waypoint.options.continuous || i === waypoints.length - 1) {
+	          waypoint.trigger([direction])
+	        }
+	      }
+	    }
+	    this.clearTriggerQueues()
+	  }
+
+	  /* Private */
+	  Group.prototype.next = function(waypoint) {
+	    this.waypoints.sort(byTriggerPoint)
+	    var index = Waypoint.Adapter.inArray(waypoint, this.waypoints)
+	    var isLast = index === this.waypoints.length - 1
+	    return isLast ? null : this.waypoints[index + 1]
+	  }
+
+	  /* Private */
+	  Group.prototype.previous = function(waypoint) {
+	    this.waypoints.sort(byTriggerPoint)
+	    var index = Waypoint.Adapter.inArray(waypoint, this.waypoints)
+	    return index ? this.waypoints[index - 1] : null
+	  }
+
+	  /* Private */
+	  Group.prototype.queueTrigger = function(waypoint, direction) {
+	    this.triggerQueues[direction].push(waypoint)
+	  }
+
+	  /* Private */
+	  Group.prototype.remove = function(waypoint) {
+	    var index = Waypoint.Adapter.inArray(waypoint, this.waypoints)
+	    if (index > -1) {
+	      this.waypoints.splice(index, 1)
+	    }
+	  }
+
+	  /* Public */
+	  /* http://imakewebthings.com/waypoints/api/first */
+	  Group.prototype.first = function() {
+	    return this.waypoints[0]
+	  }
+
+	  /* Public */
+	  /* http://imakewebthings.com/waypoints/api/last */
+	  Group.prototype.last = function() {
+	    return this.waypoints[this.waypoints.length - 1]
+	  }
+
+	  /* Private */
+	  Group.findOrCreate = function(options) {
+	    return groups[options.axis][options.name] || new Group(options)
+	  }
+
+	  Waypoint.Group = Group
+	}())
+	;(function() {
+	  'use strict'
+
+	  var Waypoint = window.Waypoint
+
+	  function isWindow(element) {
+	    return element === element.window
+	  }
+
+	  function getWindow(element) {
+	    if (isWindow(element)) {
+	      return element
+	    }
+	    return element.defaultView
+	  }
+
+	  function NoFrameworkAdapter(element) {
+	    this.element = element
+	    this.handlers = {}
+	  }
+
+	  NoFrameworkAdapter.prototype.innerHeight = function() {
+	    var isWin = isWindow(this.element)
+	    return isWin ? this.element.innerHeight : this.element.clientHeight
+	  }
+
+	  NoFrameworkAdapter.prototype.innerWidth = function() {
+	    var isWin = isWindow(this.element)
+	    return isWin ? this.element.innerWidth : this.element.clientWidth
+	  }
+
+	  NoFrameworkAdapter.prototype.off = function(event, handler) {
+	    function removeListeners(element, listeners, handler) {
+	      for (var i = 0, end = listeners.length - 1; i < end; i++) {
+	        var listener = listeners[i]
+	        if (!handler || handler === listener) {
+	          element.removeEventListener(listener)
+	        }
+	      }
+	    }
+
+	    var eventParts = event.split('.')
+	    var eventType = eventParts[0]
+	    var namespace = eventParts[1]
+	    var element = this.element
+
+	    if (namespace && this.handlers[namespace] && eventType) {
+	      removeListeners(element, this.handlers[namespace][eventType], handler)
+	      this.handlers[namespace][eventType] = []
+	    }
+	    else if (eventType) {
+	      for (var ns in this.handlers) {
+	        removeListeners(element, this.handlers[ns][eventType] || [], handler)
+	        this.handlers[ns][eventType] = []
+	      }
+	    }
+	    else if (namespace && this.handlers[namespace]) {
+	      for (var type in this.handlers[namespace]) {
+	        removeListeners(element, this.handlers[namespace][type], handler)
+	      }
+	      this.handlers[namespace] = {}
+	    }
+	  }
+
+	  /* Adapted from jQuery 1.x offset() */
+	  NoFrameworkAdapter.prototype.offset = function() {
+	    if (!this.element.ownerDocument) {
+	      return null
+	    }
+
+	    var documentElement = this.element.ownerDocument.documentElement
+	    var win = getWindow(this.element.ownerDocument)
+	    var rect = {
+	      top: 0,
+	      left: 0
+	    }
+
+	    if (this.element.getBoundingClientRect) {
+	      rect = this.element.getBoundingClientRect()
+	    }
+
+	    return {
+	      top: rect.top + win.pageYOffset - documentElement.clientTop,
+	      left: rect.left + win.pageXOffset - documentElement.clientLeft
+	    }
+	  }
+
+	  NoFrameworkAdapter.prototype.on = function(event, handler) {
+	    var eventParts = event.split('.')
+	    var eventType = eventParts[0]
+	    var namespace = eventParts[1] || '__default'
+	    var nsHandlers = this.handlers[namespace] = this.handlers[namespace] || {}
+	    var nsTypeList = nsHandlers[eventType] = nsHandlers[eventType] || []
+
+	    nsTypeList.push(handler)
+	    this.element.addEventListener(eventType, handler)
+	  }
+
+	  NoFrameworkAdapter.prototype.outerHeight = function(includeMargin) {
+	    var height = this.innerHeight()
+	    var computedStyle
+
+	    if (includeMargin && !isWindow(this.element)) {
+	      computedStyle = window.getComputedStyle(this.element)
+	      height += parseInt(computedStyle.marginTop, 10)
+	      height += parseInt(computedStyle.marginBottom, 10)
+	    }
+
+	    return height
+	  }
+
+	  NoFrameworkAdapter.prototype.outerWidth = function(includeMargin) {
+	    var width = this.innerWidth()
+	    var computedStyle
+
+	    if (includeMargin && !isWindow(this.element)) {
+	      computedStyle = window.getComputedStyle(this.element)
+	      width += parseInt(computedStyle.marginLeft, 10)
+	      width += parseInt(computedStyle.marginRight, 10)
+	    }
+
+	    return width
+	  }
+
+	  NoFrameworkAdapter.prototype.scrollLeft = function() {
+	    var win = getWindow(this.element)
+	    return win ? win.pageXOffset : this.element.scrollLeft
+	  }
+
+	  NoFrameworkAdapter.prototype.scrollTop = function() {
+	    var win = getWindow(this.element)
+	    return win ? win.pageYOffset : this.element.scrollTop
+	  }
+
+	  NoFrameworkAdapter.extend = function() {
+	    var args = Array.prototype.slice.call(arguments)
+
+	    function merge(target, obj) {
+	      if (typeof target === 'object' && typeof obj === 'object') {
+	        for (var key in obj) {
+	          if (obj.hasOwnProperty(key)) {
+	            target[key] = obj[key]
+	          }
+	        }
+	      }
+
+	      return target
+	    }
+
+	    for (var i = 1, end = args.length; i < end; i++) {
+	      merge(args[0], args[i])
+	    }
+	    return args[0]
+	  }
+
+	  NoFrameworkAdapter.inArray = function(element, array, i) {
+	    return array == null ? -1 : array.indexOf(element, i)
+	  }
+
+	  NoFrameworkAdapter.isEmptyObject = function(obj) {
+	    /* eslint no-unused-vars: 0 */
+	    for (var name in obj) {
+	      return false
+	    }
+	    return true
+	  }
+
+	  Waypoint.adapters.push({
+	    name: 'noframework',
+	    Adapter: NoFrameworkAdapter
+	  })
+	  Waypoint.Adapter = NoFrameworkAdapter
+	}())
+	;
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	/*!
+	Waypoints Sticky Element Shortcut - 4.0.0
+	Copyright © 2011-2015 Caleb Troughton
+	Licensed under the MIT license.
+	https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
+	*/
+	(function() {
+	  'use strict'
+
+	  var $ = window.jQuery
+	  var Waypoint = window.Waypoint
+
+	  /* http://imakewebthings.com/waypoints/shortcuts/sticky-elements */
+	  function Sticky(options) {
+	    this.options = $.extend({}, Waypoint.defaults, Sticky.defaults, options)
+	    this.element = this.options.element
+	    this.$element = $(this.element)
+	    this.createWrapper()
+	    this.createWaypoint()
+	  }
+
+	  /* Private */
+	  Sticky.prototype.createWaypoint = function() {
+	    var originalHandler = this.options.handler
+
+	    this.waypoint = new Waypoint($.extend({}, this.options, {
+	      element: this.wrapper,
+	      handler: $.proxy(function(direction) {
+	        var shouldBeStuck = this.options.direction.indexOf(direction) > -1
+	        var wrapperHeight = shouldBeStuck ? this.$element.outerHeight(true) : ''
+
+	        this.$wrapper.height(wrapperHeight)
+	        this.$element.toggleClass(this.options.stuckClass, shouldBeStuck)
+
+	        if (originalHandler) {
+	          originalHandler.call(this, direction)
+	        }
+	      }, this)
+	    }))
+	  }
+
+	  /* Private */
+	  Sticky.prototype.createWrapper = function() {
+	    if (this.options.wrapper) {
+	      this.$element.wrap(this.options.wrapper)
+	    }
+	    this.$wrapper = this.$element.parent()
+	    this.wrapper = this.$wrapper[0]
+	  }
+
+	  /* Public */
+	  Sticky.prototype.destroy = function() {
+	    if (this.$element.parent()[0] === this.wrapper) {
+	      this.waypoint.destroy()
+	      this.$element.removeClass(this.options.stuckClass)
+	      if (this.options.wrapper) {
+	        this.$element.unwrap()
+	      }
+	    }
+	  }
+
+	  Sticky.defaults = {
+	    wrapper: '<div class="sticky-wrapper" />',
+	    stuckClass: 'stuck',
+	    direction: 'down right'
+	  }
+
+	  Waypoint.Sticky = Sticky
+	}())
+	;
+
+/***/ },
+/* 8 */
+/***/ function(module, exports) {
+
+	/**
+	 * lodash 4.0.6 (Custom Build) <https://lodash.com/>
+	 * Build: `lodash modularize exports="npm" -o ./`
+	 * Copyright jQuery Foundation and other contributors <https://jquery.org/>
+	 * Released under MIT license <https://lodash.com/license>
+	 * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+	 * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+	 */
+
+	/** Used as the `TypeError` message for "Functions" methods. */
+	var FUNC_ERROR_TEXT = 'Expected a function';
+
+	/** Used as references for various `Number` constants. */
+	var NAN = 0 / 0;
+
+	/** `Object#toString` result references. */
+	var funcTag = '[object Function]',
+	    genTag = '[object GeneratorFunction]',
+	    symbolTag = '[object Symbol]';
+
+	/** Used to match leading and trailing whitespace. */
+	var reTrim = /^\s+|\s+$/g;
+
+	/** Used to detect bad signed hexadecimal string values. */
+	var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
+
+	/** Used to detect binary string values. */
+	var reIsBinary = /^0b[01]+$/i;
+
+	/** Used to detect octal string values. */
+	var reIsOctal = /^0o[0-7]+$/i;
+
+	/** Built-in method references without a dependency on `root`. */
+	var freeParseInt = parseInt;
+
+	/** Used for built-in method references. */
+	var objectProto = Object.prototype;
+
+	/**
+	 * Used to resolve the
+	 * [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
+	 * of values.
+	 */
+	var objectToString = objectProto.toString;
+
+	/* Built-in method references for those with the same name as other `lodash` methods. */
+	var nativeMax = Math.max,
+	    nativeMin = Math.min;
+
+	/**
+	 * Gets the timestamp of the number of milliseconds that have elapsed since
+	 * the Unix epoch (1 January 1970 00:00:00 UTC).
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 2.4.0
+	 * @type {Function}
+	 * @category Date
+	 * @returns {number} Returns the timestamp.
+	 * @example
+	 *
+	 * _.defer(function(stamp) {
+	 *   console.log(_.now() - stamp);
+	 * }, _.now());
+	 * // => Logs the number of milliseconds it took for the deferred function to be invoked.
+	 */
+	var now = Date.now;
+
+	/**
+	 * Creates a debounced function that delays invoking `func` until after `wait`
+	 * milliseconds have elapsed since the last time the debounced function was
+	 * invoked. The debounced function comes with a `cancel` method to cancel
+	 * delayed `func` invocations and a `flush` method to immediately invoke them.
+	 * Provide an options object to indicate whether `func` should be invoked on
+	 * the leading and/or trailing edge of the `wait` timeout. The `func` is invoked
+	 * with the last arguments provided to the debounced function. Subsequent calls
+	 * to the debounced function return the result of the last `func` invocation.
+	 *
+	 * **Note:** If `leading` and `trailing` options are `true`, `func` is invoked
+	 * on the trailing edge of the timeout only if the debounced function is
+	 * invoked more than once during the `wait` timeout.
+	 *
+	 * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
+	 * for details over the differences between `_.debounce` and `_.throttle`.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Function
+	 * @param {Function} func The function to debounce.
+	 * @param {number} [wait=0] The number of milliseconds to delay.
+	 * @param {Object} [options={}] The options object.
+	 * @param {boolean} [options.leading=false]
+	 *  Specify invoking on the leading edge of the timeout.
+	 * @param {number} [options.maxWait]
+	 *  The maximum time `func` is allowed to be delayed before it's invoked.
+	 * @param {boolean} [options.trailing=true]
+	 *  Specify invoking on the trailing edge of the timeout.
+	 * @returns {Function} Returns the new debounced function.
+	 * @example
+	 *
+	 * // Avoid costly calculations while the window size is in flux.
+	 * jQuery(window).on('resize', _.debounce(calculateLayout, 150));
+	 *
+	 * // Invoke `sendMail` when clicked, debouncing subsequent calls.
+	 * jQuery(element).on('click', _.debounce(sendMail, 300, {
+	 *   'leading': true,
+	 *   'trailing': false
+	 * }));
+	 *
+	 * // Ensure `batchLog` is invoked once after 1 second of debounced calls.
+	 * var debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });
+	 * var source = new EventSource('/stream');
+	 * jQuery(source).on('message', debounced);
+	 *
+	 * // Cancel the trailing debounced invocation.
+	 * jQuery(window).on('popstate', debounced.cancel);
+	 */
+	function debounce(func, wait, options) {
+	  var lastArgs,
+	      lastThis,
+	      maxWait,
+	      result,
+	      timerId,
+	      lastCallTime = 0,
+	      lastInvokeTime = 0,
+	      leading = false,
+	      maxing = false,
+	      trailing = true;
+
+	  if (typeof func != 'function') {
+	    throw new TypeError(FUNC_ERROR_TEXT);
+	  }
+	  wait = toNumber(wait) || 0;
+	  if (isObject(options)) {
+	    leading = !!options.leading;
+	    maxing = 'maxWait' in options;
+	    maxWait = maxing ? nativeMax(toNumber(options.maxWait) || 0, wait) : maxWait;
+	    trailing = 'trailing' in options ? !!options.trailing : trailing;
+	  }
+
+	  function invokeFunc(time) {
+	    var args = lastArgs,
+	        thisArg = lastThis;
+
+	    lastArgs = lastThis = undefined;
+	    lastInvokeTime = time;
+	    result = func.apply(thisArg, args);
+	    return result;
+	  }
+
+	  function leadingEdge(time) {
+	    // Reset any `maxWait` timer.
+	    lastInvokeTime = time;
+	    // Start the timer for the trailing edge.
+	    timerId = setTimeout(timerExpired, wait);
+	    // Invoke the leading edge.
+	    return leading ? invokeFunc(time) : result;
+	  }
+
+	  function remainingWait(time) {
+	    var timeSinceLastCall = time - lastCallTime,
+	        timeSinceLastInvoke = time - lastInvokeTime,
+	        result = wait - timeSinceLastCall;
+
+	    return maxing ? nativeMin(result, maxWait - timeSinceLastInvoke) : result;
+	  }
+
+	  function shouldInvoke(time) {
+	    var timeSinceLastCall = time - lastCallTime,
+	        timeSinceLastInvoke = time - lastInvokeTime;
+
+	    // Either this is the first call, activity has stopped and we're at the
+	    // trailing edge, the system time has gone backwards and we're treating
+	    // it as the trailing edge, or we've hit the `maxWait` limit.
+	    return (!lastCallTime || (timeSinceLastCall >= wait) ||
+	      (timeSinceLastCall < 0) || (maxing && timeSinceLastInvoke >= maxWait));
+	  }
+
+	  function timerExpired() {
+	    var time = now();
+	    if (shouldInvoke(time)) {
+	      return trailingEdge(time);
+	    }
+	    // Restart the timer.
+	    timerId = setTimeout(timerExpired, remainingWait(time));
+	  }
+
+	  function trailingEdge(time) {
+	    clearTimeout(timerId);
+	    timerId = undefined;
+
+	    // Only invoke if we have `lastArgs` which means `func` has been
+	    // debounced at least once.
+	    if (trailing && lastArgs) {
+	      return invokeFunc(time);
+	    }
+	    lastArgs = lastThis = undefined;
+	    return result;
+	  }
+
+	  function cancel() {
+	    if (timerId !== undefined) {
+	      clearTimeout(timerId);
+	    }
+	    lastCallTime = lastInvokeTime = 0;
+	    lastArgs = lastThis = timerId = undefined;
+	  }
+
+	  function flush() {
+	    return timerId === undefined ? result : trailingEdge(now());
+	  }
+
+	  function debounced() {
+	    var time = now(),
+	        isInvoking = shouldInvoke(time);
+
+	    lastArgs = arguments;
+	    lastThis = this;
+	    lastCallTime = time;
+
+	    if (isInvoking) {
+	      if (timerId === undefined) {
+	        return leadingEdge(lastCallTime);
+	      }
+	      if (maxing) {
+	        // Handle invocations in a tight loop.
+	        clearTimeout(timerId);
+	        timerId = setTimeout(timerExpired, wait);
+	        return invokeFunc(lastCallTime);
+	      }
+	    }
+	    if (timerId === undefined) {
+	      timerId = setTimeout(timerExpired, wait);
+	    }
+	    return result;
+	  }
+	  debounced.cancel = cancel;
+	  debounced.flush = flush;
+	  return debounced;
+	}
+
+	/**
+	 * Checks if `value` is classified as a `Function` object.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is correctly classified,
+	 *  else `false`.
+	 * @example
+	 *
+	 * _.isFunction(_);
+	 * // => true
+	 *
+	 * _.isFunction(/abc/);
+	 * // => false
+	 */
+	function isFunction(value) {
+	  // The use of `Object#toString` avoids issues with the `typeof` operator
+	  // in Safari 8 which returns 'object' for typed array and weak map constructors,
+	  // and PhantomJS 1.9 which returns 'function' for `NodeList` instances.
+	  var tag = isObject(value) ? objectToString.call(value) : '';
+	  return tag == funcTag || tag == genTag;
+	}
+
+	/**
+	 * Checks if `value` is the
+	 * [language type](http://www.ecma-international.org/ecma-262/6.0/#sec-ecmascript-language-types)
+	 * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+	 * @example
+	 *
+	 * _.isObject({});
+	 * // => true
+	 *
+	 * _.isObject([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isObject(_.noop);
+	 * // => true
+	 *
+	 * _.isObject(null);
+	 * // => false
+	 */
+	function isObject(value) {
+	  var type = typeof value;
+	  return !!value && (type == 'object' || type == 'function');
+	}
+
+	/**
+	 * Checks if `value` is object-like. A value is object-like if it's not `null`
+	 * and has a `typeof` result of "object".
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+	 * @example
+	 *
+	 * _.isObjectLike({});
+	 * // => true
+	 *
+	 * _.isObjectLike([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isObjectLike(_.noop);
+	 * // => false
+	 *
+	 * _.isObjectLike(null);
+	 * // => false
+	 */
+	function isObjectLike(value) {
+	  return !!value && typeof value == 'object';
+	}
+
+	/**
+	 * Checks if `value` is classified as a `Symbol` primitive or object.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is correctly classified,
+	 *  else `false`.
+	 * @example
+	 *
+	 * _.isSymbol(Symbol.iterator);
+	 * // => true
+	 *
+	 * _.isSymbol('abc');
+	 * // => false
+	 */
+	function isSymbol(value) {
+	  return typeof value == 'symbol' ||
+	    (isObjectLike(value) && objectToString.call(value) == symbolTag);
+	}
+
+	/**
+	 * Converts `value` to a number.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to process.
+	 * @returns {number} Returns the number.
+	 * @example
+	 *
+	 * _.toNumber(3);
+	 * // => 3
+	 *
+	 * _.toNumber(Number.MIN_VALUE);
+	 * // => 5e-324
+	 *
+	 * _.toNumber(Infinity);
+	 * // => Infinity
+	 *
+	 * _.toNumber('3');
+	 * // => 3
+	 */
+	function toNumber(value) {
+	  if (typeof value == 'number') {
+	    return value;
+	  }
+	  if (isSymbol(value)) {
+	    return NAN;
+	  }
+	  if (isObject(value)) {
+	    var other = isFunction(value.valueOf) ? value.valueOf() : value;
+	    value = isObject(other) ? (other + '') : other;
+	  }
+	  if (typeof value != 'string') {
+	    return value === 0 ? value : +value;
+	  }
+	  value = value.replace(reTrim, '');
+	  var isBinary = reIsBinary.test(value);
+	  return (isBinary || reIsOctal.test(value))
+	    ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
+	    : (reIsBadHex.test(value) ? NAN : +value);
+	}
+
+	module.exports = debounce;
+
 
 /***/ }
 /******/ ]);

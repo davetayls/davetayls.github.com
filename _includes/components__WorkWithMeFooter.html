@@ -3,10 +3,20 @@
   <p class="WorkWithMeFooter-cta">
     <a href="/workwithme" class="Button Button--isBlock">Work with me</a>
   </p>
-  <div class="Container">
-    <p class="WorkWithMeFooter-mission">{{ site.mission }}</p>
-    <p>Here is how I've been helping recently:</p>
-    {% assign BrowsePostsList = site.categories.workwithme %}
-    {% include components__BrowsePosts.html %}
+  <div class="pure-g">
+    <div class="pure-u-1 pure-u-lg-1-2">
+      <div class="WorkWithMeFooter-info">
+        {% assign RecommendationQuote = site.data.recommendation_quotes[2] %}
+        {% include components__RecommendationQuote.html %}
+        <p class="WorkWithMeFooter-mission">{{ site.mission }}</p>
+      </div>
+    </div>
+    <div class="pure-u-1 pure-u-lg-1-2">
+      <div class="WorkWithMeFooter-recent">
+        <p>Here is how I've been helping recently:</p>
+        {% assign BrowsePostsList = site.categories.workwithme %}
+        {% include components__BrowsePosts.html %}
+      </div>
+    </div>
   </div>
 </section>

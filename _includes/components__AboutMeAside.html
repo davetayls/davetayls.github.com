@@ -9,45 +9,8 @@
     <a href="/workwithme">{{ site.job_title }}</a>
   </p>
 
-  <!--
-  <blockquote class="RecommendationQuote">
-    <p class="RecommendationQuote-text">During his time working with ESZ Consulting he has successfully completed highly technical projects spanning from a few months to a few years! He is a valuable front end developer and an asset to any development team</p>
-    <footer>
-      <cite class="RecommendationQuote-cite"><a href="https://www.linkedin.com/in/davetayls">Tim Ellert, Founder of ESZ Consulting</a></cite>
-    </footer>
-  </blockquote>
-
-  <blockquote class="RecommendationQuote">
-    <p class="RecommendationQuote-text">Dave is an exceptionally skilled front end developer, passionate about his work, calm in delivery and genuinely a lovely person to have on your team.</p>
-    <footer>
-      <cite class="RecommendationQuote-cite"><a href="https://www.linkedin.com/in/davetayls">Sarah Evison</a></cite>
-    </footer>
-  </blockquote>
-
-  <blockquote class="RecommendationQuote">
-    <p class="RecommendationQuote-text">Dave is a cohesive team member, widely popular with his colleagues and always inspiring quality, exploration and innovation. One of the true ‘greats’ we’ve had the pleasure to work with</p>
-    <footer>
-      <cite class="RecommendationQuote-cite"><a href="https://www.linkedin.com/in/davetayls">Rob Oubridge, Founder, Aqueduct</a></cite>
-    </footer>
-  </blockquote>
-
-  <blockquote class="RecommendationQuote">
-    <p class="RecommendationQuote-text">In addition to his mastery of the modern front-end stack he’s also great at teaching and passing on the knowledge, and his his time at VML has made a lasting impression on the department.</p>
-    <footer>
-      <cite class="RecommendationQuote-cite"><a href="https://www.linkedin.com/in/davetayls">Dan Govan, Senior Interactive Developer, VML</a></cite>
-    </footer>
-  </blockquote>
-  -->
-
-  <blockquote class="RecommendationQuote">
-    <p class="RecommendationQuote-text">He made a contribution to our front-end dev department that was beyond his job
-      description and contractor role - much appreciated and admired by the rest of the team.
-    </p>
-    <footer>
-      <cite class="RecommendationQuote-cite"><a href="https://www.linkedin.com/in/davetayls">Katya Menshikova, Producer,
-        VML London</a></cite>
-    </footer>
-  </blockquote>
+  {% assign RecommendationQuote = site.data.recommendation_quotes[3] %}
+  {% include components__RecommendationQuote.html %}
 
   <p>
     <a class="Button Button--isBlock" href="/workwithme">Work with me</a>

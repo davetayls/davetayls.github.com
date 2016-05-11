@@ -12,10 +12,12 @@
 
 .PageHeader-logo {
   position: absolute;
+  z-index: 3;
   top: 16px;
   left: 16px;
   width: 74px;
   height: 74px;
+  transition: all .3s ease;
 }
 
 .PageHeader-logo img {
@@ -25,9 +27,25 @@
 }
 
 .PageHeader-nav {
+  position: relative;
+  z-index: 1;
   overflow: hidden;
-  padding: 16px;
+  padding: 1rem 1rem 1rem 0;
   margin: 0;
+}
+
+.PageHeader-pageTitle {
+  z-index: 0;
+  color: #ccc;
+  opacity: 0;
+  font-size: 1rem;
+  line-height: 2rem;
+  padding: .5rem 1rem .5rem 100px;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 0;
+  transition: opacity .3s ease;
 }
 
 .PageHeader-firstList,
@@ -39,6 +57,7 @@
 
 .PageHeader-firstList {
   float: left;
+  transition: opacity .3s ease;
 }
 
 .PageHeader-secondList {
@@ -52,4 +71,17 @@
   padding: 0;
 }
 
+.PageHeader--collapsed .PageHeader-firstList {
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+}
 
+.PageHeader--collapsed .PageHeader-pageTitle {
+  opacity: 1;
+}
+
+.PageHeader--collapsed .PageHeader-logo {
+  width: 50px;
+  height: 50px;
+}

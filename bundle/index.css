@@ -450,7 +450,10 @@ a {
 }
 
 .AboutMeAside {
+  display: none;
   margin: 2rem 3rem;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
 }
 
 .AboutMeAside-name {
@@ -466,6 +469,25 @@ a {
 .AboutMeAside-jobTitle a {
   text-decoration: none;
   color: #000;
+}
+
+.AboutMeAside--sticky {
+  position: fixed;
+  top: 76px;
+}
+
+.AboutMeAside--bottom {
+  opacity: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@media (min-width: 64rem) {
+
+  .AboutMeAside {
+    display: block;
+  }
+
 }
 
 .ArticleContent {
@@ -560,6 +582,15 @@ a {
   padding: 0 16px 16px 0;
 }
 
+@media (min-width: 64rem) {
+
+  .pure-u-lg-1-2 .BrowsePosts-item {
+    float: none;
+    width: auto;
+  }
+
+}
+
 .Button {
   cursor: pointer;
   -ms-touch-action: none;
@@ -579,7 +610,7 @@ a {
           justify-content: center;
   height: 44px;
   box-sizing: border-box;
-  padding: 0 12px;
+  padding: 0 1rem;
   margin-bottom: 0;
   font-size: 1rem;
   font-weight: 400;
@@ -748,10 +779,13 @@ a {
 
 .PageHeader-logo {
   position: absolute;
+  z-index: 3;
   top: 16px;
   left: 16px;
   width: 74px;
   height: 74px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .PageHeader-logo img {
@@ -761,9 +795,26 @@ a {
 }
 
 .PageHeader-nav {
+  position: relative;
+  z-index: 1;
   overflow: hidden;
-  padding: 16px;
+  padding: 1rem 1rem 1rem 0;
   margin: 0;
+}
+
+.PageHeader-pageTitle {
+  z-index: 0;
+  color: #ccc;
+  opacity: 0;
+  font-size: 1rem;
+  line-height: 2rem;
+  padding: .5rem 1rem .5rem 100px;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 0;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
 }
 
 .PageHeader-firstList,
@@ -775,6 +826,8 @@ a {
 
 .PageHeader-firstList {
   float: left;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
 }
 
 .PageHeader-secondList {
@@ -786,6 +839,21 @@ a {
   display: inline-block;
   margin: 0;
   padding: 0;
+}
+
+.PageHeader--collapsed .PageHeader-firstList {
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.PageHeader--collapsed .PageHeader-pageTitle {
+  opacity: 1;
+}
+
+.PageHeader--collapsed .PageHeader-logo {
+  width: 50px;
+  height: 50px;
 }
 
 .PostHeader {
@@ -988,6 +1056,11 @@ a {
 .WorkWithMeFooter-cta:after {
   right: 0;
 
+}
+
+.WorkWithMeFooter-info,
+.WorkWithMeFooter-recent {
+  margin: 0 4rem;
 }
 
 pre.prettyprint {

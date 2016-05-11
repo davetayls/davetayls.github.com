@@ -1,6 +1,8 @@
 
 .AboutMeAside {
+  display: none;
   margin: 2rem 3rem;
+  transition: opacity .3s ease;
 }
 
 .AboutMeAside-name {
@@ -16,4 +18,23 @@
 .AboutMeAside-jobTitle a {
   text-decoration: none;
   color: #000;
+}
+
+.AboutMeAside--sticky {
+  position: fixed;
+  top: $PageHeaderHeight;
+}
+
+.AboutMeAside--bottom {
+  opacity: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@media (min-width: $ResponsiveDesktopFrom) {
+
+  .AboutMeAside {
+    display: block;
+  }
+
 }

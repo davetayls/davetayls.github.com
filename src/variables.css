@@ -10,5 +10,6 @@ $BaseSpacing: 16px;
 $PageHeaderHeight: 76px;
 
 $ResponsiveTabletFrom: 600px;
+$ResponsiveDesktopFrom: 64rem;
 
 $ContainerDesktopWidth: 990px;

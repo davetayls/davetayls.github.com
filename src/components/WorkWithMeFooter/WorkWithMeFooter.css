@@ -26,3 +26,8 @@
   right: 0;
 
 }
+
+.WorkWithMeFooter-info,
+.WorkWithMeFooter-recent {
+  margin: 0 4rem;
+}

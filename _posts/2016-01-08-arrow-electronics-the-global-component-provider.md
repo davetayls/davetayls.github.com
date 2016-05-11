@@ -20,7 +20,7 @@ many of the electronic products we use day to day have probably had parts suppli
 
 Here's a little about Arrow from their [About Arrow](https://www.arrow.com/en/about-arrow/overview) page:
 
->>> Arrow Electronics is a global provider of products, services and solutions to industrial and commercial users of electronic components and enterprise computing solutions, with 2014 sales of $22.8 billion. Arrow serves as a supply channel partner for over 100,000 original equipment manufacturers, contract manufacturers and commercial customers through a global network of more than 460 locations in 56 countries.
+> Arrow Electronics is a global provider of products, services and solutions to industrial and commercial users of electronic components and enterprise computing solutions, with 2014 sales of $22.8 billion. Arrow serves as a supply channel partner for over 100,000 original equipment manufacturers, contract manufacturers and commercial customers through a global network of more than 460 locations in 56 countries.
 
 The main CMS was built on Sitecore connecting with numerous third party apis, bringing them under one centralised source
 of truth for the products and services Arrow offers.

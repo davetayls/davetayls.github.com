@@ -12,11 +12,10 @@
   <head>
     <meta charset="utf-8">
 
-    <title>{{ page.title }}</title>
-    <meta name="description" content="{{ page.description }}"/>
+    <title>{{ page.title }} | Dave Taylor {{ site.job_title }}</title>
+    <meta name="description" content="{{ site.job_description }}"/>
+    <meta name="keywords" content="{{ site.keywords }}">
     <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="apple-touch-startup-image" href="/apple-startup-image.png">
 
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic|Lato:400,100,100italic,400italic,900,900italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css">
@@ -24,12 +23,32 @@
     <link rel="stylesheet" href="/bundle/index.css">
 
     <meta property="og:title" content="{{ page.title }}"/>
+    <meta property="og:description" content="{{ site.job_description }}"/>
     <meta property="og:type" content="author"/>
     <meta property="og:url" content="http://davetayls.me{{ page.url }}"/>
     <meta property="og:image"
-          content="{% if page.postimage %}http://davetayls.me{{ page.postimage }}{% else %}http://davetayls.me/images/logo.gif{% endif %}"/>
+          content="{% if page.postimage %}{{ page.postimage }}{% else %}{{ site.postimage_default }}{% endif %}"/>
     <meta property="fb:app_id" content="139170039487294"/>
+    <script type="application/ld+json">
+      [
+        {
+          "@context": "http://schema.org/",
+          "@type": "Blog",
+          "url": "http://davetayls.me{{ page.url }}",
+          "image": "{% if page.postimage %}{{ page.postimage }}{% else %}{{ site.postimage_default }}{% endif %}",
+          "name": "{{ site.site_name }}",
+          "author": {
+            "@context": "http://schema.org/",
+            "@type": "Person",
+            "givenName": "Dave",
+            "familyName": "Taylor",
+            "jobTitle": "{{ site.job_title }}"
+          }
+        }
+      ]
+    </script>
 
+    {% include favicon.html %}
     <link rel="author" href="https://plus.google.com/103477668197991622209"/>
 
   </head>

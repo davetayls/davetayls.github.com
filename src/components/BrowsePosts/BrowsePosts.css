@@ -17,3 +17,12 @@
   width: 50%;
   padding: 0 $BaseSpacing $BaseSpacing 0;
 }
+
+@media (min-width: $ResponsiveDesktopFrom) {
+
+  .pure-u-lg-1-2 .BrowsePosts-item {
+    float: none;
+    width: auto;
+  }
+
+}

@@ -3,6 +3,7 @@ layout: post
 postimage: https://cdn-images-1.medium.com/max/2000/1*8RwcRfaDp0uSMOWDNHeG-A.jpeg
 related: project
 categories:
+  - workwithme
   - project
   - javascript
   - playnicely
