@@ -25,6 +25,8 @@ Here's a little about Arrow from their [About Arrow](https://www.arrow.com/en/ab
 The main CMS was built on Sitecore connecting with numerous third party apis, bringing them under one centralised source
 of truth for the products and services Arrow offers.
 
+![Arrow stats](https://cdn-images-1.medium.com/max/1600/1*w8maFuPUaCUxU3ofAZ6W_g.jpeg)
+
 ## Responsive, with support for ie8
 
 The current site showed a large proportion of engineers still using ie8 but we didn't want that to restrict the site from
