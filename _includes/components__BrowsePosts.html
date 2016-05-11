@@ -1,0 +1,10 @@
+<nav class="BrowsePosts">
+  <ul class="BrowsePosts-nav">
+  {% for post in BrowsePostsList limit:14 %}
+      <li class="BrowsePosts-item">
+        {% assign PostSquare = post %}
+        {% include components__PostSquare.html %}
+      </li>
+  {% endfor %}
+  </ul>
+</nav>

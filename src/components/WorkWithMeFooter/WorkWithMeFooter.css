@@ -1,0 +1,28 @@
+
+.WorkWithMeFooter {
+  margin: 1rem;
+}
+
+.WorkWithMeFooter-cta {
+  padding: 0 4rem;
+  position: relative;
+}
+
+.WorkWithMeFooter-cta:before,
+.WorkWithMeFooter-cta:after {
+  content: '';
+  display: block;
+  border-top: solid 4px $ColorCore;
+  position: absolute;
+  top: 48%;
+  width: 3.9rem;
+}
+
+.WorkWithMeFooter-cta:before {
+  left: 0;
+}
+
+.WorkWithMeFooter-cta:after {
+  right: 0;
+
+}

@@ -3,6 +3,7 @@ layout: post
 postimage: /content/2016-01-arrow.jpg
 related: project
 categories:
+  - workwithme
   - releases
   - project
   - responsivedesign

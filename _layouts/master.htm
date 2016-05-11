@@ -18,10 +18,10 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="apple-touch-startup-image" href="/apple-startup-image.png">
 
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,900"/>
-    <link rel="stylesheet" href="/css/core.css">
-
-    <script src="/lib/modernizr-1.5.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic|Lato:400,100,100italic,400italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.6.0/base-min.css&pure/0.6.0/grids-min.css&pure/0.6.0/grids-responsive-min.css">
+    <link rel="stylesheet" href="/bundle/index.css">
 
     <meta property="og:title" content="{{ page.title }}"/>
     <meta property="og:type" content="author"/>
@@ -34,43 +34,12 @@
 
   </head>
   <body>
-    <div id="wrapper">
-      {% include pageHeader.html %}
-      {{ content }}
-    </div>
-    <section class="client-logos">
-      <h2><a href="/workwithme">Work with me</a></h2>
-      <p>
-        I love working with people and teams who are passionate about producing great work.
-        I have a very open and honest work ethic. Below are some of the amazing clients I
-        have produced work with. <a href="/workwithme">Find out more.</a>
-      </p>
-      <img src="/content/clientlogos.gif" alt="client logos" />
-    </section>
-    <footer>
-      <div id="pageFooter">
-        <div id="pageFooter-inner">
-          <p>Dave Taylor - Front-end interface web developer</p>
-          <address>Tudor Offices, 7 The Shambles, Bradford-on-Avon, BA15 1JS</address>
-          <p>Phone: 0754 081 7008</p>
-          <ul>
-            <li><a href="/cv">Download CV</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="http://davetayls.me/atom.xml">Blog RSS Feed</a></li>
-            <li><a href="http://twitter.com/davetayls">Twitter @davetayls</a></li>
-            <li><a href="http://www.linkedin.com/in/davetayls">LinkedIn</a></li>
-            <li><a href="http://github.com/davetayls">Github</a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-    <!-- #pageFooter -->
+    {% include components__PageHeader.html %}
+    {{ content }}
+    {% include components__PageFooter.html %}
 
     <script type="text/javascript" src="/lib/google-code-prettify/prettify.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>window.Zepto || window.jQuery || document.write('<script src="/lib/jquery.min.js"><\/script>')</script>
-
-    <script data-main="/js/main" type="text/javascript" src="/lib/require.js"></script>
+    <script type="text/javascript" src="/bundle/index.js"></script>
 
     <script type="text/javascript">
 
@@ -101,5 +70,6 @@
       }());
     </script>
     <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+
   </body>
 </html>

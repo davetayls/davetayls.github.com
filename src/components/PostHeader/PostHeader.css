@@ -1,0 +1,59 @@
+
+.PostHeader {
+  position: relative;
+  height: 62vh;
+  max-height: 600px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  border-bottom: solid 4px #000;
+  margin-bottom: 1rem;
+}
+
+.PostHeader-container {
+  position: relative;
+  height: 100%;
+}
+
+.PostHeader-title {
+  border-top: solid 3px #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,0.6);
+  background: #000;
+  height: auto;
+  margin: 0;
+  padding: $BaseSpacing;
+  font-size: 3rem;
+  z-index: 2;
+  font-weight: 100;
+  letter-spacing: -0.03em;
+}
+
+.PostHeader-titleLink,
+.PostHeader-date {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+.PostHeader-date {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.75;
+}
+
+.PostHeader-bg:before {
+  content: '';
+  display: block;
+  padding-top: 56.25%;
+}
+
+@media (min-width: 600px) {
+  .PostHeader-title {
+    background: rgba(0, 0, 0, 0.9);
+    max-width: 65%;
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+  }
+}

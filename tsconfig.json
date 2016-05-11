@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES5",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "suppressExcessPropertyErrors": false,
+    "jsx": "react",
+    "inlineSourceMap": true,
+    "inlineSources": true
+  },
+  "exclude": [
+    "node_modules",
+    "typings/main.d.ts",
+    "typings/main",
+    "assets",
+    "coverage",
+    "docs",
+    "tmp",
+    "uploads"
+  ]
+}

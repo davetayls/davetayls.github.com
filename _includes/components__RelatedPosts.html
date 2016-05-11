@@ -1,0 +1,7 @@
+<section class="RelatedPosts">
+  {% if page.related %}
+  <h2 class="RelatedPosts-header">Other <strong>{{ page.related }}</strong> posts</h2>
+  {% assign BrowsePostsList = site.categories[page.related] %}
+  {% include components__BrowsePosts.html %}
+  {% endif %}
+</section>

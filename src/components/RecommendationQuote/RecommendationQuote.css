@@ -1,0 +1,51 @@
+
+.RecommendationQuote {
+  margin: 0;
+  padding: 0;
+}
+
+.RecommendationQuote:before,
+.RecommendationQuote:after {
+  font-family: Georgia, "Bookman", "Times New Roman", serif;
+  display: block;
+  text-align: center;
+  font-style: normal;
+  margin: 0;
+  line-height: 1;
+}
+
+.RecommendationQuote:before {
+  content: '☙';
+}
+
+.RecommendationQuote:after {
+  content: '❦';
+}
+
+.RecommendationQuote,
+.RecommendationQuote-text {
+  font-family: Georgia, "Bookman", "Times New Roman", serif;
+  color: #777;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.4;
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+.RecommendationQuote-text {
+
+}
+
+.RecommendationQuote-cite {
+  display: block;
+  text-align: right;
+  font-size: 0.8rem;
+  margin: 1rem 0;
+}
+
+.RecommendationQuote-cite a {
+  text-decoration: none;
+  font-style: normal;
+  font-family: $FontFamilySans;
+}

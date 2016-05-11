@@ -1,0 +1,12 @@
+
+<section class="WorkWithMeFooter">
+  <p class="WorkWithMeFooter-cta">
+    <a href="/workwithme" class="Button Button--isBlock">Work with me</a>
+  </p>
+  <div class="Container">
+    <p class="WorkWithMeFooter-mission">{{ site.mission }}</p>
+    <p>Here is how I've been helping recently:</p>
+    {% assign BrowsePostsList = site.categories.workwithme %}
+    {% include components__BrowsePosts.html %}
+  </div>
+</section>

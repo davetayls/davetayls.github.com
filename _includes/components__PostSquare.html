@@ -1,0 +1,15 @@
+<section class="PostSquare">
+  <a class="PostSquare-link"
+     href="{{ PostSquare.url }}"
+     style="background-image: url({% if PostSquare.postimage %}{{ PostSquare.postimage }}{% else %}{{site.postimage_default}}{% endif %})"
+  >
+    <h2 class="PostSquare-title">
+      <span>
+          {{ PostSquare.title }}
+          <time datetime="{{ PostSquare.date | date_to_xmlschema }}">
+              {{ PostSquare.date | date:"%b %d %Y" }}
+          </time>
+      </span>
+    </h2>
+  </a>
+</section>

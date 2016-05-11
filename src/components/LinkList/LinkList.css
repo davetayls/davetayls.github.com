@@ -1,0 +1,20 @@
+
+.LinkList {
+  list-style: none outside;
+  margin: 0;
+  padding: 0;
+}
+
+.LinkList-item {
+  display: block;
+}
+
+.LinkList--double {
+  font-size: 0;
+}
+
+.LinkList--double .LinkList-item {
+  font-size: 1rem;
+  display: inline-block;
+  width: 50%;
+}

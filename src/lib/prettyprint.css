@@ -1,0 +1,15 @@
+pre.prettyprint {
+  border: 0;
+  background-color: #efefef;
+  margin: 1rem -8px;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  pre.prettyprint {
+    font-size: 1rem;
+    padding: 10px;
+    margin: 1rem 0;
+  }
+}

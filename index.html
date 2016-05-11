@@ -3,34 +3,18 @@ title: Dave Taylor (davetayls) Front-End Developer
 layout: master
 description: maker of stuff, often webby related, daddy and blessed to have a wife that makes lots of cakes mmmm
 ---
-{% for post in site.posts limit:1 %}
-<h1 id="homeHeader">Dave Taylor - Lead/Senior HTML5 and NodeJs Developer</h1>
-<div class="postheader">
-    <h1>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        {% if post.date %}
-        <time datetime="{{ post.date | date_to_xmlschema }}">
-            {{ post.date | date:"%b %d %Y" }}
-        </time>
-        {% endif %}
-    </h1>
-    {% if post.postimage %}
-    <div class="postimage" style="background-image: url({{ post.postimage }});"></div>
-    {% else %}
-    <div class="postimage" style="background-image: url({{ site.postimage_default }});"></div>
-    {% endif %}
-
-</div>
-{% endfor %}
-<div id="contentWrapper">
-    <section id="content" class="mod-blogPosts">
-        {% include blog-posts.html %}
-    </section>
-    <aside id="related" class="related">
-        <h1>Other Info</h1>
-        {% include aboutme.html %}
-        {% include recentposts.html %}
-        {% include categories.html %}
-        {% include advert__medium-rectangle.html %}
-    </aside>
-</div>
+{% include components__HeroJobTitle.html %}
+{% include components__ProductColumns.html %}
+{% include components__ClientLogos.html %}
+<div id="content"></div>
+<section class="Container">
+  <div class="pure-g">
+    <div class="pure-u-1 pure-u-lg-2-3">
+      {% assign BrowsePostsList = site.posts %}
+      {% include components__BrowsePosts.html %}
+    </div>
+    <div class="pure-u-1 pure-u-lg-1-3">
+      {% include components__AwardsColumn.html %}
+    </div>
+  </div>
+</section>

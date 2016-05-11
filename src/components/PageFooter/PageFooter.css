@@ -1,0 +1,25 @@
+
+.PageFooter {
+  background-color: #000;
+  padding: $BaseSpacing;
+}
+
+.PageFooter-name,
+.PageFooter-company,
+.PageFooter-address,
+.PageFooter-phone {
+  font-size: 1rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #fff;
+  margin: 0 0 $BaseSpacing;
+  padding: 0;
+}
+
+.PageFooter-contact {
+}
+
+.PageFooter-skills {
+
+}
+

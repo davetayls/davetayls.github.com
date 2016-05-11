@@ -1,0 +1,17 @@
+
+html, body {
+  font-size: 16px;
+}
+
+html, body,
+.pure-g [class *= "pure-u"] {
+  font-family: $FontFamilySans;
+}
+
+body {
+  padding-top: $PageHeaderHeight;
+}
+
+a {
+  color: $ColorCore;
+}

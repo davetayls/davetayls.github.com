@@ -15,3 +15,6 @@ bower_components/**/.bower.json
 bower_components/**/bower.json
 bower_components/jquery/src
 bower_components/jquery.kinetic/lib/jquery-ui
+
+src/**/*.js
+src/**/*.js.map

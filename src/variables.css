@@ -1,0 +1,14 @@
+
+$ColorCore: #00C792;
+$ColorSecondary: #666;
+$ColorBody: #444;
+
+$FontFamilySans: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$BaseFontSize: 1rem;
+$FontSizePoster: 3rem;
+$BaseSpacing: 16px;
+$PageHeaderHeight: 76px;
+
+$ResponsiveTabletFrom: 600px;
+
+$ContainerDesktopWidth: 990px;

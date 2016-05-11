@@ -1,0 +1,52 @@
+
+.Button {
+  cursor: pointer;
+  touch-action: none;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: $ColorCore;
+  border: 1px solid $ColorCore;
+  outline: none;
+}
+
+.Button > i + span {
+  padding-left: 8px;
+}
+
+.Button:active,
+.Button:focus {
+  outline: none;
+}
+
+.Button--isLink {
+  text-transform: none;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  background-color: transparent;
+  border: 0;
+}
+
+.Button--isBlock {
+  width: 100%;
+}
+
+.Button--isOnLight {
+  color: #444;
+}
+

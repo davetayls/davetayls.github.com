@@ -1,0 +1,19 @@
+
+.AboutMeAside {
+  margin: 2rem 3rem;
+}
+
+.AboutMeAside-name {
+  font-weight: 100;
+  color: #777;
+  display: inline;
+}
+
+.AboutMeAside-jobTitle {
+  display: inline;
+}
+
+.AboutMeAside-jobTitle a {
+  text-decoration: none;
+  color: #000;
+}

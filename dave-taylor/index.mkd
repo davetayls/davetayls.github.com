@@ -1,0 +1,47 @@
+---
+layout: post
+title: Dave Taylor - Frontend Developer, Consultant, Mentor
+postimage: /content/about-me.jpg
+comments: hide
+---
+
+My name is Dave Taylor, I was born and grew up in the Philippines
+although both my parents are English. We lived on the edge of an
+active volcano called Mayon (which means beautiful). It was a flippin
+amazing place to be apart from when it errupted. let’s just say that.
+
+I spent the first 10 years of my career in London where my love for
+the web and geekery grew steadily. I had the opportunity to work on
+some cutting edge projects with forward thinking creative agencies and
+clients from the likes of The FA and the RFU to The British Red Cross
+and Premier Inn.
+
+![Pogo Kid](https://lh5.googleusercontent.com/-D1X9vUSprTM/UPPJrdmEA1I/AAAAAAAAujs/G_uIHgVvKZY/s800/pogokid.jpg)
+
+I started [Pogo Kid](http://pogokid.com) in the summer of 2012 and I
+now work from my office in Bath.
+
+I’m ever curious, I love the creativity you can have with front-end
+technology. This is the time to be working with HTML, CSS and
+JavaScript, and I’m living on the razors edge of these 3 fantastic
+technologies. Needless to say, it’s a lot of fun :o)
+
+## Work with me
+
+I'm always open to talking with people in passionate teams wanting to
+produce great work. If you're looking for someone who will not only be
+a developer on your team but will invest themselves in your project then
+give me a call. Take a look at my [work with me page](/workwithme) for
+more information.
+
+## This is what excites me
+
+ - Front-End technologies
+ - Teams and open source communities
+ - My family
+ - Doing great work
+ - I love the web
+
+## Experience
+
+You can take a look at my [showreels](/blog/category/showreel/) or the [projects category](/blog/category/project/) to see some examples.

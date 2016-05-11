@@ -1,0 +1,73 @@
+
+.ArticleContent {
+  box-sizing: border-box;
+  max-width: 52rem;
+  position: relative;
+  font-family: Georgia, "Bookman", "Times New Roman", serif;
+  font-size: 1.3rem;
+  line-height: 1.7;
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+  color: #000;
+}
+
+.ArticleContent img {
+  max-width: 100%;
+}
+
+.ArticleContent blockquote:before,
+.ArticleContent blockquote:after {
+  font-family: Georgia, "Bookman", "Times New Roman", serif;
+  display: block;
+  font-style: normal;
+  margin: 0;
+  line-height: 1;
+}
+
+.ArticleContent blockquote:before {
+  content: '☙';
+}
+
+.ArticleContent blockquote:after {
+  content: '❦';
+}
+
+.ArticleContent blockquote,
+.ArticleContent blockquote p {
+  font-family: "Playfair Display", Georgia, "Bookman", "Times New Roman", serif;
+  color: #777;
+  text-align: center;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.ArticleContent h1,
+.ArticleContent h2,
+.ArticleContent h3,
+.ArticleContent h4 {
+  font-family: $FontFamilySans;
+  margin: 1rem 0 0;
+}
+
+.ArticleContent h1,
+.ArticleContent h2 {
+  font-weight: 100;
+  line-height: 1;
+}
+
+.ArticleContent a {
+  color: #777;
+}
+
+.ArticleContent p {
+  margin: 2rem 0;
+}
+
+.ArticleContent h1 + p,
+.ArticleContent h2 + p,
+.ArticleContent h3 + p,
+.ArticleContent h4 + p {
+  margin-top: 1rem;
+}
