@@ -1,6 +1,7 @@
 
 .Container {
   position: relative;
+  margin: 0 1rem;
 }
 
 @media all and (min-width: 990px) {

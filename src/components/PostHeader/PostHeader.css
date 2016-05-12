@@ -1,11 +1,7 @@
 
 .PostHeader {
   position: relative;
-  height: 62vh;
-  max-height: 600px;
   overflow: hidden;
-  background-size: cover;
-  background-position: center;
   border-bottom: solid 4px #000;
   margin-bottom: 1rem;
 }
@@ -22,7 +18,7 @@
   height: auto;
   margin: 0;
   padding: $BaseSpacing;
-  font-size: 3rem;
+  font-size: 2rem;
   z-index: 2;
   font-weight: 300;
   letter-spacing: -0.03em;
@@ -42,18 +38,40 @@
   line-height: 1.75;
 }
 
+.PostHeader-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
 .PostHeader-bg:before {
   content: '';
   display: block;
   padding-top: 56.25%;
 }
 
-@media (min-width: 600px) {
+@media (--MediaFromMedium) {
+
+  .PostHeader {
+    height: 62vh;
+    max-height: 600px;
+  }
+
   .PostHeader-title {
     background: rgba(0, 0, 0, 0.9);
     max-width: 65%;
     position: absolute;
     bottom: 10%;
     left: 0;
+    font-size: 3rem;
   }
+
+  .PostHeader-bg {
+    height: 100%;
+  }
+
+  .PostHeader-bg:before {
+    display: none;
+  }
+
 }

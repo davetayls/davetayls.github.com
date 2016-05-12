@@ -1,7 +1,9 @@
-<article class="ArticleContent">
-  {% if ArticleContent %}
-    {{ ArticleContent }}
-  {% else %}
-    {{ content }}
-  {% endif %}
-</article>
+{% if ArticleContent %}
+  <article class="ArticleContent">
+  {{ ArticleContent }}
+  </article>
+{% elsif content != '' %}
+  <article class="ArticleContent">
+  {{ content }}
+  </article>
+{% endif %}

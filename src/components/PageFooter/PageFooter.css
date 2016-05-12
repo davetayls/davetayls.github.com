@@ -2,6 +2,7 @@
 .PageFooter {
   background-color: #000;
   padding: $BaseSpacing;
+  padding-bottom: 5rem;
 }
 
 .PageFooter-name,
@@ -23,3 +24,10 @@
 
 }
 
+@media (--MediaFromMedium) {
+
+  .PageFooter {
+    padding-bottom: $BaseSpacing;
+  }
+
+}

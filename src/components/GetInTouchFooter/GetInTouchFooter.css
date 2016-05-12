@@ -5,6 +5,7 @@
   position: fixed;
   bottom: 0;
   right: 0;
+  left: 0;
   padding: 1rem;
   text-align: right;
 }
@@ -19,4 +20,12 @@
 
 small.GetInTouchFooter-chat {
   display: block;
+}
+
+@media (--MediaFromMedium) {
+
+  .GetInTouchFooter {
+    left: auto;
+  }
+
 }

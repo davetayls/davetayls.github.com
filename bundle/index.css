@@ -496,7 +496,7 @@ a {
   max-width: 52rem;
   position: relative;
   font-family: Georgia, "Bookman", "Times New Roman", serif;
-  font-size: 1.32rem;
+  font-size: 1rem;
   line-height: 1.7;
   margin: 0 auto;
   padding: 0 2rem 2rem;
@@ -505,6 +505,14 @@ a {
 
 .ArticleContent img {
   max-width: 100%;
+}
+
+.ArticleContent a {
+  word-break: break-all;
+}
+
+.ArticleContent ul {
+  padding-left: 1.4rem;
 }
 
 .ArticleContent blockquote:before,
@@ -562,6 +570,14 @@ a {
 .ArticleContent h3 + p,
 .ArticleContent h4 + p {
   margin-top: 1rem;
+}
+
+@media (min-width: 600px) {
+
+  .ArticleContent {
+    font-size: 1.32rem;
+  }
+
 }
 
 .AwardsColumn {
@@ -795,6 +811,7 @@ a {
 
 .Container {
   position: relative;
+  margin: 0 1rem;
 }
 
 @media all and (min-width: 990px) {
@@ -811,6 +828,7 @@ a {
   position: fixed;
   bottom: 0;
   right: 0;
+  left: 0;
   padding: 1rem;
   text-align: right;
 }
@@ -825,6 +843,14 @@ a {
 
 small.GetInTouchFooter-chat {
   display: block;
+}
+
+@media (min-width: 600px) {
+
+  .GetInTouchFooter {
+    left: auto;
+  }
+
 }
 
 .HeroJobTitle {
@@ -883,7 +909,7 @@ small.GetInTouchFooter-chat {
   }
 
   .HeroJobTitle-iBelieve {
-    font-size: 2rem;
+    font-size: 1.6rem;
     min-height: 5rem;
   }
 
@@ -912,6 +938,7 @@ small.GetInTouchFooter-chat {
 .PageFooter {
   background-color: #000;
   padding: 16px;
+  padding-bottom: 5rem;
 }
 
 .PageFooter-name,
@@ -930,6 +957,14 @@ small.GetInTouchFooter-chat {
 }
 
 .PageFooter-skills {
+
+}
+
+@media (min-width: 600px) {
+
+  .PageFooter {
+    padding-bottom: 16px;
+  }
 
 }
 
@@ -1026,6 +1061,10 @@ small.GetInTouchFooter-chat {
 
 @media (min-width: 600px) {
 
+  .PageHeader-toggle {
+    display: none;
+  }
+
   .PageHeader-firstList {
     display: block;
   }
@@ -1075,6 +1114,8 @@ small.GetInTouchFooter-chat {
 
 .PageHeader--open .PageHeader-firstList,
 .PageHeader--open .PageHeader-secondList {
+  opacity: 1;
+  pointer-events: all;
   display: block;
   float: none;
 }
@@ -1090,11 +1131,7 @@ small.GetInTouchFooter-chat {
 
 .PostHeader {
   position: relative;
-  height: 62vh;
-  max-height: 600px;
   overflow: hidden;
-  background-size: cover;
-  background-position: center;
   border-bottom: solid 4px #000;
   margin-bottom: 1rem;
 }
@@ -1111,7 +1148,7 @@ small.GetInTouchFooter-chat {
   height: auto;
   margin: 0;
   padding: 16px;
-  font-size: 3rem;
+  font-size: 2rem;
   z-index: 2;
   font-weight: 300;
   letter-spacing: -0.03em;
@@ -1131,6 +1168,12 @@ small.GetInTouchFooter-chat {
   line-height: 1.75;
 }
 
+.PostHeader-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
 .PostHeader-bg:before {
   content: '';
   display: block;
@@ -1138,13 +1181,29 @@ small.GetInTouchFooter-chat {
 }
 
 @media (min-width: 600px) {
+
+  .PostHeader {
+    height: 62vh;
+    max-height: 600px;
+  }
+
   .PostHeader-title {
     background: rgba(0, 0, 0, 0.9);
     max-width: 65%;
     position: absolute;
     bottom: 10%;
     left: 0;
+    font-size: 3rem;
   }
+
+  .PostHeader-bg {
+    height: 100%;
+  }
+
+  .PostHeader-bg:before {
+    display: none;
+  }
+
 }
 
 .PostSquare {
@@ -1208,7 +1267,6 @@ small.GetInTouchFooter-chat {
 }
 
 .ProductColumns-pitch {
-  min-height: 3rem;
   font-family: "Playfair Display", Georgia, "Bookman", "Times New Roman", serif;
   font-style: italic;
 }
@@ -1225,10 +1283,6 @@ small.GetInTouchFooter-chat {
   font-size: 1rem;
   vertical-align: top;
   margin: 1rem 2rem;
-}
-
-.ProductColumns-name {
-  min-height: 4rem;
 }
 
 .ProductColumns-rewards {
@@ -1255,14 +1309,20 @@ small.GetInTouchFooter-chat {
     margin: 2%;
   }
 
+  .ProductColumns-pitch {
+    min-height: 3rem;
+  }
+
+  .ProductColumns-name {
+    min-height: 4rem;
+  }
+
 }
 
-.ProductList {
-}
+.ProductList { }
 
 .ProductList-info {
   margin: 0 auto;
-  max-width: 66%;
 }
 
 .ProductList-product {
@@ -1271,12 +1331,15 @@ small.GetInTouchFooter-chat {
   padding: 3rem 0;
 }
 
-.ProductList-name {
-  text-align: center;
-}
-
+.ProductList-name,
 .ProductList-pitch {
   text-align: center;
+  padding: 0 1rem;
+}
+
+.ProductList-name { }
+
+.ProductList-pitch {
   font-family: "Playfair Display", Georgia, "Bookman", "Times New Roman", serif;
   font-style: italic;
 }
@@ -1301,6 +1364,15 @@ small.GetInTouchFooter-chat {
   content: '\2619';
   display: block;
   font-family: sans-serif;
+}
+
+@media (min-width: 600px) {
+
+  .ProductList-info {
+    margin: 0 auto;
+    max-width: 66%;
+  }
+
 }
 
 .RecommendationQuote {
@@ -1355,11 +1427,20 @@ small.GetInTouchFooter-chat {
 }
 
 .RelatedPosts {
-  margin: 0 1rem;
+  margin: 0;
 }
 
 .RelatedPosts-header {
   font-weight: normal;
+  margin: 0 1rem;
+}
+
+@media (min-width: 600px) {
+
+  .RelatedPosts {
+    margin: 0 1rem;
+  }
+
 }
 
 .WorkWithMeFooter {
@@ -1483,3 +1564,5 @@ pre.prettyprint {
   position: static;
   width: auto;
 }
+
+/*# sourceMappingURL=index.css.map*/

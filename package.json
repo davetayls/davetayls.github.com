@@ -26,6 +26,8 @@
     "nib": "0.8.x",
     "normalize.css": "^4.1.1",
     "postcss-bem": "^0.4.1",
+    "postcss-custom-media": "^5.0.1",
+    "postcss-custom-properties": "^5.0.1",
     "postcss-import": "^8.1.2",
     "postcss-loader": "^0.9.1",
     "postcss-simple-vars": "^1.2.0",

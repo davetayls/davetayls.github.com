@@ -47,14 +47,14 @@
   margin: 0;
 }
 
-@media (min-width: $ResponsiveTabletFrom) {
+@media (--MediaFromMedium) {
 
   .HeroJobTitle-title {
     font-size: 3rem;
   }
 
   .HeroJobTitle-iBelieve {
-    font-size: 2rem;
+    font-size: 1.6rem;
     min-height: 5rem;
   }
 

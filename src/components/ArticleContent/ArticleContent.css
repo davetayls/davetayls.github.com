@@ -4,7 +4,7 @@
   max-width: 52rem;
   position: relative;
   font-family: $FontFamilySerif;
-  font-size: 1.32rem;
+  font-size: 1rem;
   line-height: 1.7;
   margin: 0 auto;
   padding: 0 2rem 2rem;
@@ -13,6 +13,14 @@
 
 .ArticleContent img {
   max-width: 100%;
+}
+
+.ArticleContent a {
+  word-break: break-all;
+}
+
+.ArticleContent ul {
+  padding-left: 1.4rem;
 }
 
 .ArticleContent blockquote:before,
@@ -71,3 +79,12 @@
 .ArticleContent h4 + p {
   margin-top: 1rem;
 }
+
+@media (--MediaFromMedium) {
+
+  .ArticleContent {
+    font-size: 1.32rem;
+  }
+
+}
+

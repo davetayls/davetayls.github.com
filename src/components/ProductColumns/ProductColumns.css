@@ -4,7 +4,6 @@
 }
 
 .ProductColumns-pitch {
-  min-height: 3rem;
   font-family: $FontFamilyDisplay;
   font-style: italic;
 }
@@ -23,10 +22,6 @@
   margin: 1rem 2rem;
 }
 
-.ProductColumns-name {
-  min-height: 4rem;
-}
-
 .ProductColumns-rewards {
   list-style: none outside;
   margin: 0;
@@ -43,12 +38,20 @@
   font-family: sans-serif;
 }
 
-@media (min-width: $ResponsiveTabletFrom) {
+@media (--MediaFromMedium) {
 
   .ProductColumns-column {
     display: inline-block;
     width: 26%;
     margin: 2%;
+  }
+
+  .ProductColumns-pitch {
+    min-height: 3rem;
+  }
+
+  .ProductColumns-name {
+    min-height: 4rem;
   }
 
 }

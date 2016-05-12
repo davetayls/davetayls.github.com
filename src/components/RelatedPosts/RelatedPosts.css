@@ -1,8 +1,17 @@
 
 .RelatedPosts {
-  margin: 0 1rem;
+  margin: 0;
 }
 
 .RelatedPosts-header {
   font-weight: normal;
+  margin: 0 1rem;
+}
+
+@media (--MediaFromMedium) {
+
+  .RelatedPosts {
+    margin: 0 1rem;
+  }
+
 }

@@ -97,7 +97,7 @@ const $iBelieveTitles = $('.HeroJobTitle-iBelieveTitles');
 const $iBelieveTyped = $('.HeroJobTitle-iBelieveTyped');
 $iBelieveTyped.typed({
   stringsElement: $iBelieveTitles,
-  typeSpeed: 40,
+  typeSpeed: 0,
   backSpeed: 0,
   backDelay: 2000,
   loop: true

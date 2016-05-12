@@ -1,10 +1,8 @@
 
-.ProductList {
-}
+.ProductList { }
 
 .ProductList-info {
   margin: 0 auto;
-  max-width: 66%;
 }
 
 .ProductList-product {
@@ -13,12 +11,15 @@
   padding: 3rem 0;
 }
 
-.ProductList-name {
-  text-align: center;
-}
-
+.ProductList-name,
 .ProductList-pitch {
   text-align: center;
+  padding: 0 1rem;
+}
+
+.ProductList-name { }
+
+.ProductList-pitch {
   font-family: $FontFamilyDisplay;
   font-style: italic;
 }
@@ -43,4 +44,13 @@
   content: '☙';
   display: block;
   font-family: sans-serif;
+}
+
+@media (--MediaFromMedium) {
+
+  .ProductList-info {
+    margin: 0 auto;
+    max-width: 66%;
+  }
+
 }

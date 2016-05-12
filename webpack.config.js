@@ -23,6 +23,8 @@ module.exports = {
       postcssImport({ addDependencyTo: webpack }),
       postcssBEM(),
       postcssVars(),
+      require('postcss-custom-properties')(),
+      require('postcss-custom-media')(),
       autoprefixer
     ];
   },
