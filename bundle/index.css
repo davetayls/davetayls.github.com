@@ -918,6 +918,7 @@ small.GetInTouchFooter-chat {
   min-width: 100%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
+  display: none;
 }
 
 @media (min-width: 600px) {
@@ -929,6 +930,10 @@ small.GetInTouchFooter-chat {
   .HeroJobTitle-iBelieve {
     font-size: 1.6rem;
     min-height: 5rem;
+  }
+
+  .HeroJobTitle-video {
+    display: block;
   }
 
 }

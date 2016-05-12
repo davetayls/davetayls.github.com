@@ -62,6 +62,7 @@
   min-height: 100%;
   min-width: 100%;
   transform: translate(-50%, 0);
+  display: none;
 }
 
 @media (--MediaFromMedium) {
@@ -73,6 +74,10 @@
   .HeroJobTitle-iBelieve {
     font-size: 1.6rem;
     min-height: 5rem;
+  }
+
+  .HeroJobTitle-video {
+    display: block;
   }
 
 }
