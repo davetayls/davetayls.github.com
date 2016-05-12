@@ -3,13 +3,16 @@
   background-image: url(/content/home-hero.jpg);
   background-size: cover;
   background-position: center center;
-  height: 62vh;
+  height: 72vh;
   margin: 0;
   position: relative;
+  overflow: hidden;
 }
 
 .HeroJobTitle-container {
   height: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .HeroJobTitle-inner {
@@ -38,6 +41,7 @@
   margin: 0;
   padding: 1rem;
   font-size: 1rem;
+  text-shadow: 0 0 2px #000;
   min-height: 2.4rem;
 }
 
@@ -45,6 +49,19 @@
   color: #fff;
   font-style: italic;
   margin: 0;
+}
+
+.HeroJobTitle-video {
+  display: block;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  right: 0;
+  min-height: 100%;
+  min-width: 100%;
+  transform: translate(-50%, 0);
 }
 
 @media (--MediaFromMedium) {

@@ -93,6 +93,10 @@ if ($workWithMeFooter.length) {
   });
 }
 
+const $heroJobTitle = $('.HeroJobTitle');
+if ($heroJobTitle.length) {
+  
+}
 const $iBelieveTitles = $('.HeroJobTitle-iBelieveTitles');
 const $iBelieveTyped = $('.HeroJobTitle-iBelieveTyped');
 $iBelieveTyped.typed({
