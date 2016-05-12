@@ -1,0 +1,89 @@
+
+- name: Frontend Framework Review
+  pitch: Use the right tools for the job
+  cost: £777
+  quote: 3
+  about: >
+    The Frontend landscape moves so fast! I often am asked to recommend
+    a good stack of libraries and maybe a framework which will fit well
+    with a team.
+
+
+    We'll have an initial Skype meeting to discuss your project and it's
+    goals.
+
+
+    If you have an existing codebase, I'll take a look at the current technologies
+    used (both client and server side).
+
+
+    I'll then put together a report for you with some background
+    research and a few options for you to consider based on your goals and
+    limitations.
+
+
+    We'll finish with another call to go over the report and discuss your next steps.
+    Please allow up to 10 working days to complete this process.
+  rewards:
+    - Review of your current architecture
+    - Review of your future plans and goals
+    - You'll receive a report giving two or three recommendations giving you help moving forward
+
+- name: Senior HTML5 Development
+  pitch: Let's build your product! I can join your team and get stuck in
+  quote: 1
+  about: >
+    I love the process of building great products. The reason I've kept my passion
+    for frontend builds over the last 14 years is because I believe that together
+    we can excite and delight the people using what we've created.
+
+
+    I can work on-site in Bath or remotely from my office if you're based in
+    London or elsewhere in the UK with regular on-site visits dependent on your location.
+
+
+    I'm happy to come and meet you to discuss your project, give me a call and we can
+    arrange a good time.
+
+
+    My skills include: Frontend architecture, **HTML5**, **JavaScript** (OOJS, ES6, TypeScript),
+    **CSS** (BEM, Less, SASS, Stylus), **Testable Code** (Mocha, Sinon, Chai, Karma), **NodeJs** (Express, Mongoose),
+    **Cloud Applications** (Heroku, S3, Azure).
+
+
+    I've built highly performant HTML5 cross platform applications for browsers and Cordova:
+    **Canvas** and image manipulation, **Backbone**, **React** Native.
+  rewards:
+    - Take advantage of my 14 years of experience
+    - Set good foundations to your frontend build
+    - Get a boost to your team's productivity
+
+- name: Frontend Consultancy and Mentoring
+  pitch: Let's build a lasting culture of innovation and creativity
+  quote: 4
+  about: >
+    I want to see every frontend developer live inspired and creative. I believe
+    we all have a child's passion inside of us which wants to do great things.
+
+
+    I'm so grateful to have had the opportunity of unlocking this passion
+    and to see groups of people tackle a project head on and become a team.
+
+
+    I like to work closely with the project leads to really get to know each
+    member of the team, put in place a pathway for them to grow technically
+    and to gain the confidence to lead others.
+
+
+    Ultimately I have two aims:
+
+
+    1. To inspire the team and provide them with the skills they need to
+       build great products
+
+    2. To find and nurture emerging leaders to continue this work with
+       those more junior than they are
+  rewards:
+    - Encourage and guide emerging leaders within your team
+    - Build a plan to level up frontend developer's skills
+    - Focus the team on building a great product experience

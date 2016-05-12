@@ -45,9 +45,12 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
+	var fastclick = __webpack_require__(10);
+	fastclick.attach(document.body);
 	var debounce = __webpack_require__(8);
 	var $ = __webpack_require__(1);
 	window.jQuery = $;
+	__webpack_require__(9);
 	__webpack_require__(6);
 	__webpack_require__(7);
 	var css = __webpack_require__(2);
@@ -64,6 +67,15 @@
 	    console.log('resize');
 	    Waypoint.refreshAll();
 	}, 40));
+	var $pageHeaderBurger = $pageHeader.find('.Burger');
+	var PAGE_HEADER_OPEN = 'PageHeader--open';
+	var BURGER_X = 'Burger--x';
+	console.log($pageHeaderBurger.length);
+	$pageHeaderBurger.on('click', function () {
+	    console.log('clicked');
+	    $pageHeader.toggleClass(PAGE_HEADER_OPEN);
+	    $pageHeaderBurger.toggleClass(BURGER_X);
+	});
 	var contentWaypoint = new Waypoint({
 	    element: document.getElementById('content'),
 	    offset: 90,
@@ -78,35 +90,48 @@
 	        }
 	    }
 	});
-	var aboutSticky = new Waypoint({
-	    element: $aboutMeAside[0],
-	    offset: 110,
-	    handler: function (direction) {
-	        switch (direction) {
-	            case 'up':
-	                $aboutMeAside.removeClass(ABOUT_ME_ASIDE_STICKY);
-	                break;
-	            case 'down':
-	                $aboutMeAside.addClass(ABOUT_ME_ASIDE_STICKY);
-	                break;
+	if ($aboutMeAside.length) {
+	    var aboutSticky = new Waypoint({
+	        element: $aboutMeAside[0],
+	        offset: 110,
+	        handler: function (direction) {
+	            switch (direction) {
+	                case 'up':
+	                    $aboutMeAside.removeClass(ABOUT_ME_ASIDE_STICKY);
+	                    break;
+	                case 'down':
+	                    $aboutMeAside.addClass(ABOUT_ME_ASIDE_STICKY);
+	                    break;
+	            }
 	        }
-	    }
-	});
-	var workWithMeFooter = new Waypoint({
-	    element: $workWithMeFooter[0],
-	    offset: '100%',
-	    handler: function (direction) {
-	        switch (direction) {
-	            case 'up':
-	                $aboutMeAside.removeClass(ABOUT_ME_ASIDE_BOTTOM_CLASS);
-	                break;
-	            case 'down':
-	                $aboutMeAside.addClass(ABOUT_ME_ASIDE_BOTTOM_CLASS);
-	                break;
+	    });
+	}
+	if ($workWithMeFooter.length) {
+	    var workWithMeFooter = new Waypoint({
+	        element: $workWithMeFooter[0],
+	        offset: '100%',
+	        handler: function (direction) {
+	            switch (direction) {
+	                case 'up':
+	                    $aboutMeAside.removeClass(ABOUT_ME_ASIDE_BOTTOM_CLASS);
+	                    break;
+	                case 'down':
+	                    $aboutMeAside.addClass(ABOUT_ME_ASIDE_BOTTOM_CLASS);
+	                    break;
+	            }
 	        }
-	    }
+	    });
+	}
+	var $iBelieveTitles = $('.HeroJobTitle-iBelieveTitles');
+	var $iBelieveTyped = $('.HeroJobTitle-iBelieveTyped');
+	$iBelieveTyped.typed({
+	    stringsElement: $iBelieveTitles,
+	    typeSpeed: 40,
+	    backSpeed: 0,
+	    backDelay: 2000,
+	    loop: true
 	});
-	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJpbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0EsSUFBTyxRQUFRLFdBQVcsaUJBQWlCLENBQUMsQ0FBQztBQUM3QyxJQUFPLENBQUMsV0FBVyxRQUFRLENBQUMsQ0FBQztBQUN2QixNQUFPLENBQUMsTUFBTSxHQUFHLENBQUMsQ0FBQztBQUV6QixPQUFPLENBQUMscUNBQXFDLENBQUMsQ0FBQztBQUMvQyxPQUFPLENBQUMsZ0NBQWdDLENBQUMsQ0FBQztBQUUxQyxJQUFJLEdBQUcsR0FBRyxPQUFPLENBQUMsYUFBYSxDQUFDLENBQUM7QUFFakMsSUFBTSxRQUFRLEdBQVMsTUFBTyxDQUFDLFFBQVEsQ0FBQztBQUV4QyxJQUFNLFdBQVcsR0FBRyxDQUFDLENBQUMsYUFBYSxDQUFDLENBQUM7QUFDckMsSUFBTSwyQkFBMkIsR0FBRyx1QkFBdUIsQ0FBQztBQUU1RCxJQUFNLGFBQWEsR0FBRyxDQUFDLENBQUMsZUFBZSxDQUFDLENBQUM7QUFDekMsSUFBTSxxQkFBcUIsR0FBRyxzQkFBc0IsQ0FBQztBQUNyRCxJQUFNLDJCQUEyQixHQUFHLHNCQUFzQixDQUFDO0FBRTNELElBQU0saUJBQWlCLEdBQUcsQ0FBQyxDQUFDLG1CQUFtQixDQUFDLENBQUM7QUFFakQsQ0FBQyxDQUFDLFVBQVUsQ0FBQyxDQUFDLE1BQU0sRUFBRSxDQUFDLFFBQVEsQ0FBQyxhQUFhLENBQUMsQ0FBQztBQUV6QyxNQUFPLENBQUMsV0FBVyxFQUFFLENBQUM7QUFFNUIsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxDQUFDLE1BQU0sQ0FBQyxRQUFRLENBQUM7SUFDeEIsT0FBTyxDQUFDLEdBQUcsQ0FBQyxRQUFRLENBQUMsQ0FBQztJQUN0QixRQUFRLENBQUMsVUFBVSxFQUFFLENBQUM7QUFDeEIsQ0FBQyxFQUFFLEVBQUUsQ0FBQyxDQUFDLENBQUM7QUFHUixJQUFNLGVBQWUsR0FBRyxJQUFJLFFBQVEsQ0FBQztJQUNuQyxPQUFPLEVBQUUsUUFBUSxDQUFDLGNBQWMsQ0FBQyxTQUFTLENBQUM7SUFDM0MsTUFBTSxFQUFFLEVBQUU7SUFDVixPQUFPLEVBQUUsVUFBUyxTQUFhO1FBQzdCLE1BQU0sQ0FBQyxDQUFDLFNBQVMsQ0FBQyxDQUFDLENBQUM7WUFDbEIsS0FBSyxJQUFJO2dCQUNQLFdBQVcsQ0FBQyxXQUFXLENBQUMsMkJBQTJCLENBQUMsQ0FBQztnQkFDckQsS0FBSyxDQUFDO1lBQ1IsS0FBSyxNQUFNO2dCQUNULFdBQVcsQ0FBQyxRQUFRLENBQUMsMkJBQTJCLENBQUMsQ0FBQztnQkFDbEQsS0FBSyxDQUFDO1FBQ1YsQ0FBQztJQUNILENBQUM7Q0FDRixDQUFDLENBQUM7QUFFSCxJQUFNLFdBQVcsR0FBRyxJQUFJLFFBQVEsQ0FBQztJQUMvQixPQUFPLEVBQUUsYUFBYSxDQUFDLENBQUMsQ0FBQztJQUN6QixNQUFNLEVBQUUsR0FBRztJQUNYLE9BQU8sRUFBRSxVQUFTLFNBQWE7UUFDN0IsTUFBTSxDQUFDLENBQUMsU0FBUyxDQUFDLENBQUMsQ0FBQztZQUNsQixLQUFLLElBQUk7Z0JBQ1AsYUFBYSxDQUFDLFdBQVcsQ0FBQyxxQkFBcUIsQ0FBQyxDQUFDO2dCQUNqRCxLQUFLLENBQUM7WUFDUixLQUFLLE1BQU07Z0JBQ1QsYUFBYSxDQUFDLFFBQVEsQ0FBQyxxQkFBcUIsQ0FBQyxDQUFDO2dCQUM5QyxLQUFLLENBQUM7UUFDVixDQUFDO0lBQ0gsQ0FBQztDQUNGLENBQUMsQ0FBQztBQUVILElBQU0sZ0JBQWdCLEdBQUcsSUFBSSxRQUFRLENBQUM7SUFDcEMsT0FBTyxFQUFFLGlCQUFpQixDQUFDLENBQUMsQ0FBQztJQUM3QixNQUFNLEVBQUUsTUFBTTtJQUNkLE9BQU8sRUFBRSxVQUFTLFNBQWE7UUFDN0IsTUFBTSxDQUFDLENBQUMsU0FBUyxDQUFDLENBQUMsQ0FBQztZQUNsQixLQUFLLElBQUk7Z0JBQ1AsYUFBYSxDQUFDLFdBQVcsQ0FBQywyQkFBMkIsQ0FBQyxDQUFDO2dCQUN2RCxLQUFLLENBQUM7WUFDUixLQUFLLE1BQU07Z0JBQ1QsYUFBYSxDQUFDLFFBQVEsQ0FBQywyQkFBMkIsQ0FBQyxDQUFDO2dCQUNwRCxLQUFLLENBQUM7UUFDVixDQUFDO0lBQ0gsQ0FBQztDQUNGLENBQUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIlxuaW1wb3J0IGRlYm91bmNlID0gcmVxdWlyZSgnbG9kYXNoLmRlYm91bmNlJyk7XG5pbXBvcnQgJCA9IHJlcXVpcmUoJ2pxdWVyeScpO1xuKDxhbnk+d2luZG93KS5qUXVlcnkgPSAkO1xuXG5yZXF1aXJlKCd3YXlwb2ludHMvbGliL25vZnJhbWV3b3JrLndheXBvaW50cycpO1xucmVxdWlyZSgnd2F5cG9pbnRzL2xpYi9zaG9ydGN1dHMvc3RpY2t5Jyk7XG5cbnZhciBjc3MgPSByZXF1aXJlKCcuL2luZGV4LmNzcycpO1xuXG5jb25zdCBXYXlwb2ludCA9ICg8YW55PndpbmRvdykuV2F5cG9pbnQ7XG5cbmNvbnN0ICRwYWdlSGVhZGVyID0gJCgnLlBhZ2VIZWFkZXInKTtcbmNvbnN0IFBBR0VfSEVBREVSX0NPTExBUFNFRF9DTEFTUyA9ICdQYWdlSGVhZGVyLS1jb2xsYXBzZWQnO1xuXG5jb25zdCAkYWJvdXRNZUFzaWRlID0gJCgnLkFib3V0TWVBc2lkZScpO1xuY29uc3QgQUJPVVRfTUVfQVNJREVfU1RJQ0tZID0gJ0Fib3V0TWVBc2lkZS0tc3RpY2t5JztcbmNvbnN0IEFCT1VUX01FX0FTSURFX0JPVFRPTV9DTEFTUyA9ICdBYm91dE1lQXNpZGUtLWJvdHRvbSc7XG5cbmNvbnN0ICR3b3JrV2l0aE1lRm9vdGVyID0gJCgnLldvcmtXaXRoTWVGb290ZXInKTtcblxuJCgncHJlPmNvZGUnKS5wYXJlbnQoKS5hZGRDbGFzcygncHJldHR5cHJpbnQnKTtcblxuKDxhbnk+d2luZG93KS5wcmV0dHlQcmludCgpO1xuXG4kKHdpbmRvdykucmVzaXplKGRlYm91bmNlKGZ1bmN0aW9uKCkge1xuICBjb25zb2xlLmxvZygncmVzaXplJyk7XG4gIFdheXBvaW50LnJlZnJlc2hBbGwoKTtcbn0sIDQwKSk7XG5cblxuY29uc3QgY29udGVudFdheXBvaW50ID0gbmV3IFdheXBvaW50KHtcbiAgZWxlbWVudDogZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2NvbnRlbnQnKSxcbiAgb2Zmc2V0OiA5MCxcbiAgaGFuZGxlcjogZnVuY3Rpb24oZGlyZWN0aW9uOmFueSkge1xuICAgIHN3aXRjaCAoZGlyZWN0aW9uKSB7XG4gICAgICBjYXNlICd1cCc6XG4gICAgICAgICRwYWdlSGVhZGVyLnJlbW92ZUNsYXNzKFBBR0VfSEVBREVSX0NPTExBUFNFRF9DTEFTUyk7XG4gICAgICAgIGJyZWFrO1xuICAgICAgY2FzZSAnZG93bic6XG4gICAgICAgICRwYWdlSGVhZGVyLmFkZENsYXNzKFBBR0VfSEVBREVSX0NPTExBUFNFRF9DTEFTUyk7XG4gICAgICAgIGJyZWFrO1xuICAgIH1cbiAgfVxufSk7XG5cbmNvbnN0IGFib3V0U3RpY2t5ID0gbmV3IFdheXBvaW50KHtcbiAgZWxlbWVudDogJGFib3V0TWVBc2lkZVswXSxcbiAgb2Zmc2V0OiAxMTAsXG4gIGhhbmRsZXI6IGZ1bmN0aW9uKGRpcmVjdGlvbjphbnkpIHtcbiAgICBzd2l0Y2ggKGRpcmVjdGlvbikge1xuICAgICAgY2FzZSAndXAnOlxuICAgICAgICAkYWJvdXRNZUFzaWRlLnJlbW92ZUNsYXNzKEFCT1VUX01FX0FTSURFX1NUSUNLWSk7XG4gICAgICAgIGJyZWFrO1xuICAgICAgY2FzZSAnZG93bic6XG4gICAgICAgICRhYm91dE1lQXNpZGUuYWRkQ2xhc3MoQUJPVVRfTUVfQVNJREVfU1RJQ0tZKTtcbiAgICAgICAgYnJlYWs7XG4gICAgfVxuICB9XG59KTtcblxuY29uc3Qgd29ya1dpdGhNZUZvb3RlciA9IG5ldyBXYXlwb2ludCh7XG4gIGVsZW1lbnQ6ICR3b3JrV2l0aE1lRm9vdGVyWzBdLFxuICBvZmZzZXQ6ICcxMDAlJyxcbiAgaGFuZGxlcjogZnVuY3Rpb24oZGlyZWN0aW9uOmFueSkge1xuICAgIHN3aXRjaCAoZGlyZWN0aW9uKSB7XG4gICAgICBjYXNlICd1cCc6XG4gICAgICAgICRhYm91dE1lQXNpZGUucmVtb3ZlQ2xhc3MoQUJPVVRfTUVfQVNJREVfQk9UVE9NX0NMQVNTKTtcbiAgICAgICAgYnJlYWs7XG4gICAgICBjYXNlICdkb3duJzpcbiAgICAgICAgJGFib3V0TWVBc2lkZS5hZGRDbGFzcyhBQk9VVF9NRV9BU0lERV9CT1RUT01fQ0xBU1MpO1xuICAgICAgICBicmVhaztcbiAgICB9XG4gIH1cbn0pO1xuIl19
+	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJpbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0EsSUFBTyxTQUFTLFdBQVcsV0FBVyxDQUFDLENBQUM7QUFDeEMsU0FBUyxDQUFDLE1BQU0sQ0FBQyxRQUFRLENBQUMsSUFBSSxDQUFDLENBQUM7QUFFaEMsSUFBTyxRQUFRLFdBQVcsaUJBQWlCLENBQUMsQ0FBQztBQUM3QyxJQUFPLENBQUMsV0FBVyxRQUFRLENBQUMsQ0FBQztBQUN2QixNQUFPLENBQUMsTUFBTSxHQUFHLENBQUMsQ0FBQztBQUV6QixPQUFPLENBQUMsVUFBVSxDQUFDLENBQUM7QUFDcEIsT0FBTyxDQUFDLHFDQUFxQyxDQUFDLENBQUM7QUFDL0MsT0FBTyxDQUFDLGdDQUFnQyxDQUFDLENBQUM7QUFFMUMsSUFBSSxHQUFHLEdBQUcsT0FBTyxDQUFDLGFBQWEsQ0FBQyxDQUFDO0FBRWpDLElBQU0sUUFBUSxHQUFTLE1BQU8sQ0FBQyxRQUFRLENBQUM7QUFFeEMsSUFBTSxXQUFXLEdBQUcsQ0FBQyxDQUFDLGFBQWEsQ0FBQyxDQUFDO0FBQ3JDLElBQU0sMkJBQTJCLEdBQUcsdUJBQXVCLENBQUM7QUFFNUQsSUFBTSxhQUFhLEdBQUcsQ0FBQyxDQUFDLGVBQWUsQ0FBQyxDQUFDO0FBQ3pDLElBQU0scUJBQXFCLEdBQUcsc0JBQXNCLENBQUM7QUFDckQsSUFBTSwyQkFBMkIsR0FBRyxzQkFBc0IsQ0FBQztBQUUzRCxJQUFNLGlCQUFpQixHQUFHLENBQUMsQ0FBQyxtQkFBbUIsQ0FBQyxDQUFDO0FBRWpELENBQUMsQ0FBQyxVQUFVLENBQUMsQ0FBQyxNQUFNLEVBQUUsQ0FBQyxRQUFRLENBQUMsYUFBYSxDQUFDLENBQUM7QUFFekMsTUFBTyxDQUFDLFdBQVcsRUFBRSxDQUFDO0FBRTVCLENBQUMsQ0FBQyxNQUFNLENBQUMsQ0FBQyxNQUFNLENBQUMsUUFBUSxDQUFDO0lBQ3hCLE9BQU8sQ0FBQyxHQUFHLENBQUMsUUFBUSxDQUFDLENBQUM7SUFDdEIsUUFBUSxDQUFDLFVBQVUsRUFBRSxDQUFDO0FBQ3hCLENBQUMsRUFBRSxFQUFFLENBQUMsQ0FBQyxDQUFDO0FBRVIsSUFBTSxpQkFBaUIsR0FBRyxXQUFXLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxDQUFDO0FBQ3RELElBQU0sZ0JBQWdCLEdBQUcsa0JBQWtCLENBQUM7QUFDNUMsSUFBTSxRQUFRLEdBQUcsV0FBVyxDQUFDO0FBQzdCLE9BQU8sQ0FBQyxHQUFHLENBQUMsaUJBQWlCLENBQUMsTUFBTSxDQUFDLENBQUM7QUFFdEMsaUJBQWlCLENBQUMsRUFBRSxDQUFDLE9BQU8sRUFBRTtJQUM1QixPQUFPLENBQUMsR0FBRyxDQUFDLFNBQVMsQ0FBQyxDQUFDO0lBQ3ZCLFdBQVcsQ0FBQyxXQUFXLENBQUMsZ0JBQWdCLENBQUMsQ0FBQztJQUMxQyxpQkFBaUIsQ0FBQyxXQUFXLENBQUMsUUFBUSxDQUFDLENBQUM7QUFDMUMsQ0FBQyxDQUFDLENBQUM7QUFFSCxJQUFNLGVBQWUsR0FBRyxJQUFJLFFBQVEsQ0FBQztJQUNuQyxPQUFPLEVBQUUsUUFBUSxDQUFDLGNBQWMsQ0FBQyxTQUFTLENBQUM7SUFDM0MsTUFBTSxFQUFFLEVBQUU7SUFDVixPQUFPLEVBQUUsVUFBUyxTQUFhO1FBQzdCLE1BQU0sQ0FBQyxDQUFDLFNBQVMsQ0FBQyxDQUFDLENBQUM7WUFDbEIsS0FBSyxJQUFJO2dCQUNQLFdBQVcsQ0FBQyxXQUFXLENBQUMsMkJBQTJCLENBQUMsQ0FBQztnQkFDckQsS0FBSyxDQUFDO1lBQ1IsS0FBSyxNQUFNO2dCQUNULFdBQVcsQ0FBQyxRQUFRLENBQUMsMkJBQTJCLENBQUMsQ0FBQztnQkFDbEQsS0FBSyxDQUFDO1FBQ1YsQ0FBQztJQUNILENBQUM7Q0FDRixDQUFDLENBQUM7QUFFSCxFQUFFLENBQUMsQ0FBQyxhQUFhLENBQUMsTUFBTSxDQUFDLENBQUMsQ0FBQztJQUN6QixJQUFNLFdBQVcsR0FBRyxJQUFJLFFBQVEsQ0FBQztRQUMvQixPQUFPLEVBQUUsYUFBYSxDQUFDLENBQUMsQ0FBQztRQUN6QixNQUFNLEVBQUUsR0FBRztRQUNYLE9BQU8sRUFBRSxVQUFTLFNBQWE7WUFDN0IsTUFBTSxDQUFDLENBQUMsU0FBUyxDQUFDLENBQUMsQ0FBQztnQkFDbEIsS0FBSyxJQUFJO29CQUNQLGFBQWEsQ0FBQyxXQUFXLENBQUMscUJBQXFCLENBQUMsQ0FBQztvQkFDakQsS0FBSyxDQUFDO2dCQUNSLEtBQUssTUFBTTtvQkFDVCxhQUFhLENBQUMsUUFBUSxDQUFDLHFCQUFxQixDQUFDLENBQUM7b0JBQzlDLEtBQUssQ0FBQztZQUNWLENBQUM7UUFDSCxDQUFDO0tBQ0YsQ0FBQyxDQUFDO0FBQ0wsQ0FBQztBQUdELEVBQUUsQ0FBQyxDQUFDLGlCQUFpQixDQUFDLE1BQU0sQ0FBQyxDQUFDLENBQUM7SUFDN0IsSUFBTSxnQkFBZ0IsR0FBRyxJQUFJLFFBQVEsQ0FBQztRQUNwQyxPQUFPLEVBQUUsaUJBQWlCLENBQUMsQ0FBQyxDQUFDO1FBQzdCLE1BQU0sRUFBRSxNQUFNO1FBQ2QsT0FBTyxFQUFFLFVBQVMsU0FBYTtZQUM3QixNQUFNLENBQUMsQ0FBQyxTQUFTLENBQUMsQ0FBQyxDQUFDO2dCQUNsQixLQUFLLElBQUk7b0JBQ1AsYUFBYSxDQUFDLFdBQVcsQ0FBQywyQkFBMkIsQ0FBQyxDQUFDO29CQUN2RCxLQUFLLENBQUM7Z0JBQ1IsS0FBSyxNQUFNO29CQUNULGFBQWEsQ0FBQyxRQUFRLENBQUMsMkJBQTJCLENBQUMsQ0FBQztvQkFDcEQsS0FBSyxDQUFDO1lBQ1YsQ0FBQztRQUNILENBQUM7S0FDRixDQUFDLENBQUM7QUFDTCxDQUFDO0FBRUQsSUFBTSxlQUFlLEdBQUcsQ0FBQyxDQUFDLDhCQUE4QixDQUFDLENBQUM7QUFDMUQsSUFBTSxjQUFjLEdBQUcsQ0FBQyxDQUFDLDZCQUE2QixDQUFDLENBQUM7QUFDeEQsY0FBYyxDQUFDLEtBQUssQ0FBQztJQUNuQixjQUFjLEVBQUUsZUFBZTtJQUMvQixTQUFTLEVBQUUsRUFBRTtJQUNiLFNBQVMsRUFBRSxDQUFDO0lBQ1osU0FBUyxFQUFFLElBQUk7SUFDZixJQUFJLEVBQUUsSUFBSTtDQUNYLENBQUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIlxuaW1wb3J0IGZhc3RjbGljayA9IHJlcXVpcmUoJ2Zhc3RjbGljaycpO1xuZmFzdGNsaWNrLmF0dGFjaChkb2N1bWVudC5ib2R5KTtcblxuaW1wb3J0IGRlYm91bmNlID0gcmVxdWlyZSgnbG9kYXNoLmRlYm91bmNlJyk7XG5pbXBvcnQgJCA9IHJlcXVpcmUoJ2pxdWVyeScpO1xuKDxhbnk+d2luZG93KS5qUXVlcnkgPSAkO1xuXG5yZXF1aXJlKCd0eXBlZC5qcycpO1xucmVxdWlyZSgnd2F5cG9pbnRzL2xpYi9ub2ZyYW1ld29yay53YXlwb2ludHMnKTtcbnJlcXVpcmUoJ3dheXBvaW50cy9saWIvc2hvcnRjdXRzL3N0aWNreScpO1xuXG52YXIgY3NzID0gcmVxdWlyZSgnLi9pbmRleC5jc3MnKTtcblxuY29uc3QgV2F5cG9pbnQgPSAoPGFueT53aW5kb3cpLldheXBvaW50O1xuXG5jb25zdCAkcGFnZUhlYWRlciA9ICQoJy5QYWdlSGVhZGVyJyk7XG5jb25zdCBQQUdFX0hFQURFUl9DT0xMQVBTRURfQ0xBU1MgPSAnUGFnZUhlYWRlci0tY29sbGFwc2VkJztcblxuY29uc3QgJGFib3V0TWVBc2lkZSA9ICQoJy5BYm91dE1lQXNpZGUnKTtcbmNvbnN0IEFCT1VUX01FX0FTSURFX1NUSUNLWSA9ICdBYm91dE1lQXNpZGUtLXN0aWNreSc7XG5jb25zdCBBQk9VVF9NRV9BU0lERV9CT1RUT01fQ0xBU1MgPSAnQWJvdXRNZUFzaWRlLS1ib3R0b20nO1xuXG5jb25zdCAkd29ya1dpdGhNZUZvb3RlciA9ICQoJy5Xb3JrV2l0aE1lRm9vdGVyJyk7XG5cbiQoJ3ByZT5jb2RlJykucGFyZW50KCkuYWRkQ2xhc3MoJ3ByZXR0eXByaW50Jyk7XG5cbig8YW55PndpbmRvdykucHJldHR5UHJpbnQoKTtcblxuJCh3aW5kb3cpLnJlc2l6ZShkZWJvdW5jZShmdW5jdGlvbigpIHtcbiAgY29uc29sZS5sb2coJ3Jlc2l6ZScpO1xuICBXYXlwb2ludC5yZWZyZXNoQWxsKCk7XG59LCA0MCkpO1xuXG5jb25zdCAkcGFnZUhlYWRlckJ1cmdlciA9ICRwYWdlSGVhZGVyLmZpbmQoJy5CdXJnZXInKTtcbmNvbnN0IFBBR0VfSEVBREVSX09QRU4gPSAnUGFnZUhlYWRlci0tb3Blbic7XG5jb25zdCBCVVJHRVJfWCA9ICdCdXJnZXItLXgnO1xuY29uc29sZS5sb2coJHBhZ2VIZWFkZXJCdXJnZXIubGVuZ3RoKTtcblxuJHBhZ2VIZWFkZXJCdXJnZXIub24oJ2NsaWNrJywgZnVuY3Rpb24oKSB7XG4gIGNvbnNvbGUubG9nKCdjbGlja2VkJyk7XG4gICRwYWdlSGVhZGVyLnRvZ2dsZUNsYXNzKFBBR0VfSEVBREVSX09QRU4pO1xuICAkcGFnZUhlYWRlckJ1cmdlci50b2dnbGVDbGFzcyhCVVJHRVJfWCk7XG59KTtcblxuY29uc3QgY29udGVudFdheXBvaW50ID0gbmV3IFdheXBvaW50KHtcbiAgZWxlbWVudDogZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2NvbnRlbnQnKSxcbiAgb2Zmc2V0OiA5MCxcbiAgaGFuZGxlcjogZnVuY3Rpb24oZGlyZWN0aW9uOmFueSkge1xuICAgIHN3aXRjaCAoZGlyZWN0aW9uKSB7XG4gICAgICBjYXNlICd1cCc6XG4gICAgICAgICRwYWdlSGVhZGVyLnJlbW92ZUNsYXNzKFBBR0VfSEVBREVSX0NPTExBUFNFRF9DTEFTUyk7XG4gICAgICAgIGJyZWFrO1xuICAgICAgY2FzZSAnZG93bic6XG4gICAgICAgICRwYWdlSGVhZGVyLmFkZENsYXNzKFBBR0VfSEVBREVSX0NPTExBUFNFRF9DTEFTUyk7XG4gICAgICAgIGJyZWFrO1xuICAgIH1cbiAgfVxufSk7XG5cbmlmICgkYWJvdXRNZUFzaWRlLmxlbmd0aCkge1xuICBjb25zdCBhYm91dFN0aWNreSA9IG5ldyBXYXlwb2ludCh7XG4gICAgZWxlbWVudDogJGFib3V0TWVBc2lkZVswXSxcbiAgICBvZmZzZXQ6IDExMCxcbiAgICBoYW5kbGVyOiBmdW5jdGlvbihkaXJlY3Rpb246YW55KSB7XG4gICAgICBzd2l0Y2ggKGRpcmVjdGlvbikge1xuICAgICAgICBjYXNlICd1cCc6XG4gICAgICAgICAgJGFib3V0TWVBc2lkZS5yZW1vdmVDbGFzcyhBQk9VVF9NRV9BU0lERV9TVElDS1kpO1xuICAgICAgICAgIGJyZWFrO1xuICAgICAgICBjYXNlICdkb3duJzpcbiAgICAgICAgICAkYWJvdXRNZUFzaWRlLmFkZENsYXNzKEFCT1VUX01FX0FTSURFX1NUSUNLWSk7XG4gICAgICAgICAgYnJlYWs7XG4gICAgICB9XG4gICAgfVxuICB9KTtcbn1cblxuXG5pZiAoJHdvcmtXaXRoTWVGb290ZXIubGVuZ3RoKSB7XG4gIGNvbnN0IHdvcmtXaXRoTWVGb290ZXIgPSBuZXcgV2F5cG9pbnQoe1xuICAgIGVsZW1lbnQ6ICR3b3JrV2l0aE1lRm9vdGVyWzBdLFxuICAgIG9mZnNldDogJzEwMCUnLFxuICAgIGhhbmRsZXI6IGZ1bmN0aW9uKGRpcmVjdGlvbjphbnkpIHtcbiAgICAgIHN3aXRjaCAoZGlyZWN0aW9uKSB7XG4gICAgICAgIGNhc2UgJ3VwJzpcbiAgICAgICAgICAkYWJvdXRNZUFzaWRlLnJlbW92ZUNsYXNzKEFCT1VUX01FX0FTSURFX0JPVFRPTV9DTEFTUyk7XG4gICAgICAgICAgYnJlYWs7XG4gICAgICAgIGNhc2UgJ2Rvd24nOlxuICAgICAgICAgICRhYm91dE1lQXNpZGUuYWRkQ2xhc3MoQUJPVVRfTUVfQVNJREVfQk9UVE9NX0NMQVNTKTtcbiAgICAgICAgICBicmVhaztcbiAgICAgIH1cbiAgICB9XG4gIH0pO1xufVxuXG5jb25zdCAkaUJlbGlldmVUaXRsZXMgPSAkKCcuSGVyb0pvYlRpdGxlLWlCZWxpZXZlVGl0bGVzJyk7XG5jb25zdCAkaUJlbGlldmVUeXBlZCA9ICQoJy5IZXJvSm9iVGl0bGUtaUJlbGlldmVUeXBlZCcpO1xuJGlCZWxpZXZlVHlwZWQudHlwZWQoe1xuICBzdHJpbmdzRWxlbWVudDogJGlCZWxpZXZlVGl0bGVzLFxuICB0eXBlU3BlZWQ6IDQwLFxuICBiYWNrU3BlZWQ6IDAsXG4gIGJhY2tEZWxheTogMjAwMCxcbiAgbG9vcDogdHJ1ZVxufSk7XG5cblxuIl19
 
 /***/ },
 /* 1 */
@@ -11188,6 +11213,859 @@
 	}
 
 	module.exports = debounce;
+
+
+/***/ },
+/* 9 */
+/***/ function(module, exports) {
+
+	!function(t){"use strict";var s=function(s,e){this.el=t(s),this.options=t.extend({},t.fn.typed.defaults,e),this.isInput=this.el.is("input"),this.attr=this.options.attr,this.showCursor=this.isInput?!1:this.options.showCursor,this.elContent=this.attr?this.el.attr(this.attr):this.el.text(),this.contentType=this.options.contentType,this.typeSpeed=this.options.typeSpeed,this.startDelay=this.options.startDelay,this.backSpeed=this.options.backSpeed,this.backDelay=this.options.backDelay,this.stringsElement=this.options.stringsElement,this.strings=this.options.strings,this.strPos=0,this.arrayPos=0,this.stopNum=0,this.loop=this.options.loop,this.loopCount=this.options.loopCount,this.curLoop=0,this.stop=!1,this.cursorChar=this.options.cursorChar,this.shuffle=this.options.shuffle,this.sequence=[],this.build()};s.prototype={constructor:s,init:function(){var t=this;t.timeout=setTimeout(function(){for(var s=0;s<t.strings.length;++s)t.sequence[s]=s;t.shuffle&&(t.sequence=t.shuffleArray(t.sequence)),t.typewrite(t.strings[t.sequence[t.arrayPos]],t.strPos)},t.startDelay)},build:function(){var s=this;if(this.showCursor===!0&&(this.cursor=t('<span class="typed-cursor">'+this.cursorChar+"</span>"),this.el.after(this.cursor)),this.stringsElement){s.strings=[],this.stringsElement.hide();var e=this.stringsElement.find("p");t.each(e,function(e,i){s.strings.push(t(i).html())})}this.init()},typewrite:function(t,s){if(this.stop!==!0){var e=Math.round(70*Math.random())+this.typeSpeed,i=this;i.timeout=setTimeout(function(){var e=0,r=t.substr(s);if("^"===r.charAt(0)){var o=1;/^\^\d+/.test(r)&&(r=/\d+/.exec(r)[0],o+=r.length,e=parseInt(r)),t=t.substring(0,s)+t.substring(s+o)}if("html"===i.contentType){var n=t.substr(s).charAt(0);if("<"===n||"&"===n){var a="",h="";for(h="<"===n?">":";";t.substr(s).charAt(0)!==h;)a+=t.substr(s).charAt(0),s++;s++,a+=h}}i.timeout=setTimeout(function(){if(s===t.length){if(i.options.onStringTyped(i.arrayPos),i.arrayPos===i.strings.length-1&&(i.options.callback(),i.curLoop++,i.loop===!1||i.curLoop===i.loopCount))return;i.timeout=setTimeout(function(){i.backspace(t,s)},i.backDelay)}else{0===s&&i.options.preStringTyped(i.arrayPos);var e=t.substr(0,s+1);i.attr?i.el.attr(i.attr,e):i.isInput?i.el.val(e):"html"===i.contentType?i.el.html(e):i.el.text(e),s++,i.typewrite(t,s)}},e)},e)}},backspace:function(t,s){if(this.stop!==!0){var e=Math.round(70*Math.random())+this.backSpeed,i=this;i.timeout=setTimeout(function(){if("html"===i.contentType&&">"===t.substr(s).charAt(0)){for(var e="";"<"!==t.substr(s).charAt(0);)e-=t.substr(s).charAt(0),s--;s--,e+="<"}var r=t.substr(0,s);i.attr?i.el.attr(i.attr,r):i.isInput?i.el.val(r):"html"===i.contentType?i.el.html(r):i.el.text(r),s>i.stopNum?(s--,i.backspace(t,s)):s<=i.stopNum&&(i.arrayPos++,i.arrayPos===i.strings.length?(i.arrayPos=0,i.shuffle&&(i.sequence=i.shuffleArray(i.sequence)),i.init()):i.typewrite(i.strings[i.sequence[i.arrayPos]],s))},e)}},shuffleArray:function(t){var s,e,i=t.length;if(i)for(;--i;)e=Math.floor(Math.random()*(i+1)),s=t[e],t[e]=t[i],t[i]=s;return t},reset:function(){var t=this;clearInterval(t.timeout);var s=this.el.attr("id");this.el.after('<span id="'+s+'"/>'),this.el.remove(),"undefined"!=typeof this.cursor&&this.cursor.remove(),t.options.resetCallback()}},t.fn.typed=function(e){return this.each(function(){var i=t(this),r=i.data("typed"),o="object"==typeof e&&e;r||i.data("typed",r=new s(this,o)),"string"==typeof e&&r[e]()})},t.fn.typed.defaults={strings:["These are the default values...","You know what you should do?","Use your own!","Have a great day!"],stringsElement:null,typeSpeed:0,startDelay:0,backSpeed:0,shuffle:!1,backDelay:500,loop:!1,loopCount:!1,showCursor:!0,cursorChar:"|",attr:null,contentType:"html",callback:function(){},preStringTyped:function(){},onStringTyped:function(){},resetCallback:function(){}}}(window.jQuery);
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_RESULT__;;(function () {
+		'use strict';
+
+		/**
+		 * @preserve FastClick: polyfill to remove click delays on browsers with touch UIs.
+		 *
+		 * @codingstandard ftlabs-jsv2
+		 * @copyright The Financial Times Limited [All Rights Reserved]
+		 * @license MIT License (see LICENSE.txt)
+		 */
+
+		/*jslint browser:true, node:true*/
+		/*global define, Event, Node*/
+
+
+		/**
+		 * Instantiate fast-clicking listeners on the specified layer.
+		 *
+		 * @constructor
+		 * @param {Element} layer The layer to listen on
+		 * @param {Object} [options={}] The options to override the defaults
+		 */
+		function FastClick(layer, options) {
+			var oldOnClick;
+
+			options = options || {};
+
+			/**
+			 * Whether a click is currently being tracked.
+			 *
+			 * @type boolean
+			 */
+			this.trackingClick = false;
+
+
+			/**
+			 * Timestamp for when click tracking started.
+			 *
+			 * @type number
+			 */
+			this.trackingClickStart = 0;
+
+
+			/**
+			 * The element being tracked for a click.
+			 *
+			 * @type EventTarget
+			 */
+			this.targetElement = null;
+
+
+			/**
+			 * X-coordinate of touch start event.
+			 *
+			 * @type number
+			 */
+			this.touchStartX = 0;
+
+
+			/**
+			 * Y-coordinate of touch start event.
+			 *
+			 * @type number
+			 */
+			this.touchStartY = 0;
+
+
+			/**
+			 * ID of the last touch, retrieved from Touch.identifier.
+			 *
+			 * @type number
+			 */
+			this.lastTouchIdentifier = 0;
+
+
+			/**
+			 * Touchmove boundary, beyond which a click will be cancelled.
+			 *
+			 * @type number
+			 */
+			this.touchBoundary = options.touchBoundary || 10;
+
+
+			/**
+			 * The FastClick layer.
+			 *
+			 * @type Element
+			 */
+			this.layer = layer;
+
+			/**
+			 * The minimum time between tap(touchstart and touchend) events
+			 *
+			 * @type number
+			 */
+			this.tapDelay = options.tapDelay || 200;
+
+			/**
+			 * The maximum time for a tap
+			 *
+			 * @type number
+			 */
+			this.tapTimeout = options.tapTimeout || 700;
+
+			if (FastClick.notNeeded(layer)) {
+				return;
+			}
+
+			// Some old versions of Android don't have Function.prototype.bind
+			function bind(method, context) {
+				return function() { return method.apply(context, arguments); };
+			}
+
+
+			var methods = ['onMouse', 'onClick', 'onTouchStart', 'onTouchMove', 'onTouchEnd', 'onTouchCancel'];
+			var context = this;
+			for (var i = 0, l = methods.length; i < l; i++) {
+				context[methods[i]] = bind(context[methods[i]], context);
+			}
+
+			// Set up event handlers as required
+			if (deviceIsAndroid) {
+				layer.addEventListener('mouseover', this.onMouse, true);
+				layer.addEventListener('mousedown', this.onMouse, true);
+				layer.addEventListener('mouseup', this.onMouse, true);
+			}
+
+			layer.addEventListener('click', this.onClick, true);
+			layer.addEventListener('touchstart', this.onTouchStart, false);
+			layer.addEventListener('touchmove', this.onTouchMove, false);
+			layer.addEventListener('touchend', this.onTouchEnd, false);
+			layer.addEventListener('touchcancel', this.onTouchCancel, false);
+
+			// Hack is required for browsers that don't support Event#stopImmediatePropagation (e.g. Android 2)
+			// which is how FastClick normally stops click events bubbling to callbacks registered on the FastClick
+			// layer when they are cancelled.
+			if (!Event.prototype.stopImmediatePropagation) {
+				layer.removeEventListener = function(type, callback, capture) {
+					var rmv = Node.prototype.removeEventListener;
+					if (type === 'click') {
+						rmv.call(layer, type, callback.hijacked || callback, capture);
+					} else {
+						rmv.call(layer, type, callback, capture);
+					}
+				};
+
+				layer.addEventListener = function(type, callback, capture) {
+					var adv = Node.prototype.addEventListener;
+					if (type === 'click') {
+						adv.call(layer, type, callback.hijacked || (callback.hijacked = function(event) {
+							if (!event.propagationStopped) {
+								callback(event);
+							}
+						}), capture);
+					} else {
+						adv.call(layer, type, callback, capture);
+					}
+				};
+			}
+
+			// If a handler is already declared in the element's onclick attribute, it will be fired before
+			// FastClick's onClick handler. Fix this by pulling out the user-defined handler function and
+			// adding it as listener.
+			if (typeof layer.onclick === 'function') {
+
+				// Android browser on at least 3.2 requires a new reference to the function in layer.onclick
+				// - the old one won't work if passed to addEventListener directly.
+				oldOnClick = layer.onclick;
+				layer.addEventListener('click', function(event) {
+					oldOnClick(event);
+				}, false);
+				layer.onclick = null;
+			}
+		}
+
+		/**
+		* Windows Phone 8.1 fakes user agent string to look like Android and iPhone.
+		*
+		* @type boolean
+		*/
+		var deviceIsWindowsPhone = navigator.userAgent.indexOf("Windows Phone") >= 0;
+
+		/**
+		 * Android requires exceptions.
+		 *
+		 * @type boolean
+		 */
+		var deviceIsAndroid = navigator.userAgent.indexOf('Android') > 0 && !deviceIsWindowsPhone;
+
+
+		/**
+		 * iOS requires exceptions.
+		 *
+		 * @type boolean
+		 */
+		var deviceIsIOS = /iP(ad|hone|od)/.test(navigator.userAgent) && !deviceIsWindowsPhone;
+
+
+		/**
+		 * iOS 4 requires an exception for select elements.
+		 *
+		 * @type boolean
+		 */
+		var deviceIsIOS4 = deviceIsIOS && (/OS 4_\d(_\d)?/).test(navigator.userAgent);
+
+
+		/**
+		 * iOS 6.0-7.* requires the target element to be manually derived
+		 *
+		 * @type boolean
+		 */
+		var deviceIsIOSWithBadTarget = deviceIsIOS && (/OS [6-7]_\d/).test(navigator.userAgent);
+
+		/**
+		 * BlackBerry requires exceptions.
+		 *
+		 * @type boolean
+		 */
+		var deviceIsBlackBerry10 = navigator.userAgent.indexOf('BB10') > 0;
+
+		/**
+		 * Determine whether a given element requires a native click.
+		 *
+		 * @param {EventTarget|Element} target Target DOM element
+		 * @returns {boolean} Returns true if the element needs a native click
+		 */
+		FastClick.prototype.needsClick = function(target) {
+			switch (target.nodeName.toLowerCase()) {
+
+			// Don't send a synthetic click to disabled inputs (issue #62)
+			case 'button':
+			case 'select':
+			case 'textarea':
+				if (target.disabled) {
+					return true;
+				}
+
+				break;
+			case 'input':
+
+				// File inputs need real clicks on iOS 6 due to a browser bug (issue #68)
+				if ((deviceIsIOS && target.type === 'file') || target.disabled) {
+					return true;
+				}
+
+				break;
+			case 'label':
+			case 'iframe': // iOS8 homescreen apps can prevent events bubbling into frames
+			case 'video':
+				return true;
+			}
+
+			return (/\bneedsclick\b/).test(target.className);
+		};
+
+
+		/**
+		 * Determine whether a given element requires a call to focus to simulate click into element.
+		 *
+		 * @param {EventTarget|Element} target Target DOM element
+		 * @returns {boolean} Returns true if the element requires a call to focus to simulate native click.
+		 */
+		FastClick.prototype.needsFocus = function(target) {
+			switch (target.nodeName.toLowerCase()) {
+			case 'textarea':
+				return true;
+			case 'select':
+				return !deviceIsAndroid;
+			case 'input':
+				switch (target.type) {
+				case 'button':
+				case 'checkbox':
+				case 'file':
+				case 'image':
+				case 'radio':
+				case 'submit':
+					return false;
+				}
+
+				// No point in attempting to focus disabled inputs
+				return !target.disabled && !target.readOnly;
+			default:
+				return (/\bneedsfocus\b/).test(target.className);
+			}
+		};
+
+
+		/**
+		 * Send a click event to the specified element.
+		 *
+		 * @param {EventTarget|Element} targetElement
+		 * @param {Event} event
+		 */
+		FastClick.prototype.sendClick = function(targetElement, event) {
+			var clickEvent, touch;
+
+			// On some Android devices activeElement needs to be blurred otherwise the synthetic click will have no effect (#24)
+			if (document.activeElement && document.activeElement !== targetElement) {
+				document.activeElement.blur();
+			}
+
+			touch = event.changedTouches[0];
+
+			// Synthesise a click event, with an extra attribute so it can be tracked
+			clickEvent = document.createEvent('MouseEvents');
+			clickEvent.initMouseEvent(this.determineEventType(targetElement), true, true, window, 1, touch.screenX, touch.screenY, touch.clientX, touch.clientY, false, false, false, false, 0, null);
+			clickEvent.forwardedTouchEvent = true;
+			targetElement.dispatchEvent(clickEvent);
+		};
+
+		FastClick.prototype.determineEventType = function(targetElement) {
+
+			//Issue #159: Android Chrome Select Box does not open with a synthetic click event
+			if (deviceIsAndroid && targetElement.tagName.toLowerCase() === 'select') {
+				return 'mousedown';
+			}
+
+			return 'click';
+		};
+
+
+		/**
+		 * @param {EventTarget|Element} targetElement
+		 */
+		FastClick.prototype.focus = function(targetElement) {
+			var length;
+
+			// Issue #160: on iOS 7, some input elements (e.g. date datetime month) throw a vague TypeError on setSelectionRange. These elements don't have an integer value for the selectionStart and selectionEnd properties, but unfortunately that can't be used for detection because accessing the properties also throws a TypeError. Just check the type instead. Filed as Apple bug #15122724.
+			if (deviceIsIOS && targetElement.setSelectionRange && targetElement.type.indexOf('date') !== 0 && targetElement.type !== 'time' && targetElement.type !== 'month') {
+				length = targetElement.value.length;
+				targetElement.setSelectionRange(length, length);
+			} else {
+				targetElement.focus();
+			}
+		};
+
+
+		/**
+		 * Check whether the given target element is a child of a scrollable layer and if so, set a flag on it.
+		 *
+		 * @param {EventTarget|Element} targetElement
+		 */
+		FastClick.prototype.updateScrollParent = function(targetElement) {
+			var scrollParent, parentElement;
+
+			scrollParent = targetElement.fastClickScrollParent;
+
+			// Attempt to discover whether the target element is contained within a scrollable layer. Re-check if the
+			// target element was moved to another parent.
+			if (!scrollParent || !scrollParent.contains(targetElement)) {
+				parentElement = targetElement;
+				do {
+					if (parentElement.scrollHeight > parentElement.offsetHeight) {
+						scrollParent = parentElement;
+						targetElement.fastClickScrollParent = parentElement;
+						break;
+					}
+
+					parentElement = parentElement.parentElement;
+				} while (parentElement);
+			}
+
+			// Always update the scroll top tracker if possible.
+			if (scrollParent) {
+				scrollParent.fastClickLastScrollTop = scrollParent.scrollTop;
+			}
+		};
+
+
+		/**
+		 * @param {EventTarget} targetElement
+		 * @returns {Element|EventTarget}
+		 */
+		FastClick.prototype.getTargetElementFromEventTarget = function(eventTarget) {
+
+			// On some older browsers (notably Safari on iOS 4.1 - see issue #56) the event target may be a text node.
+			if (eventTarget.nodeType === Node.TEXT_NODE) {
+				return eventTarget.parentNode;
+			}
+
+			return eventTarget;
+		};
+
+
+		/**
+		 * On touch start, record the position and scroll offset.
+		 *
+		 * @param {Event} event
+		 * @returns {boolean}
+		 */
+		FastClick.prototype.onTouchStart = function(event) {
+			var targetElement, touch, selection;
+
+			// Ignore multiple touches, otherwise pinch-to-zoom is prevented if both fingers are on the FastClick element (issue #111).
+			if (event.targetTouches.length > 1) {
+				return true;
+			}
+
+			targetElement = this.getTargetElementFromEventTarget(event.target);
+			touch = event.targetTouches[0];
+
+			if (deviceIsIOS) {
+
+				// Only trusted events will deselect text on iOS (issue #49)
+				selection = window.getSelection();
+				if (selection.rangeCount && !selection.isCollapsed) {
+					return true;
+				}
+
+				if (!deviceIsIOS4) {
+
+					// Weird things happen on iOS when an alert or confirm dialog is opened from a click event callback (issue #23):
+					// when the user next taps anywhere else on the page, new touchstart and touchend events are dispatched
+					// with the same identifier as the touch event that previously triggered the click that triggered the alert.
+					// Sadly, there is an issue on iOS 4 that causes some normal touch events to have the same identifier as an
+					// immediately preceeding touch event (issue #52), so this fix is unavailable on that platform.
+					// Issue 120: touch.identifier is 0 when Chrome dev tools 'Emulate touch events' is set with an iOS device UA string,
+					// which causes all touch events to be ignored. As this block only applies to iOS, and iOS identifiers are always long,
+					// random integers, it's safe to to continue if the identifier is 0 here.
+					if (touch.identifier && touch.identifier === this.lastTouchIdentifier) {
+						event.preventDefault();
+						return false;
+					}
+
+					this.lastTouchIdentifier = touch.identifier;
+
+					// If the target element is a child of a scrollable layer (using -webkit-overflow-scrolling: touch) and:
+					// 1) the user does a fling scroll on the scrollable layer
+					// 2) the user stops the fling scroll with another tap
+					// then the event.target of the last 'touchend' event will be the element that was under the user's finger
+					// when the fling scroll was started, causing FastClick to send a click event to that layer - unless a check
+					// is made to ensure that a parent layer was not scrolled before sending a synthetic click (issue #42).
+					this.updateScrollParent(targetElement);
+				}
+			}
+
+			this.trackingClick = true;
+			this.trackingClickStart = event.timeStamp;
+			this.targetElement = targetElement;
+
+			this.touchStartX = touch.pageX;
+			this.touchStartY = touch.pageY;
+
+			// Prevent phantom clicks on fast double-tap (issue #36)
+			if ((event.timeStamp - this.lastClickTime) < this.tapDelay) {
+				event.preventDefault();
+			}
+
+			return true;
+		};
+
+
+		/**
+		 * Based on a touchmove event object, check whether the touch has moved past a boundary since it started.
+		 *
+		 * @param {Event} event
+		 * @returns {boolean}
+		 */
+		FastClick.prototype.touchHasMoved = function(event) {
+			var touch = event.changedTouches[0], boundary = this.touchBoundary;
+
+			if (Math.abs(touch.pageX - this.touchStartX) > boundary || Math.abs(touch.pageY - this.touchStartY) > boundary) {
+				return true;
+			}
+
+			return false;
+		};
+
+
+		/**
+		 * Update the last position.
+		 *
+		 * @param {Event} event
+		 * @returns {boolean}
+		 */
+		FastClick.prototype.onTouchMove = function(event) {
+			if (!this.trackingClick) {
+				return true;
+			}
+
+			// If the touch has moved, cancel the click tracking
+			if (this.targetElement !== this.getTargetElementFromEventTarget(event.target) || this.touchHasMoved(event)) {
+				this.trackingClick = false;
+				this.targetElement = null;
+			}
+
+			return true;
+		};
+
+
+		/**
+		 * Attempt to find the labelled control for the given label element.
+		 *
+		 * @param {EventTarget|HTMLLabelElement} labelElement
+		 * @returns {Element|null}
+		 */
+		FastClick.prototype.findControl = function(labelElement) {
+
+			// Fast path for newer browsers supporting the HTML5 control attribute
+			if (labelElement.control !== undefined) {
+				return labelElement.control;
+			}
+
+			// All browsers under test that support touch events also support the HTML5 htmlFor attribute
+			if (labelElement.htmlFor) {
+				return document.getElementById(labelElement.htmlFor);
+			}
+
+			// If no for attribute exists, attempt to retrieve the first labellable descendant element
+			// the list of which is defined here: http://www.w3.org/TR/html5/forms.html#category-label
+			return labelElement.querySelector('button, input:not([type=hidden]), keygen, meter, output, progress, select, textarea');
+		};
+
+
+		/**
+		 * On touch end, determine whether to send a click event at once.
+		 *
+		 * @param {Event} event
+		 * @returns {boolean}
+		 */
+		FastClick.prototype.onTouchEnd = function(event) {
+			var forElement, trackingClickStart, targetTagName, scrollParent, touch, targetElement = this.targetElement;
+
+			if (!this.trackingClick) {
+				return true;
+			}
+
+			// Prevent phantom clicks on fast double-tap (issue #36)
+			if ((event.timeStamp - this.lastClickTime) < this.tapDelay) {
+				this.cancelNextClick = true;
+				return true;
+			}
+
+			if ((event.timeStamp - this.trackingClickStart) > this.tapTimeout) {
+				return true;
+			}
+
+			// Reset to prevent wrong click cancel on input (issue #156).
+			this.cancelNextClick = false;
+
+			this.lastClickTime = event.timeStamp;
+
+			trackingClickStart = this.trackingClickStart;
+			this.trackingClick = false;
+			this.trackingClickStart = 0;
+
+			// On some iOS devices, the targetElement supplied with the event is invalid if the layer
+			// is performing a transition or scroll, and has to be re-detected manually. Note that
+			// for this to function correctly, it must be called *after* the event target is checked!
+			// See issue #57; also filed as rdar://13048589 .
+			if (deviceIsIOSWithBadTarget) {
+				touch = event.changedTouches[0];
+
+				// In certain cases arguments of elementFromPoint can be negative, so prevent setting targetElement to null
+				targetElement = document.elementFromPoint(touch.pageX - window.pageXOffset, touch.pageY - window.pageYOffset) || targetElement;
+				targetElement.fastClickScrollParent = this.targetElement.fastClickScrollParent;
+			}
+
+			targetTagName = targetElement.tagName.toLowerCase();
+			if (targetTagName === 'label') {
+				forElement = this.findControl(targetElement);
+				if (forElement) {
+					this.focus(targetElement);
+					if (deviceIsAndroid) {
+						return false;
+					}
+
+					targetElement = forElement;
+				}
+			} else if (this.needsFocus(targetElement)) {
+
+				// Case 1: If the touch started a while ago (best guess is 100ms based on tests for issue #36) then focus will be triggered anyway. Return early and unset the target element reference so that the subsequent click will be allowed through.
+				// Case 2: Without this exception for input elements tapped when the document is contained in an iframe, then any inputted text won't be visible even though the value attribute is updated as the user types (issue #37).
+				if ((event.timeStamp - trackingClickStart) > 100 || (deviceIsIOS && window.top !== window && targetTagName === 'input')) {
+					this.targetElement = null;
+					return false;
+				}
+
+				this.focus(targetElement);
+				this.sendClick(targetElement, event);
+
+				// Select elements need the event to go through on iOS 4, otherwise the selector menu won't open.
+				// Also this breaks opening selects when VoiceOver is active on iOS6, iOS7 (and possibly others)
+				if (!deviceIsIOS || targetTagName !== 'select') {
+					this.targetElement = null;
+					event.preventDefault();
+				}
+
+				return false;
+			}
+
+			if (deviceIsIOS && !deviceIsIOS4) {
+
+				// Don't send a synthetic click event if the target element is contained within a parent layer that was scrolled
+				// and this tap is being used to stop the scrolling (usually initiated by a fling - issue #42).
+				scrollParent = targetElement.fastClickScrollParent;
+				if (scrollParent && scrollParent.fastClickLastScrollTop !== scrollParent.scrollTop) {
+					return true;
+				}
+			}
+
+			// Prevent the actual click from going though - unless the target node is marked as requiring
+			// real clicks or if it is in the whitelist in which case only non-programmatic clicks are permitted.
+			if (!this.needsClick(targetElement)) {
+				event.preventDefault();
+				this.sendClick(targetElement, event);
+			}
+
+			return false;
+		};
+
+
+		/**
+		 * On touch cancel, stop tracking the click.
+		 *
+		 * @returns {void}
+		 */
+		FastClick.prototype.onTouchCancel = function() {
+			this.trackingClick = false;
+			this.targetElement = null;
+		};
+
+
+		/**
+		 * Determine mouse events which should be permitted.
+		 *
+		 * @param {Event} event
+		 * @returns {boolean}
+		 */
+		FastClick.prototype.onMouse = function(event) {
+
+			// If a target element was never set (because a touch event was never fired) allow the event
+			if (!this.targetElement) {
+				return true;
+			}
+
+			if (event.forwardedTouchEvent) {
+				return true;
+			}
+
+			// Programmatically generated events targeting a specific element should be permitted
+			if (!event.cancelable) {
+				return true;
+			}
+
+			// Derive and check the target element to see whether the mouse event needs to be permitted;
+			// unless explicitly enabled, prevent non-touch click events from triggering actions,
+			// to prevent ghost/doubleclicks.
+			if (!this.needsClick(this.targetElement) || this.cancelNextClick) {
+
+				// Prevent any user-added listeners declared on FastClick element from being fired.
+				if (event.stopImmediatePropagation) {
+					event.stopImmediatePropagation();
+				} else {
+
+					// Part of the hack for browsers that don't support Event#stopImmediatePropagation (e.g. Android 2)
+					event.propagationStopped = true;
+				}
+
+				// Cancel the event
+				event.stopPropagation();
+				event.preventDefault();
+
+				return false;
+			}
+
+			// If the mouse event is permitted, return true for the action to go through.
+			return true;
+		};
+
+
+		/**
+		 * On actual clicks, determine whether this is a touch-generated click, a click action occurring
+		 * naturally after a delay after a touch (which needs to be cancelled to avoid duplication), or
+		 * an actual click which should be permitted.
+		 *
+		 * @param {Event} event
+		 * @returns {boolean}
+		 */
+		FastClick.prototype.onClick = function(event) {
+			var permitted;
+
+			// It's possible for another FastClick-like library delivered with third-party code to fire a click event before FastClick does (issue #44). In that case, set the click-tracking flag back to false and return early. This will cause onTouchEnd to return early.
+			if (this.trackingClick) {
+				this.targetElement = null;
+				this.trackingClick = false;
+				return true;
+			}
+
+			// Very odd behaviour on iOS (issue #18): if a submit element is present inside a form and the user hits enter in the iOS simulator or clicks the Go button on the pop-up OS keyboard the a kind of 'fake' click event will be triggered with the submit-type input element as the target.
+			if (event.target.type === 'submit' && event.detail === 0) {
+				return true;
+			}
+
+			permitted = this.onMouse(event);
+
+			// Only unset targetElement if the click is not permitted. This will ensure that the check for !targetElement in onMouse fails and the browser's click doesn't go through.
+			if (!permitted) {
+				this.targetElement = null;
+			}
+
+			// If clicks are permitted, return true for the action to go through.
+			return permitted;
+		};
+
+
+		/**
+		 * Remove all FastClick's event listeners.
+		 *
+		 * @returns {void}
+		 */
+		FastClick.prototype.destroy = function() {
+			var layer = this.layer;
+
+			if (deviceIsAndroid) {
+				layer.removeEventListener('mouseover', this.onMouse, true);
+				layer.removeEventListener('mousedown', this.onMouse, true);
+				layer.removeEventListener('mouseup', this.onMouse, true);
+			}
+
+			layer.removeEventListener('click', this.onClick, true);
+			layer.removeEventListener('touchstart', this.onTouchStart, false);
+			layer.removeEventListener('touchmove', this.onTouchMove, false);
+			layer.removeEventListener('touchend', this.onTouchEnd, false);
+			layer.removeEventListener('touchcancel', this.onTouchCancel, false);
+		};
+
+
+		/**
+		 * Check whether FastClick is needed.
+		 *
+		 * @param {Element} layer The layer to listen on
+		 */
+		FastClick.notNeeded = function(layer) {
+			var metaViewport;
+			var chromeVersion;
+			var blackberryVersion;
+			var firefoxVersion;
+
+			// Devices that don't support touch don't need FastClick
+			if (typeof window.ontouchstart === 'undefined') {
+				return true;
+			}
+
+			// Chrome version - zero for other browsers
+			chromeVersion = +(/Chrome\/([0-9]+)/.exec(navigator.userAgent) || [,0])[1];
+
+			if (chromeVersion) {
+
+				if (deviceIsAndroid) {
+					metaViewport = document.querySelector('meta[name=viewport]');
+
+					if (metaViewport) {
+						// Chrome on Android with user-scalable="no" doesn't need FastClick (issue #89)
+						if (metaViewport.content.indexOf('user-scalable=no') !== -1) {
+							return true;
+						}
+						// Chrome 32 and above with width=device-width or less don't need FastClick
+						if (chromeVersion > 31 && document.documentElement.scrollWidth <= window.outerWidth) {
+							return true;
+						}
+					}
+
+				// Chrome desktop doesn't need FastClick (issue #15)
+				} else {
+					return true;
+				}
+			}
+
+			if (deviceIsBlackBerry10) {
+				blackberryVersion = navigator.userAgent.match(/Version\/([0-9]*)\.([0-9]*)/);
+
+				// BlackBerry 10.3+ does not require Fastclick library.
+				// https://github.com/ftlabs/fastclick/issues/251
+				if (blackberryVersion[1] >= 10 && blackberryVersion[2] >= 3) {
+					metaViewport = document.querySelector('meta[name=viewport]');
+
+					if (metaViewport) {
+						// user-scalable=no eliminates click delay.
+						if (metaViewport.content.indexOf('user-scalable=no') !== -1) {
+							return true;
+						}
+						// width=device-width (or less than device-width) eliminates click delay.
+						if (document.documentElement.scrollWidth <= window.outerWidth) {
+							return true;
+						}
+					}
+				}
+			}
+
+			// IE10 with -ms-touch-action: none or manipulation, which disables double-tap-to-zoom (issue #97)
+			if (layer.style.msTouchAction === 'none' || layer.style.touchAction === 'manipulation') {
+				return true;
+			}
+
+			// Firefox version - zero for other browsers
+			firefoxVersion = +(/Firefox\/([0-9]+)/.exec(navigator.userAgent) || [,0])[1];
+
+			if (firefoxVersion >= 27) {
+				// Firefox 27+ does not have tap delay if the content is not zoomable - https://bugzilla.mozilla.org/show_bug.cgi?id=922896
+
+				metaViewport = document.querySelector('meta[name=viewport]');
+				if (metaViewport && (metaViewport.content.indexOf('user-scalable=no') !== -1 || document.documentElement.scrollWidth <= window.outerWidth)) {
+					return true;
+				}
+			}
+
+			// IE11: prefixed -ms-touch-action is no longer supported and it's recomended to use non-prefixed version
+			// http://msdn.microsoft.com/en-us/library/windows/apps/Hh767313.aspx
+			if (layer.style.touchAction === 'none' || layer.style.touchAction === 'manipulation') {
+				return true;
+			}
+
+			return false;
+		};
+
+
+		/**
+		 * Factory method for creating a FastClick object
+		 *
+		 * @param {Element} layer The layer to listen on
+		 * @param {Object} [options={}] The options to override the defaults
+		 */
+		FastClick.attach = function(layer, options) {
+			return new FastClick(layer, options);
+		};
+
+
+		if (true) {
+
+			// AMD. Register as an anonymous module.
+			!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
+				return FastClick;
+			}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		} else if (typeof module !== 'undefined' && module.exports) {
+			module.exports = FastClick.attach;
+			module.exports.FastClick = FastClick;
+		} else {
+			window.FastClick = FastClick;
+		}
+	}());
 
 
 /***/ }

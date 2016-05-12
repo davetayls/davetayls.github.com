@@ -1,0 +1,14 @@
+
+.ClientLogos {
+  border-top: solid 1px #eee;
+  border-bottom: solid 1px #eee;
+}
+
+.ClientLogos-link {
+  display: block;
+}
+
+.ClientLogos-img {
+  display: block;
+  max-width: 100%;
+}

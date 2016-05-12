@@ -8,6 +8,7 @@
     "autoprefixer": "^6.3.6",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "fastclick": "^1.0.6",
     "grunt": "~0.4.2",
     "grunt-concurrent": "~0.4.0",
     "grunt-contrib-imagemin": "~0.5.0",
@@ -31,6 +32,7 @@
     "style-loader": "^0.13.1",
     "time-grunt": "~0.2.0",
     "tslint": "^3.9.0",
+    "typed.js": "^1.1.1",
     "typescript": "^1.8.10",
     "waypoints": "^4.0.0",
     "webpack": "^1.13.0"

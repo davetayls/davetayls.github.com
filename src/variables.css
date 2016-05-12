@@ -4,12 +4,16 @@ $ColorSecondary: #666;
 $ColorBody: #444;
 
 $FontFamilySans: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$FontFamilySerif: Georgia, "Bookman", "Times New Roman", serif;
+$FontFamilyDisplay: "Playfair Display", Georgia, "Bookman", "Times New Roman", serif;
 $BaseFontSize: 1rem;
 $FontSizePoster: 3rem;
 $BaseSpacing: 16px;
 $PageHeaderHeight: 76px;
 
+$ResponsiveSmallTo: 599px;
 $ResponsiveTabletFrom: 600px;
 $ResponsiveDesktopFrom: 64rem;
+$ResponsiveWideFrom: 75rem;
 
 $ContainerDesktopWidth: 990px;

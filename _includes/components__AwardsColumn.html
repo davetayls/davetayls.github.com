@@ -1,4 +1,15 @@
 
 <section class="AwardsColumn">
-  <h2>Awards</h2>
+  <h2 class="AwardsColumn-title">Awards</h2>
+
+  {% for award in site.data.awards limit:2 %}
+  <section class="AwardsColumn-award">
+    <div class="AwardsColumn-imageWrapper">
+      <img class="AwardsColumn-image" src="{{ award.image }}" alt="{{ award.name }}">
+    </div>
+    <h3 class="AwardsColumn-name"><a href="{{ award.url }}">{{ award.name }}</a></h3>
+    <h4 class="AwardsColumn-project">{{ award.project }}</h4>
+  </section>
+  {% endfor %}
+
 </section>

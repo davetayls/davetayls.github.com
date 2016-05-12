@@ -1,5 +1,14 @@
 ---
-layout: post
+layout: master
 ---
-{{ content }}
+
+{% include components__PostHeader.html %}
+<div id="content"></div>
+{% include components__ArticleContent.html %}
+{% include components__ProductList.html %}
+{% include components__ClientLogos.html %}
+{% capture my-include %}{% include workwithme_bottom.mkd %}{% endcapture %}
+{% capture ArticleContent %}{{ my-include | markdownify }}{% endcapture %}
+{% include components__ArticleContent.html %}
+{% include components__GetInTouchFooter.html %}
 

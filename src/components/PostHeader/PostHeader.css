@@ -24,7 +24,7 @@
   padding: $BaseSpacing;
   font-size: 3rem;
   z-index: 2;
-  font-weight: 100;
+  font-weight: 300;
   letter-spacing: -0.03em;
 }
 
@@ -38,7 +38,7 @@
 .PostHeader-date {
   text-transform: uppercase;
   font-size: 1rem;
-  font-weight: 100;
+  font-weight: 300;
   line-height: 1.75;
 }
 

@@ -452,12 +452,13 @@ a {
 .AboutMeAside {
   display: none;
   margin: 2rem 3rem;
+  max-width: 21rem;
   -webkit-transition: opacity .3s ease;
   transition: opacity .3s ease;
 }
 
 .AboutMeAside-name {
-  font-weight: 100;
+  font-weight: 300;
   color: #777;
   display: inline;
 }
@@ -495,7 +496,7 @@ a {
   max-width: 52rem;
   position: relative;
   font-family: Georgia, "Bookman", "Times New Roman", serif;
-  font-size: 1.3rem;
+  font-size: 1.32rem;
   line-height: 1.7;
   margin: 0 auto;
   padding: 0 2rem 2rem;
@@ -544,7 +545,7 @@ a {
 
 .ArticleContent h1,
 .ArticleContent h2 {
-  font-weight: 100;
+  font-weight: 300;
   line-height: 1;
 }
 
@@ -563,9 +564,57 @@ a {
   margin-top: 1rem;
 }
 
+.AwardsColumn {
+  margin: 2rem;
+}
+
+.AwardsColumn-title {
+  color: #444;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.AwardsColumn-award {
+  border: solid 1px #eee;
+  margin: 0 0 2rem;
+}
+
+.AwardsColumn-imageWrapper {
+  display: block;
+  padding: 1rem;
+}
+
+.AwardsColumn-image {
+  display: block;
+  max-width: 100%;
+}
+
+.AwardsColumn-name {
+  font-size: 1rem;
+  font-weight: normal;
+  background-color: #eee;
+  margin: 0;
+  padding: 1rem .5rem 0;
+}
+
+.AwardsColumn-name a {
+  color: #444;
+  text-decoration: none;
+}
+
+.AwardsColumn-project {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #777;
+  background-color: #eee;
+  margin: 0;
+  padding: .5rem .5rem 1rem;
+}
+
 .BrowsePosts {
   display: block;
   overflow: hidden;
+  margin: 2rem 0;
 }
 
 .BrowsePosts-nav,
@@ -577,18 +626,88 @@ a {
 
 .BrowsePosts-item {
   box-sizing: border-box;
-  float: left;
-  width: 50%;
-  padding: 0 16px 16px 0;
+  padding: 1rem;
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 600px) {
+
+  .BrowsePosts-item {
+    float: left;
+    width: 50%;
+    padding: 0 16px 16px 0;
+  }
+
+}
+
+@media (min-width: 64rem) and (max-width: 75rem) {
 
   .pure-u-lg-1-2 .BrowsePosts-item {
     float: none;
     width: auto;
   }
 
+}
+
+/* Burger Menu Icon */
+
+.Burger {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+}
+
+.Burger span,
+.Burger:before,
+.Burger:after {
+  position: absolute;
+  display: block;
+  width: 22px;
+  right: 0;
+  border: solid 2px #00C792;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.Burger:before,
+.Burger:after {
+  content: '';
+}
+
+.Burger:before {
+  top: 3px;
+}
+
+.Burger span {
+  top: 12px;
+}
+
+.Burger:after {
+  bottom: 5px;
+}
+
+.Burger--x span,
+.Burger--x:before,
+.Burger--x:after {
+  border-color: #fff;
+  width: 30px;
+}
+
+.Burger--x:before {
+  top: 13px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.Burger--x span {
+  opacity: 0;
+}
+
+.Burger--x:after {
+  bottom: 13px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .Button {
@@ -652,6 +771,28 @@ a {
   color: #444;
 }
 
+@media (max-width: 599px) {
+  .Button\@sm--isSmall {
+    font-size: .8rem;
+    height: 2rem;
+    padding: .6rem .5rem;
+  }
+}
+
+.ClientLogos {
+  border-top: solid 1px #eee;
+  border-bottom: solid 1px #eee;
+}
+
+.ClientLogos-link {
+  display: block;
+}
+
+.ClientLogos-img {
+  display: block;
+  max-width: 100%;
+}
+
 .Container {
   position: relative;
 }
@@ -664,11 +805,33 @@ a {
   }
 }
 
+.GetInTouchFooter {
+  background-color: #000;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+  text-align: right;
+}
+
+.GetInTouchFooter a {
+  text-decoration: none;
+}
+
+.GetInTouchFooter-chat {
+  font-size: 0.8rem;
+}
+
+small.GetInTouchFooter-chat {
+  display: block;
+}
+
 .HeroJobTitle {
   background-image: url(/content/home-hero.jpg);
   background-size: cover;
   background-position: center center;
-  height: 70vh;
+  height: 62vh;
   margin: 0;
   position: relative;
 }
@@ -679,7 +842,7 @@ a {
 
 .HeroJobTitle-inner {
   box-sizing: border-box;
-  padding: 16px;
+  padding: 16px 0;
   position: absolute;
   bottom: 16px;
   left: 0;
@@ -687,24 +850,24 @@ a {
 
 .HeroJobTitle-title {
   color: #fff;
-  font-size: 3rem;
-  font-weight: 100;
+  border-top: solid 3px #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.7);
+  height: auto;
   margin: 0;
-  padding: 0;
+  padding: 16px;
+  font-size: 2rem;
+  z-index: 2;
+  font-weight: 300;
+  letter-spacing: -0.03em;
 }
 
 .HeroJobTitle-iBelieve {
-  list-style: none outside;
+  color: #fff;
   margin: 0;
-  padding: 0;
-}
-
-.HeroJobTitle-iBelieve li {
-  display: none;
-}
-
-.HeroJobTitle-iBelieve li:first-child {
-  display: block;
+  padding: 1rem;
+  font-size: 1rem;
+  min-height: 2.4rem;
 }
 
 .HeroJobTitle-iBelieveTitle {
@@ -713,12 +876,16 @@ a {
   margin: 0;
 }
 
-.HeroJobTitle-iBelieveDescription {
-  color: #fff;
-  margin: 0;
-}
-
 @media (min-width: 600px) {
+
+  .HeroJobTitle-title {
+    font-size: 3rem;
+  }
+
+  .HeroJobTitle-iBelieve {
+    font-size: 2rem;
+    min-height: 5rem;
+  }
 
 }
 
@@ -775,6 +942,7 @@ a {
   top: 0;
   left: 0;
   right: 0;
+  min-height: 76px;
 }
 
 .PageHeader-logo {
@@ -786,6 +954,13 @@ a {
   height: 74px;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
+}
+
+.PageHeader-toggle {
+  position: absolute;
+  z-index: 4;
+  top: 1rem;
+  right: 1rem;
 }
 
 .PageHeader-logo img {
@@ -806,15 +981,20 @@ a {
   z-index: 0;
   color: #ccc;
   opacity: 0;
-  font-size: 1rem;
-  line-height: 2rem;
-  padding: .5rem 1rem .5rem 100px;
+  font-size: .7rem;
+  line-height: 1;
   position: absolute;
-  top: 1rem;
+  padding: .5rem 1rem .5rem 60px;
+  bottom: 0;
   left: 1rem;
   right: 0;
   -webkit-transition: opacity .3s ease;
   transition: opacity .3s ease;
+  overflow: hidden;
+  height: .7rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: right;
 }
 
 .PageHeader-firstList,
@@ -825,6 +1005,7 @@ a {
 }
 
 .PageHeader-firstList {
+  display: none;
   float: left;
   -webkit-transition: opacity .3s ease;
   transition: opacity .3s ease;
@@ -832,6 +1013,7 @@ a {
 
 .PageHeader-secondList {
   float: right;
+  margin-right: 2.4rem;
 }
 
 .PageHeader-navItem {
@@ -839,6 +1021,34 @@ a {
   display: inline-block;
   margin: 0;
   padding: 0;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+
+  .PageHeader-firstList {
+    display: block;
+  }
+
+  .PageHeader-secondList {
+    margin-right: 0;
+  }
+
+  .PageHeader-pageTitle {
+    font-size: 1rem;
+    padding: .5rem 1rem .5rem 100px;
+    bottom: auto;
+    top: 1rem;
+    left: 1rem;
+    line-height: 2rem;
+    height: 1rem;
+    text-align: left;
+  }
+
+  .PageHeader-navItem {
+    text-align: left;
+  }
+
 }
 
 .PageHeader--collapsed .PageHeader-firstList {
@@ -851,9 +1061,31 @@ a {
   opacity: 1;
 }
 
+.PageHeader--open .PageHeader-logo,
 .PageHeader--collapsed .PageHeader-logo {
   width: 50px;
   height: 50px;
+}
+
+.PageHeader--open {
+  height: 100%;
+  padding-left: 1rem;
+  padding-top: 4rem;
+}
+
+.PageHeader--open .PageHeader-firstList,
+.PageHeader--open .PageHeader-secondList {
+  display: block;
+  float: none;
+}
+
+.PageHeader--open .PageHeader-secondList {
+  margin-right: 0;
+}
+
+.PageHeader--open .PageHeader-navItem {
+  display: block;
+  margin: .5rem 0;
 }
 
 .PostHeader {
@@ -881,7 +1113,7 @@ a {
   padding: 16px;
   font-size: 3rem;
   z-index: 2;
-  font-weight: 100;
+  font-weight: 300;
   letter-spacing: -0.03em;
 }
 
@@ -895,7 +1127,7 @@ a {
 .PostHeader-date {
   text-transform: uppercase;
   font-size: 1rem;
-  font-weight: 100;
+  font-weight: 300;
   line-height: 1.75;
 }
 
@@ -949,7 +1181,7 @@ a {
   position: absolute;
   top: 10%;
   left: 0;
-  width: 65%;
+  width: 74%;
   height: auto;
   margin: 0;
   padding: 0;
@@ -969,6 +1201,106 @@ a {
   font-size: 0.75em;
   font-weight: 300;
   line-height: 1.75;
+}
+
+.ProductColumns {
+  margin: 2rem 0;
+}
+
+.ProductColumns-pitch {
+  min-height: 3rem;
+  font-family: "Playfair Display", Georgia, "Bookman", "Times New Roman", serif;
+  font-style: italic;
+}
+
+.ProductColumns-list {
+  list-style: none outside;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  text-align: center;
+}
+
+.ProductColumns-column {
+  font-size: 1rem;
+  vertical-align: top;
+  margin: 1rem 2rem;
+}
+
+.ProductColumns-name {
+  min-height: 4rem;
+}
+
+.ProductColumns-rewards {
+  list-style: none outside;
+  margin: 0;
+  padding: 0;
+}
+
+.ProductColumns-rewards li {
+  margin: .5rem 0;
+}
+
+.ProductColumns-rewards li:before {
+  content: '\2619';
+  display: block;
+  font-family: sans-serif;
+}
+
+@media (min-width: 600px) {
+
+  .ProductColumns-column {
+    display: inline-block;
+    width: 26%;
+    margin: 2%;
+  }
+
+}
+
+.ProductList {
+}
+
+.ProductList-info {
+  margin: 0 auto;
+  max-width: 66%;
+}
+
+.ProductList-product {
+  background-color: #efefef;
+  margin: 0 0 3rem;
+  padding: 3rem 0;
+}
+
+.ProductList-name {
+  text-align: center;
+}
+
+.ProductList-pitch {
+  text-align: center;
+  font-family: "Playfair Display", Georgia, "Bookman", "Times New Roman", serif;
+  font-style: italic;
+}
+
+.ProductList-cost {
+  text-align: center;
+  font-size: 2.4rem;
+  margin: 1rem 0;
+}
+
+.ProductList-rewards {
+  text-align: center;
+  list-style: none outside;
+  padding: 0;
+}
+
+.ProductList-rewards li {
+  margin: .5rem 0;
+}
+
+.ProductList-rewards li:before {
+  content: '\2619';
+  display: block;
+  font-family: sans-serif;
 }
 
 .RecommendationQuote {
@@ -1031,11 +1363,11 @@ a {
 }
 
 .WorkWithMeFooter {
-  margin: 1rem;
+  margin: 2rem 1rem;
 }
 
 .WorkWithMeFooter-cta {
-  padding: 0 4rem;
+  padding: 0 1rem;
   position: relative;
 }
 
@@ -1046,7 +1378,7 @@ a {
   border-top: solid 4px #00C792;
   position: absolute;
   top: 48%;
-  width: 3.9rem;
+  width: .6rem;
 }
 
 .WorkWithMeFooter-cta:before {
@@ -1060,7 +1392,29 @@ a {
 
 .WorkWithMeFooter-info,
 .WorkWithMeFooter-recent {
-  margin: 0 4rem;
+  margin: 0;
+}
+
+@media (min-width: 600px) {
+
+  .WorkWithMeFooter {
+    margin: 2rem;
+  }
+
+  .WorkWithMeFooter-cta {
+    padding: 0 30%;
+  }
+
+  .WorkWithMeFooter-cta:before,
+  .WorkWithMeFooter-cta:after {
+    width: 29%;
+  }
+
+  .WorkWithMeFooter-info,
+  .WorkWithMeFooter-recent {
+    margin: 0 4rem;
+  }
+
 }
 
 pre.prettyprint {
@@ -1077,6 +1431,24 @@ pre.prettyprint {
     padding: 10px;
     margin: 1rem 0;
   }
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
 
 /* Hiding

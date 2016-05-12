@@ -1,0 +1,22 @@
+
+.GetInTouchFooter {
+  background-color: #000;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+  text-align: right;
+}
+
+.GetInTouchFooter a {
+  text-decoration: none;
+}
+
+.GetInTouchFooter-chat {
+  font-size: 0.8rem;
+}
+
+small.GetInTouchFooter-chat {
+  display: block;
+}

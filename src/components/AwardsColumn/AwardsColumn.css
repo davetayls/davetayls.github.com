@@ -1,0 +1,47 @@
+
+.AwardsColumn {
+  margin: 2rem;
+}
+
+.AwardsColumn-title {
+  color: #444;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.AwardsColumn-award {
+  border: solid 1px #eee;
+  margin: 0 0 2rem;
+}
+
+.AwardsColumn-imageWrapper {
+  display: block;
+  padding: 1rem;
+}
+
+.AwardsColumn-image {
+  display: block;
+  max-width: 100%;
+}
+
+.AwardsColumn-name {
+  font-size: 1rem;
+  font-weight: normal;
+  background-color: #eee;
+  margin: 0;
+  padding: 1rem .5rem 0;
+}
+
+.AwardsColumn-name a {
+  color: #444;
+  text-decoration: none;
+}
+
+.AwardsColumn-project {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #777;
+  background-color: #eee;
+  margin: 0;
+  padding: .5rem .5rem 1rem;
+}

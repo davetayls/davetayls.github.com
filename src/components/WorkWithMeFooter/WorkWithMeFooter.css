@@ -1,10 +1,10 @@
 
 .WorkWithMeFooter {
-  margin: 1rem;
+  margin: 2rem 1rem;
 }
 
 .WorkWithMeFooter-cta {
-  padding: 0 4rem;
+  padding: 0 1rem;
   position: relative;
 }
 
@@ -15,7 +15,7 @@
   border-top: solid 4px $ColorCore;
   position: absolute;
   top: 48%;
-  width: 3.9rem;
+  width: .6rem;
 }
 
 .WorkWithMeFooter-cta:before {
@@ -29,5 +29,28 @@
 
 .WorkWithMeFooter-info,
 .WorkWithMeFooter-recent {
-  margin: 0 4rem;
+  margin: 0;
 }
+
+@media (min-width: $ResponsiveTabletFrom) {
+
+  .WorkWithMeFooter {
+    margin: 2rem;
+  }
+
+  .WorkWithMeFooter-cta {
+    padding: 0 30%;
+  }
+
+  .WorkWithMeFooter-cta:before,
+  .WorkWithMeFooter-cta:after {
+    width: 29%;
+  }
+
+  .WorkWithMeFooter-info,
+  .WorkWithMeFooter-recent {
+    margin: 0 4rem;
+  }
+
+}
+

@@ -3,6 +3,9 @@
         <div class="PageHeader-logo">
             <a href="/"><img src="/images/logo.gif" alt="Dave Taylor" /></a>
         </div>
+        <div class="PageHeader-toggle">
+            {% include components__Burger.html %}
+        </div>
         <nav class="PageHeader-nav">
             <ul class="PageHeader-firstList">
                 <!--
@@ -22,7 +25,7 @@
             </ul>
             <ul class="PageHeader-secondList">
                 <li class="PageHeader-navItem">
-                    <a class="Button" href="/workwithme">Work with me</a>
+                    <a class="Button Button@sm--isSmall" href="/workwithme">Work with me</a>
                 </li>
             </ul>
         </nav>

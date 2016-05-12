@@ -50,3 +50,10 @@
   color: #444;
 }
 
+@media (max-width: $ResponsiveSmallTo) {
+  .Button\@sm--isSmall {
+    font-size: .8rem;
+    height: 2rem;
+    padding: .6rem .5rem;
+  }
+}

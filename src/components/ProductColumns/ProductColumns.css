@@ -1,0 +1,56 @@
+
+.ProductColumns {
+  margin: 2rem 0;
+}
+
+.ProductColumns-pitch {
+  min-height: 3rem;
+  font-family: $FontFamilyDisplay;
+  font-style: italic;
+}
+
+.ProductColumns-list {
+  list-style: none outside;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  text-align: center;
+}
+
+.ProductColumns-column {
+  font-size: 1rem;
+  vertical-align: top;
+  margin: 1rem 2rem;
+}
+
+.ProductColumns-name {
+  min-height: 4rem;
+}
+
+.ProductColumns-rewards {
+  list-style: none outside;
+  margin: 0;
+  padding: 0;
+}
+
+.ProductColumns-rewards li {
+  margin: .5rem 0;
+}
+
+.ProductColumns-rewards li:before {
+  content: '☙';
+  display: block;
+  font-family: sans-serif;
+}
+
+@media (min-width: $ResponsiveTabletFrom) {
+
+  .ProductColumns-column {
+    display: inline-block;
+    width: 26%;
+    margin: 2%;
+  }
+
+}
+
+

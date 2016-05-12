@@ -2,11 +2,12 @@
 .AboutMeAside {
   display: none;
   margin: 2rem 3rem;
+  max-width: 21rem;
   transition: opacity .3s ease;
 }
 
 .AboutMeAside-name {
-  font-weight: 100;
+  font-weight: 300;
   color: #777;
   display: inline;
 }

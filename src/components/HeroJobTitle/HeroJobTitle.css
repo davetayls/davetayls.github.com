@@ -3,7 +3,7 @@
   background-image: url(/content/home-hero.jpg);
   background-size: cover;
   background-position: center center;
-  height: 70vh;
+  height: 62vh;
   margin: 0;
   position: relative;
 }
@@ -14,31 +14,31 @@
 
 .HeroJobTitle-inner {
   box-sizing: border-box;
-  padding: $BaseSpacing;
+  padding: $BaseSpacing 0;
   position: absolute;
   bottom: $BaseSpacing;
   left: 0;
 }
 .HeroJobTitle-title {
   color: #fff;
-  font-size: $FontSizePoster;
-  font-weight: 100;
+  border-top: solid 3px #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.7);
+  height: auto;
   margin: 0;
-  padding: 0;
+  padding: $BaseSpacing;
+  font-size: 2rem;
+  z-index: 2;
+  font-weight: 300;
+  letter-spacing: -0.03em;
 }
 
 .HeroJobTitle-iBelieve {
-  list-style: none outside;
+  color: #fff;
   margin: 0;
-  padding: 0;
-}
-
-.HeroJobTitle-iBelieve li {
-  display: none;
-}
-
-.HeroJobTitle-iBelieve li:first-child {
-  display: block;
+  padding: 1rem;
+  font-size: 1rem;
+  min-height: 2.4rem;
 }
 
 .HeroJobTitle-iBelieveTitle {
@@ -47,11 +47,15 @@
   margin: 0;
 }
 
-.HeroJobTitle-iBelieveDescription {
-  color: #fff;
-  margin: 0;
-}
-
 @media (min-width: $ResponsiveTabletFrom) {
+
+  .HeroJobTitle-title {
+    font-size: 3rem;
+  }
+
+  .HeroJobTitle-iBelieve {
+    font-size: 2rem;
+    min-height: 5rem;
+  }
 
 }
