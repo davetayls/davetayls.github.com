@@ -99,7 +99,7 @@ $iBelieveTyped.typed({
   stringsElement: $iBelieveTitles,
   typeSpeed: 0,
   backSpeed: 0,
-  backDelay: 2000,
+  backDelay: 4000,
   loop: true
 });
 
