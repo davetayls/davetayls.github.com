@@ -1194,7 +1194,7 @@ small.GetInTouchFooter-chat {
 .PostHeader-bg {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top center;
+  background-position: center;
 }
 
 .PostHeader-bg:before {
@@ -1206,7 +1206,7 @@ small.GetInTouchFooter-chat {
 @media (min-width: 600px) {
 
   .PostHeader {
-    height: 62vh;
+    height: 76vh;
     max-height: 600px;
   }
 
