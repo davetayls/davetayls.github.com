@@ -1,12 +1,11 @@
 ---
 layout: post
 postimage: https://cdn-images-1.medium.com/max/2000/1*0-64cYk7_lLODwv5TiGAxA.jpeg
-related: thoughts
+related: mentoring
 categories:
   - thoughts
+  - mentoring
 ---
-
-[Read this article on medium](https://medium.com/@davetayls/unlock-your-inner-super-hero-5948842b4dc8)
 
 Build Stuff and have fun doing it … that pretty much sums up much of my childhood. Looking back, it is the times when I have been creating that have made me the most empowered and motivated. A life of simply being a consumer fills me with dread. It is what we add to this world which gives us our achievements and much fulfilment.
 
