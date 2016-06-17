@@ -11,21 +11,131 @@ categories:
 - principles
 ---
 
-I've had the privilege of having my latest article published in [.net
-magazine](http://www.netmagazine.com/). In [Five principles for better web
-development](http://www.netmagazine.com/opinions/5-principles-better-
-development) I look at five principles that have transformed the way
-I work.
+NB. This is an article I wrote a while back for .net magazine which seems to have disappeared when they transitioned to Creative Bloq
 
-1. Everything has a lifecycle
-2. Some things are broken, and some things are complicated
-3. Stop repeating yourself (*a lot*)
-4. Explain yourself
-5. Keep things simple
+Every creative discipline has their own set of good practices and principles. They have evolved over time and are generally born out of common challenges that people in each industry face. I think there are many things we can learn from each other across the disciplines.
 
-It's taken me a few months to compile and improve and I'm
-really pleased that it has been received well.
+I have had the opportunity to work with some extremely clever people spanning several creative disciplines.
 
-![five key principles response](/content/2013-08-five-key-principles-response.png)
+Here are five key principles that have transformed the way I approach my work
 
-Now to put them in to practice!
+## 1. Everything has a life cycle
+
+I remember a few years back, when I began working on my first enterprise project, it was a massive learning curve for me. Despite many set-backs over the course of the project, when it went live I was so proud of this thing of beauty I had created.
+
+I had my monthly check-ups with the site to see how people were using it. It was thriving in it’s infancy. It was full of articles being read and commented on.
+
+Slowly new features begun to be requested as people wanted more. These were exciting times and my emotional attachment to this child of mine had grown strong.
+
+Then one day I read the words many creatives fear — words of woe — “Our **NEW** website has gone live”. The season was over.
+
+I bet this relationship could be carbon copied a thousand times, and this is how it should be. What I have learnt to do is give each part of the life-cycle the respect it deserves.
+
+Developers use the acronym CRUD (Create, Read, Update, Delete) to refer to the four basic functions of a piece of information.
+
+Let’s apply it in a broader sense.
+
+ - When you are creating, remember you are not simply creating something to go live. You are creating something to live, and breath and grow. Allow for change and embrace it. Remember quickly isn’t always quicker.
+ - When reading, take the opportunity to feel good about what is now in front of you, which a few months ago was probably nothing but a pie-in-the-sky dream.
+ - Hopefully you would have taken some time at the beginning and put enough thought and care into the creating that updating becomes just a continuation. Remember this might not be you doing the work. Create so the next developer will love you.
+ - Don’t be afraid to delete a project if it’s had it’s season, even when you are emotionally attached. It’s for the greater good, creations have to die for creativity to survive.
+
+## 2. Some things are broken, and some things are complicated
+
+I have this theory, dangerous I know…but my dad was a chemist for a couple of years so I’ll presume that gives me the qualifications. Every time I come across another CMS my theory is reinforced.
+
+Here it is:
+
+### The 10 step lifecycle of a CMS
+
+1. A lowly developer curses at his screen whilst implementing a “badly thought out feature” in an “even worse architected CMS than the last one”
+2. Said lowly developer makes the bold claim “I could do this so much better” whilst realising all his colleagues are either laughing at his rage or tweeting about it.
+3. Lowly developer (now Lead Architect) builds new CMS
+4. CMS is hailed to be revolutionary as it is simple and easy to use
+5. Lead Architect is thanked but asked if he could include a small feature.
+6. Lead Architect is thanked but asked if he could include a small feature.
+7. Lead Architect is thanked but asked if he could include a small feature.
+8. Lead Architect is thanked but asked if he could include a small feature.
+9. Lead Architect is told this new feature is suddenly more important than the last one.
+10. A lowly developer curses at his screen whilst implementing a badly thought out “feature” in an “even worse architected CMS than the last one”
+
+At the end of the day, CMSs are hard, and yes someone, one day will prove to be the exception (I bet you’re thinking it’s you??) but my point here is **some things are broken, and some things are complicated** it’s worth deciphering this before potentially going down that rabbit hole.
+
+I know as a person who likes to build things that I am very susceptible to wanting to do things myself. This in fact is one of the hardest hurdles for me to overcome, partly because of the challenge but also partly because there is an amount of fear to overcome when trying to contribute to someone else’s project. Especially when it’s quite mature.
+
+Here are some useful questions I am trying to ask myself:
+
+ - Has someone attempted this before?
+ - If I’m fixing something, how can I verify original problem has been resolved
+ - What time do I need before I will see some real value
+
+If the answers to these questions show that it makes sense to get involved then I need to just jump in at the deep-end.
+
+## 3. Stop repeating yourself (a lot)
+
+I am a self confessed fanatic when it comes to frameworks and plugging them together to find elegant architectural systems. When you read about this you hear some particular techie terms used a lot. There are a couple which I battle with on a regular basis, because while the concept is simple to grasp the implementation isn’t always so black and white.
+
+The issue I find is on one hand I see a lot of code being factory generated and gradually turning in to a muddy puddle of stuff that does stuff. On the other side of the spectrum people like me have a tendency to keep endless catalogs of proverbial snippets which are never re-used. Whichever side of this spectrum you lean towards, our battle is to find where the value is.
+
+The DRY (Don’t Repeat Yourself) SRP (Single Responsibility Principle) make us think about the significance of the piece of the work we are producing at any one time.
+
+ - How does this fit in to the bigger picture
+ - What is it’s key purpose
+ - What is it’s relationship with the other pieces of the puzzle
+ - How can it be built so that it encourages an open relationship to potential future uses
+
+I really wish at this point that I could merge the two acronyms to create DAMP, but that would be a pretty lame word to rally behind. However injecting a little pragmatism and experience has helped me get closer to the elegant solutions I have been after. But how do you gain the experience to be able to apply an appropriate amount of pragmatism? I resort to a mixture of:
+
+ - practice
+ - reading
+ - failing and getting back up
+ - talking with people better than you
+ - practice
+
+And finally the glue which has helped me to bind the things I am learning together is to keep a blog. It doesn’t have to be eloquent, write about the things you are finding out, how you solved a problem, how you implemented a feature.
+
+I have recommended keeping a blog to people in my team time and time again. I don’t think I can overstate the significance of writing down your thoughts. There are so many benefits but here are a few:
+
+1. You can (and will) use it as a reference in the future
+2. The physical act of putting down in words helps to solidify the key aspects of what you need to remember
+3. It will occasionally encourage conversation with people who read it which again helps you to retain the knowledge and potentially spark further development
+
+So always keep in mind the immediate context of what you’re building alongside how it fits in with the bigger picture and it’s potential. Build jigsaw pieces not mud pools.
+
+## 4. Explain yourself
+
+I was having a discussion with a couple of ex colleagues about the rubber duck technique. It’s a method of helping you debug a piece of code by explaining it line-by-line to a rubber duck. It’s surprisingly effective at revealing mistakes and improving the quality of your work, and not only for coding. Why does this work? Well there seems to be some strange veil that gets lifted from your eyes and intuition when you have to teach someone (or something) else your thinking processes.
+
+There seems to be some self protection system built in to us which keeps us from showing others our work for fear that we’re getting it wrong. It’s good to find out you’re getting things wrong, maybe think of it in another way. There are better ways out there to be discovered.
+
+So explain yourself, to objects and people. Use objects when you’re trying to debug something in front of you, explain yourself to colleagues when you’re designing a concept. Do short presentations to your contemporaries after a project. And I really encourage you to pluck up the courage to do longer presentations at local meetups. It’s a scary thought but its a great way to solidify your understanding on a subject and potentially be made aware of glaring issues you couldn’t see, “wood for the trees” an’ all that.
+
+## 5. Keep things Simple
+
+> “Climbing a mountain is all about the small victories, before you know it you’ll reach the top”
+
+That has been one of the most important things I have learnt. My output and it’s quality has gone up.
+
+A good friend once said to me
+
+> “they ask if it’s possible, but there’s nothing you can’t do. It’s just a matter of time and patience”
+
+Always **start with something** and make it something small. But start.
+
+You’re going to need patience at times. Learn to spot the red flags and don’t be afraid to cut your losses and strip back. Nothing is ever completely wasted.
+
+ - Know your current focus
+ - Start and Finish
+ - Explaining something simple is … um simpler
+
+If you can’t describe (even to yourself) the value of your current task in an elevator pitch (30 secs) then you either need to break things down or it might be leading you down a dark hole.
+
+This is one to seriously invest in, I would recommend a couple of books to start off:
+
+ - [The Accidental Creative](http://www.accidentalcreative.com/book/)
+ - [Steal Like an Artist](http://austinkleon.com/steal/)
+
+## Conclusion
+
+I’ve gained so much by just thinking through and exploring these in much more detail myself. There are so many subtleties which we pick up as we explore and we experience.
+I’ll leave you with the reminder that principles are only effective when held in balance with each other. I hope this will encourage you in how you approach your creative and life projects.
