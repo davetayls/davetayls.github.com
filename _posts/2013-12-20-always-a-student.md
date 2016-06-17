@@ -6,6 +6,7 @@ categories:
   - thoughts
   - creativity
   - students
+  - mentoring
 published: true
 ---
 
