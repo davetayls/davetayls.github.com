@@ -9,8 +9,6 @@ categories:
   - teams
 ---
 
-[Read this article on medium](https://medium.com/@davetayls/trust-the-unsung-hero-fe341631ba81#.39k330eqy)
-
 I’ve found myself asking a question regularly during projects, from the very early days when I didn’t know what I wanted with my work till these days when I often mentor and lead other developers.
 
 > “Do you trust me?”
