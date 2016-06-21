@@ -1,8 +1,7 @@
 ---
 layout: post
-postimage: /content/2016-06-5-steps.jpg?dl=1
+postimage: /content/2016-06-pure-5-steps.jpg
 related: components
-published: false
 categories:
   - javascript
   - components
@@ -30,9 +29,9 @@ Given these benefits you are right to be asking where do we begin? For this we m
 
 We need to start with this simple 5 step process:
 
-## FOCUS ON SMALL PIECES OF UI
+## Focus on Small Pieces of UI
 
-![](https://www.dropbox.com/s/pvdsgeugklhnrwj/5%20steps.psd?dl=1)
+![](/content/2016-06-pure-01-spall-pieces-of-ui.jpg)
 
 Clients like to visualize the journey so naturally full page mock-ups will be needed to make sure the overall experience is right. 
 
@@ -40,7 +39,7 @@ The mistake comes when you allow the client to stay in this mentality and not he
 
 Let’s take a person’s profile badge as a simple example. You might get a design laid out a little like this
 
-![](https://www.dropbox.com/s/rwq7bepfirxp26u/example-design.jpg?dl=1)
+![](/content/2016-06-pure-example-design.jpg)
 
  - This badge might appear on an article the person has written. 
  - It might also appear in a listing of people who have written articles.
@@ -48,15 +47,15 @@ Let’s take a person’s profile badge as a simple example. You might get a des
 
 The badge doesn’t necessarily need to be the exact same size, it could fit to a container and be responsive.
 
-## DECIDE AND DOCUMENT SMALL VARIATIONS OR STATE CHANGES 
+## Decide and Document Small Variations or State Changes
 
-![](https://www.dropbox.com/s/3swt56q8upox4et/02-variations.jpg?dl=1)
+![](/content/2016-06-pure-02-variations.jpg)
 
 Once the site has been split into small pieces, you will be able to see where improvements can be made to consistency. You will start to see these benefits already. It will reduce the amount of duplication by finding similar pieces of UI and combining them into fewer variations. By having fewer variations your assets will be lighter and you will find that your website will perform better. 
 
 At this stage you should decide on each component’s variations and document their behavior. We identified in the previous step that the site was displaying a person’s profile information. Now we are going to consider how it might vary slightly. We look across the requirements and then design and document these variations in it’s state:
 
-![](https://www.dropbox.com/s/vaida50off91nu2/example-design-variations.jpg?dl=1)
+![](/content/2016-06-pure-example-design-variations.jpg)
 
 1. Person is offline (design might show greyed out dot and a status message might say “offline”)
 2. Person is online (design might show a green dot and a status message might say “online”)
@@ -66,9 +65,9 @@ At this stage you should decide on each component’s variations and document th
 
 The trick here is not to make a component have too many variations. The rule of thumb is that it should perform a single core role much like the Single Responsibility Principle describes for programming.
 
-## BUILD THE COMPONENT IN ISOLATION
+## Build the Component in Isolation
 
-![](https://www.dropbox.com/s/bsn7updcgdbmvej/03-develop-in-isolation.jpg?dl=1)
+![](/content/2016-06-pure-03-develop-in-isolation.jpg)
 
 We’re now ready to build. There is often a real struggle with Agile builds because they expect the work to be nicely sliced up into sprints. Often in the past I have been presented with a few pages to complete in a sprint. This way of working has hardly ever been successful because of all the dependencies that go into a full page. Building components in isolation fits into this process beautifully, it is much easier to predict and much easier to see progress. Also as we have seen with Test Driven Development, focusing on a simpler task and getting it right is more productive and less prone to errors.
 
@@ -109,9 +108,9 @@ Take this template and based on the variations we documented in the previous ste
 
 At this point you will want to complete the styling and any dynamic interactions.
 
-## TEST EXPECTATIONS FOR EACH VARIATION OR STATE CHANGE
+## Test Expectations For Each Variation or State Change
 
-![](https://www.dropbox.com/s/k2hrniwlw82q2a6/04-test-expectations.jpg?dl=1)
+![](/content/2016-06-pure-04-test-expectations.jpg)
 
 Here’s the part which often gets nicely forgotten because it’s hard testing UI.  Having pure components however, components which are predictable, components where you can have clear expectations and control make this process so much simpler. This is a big topic, but here is a suggestion to make a start.
 
@@ -121,9 +120,9 @@ When you are confident enough you can then include them in visual test suites. G
 
 Whatever path you take, the point here is that because of the path we have taken we now have a set of pages which should conform to a pre-defined set of expectations.
 
-## INCLUDE IN YOUR SITE!
+## Include in Your Site
 
-![](https://www.dropbox.com/s/e1xdu6u4kanrk88/05-integrate-into-site.jpg?dl=1)
+![](/content/2016-06-pure-05-integrate-into-site.jpg)
 
 Your final job is to glue the components together with an underlying state. If this is a server-side component render the HTML inside containers (often grids) within the larger page structure. If you’re building a dynamic app then it’s more likely to be a case of appending a root element into a containing element within the DOM.
 
@@ -158,6 +157,4 @@ I’ve deliberately been slightly vague here because. It’s often easy to use c
 In my time as a developer and a frontend architect I want to learn and solidify the techniques that don’t change, the ones that often underpin all of the frameworks that come and go. This has helped me embrace an ever changing landscape and not shy away from it due to exhaustion.
 
 Take these 5 steps, look at how they fit into your team’s processes. You’ll be on your way to a more maintainable and testable codebase.
-
-Dave Taylor (http://davetayls.me) is an experienced Frontend Architect and HTML5 App Developer who has worked with a number of creative agencies over the past 14 years. He is helping development teams work more productively and scale better.
 
