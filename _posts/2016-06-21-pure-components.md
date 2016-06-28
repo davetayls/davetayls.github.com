@@ -1,4 +1,5 @@
 ---
+title: Pure Components: Creating stable, testable UI we can rely on
 layout: post
 postimage: /content/2016-06-pure-5-steps.jpg
 related: components
