@@ -5,10 +5,11 @@ title: Five key principles for better web development - .net Magazine
 postimage: /content/2013-08-five-key-principles.png
 related: thoughts
 categories:
-- thoughts
-- creativity
-- magazine
-- principles
+  - mystory
+  - thoughts
+  - creativity
+  - magazine
+  - principles
 ---
 
 NB. This is an article I wrote a while back for .net magazine which seems to have disappeared when they transitioned to Creative Bloq

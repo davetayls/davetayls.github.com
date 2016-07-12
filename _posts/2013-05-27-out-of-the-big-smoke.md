@@ -4,7 +4,8 @@ author: davetayls
 title: Out of the Big Smoke
 postimage: /content/2013-05-27-out-of-the-big-smoke.jpg
 categories:
-- thoughts
+  - thoughts
+  - mystory
 ---
 
 I have recently moved house and family away from London. It's been a mixed experience leaving behind the on-the-doorstep opportunities of London and searching for new ways to be part of the web community. I've had a few big decisions to make, and in the process have met some really great people.

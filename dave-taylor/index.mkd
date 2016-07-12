@@ -2,8 +2,11 @@
 layout: post
 title: Dave Taylor - Frontend Developer, Consultant, Mentor
 postimage: /content/about-me.jpg
+related: mystory
 comments: hide
 ---
+
+![](http://1.gravatar.com/avatar/bbf81bc82fed795624ed696fe1e5aee0)
 
 My name is Dave Taylor, I was born and grew up in the Philippines
 although both my parents are English. We lived on the edge of an

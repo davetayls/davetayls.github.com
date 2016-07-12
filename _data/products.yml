@@ -1,36 +1,6 @@
 
-- name: Frontend Framework Review
-  pitch: Use the right tools for the job
-  cost: £777
-  quote: 3
-  about: >
-    The Frontend landscape moves so fast! I often am asked to recommend
-    a good stack of libraries and maybe a framework which will fit well
-    with a team.
-
-
-    We'll have an initial Skype meeting to discuss your project and it's
-    goals.
-
-
-    If you have an existing codebase, I'll take a look at the current technologies
-    used (both client and server side).
-
-
-    I'll then put together a report for you with some background
-    research and a few options for you to consider based on your goals and
-    limitations.
-
-
-    We'll finish with another call to go over the report and discuss your next steps.
-    Please allow up to 10 working days to complete this process.
-  rewards:
-    - Review of your current architecture
-    - Review of your future plans and goals
-    - You'll receive a report giving two or three recommendations giving you help moving forward
-
 - name: Senior HTML5 Development
-  pitch: Let's build your product! I can join your team and get stuck in
+  pitch: I'll build your product! I can join your team and get stuck in
   quote: 1
   about: >
     I love the process of building great products. The reason I've kept my passion
@@ -54,12 +24,34 @@
     I've built highly performant HTML5 cross platform applications for browsers and Cordova:
     **Canvas** and image manipulation, **Backbone**, **React** Native.
   rewards:
-    - Take advantage of my 14 years of experience
-    - Set good foundations to your frontend build
-    - Get a boost to your team's productivity
+    - I will set good foundations to your frontend build
+    - I will use my 14 years of experience
+    - I will give a boost to your team's productivity
+
+- name: Lead Frontend Development and Architecture
+  pitch: I will lead a team, set architecture and make sure they are working at their best
+  quote: 3
+  about: >
+    I have designed the frontend architecture of many large websites and HTML5 apps.
+    These have included:
+
+     - enterprise CMS builds for Lloyd's of London, British Red Cross and Arrow Electronics
+     - campaign sites for The FA and RFU;
+
+    I take a modular approach and work closely with designers as well as developers
+    to achieve scaleable results.
+
+
+    I am keen to marry good inter-personal and communication skills with solid technical
+    thought leadership enabling teams to grow in confidence and produce great work.
+
+  rewards:
+    - I base my decisions on tried-and-tested solutions
+    - I analyse and make the most of current trends
+    - I am experienced at communicating and leading teams
 
 - name: Frontend Consultancy and Mentoring
-  pitch: Let's build a lasting culture of innovation and creativity
+  pitch: I'll help you build a lasting culture of innovation and creativity
   quote: 4
   about: >
     I want to see every frontend developer live inspired and creative. I believe
@@ -84,6 +76,36 @@
     2. To find and nurture emerging leaders to continue this work with
        those more junior than they are
   rewards:
-    - Encourage and guide emerging leaders within your team
-    - Build a plan to level up frontend developer's skills
-    - Focus the team on building a great product experience
+    - I encourage and guide emerging leaders within your team
+    - I build a plan to level up frontend developer's skills
+    - I focus the team on building a great product experience
+
+- name: Frontend Review and Framework Report
+  pitch: I will help you use the right tools for the job
+  cost: £777
+  quote: 0
+  about: >
+    The Frontend landscape moves so fast! I often am asked to recommend
+    a good stack of libraries and maybe a framework which will fit well
+    with a team.
+
+
+    We'll have an initial Skype meeting to discuss your project and it's
+    goals.
+
+
+    If you have an existing codebase, I'll take a look at the current technologies
+    used (both client and server side).
+
+
+    I'll then put together a report for you with some background
+    research and a few options for you to consider based on your goals and
+    limitations.
+
+
+    We'll finish with another call to go over the report and discuss your next steps.
+    Please allow up to 10 working days to complete this process.
+  rewards:
+    - I will review of your current architecture
+    - I will look at your future plans and goals
+    - You will receive a report giving two or three recommendations giving you help moving forward

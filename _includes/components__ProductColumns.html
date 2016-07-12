@@ -2,7 +2,7 @@
 <section class="ProductColumns">
   <div class="Container">
     <ul class="ProductColumns-list">
-      {% for product in site.data.products %}
+      {% for product in site.data.products limit:3 %}
       <li class="ProductColumns-column">
         <h2 class="ProductColumns-name">{{ product.name }}</h2>
         <p class="ProductColumns-pitch">{{ product.pitch }}</p>

@@ -4,8 +4,9 @@ author: davetayls
 title: 2011 at a glance
 related: theyear
 categories:
-    - theyear
-    - thoughts
+  - mystory
+  - theyear
+  - thoughts
 ---
 
 I've been taking a look over all that has happened this year as it seems to have disappeared in a bit of a haze and there have been a few great things that I would like to remember 2011 for.

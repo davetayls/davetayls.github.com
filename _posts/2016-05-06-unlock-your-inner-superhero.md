@@ -3,6 +3,7 @@ layout: post
 postimage: https://cdn-images-1.medium.com/max/2000/1*0-64cYk7_lLODwv5TiGAxA.jpeg
 related: mentoring
 categories:
+  - mystory
   - thoughts
   - mentoring
 ---
