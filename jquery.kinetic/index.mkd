@@ -1,6 +1,20 @@
-jQuery.kinetic
-==============
-Dave Taylor <http://davetayls.me>
+---
+layout: post
+title: jQuery.kinetic
+description: jQuery.kinetic is a simple plugin which adds smooth drag scrolling with gradual deceleration to containers
+github: jquery.kinetic
+---
+
+## Demo
+
+<iframe src="/bower_components/jquery.kinetic/demo.html" width="100%" height="600" scrolling="no" frameborder="0"></iframe>
+
+## Comments and Issues
+
+If you have any issues with the plugin then please
+[log them in the issue tracker on github](https://github.com/davetayls/jquery.kinetic/issues)
+and I'll do my best to help.
+
 The MIT License (MIT)
 
 > This code has been pretty stable for a while (with it's few restrictions) and so am not actively making changes. If you want to improve it in any way feel free to submit a pull request (with tests) and we will merge in any that make sense and don't add bloat to what is a simple plugin.
@@ -266,6 +280,5 @@ After several years, this plugin has had a major refactor. Big thanks to (@skovh
 
 - Added stop method
 - Fix bug with ignored axis triggering animation frames
-
 
 

@@ -1,5 +1,5 @@
 /**
- jQuery.kinetic v2.0.1
+ jQuery.kinetic v2.2.1
  Dave Taylor http://davetayls.me
 
  @license The MIT License (MIT)
@@ -35,9 +35,6 @@
   $.extend($.support, {
     touch: 'ontouchend' in document
   });
-  var selectStart = function (){
-    return false;
-  };
 
 
   // KINETIC CLASS DEFINITION
@@ -58,11 +55,13 @@
     cursor: 'move',
     decelerate: true,
     triggerHardware: false,
+    threshold: 0,
     y: true,
     x: true,
     slowdown: 0.9,
     maxvelocity: 40,
     throttleFPS: 60,
+    invert: false,
     movingClass: {
       up: 'kinetic-moving-up',
       down: 'kinetic-moving-down',
@@ -108,6 +107,7 @@
       .css('cursor', '');
   };
 
+
   Kinetic.prototype.attach = function (){
     if (this.$el.hasClass(ACTIVE_CLASS)) {
       return;
@@ -116,6 +116,14 @@
     this.$el
       .addClass(ACTIVE_CLASS)
       .css('cursor', this.settings.cursor);
+  };
+
+
+  Kinetic.prototype.destroy = function (){
+    this.detach();
+    this.$el=null;
+    this.el=null;
+    this.settings=null;
   };
 
 
@@ -161,8 +169,9 @@
     this.settings.events = {
       touchStart: function (e){
         var touch;
-        if (self._useTarget(e.target)){
+        if (self._useTarget(e.target, e)){
           touch = e.originalEvent.touches[0];
+          self.threshold = self._threshold(e.target, e);
           self._start(touch.clientX, touch.clientY);
           e.stopPropagation();
         }
@@ -178,7 +187,8 @@
         }
       },
       inputDown: function (e){
-        if (self._useTarget(e.target)){
+        if (self._useTarget(e.target, e)){
+          self.threshold = self._threshold(e.target, e);
           self._start(e.clientX, e.clientY);
           self.elementFocused = e.target;
           if (e.target.nodeName === 'IMG'){
@@ -188,7 +198,7 @@
         }
       },
       inputEnd: function (e){
-        if (self._useTarget(e.target)){
+        if (self._useTarget(e.target, e)){
           self._end();
           self.elementFocused = null;
           if (e.preventDefault){
@@ -220,7 +230,15 @@
       },
       // prevent drag and drop images in ie
       dragStart: function (e){
-        if (self.elementFocused){
+        if (self._useTarget(e.target, e) && self.elementFocused){
+          return false;
+        }
+      },
+      // prevent selection when dragging
+      selectStart: function (e){
+        if ($.isFunction(self.settings.selectStart)){
+          return self.settings.selectStart.apply(self, arguments);
+        } else if (self._useTarget(e.target, e)) {
           return false;
         }
       }
@@ -238,6 +256,20 @@
       this.lastMove = new Date();
 
       if (this.mouseDown && (this.xpos || this.ypos)){
+        var movedX = (clientX - this.xpos);
+        var movedY = (clientY - this.ypos);
+        if (this.settings.invert) {
+          movedX *= -1;
+          movedY *= -1;
+        }
+        if(this.threshold > 0){
+          var moved = Math.sqrt(movedX * movedX + movedY * movedY);
+          if(this.threshold > moved){
+            return;
+          } else {
+            this.threshold = 0;
+          }
+        }
         if (this.elementFocused){
           $(this.elementFocused).blur();
           this.elementFocused = null;
@@ -249,8 +281,6 @@
 
         var scrollLeft = this.scrollLeft();
         var scrollTop = this.scrollTop();
-        var movedX = (clientX - this.xpos);
-        var movedY = (clientY - this.ypos);
 
         this.scrollLeft(this.settings.x ? scrollLeft - movedX : scrollLeft);
         this.scrollTop(this.settings.y ? scrollTop - movedY : scrollTop);
@@ -264,7 +294,7 @@
         this._setMoveClasses(this.settings.movingClass);
 
         if ($.isFunction(this.settings.moved)){
-          this.settings.moved.call($this, this.settings);
+          this.settings.moved.call(this, this.settings);
         }
       }
     }
@@ -273,6 +303,10 @@
   Kinetic.prototype._calculateVelocities = function (){
     this.velocity = this._capVelocity(this.prevXPos - this.xpos, this.settings.maxvelocity);
     this.velocityY = this._capVelocity(this.prevYPos - this.ypos, this.settings.maxvelocity);
+    if (this.settings.invert) {
+      this.velocity *= -1;
+      this.velocityY *= -1;
+    }
   };
 
   Kinetic.prototype._end = function (){
@@ -284,11 +318,18 @@
     }
   };
 
-  Kinetic.prototype._useTarget = function (target){
+  Kinetic.prototype._useTarget = function (target, event){
     if ($.isFunction(this.settings.filterTarget)){
-      return this.settings.filterTarget.call(this, target) !== false;
+      return this.settings.filterTarget.call(this, target, event) !== false;
     }
     return true;
+  };
+
+  Kinetic.prototype._threshold = function (target, event){
+    if ($.isFunction(this.settings.threshold)){
+      return this.settings.threshold.call(this, target, event);
+    }
+    return this.settings.threshold;
   };
 
   Kinetic.prototype._start = function (clientX, clientY){
@@ -357,8 +398,8 @@
 
   // do the actual kinetic movement
   Kinetic.prototype._move = function (){
-    var $scroller = this.$el;
-    var scroller = this.el;
+    var $scroller = this._getScroller();
+    var scroller = $scroller[0];
     var self = this;
     var settings = self.settings;
 
@@ -442,16 +483,17 @@
         .bind('touchstart', settings.events.touchStart)
         .bind('touchend', settings.events.inputEnd)
         .bind('touchmove', settings.events.touchMove);
-    } else {
-      $this
-        .mousedown(settings.events.inputDown)
-        .mouseup(settings.events.inputEnd)
-        .mousemove(settings.events.inputMove);
     }
+    
+    $this
+      .mousedown(settings.events.inputDown)
+      .mouseup(settings.events.inputEnd)
+      .mousemove(settings.events.inputMove);
+
     $this
       .click(settings.events.inputClick)
       .scroll(settings.events.scroll)
-      .bind('selectstart', selectStart) // prevent selection when dragging
+      .bind('selectstart', settings.events.selectStart)
       .bind('dragstart', settings.events.dragStart);
   };
 
@@ -463,16 +505,17 @@
         .unbind('touchstart', settings.events.touchStart)
         .unbind('touchend', settings.events.inputEnd)
         .unbind('touchmove', settings.events.touchMove);
-    } else {
-      $this
-        .unbind('mousedown', settings.events.inputDown)
-        .unbind('mouseup', settings.events.inputEnd)
-        .unbind('mousemove', settings.events.inputMove)
-        .unbind('scroll', settings.events.scroll);
     }
+
+    $this
+      .unbind('mousedown', settings.events.inputDown)
+      .unbind('mouseup', settings.events.inputEnd)
+      .unbind('mousemove', settings.events.inputMove);
+
     $this
       .unbind('click', settings.events.inputClick)
-      .unbind('selectstart', selectStart) // prevent selection when dragging
+      .unbind('scroll', settings.events.scroll)
+      .unbind('selectstart', settings.events.selectStart)
       .unbind('dragstart', settings.events.dragStart);
   };
 
