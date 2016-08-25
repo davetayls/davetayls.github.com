@@ -13,7 +13,7 @@ One of the hardest problems to solve in programming is handling changes over tim
 
 We're going to look at how Reactive programming is one solution to this problem. We're going to focus on how it might be useful for user interfaces even though these concepts can and are applied to other situations. 
 
-This idea brings together a few patterns (which we will look closer at) including streams and data flows. They allow the system to react to changes within the data instantly, update the user interface to reflect them and do so in a less complex and performant way.
+This idea brings together a few patterns (which we will look closer at) including streams and data flows. They allow the system to react to changes within the data instantly, update the user interface to reflect them and do so in a performant and less complex way.
 
 The code can therefor:
 
@@ -131,7 +131,7 @@ You would often combine these steps.
 
 ## Recap
 
-We've shown here how the system reacts to changes within the data instantly, sending details of how it has changed so that we can update the user interface and do so in a less complex and performant way.
+We've shown here how the system reacts to changes within the data instantly, sending details of how it has changed so that we can update the user interface and do so in a performant and less complex way.
 
 The user interface can display what is known at the given moment and doesn't have to worry about how data has changed. It'll be told when data has changed and it is safe and performant to update.
 
