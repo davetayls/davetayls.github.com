@@ -9,9 +9,9 @@ categories:
 
 ## What is Reactive Programming and Why is it helpful
 
-One of the hardest problems to solve in programming is handling changes over time. This is because changes can come from multiple places, are unknown and will not always come in the same sequence. Even so, we still need to base logic on what is currently known and so we often find managing these changes result in a very complex system.
+One of the hardest problems to solve in programming is handling changes over time. This is because changes can come from multiple places, are unknown and will not always come in the same sequence. Even so, we still need to base logic on what is currently known and so we often find that managing these changes result in a very complex system.
 
-We're going to look at how Reactive programming is one solution to this problem. We're going to focus on how it might be useful for user interfaces even though these concepts can and are applied to other situations. 
+We're going to look at how Reactive programming is one solution to this problem. We're going to focus on how it might be useful for user interfaces even though these concepts can–and are–applied to other situations. 
 
 This idea brings together a few patterns (which we will look closer at) including streams and data flows. They allow the system to react to changes within the data instantly, update the user interface to reflect them and do so in a performant and less complex way.
 
@@ -19,7 +19,7 @@ The code can therefor:
 
 1. Base programming logic on what is known at the given moment.
 2. Have a clear sense of who can change what data
-3. Be told when data has changed and it is safe and performant to update based on them
+3. Be told when data has changed and it is safe and performant to update
 
 We're going to base our examples on a common illustration of this which can be seen in modern spreadsheets where the value of a cell is the result of the values in other cells. 
 
@@ -35,7 +35,7 @@ Following the spreadsheet example let's consider a scenario where someone needs 
 
 The values in the cells begin with: `B2` = 1 and `C2` = 1.  The cell in `B2` is changed to 5 and after a few more seconds `C2` changes to 2. Finally the value in `A2` is copied and the spreadsheet is deleted because it is no longer needed.
 
-We can picture the changes with a diagram like this where the `---` line shows time passing, the cell name signifies a change at that point in time and the `|` the point at which the spreadsheet is deleted. Notice that cell `A2` will change twice, once for each of the other cell changes.
+We can picture the changes with a diagram like this. Here the `---` line shows time passing, the cell name signifies a change at that point in time and the `|` the point at which the spreadsheet is deleted. Notice that cell `A2` will change twice, once for each of the other cell changes.
 
 ```
 -------B2--------|->
@@ -63,9 +63,9 @@ Let's look again at our last example of the three streams and consider our origi
 -------A2--A2--A2--A2--A2--|->
 ```
 
-The value of `A2` was the result of adding the values of `B2` and `C2`. We can see that A2 changes whenever either of the other cells change but how? At the moment we haven't considered or shown the connections between the changes within the streams and the resulting change to `A2`.
+The value of `A2` was the result of adding the values of `B2` and `C2`. We can see that A2 changes whenever either of the other cells change but how? At the moment we haven't shown the connection between the changes within one stream and the resulting change to `A2`.
 
-Whenever we get notified of new data from the `B2` stream in the form of the cell's value we need to do pass that data through a series of steps to reach `A2`'s new value. These steps are called a data flow.
+Whenever we get notified of new data from the `B2` stream, we need to do pass that data through a series of steps to reach `A2`'s new value. These steps are called a data flow.
 
 Let's presume the value of 'C2' is always `5` and just look at the `B2` changes and picture this flow.
 
