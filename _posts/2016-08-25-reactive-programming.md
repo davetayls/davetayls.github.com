@@ -145,11 +145,11 @@ The JavaScript examples above follow this library's implementation of the design
 
 If you want to read further here are some other resources.
 
- - https://en.wikipedia.org/wiki/Reactive_programming
- - http://reactivex.io
- - https://xgrommx.github.io/rx-book
- - https://en.wikipedia.org/wiki/Stream_processing
- - https://en.wikipedia.org/wiki/Dataflow
+ - <https://en.wikipedia.org/wiki/Reactive_programming>
+ - <http://reactivex.io>
+ - <https://xgrommx.github.io/rx-book>
+ - <https://en.wikipedia.org/wiki/Stream_processing>
+ - <https://en.wikipedia.org/wiki/Dataflow>
 
 
 
