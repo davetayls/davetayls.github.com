@@ -449,6 +449,13 @@ a {
   color: #00C792;
 }
 
+code {
+  display: inline-block;
+  background-color: #efefef;
+  padding: 0 4px;
+  border-radius: 5px;
+}
+
 .AboutMeAside {
   display: none;
   margin: 2rem 3rem;
@@ -1587,5 +1594,3 @@ pre.prettyprint {
   position: static;
   width: auto;
 }
-
-/*# sourceMappingURL=index.css.map*/

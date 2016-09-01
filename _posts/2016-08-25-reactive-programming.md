@@ -5,6 +5,7 @@ related: javascript
 categories:
   - javascript
   - thoughts
+  - architecture
 ---
 
 ## What is Reactive Programming and Why is it helpful

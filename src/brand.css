@@ -15,3 +15,11 @@ body {
 a {
   color: $ColorCore;
 }
+
+code {
+  display: inline-block;
+  background-color: #efefef;
+  padding: 0 4px;
+  border-radius: 5px;
+}
+

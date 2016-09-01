@@ -7,6 +7,7 @@ categories:
   - javascript
   - components
   - thoughts
+  - architecture
 ---
 
 We have seen the huge benefits of pure functions for creating high quality and testable JavaScript. I’ve been applying the same understanding to UI components for a while now and am seeing these same benefits. It’s useful to take a look at what makes a “pure component” and how we can change the way we build websites to realise these benefits.
