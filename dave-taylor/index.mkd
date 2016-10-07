@@ -48,7 +48,16 @@ You can take a look at my [showreels](/blog/category/showreel/) or the [projects
 
 ## Avatars and Images
 
-<img style="border: solid 2px #eee;" width="100" alt="Dave Taylor Frontend Developer, Lead, Mentor - landscape" src="/content/dave-taylor.jpg" />
-<img style="border: solid 2px #eee;" width="100" alt="Dave Taylor Frontend Developer, Lead, Mentor - square" src="/content/dave-taylor-square.jpg" />
-<img style="border: solid 2px #eee;" width="100" alt="Dave Taylor Frontend Developer, Lead, Mentor - portrait" src="/content/dave-taylor-portrait.jpg" />
+<figure>
+  <img style="border: solid 2px #eee;" width="100" alt="{{site.site_name}} {{site.job_title}} - landscape" src="/content/dave-taylor.jpg" />
+  <figcaption>{{site.site_name}} Landscape</figcaption>
+</figure>
+<figure>
+  <img style="border: solid 2px #eee;" width="100" alt="{{site.site_name}} {{site.job_title}} - square" src="/content/dave-taylor-square.jpg" />
+  <figcaption>{{site.site_name}} Square</figcaption>
+</figure>
+<figure>
+  <img style="border: solid 2px #eee;" width="100" alt="{{site.site_name}} {{site.job_title}} - portrait" src="/content/dave-taylor-portrait.jpg" />
+  <figcaption>{{site.site_name}} Portrait</figcaption>
+</figure>
 
