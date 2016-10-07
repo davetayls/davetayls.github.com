@@ -53,8 +53,13 @@
 @media (--MediaFromMedium) {
 
   .PostHeader {
-    height: 76vh;
+    height: 66vh;
     max-height: 600px;
+  }
+
+  .PostHeader--isSmall {
+    height: 33vh;
+    max-height: 400px;
   }
 
   .PostHeader-title {

@@ -864,7 +864,7 @@ small.GetInTouchFooter-chat {
   background-image: url(/content/home-hero.jpg);
   background-size: cover;
   background-position: center center;
-  height: 72vh;
+  height: 46vh;
   margin: 0;
   position: relative;
   overflow: hidden;
@@ -1213,8 +1213,13 @@ small.GetInTouchFooter-chat {
 @media (min-width: 600px) {
 
   .PostHeader {
-    height: 76vh;
+    height: 66vh;
     max-height: 600px;
+  }
+
+  .PostHeader--isSmall {
+    height: 33vh;
+    max-height: 400px;
   }
 
   .PostHeader-title {
@@ -1362,6 +1367,7 @@ small.GetInTouchFooter-chat {
 }
 
 .ProductList-name,
+.ProductList-contact,
 .ProductList-pitch {
   text-align: center;
   padding: 0 1rem;
@@ -1594,3 +1600,5 @@ pre.prettyprint {
   position: static;
   width: auto;
 }
+
+/*# sourceMappingURL=index.css.map*/

@@ -26,7 +26,11 @@
           {{ product.about | markdownify }}
         </div>
       </div>
-
+      <p class="ProductList-contact">
+        <a class="Button Button@sm--isSmall" href="mailto:dave.taylor@pogokid.com?subject={{ product.name }}">Email me</a>
+        <a class="Button Button@sm--isSmall" href="skype:davetayls">Skype Call</a>
+        <a class="Button Button@sm--isSmall" href="skype:davetayls?chat">Skype Chat</a>
+      </p>
     </div>
   </section>
   {% endfor %}

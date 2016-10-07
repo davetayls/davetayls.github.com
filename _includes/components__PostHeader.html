@@ -1,5 +1,5 @@
 
-<div class="PostHeader">
+<div class="PostHeader {%if page.isSmallHeader %}PostHeader--isSmall{% endif %}">
   <h1 class="PostHeader-title">
     <a class="PostHeader-titleLink" href="{{ page.url }}">{{ page.title }}</a>
     {% if page.date %}

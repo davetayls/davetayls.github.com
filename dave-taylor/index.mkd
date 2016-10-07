@@ -1,17 +1,23 @@
 ---
 layout: post
 title: Dave Taylor - Frontend Developer, Consultant, Mentor
-postimage: /content/about-me.jpg
+postimage: /content/dave-taylor.jpg
 related: mystory
 comments: hide
 ---
 
-![](http://1.gravatar.com/avatar/bbf81bc82fed795624ed696fe1e5aee0)
+Halo! My name is Dave Taylor, thanks for visiting my site. I hope to offer web developers some useful insight and help
+in our day-to-day roles. This page has a little about who I am and where I've come from for those interested.
 
-My name is Dave Taylor, I was born and grew up in the Philippines
-although both my parents are English. We lived on the edge of an
-active volcano called Mayon (which means beautiful). It was a flippin
-amazing place to be apart from when it errupted. let’s just say that.
+## Philippines
+
+![Mayon Volcano, Philippies](/content/mayon.jpg)
+
+I was born and grew up in the Philippines although both my parents are English. We lived on the edge of an
+active volcano called Mayon (which means beautiful). It was an amazing place to grow up, apart from when it errupted
+let’s just say that.
+
+## Early Career
 
 I spent the first 10 years of my career in London where my love for
 the web and geekery grew steadily. I had the opportunity to work on
@@ -19,7 +25,8 @@ some cutting edge projects with forward thinking creative agencies and
 clients from the likes of The FA and the RFU to The British Red Cross
 and Premier Inn.
 
-![Pogo Kid](https://lh5.googleusercontent.com/-D1X9vUSprTM/UPPJrdmEA1I/AAAAAAAAujs/G_uIHgVvKZY/s800/pogokid.jpg)
+
+## Pogo Kid
 
 I started [Pogo Kid](http://pogokid.com) in the summer of 2012 and I
 now work from my office in Bath.
@@ -37,14 +44,11 @@ a developer on your team but will invest themselves in your project then
 give me a call. Take a look at my [work with me page](/workwithme) for
 more information.
 
-## This is what excites me
-
- - Front-End technologies
- - Teams and open source communities
- - My family
- - Doing great work
- - I love the web
-
-## Experience
-
 You can take a look at my [showreels](/blog/category/showreel/) or the [projects category](/blog/category/project/) to see some examples.
+
+## Avatars and Images
+
+<img style="border: solid 2px #eee;" width="100" alt="Dave Taylor Frontend Developer, Lead, Mentor - landscape" src="/content/dave-taylor.jpg" />
+<img style="border: solid 2px #eee;" width="100" alt="Dave Taylor Frontend Developer, Lead, Mentor - square" src="/content/dave-taylor-square.jpg" />
+<img style="border: solid 2px #eee;" width="100" alt="Dave Taylor Frontend Developer, Lead, Mentor - portrait" src="/content/dave-taylor-portrait.jpg" />
+
