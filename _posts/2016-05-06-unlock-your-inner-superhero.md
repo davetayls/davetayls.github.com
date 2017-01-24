@@ -28,7 +28,7 @@ When I was 8 years old, I joined my brother in Manilla. We lived with a number o
 
 ![](https://cdn-images-1.medium.com/max/1600/1*MbP2UXvpVQbaBxYCroKtAA.jpeg)
 
-For me being able to ride a bike was like the Black Perl was to Jack Sparrow. We used to go out as a group of kids for hours on end exploring around where our dorm house was. It’s amazing what we found.
+For me being able to ride a bike was like the Black Pearl was to Jack Sparrow. We used to go out as a group of kids for hours on end exploring around where our dorm house was. It’s amazing what we found.
 
 One day we met a goat farmer who used to herd his goats on the few small fields near the house. He was an older man who lived a very simple life but taught us a lot about his world and the lives of others we would otherwise struggle to understand.
 

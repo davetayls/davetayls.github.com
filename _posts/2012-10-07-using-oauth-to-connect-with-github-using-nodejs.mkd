@@ -9,7 +9,7 @@ categories:
     - oauth
 ---
 
-I am working on a rewrite of [markdown writer](http://markdown-writer.herokuapp.com), my playground for working with [backbone.js](http://documentcloud.github.com/backbone/) and HTML5 offline capabilities. There are a few new features which I am building in to what is currently a very basic app.
+I am working on a rewrite of [markdown writer](http://markdown-writer.herokuapp.com), my playground for working with [backbone.js](http://backbonejs.org) and HTML5 offline capabilities. There are a few new features which I am building in to what is currently a very basic app.
 
 One of them is enabling you to log in using [Github](http://github.com) and save your offline articles to a [Gist](http://gist.github.com). To do this I have had to connect with Github using [OAuth2](http://oauth.net/).
 
