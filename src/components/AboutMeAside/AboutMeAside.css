@@ -6,6 +6,10 @@
   transition: opacity .3s ease;
 }
 
+.AboutMeAside-avatar {
+
+}
+
 .AboutMeAside-name {
   font-weight: 300;
   color: #777;

@@ -26,7 +26,7 @@ github
 
 <div id="intro"><p>
 
-After 14 years my passion for our industry has not stopped growing.
+After {{ site.years_experience }} years my passion for our industry has not stopped growing.
 I thrive in teams who are pushing the boundaries of HTML5 and Node.js in their many forms.
 Taking my leadership skills as far as I can, when I lead I look to inspire my team to do the same.
 
@@ -39,11 +39,11 @@ I have gained a large body of experience across many web technologies both clien
 
 ### JavaScript Client-side
  - Hand coded and linted
- - Unit tested (Jasmine, QUnit, Mocha)
+ - Unit tested (Jasmine, QUnit, Mocha, Karma, Chai)
  - Object Oriented
  - Backbone.js, Marionette, React and Angular frameworks
  - Cordova and PhoneGap hybrid apps
- - CommonJs and AMD modules - RequireJs/Node.js
+ - ES2015+, CommonJs and AMD modules - RequireJs/Node.js
 
 ### JavaScript and Server-side
  - **Node.js** cloud applications and APIs (Heroku/AppFog/Azure)
@@ -64,17 +64,23 @@ I have gained a large body of experience across many web technologies both clien
 Recommendations
 ---------------
 
+### Ian Causton: _Freelance .Net CMS & CRO Expert_
+
+“In my experience, it’s rare to work with an individual as talented as Dave.
+
+I had the pleasure of working with him at the BIO Agency on the Arrow Electronics account.
+
+Although Dave’s knowledge of front end development was second to none, what really impressed me was his ability to transfer this knowledge to more junior members of the team in his role as mentor. His ceaseless drive and enthusiasm in doing this contributed hugely to a successful project and a fantastic relationship with the client and their team.
+
+He would be a great asset for any team and I hope I will get the opportunity to work with him again in the future”
+
+November 2, 2016
+
 ### Tim Ellert: _Founder, ESZ Consulting Ltd_
 
 “Having worked with Dave on various projects for both small and multinational clients I / we can highly recommend him. Dave has excellent technical / development skills and is very much at the cutting edge of new languages and methodologies. During his time working with ESZ Consulting he has successfully completed highly technical projects spanning from a few months to a few years! He is a valuable front end developer and an asset to any development team. Look forward to working with him again soon on the next project!”
 
 February 24, 2015
-
-### Rob Oubridge: _Founder, Aqueduct_
-
-“Dave is an extremely talented front-end developer - without exception the most knowledgable and advanced in his area that we have ever worked with. In addition, Dave is a cohesive team member, widely popular with his colleagues and always inspiring quality, exploration and innovation. One of the true 'greats' we've had the pleasure to work with - I cannot recommend Dave highly enough either as a professional or an individual.”
-
-February 27, 2012
 
 ### Guillaume Buat-Ménard: _Technical Director, Aqueduct_
 
@@ -86,6 +92,14 @@ View more on [LinkedIn](http://www.linkedin.com/in/davetayls).
 
 Experience
 ----------
+
+### Frontend Consultant and Mentor (Contract) - _The BIO Agency & Arrow Electronics_ <http://www.thebioagency.com> <https://www.arrow.com>
+
+#### May 2016
+
+Mentor and UI Technical lead for the Arrow (arrow.com) global e-commerce platform with teams in Denver, Portland and London.
+
+Arrow Electronics is a global provider of products, services and solutions to industrial and commercial users of electronic components and enterprise computing solutions. Arrow (a Fortune 500 company) serves as a supply channel partner for over 100,000 original equipment manufacturers, contract manufacturers and commercial customers through a global network of more than 460 locations in 56 countries.
 
 ### Senior Cordova Hybrid App Developer (Contract) - _ESZ_ <http://eszconsulting.com>
 
@@ -238,10 +252,7 @@ Web apps for Jaguar, Land Rover and a new startup. Backbone, Marionette, Node.js
 
 #### August 2012 to September 2012 (3 weeks)
 
- - **TDD** - Mocha with Node.js to test application and integrate in to CI environment.
- - **Front-End Build** for website application - prototyped using Express.js
-
-### Senior/Lead Front-End Developer - _Aqueduct_ <http://www.aqueduct.co.uk>
+### Senior/Lead Front-End Developer (Permanent) - _Aqueduct_ <http://www.aqueduct.co.uk>
 
 #### July 2009 to March 2012 (2 years, 8 months)
 
@@ -259,11 +270,8 @@ design team and front-end team.
 
 #### Feb 2005 to July 2009 (4 years, 5 months)
 
-Head of design and front-end. I worked within a team to accomplish web based application projects, corporate websites, e-commerce solutions, branding services, print design for charities and SMEs.
-
 ### Owner/Partner - _Mime Graphics_
 
 #### July 2002 to Feb 2005 (2 years, 8 months)
 
-I began working as a designer in a partnership after college with the view to building a strong portfolio of work.
 

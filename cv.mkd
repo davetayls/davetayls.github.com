@@ -7,4 +7,4 @@ share: hide
 
 Appologies, I've done a little cleanup and have moved my CV.
 
-You can now find it at [/cv](/cv).
+You can now find it at [/cv/](/cv/).

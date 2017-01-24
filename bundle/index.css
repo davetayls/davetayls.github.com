@@ -464,6 +464,10 @@ code {
   transition: opacity .3s ease;
 }
 
+.AboutMeAside-avatar {
+
+}
+
 .AboutMeAside-name {
   font-weight: 300;
   color: #777;
@@ -1600,5 +1604,3 @@ pre.prettyprint {
   position: static;
   width: auto;
 }
-
-/*# sourceMappingURL=index.css.map*/
