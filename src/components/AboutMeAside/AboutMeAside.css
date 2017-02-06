@@ -7,7 +7,23 @@
 }
 
 .AboutMeAside-avatar {
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+}
 
+.AboutMeAside-avatar img {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+.AboutMeAside-avatar figcaption {
+  position: absolute;
+  top: -999px;
+  left: -999px;
 }
 
 .AboutMeAside-name {

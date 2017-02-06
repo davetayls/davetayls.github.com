@@ -41,6 +41,7 @@
   },
   "scripts": {
     "start": "webpack",
+    "webpack": "webpack -d -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
