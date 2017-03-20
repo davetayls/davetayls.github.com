@@ -57,6 +57,15 @@ My Final trip in December was a fun one. I went alone which gave me lots of time
 ## Growing little people
 
 <figure>
+  <img src="/content/2016-05-14 14.13.20-2.jpg" />
+  <figcaption>
+    Picnics at the den
+  </figcaption>
+</figure>
+
+I've loved watching Charis and Tobi continue to become more of who they are. Their characters are blooming and are both so much fun to have around. Having kids is the best thing to keep your head on the ground. We've discovered some great dens this year, on the fields and in the woods around us. I'm very proud of them both, their creativity, their fun, their unique interests and their ability to light up the room.
+
+<figure>
   <img src="/content/2016-10-23 14.17.09.jpg" />
   <figcaption>
     Diggerland, they let Charis and Tobi loose on the diggers!
