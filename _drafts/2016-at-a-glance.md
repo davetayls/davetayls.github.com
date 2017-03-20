@@ -5,8 +5,54 @@ categories:
   - theyear
 ---
 
-## Angular 2 and React.js
 
-## Working With and Mentoring a Co-located team
+What have I learnt from last year. 2016 held so much, it had many highs and lows from seeing the teams mature and grow at Arrow and the fun of the Jaguar app build to the long period of uncertainty during April as to where to go next after deciding to move on from GigStamp. 
 
-## Moving on from GigStamp
+## Don't give up
+
+If there's been a theme through much of this year it has been "don't give up". Finding the strength inside to persevere when it's not clear what the right direction is has been hard. You've got to keep going, hold on to whatever is strong inside because you make it out in the end. 
+
+GigStamp was one of my great passions over the last three years. I had invested several thousand pounds of time and money but most of all I believed in the potential. So it was hard for me when I realised that without resource you can't realise potential. I had given up most of my Christmas to getting some new features out and was in the process of setting up all the legal stuff around getting a company sorted when I just ran out of steam and felt that unless something drastic happened we wouldn't be able to get to where we wanted to go. After some hard discussions with Gordon I left the project in the most stable place I could and tried to look to new things.
+
+## Mentoring at Arrow
+
+In April, I was struggling through a period where my contacts were needing something very different to what I was offering. I didn't want to compromise and just take anything, I have seen the value that I can bring to teams. Still, I used the time to read about business and it helped me a lot to make sense of what was going on at GigStamp. 
+
+I was given the prviliege at Arrow to continue working with their growing team and their growing technology needs. I found some struggles within the frontend team around technologies. I often find disagreements and hard line ideals make people just fight their corners without looking at the bigger picture. But we got these sorted and were all able to move forward onto bigger and better things.
+
+The next few months were to be a really positive time of getting to know the new team members, working closely with Martin and continuing some of the groundwork I had put in place before I left in November. Working across such a large timezone difference was always going to be hard but I feel like we made the most of it gaining time in the mornings for me to take the kids to school and have coffee with Esther. I also moved office to home to make things easier with seeing kids and the evening routines. I started working from the Guild Hub in Bath which has been such a great decision. I have made some good friends from being in Bath and it has opened some doors as well.
+
+
+
+Martin Georgiev and Dave Taylor on the plane
+
+My second trip to Denver came in October when Martin was able to join me. There was a good bunch of us out there and I had the opportunity to get to know Dan R, Kevin Wilde and Kush a lot better. Martin and I ran a few workshops and we were able to discuss several ideas.
+
+
+Out across the Rockies from Bear Peak Colorado
+
+
+Kush, Justin, Martin, Dave, Dan, Kevin, Sean almost at the Summit
+
+
+Diggerland, they let Charis and Tobi loose on the diggers!
+
+
+Dave Taylor, ?, Daniel Arauz, Rosie Lee, Jon Hemstreet, Charlie
+
+My Final trip in December was a fun one. I went alone which gave me lots of time to do little things like read, be quiet and reflect. It was seriously cold for someone like me a Brit who was born in the Philippines who likes the weather to not have extremes and be relatively changeable. The day flying back a lot of planes were grounded because it was -20℃.
+
+
+Frozen Pond at the park near my hotel in Denver
+
+
+
+
+
+Union Station, Downtown Denver, Colorado
+
+A year of the people
+In many ways this year has been about the people. Whether that has been honouring friends even when we see differently, working alongside more junior developers and seeing them grow in confidence (and later take over), seeing my kids grow and the rewards of family time. I have spent a lot of quality time with Martin, Kate, Sasha, Gabbie and Florrie because of my overnight stays in London, we have become close friends. Finally after moving offices to The Guild Coworking Hub in Bath I have not only made new friends but have had the opportunity to help set up the Bath JS group which has put me in touch with a new community of people living and working around Bath.
+
+
+Charis’ note which was found on my pillow the day before I left for Denver. It now lives in my book.
