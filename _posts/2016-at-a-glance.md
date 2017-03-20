@@ -1,5 +1,6 @@
 ---
 title: 2016 At a Glance
+postimage: /content/2016-12-16%2018.04.15.jpg
 related: theyear
 categories:
   - theyear
