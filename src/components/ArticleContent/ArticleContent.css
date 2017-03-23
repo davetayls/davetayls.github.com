@@ -69,6 +69,13 @@
   color: #777;
 }
 
+.ArticleContent figcaption {
+  font-size: .8rem;
+  font-style: italic;
+  text-align: center;
+  color: #777;
+}
+
 .ArticleContent p {
   margin: 2rem 0;
 }
