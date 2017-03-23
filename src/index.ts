@@ -1,6 +1,6 @@
 
 import fastclick = require('fastclick');
-fastclick(document.body);
+fastclick.attach(document.body);
 
 import debounce = require('lodash.debounce');
 import $ = require('jquery');
