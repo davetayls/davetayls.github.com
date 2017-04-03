@@ -3,9 +3,8 @@ title: Dave Taylor, Curriculum Vitae
 layout: cv
 ---
 
-*Dave Taylor,* Curriculum Vitae  
-{{ site.job_title }}
-===========
+# *Dave Taylor,* Curriculum Vitae  
+## {{ site.job_title }}
 
 tel
 : 0754 081 7008
