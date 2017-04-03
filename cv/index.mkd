@@ -3,7 +3,8 @@ title: Dave Taylor, Curriculum Vitae
 layout: cv
 ---
 
-*Dave Taylor,* Curriculum Vitae
+*Dave Taylor,* Curriculum Vitae  
+{{ site.job_title }}
 ===========
 
 tel
