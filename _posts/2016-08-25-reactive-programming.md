@@ -1,6 +1,7 @@
 ---
 title: Reactive Programming
 layout: post
+postimage: /content/2016-08-reactive-programming.jpg
 related: javascript
 categories:
   - javascript
