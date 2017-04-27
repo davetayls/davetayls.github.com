@@ -1,5 +1,5 @@
 ---
-title: Ubiquitous Language
+title: Glossary
 layout: post
 postimage: /content/glossary.jpg
 ---
