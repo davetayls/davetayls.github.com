@@ -26,3 +26,28 @@ Related Posts:
 {% assign ListPostsList = site.categories.monad %}
 {% include components__ListPosts.html %}
 
+R
+---
+
+### Reactive Programming
+
+This idea brings together a few patterns including streams and data flows. They allow the system to react to changes within the data instantly, update the user interface to reflect them and do so in a performant and less complex way.
+
+The code can therefor:
+
+Base programming logic on what is known at the given moment.
+Have a clear sense of who can change what data
+Be told when data has changed and it is safe and performant to update
+
+Some further reading:
+
+ - <https://en.wikipedia.org/wiki/Reactive_programming>
+ - <http://reactivex.io>
+ - <https://xgrommx.github.io/rx-book>
+ - <https://en.wikipedia.org/wiki/Stream_processing>
+ - <https://en.wikipedia.org/wiki/Dataflow>
+
+Related Posts:
+
+{% assign ListPostsList = site.categories.reactive %}
+{% include components__ListPosts.html %}
