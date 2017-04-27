@@ -1,7 +1,10 @@
-# title: Plan in Separation
+---
+related: javascript
+categories:
+ - javascript
+---
 
 If you're starting a new JavaScript application or "Single Page App" you're likely be looking at current frameworks and trends to decide what to base the technology stack on. Each of these have their own flavour and recommendations to help you decide how code should be structured. 
-
 
 When planning how a web application is architected it is important to think about the "Domains" of your solution.
 
@@ -28,5 +31,6 @@ Jobs:
  - domains
  - scaleability
  - models - different type of models, what are models, why models
+ - team size affects how you should separate your application
  
  
