@@ -982,6 +982,18 @@ small.GetInTouchFooter-chat {
   display: block;
 }
 
+.LinkList--inline .LinkList-item {
+  display: inline;
+}
+
+.LinkList--inline .LinkList-item:before {
+  content: ', ';
+}
+
+.LinkList--inline .LinkList-item:first-child:before {
+  content: '';
+}
+
 .LinkList--double {
   font-size: 0;
 }

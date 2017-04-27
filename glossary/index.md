@@ -20,3 +20,9 @@ Some further reading:
  - [Eric Lippert talks about Monads](https://ericlippert.com/category/monads/)
  - [The Marvels of Monads by Wes Dyer](https://blogs.msdn.microsoft.com/wesdyer/2008/01/10/the-marvels-of-monads/)
  - [Monadster by Scott Wlaschin](https://fsharpforfunandprofit.com/monadster/)
+
+Related Posts:
+
+{% assign ListPostsList = site.categories.monad %}
+{% include components__ListPosts.html %}
+
