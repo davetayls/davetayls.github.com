@@ -1,6 +1,7 @@
 ---
 title: Ubiquitous Language
 layout: post
+postimage: /content/glossary.jpg
 ---
 
 M
