@@ -80,7 +80,7 @@ Here's a Sprite class which will allow you to specify several sprite positions a
             pos[1],
             this.width,
             this.height,
-            x, y
+            x, y,
             this.width,
             this.height
           );
