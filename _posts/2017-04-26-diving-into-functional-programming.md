@@ -1,4 +1,8 @@
---- 
+---
+related: functional
+categories:
+ - functional
+ - javascript
 ---
 
 Outside of reading over the concepts of functional programming I have never had the opportunity to really dig deep and get to know the theories, patterns and quirks. There has been a lot of talk in the JavaScript community about using functional programming ideas but I've decided to put JavaScript to the side for the moment because, whilst it can be used very easily to do functional programming, it isn't a functional programming language. It's also easy to fall back into habits when something is very familiar.
