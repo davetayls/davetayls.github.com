@@ -4,6 +4,17 @@ layout: post
 postimage: /content/glossary.jpg
 ---
 
+F
+---
+
+### Functor
+
+A `Functor` is an object with a map function which obeys a few rules
+
+Links:
+
+ - [You've been using Functors](https://egghead.io/lessons/javascript-you-ve-been-using-functors)
+
 M
 ---
 
@@ -72,3 +83,10 @@ Links
  - [Combining thinsg with Semigroups video](https://egghead.io/lessons/javascript-combining-things-with-semigroups)
  - [Semigroup examples video](https://egghead.io/lessons/javascript-semigroup-examples)
 
+
+T
+---
+
+### Task
+
+...
