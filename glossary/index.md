@@ -26,6 +26,14 @@ Related Posts:
 {% assign ListPostsList = site.categories.monad %}
 {% include components__ListPosts.html %}
 
+### Monoid
+
+A Monoid is a [Semigroup](#semigroup) which also has a value which when concatenated to any value doesn't change it. For example with a addition concatenating a `0` will not change the number you started with or with multiplication concatenating a `1` will not change the original number.
+
+Links:
+
+ - [Failsafe combination using monoids](https://egghead.io/lessons/javascript-failsafe-combination-using-monoids)
+
 R
 ---
 
@@ -51,3 +59,13 @@ Related Posts:
 
 {% assign ListPostsList = site.categories.reactive %}
 {% include components__ListPosts.html %}
+
+### Semigroup
+
+A semi group is something which can be concatenated together. It is associative which means that it doesn't matter how you group the concatenation, it will always end up with the same result - like addition where 1 + 1 + 1 is the same as (1 + 1) + 1.
+
+Links
+
+ - [Combining thinsg with Semigroups video](https://egghead.io/lessons/javascript-combining-things-with-semigroups)
+ - [Semigroup examples video](https://egghead.io/lessons/javascript-semigroup-examples)
+
