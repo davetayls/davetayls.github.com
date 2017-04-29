@@ -60,6 +60,9 @@ Related Posts:
 {% assign ListPostsList = site.categories.reactive %}
 {% include components__ListPosts.html %}
 
+S
+---
+
 ### Semigroup
 
 A semi group is something which can be concatenated together. It is associative which means that it doesn't matter how you group the concatenation, it will always end up with the same result - like addition where 1 + 1 + 1 is the same as (1 + 1) + 1.
