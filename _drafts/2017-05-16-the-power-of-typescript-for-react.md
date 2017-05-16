@@ -17,7 +17,13 @@ One of the first things you see people build with React are the components. Let'
 
 Starting with pure components, we can declare what a component's props and state should equal. By doing this we can also describe whether a prop is optional or not. TypeScript will help you when using these props to make sure you have catered for the `undefined` state.
 
+Let's start with a person component.
+
 ```typescript
+// Person.tsx
+
+import React from 'react';
+
 export interface IPersonProps {
   name: string;
   age: number;
@@ -27,6 +33,25 @@ export interface IPersonProps {
 
 export interface IPersonState {
   highlightedSkill: string;
+}
+
+export class Person extends React.Component<IPersonProps, IPersonState> {
+  render() {
+    return (
+      <section>
+        <h2>My name is {this.props.name}</h2>
+        <h3>I am {this.props.age} years old</h3>
+        <h4>My Skills are:</h4>
+        {this.getSkills()}
+      </section>
+    );
+  }
+  getSkills() {
+    if (!this.props.skills.length) return;
+    const skills = this.props.skills
+      .map((skill: string, i: number) => (<li key={i}>{skill}</li>));
+    return <ul>{skills}</ul>;
+  }
 }
 ```
 
