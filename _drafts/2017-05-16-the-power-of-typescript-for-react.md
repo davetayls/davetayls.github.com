@@ -177,7 +177,14 @@ Now TypeScript will make sure that we have included all the correct props and di
 
 Another nice side-effect which is starting to emerge is that because we are explicitly having to declare what the props, dispatch events and state objects look like, our code is becoming a lot easier to understand and read. This practice is a form of documentation which will serve you and your team well as you scale your codebase or return to old features in a few months.
 
+
+
+
 ## Actions
+
+Welcome back, we've been looking at how TypeScript can help us to build scalable React applications. We use TypeScript extensively at [Seccl](https://seccl.tech/) and are finding that it is making a big impact on our productivity and keeping our code robust.
+
+
 
 ## Reducers
 
