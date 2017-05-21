@@ -184,6 +184,58 @@ Another nice side-effect which is starting to emerge is that because we are expl
 
 Welcome back, we've been looking at how TypeScript can help us to build scalable React applications. We use TypeScript extensively at [Seccl](https://seccl.tech/) and are finding that it is making a big impact on our productivity and keeping our code robust.
 
+```typescript
+export interface IGenericAction<P, M> {
+  type: string;
+  payload?: P;
+  meta?: M;
+  error?: boolean;
+}
+```
+
+```typescript
+export interface IAction<P> extends IGenericAction<P, undefined> {
+}
+export interface IErrorAction<M> extends IGenericAction<IError, M> {
+}
+```
+
+```typescript
+export interface IAuthenticationState {
+  authenticating: boolean;
+}
+export interface IAuthenticateCredentials {
+  username: string;
+  password: string;
+}
+```
+
+```typescript
+export const authenticateCredentials =
+  (username: string, password: string): IAction<IAuthenticateCredentials> => ({
+    type: AUTHENTICATE_CREDENTIALS,
+    payload: {
+      username,
+      password
+    }
+  });
+```
+
+```typescript
+export function authenticateReducer(state: IAuthenticationState, action: IGenericAction<any, any, any>) {
+  switch (action.type) {
+    case AUTHENTICATE_CREDENTIALS: return credentials(state, action);
+    default: return state;
+  }
+}
+export function credentials(state: IAuthenticationState, action: IAction<IAuthenticateCredentials>) {
+  const {payload} = action;
+  return {
+    ...state,
+    authenticating: payload.username
+  };
+}
+```
 
 
 ## Reducers
