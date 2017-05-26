@@ -24,11 +24,13 @@ NB. Before we go any further I want to note that the power I show in this articl
 }
 ```
 
-## Component Prop and State Interafaces
+---
+
+# Component Prop and State Interafaces
 
 Here we go! One of the first things you often build with React are the components. Let's take a look at how TypeScript can enable us to create components which describe their usage.
 
-### Pure or Presentational Components
+## Pure or Presentational Components
 
 Starting with [pure components](/blog/2016/06/21/pure-components), we can declare what a component's props and state should equal. By doing this we can also describe whether a prop is optional or not. TypeScript will help you when using these props to make sure you have catered for the `undefined` state.
 
@@ -107,10 +109,10 @@ Object is possibly 'undefined'.
 So hopefully you are getting a sense of how these contracts can help you build more robust and scalable JavaScript.
 
 
+---
 
 
-
-### Connected or Stateful Components
+# Connected or Stateful Components
 
 We looked at how adding some simple TypeScript interfaces can help you build and refactor Pure React Components. Today we'll look at the common usage of Redux with React. We'll see how we can help keep the code robust and I'll highlight another nice side-effect of adding these types.
 
@@ -178,37 +180,70 @@ Now TypeScript will make sure that we have included all the correct props and di
 Another nice side-effect which is starting to emerge is that because we are explicitly having to declare what the props, dispatch events and state objects look like, our code is becoming a lot easier to understand and read. This practice is a form of documentation which will serve you and your team well as you scale your codebase or return to old features in a few months.
 
 
+---
 
 
-## Actions
+# Actions
 
 Welcome back, we've been looking at how TypeScript can help us to build scalable React applications. We use TypeScript extensively at [Seccl](https://seccl.tech/) and are finding that it is making a big impact on our productivity and keeping our code robust.
 
+Let's talk about actions, action creators and how reducers interact with them. Actions are a really helpful way to create separation between the different layers of an application, because they are not tightly coupled each layer can be built and tested in pieces. It does bring it's challenges however, whilst the code is loosely coupled, all areas of the code which interact with the action need to have the same expectation of it's structure.
+
+At [Seccl](https://seccl.tech) all our actions follow the same basic structure and TypeScript allows us to define what that is by using an `interface`. Here is the `IGenericAction` interface that we use currently.
+
 ```typescript
+// We have an action with customisable payload and meta
 export interface IGenericAction<P, M> {
+
+  // Our type is a const string
   type: string;
+  
+  // The payload can be anything but will be 
+  // specified for a particular action within
+  // the app
   payload?: P;
+  
+  // The meta property can be used to send
+  // further information along with the action
+  // often used by redux middleware
   meta?: M;
+  
+  // This is a flag to tell if the payload
+  // is an error
   error?: boolean;
 }
 ```
 
-```typescript
-export interface IAction<P> extends IGenericAction<P, undefined> {
-}
-export interface IErrorAction<M> extends IGenericAction<IError, M> {
-}
-```
+This generic action is usually needed in one of three flavours so we also define these to make the code more readable. We'll look at some concrete examples of each below but first let's quickly look at their interface definitions.
+
+The first flavour is the most obvious. A regular action which holds some sort of data in it's payload.
 
 ```typescript
-export interface IAuthenticationState {
-  authenticating: boolean;
-}
+export interface IAction<P> extends IGenericAction<P, undefined> {}
+```
+
+The next is an error action. All our errors conform to the `IError` interface so in this case the payload will be an `IError` and the meta can be specified if needed.
+
+```typescript
+export interface IErrorAction<M> extends IGenericAction<IError, M> {}
+```
+
+The last flavour is the any flavour, to be used when we don't know what we got! Often seen in slice reducers where all actions get passed through.
+
+```typescript
+export interface IAnyAction extends IGenericAction<any, any> {}
+```
+
+So now that we know the flavours, let's look at an example of our action interface in the wild. Our application requires the user to log in with their username and password. What we will create is an interface which describes the `payload` called `IAuthenticateCredentials` and an action creator which builds the action.
+
+```typescript
 export interface IAuthenticateCredentials {
   username: string;
   password: string;
 }
 ```
+
+Our action creator takes `username` and `password` parameters and builds an action with them in the payload. Notice that the function signature specifies that the return type is `IAction<IAuthenticateCredentials>`. This means that the payload must match the definition of `IAuthenticateCredentials`. If it doesn't TypeScript will let you know so that you can fix it.
 
 ```typescript
 export const authenticateCredentials =
@@ -221,8 +256,15 @@ export const authenticateCredentials =
   });
 ```
 
+So we have our action creator, we also need to corresponding reducer to do something with that action. Our `authenticateReducer` could be passed any type of action as the expectation is that all actions go through each top level reducer. Here we can use our `IAnyAction` as a shortcut for writing `IGenericAction<any, any>`.
+
+You can see that we also have a case function which is only used when the action matches our `AUTHENTICATE_CREDENTIALS` constant. We know that the action type will be `IAction<IAuthenticateCredentials>` at this point and so we can specify that as the `action` parameter type.
+
 ```typescript
-export function authenticateReducer(state: IAuthenticationState, action: IGenericAction<any, any, any>) {
+export interface IAuthenticationState {
+  authenticating: boolean;
+}
+export function authenticateReducer(state: IAuthenticationState, action: IAnyAction) {
   switch (action.type) {
     case AUTHENTICATE_CREDENTIALS: return credentials(state, action);
     default: return state;
@@ -237,14 +279,55 @@ export function credentials(state: IAuthenticationState, action: IAction<IAuthen
 }
 ```
 
+Let's look closer at this line within `authenticateReducer`.
 
-## Reducers
+```typescript
+case AUTHENTICATE_CREDENTIALS: return credentials(state, action);
+```
 
-## Refactoring
+TypeScript knows that `action` is an `IAnyAction` but it allows us to pass it to the `credentials` function which is expecting an `IAction<IAuthenticateCredentials>`. Let's compare these two interfaces as pure objects and hopefully we'll see why.
 
-## Using Type Aliases to Build a Rich Description of the Domain
+The `IAnyAction` definition looks like this:
 
-## References and Further Reading
+```typescript
+interface {
+  type: string;
+  payload: any;
+  meta: any;
+  error?: boolean;
+}
+```
+
+And the `IAction<IAuthenticateCredentials>` definition looks like this:
+
+```typescript
+interface {
+  type: string;
+  payload: IAuthenticateCredentials;
+  meta: undefined;
+  error?: boolean;
+}
+```
+
+As you can see both are compatible because the only differences are both compatible to an `any` type can be set to any other type.
+
+We've covered quite a lot in this instalment, but hopefully you are getting the picture that all these contracts between pieces of code will allow TypeScript to keep builds robust and scale well. Join me next time when I'll be looking at reducers.
+
+---
+
+# Reducers
+
+---
+
+# Refactoring
+
+---
+
+# Using Type Aliases to Build a Rich Description of the Domain
+
+---
+
+# References and Further Reading
 
  - [Pure Components, Creating stable, testable UI we can rely on](/blog/2016/06/21/pure-components)
  - [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
