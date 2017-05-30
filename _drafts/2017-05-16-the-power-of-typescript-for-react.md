@@ -315,15 +315,23 @@ We've covered quite a lot in this instalment, but hopefully you are getting the 
 
 ---
 
-# Reducers
+# Reducers and the State Tree
+
+Where do we start with this one. I've been excited to get to this article because this is one of the areas where TypeScript kicks ass in many ways and we can use it to not only improve the stability of our code through type helpers but I find it is also useful when planning our application and then a form of self documentation as well.
+
+To keep this useful and concise I'll go through some examples of planning the application state tree, then we'll look at using [Mapped Types](https://www.typescriptlang.org/docs/handbook/advanced-types.html#mapped-types) to use the same state interfaces when writing reducers.
 
 ---
 
 # Refactoring
 
+One of the big gains of using a strongly typed language comes when you want to refactor your code. Refactoring should be one of those things which developers do regularly as a codebase matures and grows. Working with TypeScript in the way in which I've been describing means that we have given it enough information for it to let you know all the places in your codebase which will need to be updated as a result of a change. In fact if it is within the same codebase, it is often possible the tools can do it for you.
+
 ---
 
 # Using Type Aliases to Build a Rich Description of the Domain
+
+In this post I want to go beyond React and Redux and explore ways in which we can improve the readability of our code by creating a rich domain of types that describe the data better.
 
 ---
 
