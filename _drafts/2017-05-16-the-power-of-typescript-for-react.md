@@ -331,7 +331,7 @@ interface IAppState {
 }
 ```
 
-As described in the docs out `IEntitiesState` will be a key-value object where the key is the name of the entity and the value is an object holding various pieces of information about each. Let's define the next level then.
+As described in the docs, our `IEntitiesState` will be a key-value object where the key is the *name* of the entity and the value is an object holding various pieces of information about each. Let's define the next level then.
 
 ```typescript
 interface IEntitiesState {
@@ -342,7 +342,7 @@ interface IEntitiesState {
 }
 ```
 
-Nice one travellers, we're starting to be able to picture how our data will be held within the app, let's define exactly how each entity will hold the data. Let's make it inline with the docs. Now there is one piece of information we don't have at this point, see if you can work out what it is from the interface definition below.
+Nice one travellers, we're starting to be able to picture how our data will be held within the app. Now it's time to define exactly how each entity will hold the data, we'll make it inline with the docs. Now, there is one piece of information we don't have at this point, see if you can work out what it is from the interface definition below.
 
 ```typescript
 interface IEntityState<E> {
@@ -351,7 +351,7 @@ interface IEntityState<E> {
 }
 ```
 
-You've probably worked it out 😎 you're a clever bunch. Our interface doesn't know the properties of the entity itself. We've added a generic `<E>` so that it can be defined at the point it is known so let's update our `IEntitiesState` to cater for this.
+You've probably worked it out 😎 you're a clever bunch. Our interface cannot know the properties of the entity itself. We've added a generic `<E>` so that it can be defined at the point it *is* known, let's update our `IEntitiesState` to cater for this.
 
 ```typescript
 interface IEntitiesState {
