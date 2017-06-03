@@ -389,4 +389,6 @@ In this post I want to go beyond React and Redux and explore ways in which we ca
 
  - [Pure Components, Creating stable, testable UI we can rely on](/blog/2016/06/21/pure-components)
  - [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
+ - [Mapped Types](https://www.typescriptlang.org/docs/handbook/advanced-types.html#mapped-types)
+ - [Normalizing State Shape - Redux docs](http://redux.js.org/docs/recipes/reducers/NormalizingStateShape.html)
 
