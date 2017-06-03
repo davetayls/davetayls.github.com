@@ -321,6 +321,56 @@ Where do we start with this one. I've been excited to get to this article becaus
 
 To keep this useful and concise I'll go through some examples of planning the application state tree, then we'll look at using [Mapped Types](https://www.typescriptlang.org/docs/handbook/advanced-types.html#mapped-types) to use the same state interfaces when writing reducers.
 
+## Entities
+
+A useful practice with an app that deals with even a small amount of relational data is to hold it within the state tree in a normalised state. This is discussed in the [Redux docs](http://redux.js.org/docs/recipes/reducers/NormalizingStateShape.html) where there is a suggested structure which we will build on top of. We will call this area of our state tree `entities` as described in this documentation and because this is commonly what this kind of normalised data is referred to. Before we go any further lets consider what the very top level of our state interface will need for this.
+
+```typescript
+interface IAppState {
+  entities: IEntitiesState;
+}
+```
+
+As described in the docs out `IEntitiesState` will be a key-value object where the key is the name of the entity and the value is an object holding various pieces of information about each. Let's define the next level then.
+
+```typescript
+interface IEntitiesState {
+  [entityName:string]: IEntityState;
+  
+  // You can define specific entities if you know of them
+  posts: IEntityState;
+}
+```
+
+Nice one travellers, we're starting to be able to picture how our data will be held within the app, let's define exactly how each entity will hold the data. Let's make it inline with the docs. Now there is one piece of information we don't have at this point, see if you can work out what it is from the interface definition below.
+
+```typescript
+interface IEntityState<E> {
+  byId: { [id: string]: E };
+  all: string[];
+}
+```
+
+You've probably worked it out 😎 you're a clever bunch. Our interface doesn't know the properties of the entity itself. We've added a generic `<E>` so that it can be defined at the point it is known so let's update our `IEntitiesState` to cater for this.
+
+```typescript
+interface IEntitiesState {
+  // If the entity is unknown then it's
+  // properties could be anything!
+  [entityName:string]: IEntityState<any>;
+  
+  // For our known entity we can define that the
+  // properties will be those defined on `IPost`
+  posts: IEntityState<IPost>;
+}
+```
+
+Let's unpack what we are gaining here from all this ...
+
+## Elements of state
+
+fetchStatus, view state
+
 ---
 
 # Refactoring
