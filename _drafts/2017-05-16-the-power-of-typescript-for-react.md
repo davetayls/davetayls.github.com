@@ -327,6 +327,7 @@ A useful practice with an app that deals with even a small amount of relational 
 
 ```typescript
 interface IAppState {
+  authentication: IAuthenticationState;
   entities: IEntitiesState;
 }
 ```
@@ -365,11 +366,49 @@ interface IEntitiesState {
 }
 ```
 
-Let's unpack what we are gaining here from all this ...
+Let's unpack what we are gaining here from all this. With these definitions TypeScript is able to give us a lot of help and stability when working with entities. It now knows that when you are dealing with `let posts = state.entities.posts;` you will have the ability to drill down into the specific post properties like `title` (which would have been specified on `IPost`) `posts.byId[id].title`. You can also imagine how our `IEntitiesState` will give us a form of documentation so that other developers can see that we might be dealing with entities for `posts` and maybe `authors`, `comments` etc etc.
 
-## Elements of state
+It doesn't stop there though, any reducers which should return data related to the posts entity are now part of this well defined contract so that should our properties for `IPost` change we will be made aware of all the places which will need to be updated. 
 
-fetchStatus, view state
+We've come to the problem now though! As we start to build our reducers we very quickly realise that whilst we now have our lovely `IAppState` our object of reducers which we want to pass to `combineReducers` are functions which return the value of each state rather than being the state itself. Let's compare the two type signatures.
+
+Here the state object itself holds the data.
+
+```typescript
+interface IAppState {
+  authentication: IAuthenticationState;
+  // ...
+}
+```
+
+Whilst our object passed to combine reducers is a function which takes that same state (and an action) and returns it.
+
+```typescript
+interface ICombineReducers {
+  authentication: (state: IAuthenticationState, action: IGenericAction<any, any>) => IAuthenticationState;
+  // ...
+}
+```
+
+Surely, we don't have to define a whole new interface for something which is so clearly linked I hear you say. Err, no we don't, thankfully because of TypeScript's mapped types. Here's how you can use your existing `IAppState` interface with a few lines of code.
+
+```typescript
+type ReducersOn<T> = {
+  // For each property P in the object T
+  // convert the type to a function where
+  // the first parameter takes state of the same type T[P]
+  // and returns the same type T[P]
+  [P in keyof T]: (state: T[P], action: IGenericAction<any, any>) => T[P];
+};
+
+// And then we can declare our root state object
+const rootState: ReducersOn<IAppState> = {
+  authentication: authenticationReducer,
+  // ...
+}
+```
+
+This is such a powerful technique and can be used in a few places. Other common usages are already built into the TypeScript definitions like `Partial<T>` which makes all the properties optional so would be used for things like `this.setState({ notAllProps: 'abc' })`.
 
 ---
 
