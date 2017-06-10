@@ -1314,7 +1314,7 @@ small.GetInTouchFooter-chat {
   position: absolute;
   top: 10%;
   left: 0;
-  width: 74%;
+  width: 90%;
   height: auto;
   margin: 0;
   padding: 0;
@@ -1639,3 +1639,5 @@ pre.prettyprint {
   position: static;
   width: auto;
 }
+
+/*# sourceMappingURL=index.css.map*/

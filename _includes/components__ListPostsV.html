@@ -1,0 +1,9 @@
+<nav class="ListPosts">
+  <ul class="ListPosts-nav LinkList">
+  {% for post in ListPostsList %}
+      <li class="ListPosts-item LinkList-item">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+  {% endfor %}
+  </ul>
+</nav>
