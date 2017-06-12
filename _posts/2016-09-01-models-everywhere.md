@@ -1,6 +1,7 @@
 ---
 title: Models Everywhere
 layout: post
+postimage: /content/2016-09-models.jpg
 related: javascript
 categories:
   - javascript
