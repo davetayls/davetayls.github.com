@@ -73,7 +73,7 @@ export interface IPersonProps {
   // We can define a function to be
   // called when an event happens
   // within the component.
-  onSelecedSkill?: (skill: string) => any;
+  onSelectedSkill?: (skill: string) => any;
 }
 
 // We can also define what the component's state looks like.
