@@ -24,16 +24,16 @@
 }
 
 .PostSquare-title {
-  font-size: 1em;
+  font-size: 1rem;
   color: #fff;
   text-align: left;
   text-shadow: 1px 1px 1px #000;
   background: #000;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.4);
   position: absolute;
-  top: 10%;
+  bottom: 5%;
   left: 0;
-  width: 90%;
+  width: 50%;
   height: auto;
   margin: 0;
   padding: 0;
@@ -50,7 +50,7 @@
 .PostSquare-title time {
   display: block;
   text-transform: uppercase;
-  font-size: 0.75em;
+  font-size: 0.8rem;
   font-weight: 300;
   line-height: 1.75;
 }

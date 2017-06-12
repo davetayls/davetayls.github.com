@@ -1,5 +1,8 @@
 ---
 layout: post
+title: Connected Components - Power of TypeScript for React (2) 
+postimage: /content/2017-06-ts-react.jpg
+series: power-of-typescript
 related: power-of-typescript
 categories:
  - power-of-typescript
@@ -7,22 +10,9 @@ categories:
  - javascript
 ---
 
-I love using [TypeScript](https://www.typescriptlang.org/) to build JavaScript applications and it pains me to see a lot of negative sentiment to what is a very powerful tool. I thought I would put together some explorations, using it in different situations. 
+Welcome back to our Power of TypeScript series. We're taking a journey through ways TypeScript can help create robust and scalable apps. At [Seccl](https://seccl.tech) we love using [TypeScript](https://www.typescriptlang.org/) and I've been using it for several years now. Adopting it has been one of the best decisions I have made.
 
-Working with TypeScript can really enhance your productivity building applications in the React ecosystem. The React community is very focussed on small components, this architectural pattern is great for scaling and sharing code but it does mean we need to think about how these components fit together and keep the contracts between them so that we can rely on the stability of the system as a whole. TypeScript can be one way to help with this.
-
-NB. Before we go any further I want to note that the power I show in this article relies on TypeScript to have all the strict options on. Here is a list of them at the time of writing this article.
-
-```json
-{
-  "compilerOptions": {
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "noImplicitReturns": true,
-    "strictNullChecks": true
-  }
-}
-```
+{% include components__SeriesPosts.html %}
 
 # Connected or Stateful Components
 
@@ -44,10 +34,11 @@ export interface IPersonDispatch {
 }
 ```
 
-Extending from `React.Component` still needs a single interface type for it's props. Fortunately TypeScript allows us to easily combine the two interfaces using the `&`. So let's do that to inform the component of it's props.
+Extending from `React.Component` still needs a single interface type for it's props. Fortunately TypeScript allows us to easily combine the two interfaces using the `&` symbol. So let's do that to inform the component of it's props.
 
 ```typescript
-export class Person extends React.Component<IPersonProps & IPersonDispatch, IPersonState> {
+export class Person
+  extends React.Component<IPersonProps & IPersonDispatch, IPersonState> {
 }
 ```
 
@@ -92,3 +83,4 @@ Now TypeScript will make sure that we have included all the correct props and di
 Another nice side-effect which is starting to emerge is that because we are explicitly having to declare what the props, dispatch events and state objects look like, our code is becoming a lot easier to understand and read. This practice is a form of documentation which will serve you and your team well as you scale your codebase or return to old features in a few months.
 
 
+dd
