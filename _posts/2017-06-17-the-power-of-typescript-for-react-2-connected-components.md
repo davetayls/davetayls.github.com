@@ -18,9 +18,11 @@ Welcome back to our Power of TypeScript series. We're taking a journey through w
 
 We looked at how adding some simple TypeScript interfaces can help you build and refactor Pure React Components. Today we'll look at the common usage of Redux with React. We'll see how we can help keep the code robust and I'll highlight another nice side-effect of adding these types.
 
+## Joining interface definitions for Props and Dispatch
+
 So let's move our `Person` component on to connecting it with a Redux store. There's a small chage to the way we declare the component's props to make the separation clearer for the way `react-redux` separates regular props and dispatch functions.
 
-First we separate the props and dispatch so that we can reference them separately elsewhere.
+We need to separate the props and dispatch definitions so that we can reference them separately elsewhere. Let's do that first and we can discuss how to use them afterwards.
 
 ```typescript
 export interface IPersonProps {
@@ -29,12 +31,15 @@ export interface IPersonProps {
   skills?: string[];
 }
 
+// Our event related functions are
+// moved into this separate dispatch
+// interface
 export interface IPersonDispatch {
   onSelecedSkill?: (skill: string) => any;
 }
 ```
 
-Extending from `React.Component` still needs a single interface type for it's props. Fortunately TypeScript allows us to easily combine the two interfaces using the `&` symbol. So let's do that to inform the component of it's props.
+Extending from `React.Component` still needs a single interface type for it's props. Fortunately TypeScript allows us to easily combine the two interfaces using the `&` symbol. This is called an [Intresection Type](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types) so let's use that to inform the component of it's props.
 
 ```typescript
 export class Person
@@ -42,17 +47,21 @@ export class Person
 }
 ```
 
-Now when we use `connect` from `react-redux` we have the interfaces we need. The `connect` function takes two parameters. The first is a function which is passed the current state and expects and object of props back to assign to the underlying component. It's type signature looks like this.
+## Tightening generic functions
+
+We now have the interfaces we need to use `connect` from `react-redux` . The `connect` function takes two parameters. The first is a **function which is passed the current state** – this **expects an object of props back** to assign to the underlying component. It's type signature looks like this.
 
 ```typescript
 type propsFn = (state: IAppState) => object;`
 ```
 
-The second parameter takes a function which is passed the `dispatch` function needed to dispatch actions to the reducers at a later date. It also expects an object to be returned which will be added to the components props. It's type signature looks like this.
+The second parameter takes a function which is passed the `dispatch` function needed to dispatch actions to the reducers at a later date. It also expects an **object to be returned** which will be added to the components props. It's type signature looks like this.
 
 ```typescript
 type dispatchFn = (dispatch: (action: Action) => object;`
 ```
+
+We're missing some needed tightening of the screws here because **it's not just any object** that is needed for this **particular component**. But we've now got the necessary parts to be able to let TypeScript help us out with this.
 
 So let's connect our `Person` component and tighten those type signatures to not only expect an `object` but to expect an object that conforms to our interfaces.
 

@@ -1,7 +1,7 @@
 {% if page.series %}
   <section class="SeriesPosts">
     <p class="SeriesPosts-header">The <strong>{{ page.series }}</strong> series:</p>
-    {% assign ListPostsList = site.categories[page.series] %}
+    {% assign ListPostsList = site.categories[page.series] | sort: 'date' %}
     {% include components__ListPostsOL.html %}
   </section>
 {% endif %}
