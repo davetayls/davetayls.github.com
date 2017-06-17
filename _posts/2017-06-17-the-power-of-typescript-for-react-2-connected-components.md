@@ -89,7 +89,15 @@ export const PersonWithState = connect(
 
 Now TypeScript will make sure that we have included all the correct props and dispatch functions. Now when you need to refactor or add new features this connect usage will need to be changed as well. TypeScript will give you a list of all the places within your code which need to be updated.
 
-Another nice side-effect which is starting to emerge is that because we are explicitly having to declare what the props, dispatch events and state objects look like, our code is becoming a lot easier to understand and read. This practice is a form of documentation which will serve you and your team well as you scale your codebase or return to old features in a few months.
+## Foundations of a rich domain are emerging
+
+Another nice side-effect which is starting to emerge is that of a detailed domain. Because we are explicitly having to declare what the props, dispatch events and state objects look like – our code is becoming a lot easier to understand, follow and read. This practice is a form of documentation which will serve you and your team well as you scale your codebase or return to old features in a few months.
 
 
-dd
+## Props, Dispatch and Intersection Types
+
+So, a bit of a roundup of this week's dive into connected components. We've looked at separating interfaces for our component props and dispatch functions. This has enabled us to build these up separately as part of the redux `connect` functionality but stitch them back together using Intersection Types and the `&`.
+
+We'll continue next Monday when we'll be looking at *Actions*. I hope this has been useful, I look forward to seeing you then!
+
+

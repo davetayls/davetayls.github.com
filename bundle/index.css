@@ -1262,7 +1262,7 @@ small.GetInTouchFooter-chat {
   }
 
   .PostHeader-title {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.6);
     max-width: 65%;
     position: absolute;
     bottom: 10%;

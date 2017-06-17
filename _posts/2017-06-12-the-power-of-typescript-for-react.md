@@ -137,6 +137,6 @@ const Person = (props: IPersonProps) => (
 
 So hopefully you are getting a sense of how these contracts can help you build more robust and scalable JavaScript. In this first installment we've looked at building [pure components](/blog/2016/06/21/pure-components) and how defining an `interface` for our props can give TypeScript the power to tell you when you've not catered for all the edge cases.
 
-Next week I'll be looking a Connected (or Stateful) Components and how we can use `interface`s to make sure we are mapping our app's state to what the component needs in its props. See you then.
+Next week I'll be looking a [Connected (or Stateful) Components](/2017/06/19/the-power-of-typescript-for-react-2-connected-components) and how we can use `interface`s to make sure we are mapping our app's state to what the component needs in its props. See you then.
 
 

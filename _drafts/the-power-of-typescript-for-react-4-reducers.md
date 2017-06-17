@@ -1,5 +1,6 @@
 ---
 layout: post
+title: Reducers - Power of TypeScript for React (4) 
 postimage: /content/2017-06-ts-react.jpg
 series: power-of-typescript
 related: power-of-typescript
