@@ -8,10 +8,12 @@
     "start": "tsc && webpack",
     "webpack": "webpack -d -w",
     "jekyll": "jekyll serve --drafts",
+    "bower-update": "bower update",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
+    "bower": "^1.8.0",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "fastclick": "^1.0.6",
