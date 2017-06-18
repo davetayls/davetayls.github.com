@@ -1,5 +1,6 @@
 ---
 title: Mentoring Co-located Teams
+postimage: /content/2016-06-mentoring.jpg
 layout: post
 related: mentoring
 categories:
