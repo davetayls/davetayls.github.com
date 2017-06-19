@@ -1,0 +1,23 @@
+---
+layout: null
+---
+{
+  "title": "Dave Taylor (@davetayls)",
+  "updated": "{{ site.time | date_to_xmlschema }}",
+  "posts": [
+    {% for post in site.posts %}
+    {
+      "title": "{{ post.title }}",
+      "href": "http://davetayls.me{{ post.url }}",
+      "updated": "{{ post.date | date_to_xmlschema }}",
+      "categories": [
+        {% for category in post.categories %}
+        "{{category}}"
+        {% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+    {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
