@@ -20,7 +20,7 @@ We looked at how adding some simple TypeScript interfaces can help you build and
 
 ## Joining interface definitions for Props and Dispatch
 
-So let's move our `Person` component on to connecting it with a Redux store. There's a small chage to the way we declare the component's props to make the separation clearer for the way `react-redux` separates regular props and dispatch functions.
+So let's move on with our `Person` component and connect it to a Redux store. There's a small chage to the way we declare the component's props to make the separation clearer for the way `react-redux` separates regular props and dispatch functions.
 
 We need to separate the props and dispatch definitions so that we can reference them separately elsewhere. Let's do that first and we can discuss how to use them afterwards.
 
