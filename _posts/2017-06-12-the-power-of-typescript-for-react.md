@@ -40,7 +40,7 @@ all the strict options on. Here is a list of them at the time of writing this ar
 }
 ```
 
-# Component Prop and State Interafaces
+# Component Prop and State Interfaces
 
 Here we go! One of the first things you often build with React are the components. Let's take a look at how TypeScript can enable us to create components which describe their usage.
 
