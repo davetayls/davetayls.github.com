@@ -856,6 +856,12 @@ code {
   }
 }
 
+@media all and (min-width: 1210px) {
+  .Container {
+    width: 1200px;
+  }
+}
+
 .GetInTouchFooter {
   background-color: #000;
   color: #fff;

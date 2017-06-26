@@ -17,6 +17,7 @@ $ResponsiveDesktopFrom: 64rem;
 $ResponsiveWideFrom: 75rem;
 
 $ContainerDesktopWidth: 990px;
+$ContainerWideWidth: 1200px;
 
 @custom-media --MediaUpToMedium (max-width: 599px);
 @custom-media --MediaFromMedium (min-width: 600px);

@@ -11,3 +11,9 @@
     overflow: hidden;
   }
 }
+
+@media all and (min-width: 1210px) {
+  .Container {
+    width: $ContainerWideWidth;
+  }
+}

@@ -98,6 +98,6 @@ Another nice side-effect which is starting to emerge is that of a detailed domai
 
 So, a bit of a roundup of this week's dive into connected components. We've looked at separating interfaces for our component props and dispatch functions. This has enabled us to build these up separately as part of the redux `connect` functionality but stitch them back together using Intersection Types and the `&`.
 
-We'll continue next Monday looking at *Actions*. I hope this has been useful, I look forward to seeing you then!
+We'll continue next Monday [looking at *Actions*](/blog/2017/06/26/the-power-of-typescript-for-react-3-actions). I hope this has been useful, I look forward to seeing you then!
 
 
