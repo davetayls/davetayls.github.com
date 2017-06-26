@@ -179,6 +179,6 @@ This is a simplified way of how TypeScript looks at these two definitions.
 
 ## We've looked through Generics and Type Aliases
 
-We've covered quite a lot in this instalment. We've looked at Generics – a way to allow customisation on top of known properties – and Type Aliases – allowing us to define a type to be shared between areas of our code. Hopefully you are getting the picture that all these contracts between pieces of code will allow TypeScript to keep builds robust and scale well. Join me next time when I'll be looking at reducers.
+We've covered quite a lot in this instalment. We've looked at Generics – a way to allow customisation on top of known properties – and Type Aliases – allowing us to define a type to be shared between areas of our code. Hopefully you are getting the picture that all these contracts between pieces of code will allow TypeScript to keep builds robust and scale well. Join me next Monday when I'll be looking at reducers.
 
 
