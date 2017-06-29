@@ -421,19 +421,7 @@ textarea {
   font: inherit; /* 2 */
 }
 
-.pln{color:#000}
-
-@media screen{.str{color:#080}.kwd{color:#008}.com{color:#800}.typ{color:#606}.lit{color:#066}.pun,.opn,.clo{color:#660}.tag{color:#008}.atn{color:#606}.atv{color:#080}.dec,.var{color:#606}.fun{color:red}}
-
-@media print, projection{.str{color:#060}.kwd{color:#006;font-weight:bold}.com{color:#600;font-style:italic}.typ{color:#404;font-weight:bold}.lit{color:#044}.pun,.opn,.clo{color:#440}.tag{color:#006;font-weight:bold}.atn{color:#404}.atv{color:#060}}
-
-pre.prettyprint{padding:2px;border:1px solid #888}
-
-ol.linenums{margin-top:0;margin-bottom:0}
-
-li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8{list-style-type:none}
-
-li.L1,li.L3,li.L5,li.L7,li.L9{background:#eee}
+/*@import "../lib/google-code-prettify/prettify.css";*/
 
 html, body {
   font-size: 16px;
@@ -1579,19 +1567,14 @@ small.GetInTouchFooter-chat {
 
 }
 
-pre.prettyprint {
-  border: 0;
-  background-color: #efefef;
-  margin: 1rem -8px;
-  padding: 5px;
+pre.highlight {
   font-size: 1rem;
+  margin: 2rem -1.8rem;
 }
 
 @media (min-width: 768px) {
-  pre.prettyprint {
-    font-size: 1rem;
-    padding: 10px;
-    margin: 1rem 0;
+  pre.highlight {
+    margin: 3rem 0;
   }
 }
 

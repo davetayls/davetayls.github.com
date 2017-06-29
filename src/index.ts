@@ -1,4 +1,3 @@
-
 import fastclick = require('fastclick');
 fastclick.attach(document.body);
 
@@ -23,9 +22,9 @@ const ABOUT_ME_ASIDE_BOTTOM_CLASS = 'AboutMeAside--bottom';
 
 const $workWithMeFooter = $('.WorkWithMeFooter');
 
-$('pre>code').parent().addClass('prettyprint');
-
-(<any>window).prettyPrint();
+$('pre>code').each(function(i, block) {
+  (window as any).hljs.highlightBlock(block);
+});
 
 $(window).resize(debounce(function() {
   console.log('resize');
@@ -46,7 +45,7 @@ $pageHeaderBurger.on('click', function() {
 const contentWaypoint = new Waypoint({
   element: document.getElementById('content'),
   offset: 90,
-  handler: function(direction:any) {
+  handler: function(direction: any) {
     switch (direction) {
       case 'up':
         $pageHeader.removeClass(PAGE_HEADER_COLLAPSED_CLASS);
@@ -62,7 +61,7 @@ if ($aboutMeAside.length) {
   const aboutSticky = new Waypoint({
     element: $aboutMeAside[0],
     offset: 110,
-    handler: function(direction:any) {
+    handler: function(direction: any) {
       switch (direction) {
         case 'up':
           $aboutMeAside.removeClass(ABOUT_ME_ASIDE_STICKY);
@@ -80,7 +79,7 @@ if ($workWithMeFooter.length) {
   const workWithMeFooter = new Waypoint({
     element: $workWithMeFooter[0],
     offset: '100%',
-    handler: function(direction:any) {
+    handler: function(direction: any) {
       switch (direction) {
         case 'up':
           $aboutMeAside.removeClass(ABOUT_ME_ASIDE_BOTTOM_CLASS);
@@ -95,7 +94,7 @@ if ($workWithMeFooter.length) {
 
 const $heroJobTitle = $('.HeroJobTitle');
 if ($heroJobTitle.length) {
-  
+
 }
 const $iBelieveTitles = $('.HeroJobTitle-iBelieveTitles');
 const $iBelieveTyped = $('.HeroJobTitle-iBelieveTyped');
