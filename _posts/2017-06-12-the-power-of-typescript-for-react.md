@@ -97,10 +97,11 @@ export class Person extends React.Component<IPersonProps, IPersonState> {
     );
   }
   getSkills() {
-    if (this.props.skills && !this.props.skills.length) return;
-    const skills = this.props.skills
-      .map((skill: string, i: number) => (<li key={i}>{skill}</li>));
-    return <ul>{skills}</ul>;
+    if (this.props.skills && this.props.skills.length) {
+      const skills = this.props.skills
+        .map((skill: string, i: number) => (<li key={i}>{skill}</li>));
+      return <ul>{skills}</ul>;
+    }
   }
 }
 ```
@@ -112,7 +113,9 @@ I'd like to highlight an area where TypeScript will help you here that isn't imm
 Let's look at the `getSkills` logic. The first line does a check to see if we have any skills, and then also checks the length. We have specified that the `skills` prop is optional which means that it could be `undefined`. However it would be easy enough to forget this and miss out the check. The code would look like this,
 
 ```typescript
-if (!this.props.skills.length) return;
+if (this.props.skills.length) {
+  // ...
+};
 ```
 
 TypeScript will give the error: 
