@@ -1266,6 +1266,7 @@ small.GetInTouchFooter-chat {
 
   .PostHeader-bg {
     height: 100%;
+    background-attachment: fixed;
   }
 
   .PostHeader-bg:before {

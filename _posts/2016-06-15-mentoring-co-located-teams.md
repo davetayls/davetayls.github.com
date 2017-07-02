@@ -5,6 +5,8 @@ layout: post
 related: mentoring
 categories:
   - mentoring
+  - project
+  - workwithme
   - thoughts
 ---
 
