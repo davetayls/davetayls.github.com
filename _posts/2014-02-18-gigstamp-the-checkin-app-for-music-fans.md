@@ -9,7 +9,7 @@ categories:
   - nodejs
   - html5
   - apps
-  
+  - project
 ---
 
 I feel like I've been in my little hole for months now ... oh yeah it has been, since October! I've been beavering away in my evenings building a simple idea: 
