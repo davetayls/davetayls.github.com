@@ -5,6 +5,7 @@ postimage: https://cdn-images-1.medium.com/max/1200/1*xpgErJD7NWZ7_zAj2g4_EA.jpe
 related: thoughts
 categories:
   - thoughts
+  - project
 ---
 
 A couple of weeks ago I embarked on my third trip to Denver to see our Arrow team over there. It’s always a very full but productive time visiting the guys there and this trip especially so.
