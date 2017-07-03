@@ -3,6 +3,7 @@ layout: post
 author: davetayls
 title: 2011 at a glance
 related: theyear
+postimage: /content/2012-01-glance.jpg
 categories:
   - mystory
   - theyear
