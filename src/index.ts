@@ -27,7 +27,6 @@ $('pre>code').each(function(i, block) {
 });
 
 $(window).resize(debounce(function() {
-  console.log('resize');
   Waypoint.refreshAll();
 }, 40));
 
