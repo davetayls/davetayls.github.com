@@ -14,7 +14,7 @@ categories:
 
 It was great to give a swift tour of Progressive Web Apps for the lovely people at BathCamp last thursday. Here are the slides and an outline of what we went through.
 
-<iframe width="100%" height="500" src="http://davetayls.me/presentations/2017/progressive-web-apps/index.html"></iframe>
+{% include slides.html src="http://davetayls.me/presentations/2017/progressive-web-apps/index.html" %}
 
 ## A few things have changed
 

@@ -164,9 +164,9 @@ Then with that context you can do some drawing
 
 ## Slides
 
-You can take a look at [the slides](http://davetayls.me/presentations/adventure-game-dev-html5-canvas).
+You can take a look at [the slides](http://davetayls.me/presentations/2013/adventure-game-dev-html5-canvas/index.html#/).
 
-<iframe src="http://davetayls.me/presentations/adventure-game-dev-html5-canvas" width="600" height="500">&nbsp;</iframe>
+{% include slides.html src="http://davetayls.me/presentations/2013/adventure-game-dev-html5-canvas/index.html#/" %}
 
 ## Your challenge
 

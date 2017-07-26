@@ -63,9 +63,10 @@ I have now updated my handy `Sprite` object to allow for sprites to be animated.
     );
     spr.animate = 8; // switch every 8 frames
 
-## The Police Cells at The Island (Bristol)
-
-![Bristech](http://davetayls.me/content/2014-01-bristech.jpg)
+{% include figure.html
+   caption="The Police Cells at The Island (Bristol)"
+   src="http://davetayls.me/content/2014-01-bristech.jpg"
+   %}
 
 ## The Plane
 Each of the objects in this game have pretty simple characteristics. The plane is a good place to start. I tend to create a constructor for each object so that I can potentially create multiple instances of it.

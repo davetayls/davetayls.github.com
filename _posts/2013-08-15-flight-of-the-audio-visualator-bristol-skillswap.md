@@ -120,7 +120,7 @@ So we took note of the camera position and angle at different places around the 
 Using those x,y and z coordinates gradually flew the camera between them interpolating the values of each axis over time using a cubic spline function (illustrated below).
 
 <iframe width="100%" height="500" src="http://davetayls.me/teststation/creative-js/grapher/interpolation.html">
-    <a href="http://davetayls.me/teststation/creative-js/grapher/interpolation.html">View it</a>
+  <a href="http://davetayls.me/teststation/creative-js/grapher/interpolation.html">View it</a>
 </iframe>
 
 There were some beautiful discoveries
@@ -158,6 +158,6 @@ So give this a go and send me some links of what you've done. Here are some link
 ## Slides
 
 
-<iframe src="http://davetayls.me/presentations/2013/flightoftheaudiovisualator/" width="100%" height="500">
-  <a href="http://davetayls.me/presentations/2013/flightoftheaudiovisualator/">View online</a>
-</iframe>
+{% include slides.html
+   src="http://davetayls.me/presentations/2013/flightoftheaudiovisualator/" %}
+   

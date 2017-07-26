@@ -1,0 +1,28 @@
+
+.iframe-slides {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border: solid 1px #fff;
+  outline: solid 1px #444;
+  margin: 2rem 0;
+}
+
+.iframe-slides:after {
+  display: block;
+  content: '';
+  padding: 68% 0 0;
+  height: 0;
+}
+
+.iframe-slides iframe {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-size: cover;
+  border: none;
+}
