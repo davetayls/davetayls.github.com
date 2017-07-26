@@ -882,10 +882,10 @@ small.GetInTouchFooter-chat {
 }
 
 .HeroJobTitle {
-  background-image: url(/content/home-hero.jpg);
+  background-image: url(/content/2017/07-pwa-talk-2.jpg);
   background-size: cover;
   background-position: center center;
-  height: 46vh;
+  height: 66vh;
   margin: 0;
   position: relative;
   overflow: hidden;
