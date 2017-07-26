@@ -76,6 +76,18 @@
   color: #777;
 }
 
+.ArticleContent__frameWithLink {
+  margin: 2rem 0;
+}
+
+.ArticleContent__frameWithLink iframe {
+  border: none;
+}
+
+.ArticleContent__frameWithLink figcaption p {
+  margin: 0;
+}
+
 .ArticleContent p {
   margin: 2rem 0;
 }

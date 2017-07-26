@@ -119,9 +119,9 @@ So we took note of the camera position and angle at different places around the 
 
 Using those x,y and z coordinates gradually flew the camera between them interpolating the values of each axis over time using a cubic spline function (illustrated below).
 
-<iframe width="100%" height="500" src="http://davetayls.me/teststation/creative-js/grapher/interpolation.html">
-  <a href="http://davetayls.me/teststation/creative-js/grapher/interpolation.html">View it</a>
-</iframe>
+{% include iframeWithLink.html
+   src="http://davetayls.me/teststation/creative-js/grapher/interpolation.html"
+   caption="Interpolating the values of each axis over time using a cubic spline function" %}
 
 There were some beautiful discoveries
 
