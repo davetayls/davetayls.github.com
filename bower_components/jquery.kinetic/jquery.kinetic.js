@@ -1,9 +1,9 @@
 /**
  jQuery.kinetic v2.2.1
- Dave Taylor http://davetayls.me
+ Dave Taylor https://davetayls.me
 
  @license The MIT License (MIT)
- @preserve Copyright (c) 2012 Dave Taylor http://davetayls.me
+ @preserve Copyright (c) 2012 Dave Taylor https://davetayls.me
  */
 (function ($){
   'use strict';

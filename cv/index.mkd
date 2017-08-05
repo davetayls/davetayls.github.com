@@ -13,7 +13,7 @@ address
 : 63 Downs View, Bradford-on-Avon, Wiltshire, BA15 1PW
 
 web
-: <http://davetayls.me>
+: <https://davetayls.me>
 
 linkedIn
 : <http://uk.linkedin.com/in/davetayls>
@@ -140,8 +140,8 @@ Researching and working on a tech-stack for the Sainsbury's interface team.
 Industry Recognition
 ---
 
- - .net Online Magazine "Five key principles for better web development" (<http://davetayls.me/blog/2013/08/13/five-key-principles-netmagazine/>)
- - National Theatre iPad App wins Educational Multimedia Award (<http://davetayls.me/blog/2014/05/09/national-theatre-app-wins-educational-multimedia-award/>)
+ - .net Online Magazine "Five key principles for better web development" (<https://davetayls.me/blog/2013/08/13/five-key-principles-netmagazine/>)
+ - National Theatre iPad App wins Educational Multimedia Award (<https://davetayls.me/blog/2014/05/09/national-theatre-app-wins-educational-multimedia-award/>)
  - Sitecore, Site of the Year Award for The FA, Just Play. ([Blog post](/blog/2011/11/24/fa-just-play-wins-category-sitecore-site-of-year/))
  - My work has been featured and used in on-line magazines: Daily Js ([jQuery.kinetic](http://dailyjs.com/2011/08/09/jquery-roundup/), [jQuery.lazyLoader](http://dailyjs.com/2012/01/31/jquery-roundup/)), Codrops ([jQuery.kinetic](http://tympanus.net/codrops/2011/10/07/draggable-image-boxes-grid/))
 

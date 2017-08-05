@@ -18,7 +18,7 @@ In this series:
  - [Adding a track and colliding with it](/blog/2013/02/19/adding-a-track-and-colliding-with-it/)
  - [Adventures in HTML5 Games](/blog/2013/03/25/adventures-in-html5-games-akqa-anoraks)
 
-I had the pleasure of presenting at [AKQA](http://www.akqa.com/) Anoraks in London on thursday. It was a great packed evening. I gave a talk on my adventure over the last few months of building my simple [Space Invaders game](http://davetayls.me/space-invaders). Even though it's a pretty simple game I have learnt enough to talk about it or half an hour.
+I had the pleasure of presenting at [AKQA](http://www.akqa.com/) Anoraks in London on thursday. It was a great packed evening. I gave a talk on my adventure over the last few months of building my simple [Space Invaders game](https://davetayls.me/space-invaders). Even though it's a pretty simple game I have learnt enough to talk about it or half an hour.
 
 ![anoraks people](https://lh4.googleusercontent.com/-41LCbfiIjmU/UVDIvVBkddI/AAAAAAAAvlM/AxRwbv7X2Ds/s640/adventures-html5-dev-anoraks.png)
 
@@ -164,9 +164,9 @@ Then with that context you can do some drawing
 
 ## Slides
 
-You can take a look at [the slides](http://davetayls.me/presentations/2013/adventure-game-dev-html5-canvas/index.html#/).
+You can take a look at [the slides](https://davetayls.me/presentations/2013/adventure-game-dev-html5-canvas/index.html#/).
 
-{% include slides.html src="http://davetayls.me/presentations/2013/adventure-game-dev-html5-canvas/index.html#/" %}
+{% include slides.html src="https://davetayls.me/presentations/2013/adventure-game-dev-html5-canvas/index.html#/" %}
 
 ## Your challenge
 

@@ -26,10 +26,10 @@ Before I go in to specifics of drawing on a canvas all of these examples expect 
 
 ## Drawing an image
 
-We'll use an image sprite sheet I have been using to build a [simple Space Invaders game](http://davetayls.me/space-invaders/).
+We'll use an image sprite sheet I have been using to build a [simple Space Invaders game](https://davetayls.me/space-invaders/).
 
     var img = new Image();
-    img.src = 'http://davetayls.me/space-invaders/sprites.png';
+    img.src = 'https://davetayls.me/space-invaders/sprites.png';
 
 Next we can use the 2d context's `drawImage` function to pick out and draw the sprite. You can condense this but I'll separate it out so that it's easier to follow.
 

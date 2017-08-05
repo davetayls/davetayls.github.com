@@ -57,7 +57,7 @@ This plugin works with [jQuery](http://jquery.com) and
 - iOS Safari: 4
 
 ## Demos
-Take a look at a demo on <http://davetayls.me/jquery.kinetic>.
+Take a look at a demo on <https://davetayls.me/jquery.kinetic>.
 
 Filtering Clickable elements
 ---

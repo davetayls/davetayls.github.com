@@ -2,7 +2,7 @@
 title: Building an HTML5 Bomber game - Bristech
 layout: post
 author: davetayls
-postimage: http://davetayls.me/content/2014-01-bomber.png
+postimage: https://davetayls.me/content/2014-01-bomber.png
 related: gamedev
 categories: 
   - presentation
@@ -18,7 +18,7 @@ It was great meeting everyone last night at the [Bristech](http://briste.ch) mee
 ## The game and some code
 So I did build the game beforehand and have put up the code to the game on Github under [http://github.com/davetayls/bomber](http://github.com/davetayls/bomber).
 
-You can also play the game online at [http://davetayls.me/bomber](http://davetayls.me/bomber).
+You can also play the game online at [https://davetayls.me/bomber](https://davetayls.me/bomber).
 
 I've written a few posts previously which might help someone who want's to give this a go:
 
@@ -65,7 +65,7 @@ I have now updated my handy `Sprite` object to allow for sprites to be animated.
 
 {% include figure.html
    caption="The Police Cells at The Island (Bristol)"
-   src="http://davetayls.me/content/2014-01-bristech.jpg"
+   src="https://davetayls.me/content/2014-01-bristech.jpg"
    %}
 
 ## The Plane
@@ -157,7 +157,7 @@ We can then go through each `Bomb` and `checkHit`
 There's obviously a lot more we could go in to but to stop this becoming too lengthy hopefully that should give an overview of the key parts of this game. Take a look through the code *(there's not much of it)* and fire me a tweet if you have any questions.
 
  - code: [http://github.com/davetayls/bomber](http://github.com/davetayls/bomber).
- - play the game online at [http://davetayls.me/bomber](http://davetayls.me/bomber).
+ - play the game online at [https://davetayls.me/bomber](https://davetayls.me/bomber).
  
 Fixes and pull requests are always welcome :o)
 

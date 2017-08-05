@@ -25,7 +25,7 @@ and `tan` functions alongside the `ImprovedNoise` generator built in
 to Three.js.
 
 {% include iframeWithLink.html
-   src="http://davetayls.me/teststation/creative-js/grapher/2d.html"
+   src="https://davetayls.me/teststation/creative-js/grapher/2d.html"
    caption="Comparing sin, cos, tan and ImprovedNoise" %}
 
 Go ahead and play with the code to the right. **Hit Ctrl+Enter to

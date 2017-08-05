@@ -7,7 +7,7 @@ categories:
   - releases
 ---
 
-I needed a way of applying velocity and drag to a new UI I am putting together, much like the one I built in to [jQuery.kinetic](http://davetayls.me/jquery.kinetic).
+I needed a way of applying velocity and drag to a new UI I am putting together, much like the one I built in to [jQuery.kinetic](https://davetayls.me/jquery.kinetic).
 So I have pulled it out in to a simple reusable object.
 
 I have called it [Velocitr](https://github.com/davetayls/velocitr#readme) and it's [source is on Github](https://github.com/davetayls/velocitr).

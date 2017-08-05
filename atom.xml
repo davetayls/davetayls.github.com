@@ -5,10 +5,10 @@ layout: null
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Dave Taylor (@davetayls)</title>
- <link href="http://davetayls.me/atom.xml" rel="self"/>
- <link href="http://davetayls.me/"/>
+ <link href="https://davetayls.me/atom.xml" rel="self"/>
+ <link href="https://davetayls.me/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://davetayls.me/</id>
+ <id>https://davetayls.me/</id>
  <author>
    <name>David Taylor</name>
    <email>dave@the-taylors.org</email>
@@ -18,16 +18,16 @@ layout: null
  {% if post.status != 'draft' %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://davetayls.me{{ post.url }}"/>
+   <link href="https://davetayls.me{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://davetayls.me{{ post.id }}</id>
+   <id>https://davetayls.me{{ post.id }}</id>
    <content type="html">
         {% if post.postimage %}
         &lt;p&gt;
             {% if post.postimage contains 'http' %}
             &lt;img src='{{ post.postimage }}' /&gt;
             {% else %}
-            &lt;img src='http://davetayls.me{{ post.postimage }}' /&gt;
+            &lt;img src='https://davetayls.me{{ post.postimage }}' /&gt;
             {% endif %}
         &lt;/p&gt;
         {% endif %}

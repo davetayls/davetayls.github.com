@@ -19,14 +19,14 @@
 
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic|Lato:400,300,300italic,400italic,900,900italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.6.0/base-min.css&pure/0.6.0/grids-min.css&pure/0.6.0/grids-responsive-min.css">
+    <link rel="stylesheet" href="/lib/pure-grids.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-estuary-light.min.css">
     <link rel="stylesheet" href="/bundle/index.css">
 
     <meta property="og:title" content="{{ page.title }}"/>
     <meta property="og:description" content="{{ site.job_description }}"/>
     <meta property="og:type" content="author"/>
-    <meta property="og:url" content="http://davetayls.me{{ page.url }}"/>
+    <meta property="og:url" content="https://davetayls.me{{ page.url }}"/>
     <meta property="og:image"
           content="{% if page.postimage %}{{ page.postimage }}{% else %}{{ site.postimage_default }}{% endif %}"/>
     <meta property="fb:app_id" content="139170039487294"/>
@@ -35,7 +35,7 @@
         {
           "@context": "http://schema.org/",
           "@type": "Blog",
-          "url": "http://davetayls.me{{ page.url }}",
+          "url": "https://davetayls.me{{ page.url }}",
           "image": "{% if page.postimage %}{{ page.postimage }}{% else %}{{ site.postimage_default }}{% endif %}",
           "name": "{{ site.site_name }}",
           "author": {

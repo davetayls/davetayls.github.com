@@ -1,7 +1,7 @@
 # www.robotstxt.org/
 # www.google.com/support/webmasters/bin/answer.py?hl=en&answer=156449
 
-Sitemap: http://davetayls.me/sitemap.xml
+Sitemap: https://davetayls.me/sitemap.xml
 User-agent: *
 Disallow: /sitecore/
 

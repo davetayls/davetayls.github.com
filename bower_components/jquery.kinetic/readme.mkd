@@ -1,6 +1,6 @@
 jQuery.kinetic
 ==============
-Dave Taylor <http://davetayls.me>
+Dave Taylor <https://davetayls.me>
 The MIT License (MIT)
 
 > This code has been pretty stable for a while (with it's few restrictions) and so am not actively making changes. If you want to improve it in any way feel free to submit a pull request (with tests) and we will merge in any that make sense and don't add bloat to what is a simple plugin.
@@ -43,7 +43,7 @@ This plugin works with [jQuery](http://jquery.com) and
 - iOS Safari: 4
 
 ## Demos
-Take a look at a demo on <http://davetayls.me/jquery.kinetic>.
+Take a look at a demo on <https://davetayls.me/jquery.kinetic>.
 
 Filtering Clickable elements
 ---

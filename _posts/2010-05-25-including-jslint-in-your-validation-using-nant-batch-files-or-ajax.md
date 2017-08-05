@@ -58,5 +58,5 @@ Let me know how you find jsLint as a validation tool, or please feel free to ask
 
  [1]: http://www.jslint.com "jsLint"
  [2]: http://www.crockford.com/ "Douglas Crockford"
- [3]: http://davetayls.me/posts/2010/jslint/jsLintExamples.zip "jsLint Article Example Source Files"
- [4]: http://davetayls.me/posts/2010/jslint/jslintajaxexample.htm "jsLint Ajax Example"
+ [3]: https://davetayls.me/posts/2010/jslint/jsLintExamples.zip "jsLint Article Example Source Files"
+ [4]: https://davetayls.me/posts/2010/jslint/jslintajaxexample.htm "jsLint Ajax Example"

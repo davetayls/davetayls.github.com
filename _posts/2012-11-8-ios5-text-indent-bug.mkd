@@ -17,7 +17,7 @@ Replicating the bug
 
 This bug appears in iOS 5.1 where the size of a negative text-indent value is greater than -9999px
 
-You can [view the bug live](http://davetayls.me/teststation/bugs/ios5/google-maps-text-indent.html).
+You can [view the bug live](https://davetayls.me/teststation/bugs/ios5/google-maps-text-indent.html).
 
 In this example it causes the header content to disappear. I have stripped away CSS till this basic example
 is left to replecate the bug.

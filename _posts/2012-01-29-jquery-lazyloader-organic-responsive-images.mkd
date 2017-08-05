@@ -109,5 +109,5 @@ greater than or equal to 768.
 
 Now I'm very sure that there are people who are far more intelectual than me that will pick this to pieces. Well.. I'm interested in how this sits with them. It's certainly going to be field tested and I wonder how my view on it will evolve as I put it to the test. I just thought this might a) be the right tool for a niche b) spark some thoughts outside the common paths which are being followed.
 
-[View a demo](http://davetayls.me/jquery.lazyLoader/), [View the source](https://github.com/davetayls/jquery.lazyLoader)
+[View a demo](https://davetayls.me/jquery.lazyLoader/), [View the source](https://github.com/davetayls/jquery.lazyLoader)
 

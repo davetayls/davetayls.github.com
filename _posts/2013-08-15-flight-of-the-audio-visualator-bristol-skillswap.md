@@ -34,7 +34,7 @@ So I really want to excite people to give it a go.
 The `AudioContext` is much like a guitar effects
 board where each "effect" on the board can connect to the next
 
-![connect](http://davetayls.me/presentations/2013/flightoftheaudiovisualator/connect.png)
+![connect](https://davetayls.me/presentations/2013/flightoftheaudiovisualator/connect.png)
 
 ## Creating waves with Oscillators
 
@@ -49,7 +49,7 @@ to our end destination (speakers).
 
 Using the `type` property we have 4 options.
 
-![oscillator types](http://davetayls.me/presentations/2013/flightoftheaudiovisualator/waves.jpg)
+![oscillator types](https://davetayls.me/presentations/2013/flightoftheaudiovisualator/waves.jpg)
 
 *[Learn more about this in Stuart Memo excellent article](http://stuartmemo.com/making-sine-square-sawtooth-and-triangle-waves/)*
 
@@ -62,7 +62,7 @@ Ok, so you can then set the frequency of the wave.
 
     oscillator.frequency.value = 440; // A
 
-[Hear these in action](http://davetayls.me/presentations/2013/flightoftheaudiovisualator/code-examples/oscillator.html)
+[Hear these in action](https://davetayls.me/presentations/2013/flightoftheaudiovisualator/code-examples/oscillator.html)
 
 
 ## The Analyser
@@ -120,7 +120,7 @@ So we took note of the camera position and angle at different places around the 
 Using those x,y and z coordinates gradually flew the camera between them interpolating the values of each axis over time using a cubic spline function (illustrated below).
 
 {% include iframeWithLink.html
-   src="http://davetayls.me/teststation/creative-js/grapher/interpolation.html"
+   src="https://davetayls.me/teststation/creative-js/grapher/interpolation.html"
    caption="Interpolating the values of each axis over time using a cubic spline function" %}
 
 There were some beautiful discoveries
@@ -159,5 +159,5 @@ So give this a go and send me some links of what you've done. Here are some link
 
 
 {% include slides.html
-   src="http://davetayls.me/presentations/2013/flightoftheaudiovisualator/" %}
+   src="https://davetayls.me/presentations/2013/flightoftheaudiovisualator/" %}
    

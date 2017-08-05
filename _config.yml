@@ -1,6 +1,6 @@
 lsi: false
 live: true
-url: http://davetayls.me
+url: https://davetayls.me
 permalink: /blog/:year/:month/:day/:title
 postimage_default: /content/placeholder.jpg
 site_name: Dave Taylor

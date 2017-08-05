@@ -14,7 +14,7 @@ categories:
 
 It was great to give a swift tour of Progressive Web Apps for the lovely people at BathCamp last thursday. Here are the slides and an outline of what we went through.
 
-{% include slides.html src="http://davetayls.me/presentations/2017/progressive-web-apps/index.html" %}
+{% include slides.html src="https://davetayls.me/presentations/2017/progressive-web-apps/index.html" %}
 
 ## A few things have changed
 
@@ -152,7 +152,7 @@ Take a look at these resources to help you get going.
 
 ### Udacity Progressive Web Apps Course
 
-![udacity](http://davetayls.me/presentations/2017/progressive-web-apps/udacity.png)
+![udacity](https://davetayls.me/presentations/2017/progressive-web-apps/udacity.png)
 
 [Udacity Web Apps Course](https://www.udacity.com/course/intro-to-progressive-web-apps--ud811)
  

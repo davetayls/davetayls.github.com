@@ -24,12 +24,12 @@ JavaScript
 
 Here's our solution for splitting out JavaScript in to separate files for development work. [Rivet](https://github.com/davetayls/rivet) includes a console app which will combine them for use in a live environment.
 
-<http://davetayls.me/blog/2010/12/15/rivet-advanced-js-combiner-v2-released/>
+<https://davetayls.me/blog/2010/12/15/rivet-advanced-js-combiner-v2-released/>
 
 We run all our JavaScript through a validation process using jsLint. Go to <http://www.jslint.com> for more details on the validator itself. Here are a couple of useful articles on getting it integrated with Visual Studio and build scripts.
 
-*   <http://davetayls.me/blog/2010/05/25/including-jslint-in-your-validation-using-nant-batch-files-or-ajax/>
-*   <http://davetayls.me/blog/2010/07/09/add-jslint-checking-to-visual-studio/>
+*   <https://davetayls.me/blog/2010/05/25/including-jslint-in-your-validation-using-nant-batch-files-or-ajax/>
+*   <https://davetayls.me/blog/2010/07/09/add-jslint-checking-to-visual-studio/>
 
 We use Google Closure compiler in our build scripts to minify the JavaScript:
 
