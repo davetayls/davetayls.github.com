@@ -8,7 +8,6 @@
     "start": "tsc && webpack",
     "webpack": "webpack -d -w",
     "jekyll": "jekyll serve --drafts",
-    "bower-update": "bower update",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
@@ -53,5 +52,7 @@
   },
   "author": "Dave Taylor (dave@the-taylors.org)",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "file-loader": "^0.11.2"
+  }
 }
