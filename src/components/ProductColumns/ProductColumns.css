@@ -4,7 +4,7 @@
 }
 
 .ProductColumns-pitch {
-  font-family: $FontFamilyDisplay;
+  font-family: $ FontFamilyDisplay;
   font-style: italic;
 }
 
@@ -42,7 +42,7 @@
 
   .ProductColumns-column {
     display: inline-block;
-    width: 26%;
+    width: 42%;
     margin: 2%;
   }
 

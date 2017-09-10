@@ -1,34 +1,5 @@
 
-- name: Senior HTML5 Development
-  pitch: I'll build your product! I can join your team and get stuck in
-  quote: 1
-  about: >
-    I love the process of building great products. The reason I've kept my passion
-    for frontend builds over the last 14 years is because I believe that together
-    we can excite and delight the people using what we've created.
-
-
-    I can work on-site in Bath or remotely from my office if you're based in
-    London or elsewhere in the UK with regular on-site visits dependent on your location.
-
-
-    I'm happy to come and meet you to discuss your project, give me a call and we can
-    arrange a good time.
-
-
-    My skills include: Frontend architecture, **HTML5**, **JavaScript** (OOJS, ES6, TypeScript),
-    **CSS** (BEM, Less, SASS, Stylus), **Testable Code** (Mocha, Sinon, Chai, Karma), **NodeJs** (Express, Mongoose),
-    **Cloud Applications** (Heroku, S3, Azure).
-
-
-    I've built highly performant HTML5 cross platform applications for browsers and Cordova:
-    **Canvas** and image manipulation, **Backbone**, **React** Native.
-  rewards:
-    - I will set good foundations to your frontend build
-    - I will use my 14 years of experience
-    - I will give a boost to your team's productivity
-
-- name: Lead Frontend Development and Architecture
+- name: Tech Lead and Architecture
   pitch: I will lead a team, set architecture and make sure they are working at their best
   quote: 3
   about: >

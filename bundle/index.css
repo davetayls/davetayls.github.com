@@ -1348,7 +1348,7 @@ small.GetInTouchFooter-chat {
 }
 
 .ProductColumns-pitch {
-  font-family: "Playfair Display", Georgia, "Bookman", "Times New Roman", serif;
+  font-family: $ FontFamilyDisplay;
   font-style: italic;
 }
 
@@ -1386,7 +1386,7 @@ small.GetInTouchFooter-chat {
 
   .ProductColumns-column {
     display: inline-block;
-    width: 26%;
+    width: 42%;
     margin: 2%;
   }
 
