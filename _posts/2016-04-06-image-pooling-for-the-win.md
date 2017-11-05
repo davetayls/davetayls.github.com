@@ -1,6 +1,7 @@
 ---
 title: Image Pooling for the Win
 layout: post
+postimage: /content/2016/04-image-pooling.jpg
 related: creativejs
 categories:
   - creativejs

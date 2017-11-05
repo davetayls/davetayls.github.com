@@ -1,5 +1,6 @@
 ---
 layout: post
+postimage: /content/2015/03-libraries.jpg
 related: nodejs
 categories:
   - javascript

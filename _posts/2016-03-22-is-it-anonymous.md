@@ -1,5 +1,6 @@
 ---
 layout: post
+postimage: /content/2016/03-anonymous.jpg
 related: thoughts
 categories:
   - javascript
