@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Talks and Training
-postimage: https://lh4.googleusercontent.com/-41LCbfiIjmU/UVDIvVBkddI/AAAAAAAAvlM/AxRwbv7X2Ds/s640/adventures-html5-dev-anoraks.png
+postimage: /content/2017/10-react-talk.jpg
 comments: hide
 ---
 

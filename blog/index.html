@@ -1,9 +1,18 @@
 ---
 layout: post
-title: David Taylor's Blog
+title: Dave Taylor
+postimage: /content/2017/07-ropes.jpg
 comments: hide
-related: hide
-share: hide
 ---
 
-{% include blog-posts.html %}
+{% assign BrowsePostsList = site.posts %}
+<nav class="BrowsePosts">
+  <ul class="BrowsePosts-nav">
+    {% for post in BrowsePostsList %}
+    <li class="BrowsePosts-item">
+      {% assign PostSquare = post %}
+      {% include components__PostSquare.html %}
+    </li>
+    {% endfor %}
+  </ul>
+</nav>

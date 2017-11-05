@@ -1230,17 +1230,20 @@ small.GetInTouchFooter-chat {
 }
 
 .PostHeader-titleLink,
+.PostHeader-subtitle,
 .PostHeader-date {
   display: block;
   color: #fff;
   text-decoration: none;
 }
 
+.PostHeader-subtitle,
 .PostHeader-date {
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.75;
+  letter-spacing: -0.01em;
 }
 
 .PostHeader-bg {
