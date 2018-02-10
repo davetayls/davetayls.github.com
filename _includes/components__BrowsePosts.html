@@ -1,6 +1,7 @@
 <nav class="BrowsePosts">
   <ul class="BrowsePosts-nav">
-  {% for post in BrowsePostsList limit:14 %}
+  {% assign BrowsePostsLimit = include.limit || 14 %}
+  {% for post in BrowsePostsList limit:BrowsePostsLimit %}
       <li class="BrowsePosts-item">
         {% assign PostSquare = post %}
         {% include components__PostSquare.html %}

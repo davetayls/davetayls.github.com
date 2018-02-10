@@ -686,7 +686,7 @@ code {
 
   .BrowsePosts-item {
     float: left;
-    width: 50%;
+    width: 33%;
     padding: 0 16px 16px 0;
   }
 
@@ -850,7 +850,7 @@ code {
 
 @media all and (min-width: 990px) {
   .Container {
-    width: 990px;
+    max-width: 990px;
     margin: 0 auto;
     overflow: hidden;
   }
@@ -858,7 +858,7 @@ code {
 
 @media all and (min-width: 1210px) {
   .Container {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
@@ -897,7 +897,7 @@ small.GetInTouchFooter-chat {
   background-image: url(/content/2017/07-pwa-talk-2.jpg);
   background-size: cover;
   background-position: center center;
-  height: 66vh;
+  height: 58vh;
   margin: 0;
   position: relative;
   overflow: hidden;
