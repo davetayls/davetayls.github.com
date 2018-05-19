@@ -14,6 +14,7 @@ mission:
   I want to help frontend teams live inspired, be productive and scale better.
 exclude:
 - startjekyll.bat
+- .idea
 - node_modules
 - package.json
 - typings
