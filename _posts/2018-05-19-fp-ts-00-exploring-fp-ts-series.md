@@ -6,7 +6,7 @@ series: exploring-fp-ts
 related: exploring-fp-ts
 categories:
  - exploring-fp-ts
- - power-of-typescript
+ - functional
  - typescript
  - javascript
 ---

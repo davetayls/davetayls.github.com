@@ -521,6 +521,26 @@ code {
   color: #000;
 }
 
+.ArticleContent-tags {
+  display: block;
+}
+
+.ArticleContent .ArticleContent-tags ul {
+  display: block;
+  margin: 0;
+  list-style: none outside none;
+  padding: 0;
+}
+
+.ArticleContent-tags ul li {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0 .6rem;
+  margin: 0.2rem;
+  background-color: #efefef;
+  border-radius: 5px;
+}
+
 .ArticleContent img {
   max-width: 100%;
 }
@@ -1011,6 +1031,7 @@ small.GetInTouchFooter-chat {
 }
 
 .PageFooter {
+  position: relative;
   background-color: #000;
   padding: 16px;
   padding-bottom: 5rem;

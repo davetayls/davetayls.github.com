@@ -1,5 +1,6 @@
 
 .PageFooter {
+  position: relative;
   background-color: #000;
   padding: $BaseSpacing;
   padding-bottom: 5rem;

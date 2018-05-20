@@ -6,12 +6,12 @@ series: exploring-fp-ts
 related: exploring-fp-ts
 categories:
  - exploring-fp-ts
- - power-of-typescript
  - typescript
  - javascript
+ - functional
 ---
 
-It's such a pain dealing with values which could be undefined or null. I like to get rid of the potential for them as much as possible when designing interfaces but there is no escaping it sometimes. I hate it even more when you have a set of them, which you need to check before moving on.
+It's such a pain dealing with values which could be `null` or `undefined`. I like to get rid of the potential for them as much as possible when designing interfaces but there is no escaping it sometimes. I hate it even more when you have a set of them, which you need to check before moving on.
 
 {% include components__SeriesPosts.html %}
 

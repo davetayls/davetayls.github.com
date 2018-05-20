@@ -4,6 +4,17 @@
   </article>
 {% elsif content != '' %}
   <article class="ArticleContent">
+    <nav class="ArticleContent-tags">
+      <ul>
+        {% for category in page.categories %}
+        <li>
+          <a href="/tags/{{category}}/">
+            {{category}} ({{ site.categories[category] | size }})
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
   {{ content }}
   </article>
 {% endif %}

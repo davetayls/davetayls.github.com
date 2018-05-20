@@ -1,4 +1,5 @@
 ---
+layout: post
 postimage: /content/2017-04-functional-dive.jpg
 related: functional
 categories:
