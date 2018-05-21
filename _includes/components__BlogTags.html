@@ -2,7 +2,7 @@
   <ul class="LinkList LinkList--double">
   {% for tag in site.tags %}
     <li class="LinkList-item">
-      <a href="/tags/{{tag.related}}/">
+      <a href="/tags/{{tag.related}}.html">
         {{tag.title}} ({{ site.categories[tag.related] | size }})
       </a>
     </li>

@@ -27,7 +27,7 @@ Should a malicious person have access to this information they would gain person
 
 ## Changing personal data
 
-Beth should have the ability to amend and update her own personal information. We will provide Beth with her own personal Profile page and allow her to amend her data. The changes will require additonal authentication and this will give Beth comfort that her data cannot be amended by anyone but her.
+Beth should have the ability to amend and update her own personal information. We will provide Beth with her own personal Profile page and allow her to amend her data. The changes will require additional authentication and this will give Beth comfort that her data cannot be amended by anyone but her.
 
 ## Buying or Selling
 

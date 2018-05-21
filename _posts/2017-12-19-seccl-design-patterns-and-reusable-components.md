@@ -37,4 +37,4 @@ These components will range in their complexity. Some will be very simple while 
 
 Approaching our products in this way enables us to place patterns around the site where they make most sense to the person using it. It is easier to keep fresh, easier to maintain and easier to ensure the best experience for those who use our services day-to-day.
 
-As an industry, our approach to building these experiences is maturing. At [Seccl](https://seccl.tech), applying strong foundations to our code will mean that scale doesn’t bring the same level of complexities I have often seen in my experience working with enterprises around the world.
+As an industry, our approach to building these experiences is maturing. At [Seccl](https://seccl.tech), applying strong foundations to our code will mean that scale doesn't bring the same level of complexities I have often seen in my experience working with enterprises around the world.

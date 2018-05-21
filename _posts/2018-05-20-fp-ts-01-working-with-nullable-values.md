@@ -77,7 +77,7 @@ I then needed to deal with an array of optional values and work on the results. 
 The `alt` method on `Option` allows you to provide a default value without "unboxing" it using `getOrElse`. It's pretty straight-forward once you understand that `some` returns an `Option` with a value you know is not nullable.
 
 ```typescript
-const defaultFirstName =
+const getFirstNameWithDefault =
   (name: string | null | undefined) =>
     getFirstName(name).alt(some('No name'))
 ```
@@ -86,7 +86,7 @@ const defaultFirstName =
 
 If I wanted this to be all or nothing then I would use my `getFirstName` function. If any of the names in the array are nullable then it would run the "or else" path.
 
-If I use `defaultFirstName` then it will always return a list of names with the default used for the nullable values. This is because of the `.alt` added on the `Option`.
+If I use `getFirstNameWithDefault` then it will always return a list of names with the default used for the nullable values. This is because of the `.alt` added on the `Option`.
 
 So here is the code put together.
 
@@ -101,12 +101,12 @@ const names = [
 ]
 // We can use `alt` with the `getFirstName`
 // function to provide a default
-const defaultFirstName =
+const getFirstNameWithDefault =
   (name: string | null | undefined) =>
     getFirstName(name).alt(some('No name'))
 
 // `traverse` over each and provide a default
-const result = traverse(option)(names, defaultFirstName)
+const result = traverse(option)(names, getFirstNameWithDefault)
   .getOrElse([])
 
 // result is
@@ -116,7 +116,7 @@ const result = traverse(option)(names, defaultFirstName)
 What I've learnt is to
 
  - Use `Option` when you're not sure if a value is defined or to set it to some default
- - Return `Options`s from functions and then connect them together so that you only need to deal with the `null | undefined` case at the end of your logic
+ - Return `Option`s from functions and then connect them together so that you only need to deal with the `null | undefined` case at the end of your logic
  - Dealing with a list of potentially empty values then becomes pretty simple
 
 ---

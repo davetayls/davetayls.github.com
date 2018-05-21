@@ -15,6 +15,15 @@ mission:
 collections:
   tags:
     output: true
+    permalink: /:collection/:name
+defaults:
+  - scope:
+      path: ''
+      type: tags
+    values:
+      layout: category
+      related_title: hide
+      comments: hide
 exclude:
 - startjekyll.bat
 - .idea
