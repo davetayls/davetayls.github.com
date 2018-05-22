@@ -8,7 +8,6 @@ categories:
  - exploring-fp-ts
  - functional
  - typescript
- - javascript
 ---
 
 We're using a lot more functional programming styles and pattens in our codebase. Part of getting better at using these patterns is knowing the tools available. Most of our codebase is TypeScript so we have chosen the fantastic [fp-ts](https://github.com/gcanti/fp-ts) library.

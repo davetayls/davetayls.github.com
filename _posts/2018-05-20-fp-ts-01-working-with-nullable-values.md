@@ -6,18 +6,23 @@ series: exploring-fp-ts
 related: exploring-fp-ts
 categories:
  - exploring-fp-ts
- - typescript
- - javascript
  - functional
+ - typescript
 ---
 
-It's such a pain dealing with values which could be `null` or `undefined`. I like to get rid of the potential for them as much as possible when designing interfaces but there is no escaping it sometimes. I hate it even more when you have a set of them, which you need to check before moving on.
+It's such a pain dealing with values which could be `null` or `undefined`. I like to get
+rid of the potential for them as much as possible when designing interfaces but there is
+no escaping it sometimes. I hate it even more when you have a set of them, which you need
+to check before moving on.
 
 {% include components__SeriesPosts.html %}
 
-To help, the `fp-ts` library comes with the [`Option` type](https://github.com/gcanti/fp-ts/blob/master/docs/api/md/Option.md). It represents a value which might not be there, it is optional.
+To help, the `fp-ts` library comes with the [`Option` type](https://github
+.com/gcanti/fp-ts/blob/master/docs/api/md/Option.md). It represents a value which might
+not be there, it is optional.
 
-For a trivial example, what if we want the first name from a full name that might not exist.
+For a trivial example, what if we want the first name from a full name that might not
+exist.
 
 ```typescript
 import { fromNullable } from 'fp-ts/lib/Option'
@@ -72,9 +77,18 @@ const firstName =
 
 ## Lots of optional values
 
-I then needed to deal with an array of optional values and work on the results. If I loaded a set of nullable full names and wanted to pull out the first names then I would go about it using `alt` and `traverse`.
+I then needed to deal with an array of optional values and work on the results. If I
+loaded a set of nullable full names and wanted to pull out the first names then I would go
+about it using `alt` and `traverse`.
 
-The `alt` method on `Option` allows you to provide a default value without "unboxing" it using `getOrElse`. It's pretty straight-forward once you understand that `some` returns an `Option` with a value you know is not nullable.
+The `alt` method on `Option` allows you to provide a default value without "unboxing" it.
+The difference between `alt` and `getOrElse` is the output. If you have an `Option<string>` then
+`alt` still returns an `Option<string>` whereas `getOrElse` will return a `string` (the
+value inside).
+
+An `Option` type can be in one of two forms. A `Some` type to represent there is a value
+and a `None` for when you have a `null | undefined`. The `some` function is a shorthand
+to returning an `Option` with a value you know is not nullable.
 
 ```typescript
 const getFirstNameWithDefault =
@@ -82,15 +96,23 @@ const getFirstNameWithDefault =
     getFirstName(name).alt(some('No name'))
 ```
 
-`traverse` is a functional pattern which will convert an array of values to an `Option` (or another boxed type) with an array of values inside. I have to give it a function which maps each value to an `Option`.
+`traverse` is a functional pattern which will convert an array of values to an `Option`
+(or another boxed type) with an array of values inside. I have to give it a function which
+ maps each value to an `Option`.
 
-If I wanted this to be all or nothing then I would use my `getFirstName` function. If any of the names in the array are nullable then it would run the "or else" path.
+If I wanted this to be all or nothing then I would use my `getFirstName` function. If any
+of the names in the array are nullable then it would run the "or else" path.
 
-If I use `getFirstNameWithDefault` then it will always return a list of names with the default used for the nullable values. This is because of the `.alt` added on the `Option`.
+If I use `getFirstNameWithDefault` then it will always return a list of names with the
+default used for the nullable values. This is because of the `.alt` added on the `Option`.
+
 
 So here is the code put together.
 
 ```typescript
+import { option } from 'fp-ts/lib/Option'
+import { traverse } from 'fp-ts/lib/Array'
+
 // Here are my names
 const names = [
   'Esther Pierce',
