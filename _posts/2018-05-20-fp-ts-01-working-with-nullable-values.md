@@ -17,9 +17,9 @@ to check before moving on.
 
 {% include components__SeriesPosts.html %}
 
-To help, the `fp-ts` library comes with the [`Option` type](https://github
-.com/gcanti/fp-ts/blob/master/docs/api/md/Option.md). It represents a value which might
-not be there, it is optional.
+To help, the `fp-ts` library comes with the
+[`Option` type](https://gcanti.github.io/fp-ts/Option.html). It represents a value which
+might not be there, it is optional.
 
 For a trivial example, what if we want the first name from a full name that might not
 exist.
@@ -93,7 +93,8 @@ to returning an `Option` with a value you know is not nullable.
 ```typescript
 const getFirstNameWithDefault =
   (name: string | null | undefined) =>
-    getFirstName(name).alt(some('No name'))
+    getFirstName(name)
+      .alt(some('No name'))
 ```
 
 `traverse` is a functional pattern which will convert an array of values to an `Option`
@@ -125,11 +126,13 @@ const names = [
 // function to provide a default
 const getFirstNameWithDefault =
   (name: string | null | undefined) =>
-    getFirstName(name).alt(some('No name'))
+    getFirstName(name)
+      .alt(some('No name'))
 
 // `traverse` over each and provide a default
-const result = traverse(option)(names, getFirstNameWithDefault)
-  .getOrElse([])
+const result =
+  traverse(option)(names, getFirstNameWithDefault)
+    .getOrElse([])
 
 // result is
 ['Esther', 'Charis', 'No name', 'Tobias', 'No name']
