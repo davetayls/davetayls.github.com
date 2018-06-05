@@ -10,25 +10,27 @@ categories:
  - typescript
 ---
 
-I like to hit the fail paths before making sure the happy ones work like I expect. In our codebase there are several checks which can fail. Like I discovered with [handling nullable values](/blog/2018/05/20/fp-ts-01-working-with-nullable-values) I want to flow through the code and deal with errors at any step gracefully.
+In any codebase there are several steps which can fail. Like I discovered with [handling nullable values](/blog/2018/05/20/fp-ts-01-working-with-nullable-values) I want to flow through the code and deal with errors at any step gracefully and in a logical manor. Too many times have I found I've written a tangle of if statements and try / catch blocks which make reading a logical set of instructions hard.
 
 {% include components__SeriesPosts.html %}
 
-To work with errors I use the [`Either`](https://gcanti.github.io/fp-ts/Either.html) type. It represents a value which could be one of two possible types, either the type we specify first (the one on the `Left`) or the type we specify second (the one on the `Right`). Something like this:
+To work with errors I found a good place to start was to use the [`Either` type](https://gcanti.github.io/fp-ts/Either.html). It represents a value which could be one of two possible types, either the type we specify first (the one on the `Left`) or the type we specify second (the one on the `Right`). Something like this:
 
 ```typescript
 Either<Error, IPerson>
 ```
 
-I found that if a function creates an error directly then it should return an `Either`. It reduces a lot of complexity–and therefor good practice–to standardise a common error structure early, then every error passed around our system conforms to a known structure.
+I found that if a function creates an error directly then it should return an `Either`. Here is an example of how I might display some information based on a number of steps. Any of these steps could error but I can handle any of the error cases within the `fold` at the end.
 
-Here is an example of how I might display some information based on a number of steps. Any of these steps could error but I can handle any of the error cases within the `fold`. Folding is a functional pattern which provides a way of taking the current value out of the type it is in. An `Either` could have two possible states and so we provide it a function to handle each of them.
+> Folding is a functional pattern which provides a way of taking the current value out of the type it is in.
+
+An `Either` could have two possible states and so we provide it a function to handle each of them.
 
 ```typescript
 import { fromNullable } from 'fp-ts/lib/Either'
 getRecurringPayment(person)
   .chain((payment) => calculateAmount(payment))
-  .chain((amount) => affordability(person))
+  .chain((amount) => affordability(amount))
   .fold(
     (err) => {
       console.log(
@@ -44,6 +46,22 @@ getRecurringPayment(person)
     }
   )
 ```
+
+## Common Error Structure
+
+I've found that it reduces a lot of complexity–and therefore good practice–to standardise a common error structure early. Once you have this in place every error passed around our system conforms to a known structure.
+
+I call this error structure `IError` and use a simple method for extending the built in JavaScript `Error` to conform to it.
+
+I'm also very aware that JavaScript can throw pretty much anything as an error. So any error caught adds unnecessary complexity unless I resolve it to the common error structure previously designed.
+
+With this in mind I have a `resolveCommonError` function which can be given anything but will always return an `IError`. The type signature would look like this:
+
+```typescript
+resolveCommonError: (err: any) => IError
+```
+
+For the remainder of this article I will refer to errors as `IError` because of this.
 
 ## Try / Catch
 
@@ -68,7 +86,6 @@ const head = <T>(arr: T[]): Either<IError, T> => {
 }
 ```
 
-I'm also very aware that JavaScript can throw pretty much anything as an error. So the `err` caught in my function adds unnecessary complexity unless I resolve it to the common error structure previously designed. With this in mind I have a `resolveCommonError` function which can be given anything but will always return an `IError` which is my TypeScript interface for common errors.
 
 The right solution to these problems is to use the `tryCatch` function from `fp-ts`. It enables us to run any function within a try / catch and deal with errors. Here is how I get the first item from an array.
 
