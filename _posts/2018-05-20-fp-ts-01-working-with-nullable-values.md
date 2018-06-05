@@ -138,11 +138,15 @@ const result =
 ['Esther', 'Charis', 'No name', 'Tobias', 'No name']
 ```
 
-What I've learnt is to
+## What I've learnt is to
 
  - Use `Option` when you're not sure if a value is defined or to set it to some default
  - Return `Option`s from functions and then connect them together so that you only need to deal with the `null | undefined` case at the end of your logic
  - Dealing with a list of potentially empty values then becomes pretty simple
+
+## View some code examples
+
+You can take a look at some example code in the companion [exploring-fp-ts-series](https://github.com/davetayls/exploring-fp-ts-series/tree/master/src/01-nullable-values) Github repo
 
 ---
 
