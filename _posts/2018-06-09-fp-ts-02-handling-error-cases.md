@@ -65,15 +65,15 @@ For the remainder of this article I will refer to errors as `IError` because of 
 
 ## Try / Catch
 
-There are many times when I really don't want to make a simple function more complex by returning an `Either`. Our code also needs to integrate with outside libraries which don't use `fp-ts`. In both of these cases I need some way of gracefully catching any resulting error and converting any result to an `Either`.
+I found that I often don't want to return an `Either`. Our code also needs to integrate with outside libraries which don't use `fp-ts`. In both of these cases I need some way of gracefully catching any resulting error and converting it to an `Either`.
 
-I'll consider a simple `head` function which returns the first item from an array. It's nice and simple but there are still potential errors lurking.
+This simple `head` function returns the first item from an array. It's nice and simple but there are still potential errors lurking.
 
 ```typescript
 const head = <T>(arr: T[]): T => arr[0]
 ```
 
-It would be really ugly to wrap these functions in a try/catch block. I'd need to use the helper functions provided by `fp-ts` to return the `Left` result (the error) or `Right` result.
+Here's what it might look like with a try/catch block. I'd need to use the helper functions provided by `fp-ts` to return the `Left` result (the error) or `Right` result.
 
 ```typescript
 import { left, right, Either } from 'fp-ts/lib/Either'
@@ -86,7 +86,7 @@ const head = <T>(arr: T[]): Either<IError, T> => {
 }
 ```
 
-The right solution to these problems is to use the `tryCatch` function. It enables us to run any function within a try / catch and deal with errors. Here is how I get the first item from an array.
+Ugly! The right solution is to use the `tryCatch` function. It will catch any errors and allow you to resolve them.
 
 ```typescript
 import { tryCatch } from 'fp-ts/lib/Either'
@@ -122,7 +122,7 @@ I looked at working with lots of optional values in the previous article, I want
 
 I'll take a similar idea, I want to pass every name in an array through my nice name converter. There is a potential for errors to happen during this conversion so I'll wrap the function which converts each name with `tryCatch`.
 
-I'll need to use `traverse` again to map each name to an `Either` then convert the array of `Either`s (ie `Either<IError, string>[]`) to an `Either` holding an array of values (ie `Either<IError, string[]>`).
+I'll need to use `traverse` to map each name to an `Either` then convert the array of `Either`s (ie `Either<IError, string>[]`) to an `Either` holding an array of values (ie `Either<IError, string[]>`).
 
 When an error occurs I want to stop processing the names and fallback to a default which for simplicity I've chosen `['Not all names were nice']`. Here is what that would look like.
 
@@ -167,9 +167,13 @@ const result = traverse(either)(names, niceNameDude)
 deepEqual(result, ['Nice name', 'Be a dude'])
 ```
 
+I have found that it is a lot easier to visualise working with lots of data in this way. It allows me to reason about a single item and then apply that reasoning to all in a very similar fashion.
+
 ## View some code examples
 
-You can take a look at some example code in the companion [exploring-fp-ts-series](https://github.com/davetayls/exploring-fp-ts-series/tree/master/src/02-handling-errors) Github repo
+I'm continuing to experiment with different patterns for functional–and in this case Mondadic–error handling. You can take a look at some example code in the companion [exploring-fp-ts-series](https://github.com/davetayls/exploring-fp-ts-series/tree/master/src/02-handling-errors) Github repo
+
+There are a few things I've not looked into as part of this article but they can wait for another day.
 
 ---
 
