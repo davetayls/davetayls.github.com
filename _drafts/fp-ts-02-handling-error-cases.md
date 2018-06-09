@@ -118,7 +118,54 @@ getListOfPeople()
 
 ## Working with lots of potential errors
 
-I looked at working with lots of optional values in the previous article, I want to transform each value within an array of which any could produce an error.
+I looked at working with lots of optional values in the previous article, I want to transform each value within an array of which any could produce an error. We can do the same things when working with `Either`.
+
+I'll take a similar idea, I want to pass every name in an array through my nice name converter. There is a potential for errors to happen during this conversion so I'll wrap the function which converts each name with `tryCatch`.
+
+I'll need to use `traverse` again to map each name to an `Either` then convert the array of `Either`s (ie `Either<IError, string>[]`) to an `Either` holding an array of values (ie `Either<IError, string[]>`).
+
+When an error occurs I want to stop processing the names and fallback to a default which for simplicity I've chosen `['Not all names were nice']`. Here is what that would look like.
+
+```typescript
+const niceNameCheck = (name: string) => {
+  if (/dude/i.test(name)) {
+    return 'Nice name'
+  } else {
+    throw new Error('Bad name')
+  }
+}
+
+const names = [
+  'Bob Smith',
+  'Andy Hedge'
+]
+
+const niceNameDude = (name: string) =>
+  tryCatch(() => niceNameCheck(name), resolveCommonError)
+
+const result = traverse(either)(names, niceNameDude)
+  .getOrElse(['Not all names were nice'])
+
+deepEqual(result, ['Not all names were nice'])
+```
+
+Sometimes, I'm not concerned about the error and just want to provide a default if an error occurs. To solve this I used the same `.alt()` pattern I used for `Option` in the previous article.
+
+```typescript
+const names = [
+  'Dude Smith',
+  'Andy Hedge'
+]
+
+const niceNameDude = (name: string) =>
+  tryCatch(() => niceNameCheck(name), resolveCommonError)
+    .alt(right('Be a dude'))
+
+const result = traverse(either)(names, niceNameDude)
+  .getOrElse([])
+
+deepEqual(result, ['Nice name', 'Be a dude'])
+```
 
 ## View some code examples
 
