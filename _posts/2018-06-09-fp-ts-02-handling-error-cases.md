@@ -104,11 +104,19 @@ I'll take a similar idea, I want to pass every name in an array through my nice 
 I'll need to use `traverse`, remember it does two things:
 
 1. You give it a function to process each item and return an `Either`
-2. It converts this new array of `Either`s to an `Either` holding an array of values. ie
+2. It converts this new array of `Either`s to an `Either` holding an array of values.
 
-   ```typescript
-   string[] => Either<IError, string>[] => Either<IError, string[]>
-   ```
+```typescript
+// We start with an array of strings
+[string, string, string]
+
+// 1. We then have an array of Either
+=> [Either, Either, Either]
+
+// 2. We end up with our resulting array of
+// strings inside an Either
+=> Either<IError, [string, string, string]>
+```
 
 When an error occurs I want to stop processing the names and fallback to a default which for simplicity I've chosen `['Not all names were nice']`. Here is what that would look like.
 
