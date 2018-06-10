@@ -65,7 +65,7 @@ For the remainder of this article I will refer to errors as `IError` because of 
 
 I found that I often don't want to return an `Either`. Our code also needs to integrate with outside libraries which don't use `fp-ts`. In both of these cases I need some way of gracefully catching any resulting error and converting it to an `Either`.
 
-In these cased I use the `tryCatch` function. It will catch any errors and allow you to resolve them.
+In these cases I use the `tryCatch` function. It will catch any errors and allow you to resolve them.
 
 ```typescript
 import { tryCatch } from 'fp-ts/lib/Either'
