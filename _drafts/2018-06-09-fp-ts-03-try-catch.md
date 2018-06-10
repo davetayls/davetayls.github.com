@@ -43,7 +43,9 @@ getRecurringPayment(person)
   )
 ```
 
-The `fold` here provides a way of taking the current value out of the type it is in. An `Either` could have two possible states and so we provide it a function to handle each of them.
+> Folding is a functional pattern which provides a way of taking the current value out of the type it is in.
+
+An `Either` could have two possible states and so we provide it a function to handle each of them.
 
 ## Common Error Structure
 
@@ -65,7 +67,26 @@ For the remainder of this article I will refer to errors as `IError` because of 
 
 I found that I often don't want to return an `Either`. Our code also needs to integrate with outside libraries which don't use `fp-ts`. In both of these cases I need some way of gracefully catching any resulting error and converting it to an `Either`.
 
-In these cased I use the `tryCatch` function. It will catch any errors and allow you to resolve them.
+This simple `head` function returns the first item from an array. It's nice and simple but there are still potential errors lurking.
+
+```typescript
+const head = <T>(arr: T[]): T => arr[0]
+```
+
+Here's what it might look like with a try/catch block. I'd need to use the helper functions provided by `fp-ts` to return the `Left` result (the error) or `Right` result.
+
+```typescript
+import { left, right, Either } from 'fp-ts/lib/Either'
+const head = <T>(arr: T[]): Either<IError, T> => {
+  try {
+    return right(arr[0])
+  } catch (err) {
+    return left(err)
+  }
+}
+```
+
+Ugly! The right solution is to use the `tryCatch` function. It will catch any errors and allow you to resolve them.
 
 ```typescript
 import { tryCatch } from 'fp-ts/lib/Either'
