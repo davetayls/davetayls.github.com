@@ -144,6 +144,8 @@ const result =
  - Return `Option`s from functions and then connect them together so that you only need to deal with the `null | undefined` case at the end of your logic
  - Dealing with a list of potentially empty values then becomes pretty simple
 
+Next up, follow me to the next article where I'm looking at [Handling Error Cases](/blog/2018/06/09/fp-ts-02-handling-error-cases).
+
 ## View some code examples
 
 You can take a look at some example code in the companion [exploring-fp-ts-series](https://github.com/davetayls/exploring-fp-ts-series/tree/master/src/01-nullable-values) Github repo
