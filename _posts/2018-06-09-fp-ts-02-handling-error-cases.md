@@ -97,11 +97,18 @@ getListOfPeople()
 
 ## Working with lots of potential errors
 
-I looked at working with lots of optional values in the previous article, I want to transform each value within an array of which any could produce an error. We can do the same things when working with `Either`.
+I want to transform each value within an array of which any could produce an error. We looked at a similar thing with the `Option` type and you can do the same things when working with `Either`.
 
 I'll take a similar idea, I want to pass every name in an array through my nice name converter. There is a potential for errors to happen during this conversion so I'll wrap the function which converts each name with `tryCatch`.
 
-I'll need to use `traverse` to map each name to an `Either` then convert the array of `Either`s (ie `Either<IError, string>[]`) to an `Either` holding an array of values (ie `Either<IError, string[]>`).
+I'll need to use `traverse`, remember it does two things:
+
+1. You give it a function to process each item and return an `Either`
+2. It converts this new array of `Either`s to an `Either` holding an array of values. ie
+
+   ```typescript
+   string[] => Either<IError, string>[] => Either<IError, string[]>
+   ```
 
 When an error occurs I want to stop processing the names and fallback to a default which for simplicity I've chosen `['Not all names were nice']`. Here is what that would look like.
 
