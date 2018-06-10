@@ -150,7 +150,7 @@ I have found that it is a lot easier to visualise working with lots of data in t
 
 ## View some code examples
 
-I'm continuing to experiment with different patterns for functional–and in this case Mondadic–error handling. You can take a look at some example code in the companion [exploring-fp-ts-series](https://github.com/davetayls/exploring-fp-ts-series/tree/master/src/02-handling-errors) Github repo
+I'm continuing to experiment with different patterns for functional–and in this case Monadic–error handling. You can take a look at some example code in the companion [exploring-fp-ts-series](https://github.com/davetayls/exploring-fp-ts-series/tree/master/src/02-handling-errors) Github repo
 
 There are a few things I've not looked into as part of this article but they can wait for another day.
 
