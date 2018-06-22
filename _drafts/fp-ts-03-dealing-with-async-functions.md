@@ -1,3 +1,4 @@
+
 ---
 layout: post
 title: Dealing with Async Functions - Exploring fp-ts (3) 
@@ -10,7 +11,8 @@ categories:
  - javascript
 ---
 
-We've started using a lot more functional programming styles
+Time to start experimenting with handling asynchronous functions. I really like working with native Promises in JavaScript so I was a little bit reluctant to use something else. However, in the spirit of
 
 {% include components__SeriesPosts.html %}
-    
+
+  dkdk
