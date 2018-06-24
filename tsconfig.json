@@ -2,7 +2,8 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "ES5",
-    "noImplicitAny": true,
+    "lib": ["es6", "esnext.asynciterable", "dom"],
+    "strict": true,
     "removeComments": true,
     "preserveConstEnums": true,
     "suppressExcessPropertyErrors": false,

@@ -17,14 +17,15 @@
   "author": "Dave Taylor (dave@the-taylors.org)",
   "license": "MIT",
   "dependencies": {
+    "@types/jquery": "^3.3.4",
+    "@types/node": "^10.3.5",
     "autoprefixer": "^6.3.6",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "fastclick": "^1.0.6",
     "file-loader": "^0.11.2",
     "fp-ts": "^1.6.2",
-    "jquery": "^2.2.3",
-    "jshint-stylish": "~0.1.3",
+    "jquery": "^3.3.1",
     "lodash.debounce": "^4.0.6",
     "normalize.css": "^4.1.1",
     "postcss-bem": "^0.4.1",
@@ -34,8 +35,8 @@
     "postcss-loader": "^0.9.1",
     "postcss-simple-vars": "^1.2.0",
     "style-loader": "^0.13.1",
-    "tslint": "^3.9.0",
-    "typescript": "^1.8.10",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.2",
     "waypoints": "^4.0.0",
     "webpack": "^1.13.0"
   }

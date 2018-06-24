@@ -1,6 +1,12 @@
 {% if page.series %}
   <section class="SeriesPosts">
-    <p class="SeriesPosts-header">The <strong>{{ page.series }}</strong> series:</p>
+    <p class="SeriesPosts-header">
+      {% for tag in site.tags %}
+      {% if tag.related == page.series %}
+      The <strong>{{ tag.title }}</strong> series:
+      {% endif %}
+      {% endfor %}
+    </p>
     {% assign ListPostsList = site.categories[page.series] | sort: 'date' %}
     {% include components__ListPostsOL.html %}
   </section>
