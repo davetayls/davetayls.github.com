@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Middleware Pipelines Part 1
+title: Middleware Pipelines - Chain of Responsibility
 postimage: /content/2018/06-middleware-pipelines.jpg
 related: middleware-pipelines
 series: middleware-pipelines
