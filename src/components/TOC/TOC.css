@@ -1,0 +1,11 @@
+
+.TOC {
+}
+
+.TOC .toc-link {
+  text-decoration: none;
+}
+
+.TOC .toc-link.is-active-link {
+  text-decoration: underline;
+}

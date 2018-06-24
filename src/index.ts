@@ -1,6 +1,7 @@
 const fastclick = require('fastclick')
 const debounce = require('lodash.debounce')
 import $ = require('jquery');
+const tocbot = require('tocbot')
 
 require('waypoints/lib/noframework.waypoints')
 require('waypoints/lib/shortcuts/sticky')
@@ -31,7 +32,6 @@ $(window).on('resize', debounce(function () {
 const $pageHeaderBurger = $pageHeader.find('.Burger')
 const PAGE_HEADER_OPEN = 'PageHeader--open'
 const BURGER_X = 'Burger--x'
-console.log($pageHeaderBurger.length)
 
 $pageHeaderBurger.on('click', function () {
   console.log('clicked')
@@ -89,4 +89,11 @@ if ($workWithMeFooter.length) {
   })
 }
 
-
+tocbot.init({
+  // Where to render the table of contents.
+  tocSelector: '.js-toc',
+  // Where to grab the headings to build the table of contents.
+  contentSelector: '.js-toc-content',
+  // Which headings to grab inside of the contentSelector element.
+  headingSelector: 'h2, h3',
+});

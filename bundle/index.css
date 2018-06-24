@@ -1549,6 +1549,17 @@ small.GetInTouchFooter-chat {
 
 }
 
+.TOC {
+}
+
+.TOC .toc-link {
+  text-decoration: none;
+}
+
+.TOC .toc-link.is-active-link {
+  text-decoration: underline;
+}
+
 .WorkWithMeFooter {
   margin: 2rem 1rem;
 }

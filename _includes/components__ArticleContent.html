@@ -1,20 +1,22 @@
 {% if ArticleContent %}
-  <article class="ArticleContent">
+<article class="ArticleContent js-toc-content">
   {{ ArticleContent }}
-  </article>
+</article>
 {% elsif content != '' %}
-  <article class="ArticleContent">
-    <nav class="ArticleContent-tags">
-      <ul>
-        {% for category in page.categories %}
-        <li>
-          <a href="/tags/{{category}}.html">
-            {{category}} ({{ site.categories[category] | size }})
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
-    </nav>
-  {{ content }}
-  </article>
+<article class="ArticleContent">
+  <nav class="ArticleContent-tags">
+    <ul>
+      {% for category in page.categories %}
+      <li>
+        <a href="/tags/{{category}}.html">
+          {{category}} ({{ site.categories[category] | size }})
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <div class="js-toc-content">
+    {{ content }}
+  </div>
+</article>
 {% endif %}
