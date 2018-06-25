@@ -94,6 +94,8 @@ console.log(getSweetsSentence('Barney'))
 
 I'd expect the environment would tend to be more dynamic to the context, and I'd also expect the context to be an object with most of the data needed for the middleware. This as an experiment shows a lot of potential for such a simple script.
 
+## Next article, I look at using Promises
+
 In the next post, I'll look at using the same code to build a Promise based pipeline. With promises we will be able to use the same pattern for asychronous tasks. I will then show how you can use it with `Either` and `TaskEither`.
 
 You can find the full working code and tests in the [exploring-fp-ts github repo](https://github.com/davetayls/exploring-fp-ts-series/tree/master/src/middleware)
