@@ -180,3 +180,9 @@ chainOfResponsibility({ name: 'Mary', ones: 1335 })
 //  hundreds: 13
 // }
 ```
+
+---
+
+Cover photo by [Gerrie van der Walt
+](https://unsplash.com/@gitfo)
+
