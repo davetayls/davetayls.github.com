@@ -82,6 +82,28 @@ Hopefully we work together again soon!”
 
 ## What team-mates are saying
 
+### [Ian Causton](https://www.linkedin.com/in/ian-causton-4136182/), .net CMS & CRO expert
+
+In my experience, it’s rare to work with an individual as talented as Dave.
+
+I had the pleasure of working with him at the BIO Agency on the Arrow Electronics account.
+
+Although Dave’s knowledge of front end development was second to none, what really impressed me was his ability to transfer this knowledge to more junior members of the team in his role as mentor. His ceaseless drive and enthusiasm in doing this contributed hugely to a successful project and a fantastic relationship with the client and their team.
+
+He would be a great asset for any team and I hope I will get the opportunity to work with him again in the future.
+
+### [Suren Rajeswaren](https://www.linkedin.com/in/srajeswaran/), Sitecore SME/Web Content Manager, Sage
+
+It's my pleasure to recommend Dave. I have worked with him for a year, and he has fulfilled a number or roles in that time: Senior Front-end Developer, Tech Lead, Domain Expert and Mentor.
+
+Dave has expert, in-depth knowledge of Front-end development including JavaScript and associated frameworks, HTML and CSS. His in-depth experience extends to he integration of the front-end into the CMS back-end, and the effects and impacts of the front-end on design (including responsive), security and performance.
+
+He is able to provide technically robust and high-quality solutions to issues and problems rapidly and effectively, and has the architectural oversight to develop long-term strategic solutions to the implementation of website UI/UX design.
+
+Dave is incredibly patient and is able to mentor and guide other team members in good coding practice.
+
+Not only is Dave an invaluable member of the team, who contributed greatly to the success of the project, he is also highly respected by all his colleagues, both within the organisation and also the client business and technical teams, including senior management.
+
 ### [Ian Vaughan](https://www.linkedin.com/in/ianvaughan), Software Developer, [Econsultancy](https://econsultancy.com)
 
 Dave came in and very quickly picked up tasks helping us during a large front end redesign. I think I can say anything that needed to be done, he could handle it, and it landed in our app working first time, looking good
