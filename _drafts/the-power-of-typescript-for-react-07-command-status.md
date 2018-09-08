@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Rich Domain - Power of TypeScript for React (6) 
+title: Command Status
+subtitle: Power of TypeScript for React (7)
 postimage: /content/2017-06-ts-react.jpg
 series: power-of-typescript
 related: power-of-typescript
