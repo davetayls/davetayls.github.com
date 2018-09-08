@@ -945,10 +945,19 @@ small.GetInTouchFooter-chat {
   height: auto;
   margin: 0;
   padding: 16px;
-  font-size: 2rem;
   z-index: 2;
   font-weight: 300;
+}
+
+.HeroJobTitle-title-name {
+  display: block;
+  font-size: 2rem;
   letter-spacing: -0.03em;
+}
+
+.HeroJobTitle-title-job {
+  font-size: 1.4rem;
+  display: block;
 }
 
 .HeroJobTitle-iBelieve {
@@ -983,8 +992,8 @@ small.GetInTouchFooter-chat {
 
 @media (min-width: 600px) {
 
-  .HeroJobTitle-title {
-    font-size: 3rem;
+  .HeroJobTitle-title-name {
+    font-size: 2.4rem;
   }
 
   .HeroJobTitle-iBelieve {

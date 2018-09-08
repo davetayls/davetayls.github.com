@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Working with Nullable Values - Exploring fp-ts (1)
+title: Working with Nullable Values
+subtitle: Exploring fp-ts (1)
 postimage: /content/2018/05-fp-ts-01-nullable.jpg
 series: exploring-fp-ts
 related: exploring-fp-ts

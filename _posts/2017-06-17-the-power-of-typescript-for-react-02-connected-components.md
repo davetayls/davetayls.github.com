@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Connected Components - Power of TypeScript for React (2) 
+title: Connected Components
+subtitle: Power of TypeScript for React (2)
 postimage: /content/2017-06-ts-react.jpg
 series: power-of-typescript
 related: power-of-typescript
@@ -58,7 +59,7 @@ type propsFn = (state: IAppState) => object;`
 The second parameter takes a function which is passed the `dispatch` function needed to dispatch actions to the reducers at a later date. It also expects an **object to be returned** which will be added to the components props. It's type signature looks like this.
 
 ```typescript
-type dispatchFn = (dispatch: (action: Action) => object;`
+type dispatchFn = (dispatch: (action: Action) => any) => object;`
 ```
 
 We're missing some needed tightening of the screws here because **it's not just any object** that is needed for this **particular component**. But we've now got the necessary parts to be able to let TypeScript help us out with this.
@@ -73,17 +74,26 @@ import {
   Person
 } from './components/Person';
 
-export const PersonWithState = connect(
-  (state: IAppState): IPersonProps => ({
-    name: state.currentPerson.name,
+// type definition is:
+// MapStateToProps<Props, OwnProps, AppState>
+const mapStateToProps: MapStateToProps<IPersonProps, {}, IAppState> =
+  (state) => ({,
     age: state.currentPerson.age,
     skills: state.currentPerson.skills
-  }),
-  (dispatch): IPersonDispatch => ({
+  })
+
+// type definition is:
+// MapStateToDispatch<Dispatch, OwnProps>
+const mapDispatchToProps: MapDispatchToProps<IPersonDispatch, {}> =
+  (dispatch) => ({
     onSelecedSkill: (skill) => {
       dispatch(selectedSkill(skill))
     }
   })
+
+export const PersonWithState = connect(
+  mapStateToProps,
+  mapDispatchToProps
 )(Person);
 ```
 
@@ -98,6 +108,6 @@ Another nice side-effect which is starting to emerge is that of a detailed domai
 
 So, a bit of a roundup of this week's dive into connected components. We've looked at separating interfaces for our component props and dispatch functions. This has enabled us to build these up separately as part of the redux `connect` functionality but stitch them back together using Intersection Types and the `&`.
 
-We'll continue next Monday [looking at *Actions*](/blog/2017/06/26/the-power-of-typescript-for-react-3-actions). I hope this has been useful, I look forward to seeing you then!
+We'll continue next Monday [looking at *Actions*](/blog/2017/06/26/the-power-of-typescript-for-react-03-actions). I hope this has been useful, I look forward to seeing you then!
 
 

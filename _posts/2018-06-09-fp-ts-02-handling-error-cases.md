@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Handling Error Cases - Exploring fp-ts (2)
+title: Handling Error Cases
+subtitle: Exploring fp-ts (2)
 postimage: /content/2018/06-fp-ts-02-errors.jpg
 series: exploring-fp-ts
 related: exploring-fp-ts

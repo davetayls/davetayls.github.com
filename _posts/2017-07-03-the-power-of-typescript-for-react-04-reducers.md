@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Reducers - Power of TypeScript for React (4) 
+title: Reducers
+subtitle: Power of TypeScript for React (4)
 postimage: /content/2017-06-ts-react.jpg
 series: power-of-typescript
 related: power-of-typescript
@@ -146,5 +147,5 @@ So today we're continuing to discover more about planning and defining our state
 
 We have also seen that with [Mapped Types](https://www.typescriptlang.org/docs/handbook/advanced-types.html#mapped-types), it doesn't necessarily mean we have to write lots and lots of type definitions for different circumstances.
 
-Next Monday we'll explore [refactoring](/blog/2017/07/18/the-power-of-typescript-for-react-5-refactoring) and how TypeScript takes away a lot of the fear JavaScript can bring around improving code organisation.
+Next Monday we'll explore [refactoring](/blog/2017/07/18/the-power-of-typescript-for-react-05-refactoring) and how TypeScript takes away a lot of the fear JavaScript can bring around improving code organisation.
 
