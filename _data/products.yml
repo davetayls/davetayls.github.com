@@ -1,52 +1,22 @@
 
-- name: Tech Lead and Architecture
-  pitch: I will lead a team, set architecture and make sure they are working at their best
+- name: Software Engineering and Technical Architecture
+  pitch: Analysis with a report on suggested architecture choices to improve code stability and team productivity
   quote: 3
   about: >
-    I have designed the frontend architecture of many large websites and HTML5 apps.
+    I have designed the architecture for large websites, HTML5 apps and software as a service platforms.
+
     These have included:
 
+     - cloud infrastructure using AWS including serverless APIs
      - enterprise CMS builds for Lloyd's of London, British Red Cross and Arrow Electronics
      - campaign sites for The FA and RFU;
 
-    I take a modular approach and work closely with designers as well as developers
-    to achieve scaleable results.
+    I take a modular approach, I work closely with the development team and other areas of the business to achieve scaleable results.
 
-
-    I am keen to marry good inter-personal and communication skills with solid technical
-    thought leadership enabling teams to grow in confidence and produce great work.
+    I am keen to marry good inter-personal and communication skills with solid technical thought leadership enabling teams to grow in confidence and produce great work.
 
   rewards:
     - I base my decisions on tried-and-tested solutions
     - I analyse and make the most of current trends
     - I am experienced at communicating and leading teams
 
-- name: Frontend Consultancy and Mentoring
-  pitch: I'll help you build a lasting culture of innovation and creativity
-  quote: 4
-  about: >
-    I want to see every frontend developer live inspired and creative. I believe
-    we all have a child's passion inside of us which wants to do great things.
-
-
-    I'm so grateful to have had the opportunity of unlocking this passion
-    and to see groups of people tackle a project head on and become a team.
-
-
-    I like to work closely with the project leads to really get to know each
-    member of the team, put in place a pathway for them to grow technically
-    and to gain the confidence to lead others.
-
-
-    Ultimately I have two aims:
-
-
-    1. To inspire the team and provide them with the skills they need to
-       build great products
-
-    2. To find and nurture emerging leaders to continue this work with
-       those more junior than they are
-  rewards:
-    - I encourage and guide emerging leaders within your team
-    - I build a plan to level up frontend developer's skills
-    - I focus the team on building a great product experience

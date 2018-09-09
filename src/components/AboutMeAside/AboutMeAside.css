@@ -29,11 +29,13 @@
 .AboutMeAside-name {
   font-weight: 300;
   color: #777;
-  display: inline;
+  display: block;
+  margin-bottom: .2rem;
 }
 
 .AboutMeAside-jobTitle {
-  display: inline;
+  display: block;
+  margin-top: .2rem;
 }
 
 .AboutMeAside-jobTitle a {

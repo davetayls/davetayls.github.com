@@ -29,6 +29,12 @@
                 </li>
             </ul>
         </nav>
-        <div class="PageHeader-pageTitle">{{ page.title }}</div>
+        <div class="PageHeader-pageTitle">
+            {% if page.title %}
+            {{ page.title }}
+            {% else %}
+            Dave Taylor (davetayls)
+            {% endif %}
+        </div>
     </div>
 </header>

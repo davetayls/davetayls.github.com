@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Component Props and State Interfaces
-subtitle: Power of TypeScript for React (1)
+subtitle: Power of TypeScript for React
 postimage: /content/2017-06-ts-react.jpg
 related: power-of-typescript
 series: power-of-typescript

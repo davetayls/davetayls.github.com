@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Connected Components
-subtitle: Power of TypeScript for React (2)
+subtitle: Power of TypeScript for React
 postimage: /content/2017-06-ts-react.jpg
 series: power-of-typescript
 related: power-of-typescript

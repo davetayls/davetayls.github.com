@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Higher Order Components
-subtitle: Power of TypeScript for React
+title: Persistence
+subtitle: Power of TypeScript for React (11)
 postimage: /content/2017-06-ts-react.jpg
 series: power-of-typescript
 related: power-of-typescript
@@ -10,8 +10,6 @@ categories:
  - typescript
  - javascript
 ---
-
-Higher Order Components
 
 {% include components__SeriesPosts.html %}
 

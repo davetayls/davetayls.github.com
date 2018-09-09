@@ -4,10 +4,11 @@ title: Seccl Design Patterns and Reusable Components
 postimage: /content/2017/12-seccl-patterns.jpg
 related: seccl
 categories:
- - seccl
- - components
- - thoughts
- - architecture
+  - project
+  - seccl
+  - components
+  - thoughts
+  - architecture
 ---
 
 Planning out a large application can be a very daunting prospect, especially when it comes to considering all the ways in which it will be used. At [Seccl](https://seccl.tech), we break down our user interfaces and applications so that we are not just considering the pages.
