@@ -6,8 +6,19 @@ comments: hide
 share: hide
 ---
 
-Over the last 15 years I've given frontend leadership and development to global brands like Jaguar, Land Rover, Lloyd's
-of London and Arrow Electronics. I  love giving companies the opportunity to pack a punch and deliver the best
-experience to their users.
+Over the last {{ site.years_experience }} years I've worked as a Software Engineer starting out in a small
+consultancy and growing to work with digital teams, building global systems.
+
+I've had the privilege of bringing leadership to development teams across the world, many
+household names. Companies like The FA, The RFU, Jaguar / Land Rover,
+Lloyd's of London, Arrow Electronics and Ford. I  love giving companies the opportunity to
+pack a punch and deliver the best experience to their users.
+
+In recent years, I have been developing a matured and scalable approach to developing and
+deploying APIs, Websites and Web Applications based on the foundations of Node.js, AWS,
+TypeScript, React and their many associated toolsets.
+
+I am an advocate of Continuous Delivery, high test coverage and short release cycles to
+enable teams as well as the software they are building to innovate.
 
 ## Ways I can help:
