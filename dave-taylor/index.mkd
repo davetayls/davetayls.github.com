@@ -6,13 +6,17 @@ related: mystory
 comments: hide
 ---
 
-Halo! My name is Dave Taylor, thanks for visiting my site. I hope to offer web developers
+Hey! My name is [Dave Taylor](/), thanks for visiting my site. I hope to offer web developers
 some useful insight and help in our day-to-day roles. This page has a little about who I
 am and where I've come from for those interested.
 
+
 ## Philippines
 
-![Mayon Volcano, Philippies](/content/mayon.jpg)
+{% include figure.html
+   caption="Mayon Volcano"
+   src="/content/mayon.jpg"
+   %}
 
 I was born and grew up in the Philippines although both my parents are English. We lived
 on the edge of an active volcano called Mayon (which means beautiful). It was an amazing
@@ -41,9 +45,6 @@ I'm always open to talking with people in passionate teams wanting to produce gr
 If you're looking for someone who will not only be a developer on your team but will
 invest themselves in your project then give me a call. Take a look at my [work with me
 page](/workwithme) for more information.
-
-You can take a look at my [showreels](/blog/category/showreel/) or the [projects
-category](/blog/category/project/) to see some examples.
 
 ## Avatars and Images
 
