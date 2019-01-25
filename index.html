@@ -11,12 +11,12 @@ description: maker of stuff, often webby related, daddy and blessed to have a wi
       {% assign BrowsePostsList = site.posts %}
       {% include components__BrowsePosts.html limit=3 %}
 
-      <h2>Exploring fp-ts Series</h2>
-      {% assign BrowsePostsList = site.categories['exploring-fp-ts'] | sort: 'date' %}
-      {% include components__BrowsePosts.html limit=30 %}
-
       <h2>Power of TypeScript for React Series</h2>
       {% assign BrowsePostsList = site.categories['power-of-typescript'] | sort: 'date' %}
+      {% include components__BrowsePosts.html limit=30 %}
+
+      <h2>Exploring fp-ts Series</h2>
+      {% assign BrowsePostsList = site.categories['exploring-fp-ts'] | sort: 'date' %}
       {% include components__BrowsePosts.html limit=30 %}
 
       <h2>Last Articles</h2>

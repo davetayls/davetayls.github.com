@@ -157,5 +157,5 @@ In a similar way, when you update node_modules and there are breaking changes de
 
 So to round off this article, we've looked at what happens when you make changes within your project. We've gone through an error example and broken down how to track down the needed fix. Being able to understand these errors will make working with TypeScript a lot less painful. You can take a look at the [simple project used in this article](https://github.com/davetayls/power-of-typescript-react) if you want to see a basic TypeScript project setup.
 
-Next I'll be exploring how you can use types and aliases to build a rich application domain. A simple set of ideas which can make a big impact on understanding and sharing code within a team.
+Next I'll be exploring how you can use types and aliases to build a [rich application domain](/blog/2019/01/25/the-power-of-typescript-for-react-6-rich-domain). A simple set of ideas which can make a big impact on understanding and sharing code within a team.
 
