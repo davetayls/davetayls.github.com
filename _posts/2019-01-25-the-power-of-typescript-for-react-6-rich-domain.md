@@ -20,9 +20,11 @@ In this post I want to go beyond React and Redux and explore ways in which we ca
 
 The point of the rich domain is to enhance the underlying types in such a way that it adds further semantic meaning. Secondly to provide more certainty to what data is being passed around
 
-## Looking at Dates
+In this post we'll be looking at a few kinds of data which are ambiguous when described as a primitive type. We'll then explore some examples of how we can add more semantic meaning along with some guidelines to help prevent some of the problems you might find.
 
-A date could be stored in multiple ways. It could be passed around in memory as a JavaScript `Date` object, you often see dates saved using a library like `Moment` which enhance the date object. If it has been stored as a result of an api call it could be in a serialised format like a `string` or a `number`. If it was a `string` it is more than likely going to be in an ISO format.
+## Dates
+
+Let's start by looking at dates. Dates are a good example of a piece of data which can be described in many forms and stored in multiple ways. It could be passed around in memory as a JavaScript `Date` object, you often see dates saved using a library like `Moment` which enhance the date object. If it has been stored as a result of an api call it could be in a serialised format like a `string` or a `number`. If it was a `string` it is more than likely going to be in an ISO format.
 
 Seeing a variable typed as a `Date` or a `Moment` is often sufficient. However, let's consider the serialized types of `string` and `number` which don't convey any "rich" meaning.
 
