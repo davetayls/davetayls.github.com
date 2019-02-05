@@ -11,9 +11,10 @@ categories:
  - javascript
 ---
 
-With the patterns in use within a react / redux application there are many examples of when you want to keep track of the status of an api call or some other async operation.
 
-In this post I'll look at a pattern I'd like to label the "Command Status Pattern". I've been using it for a while, it helps to reason about asynchronous status in a synchronous state.
+Sooner or later you will need to keep track of an api call or some other async operation's status. With the patterns used in a react / redux application there are many examples of when this will be the case.
+
+In this post I'll look at a pattern I'd like to label the "Command Status Pattern". I've been using it for a while and it helps to reason about asynchronous status in a synchronous state.
 
 {% include components__SeriesPosts.html %}
 
@@ -64,19 +65,19 @@ export interface ICommandStatus {
   /**
    * Point in time when a fetch started
    */
-  started?: DateNumber | null
+  started?: MillisecondDateNumber | null
 
   /**
    * Successful fetches
    * Usually limited to 3 entries
    */
-  success: DateNumber[]
+  success: MillisecondDateNumber[]
 
   /**
    * Failed fetches
    * Usually limited to 3 entries
    */
-  fail: DateNumber[]
+  fail: MillisecondDateNumber[]
 
   /**
    * The error relating to any failed
