@@ -24,30 +24,31 @@ twitter
 github
 : <http://github.com/davetayls>
 
-<div id="intro"><p>
+<div id="intro">
+<p>A Software Engineer with over {{ site.years_experience }} years experience.
+Worked with a wide range of companies from Digital Agencies to large Enterprises.
+Passionate about Frontend technologies although have enjoys
+being heavily involved with Node.js, Serverless and Devops.</p>
 
-After {{ site.years_experience }} years my passion for our industry has not stopped growing.
-I thrive in teams who are pushing the boundaries of HTML5 and Node.js in their many forms.
-Taking my leadership skills as far as I can, when I lead I look to inspire my team to do the same.
+<p>Has agile principles and likes to get stuck in and help product owners make the best of an
+ever-changing technical landscape.</p>
 
-</p></div>
+</div>
 
 Technical Skills
 ---
 
-I have gained a large body of experience across many web technologies both client and server side. I also am experienced in testing and continuous integration setup and practices.
-
 ### JavaScript Client-side
  - Hand coded and linted
  - Unit tested (Jasmine, QUnit, Mocha, Karma, Chai)
- - Object Oriented
- - Backbone.js, Marionette, React and Angular frameworks
+ - Functional or Object Oriented
+ - React, Redux, Backbone.js, Marionette and Angular
  - Cordova and PhoneGap hybrid apps
- - ES2015+, CommonJs and AMD modules - RequireJs/Node.js
+ - ES2015+, CommonJs and AMD modules
 
 ### JavaScript and Server-side
- - **Node.js** cloud applications and APIs (Heroku/AppFog/Azure)
- - Grunt, ExpressJS, MongoDb
+ - **Node.js** cloud applications and APIs (AWS/Heroku/Azure)
+ - Serverless, Webpack, Grunt, ExpressJS, MongoDb
  - TypeScript, CoffeeScript
 
 ### HTML
@@ -55,7 +56,12 @@ I have gained a large body of experience across many web technologies both clien
 
 ### CSS
  - Written by hand, built for responsive layouts, mobile devices, screen and print
- - Stylus, Sass, Less, Rework
+ - PostCSS, CSS Modules, Stylus, Sass, Less, Rework
+
+### Devops
+ - Serverless Framework with AWS
+ - AWS CloudFormation, API Gateway, Lambda, CloudFront, S3, EC2
+ - Some experience working with Terraform
 
 ### Other
  - Methodologies: Agile: Scrum, Kanban
@@ -74,36 +80,44 @@ Although Dave’s knowledge of front end development was second to none, what re
 
 He would be a great asset for any team and I hope I will get the opportunity to work with him again in the future”
 
-November 2, 2016
-
 ### Tim Ellert: _Founder, ESZ Consulting Ltd_
 
 “Having worked with Dave on various projects for both small and multinational clients I / we can highly recommend him. Dave has excellent technical / development skills and is very much at the cutting edge of new languages and methodologies. During his time working with ESZ Consulting he has successfully completed highly technical projects spanning from a few months to a few years! He is a valuable front end developer and an asset to any development team. Look forward to working with him again soon on the next project!”
-
-February 24, 2015
 
 ### Guillaume Buat-Ménard: _Technical Director, Aqueduct_
 
 “David is an outstanding developer combining great coding skills, broad knowledge, agency mindset for delivery and wisdom. Dave is passionate about his craft and constantly improving frameworks, standards and is very active in the open source community, he is one of the very best developers I have worked with over the last 15 years.”
 
-February 24, 2012
-
 View more on [LinkedIn](http://www.linkedin.com/in/davetayls).
+
+Awards and Industry Recognition
+---
+
+ - Reviewer for Packt publishing on [Learn React with TypeScript 3](https://www.packtpub.com/web-development/learn-react-typescript-3)
+ - National Theatre iPad App wins Educational Multimedia Award (<https://davetayls.me/blog/2014/05/09/national-theatre-app-wins-educational-multimedia-award/>)
+ - Sitecore, Site of the Year Award for The FA, Just Play. ([Blog post](/blog/2011/11/24/fa-just-play-wins-category-sitecore-site-of-year/))
 
 Experience
 ----------
 
-### Technical Lead (Contract) - _Seccl Technology_ <https://seccl.tech>
+### Technical Lead - _Seccl Technology_ <https://seccl.tech>
 
 #### March 2017
 
-### Frontend Consultant and Mentor (Contract) - _The BIO Agency & Arrow Electronics_ <http://www.thebioagency.com> <https://www.arrow.com>
+Building and Leading the technical team for Seccl as well as Architecture of Serverless APIs,
+React Components Libraries and React Applications. Seccl are a start-up pioneering a new tech-first wealth
+management platform.
+
+Technical stack: Serverless Framework, NodeJs, React, Redux, TypeScript, CSS Modules, Webpack
+
+### Technical Lead and Mentor (Contract) - _The BIO Agency & Arrow Electronics_ <http://www.thebioagency.com> <https://www.arrow.com>
 
 #### May 2016
 
-Mentor and UI Technical lead for the Arrow (arrow.com) global e-commerce platform with teams in Denver, Portland and London.
+Architecture, mentoring and performance for Arrow Electronics, a Fortune 500 company and
+global provider of electronic components with development teams in Denver, Portland and London.
 
-Arrow Electronics is a global provider of products, services and solutions to industrial and commercial users of electronic components and enterprise computing solutions. Arrow (a Fortune 500 company) serves as a supply channel partner for over 100,000 original equipment manufacturers, contract manufacturers and commercial customers through a global network of more than 460 locations in 56 countries.
+Technical stack: Sitecore CMS with Frontend Technologies, Webpack builds, Backbone, Angular
 
 ### Senior Cordova Hybrid App Developer (Contract) - _ESZ_ <http://eszconsulting.com>
 
@@ -129,21 +143,13 @@ Cordova hybrid phone app using Backbone, Marionette, Flux Architecture, Loopback
 
 Desktop app for new startup using Backbone, Marionette, Node.js, CoffeeScript, Grunt, Express, Mocha, Karma Runner
 
-### Lead UI architect and developer (Contract) - _Sainsbury's Digital Experience Lab_ <http://www.sainsburys.co.uk>
+### UI Architect and developer (Contract) - _Sainsbury's Digital Experience Lab_ <http://www.sainsburys.co.uk>
 
 #### September 2014
 
 Researching and working on a tech-stack for the Sainsbury's interface team.
 
 ### [> More of my work history below](#appendix)
-
-Industry Recognition
----
-
- - .net Online Magazine "Five key principles for better web development" (<https://davetayls.me/blog/2013/08/13/five-key-principles-netmagazine/>)
- - National Theatre iPad App wins Educational Multimedia Award (<https://davetayls.me/blog/2014/05/09/national-theatre-app-wins-educational-multimedia-award/>)
- - Sitecore, Site of the Year Award for The FA, Just Play. ([Blog post](/blog/2011/11/24/fa-just-play-wins-category-sitecore-site-of-year/))
- - My work has been featured and used in on-line magazines: Daily Js ([jQuery.kinetic](http://dailyjs.com/2011/08/09/jquery-roundup/), [jQuery.lazyLoader](http://dailyjs.com/2012/01/31/jquery-roundup/)), Codrops ([jQuery.kinetic](http://tympanus.net/codrops/2011/10/07/draggable-image-boxes-grid/))
 
 Clients I have produced work for
 ---
