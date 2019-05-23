@@ -28,7 +28,7 @@ github
 <p>A Software Engineer with over {{ site.years_experience }} years experience.
 Worked with a wide range of companies from Digital Agencies to large Enterprises.
 Passionate about Frontend technologies although enjoys
-being working with Node.js, Serverless and Devops.</p>
+working with Node.js, Serverless and Devops.</p>
 
 <p>Has agile principles and likes to get stuck in and help product owners make the best of an
 ever-changing technical landscape.</p>
