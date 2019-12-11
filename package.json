@@ -5,7 +5,8 @@
   "description": "davetayls personal blog",
   "main": "grunt.js",
   "scripts": {
-    "start": "tsc && webpack",
+    "start": "npm run build",
+    "build": "tsc && webpack",
     "webpack": "webpack -d -w",
     "jekyll": "jekyll serve --drafts",
     "test": "echo \"Error: no test specified\" && exit 1"
