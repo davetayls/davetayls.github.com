@@ -12,7 +12,7 @@ companies.
 
 If you'd like me to speak at your event on
 front-end technologies, automation or anything slightly related to
-this blog then please [get in touch](/workwithme).
+this blog then please [get in touch](https://www.pogokid.com/workwithus).
 
 {% assign BrowsePostsList = site.categories.talks %}
 {% include components__BrowsePosts.html %}

@@ -43,7 +43,7 @@ Loads of people have asked me why I decided to start my own company and I've boi
 
 It has only been a few months and so I am still on a steep learning curve for running the business side. I have already met some amazing people and worked with teams all over the world.
 
-Take a look at my [work with me](https://davetayls.me/workwithme) page if you think I would fit well with an up-and coming project. I love working with [passionate teams](/blog/2012/07/01/find-me-a-passionate-team/).
+Take a look at my [work with me](https://www.pogokid.com/workwithus) page if you think I would fit well with an up-and coming project. I love working with [passionate teams](/blog/2012/07/01/find-me-a-passionate-team/).
 
 ## New Technologies and Learning
 Even with a five month gap I have been able to be involved in some fun projects this year. I have worked with
