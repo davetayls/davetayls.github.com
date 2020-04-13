@@ -11,6 +11,9 @@ categories:
  - typescript
 ---
 
+## Note: This article is based on `fp-ts` version 1
+For guides on how to use version 2 please refer to the [`fp-ts` website](https://gcanti.github.io/fp-ts/)
+
 It's such a pain dealing with values which could be `null` or `undefined`. I like to get
 rid of the potential for them as much as possible when designing interfaces but there is
 no escaping it sometimes. I hate it even more when you have a set of them, which you need

@@ -11,6 +11,9 @@ categories:
  - typescript
 ---
 
+## Note: This article is based on `fp-ts` version 1
+For guides on how to use version 2 please refer to the [`fp-ts` website](https://gcanti.github.io/fp-ts/)
+
 In any codebase there are several paths which can fail. Like I discovered with [handling nullable values](/blog/2018/05/20/fp-ts-01-working-with-nullable-values) I want to flow through the code and deal with errors gracefully and in a logical manor. Too many times have I found I've written a tangle of if statements and try / catch blocks which make reading a logical set of instructions hard.
 
 {% include components__SeriesPosts.html %}
