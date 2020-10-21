@@ -4,8 +4,8 @@ url: https://davetayls.me
 permalink: /blog/:year/:month/:day/:title
 postimage_default: /content/placeholder.jpg
 site_name: Dave Taylor
-years_experience: 17 # From 2002
-job_title: Technical Lead and Software Engineer
+years_experience: 18 # From 2002
+job_title: Software Engineer, Technical Consultant
 job_description: Frontend leadership, Frontend architecture, HTML(5), JavaScript (OOJS, ES6, TypeScript), CSS (BEM, Less, SASS, Stylus), Testable Code (Mocha, Sinon, Chai, Karma), NodeJs (Express, Mongoose) , Cloud Applications (Heroku, S3, Azure)
 keywords: Dave Taylor, David Taylor, Frontend leadership, Frontend architecture, HTML(5), JavaScript (OOJS, ES6, TypeScript), CSS (BEM, Less, SASS, Stylus), Testable Code (Mocha, Sinon, Chai, Karma), NodeJs (Express, Mongoose) , Cloud Applications (Heroku, S3, Azure)
 mission:

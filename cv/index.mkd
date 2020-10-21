@@ -25,13 +25,13 @@ github
 : <http://github.com/davetayls>
 
 <div id="intro">
-<p>A Software Engineer with over {{ site.years_experience }} years experience.
-Worked with a wide range of companies from Digital Agencies to large Enterprises.
-Passionate about Frontend technologies although enjoys
-working with Node.js, Serverless and Devops.</p>
+<p>After {{ site.years_experience }} years my passion for our industry has not stopped growing.</p>
 
-<p>Has agile principles and likes to get stuck in and help product owners make the best of an
-ever-changing technical landscape.</p>
+<p>I've given technical leadership and development to companies big and small.I love giving the opportunity to pack a punch and deliver the best experience to their users.</p>
+
+<p>I believe in a great product, an inspired team and a laser focus on the user's experience will produce the best results. I like to get stuck in, to give direction and help project owners make the best of an ever-changing technical landscape. I'm comfortable in client meetings and have been trusted to bring concise jargon free advice on technical decisions.</p>
+
+<p>I am comfortable with mentoring other team members to make the most of their potential and make the project a success.</p>
 
 </div>
 
@@ -40,32 +40,34 @@ Technical Skills
 
 ### JavaScript Client-side
  - Hand coded and linted
- - Unit tested (Jasmine, QUnit, Mocha, Karma, Chai)
+ - Unit tested (Jest, Mocha, Chai, Jasmine, QUnit, Karma)
  - Functional or Object Oriented
  - React, Redux, Backbone.js, Marionette and Angular
- - Cordova and PhoneGap hybrid apps
- - ES2015+, CommonJs and AMD modules
 
-### JavaScript and Server-side
+### JavaScript, Server-side and Frameworks
  - **Node.js** cloud applications and APIs (AWS/Heroku/Azure)
  - Serverless, Webpack, Grunt, ExpressJS, MongoDb
  - TypeScript, CoffeeScript
+ - Nextjs, Gatsby
 
 ### HTML
  - HTML5, written by hand using well thought out semantics
+ - I care for accessible static and dynamic markup
 
 ### CSS
  - Written by hand, built for responsive layouts, mobile devices, screen and print
- - PostCSS, CSS Modules, Stylus, Sass, Less, Rework
+ - PostCSS, CSS Modules, Styled Components, Stylus, Sass, Less, Rework
 
 ### Devops
  - Serverless Framework with AWS
+ - Kubernetes (inc Open Shift) and Skaffold
+ - Docker including build of Dockerfiles
  - AWS CloudFormation, API Gateway, Lambda, CloudFront, S3, EC2
  - Some experience working with Terraform
 
 ### Other
  - Methodologies: Agile: Scrum, Kanban
- - Source Control: Git, Subversion, Mercurial
+ - Source Control: Git
 
 Recommendations
 ---------------
@@ -97,18 +99,29 @@ Awards and Industry Recognition
  - National Theatre iPad App wins Educational Multimedia Award (<https://davetayls.me/blog/2014/05/09/national-theatre-app-wins-educational-multimedia-award/>)
  - Sitecore, Site of the Year Award for The FA, Just Play. ([Blog post](/blog/2011/11/24/fa-just-play-wins-category-sitecore-site-of-year/))
 
-Experience
+Recent Experience
 ----------
+
+### Software Engineer, Technical Consultant - _Nationwide Building Society_ <https://www.nationwide.co.uk>
+
+#### July 2019
+
+Part of the Future Web Project to update the technology stack of the nationwide.co.uk website.
+
+Tech includes:
+React, Styled Components, Kubernetes, Sitecore JSS, Uniform, Azure
+
+Technical leadership and mentoring across the tech stack and a number of teams. Software development on the website to integrate the React frontend with the Sitecore CMS. Configuration and deployment of Uniform static site architecture.
 
 ### Technical Lead - _Seccl Technology_ <https://seccl.tech>
 
 #### March 2017
 
-Building and Leading the technical team for Seccl as well as Architecture of Serverless APIs,
-React Components Libraries and React Applications. Seccl are a start-up pioneering a new tech-first wealth
-management platform.
+Seccl are a start-up pioneering a new tech-first wealth management platform. I built and led the technical team for Seccl through to a successful sale.
 
-Technical stack: Serverless Framework, NodeJs, React, Redux, TypeScript, CSS Modules, Webpack
+Technical stack: Serverless Framework, AWS, Docker, NodeJs, React, Redux, TypeScript
+
+Architecture of Serverless APIs and multiple React Applications.
 
 ### Technical Lead and Mentor (Contract) - _The BIO Agency & Arrow Electronics_ <http://www.thebioagency.com> <https://www.arrow.com>
 

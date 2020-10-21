@@ -6,4 +6,3 @@ comments: hide
 share: hide
 ---
 
-Please visit the [Pogo Kid website](https://www.pogokid.com/workwithus)

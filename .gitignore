@@ -8,6 +8,7 @@ Thumbs.db
 /.project
 /.settings
 /.jekyll-cache
+.jekyll-metadata
 /src-build
 node_modules
 .idea
