@@ -20,7 +20,7 @@ We need a healthy planet to live healthy lives and knowing that we are losing so
 ## Sustainable Infrastructure
 
 > Anything that can't be done forever is, by definition, un-sustainable
->
+
 How is the infrastructure we use powered? I'm curious as to how aware we are of this question. How about what happens at the end of life for any of the components we trust our connected world to on a daily basis. I mean, most of us don't actually see these things working let alone have an idea of how fast they are consumed and discarded.
 
 ## Energy Efficient Software Architecture
